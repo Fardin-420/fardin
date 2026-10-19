@@ -28,7 +28,6 @@
     { "id": "L15", "scene": "S06", "text": "Built with Claude Code.", "emotion": "CALM", "gain_db": 0, "pause_after": 0, "est": 1.4 }
   ],
   "pronunciation": {
-    "NPC": "N. P. C.",
     "CapCut": "Cap Cut"
   }
 }

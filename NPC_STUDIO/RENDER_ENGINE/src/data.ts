@@ -8,6 +8,7 @@ export type Line = {
 export type Timeline = {
   project: string;
   voiced: boolean;
+  voice?: string | null;
   timing_source: string;
   width: number;
   height: number;
@@ -23,6 +24,7 @@ export type EnvelopeData = {
   frames: number;
   bands: number;
   has_voice: boolean;
+  voice?: string | null;
   mix_rms: number[];
   mix_spec: number[][];
   voice_rms: number[] | null;
@@ -45,7 +47,7 @@ export class Envelope {
     return this.at(this.d.mix_rms, frame);
   }
   get source() {
-    return this.d.has_voice ? 'NPC_VOICE_V1' : 'SOUNDTRACK';
+    return this.d.has_voice ? this.d.voice ?? 'VOICE' : 'SOUNDTRACK';
   }
 }
 

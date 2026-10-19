@@ -93,7 +93,10 @@ export function textMesh(font: Font, text: string, mats: THREE.Material[], o: Te
   return group;
 }
 
-/** Sample points on the surface of every mesh in a group (world space of the group). */
+/**
+ * Sample points on the surface of every mesh in a group, in the group's parent
+ * space, so the group's own transform (e.g. the scale applied by fit()) is kept.
+ */
 export function samplePoints(group: THREE.Object3D, n: number, seed = 11): Float32Array {
   group.updateMatrixWorld(true);
   const meshes: THREE.Mesh[] = [];
@@ -122,7 +125,7 @@ export function samplePoints(group: THREE.Object3D, n: number, seed = 11): Float
   const r = prng(seed);
   const p = new THREE.Vector3();
   let k = 0;
-  const rootInv = new THREE.Matrix4().copy(group.matrixWorld).invert();
+  const rootInv = group.parent ? new THREE.Matrix4().copy(group.parent.matrixWorld).invert() : new THREE.Matrix4();
   meshes.forEach((m, mi) => {
     const count = mi === meshes.length - 1 ? n - k : Math.round((areas[mi] / total) * n);
     const sampler = (new MeshSurfaceSampler(m) as MeshSurfaceSampler & { setRandomGenerator(f: () => number): MeshSurfaceSampler }).setRandomGenerator(r).build();

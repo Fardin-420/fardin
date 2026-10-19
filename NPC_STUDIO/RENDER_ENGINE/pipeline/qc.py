@@ -61,7 +61,7 @@ def main(video: Path, timeline_path: Path, expect_voice: bool) -> None:
     checks["no_clipping"] = (peak <= -0.5, f"true peak {peak} dBFS")
 
     checks["narration_voice"] = (tl["voiced"] or not expect_voice,
-                                 "NPC_VOICE_V1" if tl["voiced"] else "absent (pre-voice cut)")
+                                 tl.get("voice") or "NPC_VOICE_V1" if tl["voiced"] else "absent (pre-voice cut)")
 
     ok = all(passed for passed, _ in checks.values())
     for k, (passed, detail) in checks.items():

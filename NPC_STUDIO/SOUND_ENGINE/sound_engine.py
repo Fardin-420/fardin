@@ -395,6 +395,11 @@ def build(project: Path) -> None:
 
     bed_st = bed.buf * bed_gain[:, None]
     sfx_st = sfx.buf * sfx_gain[:, None]
+
+    # Adaptive sidechain: wherever the voice is speaking, hold the background at
+    # least VOICE_MARGIN dB below it. Impacts keep full force between words.
+    if np.abs(voice).max() > 0:
+        bed_st, sfx_st = sidechain(voice.mean(axis=1), bed_st, sfx_st)
     mix = bed_st + sfx_st + voice
 
     # Master: gentle glue compression via soft clip, then loudness to -14 LUFS.
@@ -417,6 +422,30 @@ def build(project: Path) -> None:
           f"  peak={20 * np.log10(np.abs(mix).max()):.1f} dBFS  voiced={tl['voiced']}")
 
     write_envelope(tl, mix, voice, audio / "envelope.json")
+
+
+VOICE_MARGIN = 9.0
+
+
+def sidechain(voice: np.ndarray, bed: np.ndarray, sfx: np.ndarray):
+    win = secs(0.05)
+    k = np.ones(win) / win
+    rms = lambda x: np.sqrt(signal.fftconvolve(x ** 2, k, mode="same").clip(0) + 1e-12)
+    v = rms(voice)
+    bg = rms((bed + sfx).mean(axis=1))
+    active = v > 10 ** (-45 / 20)
+    need = np.where(active, np.minimum(1.0, v / (bg * 10 ** (VOICE_MARGIN / 20))), 1.0)
+    # Fast attack (~5 ms), slow release (~250 ms) so the background never pumps.
+    g = np.empty_like(need)
+    a_att, a_rel = np.exp(-1 / secs(0.005)), np.exp(-1 / secs(0.25))
+    cur = 1.0
+    for i, x in enumerate(need):
+        cur = a_att * cur + (1 - a_att) * x if x < cur else a_rel * cur + (1 - a_rel) * x
+        g[i] = cur
+    # 20 ms look-ahead so the gain is already down when a transient lands on a word.
+    look = secs(0.02)
+    g = np.concatenate([g[look:], np.full(look, g[-1])])
+    return bed * g[:, None], sfx * g[:, None]
 
 
 def write_envelope(tl: dict, mix: np.ndarray, voice: np.ndarray, out: Path) -> None:
@@ -453,7 +482,7 @@ def write_envelope(tl: dict, mix: np.ndarray, voice: np.ndarray, out: Path) -> N
     has_voice = bool(np.abs(voice).max() > 0)
     v_rms, v_spec = features(voice) if has_voice else (None, None)
     out.write_text(json.dumps({
-        "fps": fps, "frames": n_frames, "bands": bands, "has_voice": has_voice,
+        "fps": fps, "frames": n_frames, "bands": bands, "has_voice": has_voice, "voice": tl.get("voice"),
         "mix_rms": mix_rms, "mix_spec": mix_spec, "voice_rms": v_rms, "voice_spec": v_spec,
     }, separators=(",", ":")))
     print(f"envelope: {n_frames} frames, voice={'yes' if has_voice else 'no (soundtrack fallback)'}")

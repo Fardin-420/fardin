@@ -1,12 +1,13 @@
 {
   "project": "NPC_NO_EDITOR_JUST_CODE",
-  "voiced": false,
-  "timing_source": "estimated (awaiting NPC_VOICE_V1)",
+  "voiced": true,
+  "voice": "NPC_GUEST_VOICE",
+  "timing_source": "measured NPC_GUEST_VOICE narration",
   "width": 1080,
   "height": 1920,
   "fps": 60,
-  "duration": 30.25,
-  "durationInFrames": 1815,
+  "duration": 34.846,
+  "durationInFrames": 2091,
   "lines": [
     {
       "id": "L01",
@@ -14,181 +15,181 @@
       "text": "Look closer.",
       "emotion": "MYSTERIOUS",
       "start": 0.9,
-      "end": 1.85
+      "end": 2.132
     },
     {
       "id": "L02",
       "scene": "S02",
       "text": "This wasn't edited in Premiere.",
       "emotion": "CONFIDENT",
-      "start": 3.75,
-      "end": 5.5
+      "start": 4.032,
+      "end": 5.992
     },
     {
       "id": "L03",
       "scene": "S02",
       "text": "Not in CapCut.",
       "emotion": "CONFIDENT",
-      "start": 5.95,
-      "end": 6.9
+      "start": 6.442,
+      "end": 7.802
     },
     {
       "id": "L04",
       "scene": "S02",
       "text": "Not in After Effects.",
       "emotion": "CINEMATIC",
-      "start": 7.25,
-      "end": 8.45
+      "start": 8.152,
+      "end": 9.853
     },
     {
       "id": "L05",
       "scene": "S03",
       "text": "Every transition.",
       "emotion": "CINEMATIC",
-      "start": 9.25,
-      "end": 10.25
+      "start": 10.653,
+      "end": 12.099
     },
     {
       "id": "L06",
       "scene": "S03",
       "text": "Every effect.",
       "emotion": "CINEMATIC",
-      "start": 10.55,
-      "end": 11.4
+      "start": 12.399,
+      "end": 13.524
     },
     {
       "id": "L07",
       "scene": "S03",
       "text": "Every single frame.",
       "emotion": "DRAMATIC",
-      "start": 11.75,
-      "end": 13.3
+      "start": 13.874,
+      "end": 15.575
     },
     {
       "id": "L08",
       "scene": "S03",
       "text": "Written in code.",
       "emotion": "CONFIDENT",
-      "start": 13.8,
-      "end": 14.85
+      "start": 16.075,
+      "end": 17.331
     },
     {
       "id": "L09",
       "scene": "S04",
       "text": "And that voice you're hearing?",
       "emotion": "MYSTERIOUS",
-      "start": 15.8,
-      "end": 17.35
+      "start": 18.281,
+      "end": 20.047
     },
     {
       "id": "L10",
       "scene": "S04",
       "text": "That's mine.",
       "emotion": "CALM",
-      "start": 17.9,
-      "end": 18.75
+      "start": 20.597,
+      "end": 21.701
     },
     {
       "id": "L11",
       "scene": "S05",
       "text": "No traditional editor.",
       "emotion": "AGGRESSIVE",
-      "start": 19.85,
-      "end": 21.15
+      "start": 22.801,
+      "end": 24.398
     },
     {
       "id": "L12",
       "scene": "S05",
       "text": "No timeline.",
       "emotion": "AGGRESSIVE",
-      "start": 21.65,
-      "end": 22.5
+      "start": 24.898,
+      "end": 26.005
     },
     {
       "id": "L13",
       "scene": "S05",
       "text": "Just code.",
       "emotion": "DRAMATIC",
-      "start": 23.1,
-      "end": 23.95
+      "start": 26.605,
+      "end": 27.794
     },
     {
       "id": "L14",
       "scene": "S06",
       "text": "This is NPC.",
       "emotion": "CONFIDENT",
-      "start": 25.25,
-      "end": 26.25
+      "start": 29.094,
+      "end": 30.649
     },
     {
       "id": "L15",
       "scene": "S06",
       "text": "Built with Claude Code.",
       "emotion": "CALM",
-      "start": 26.85,
-      "end": 28.25
+      "start": 31.249,
+      "end": 32.846
     }
   ],
   "scenes": [
     {
       "id": "S01",
       "start": 0.0,
-      "end": 3.4
+      "end": 3.682
     },
     {
       "id": "S02",
-      "start": 3.4,
-      "end": 8.95
+      "start": 3.682,
+      "end": 10.353
     },
     {
       "id": "S03",
-      "start": 8.95,
-      "end": 15.45
+      "start": 10.353,
+      "end": 17.931
     },
     {
       "id": "S04",
-      "start": 15.45,
-      "end": 19.55
+      "start": 17.931,
+      "end": 22.501
     },
     {
       "id": "S05",
-      "start": 19.55,
-      "end": 24.75
+      "start": 22.501,
+      "end": 28.594
     },
     {
       "id": "S06",
-      "start": 24.75,
-      "end": 30.25
+      "start": 28.594,
+      "end": 34.846
     }
   ],
   "cues": {
     "cursor_on": 0.3,
     "whisper": 0.9,
-    "pulse": 2.1,
-    "title_slam": 2.27,
-    "s02_whip": 3.4,
-    "premiere_in": 4.893,
-    "premiere_break": 5.83,
-    "capcut_in": 6.387,
-    "capcut_break": 7.17,
-    "ae_in": 7.618,
-    "ae_break": 8.63,
-    "s03_in": 8.95,
-    "transition_word": 9.25,
-    "effect_word": 10.55,
-    "frame_word": 11.75,
-    "frame_hit": 12.726,
-    "code_word": 13.8,
-    "code_resolve": 14.95,
-    "s04_in": 15.45,
-    "mine": 17.9,
-    "symbol_morph": 18.8,
-    "layers": 19.85,
-    "collapse": 21.65,
-    "explode": 23.12,
-    "s06_in": 24.75,
-    "emblem_lock": 25.6,
-    "tagline": 26.85,
-    "final_hit": 28.6
+    "pulse": 2.382,
+    "title_slam": 2.552,
+    "s02_whip": 3.682,
+    "premiere_in": 5.312,
+    "premiere_break": 6.322,
+    "capcut_in": 7.068,
+    "capcut_break": 8.072,
+    "ae_in": 8.674,
+    "ae_break": 10.033,
+    "s03_in": 10.353,
+    "transition_word": 10.653,
+    "effect_word": 12.399,
+    "frame_word": 13.874,
+    "frame_hit": 14.945,
+    "code_word": 16.075,
+    "code_resolve": 17.431,
+    "s04_in": 17.931,
+    "mine": 20.597,
+    "symbol_morph": 21.751,
+    "layers": 22.801,
+    "collapse": 24.898,
+    "explode": 26.455,
+    "s06_in": 28.594,
+    "emblem_lock": 29.444,
+    "tagline": 31.249,
+    "final_hit": 33.196
   }
 }

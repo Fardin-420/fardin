@@ -88,7 +88,7 @@ def main(project: Path) -> None:
         # S05 — no timeline
         "layers": L["L11"]["start"],
         "collapse": L["L12"]["start"],
-        "explode": L["L13"]["start"] + 0.02,
+        "explode": L["L13"]["start"] - 0.15,  # hit first, then the line
         # S06 — identity
         "s06_in": bounds["S06"][0],
         "emblem_lock": L["L14"]["start"] + 0.35,
@@ -100,7 +100,8 @@ def main(project: Path) -> None:
     timeline = {
         "project": script["project"],
         "voiced": measured is not None,
-        "timing_source": "measured NPC_VOICE_V1 narration" if measured else "estimated (awaiting NPC_VOICE_V1)",
+        "voice": measured["source"] if measured else None,
+        "timing_source": f"measured {measured['source']} narration" if measured else "estimated (awaiting NPC_VOICE_V1)",
         "width": script["video"]["width"], "height": script["video"]["height"],
         "fps": fps, "duration": round(duration, 3), "durationInFrames": frames,
         "lines": lines, "scenes": scenes, "cues": cues,

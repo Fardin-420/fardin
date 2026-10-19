@@ -56,7 +56,7 @@ export const S04: SceneFactory = (a, tl) => {
 
   // Orbiting particle halo -> NPC symbol.
   const word = textMesh(a.black, 'NPC', [a.chrome.face, a.chrome.side], { size: 1, tracking: 0.04 });
-  fit(word, 2.3);
+  fit(word, 1.7);
   const N = 14000;
   const symbol = samplePoints(word, N, 405);
   const halo = new Float32Array(N * 3);
@@ -117,7 +117,7 @@ export const S04: SceneFactory = (a, tl) => {
         dummy.scale.set(1, Math.max(h, 0.001), 1);
         dummy.updateMatrix();
         bars.setMatrixAt(i, dummy.matrix);
-        col.copy(ivory).lerp(red, clamp(v * 1.4 - 0.3)).multiplyScalar(1.2 + v * 2);
+        col.copy(ivory).lerp(red, clamp(v * 1.4 - 0.3)).multiplyScalar(0.8 + v * 1.1);
         bars.setColorAt(i, col);
       }
       bars.instanceMatrix.needsUpdate = true;
@@ -127,7 +127,7 @@ export const S04: SceneFactory = (a, tl) => {
         const s = (1 + lvl * (0.06 + i * 0.05)) * lerp(0.6, 1, intro) * (1 - morph * 0.3);
         m.scale.setScalar(s);
         m.rotation.set(t * (0.2 + i * 0.07), t * (0.13 - i * 0.05), 0);
-        (m.material as THREE.MeshBasicMaterial).opacity = (0.35 + lvl * 0.6) * intro * (1 - morph * 0.85);
+        (m.material as THREE.MeshBasicMaterial).opacity = (0.35 + lvl * 0.3) * intro * (1 - morph * 0.85);
       });
 
       // Waveforms: band-weighted harmonics; amplitude follows real speech energy.
@@ -153,14 +153,14 @@ export const S04: SceneFactory = (a, tl) => {
       parts.u.uMix.value = easeInOutCubic(morph);
       parts.u.uSwirl.value = 4;
       parts.u.uNoiseAmp.value = 0.02 + lvl * 0.12 * (1 - morph);
-      parts.u.uOpacity.value = intro * (0.7 + lvl * 0.6) * (1 - outK * 0.5);
+      parts.u.uOpacity.value = intro * (0.7 + lvl * 0.3) * (1 - outK * 0.5);
       parts.u.uSparkle.value = 0.6;
       parts.points.rotation.z = (1 - easeOutCubic(morph)) * t * 0.6;
-      (core.material as THREE.ShaderMaterial).uniforms.uOpacity.value = 0.05 + lvl * 0.25 + impulse(t - c.mine, 3) * 0.15;
+      (core.material as THREE.ShaderMaterial).uniforms.uOpacity.value = 0.04 + lvl * 0.08 + impulse(t - c.mine, 3) * 0.06;
       d.u.uTime.value = t;
 
       return {
-        bloom: 0.45 + lvl * 0.4 + impulse(t - c.symbol_morph, 5) * 0.4,
+        bloom: 0.35 + lvl * 0.2 + impulse(t - c.symbol_morph, 5) * 0.4,
         aberration: 1.2 + lvl * 3,
         flash: impulse(t - c.mine, 12) * 0.05,
         zoomBlur: easeInOutCubic(outK) * 0.15 + (1 - easeOutCubic(range(t, S.start, S.start + 0.3))) * 0.1,
