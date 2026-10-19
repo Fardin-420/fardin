@@ -42,10 +42,10 @@ def main(video: Path, timeline_path: Path, expect_voice: bool) -> None:
                                f"{a['codec_name']} {a['channels']}ch {a['sample_rate']}Hz" if a else "none")
     checks["av_sync_duration"] = (abs(vdur - adur) < 0.05, f"video {vdur:.3f}s audio {adur:.3f}s")
 
-    # Black frames: only the first 0.3 s fade-in is allowed to be black.
+    # Black frames: only the designed opening darkness (first second) may be black.
     log = sh(["ffmpeg", "-hide_banner", "-i", str(video), "-vf", "blackdetect=d=0.25:pix_th=0.04", "-an", "-f", "null", "-"])
     blacks = [(float(m.group(1)), float(m.group(2))) for m in re.finditer(r"black_start:([\d.]+) black_end:([\d.]+)", log)]
-    bad_black = [b for b in blacks if b[0] > 0.35]
+    bad_black = [b for b in blacks if b[1] > 1.0]
     checks["no_unintended_black"] = (not bad_black, str(blacks))
 
     # Frozen stretches (dropped/duplicated frames or a stalled scene).
@@ -58,7 +58,7 @@ def main(video: Path, timeline_path: Path, expect_voice: bool) -> None:
     lufs = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", log)[-1])
     peak = float(re.findall(r"Peak:\s+(-?[\d.]+) dBFS", log)[-1])
     checks["loudness"] = (-17 <= lufs <= -12, f"{lufs} LUFS")
-    checks["no_clipping"] = (peak < -0.1, f"true peak {peak} dBFS")
+    checks["no_clipping"] = (peak <= -0.5, f"true peak {peak} dBFS")
 
     checks["narration_voice"] = (tl["voiced"] or not expect_voice,
                                  "NPC_VOICE_V1" if tl["voiced"] else "absent (pre-voice cut)")

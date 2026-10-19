@@ -403,9 +403,10 @@ def build(project: Path) -> None:
     lufs = meter.integrated_loudness(mix)
     mix *= 10 ** ((-14 - lufs) / 20)
     mix = np.tanh(mix * 1.1) / np.tanh(1.1)
+    # Ceiling at -1.5 dBFS sample peak leaves headroom for AAC inter-sample overshoot.
     peak = np.abs(mix).max()
-    if peak > 0.94:
-        mix *= 0.94 / peak
+    if peak > 0.84:
+        mix *= 0.84 / peak
     fade = secs(0.6)
     mix[-fade:] *= np.linspace(1, 0, fade)[:, None]
 

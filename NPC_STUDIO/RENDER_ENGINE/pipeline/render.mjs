@@ -100,7 +100,7 @@ if (mode === 'stills') {
   const s = Date.now();
   await renderMedia({
     serveUrl, composition: comp, codec: 'h264', outputLocation: silent, inputProps, muted: true,
-    scale: isFinal ? 1 : quality, crf: isFinal ? 14 : 22, x264Preset: isFinal ? 'slow' : 'veryfast', pixelFormat: 'yuv420p',
+    scale: isFinal ? 1 : quality, crf: 8, x264Preset: 'veryfast', pixelFormat: 'yuv420p', // near-lossless intermediate
     concurrency, browserExecutable: BROWSER, chromiumOptions, timeoutInMilliseconds: 240000,
     frameRange: opt('range', null)?.split('-').map(Number) ?? null,
     onProgress: ({ renderedFrames }) => {
@@ -112,7 +112,10 @@ if (mode === 'stills') {
     },
   });
   execFileSync('ffmpeg', ['-hide_banner', '-loglevel', 'error', '-y', '-i', silent, '-i', path.join(project, 'audio', 'mix.wav'),
-    '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'copy', '-c:a', 'aac', '-b:a', '320k', '-ar', '48000', '-ac', '2',
+    // Final encode: broadcast-range yuv420p with BT.709 tags (the intermediate is full-range).
+    '-map', '0:v:0', '-map', '1:a:0', '-c:v', 'libx264', '-crf', isFinal ? '14' : '20', '-preset', isFinal ? 'slow' : 'medium',
+    '-vf', 'scale=in_range=full:out_range=tv,format=yuv420p', '-pix_fmt', 'yuv420p',
+    '-color_range', 'tv', '-colorspace', 'bt709', '-color_primaries', 'bt709', '-color_trc', 'bt709', '-c:a', 'aac', '-b:a', '320k', '-ar', '48000', '-ac', '2',
     '-movflags', '+faststart', '-shortest', out]);
   fs.rmSync(silent);
   console.log(`rendered ${path.relative(studio, out)} in ${((Date.now() - s) / 1000).toFixed(0)}s`);

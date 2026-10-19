@@ -5,8 +5,8 @@
   "width": 1080,
   "height": 1920,
   "fps": 60,
-  "duration": 30.85,
-  "durationInFrames": 1851,
+  "duration": 30.25,
+  "durationInFrames": 1815,
   "lines": [
     {
       "id": "L01",
@@ -158,7 +158,7 @@
     {
       "id": "S06",
       "start": 24.75,
-      "end": 30.85
+      "end": 30.25
     }
   ],
   "cues": {

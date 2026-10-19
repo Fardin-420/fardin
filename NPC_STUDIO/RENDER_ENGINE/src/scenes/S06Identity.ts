@@ -37,9 +37,9 @@ export const S06: SceneFactory = (a, tl) => {
   // Particles land on the emblem surface.
   const N = 30000;
   const target = samplePoints(new THREE.Group().add(ring.clone(), letters.clone()), N, 606);
-  const start = shell(N, 4, 11, 607, [1, 1.6, 1]);
+  const start = shell(N, 1.8, 4.6, 607, [1, 1.5, 0.6]);
   const parts = new Particles(start, target, 608);
-  parts.u.uSize.value = 0.02;
+  parts.u.uSize.value = 0.026;
   parts.u.uStagger.value = 0.55;
   parts.u.uRedRatio.value = 0.04;
   parts.u.uColorA.value = new THREE.Color('#dfe2ea');
@@ -73,7 +73,7 @@ export const S06: SceneFactory = (a, tl) => {
       // Smooth orbit that settles to a frontal brand frame.
       const settle = easeInOutCubic(range(t, lock, c.final_hit + 0.4));
       const ang = lerp(-0.85, -0.35, easeOutCubic(assemble)) * (1 - settle);
-      const rad = lerp(10, 7.6, easeOutCubic(range(t, S.start, c.tagline)));
+      const rad = lerp(9.2, 7.6, easeOutCubic(range(t, S.start, c.tagline))) - 0.5 * range(t, c.tagline, S.end); // never fully static
       cam.position.set(Math.sin(ang) * rad, 0.4 + Math.sin(ang) * -0.3 + noise1(t * 0.3, 2) * 0.03, Math.cos(ang) * rad);
       cam.lookAt(0, 0.3, 0);
 
@@ -82,7 +82,7 @@ export const S06: SceneFactory = (a, tl) => {
       parts.u.uSwirl.value = 5.5;
       parts.u.uNoiseAmp.value = 0.05 * (1 - assemble);
       parts.u.uSparkle.value = 1.2;
-      parts.u.uOpacity.value = locked ? 1 - easeOutCubic(range(t, lock, lock + 0.7)) : 0.5 + 0.5 * assemble;
+      parts.u.uOpacity.value = locked ? 1 - easeOutCubic(range(t, lock, lock + 0.7)) : 0.85 + 0.15 * assemble;
       parts.points.visible = t < lock + 0.7;
 
       // Solid emblem materialises under a flash the instant the particles land.
@@ -112,7 +112,7 @@ export const S06: SceneFactory = (a, tl) => {
         aberration: 1 + impulse(t - lock, 6) * 6,
         vignette: 0.75,
         grain: 0.04,
-        fade: (1 - easeOutCubic(range(t, S.start, S.start + 0.25))) * 0.6,
+        fade: (1 - easeOutCubic(range(t, S.start, S.start + 0.15))) * 0.3,
       };
     },
   };

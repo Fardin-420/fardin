@@ -4,7 +4,7 @@
   "voice_profile": "NPC_VOICE_V1",
   "video": { "width": 1080, "height": 1920, "fps": 60 },
   "lead_in": 0.9,
-  "tail": 2.6,
+  "tail": 2.0,
   "lines": [
     { "id": "L01", "scene": "S01", "text": "Look closer.", "emotion": "MYSTERIOUS", "gain_db": -3, "pause_after": 1.9, "est": 0.95 },
 
