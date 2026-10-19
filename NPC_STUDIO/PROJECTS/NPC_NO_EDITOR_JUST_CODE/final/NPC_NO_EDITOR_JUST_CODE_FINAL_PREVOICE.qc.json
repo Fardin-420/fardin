@@ -1,0 +1,54 @@
+{
+  "video": "NPC_NO_EDITOR_JUST_CODE_FINAL_PREVOICE.mp4",
+  "pass": true,
+  "checks": {
+    "codec_h264": {
+      "pass": true,
+      "detail": "h264"
+    },
+    "pix_fmt": {
+      "pass": true,
+      "detail": "yuv420p"
+    },
+    "fps": {
+      "pass": true,
+      "detail": "60.000"
+    },
+    "resolution": {
+      "pass": true,
+      "detail": "1080x1920"
+    },
+    "frame_count": {
+      "pass": true,
+      "detail": "1815 / 1815"
+    },
+    "audio_present": {
+      "pass": true,
+      "detail": "aac 2ch 48000Hz"
+    },
+    "av_sync_duration": {
+      "pass": true,
+      "detail": "video 30.250s audio 30.250s"
+    },
+    "no_unintended_black": {
+      "pass": true,
+      "detail": "[(0.0, 0.5)]"
+    },
+    "no_freezes": {
+      "pass": true,
+      "detail": "[]"
+    },
+    "loudness": {
+      "pass": true,
+      "detail": "-15.9 LUFS"
+    },
+    "no_clipping": {
+      "pass": true,
+      "detail": "true peak -0.5 dBFS"
+    },
+    "narration_voice": {
+      "pass": true,
+      "detail": "absent (pre-voice cut)"
+    }
+  }
+}

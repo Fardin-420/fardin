@@ -7,8 +7,8 @@
       "detail": "h264"
     },
     "pix_fmt": {
-      "pass": false,
-      "detail": "yuvj420p"
+      "pass": true,
+      "detail": "yuv420p"
     },
     "fps": {
       "pass": true,
@@ -20,7 +20,7 @@
     },
     "frame_count": {
       "pass": true,
-      "detail": "1851 / 1851"
+      "detail": "1815 / 1815"
     },
     "audio_present": {
       "pass": true,
@@ -28,23 +28,23 @@
     },
     "av_sync_duration": {
       "pass": true,
-      "detail": "video 30.850s audio 30.850s"
+      "detail": "video 30.250s audio 30.250s"
     },
     "no_unintended_black": {
       "pass": false,
-      "detail": "[(0.0, 0.7), (24.75, 25.0667)]"
+      "detail": "[(0.0, 0.533333), (3.4, 3.68333)]"
     },
     "no_freezes": {
-      "pass": true,
-      "detail": "[]"
+      "pass": false,
+      "detail": "['0.983333']"
     },
     "loudness": {
       "pass": true,
-      "detail": "-15.0 LUFS"
+      "detail": "-16.0 LUFS"
     },
     "no_clipping": {
-      "pass": false,
-      "detail": "true peak 1.3 dBFS"
+      "pass": true,
+      "detail": "true peak -0.5 dBFS"
     },
     "narration_voice": {
       "pass": true,
