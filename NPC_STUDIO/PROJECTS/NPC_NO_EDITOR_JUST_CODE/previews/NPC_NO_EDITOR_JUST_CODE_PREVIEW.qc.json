@@ -20,7 +20,7 @@
     },
     "frame_count": {
       "pass": true,
-      "detail": "1815 / 1815"
+      "detail": "2090 / 2091"
     },
     "audio_present": {
       "pass": true,
@@ -28,11 +28,11 @@
     },
     "av_sync_duration": {
       "pass": true,
-      "detail": "video 30.250s audio 30.250s"
+      "detail": "video 34.833s audio 34.816s"
     },
     "no_unintended_black": {
       "pass": false,
-      "detail": "[(0.0, 0.533333), (3.4, 3.68333)]"
+      "detail": "[(0.0, 0.6), (3.68333, 3.96667), (6.75, 7.03333), (8.38333, 8.63333)]"
     },
     "no_freezes": {
       "pass": false,
@@ -40,15 +40,15 @@
     },
     "loudness": {
       "pass": true,
-      "detail": "-16.0 LUFS"
+      "detail": "-14.2 LUFS"
     },
     "no_clipping": {
       "pass": true,
-      "detail": "true peak -0.5 dBFS"
+      "detail": "true peak -1.0 dBFS"
     },
     "narration_voice": {
       "pass": true,
-      "detail": "absent (pre-voice cut)"
+      "detail": "NPC_GUEST_VOICE"
     }
   }
 }

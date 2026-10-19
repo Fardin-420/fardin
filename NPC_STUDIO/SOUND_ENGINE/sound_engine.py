@@ -409,9 +409,7 @@ def build(project: Path) -> None:
     mix *= 10 ** ((-14 - lufs) / 20)
     mix = np.tanh(mix * 1.1) / np.tanh(1.1)
     # Ceiling at -1.5 dBFS sample peak leaves headroom for AAC inter-sample overshoot.
-    peak = np.abs(mix).max()
-    if peak > 0.84:
-        mix *= 0.84 / peak
+    mix = true_peak_limit(mix, -2.0)
     fade = secs(0.6)
     mix[-fade:] *= np.linspace(1, 0, fade)[:, None]
 
@@ -425,6 +423,29 @@ def build(project: Path) -> None:
 
 
 VOICE_MARGIN = 9.0
+
+
+def true_peak_limit(x: np.ndarray, ceiling_db: float) -> np.ndarray:
+    """Look-ahead brickwall limiter on 4x-oversampled peaks (inter-sample safe).
+
+    Only the moments that would exceed the ceiling are turned down, so lossy
+    encoding cannot reconstruct overs without sacrificing overall loudness."""
+    from scipy.ndimage import minimum_filter1d
+
+    c = 10 ** (ceiling_db / 20)
+    n = len(x)
+    os_peak = np.abs(signal.resample_poly(x, 4, 1, axis=0)).max(axis=1)[: n * 4].reshape(n, 4).max(axis=1)
+    need = np.minimum(1.0, c / np.maximum(os_peak, 1e-9))
+    la = secs(0.002)
+    need = minimum_filter1d(need, size=2 * la + 1)  # look-ahead window
+    g = np.empty(n)
+    rel = np.exp(-1 / secs(0.08))
+    cur = 1.0
+    for i, v in enumerate(need):
+        cur = v if v < cur else rel * cur + (1 - rel) * v
+        g[i] = cur
+    g = np.convolve(g, np.ones(la) / la, mode="same")  # click-free; stays under need
+    return x * np.minimum(g, need)[:, None]
 
 
 def sidechain(voice: np.ndarray, bed: np.ndarray, sfx: np.ndarray):
