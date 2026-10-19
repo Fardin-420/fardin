@@ -1,0 +1,194 @@
+{
+  "project": "NPC_NO_EDITOR_JUST_CODE",
+  "voiced": false,
+  "timing_source": "estimated (awaiting NPC_VOICE_V1)",
+  "width": 1080,
+  "height": 1920,
+  "fps": 60,
+  "duration": 30.85,
+  "durationInFrames": 1851,
+  "lines": [
+    {
+      "id": "L01",
+      "scene": "S01",
+      "text": "Look closer.",
+      "emotion": "MYSTERIOUS",
+      "start": 0.9,
+      "end": 1.85
+    },
+    {
+      "id": "L02",
+      "scene": "S02",
+      "text": "This wasn't edited in Premiere.",
+      "emotion": "CONFIDENT",
+      "start": 3.75,
+      "end": 5.5
+    },
+    {
+      "id": "L03",
+      "scene": "S02",
+      "text": "Not in CapCut.",
+      "emotion": "CONFIDENT",
+      "start": 5.95,
+      "end": 6.9
+    },
+    {
+      "id": "L04",
+      "scene": "S02",
+      "text": "Not in After Effects.",
+      "emotion": "CINEMATIC",
+      "start": 7.25,
+      "end": 8.45
+    },
+    {
+      "id": "L05",
+      "scene": "S03",
+      "text": "Every transition.",
+      "emotion": "CINEMATIC",
+      "start": 9.25,
+      "end": 10.25
+    },
+    {
+      "id": "L06",
+      "scene": "S03",
+      "text": "Every effect.",
+      "emotion": "CINEMATIC",
+      "start": 10.55,
+      "end": 11.4
+    },
+    {
+      "id": "L07",
+      "scene": "S03",
+      "text": "Every single frame.",
+      "emotion": "DRAMATIC",
+      "start": 11.75,
+      "end": 13.3
+    },
+    {
+      "id": "L08",
+      "scene": "S03",
+      "text": "Written in code.",
+      "emotion": "CONFIDENT",
+      "start": 13.8,
+      "end": 14.85
+    },
+    {
+      "id": "L09",
+      "scene": "S04",
+      "text": "And that voice you're hearing?",
+      "emotion": "MYSTERIOUS",
+      "start": 15.8,
+      "end": 17.35
+    },
+    {
+      "id": "L10",
+      "scene": "S04",
+      "text": "That's mine.",
+      "emotion": "CALM",
+      "start": 17.9,
+      "end": 18.75
+    },
+    {
+      "id": "L11",
+      "scene": "S05",
+      "text": "No traditional editor.",
+      "emotion": "AGGRESSIVE",
+      "start": 19.85,
+      "end": 21.15
+    },
+    {
+      "id": "L12",
+      "scene": "S05",
+      "text": "No timeline.",
+      "emotion": "AGGRESSIVE",
+      "start": 21.65,
+      "end": 22.5
+    },
+    {
+      "id": "L13",
+      "scene": "S05",
+      "text": "Just code.",
+      "emotion": "DRAMATIC",
+      "start": 23.1,
+      "end": 23.95
+    },
+    {
+      "id": "L14",
+      "scene": "S06",
+      "text": "This is NPC.",
+      "emotion": "CONFIDENT",
+      "start": 25.25,
+      "end": 26.25
+    },
+    {
+      "id": "L15",
+      "scene": "S06",
+      "text": "Built with Claude Code.",
+      "emotion": "CALM",
+      "start": 26.85,
+      "end": 28.25
+    }
+  ],
+  "scenes": [
+    {
+      "id": "S01",
+      "start": 0.0,
+      "end": 3.4
+    },
+    {
+      "id": "S02",
+      "start": 3.4,
+      "end": 8.95
+    },
+    {
+      "id": "S03",
+      "start": 8.95,
+      "end": 15.45
+    },
+    {
+      "id": "S04",
+      "start": 15.45,
+      "end": 19.55
+    },
+    {
+      "id": "S05",
+      "start": 19.55,
+      "end": 24.75
+    },
+    {
+      "id": "S06",
+      "start": 24.75,
+      "end": 30.85
+    }
+  ],
+  "cues": {
+    "cursor_on": 0.3,
+    "whisper": 0.9,
+    "pulse": 2.1,
+    "title_slam": 2.27,
+    "s02_whip": 3.4,
+    "premiere_in": 4.893,
+    "premiere_break": 5.83,
+    "capcut_in": 6.387,
+    "capcut_break": 7.17,
+    "ae_in": 7.618,
+    "ae_break": 8.63,
+    "s03_in": 8.95,
+    "transition_word": 9.25,
+    "effect_word": 10.55,
+    "frame_word": 11.75,
+    "frame_hit": 12.726,
+    "code_word": 13.8,
+    "code_resolve": 14.95,
+    "s04_in": 15.45,
+    "mine": 17.9,
+    "symbol_morph": 18.8,
+    "layers": 19.85,
+    "collapse": 21.65,
+    "explode": 23.12,
+    "s06_in": 24.75,
+    "emblem_lock": 25.6,
+    "tagline": 26.85,
+    "final_hit": 28.6
+  }
+}

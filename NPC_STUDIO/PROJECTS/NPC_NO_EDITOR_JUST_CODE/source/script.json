@@ -1,0 +1,34 @@
+{
+  "project": "NPC_NO_EDITOR_JUST_CODE",
+  "title": "NPC — NO EDITOR. JUST CODE.",
+  "voice_profile": "NPC_VOICE_V1",
+  "video": { "width": 1080, "height": 1920, "fps": 60 },
+  "lead_in": 0.9,
+  "tail": 2.6,
+  "lines": [
+    { "id": "L01", "scene": "S01", "text": "Look closer.", "emotion": "MYSTERIOUS", "gain_db": -3, "pause_after": 1.9, "est": 0.95 },
+
+    { "id": "L02", "scene": "S02", "text": "This wasn't edited in Premiere.", "emotion": "CONFIDENT", "gain_db": 0, "pause_after": 0.45, "est": 1.75 },
+    { "id": "L03", "scene": "S02", "text": "Not in CapCut.", "emotion": "CONFIDENT", "gain_db": 0, "pause_after": 0.35, "est": 0.95 },
+    { "id": "L04", "scene": "S02", "text": "Not in After Effects.", "emotion": "CINEMATIC", "gain_db": 0.5, "pause_after": 0.8, "est": 1.2 },
+
+    { "id": "L05", "scene": "S03", "text": "Every transition.", "emotion": "CINEMATIC", "gain_db": 0, "pause_after": 0.3, "est": 1.0 },
+    { "id": "L06", "scene": "S03", "text": "Every effect.", "emotion": "CINEMATIC", "gain_db": 0.5, "pause_after": 0.35, "est": 0.85 },
+    { "id": "L07", "scene": "S03", "text": "Every single frame.", "emotion": "DRAMATIC", "gain_db": 1, "pause_after": 0.5, "est": 1.55 },
+    { "id": "L08", "scene": "S03", "text": "Written in code.", "emotion": "CONFIDENT", "gain_db": 0.5, "pause_after": 0.95, "est": 1.05 },
+
+    { "id": "L09", "scene": "S04", "text": "And that voice you're hearing?", "emotion": "MYSTERIOUS", "gain_db": -1, "pause_after": 0.55, "est": 1.55 },
+    { "id": "L10", "scene": "S04", "text": "That's mine.", "emotion": "CALM", "gain_db": 0, "pause_after": 1.1, "est": 0.85 },
+
+    { "id": "L11", "scene": "S05", "text": "No traditional editor.", "emotion": "AGGRESSIVE", "gain_db": 0.5, "pause_after": 0.5, "est": 1.3 },
+    { "id": "L12", "scene": "S05", "text": "No timeline.", "emotion": "AGGRESSIVE", "gain_db": 1, "pause_after": 0.6, "est": 0.85 },
+    { "id": "L13", "scene": "S05", "text": "Just code.", "emotion": "DRAMATIC", "gain_db": 1.5, "pause_after": 1.3, "est": 0.85 },
+
+    { "id": "L14", "scene": "S06", "text": "This is NPC.", "emotion": "CONFIDENT", "gain_db": 1, "pause_after": 0.6, "est": 1.0 },
+    { "id": "L15", "scene": "S06", "text": "Built with Claude Code.", "emotion": "CALM", "gain_db": 0, "pause_after": 0, "est": 1.4 }
+  ],
+  "pronunciation": {
+    "NPC": "N. P. C.",
+    "CapCut": "Cap Cut"
+  }
+}

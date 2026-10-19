@@ -1,0 +1,74 @@
+{
+  "profile": "NPC_VOICE_V1",
+  "owner": "NPC",
+  "updated": "2026-10-19",
+  "privacy": "Local only. Reference audio is git-ignored and never sent to external services.",
+  "engine": {
+    "name": "Chatterbox TTS",
+    "package": "chatterbox-tts==0.1.7",
+    "weights": "ResembleAI/chatterbox",
+    "device": "cpu"
+  },
+  "original_references": [
+    "VOICE/NPC_VOICE_V1/original_reference/npc_ref_001.m4a"
+  ],
+  "clean_reference": "VOICE/NPC_VOICE_V1/clean_reference/npc_reference_clean.wav",
+  "analysis": {
+    "duration_s": 2.54,
+    "speech_s": 1.91,
+    "f0_median_hz": 134.7,
+    "f0_p5_hz": 119.4,
+    "f0_p95_hz": 149.3,
+    "spectral_centroid_hz": 1272,
+    "est_snr_db": 37.6,
+    "onset_rate_per_s": 3.93
+  },
+  "language": "en (target narration language)",
+  "ready_for_cloning": false,
+  "issues": [
+    "only 1.91s of speech; need at least 8.0s (ideally 20.0s+) of continuous English speech"
+  ],
+  "synthesis": {
+    "seed": 4207,
+    "takes": 3,
+    "min_speaker_similarity": 0.8,
+    "sample_rate": 24000,
+    "emotions": {
+      "CALM": {
+        "exaggeration": 0.35,
+        "cfg_weight": 0.5,
+        "temperature": 0.7
+      },
+      "MYSTERIOUS": {
+        "exaggeration": 0.4,
+        "cfg_weight": 0.35,
+        "temperature": 0.7
+      },
+      "CONFIDENT": {
+        "exaggeration": 0.5,
+        "cfg_weight": 0.5,
+        "temperature": 0.75
+      },
+      "CINEMATIC": {
+        "exaggeration": 0.6,
+        "cfg_weight": 0.35,
+        "temperature": 0.75
+      },
+      "DRAMATIC": {
+        "exaggeration": 0.7,
+        "cfg_weight": 0.3,
+        "temperature": 0.75
+      },
+      "AGGRESSIVE": {
+        "exaggeration": 0.8,
+        "cfg_weight": 0.35,
+        "temperature": 0.8
+      },
+      "ENERGETIC": {
+        "exaggeration": 0.7,
+        "cfg_weight": 0.5,
+        "temperature": 0.8
+      }
+    }
+  }
+}

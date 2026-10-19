@@ -1,0 +1,24 @@
+{
+  "brand": "NPC",
+  "palette": {
+    "black": "#030303",
+    "ink": "#0b0b0c",
+    "graphite": "#1a1a1d",
+    "steel": "#8d9099",
+    "chrome": "#d9dce3",
+    "ivory": "#f3eee3",
+    "red": "#ff2b1c",
+    "red_deep": "#9e0f08"
+  },
+  "fonts": {
+    "display": "Inter Display (Black/ExtraBold) — 3D extruded titles",
+    "ui": "Inter Display (Medium/Regular) — supporting typography",
+    "mono": "JetBrains Mono — code, HUD, technical labels"
+  },
+  "rules": [
+    "Deep black backgrounds; never pure flat grey.",
+    "Ivory for typography, chrome for 3D surfaces.",
+    "Red is energy only: pulses, rims, accents — never large fills.",
+    "No third-party software logos; names are set in NPC typography only."
+  ]
+}

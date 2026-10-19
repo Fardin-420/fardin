@@ -1,0 +1,30 @@
+# --- Private voice data: NEVER commit (repo is public) ---
+NPC_STUDIO/VOICE/NPC_VOICE_V1/original_reference/*
+NPC_STUDIO/VOICE/NPC_VOICE_V1/clean_reference/*
+NPC_STUDIO/VOICE/NPC_VOICE_V1/voice_tests/*
+!NPC_STUDIO/VOICE/NPC_VOICE_V1/**/.gitkeep
+# Narration rendered in the cloned voice (derived from private data)
+NPC_STUDIO/PROJECTS/*/audio/narration/*
+!NPC_STUDIO/PROJECTS/*/audio/narration/.gitkeep
+
+# --- Environments / caches ---
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+NPC_STUDIO/VOICE_ENGINE/models/
+NPC_STUDIO/RENDER_ENGINE/build/
+NPC_STUDIO/RENDER_ENGINE/.remotion/
+
+# --- Heavy intermediates (reproducible from source) ---
+NPC_STUDIO/PROJECTS/*/previews/frames/
+NPC_STUDIO/PROJECTS/*/audio/stems/
+*.zip
+NPC_STUDIO/RENDER_ENGINE/src/data/
+# Mixed audio contains the narration once NPC_VOICE_V1 exists; rendered videos are large.
+# All of these are reproducible from source with produce.py.
+NPC_STUDIO/PROJECTS/*/audio/mix.wav
+NPC_STUDIO/PROJECTS/*/previews/*.mp4
+NPC_STUDIO/PROJECTS/*/final/*.mp4
+NPC_STUDIO/PROJECTS/*/final/.*.mp4
+NPC_STUDIO/PROJECTS/*/previews/.*.mp4
