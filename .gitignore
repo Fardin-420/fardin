@@ -29,3 +29,12 @@ NPC_STUDIO/PROJECTS/*/final/*.mp4
 NPC_STUDIO/PROJECTS/*/final/.*.mp4
 NPC_STUDIO/PROJECTS/*/previews/.*.mp4
 NPC_STUDIO/PROJECTS/*/previews/*.m4a
+
+# --- NPC x CYBERWOLF: personal media and the licensed song stay out of the public repo ---
+# (references + sha256 in PROJECTS/NPC_X_CYBERWOLF_ONE_ARMY/source/ASSETS.md)
+NPC_STUDIO/PROJECTS/NPC_X_CYBERWOLF_ONE_ARMY/source/assets/*
+!NPC_STUDIO/PROJECTS/NPC_X_CYBERWOLF_ONE_ARMY/source/assets/.gitkeep
+NPC_STUDIO/PROJECTS/NPC_X_CYBERWOLF_ONE_ARMY/source/prepared/*.png
+NPC_STUDIO/PROJECTS/*/audio/*.wav
+NPC_STUDIO/PROJECTS/*/previews/stills/
+NPC_STUDIO/PROJECTS/*/final/render.log

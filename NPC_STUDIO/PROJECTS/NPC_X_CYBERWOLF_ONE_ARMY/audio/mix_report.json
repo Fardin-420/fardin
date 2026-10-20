@@ -1,0 +1,79 @@
+{
+ "samples": 1791200,
+ "duration": 37.31666666666667,
+ "source_true_peak_dbtp": 0.99,
+ "pre_limiter_true_peak_dbtp": -1.0,
+ "master_true_peak_dbtp": -1.15,
+ "max_gain_reduction_db": 0.15,
+ "limited_ms": 61.0,
+ "integrated_lufs": -10.69,
+ "music_lufs": -10.69,
+ "sfx": [
+  {
+   "kind": "glitch",
+   "t": 3.203,
+   "align": "start",
+   "gain_db": -27
+  },
+  {
+   "kind": "whoosh",
+   "t": 8.163,
+   "align": "peak",
+   "gain_db": -21
+  },
+  {
+   "kind": "whoosh",
+   "t": 10.407,
+   "align": "peak",
+   "gain_db": -24
+  },
+  {
+   "kind": "glitch",
+   "t": 11.483,
+   "align": "start",
+   "gain_db": -26
+  },
+  {
+   "kind": "whoosh",
+   "t": 12.553,
+   "align": "peak",
+   "gain_db": -25
+  },
+  {
+   "kind": "whoosh",
+   "t": 17.083,
+   "align": "peak",
+   "gain_db": -28
+  },
+  {
+   "kind": "glitch",
+   "t": 20.367,
+   "align": "start",
+   "gain_db": -27
+  },
+  {
+   "kind": "reverse_swell",
+   "t": 23.733,
+   "align": "end",
+   "gain_db": -22
+  },
+  {
+   "kind": "shatter",
+   "t": 30.967,
+   "align": "start",
+   "gain_db": -26
+  },
+  {
+   "kind": "shimmer",
+   "t": 32.633,
+   "align": "end",
+   "gain_db": -30
+  },
+  {
+   "kind": "shimmer_tail",
+   "t": 32.633,
+   "align": "start",
+   "gain_db": -32
+  }
+ ]
+}

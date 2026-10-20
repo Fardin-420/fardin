@@ -10,6 +10,8 @@ NPC_STUDIO/
   VOICE_ENGINE/              Chatterbox TTS pipeline: register, test, narrate, speaker-similarity gate
   SOUND_ENGINE/              numpy/scipy synthesis: impacts, risers, glitches, metal, electricity, drones, ducking, master
   RENDER_ENGINE/             Remotion + Three.js/WebGL + GLSL scenes, DOM typography, render & QC scripts
+  EDIT_ENGINE/               music-driven photo/character edits: song analysis, bar-aligned music edit, NumPy/OpenCV
+                             compositor (2.5D parallax, motion blur, impacts, kinetic type), mix, frame-strip review, QC
   BRAND/                     fonts (Inter Display, JetBrains Mono, OFL), logos/, visual_identity/
   CONFIG/                    brand.json (palette, rules), studio.json (render/audio defaults)
   PROJECTS/<NAME>/           source/script.json → timeline.json, audio/, previews/, final/
@@ -68,3 +70,10 @@ and run `produce.py`. The voice profile, brand palette, fonts, sound library and
 
 * No GPU: WebGL runs on SwiftShader (`NPC_GL=swangle`). On a GPU machine, set `NPC_GL=angle` for much faster renders.
 * The network policy blocked `huggingface.co` here, so Chatterbox weights could not be downloaded in-session (see `VOICE/NPC_VOICE_V1/README.md`).
+
+## Edit engine (music-driven character edits)
+
+`EDIT_ENGINE/` is a second, CPU-only pipeline for edits built from still images and a song (no narration).
+`produce_edit.py <project>` runs analysis → music edit → asset prep → mix → render → QC. See
+`PROJECTS/NPC_X_CYBERWOLF_ONE_ARMY/README.md` for the full method (time-domain onset analysis, bar-aligned music
+editing with seam scoring, frame-exact impact placement, and the compositor).

@@ -1,0 +1,78 @@
+{
+  "video": "NPC_X_CYBERWOLF_ONE_ARMY_FINAL.mp4",
+  "pass": true,
+  "checks": {
+    "video_codec": {
+      "pass": true,
+      "detail": "h264 High"
+    },
+    "pix_fmt": {
+      "pass": true,
+      "detail": "yuv420p bt709/tv"
+    },
+    "resolution": {
+      "pass": true,
+      "detail": "1080x1920"
+    },
+    "fps": {
+      "pass": true,
+      "detail": "60/1"
+    },
+    "frame_count": {
+      "pass": true,
+      "detail": "2239 / 2239"
+    },
+    "audio_stream": {
+      "pass": true,
+      "detail": "aac 48000 Hz 2 ch 320 kb/s"
+    },
+    "av_duration": {
+      "pass": true,
+      "detail": "video 37.317s audio 37.316s"
+    },
+    "duration": {
+      "pass": true,
+      "detail": "37.32s"
+    },
+    "bitrate": {
+      "pass": true,
+      "detail": "28.6 Mb/s"
+    },
+    "av_alignment": {
+      "pass": true,
+      "detail": "audio offset 0.00 ms vs master"
+    },
+    "impact_sync": {
+      "pass": true,
+      "detail": "music entrance / THEY SEE TWO: audio onset 1.512s -> f91, picture impact f91 (+0); drop A / CYBERWOLF: audio onset 5.967s -> f358, picture impact f358 (+0); whip to NPC: audio onset 8.191s -> f491, picture impact f490 (-1); build / NO BACKUP: audio onset 19.300s -> f1158, picture impact f1158 (+0); JUST TWO: audio onset 21.523s -> f1291, picture impact f1291 (+0); THE DROP / TWO SHADOWS: audio onset 23.744s -> f1425, picture impact f1424 (-1); ONE ARMY: audio onset 25.967s -> f1558, picture impact f1558 (+0); logo reveal: audio onset 32.632s -> f1958, picture impact f1958 (+0)"
+    },
+    "loudness": {
+      "pass": true,
+      "detail": "-10.7 LUFS integrated"
+    },
+    "true_peak": {
+      "pass": true,
+      "detail": "-1.0 dBTP"
+    },
+    "no_silent_gaps": {
+      "pass": true,
+      "detail": "0 silent 100 ms windows"
+    },
+    "black_frames_designed_only": {
+      "pass": true,
+      "detail": "black: [(0.0, 0.4), (0.433333, 1.11667), (1.15, 1.51667), (3.43333, 3.85), (23.1833, 23.7333), (31.45, 32.0833), (37.0333, 37.3)]"
+    },
+    "no_freezes": {
+      "pass": true,
+      "detail": "freezes [] (logo hold and designed darkness allowed)"
+    },
+    "logo_only_at_end": {
+      "pass": true,
+      "detail": "first logo frame ~f1962 (reveal f1958); max match before final sequence 0.26"
+    },
+    "on_screen_copy": {
+      "pass": true,
+      "detail": "18/18 lines as specified"
+    }
+  }
+}
