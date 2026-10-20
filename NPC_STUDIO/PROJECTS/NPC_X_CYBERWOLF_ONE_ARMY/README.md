@@ -180,3 +180,17 @@ python3 EDIT_ENGINE/review.py final/NPC_X_CYBERWOLF_ONE_ARMY_FINAL.mp4 strip.jpg
 ```
 
 Everything is deterministic (all randomness is seeded), so the same inputs give the same video.
+
+## 7. Final QC (measured on the delivered MP4) — `final/NPC_X_CYBERWOLF_ONE_ARMY_FINAL.qc.json`
+
+| Check | Result |
+|---|---|
+| Video | H.264 High, yuv420p BT.709 tv, 1080×1920, 60/1 fps, 2239/2239 frames, 28.6 Mb/s |
+| Audio | AAC 48 kHz stereo 320 kb/s; A/V durations 37.317 / 37.316 s; offset vs master **0.00 ms** |
+| Impact sync (picture-change peak vs audio onset frame) | entrance 0, drop A 0, whip −1, build 0, JUST TWO 0, **drop 0/−1**, ONE ARMY 0, **logo 0** |
+| Loudness | −10.7 LUFS integrated, −1.0 dBTP, no silent gaps |
+| Black frames | only the designed ones (opening, text exit, pre-drop pause, pre-logo darkness, final fade); no freezes |
+| Logo | first appears at the reveal frame; best match anywhere earlier 0.26 (no logo) |
+| Copy | 18/18 on-screen lines as specified; the forbidden name does not appear anywhere in the project |
+
+Render time on 4 CPU cores, no GPU: 12.5 min for the final, about 2 min for a 540×960 preview.
