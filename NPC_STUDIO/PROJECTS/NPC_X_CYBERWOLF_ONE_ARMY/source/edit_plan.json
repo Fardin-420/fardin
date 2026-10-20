@@ -1,0 +1,26 @@
+{
+  "title": "NPC x CYBERWOLF - TWO SHADOWS. ONE ARMY.",
+  "music": "source/assets/montagem_elder_super_slowed.m4a",
+  "fps": 60,
+  "width": 1080,
+  "height": 1920,
+  "music_edit": {
+    "note": "Bar-aligned music edit. Beat k of the source sits at grid_phase + k * beat_period (measured by EDIT_ENGINE/analyze_music.py). Pieces are whole beats so the output keeps one continuous 108 BPM grid. Every seam joins bars that are musically interchangeable (same 808 notes and chords as the bar that naturally precedes the incoming piece).",
+    "pieces": [
+      {"role": "pre-roll: faint fade-in with soft pulses on beats 2 and 3", "from_t": 0.70, "to_beat": 4},
+      {"role": "intro bar 1: music entrance (beat 4)", "beats": [4, 8]},
+      {"role": "intro bar 4: 808 riser into drop 1 (natural predecessor bar 3 == bar 1)", "beats": [16, 20]},
+      {"role": "drop 1 bars 1-3 (A B A)", "beats": [20, 32]},
+      {"role": "drop 2 bar 8: B bar whose last beat cuts the bass (natural predecessor is an A bar)", "beats": [88, 92]},
+      {"role": "breakdown bar 1: bass silent, drop reverb decays", "beats": [92, 96]},
+      {"role": "breakdown bar 4: hats enter on beat 106 (natural predecessor bar 3 == bar 1)", "beats": [104, 108]},
+      {"role": "build bar 1 first half: 52 dB kick entrance", "beats": [108, 110]},
+      {"role": "build bar 3 second half + bar 4: kick on 120, near-silent gap 122-123", "beats": [118, 124]},
+      {"role": "drop 3 bars 1-3 (A B A): strongest impact of the song on beat 124", "beats": [124, 136]},
+      {"role": "drop 3 bar 8: one hit, bass silent for three beats (natural predecessor is an A bar)", "beats": [152, 156]},
+      {"role": "drop 4 entrance, 45 dB: the final strong impact", "beats": [156, 158]},
+      {"role": "drop 4 last half bar: same 36.6 Hz note, final hit on beat 187", "beats": [186, 188]},
+      {"role": "the song's real stop and reverb tail", "from_beat": 188, "dur": 2.45, "fade_out": 1.1}
+    ]
+  }
+}
