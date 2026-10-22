@@ -1,0 +1,83 @@
+1
+00:00:03,600 --> 00:00:06,450
+Go to mlh.com and open MyMLH sign-in / sign-up
+
+2
+00:00:06,467 --> 00:00:10,889
+Create your account: enter your first and last name
+
+3
+00:00:10,889 --> 00:00:14,100
+Tick the Terms of Service box, then tap Sign Up!
+
+4
+00:00:14,100 --> 00:00:16,100
+Account created: Welcome to MyMLH!
+
+5
+00:00:16,100 --> 00:00:19,331
+Complete your profile: fill in the required fields
+
+6
+00:00:19,331 --> 00:00:23,023
+Your own answers go here (hidden for privacy)
+
+7
+00:00:23,023 --> 00:00:27,500
+Add your education: search and select your school
+
+8
+00:00:27,500 --> 00:00:31,033
+Add a start date, or tick Currently in school
+
+9
+00:00:31,033 --> 00:00:35,033
+Add your birthday, then tap Continue
+
+10
+00:00:35,033 --> 00:00:37,986
+Next: Global Hack Week registration questions
+
+11
+00:00:37,986 --> 00:00:42,222
+Tick the required agreements, then tap Submit
+
+12
+00:00:42,222 --> 00:00:45,033
+Done: you're registered for the event
+
+13
+00:00:45,033 --> 00:00:48,558
+Now open hacktoberfest.com and log in with MLH
+
+14
+00:00:48,558 --> 00:00:51,867
+Tap Authorize to connect Hacktoberfest 2026
+
+15
+00:00:51,867 --> 00:00:52,992
+Loading your codes and offers...
+
+16
+00:00:52,992 --> 00:00:58,100
+Scroll down to the ElevenLabs card
+
+17
+00:00:58,100 --> 00:01:01,783
+ElevenLabs: 1 Month Free
+
+18
+00:01:01,800 --> 00:01:03,400
+Read the offer terms carefully
+
+19
+00:01:03,400 --> 00:01:05,200
+1 month of the Creator tier, no credit card required
+
+20
+00:01:05,200 --> 00:01:07,200
+Needs a verified phone and a connected GitHub on MyMLH
+
+21
+00:01:07,200 --> 00:01:09,200
+Then tap Get your code (not shown in this recording)

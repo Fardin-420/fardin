@@ -1,0 +1,88 @@
+NPC — EDIT REPORT: ElevenLabs 1-Month Creator tier tutorial
+====================================================================
+
+SOURCE
+  882x1920 portrait screen recording, 30 fps constant, 122.63 s (3679 frames).
+  Audio: silent (-91 dBFS digital floor for the whole file): no narration exists.
+  Website flow shown: mlh.com (MyMLH sign-up + profile) -> events.mlh.com (Global Hack Week:
+  Builders Week registration) -> hacktoberfest.com (MLH OAuth) -> 'Your Hacktoberfest codes and
+  offers' -> 'ElevenLabs - 1 Month Free' card. The recording ends on that card: phone
+  verification, GitHub connection and code redemption are NOT shown.
+
+OUTPUT
+  Duration 72.47 s (2174 frames @ 30 fps): intro 3.6 s, tutorial 57.27 s, offer freeze-frame 7.4 s, outro 4.2 s.
+
+EDIT DECISION LIST (source time -> output time, speed)
+     0.00-   2.85s  ->  0:03.60-0:06.45  x1.0   MLH sign-in page (Welcome Back); email field tapped, keyboard autofill appears
+     2.87-  12.60s  ->  0:06.47-0:10.89  x2.2   Sign-up form: first + last name typed (sped up; repetitive typing)
+    12.60-  13.30s  ->  0:10.90-0:11.60  x1.0   keyboard closes, consent checkbox visible
+    14.10-  16.60s  ->  0:11.60-0:14.10  x1.0   CUT 13.30-14.10 accidental tap that opened the Terms page and came back. Tick consent box, tap Sign Up!
+    16.60-  18.60s  ->  0:14.10-0:16.10  x1.0   Success toast 'Welcome to MyMLH!', profile page
+    18.60-  29.90s  ->  0:16.10-0:20.81  x2.4   Demographics (gender, race/ethnicity, pronouns) - values masked; sped up
+    29.90-  60.60s  ->  0:20.80-0:31.03  x3.0   Education history: school search + select, major, start date, 'Currently in school'; sped up (long typing incl. corrected typos)
+    60.60-  68.60s  ->  0:31.03-0:35.03  x2.0   Birthday (masked) + Continue
+    68.60-  70.20s  ->  0:35.03-0:36.63  x1.0   Redirect to Global Hack Week: Builders Week event, registration questions open
+    70.20-  79.70s  ->  0:36.63-0:42.22  x1.7   Country, required agreements, how did you hear, region, GitHub handle N/A, opt-ins, Submit
+    79.70-  81.00s  ->  0:42.23-0:43.53  x1.0   'Registered to attend!' confirmation
+    81.00-  84.00s  ->  0:43.53-0:45.03  x2.0   Answers review, 'You are registered.'
+    92.80-  94.00s  ->  0:45.03-0:46.23  x1.0   CUT 84.00-92.80 idle profile menu (dead time). Switch to hacktoberfest.com
+    94.00-  95.40s  ->  0:46.23-0:46.70  x3.0   new hacktoberfest.com tab opening (blank while loading, sped up)
+    95.40-  99.10s  ->  0:46.70-0:47.62  x4.0   Hacktoberfest loading / login redirect (waiting, sped up)
+    99.10- 102.40s  ->  0:47.63-0:50.93  x1.0   MLH OAuth: Authorize Hacktoberfest 2026 (account email masked)
+   102.40- 106.90s  ->  0:50.93-0:52.06  x4.0   Hacktoberfest loading after authorize (waiting, sped up)
+   106.90- 112.00s  ->  0:52.07-0:57.17  x1.0   'Your Hacktoberfest codes and offers' - scroll to ElevenLabs card
+   113.50- 114.25s  ->  0:57.17-0:57.92  x1.0   CUT 112.00-113.50 accidental long-press text selection + search popup
+   114.95- 117.90s  ->  0:57.90-1:00.85  x1.0   CUT 114.25-114.95 accidental long-press link menu. Hold on ElevenLabs card. DROPPED 117.90-122.63: scrolling unrelated offers + screen-recorder stop overlay
+  freeze  116.40s   ->  1:00.87-1:08.27  hold   Real frame of the ElevenLabs offer card held so its terms can be read; nothing is added to it
+  Removed: 13.30-14.10s, 84.00-92.80s, 112.00-113.50s, 114.25-114.95s, 117.90-122.63s (accidental Terms-page tap, idle open profile menu, two accidental long-presses, unrelated offers + recorder stop overlay). No instructional step was removed.
+
+CHAPTERS
+  0:03.60  STEP 01  CREATE YOUR MyMLH ACCOUNT
+  0:16.10  STEP 02  COMPLETE YOUR PROFILE
+  0:35.03  STEP 03  REGISTER FOR THE MLH EVENT
+  0:45.03  STEP 04  CONNECT HACKTOBERFEST
+  0:52.06  STEP 05  FIND THE ELEVENLABS OFFER
+
+PRIVACY PROTECTION (opaque masks, applied to source pixels before any zoom/transition)
+  Detection: OCR of every source frame + on-screen-keyboard colour detector; masks dilated
+  +-4 frames. Masked source time ranges:
+  - Account e-mail (sign-in autofill chip, OAuth 'Signed in as'): 1.63-2.00s, 74.77-75.03s, 99.03-102.37s
+  - Profile answers (gender, race/ethnicity, pronouns, birthday): 17.87-30.33s, 59.90-69.63s
+  - Whole on-screen keyboard while typing private data: 1.37-2.97s, 18.47-29.73s, 62.13-67.20s
+  Not masked (judged non-sensitive): the pseudonymous display name, country/region answers,
+  education entries, public offer text.
+
+QUALITY ASSURANCE (measured on the exported files)
+  [9x16] 1080x1920 h264 yuv420p 30/1 fps, 2174 frames; audio aac 48000 Hz 2 ch
+         A/V duration delta 0.001 s; decode errors: 0
+         loudness -14.7 LUFS integrated, true peak -1.4 dBTP
+         black segments: none
+         frozen >1 s: [['66.8667', '68.1'], ['69.7667', '72.1']] (expected: the offer freeze-frame and the outro end card)
+         privacy OCR: 590/590 frames scanned, (sensitive windows), 41 private values checked, automatic hits: 4 at [15.2, 15.3]s -> each frame reviewed by eye
+         review: all hits are false positives: the generic 'name@email.com' placeholder (motion-blurred), the 'Enter gender' placeholder, and common words in headings/captions. No private value or account e-mail is readable in any frame.
+  [16x9] 1920x1080 h264 yuv420p 30/1 fps, 2174 frames; audio aac 48000 Hz 2 ch
+         A/V duration delta 0.001 s; decode errors: 0
+         loudness -14.7 LUFS integrated, true peak -1.4 dBTP
+         black segments: none
+         frozen >1 s: [['66.8333', '68.1'], ['69.7', '72.1']] (expected: the offer freeze-frame and the outro end card)
+         privacy OCR: 590/590 frames scanned, (sensitive windows), 41 private values checked, automatic hits: 14 at [4.5, 4.6, 5.4, 5.5, 15.2, 15.3, 15.4, 15.6]s -> each frame reviewed by eye
+         review: all hits are false positives: the 'name@email.com' placeholder, the mask's own 'EMAIL HIDDEN' label, and the 'Enter gender' placeholder. No private value or account e-mail is readable in any frame.
+
+AUDIO
+  The source has no narration (silent track), so there was no voice to enhance, transcribe
+  or duck. NPC_VOICE_V1 was not used: no supplementary narration was authorised for this video.
+  Soundtrack: original score synthesized in audio.py (A minor, 112 BPM; pads, bass pulse, soft
+  kick, hats, pluck arpeggio) + 41 SFX cues, each tied to a visual event (taps,
+  highlights, chapter cards, cuts, success screens, intro/outro hits). Mastered to -14.5 LUFS
+  behind a -3 dB limiter so the delivered AAC measures under -1 dBTP (see QC). No third-party
+  music or samples. Note: a first delivery clipped on click transients (+5.6 dBTP after AAC);
+  clicks now have a 4 ms attack and the finals were re-muxed.
+
+CAPTIONS
+  Language: English. There is no speech, so captions are step captions written from the
+  on-screen actions (not a transcript). Burned in with word-pop animation and keyword
+  emphasis; also exported as CAPTIONS/NPC_ELEVENLABS_CAPTIONS.srt.
+
+REPRODUCE
+  cd NPC_ELEVENLABS_TUTORIAL/EDITING_PROJECT
+  python build.py /path/to/source.mp4 /private/dir     # OCR -> masks -> render -> mux -> QC

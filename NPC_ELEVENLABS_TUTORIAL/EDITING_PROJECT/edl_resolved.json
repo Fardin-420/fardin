@@ -1,0 +1,1000 @@
+{
+ "_doc": "Edit decision list. All 'src' times are seconds in the source recording; 'ft' times are seconds into the closing freeze-frame. Coordinates are full-resolution source pixels (882x1920). Anchors with a 'text' query are resolved against the OCR scan by resolve_edl.py into edl_resolved.json.",
+ "fps": 30,
+ "source": {
+  "width": 882,
+  "height": 1920,
+  "crop_top": 100,
+  "audio": "silent (-91 dBFS digital floor for the whole file): no narration exists"
+ },
+ "intro": 3.6,
+ "outro": 4.2,
+ "segments": [
+  {
+   "in": 0.0,
+   "out": 2.85,
+   "speed": 1.0,
+   "note": "MLH sign-in page (Welcome Back); email field tapped, keyboard autofill appears"
+  },
+  {
+   "in": 2.87,
+   "out": 12.6,
+   "speed": 2.2,
+   "note": "Sign-up form: first + last name typed (sped up; repetitive typing)"
+  },
+  {
+   "in": 12.6,
+   "out": 13.3,
+   "speed": 1.0,
+   "note": "keyboard closes, consent checkbox visible"
+  },
+  {
+   "in": 14.1,
+   "out": 16.6,
+   "speed": 1.0,
+   "note": "CUT 13.30-14.10 accidental tap that opened the Terms page and came back. Tick consent box, tap Sign Up!"
+  },
+  {
+   "in": 16.6,
+   "out": 18.6,
+   "speed": 1.0,
+   "note": "Success toast 'Welcome to MyMLH!', profile page"
+  },
+  {
+   "in": 18.6,
+   "out": 29.9,
+   "speed": 2.4,
+   "note": "Demographics (gender, race/ethnicity, pronouns) - values masked; sped up"
+  },
+  {
+   "in": 29.9,
+   "out": 60.6,
+   "speed": 3.0,
+   "note": "Education history: school search + select, major, start date, 'Currently in school'; sped up (long typing incl. corrected typos)"
+  },
+  {
+   "in": 60.6,
+   "out": 68.6,
+   "speed": 2.0,
+   "note": "Birthday (masked) + Continue"
+  },
+  {
+   "in": 68.6,
+   "out": 70.2,
+   "speed": 1.0,
+   "note": "Redirect to Global Hack Week: Builders Week event, registration questions open"
+  },
+  {
+   "in": 70.2,
+   "out": 79.7,
+   "speed": 1.7,
+   "note": "Country, required agreements, how did you hear, region, GitHub handle N/A, opt-ins, Submit"
+  },
+  {
+   "in": 79.7,
+   "out": 81.0,
+   "speed": 1.0,
+   "note": "'Registered to attend!' confirmation"
+  },
+  {
+   "in": 81.0,
+   "out": 84.0,
+   "speed": 2.0,
+   "note": "Answers review, 'You are registered.'"
+  },
+  {
+   "in": 92.8,
+   "out": 94.0,
+   "speed": 1.0,
+   "note": "CUT 84.00-92.80 idle profile menu (dead time). Switch to hacktoberfest.com"
+  },
+  {
+   "in": 94.0,
+   "out": 95.4,
+   "speed": 3.0,
+   "note": "new hacktoberfest.com tab opening (blank while loading, sped up)"
+  },
+  {
+   "in": 95.4,
+   "out": 99.1,
+   "speed": 4.0,
+   "note": "Hacktoberfest loading / login redirect (waiting, sped up)"
+  },
+  {
+   "in": 99.1,
+   "out": 102.4,
+   "speed": 1.0,
+   "note": "MLH OAuth: Authorize Hacktoberfest 2026 (account email masked)"
+  },
+  {
+   "in": 102.4,
+   "out": 106.9,
+   "speed": 4.0,
+   "note": "Hacktoberfest loading after authorize (waiting, sped up)"
+  },
+  {
+   "in": 106.9,
+   "out": 112.0,
+   "speed": 1.0,
+   "note": "'Your Hacktoberfest codes and offers' - scroll to ElevenLabs card"
+  },
+  {
+   "in": 113.5,
+   "out": 114.25,
+   "speed": 1.0,
+   "note": "CUT 112.00-113.50 accidental long-press text selection + search popup"
+  },
+  {
+   "in": 114.95,
+   "out": 117.9,
+   "speed": 1.0,
+   "note": "CUT 114.25-114.95 accidental long-press link menu. Hold on ElevenLabs card. DROPPED 117.90-122.63: scrolling unrelated offers + screen-recorder stop overlay"
+  }
+ ],
+ "freeze": {
+  "src": 116.4,
+  "duration": 7.4,
+  "note": "Real frame of the ElevenLabs offer card held so its terms can be read; nothing is added to it"
+ },
+ "chapters": [
+  {
+   "src": 0.0,
+   "num": "01",
+   "title": "CREATE YOUR MyMLH ACCOUNT"
+  },
+  {
+   "src": 18.6,
+   "num": "02",
+   "title": "COMPLETE YOUR PROFILE"
+  },
+  {
+   "src": 68.6,
+   "num": "03",
+   "title": "REGISTER FOR THE MLH EVENT"
+  },
+  {
+   "src": 92.8,
+   "num": "04",
+   "title": "CONNECT HACKTOBERFEST"
+  },
+  {
+   "src": 106.9,
+   "num": "05",
+   "title": "FIND THE ELEVENLABS OFFER"
+  }
+ ],
+ "camera": [
+  {
+   "src": 0.0,
+   "fx": 441,
+   "fy": 1010,
+   "z": 0.86
+  },
+  {
+   "src": 1.2,
+   "fx": 441,
+   "fy": 1150,
+   "z": 1.04
+  },
+  {
+   "src": 2.87,
+   "fx": 441,
+   "fy": 760,
+   "z": 1.06
+  },
+  {
+   "src": 12.6,
+   "fx": 441,
+   "fy": 1150,
+   "z": 1.0
+  },
+  {
+   "src": 14.2,
+   "dy": 120,
+   "z": 1.08,
+   "text_box": [
+    172,
+    1453,
+    774,
+    1489
+   ],
+   "fx": 463,
+   "fy": 1591,
+   "x": 473,
+   "y": 1471
+  },
+  {
+   "src": 16.6,
+   "fx": 441,
+   "fy": 1060,
+   "z": 0.86
+  },
+  {
+   "src": 19.0,
+   "fx": 441,
+   "fy": 760,
+   "z": 1.06
+  },
+  {
+   "src": 28.6,
+   "fx": 441,
+   "fy": 1050,
+   "z": 1.0
+  },
+  {
+   "src": 29.9,
+   "fx": 441,
+   "fy": 1010,
+   "z": 0.86
+  },
+  {
+   "src": 32.0,
+   "fx": 441,
+   "fy": 800,
+   "z": 1.04
+  },
+  {
+   "src": 58.0,
+   "fx": 441,
+   "fy": 900,
+   "z": 1.02
+  },
+  {
+   "src": 61.0,
+   "fx": 441,
+   "fy": 900,
+   "z": 1.06
+  },
+  {
+   "src": 66.3,
+   "dy": -120,
+   "z": 1.08,
+   "text_box": [
+    562,
+    1075,
+    738,
+    1110
+   ],
+   "fx": 640,
+   "fy": 972,
+   "x": 650,
+   "y": 1092
+  },
+  {
+   "src": 68.6,
+   "fx": 441,
+   "fy": 1010,
+   "z": 0.86
+  },
+  {
+   "src": 70.4,
+   "fx": 441,
+   "fy": 1000,
+   "z": 1.0
+  },
+  {
+   "src": 78.6,
+   "dy": -260,
+   "z": 1.06,
+   "text_box": [
+    621,
+    1784,
+    748,
+    1818
+   ],
+   "fx": 674,
+   "fy": 1541,
+   "x": 684,
+   "y": 1801
+  },
+  {
+   "src": 79.7,
+   "fx": 441,
+   "fy": 1000,
+   "z": 1.0
+  },
+  {
+   "src": 81.0,
+   "fx": 441,
+   "fy": 1010,
+   "z": 0.86
+  },
+  {
+   "src": 92.8,
+   "fx": 441,
+   "fy": 1010,
+   "z": 0.86
+  },
+  {
+   "src": 99.2,
+   "fx": 441,
+   "fy": 980,
+   "z": 1.0
+  },
+  {
+   "src": 101.0,
+   "dy": -150,
+   "z": 1.08,
+   "text_box": [
+    167,
+    1072,
+    415,
+    1114
+   ],
+   "fx": 434,
+   "fy": 943,
+   "x": 291,
+   "y": 1093
+  },
+  {
+   "src": 102.4,
+   "fx": 441,
+   "fy": 1010,
+   "z": 0.86
+  },
+  {
+   "src": 107.4,
+   "fx": 441,
+   "fy": 900,
+   "z": 1.0
+  },
+  {
+   "src": 110.6,
+   "dy": 330,
+   "z": 1.06,
+   "text_box": [
+    90,
+    629,
+    721,
+    678
+   ],
+   "fx": 396,
+   "fy": 984,
+   "x": 406,
+   "y": 654
+  },
+  {
+   "src": 116.0,
+   "dy": 330,
+   "z": 1.06,
+   "text_box": [
+    91,
+    459,
+    721,
+    504
+   ],
+   "fx": 396,
+   "fy": 812,
+   "x": 406,
+   "y": 482
+  }
+ ],
+ "freeze_camera": [
+  {
+   "ft": 0.0,
+   "dy": 330,
+   "z": 1.06,
+   "text_box": [
+    91,
+    459,
+    721,
+    504
+   ],
+   "fx": 396,
+   "fy": 812,
+   "x": 406,
+   "y": 482
+  },
+  {
+   "ft": 1.6,
+   "dy": 60,
+   "z": 1.22,
+   "text_box": [
+    90,
+    764,
+    641,
+    794
+   ],
+   "fx": 395,
+   "fy": 839,
+   "x": 366,
+   "y": 779
+  },
+  {
+   "ft": 3.4,
+   "dy": 70,
+   "z": 1.2,
+   "text_box": [
+    90,
+    946,
+    716,
+    980
+   ],
+   "fx": 395,
+   "fy": 1033,
+   "x": 403,
+   "y": 963
+  },
+  {
+   "ft": 5.4,
+   "dy": -200,
+   "z": 1.08,
+   "text_box": [
+    291,
+    1352,
+    590,
+    1389
+   ],
+   "fx": 496,
+   "fy": 1170,
+   "x": 440,
+   "y": 1370
+  }
+ ],
+ "highlights": [
+  {
+   "src": 0.3,
+   "dur": 2.0,
+   "box": "field",
+   "label": "STEP 01",
+   "text_box": [
+    143,
+    1099,
+    239,
+    1130
+   ],
+   "rect": [
+    119,
+    1089,
+    852,
+    1235
+   ],
+   "x": 486,
+   "y": 1162
+  },
+  {
+   "src": 14.15,
+   "dur": 0.9,
+   "box": "line+left",
+   "label": "CHECK THIS",
+   "text_box": [
+    172,
+    1453,
+    774,
+    1489
+   ],
+   "rect": [
+    102,
+    1439,
+    832,
+    1565
+   ],
+   "x": 467,
+   "y": 1502
+  },
+  {
+   "src": 14.75,
+   "dur": 1.1,
+   "box": "wide_button",
+   "label": "CLICK HERE",
+   "text_box": [
+    165,
+    1718,
+    385,
+    1769
+   ],
+   "rect": [
+    92,
+    1688,
+    790,
+    1799
+   ],
+   "x": 441,
+   "y": 1744
+  },
+  {
+   "src": 66.0,
+   "dur": 1.2,
+   "box": "button",
+   "label": "CLICK HERE",
+   "text_box": [
+    562,
+    1075,
+    738,
+    1110
+   ],
+   "rect": [
+    502,
+    1049,
+    798,
+    1136
+   ],
+   "x": 650,
+   "y": 1092
+  },
+  {
+   "src": 78.4,
+   "dur": 1.15,
+   "box": "button",
+   "label": "CLICK HERE",
+   "text_box": [
+    621,
+    1784,
+    748,
+    1818
+   ],
+   "rect": [
+    561,
+    1758,
+    808,
+    1844
+   ],
+   "x": 684,
+   "y": 1801
+  },
+  {
+   "src": 100.7,
+   "dur": 0.75,
+   "box": "block3",
+   "label": "PERMISSIONS",
+   "text_box": [
+    103,
+    628,
+    295,
+    661
+   ],
+   "rect": [
+    81,
+    600,
+    828,
+    878
+   ],
+   "x": 454,
+   "y": 739
+  },
+  {
+   "src": 101.35,
+   "dur": 1.0,
+   "box": "wide_button",
+   "label": "CLICK HERE",
+   "text_box": [
+    167,
+    1072,
+    415,
+    1114
+   ],
+   "rect": [
+    92,
+    1042,
+    790,
+    1144
+   ],
+   "x": 441,
+   "y": 1093
+  },
+  {
+   "src": 115.3,
+   "dur": 2.3,
+   "box": "title",
+   "label": "THE OFFER",
+   "text_box": [
+    91,
+    459,
+    721,
+    504
+   ],
+   "rect": [
+    77,
+    447,
+    822,
+    516
+   ],
+   "x": 450,
+   "y": 482
+  }
+ ],
+ "freeze_highlights": [
+  {
+   "ft": 1.7,
+   "dur": 1.7,
+   "box": "line",
+   "label": "1 MONTH \u00b7 CREATOR TIER",
+   "text_box": [
+    90,
+    764,
+    641,
+    794
+   ],
+   "rect": [
+    78,
+    718,
+    712,
+    802
+   ],
+   "x": 395,
+   "y": 760
+  },
+  {
+   "ft": 3.5,
+   "dur": 1.9,
+   "box": "req",
+   "label": "REQUIREMENT 1",
+   "text_box": [
+    90,
+    946,
+    716,
+    980
+   ],
+   "rect": [
+    46,
+    938,
+    726,
+    1024
+   ],
+   "x": 386,
+   "y": 981
+  },
+  {
+   "ft": 3.9,
+   "dur": 1.5,
+   "box": "req",
+   "label": "REQUIREMENT 2",
+   "text_box": [
+    139,
+    1069,
+    781,
+    1098
+   ],
+   "rect": [
+    95,
+    1061,
+    791,
+    1142
+   ],
+   "x": 443,
+   "y": 1102
+  },
+  {
+   "ft": 5.5,
+   "dur": 1.9,
+   "box": "button",
+   "label": "NEXT STEP",
+   "text_box": [
+    291,
+    1352,
+    590,
+    1389
+   ],
+   "rect": [
+    231,
+    1326,
+    650,
+    1415
+   ],
+   "x": 440,
+   "y": 1370
+  }
+ ],
+ "taps": [
+  {
+   "src": 14.4,
+   "at": "left",
+   "text_box": [
+    172,
+    1453,
+    774,
+    1489
+   ],
+   "x": 130,
+   "y": 1467
+  },
+  {
+   "src": 15.0,
+   "text_box": [
+    165,
+    1718,
+    385,
+    1769
+   ],
+   "x": 275,
+   "y": 1744
+  },
+  {
+   "src": 66.6,
+   "text_box": [
+    562,
+    1075,
+    738,
+    1110
+   ],
+   "x": 650,
+   "y": 1092
+  },
+  {
+   "src": 79.2,
+   "text_box": [
+    621,
+    1784,
+    748,
+    1818
+   ],
+   "x": 684,
+   "y": 1801
+  },
+  {
+   "src": 101.95,
+   "text_box": [
+    167,
+    1072,
+    415,
+    1114
+   ],
+   "x": 291,
+   "y": 1093
+  }
+ ],
+ "success": [
+  17.2,
+  79.75,
+  107.4
+ ],
+ "captions": [
+  {
+   "src": [
+    0.0,
+    2.85
+   ],
+   "text": "Go to mlh.com and open MyMLH sign-in / sign-up",
+   "keys": [
+    "mlh.com",
+    "MyMLH"
+   ]
+  },
+  {
+   "src": [
+    2.87,
+    12.6
+   ],
+   "text": "Create your account: enter your first and last name",
+   "keys": [
+    "first",
+    "last",
+    "name"
+   ]
+  },
+  {
+   "src": [
+    12.6,
+    16.6
+   ],
+   "text": "Tick the Terms of Service box, then tap Sign Up!",
+   "keys": [
+    "Terms",
+    "Sign",
+    "Up!"
+   ]
+  },
+  {
+   "src": [
+    16.6,
+    18.6
+   ],
+   "text": "Account created: Welcome to MyMLH!",
+   "keys": [
+    "Welcome",
+    "MyMLH!"
+   ]
+  },
+  {
+   "src": [
+    18.6,
+    24.0
+   ],
+   "text": "Complete your profile: fill in the required fields",
+   "keys": [
+    "required"
+   ]
+  },
+  {
+   "src": [
+    24.0,
+    29.9
+   ],
+   "text": "Your own answers go here (hidden for privacy)",
+   "keys": [
+    "hidden"
+   ]
+  },
+  {
+   "src": [
+    29.9,
+    50.0
+   ],
+   "text": "Add your education: search and select your school",
+   "keys": [
+    "education",
+    "school"
+   ]
+  },
+  {
+   "src": [
+    50.0,
+    60.6
+   ],
+   "text": "Add a start date, or tick Currently in school",
+   "keys": [
+    "start",
+    "date",
+    "Currently"
+   ]
+  },
+  {
+   "src": [
+    60.6,
+    68.6
+   ],
+   "text": "Add your birthday, then tap Continue",
+   "keys": [
+    "birthday",
+    "Continue"
+   ]
+  },
+  {
+   "src": [
+    68.6,
+    72.5
+   ],
+   "text": "Next: Global Hack Week registration questions",
+   "keys": [
+    "Global",
+    "Hack",
+    "Week"
+   ]
+  },
+  {
+   "src": [
+    72.5,
+    79.7
+   ],
+   "text": "Tick the required agreements, then tap Submit",
+   "keys": [
+    "required",
+    "Submit"
+   ]
+  },
+  {
+   "src": [
+    79.7,
+    84.0
+   ],
+   "text": "Done: you're registered for the event",
+   "keys": [
+    "registered"
+   ]
+  },
+  {
+   "src": [
+    92.8,
+    99.1
+   ],
+   "text": "Now open hacktoberfest.com and log in with MLH",
+   "keys": [
+    "hacktoberfest.com",
+    "MLH"
+   ]
+  },
+  {
+   "src": [
+    99.1,
+    102.4
+   ],
+   "text": "Tap Authorize to connect Hacktoberfest 2026",
+   "keys": [
+    "Authorize"
+   ]
+  },
+  {
+   "src": [
+    102.4,
+    106.9
+   ],
+   "text": "Loading your codes and offers...",
+   "keys": [
+    "codes"
+   ]
+  },
+  {
+   "src": [
+    106.9,
+    112.0
+   ],
+   "text": "Scroll down to the ElevenLabs card",
+   "keys": [
+    "ElevenLabs"
+   ]
+  },
+  {
+   "src": [
+    113.5,
+    117.9
+   ],
+   "text": "ElevenLabs: 1 Month Free",
+   "keys": [
+    "ElevenLabs",
+    "1",
+    "Month"
+   ]
+  },
+  {
+   "ft": [
+    0.0,
+    1.6
+   ],
+   "text": "Read the offer terms carefully",
+   "keys": [
+    "terms"
+   ]
+  },
+  {
+   "ft": [
+    1.6,
+    3.4
+   ],
+   "text": "1 month of the Creator tier, no credit card required",
+   "keys": [
+    "Creator",
+    "tier"
+   ]
+  },
+  {
+   "ft": [
+    3.4,
+    5.4
+   ],
+   "text": "Needs a verified phone and a connected GitHub on MyMLH",
+   "keys": [
+    "phone",
+    "GitHub"
+   ]
+  },
+  {
+   "ft": [
+    5.4,
+    7.4
+   ],
+   "text": "Then tap Get your code (not shown in this recording)",
+   "keys": [
+    "Get",
+    "your",
+    "code"
+   ]
+  }
+ ],
+ "lower_thirds": [
+  {
+   "out": 4.4,
+   "dur": 3.6
+  },
+  {
+   "out": 34.0,
+   "dur": 3.2
+  }
+ ],
+ "sensitive_windows": {
+  "_doc": "Source-time windows where on-screen typing could reveal private data. The whole on-screen keyboard (suggestions, key pop-ups, touch dots, autofill chips) is masked inside them.",
+  "keyboard": [
+   [
+    1.5,
+    2.86
+   ],
+   [
+    18.6,
+    30.2
+   ],
+   [
+    60.6,
+    68.7
+   ]
+  ]
+ }
+}

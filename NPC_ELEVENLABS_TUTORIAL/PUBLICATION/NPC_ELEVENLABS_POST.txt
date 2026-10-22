@@ -1,0 +1,74 @@
+NPC — PUBLICATION KIT
+ElevenLabs 1-Month Creator Tier offer (MLH + Hacktoberfest 2026)
+=====================================================================
+
+TITLE (YouTube / Shorts / TikTok)
+---------------------------------
+1 Month of ElevenLabs Creator — Step-by-Step (MLH x Hacktoberfest 2026) | NPC
+
+Alternates:
+- How to find the ElevenLabs 1-Month Creator offer on Hacktoberfest 2026 | NPC
+- ElevenLabs Creator tier for 1 month via MLH + Hacktoberfest — full walkthrough | NPC
+
+
+SHORT DESCRIPTION
+-----------------
+Hacktoberfest 2026 lists an ElevenLabs offer: 1 month of the Creator tier, no credit card
+required. In this NPC walkthrough I create a MyMLH account, complete the profile, register for
+an MLH event, connect Hacktoberfest with MLH, and open the "codes and offers" page where the
+ElevenLabs card lives.
+
+Heads-up: the offer card says you need a VERIFIED PHONE NUMBER and a CONNECTED GITHUB ACCOUNT
+on MyMLH before you can get the code. One code per account, codes don't stack. Offers,
+eligibility and availability can change at any time, so check the current terms on the site.
+
+
+STEPS SHOWN IN THE VIDEO
+------------------------
+1. Go to mlh.com and open the MyMLH sign-in / sign-up page.
+2. Create your account: enter your first and last name.
+3. Tick the Terms of Service / Privacy Policy box and tap "Sign Up!".
+4. Complete your profile: the required demographic fields, your education (school, start date,
+   or "Currently in school"), and your birthday. Tap Continue.
+5. You're taken to the MLH event "Global Hack Week: Builders Week". Answer the registration
+   questions (country, required agreements, how you heard about it, region, GitHub handle or
+   N/A) and tap Submit. You'll see "Registered to attend!".
+6. Open hacktoberfest.com and log in with your MLH account.
+7. On the MLH screen "Authorize Hacktoberfest 2026 to access your account", tap Authorize.
+8. On "Your Hacktoberfest codes and offers", scroll to "ElevenLabs - 1 Month Free".
+9. The card lists the requirements: a verified phone number on MyMLH and a connected GitHub
+   account on MyMLH. Once both are done, use "Get your code".
+
+Note: the recording ends on the offer card. Verifying the phone, connecting GitHub, and
+redeeming the code are not shown.
+
+
+TELEGRAM / SOCIAL CAPTION
+-------------------------
+ElevenLabs Creator tier for 1 month, listed on Hacktoberfest 2026 🎙️
+
+Full walkthrough: MyMLH account → profile → MLH event registration → connect Hacktoberfest
+→ "ElevenLabs - 1 Month Free" card.
+
+Before you claim: you need a verified phone number + a connected GitHub account on MyMLH.
+One code per account. Terms and availability can change, so check the site first.
+
+🔗 mlh.com  •  hacktoberfest.com
+#NPC #ElevenLabs #Hacktoberfest #MLH #AI #Tutorial
+
+
+PINNED COMMENT
+--------------
+Links from the video:
+• MLH (create / sign in to MyMLH): https://www.mlh.com/
+• Hacktoberfest 2026 (log in with MLH, then open your codes and offers): https://hacktoberfest.com/
+
+Requirements shown on the ElevenLabs card: a verified phone number on MyMLH + a connected GitHub
+account on MyMLH. One code per account, codes don't stack. Offers, eligibility and availability
+can change, so always read the current terms on the site before you rely on it.
+
+
+THUMBNAIL / COVER
+-----------------
+THUMBNAIL/NPC_ELEVENLABS_THUMBNAIL.png   (1920x1080, YouTube)
+THUMBNAIL/NPC_ELEVENLABS_COVER_9x16.png  (1080x1920, Shorts / Reels / TikTok / Telegram)

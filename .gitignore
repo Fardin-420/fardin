@@ -29,3 +29,11 @@ NPC_STUDIO/PROJECTS/*/final/*.mp4
 NPC_STUDIO/PROJECTS/*/final/.*.mp4
 NPC_STUDIO/PROJECTS/*/previews/.*.mp4
 NPC_STUDIO/PROJECTS/*/previews/*.m4a
+
+# --- NPC_ELEVENLABS_TUTORIAL ---
+# The raw recording shows private data (email, birthday, profile answers): never commit it.
+NPC_ELEVENLABS_TUTORIAL/SOURCE/*.mp4
+NPC_ELEVENLABS_TUTORIAL/SOURCE/*.mov
+# Mix stem is reproducible with audio.py; the finals carry it.
+NPC_ELEVENLABS_TUTORIAL/AUDIO/*.wav
+NPC_ELEVENLABS_TUTORIAL/PREVIEW/.*.mp4

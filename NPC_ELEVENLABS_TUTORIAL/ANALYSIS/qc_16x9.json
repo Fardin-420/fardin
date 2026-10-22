@@ -1,0 +1,127 @@
+{
+ "file": "NPC_ELEVENLABS_FINAL_16x9.mp4",
+ "video": {
+  "codec_name": "h264",
+  "width": 1920,
+  "height": 1080,
+  "r_frame_rate": "30/1",
+  "pix_fmt": "yuv420p",
+  "nb_frames": "2174",
+  "duration": "72.466667"
+ },
+ "audio": {
+  "codec_name": "aac",
+  "sample_rate": "48000",
+  "channels": 2,
+  "duration": "72.466000"
+ },
+ "av_duration_delta_s": 0.001,
+ "decode_errors": [],
+ "black_segments": [],
+ "frozen_segments": [
+  [
+   "66.8333",
+   "68.1"
+  ],
+  [
+   "69.7",
+   "72.1"
+  ]
+ ],
+ "loudness_lufs": -14.7,
+ "true_peak_dbtp": -1.4,
+ "privacy_scan": {
+  "mode": "sensitive windows",
+  "frames_scanned": 590,
+  "frames_total": 590,
+  "private_terms_checked": 41,
+  "hits": [
+   [
+    4.47,
+    [
+     "email-like"
+    ]
+   ],
+   [
+    4.57,
+    [
+     "email-like"
+    ]
+   ],
+   [
+    4.6,
+    [
+     "email-like"
+    ]
+   ],
+   [
+    5.4,
+    [
+     "email-like"
+    ]
+   ],
+   [
+    5.43,
+    [
+     "email-like"
+    ]
+   ],
+   [
+    5.47,
+    [
+     "email-like"
+    ]
+   ],
+   [
+    5.5,
+    [
+     "email-like"
+    ]
+   ],
+   [
+    15.2,
+    [
+     "private-value"
+    ]
+   ],
+   [
+    15.23,
+    [
+     "private-value"
+    ]
+   ],
+   [
+    15.27,
+    [
+     "private-value"
+    ]
+   ],
+   [
+    15.3,
+    [
+     "private-value"
+    ]
+   ],
+   [
+    15.33,
+    [
+     "private-value"
+    ]
+   ],
+   [
+    15.37,
+    [
+     "private-value"
+    ]
+   ],
+   [
+    15.63,
+    [
+     "private-value"
+    ]
+   ]
+  ]
+ },
+ "privacy_pass": false,
+ "note": "Audio re-muxed after the privacy scan (limiter fix); the video stream was stream-copied, so the scanned pictures are unchanged."
+}
