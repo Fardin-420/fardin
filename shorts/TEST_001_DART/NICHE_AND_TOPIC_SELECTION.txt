@@ -1,0 +1,34 @@
+NICHE AND TOPIC SELECTION — TEST 001
+
+NICHE SCORING (1–5; rights availability weighted x2 because it gates everything else)
+Niche                          Retention  Evergreen  US fit  Rights(x2)  Doc potential  Total
+Space & science marvels            5          5        5       5 (10)        5           30
+Unexplained real events            5          4        5       2  (4)        3           21
+Engineering / tech marvels         4          5        4       4  (8)        4           25
+Survival & resilience              5          5        5       2  (4)        4           23
+History's strange true stories     4          5        4       3  (6)        5           24
+Animal behavior                    4          5        4       3  (6)        3           22
+
+Winner: SPACE & SCIENCE MARVELS. Highest ceiling on every axis, and US government (NASA) media is generally
+public domain, which makes it the most realistic route to legally usable footage.
+
+TOPIC CANDIDATES (NASA Image & Video Library search, run in this session)
+1. DART impact with Dimorphos (2022)             -> chosen
+2. SDO 4K solar flare (Apr 17, 2016)
+3. Perseverance landing (Feb 18, 2021)
+4. Artemis I launch (Nov 16, 2022)
+5. Ingenuity Mars helicopter flights (2021)
+6. Lightning seen from the ISS
+7. Cassini infrared Saturn (2017)
+8. Earthrise (Apollo 8, 1968)
+9. Hurricane Dorian from space (2019)
+10. Supermassive black hole merger simulation (2018)
+11. James Webb deployment
+12. DART ridge formation on Didymos (2024)
+
+JUSTIFICATION
+DART has the strongest built-in arc of any candidate: a deliberate collision (hook), a camera feed that gets closer
+until it simply stops (tension and a natural cliffhanger that is real, not manufactured), and a measurable,
+verifiable payoff (the moonlet's orbit got 32 minutes shorter — the first time humanity purposely changed a celestial
+body's motion). It carries real explanatory value in 20 seconds, it is evergreen, and every claim traces to NASA's
+own published results.

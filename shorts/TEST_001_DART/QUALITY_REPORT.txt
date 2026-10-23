@@ -1,0 +1,59 @@
+QUALITY REPORT — TEST 001 (FINAL_SHORT.mp4)
+
+TECHNICAL VALIDATION (measured with ffprobe/ffmpeg on the delivered file)
+Container/codec   MP4, H.264 High, yuv420p, +faststart                          PASS
+Resolution        1080x1920 (9:16), no black bars (cropdetect: full frame on     PASS
+                  all normal frames; only the deliberately dark signal-lost and
+                  impact-flash frames register smaller)
+Frame rate        30 fps constant                                               PASS
+Duration          20.000 s (you asked for a 20 s test; the brief's 25–40 s       PASS (20 s as requested)
+                  window was overridden by that)
+Audio             AAC-LC 48 kHz stereo 192 kb/s                                  PASS
+Loudness          -14.0 LUFS integrated, -1.0 dBFS peak (two-pass loudnorm)      PASS
+File size         ~31 MB, ~12.5 Mb/s                                             PASS
+Watermarks        none; no third-party marks                                     PASS
+Loop seam         last frame cuts back to the opening asteroid shot (mean pixel  PASS
+                  difference 9.4/255 vs frame 0 — grain and caption only)
+
+EDITORIAL REVIEW
+Hook (0–2 s)      Asteroid already in frame at 0.0 s, rushing the lens; impact flash at 1.65 s; "ON PURPOSE." lands at
+                  ~2.1 s. No logo or intro.
+Curiosity (2–8)   Rewind, then the mission set-up with a date, sizes, target and speed.
+Tension (8–18)    Image-by-image feed, partial final frame, SIGNAL LOST with held near-silence (10.9–11.75 s), then the
+                  -32 MIN reveal.
+Payoff            Why it matters: first deliberate change to a celestial body's motion; first planetary-defense test.
+Commentary value  Explanation and context beyond the images (why the feed stops, how success was measured, why it's a
+                  first).
+Captions          Word-by-word pop, Inter Black, white plus yellow emphasis, 10 px black stroke, max 2 lines, centred at
+                  y=1460 (clear of the Shorts title/UI band).
+Effects audit     Every move is motivated: the rush shows the approach, the impact frame marks the crash, the rewind
+                  signals a flashback, the push-in follows DART to its target, the counter shows the measured result.
+
+KNOWN LIMITATIONS / RISKS (honest list)
+1. NO REAL FOOTAGE. YouTube, TikTok, NASA and Wikimedia hosts are blocked by this environment's network policy, and
+   Higgsfield was excluded at your request. All visuals are original illustrations labelled on screen. This is the
+   biggest gap against the brief.
+2. CAPTION TIMING IS ESTIMATED. No speech-recognition model could be downloaded (Hugging Face and OpenAI model hosts
+   blocked). Word times come from energy-dip alignment in align.py, accurate at phrase level and roughly per word;
+   individual words can lead or lag by about 0.1–0.2 s. Review on a phone before publishing.
+3. VOICE NOT LISTENED TO. I can't play audio here. Kokoro am_puck is a natural American male voice, but
+   pronunciation of "Dimorphos" and overall delivery should get a human listen.
+4. FACTS NOT RE-FETCHED. NASA pages were unreachable this session; figures are NASA's published values from my
+   knowledge (see SOURCES_AND_LICENSES.txt). The 32-minute figure was later refined to 33 +/- 1 min; the Short uses
+   NASA's headline figure.
+5. ILLUSTRATIONS ARE INTERPRETIVE. The asteroid surfaces are procedural, not true likenesses. The orbit diagram is
+   labelled "not to scale" (the real orbit change was a few tens of meters).
+6. COPYRIGHT/MONETIZATION. Every asset is MINE or permissively LICENSED, so third-party claim risk is low, but
+   nothing guarantees freedom from Content ID claims or YouTube's reused/AI-content policies. Disclose the AI voice
+   using YouTube's altered/synthetic content setting where it applies.
+
+FIXES APPLIED DURING QC
+- Boulder shading read as bubbles: flattened and made irregular.
+- Diagram push-in clipped the DIDYMOS label: reduced push, moved label.
+- Orbit labels collided with the counter, and the -32 MIN stamp sat on the orbit ring: relaid out.
+- NEW ORBIT label overlapped the closing caption: labels clear out during the pull-back.
+- Integrated loudness was -15.1 LUFS after single-pass: re-mastered with two-pass to -14.0.
+- Script accuracy: "ever changed" -> "deliberately changed" (re-voiced, re-rendered).
+
+REPRODUCE
+tools/align.py (tempo, placement, word timing) -> tools/short.py (frames + audio) -> ffmpeg mux (see README.txt).

@@ -1,0 +1,61 @@
+SOURCES AND LICENSES — TEST 001
+
+RIGHTS CLASSIFICATION OF EVERY ASSET IN FINAL_SHORT.mp4 (classified before render)
+Asset                               Origin                                               Class      Attribution
+All visuals (asteroids, starfield,  Procedurally generated in Python (short.py) in      MINE       none required
+ diagrams, DART icon, HUD, captions) this session; no third-party pixels
+Narration audio                     Kokoro v1.0 TTS run locally, voice "am_puck"        LICENSED   optional (Apache-2.0)
+                                    model: hexgrad/Kokoro-82M, Apache-2.0; ONNX build
+                                    thewh1teagle/kokoro-onnx (MIT), model files from
+                                    github.com/thewh1teagle/kokoro-onnx/releases
+                                    (model-files-v1.0)
+Music bed and all SFX               Synthesized in Python (sine/noise synthesis)        MINE       none required
+Fonts                               Inter (SIL OFL 1.1), JetBrains Mono (SIL OFL 1.1)   LICENSED   none required for video
+No YouTube, TikTok, Pexels, Pixabay or NASA footage appears in this cut. UNKNOWN-class assets: none.
+
+FACT SOURCES (research only — no media taken from these)
+- NASA news release, Oct 11 2022, "NASA Confirms DART Mission Impact Changed Asteroid's Motion in Space":
+  orbit period 11 h 55 min -> 11 h 23 min (a change of 32 min; later refined to 33 +/- 1 min); first time humanity
+  purposely changed the motion of a celestial object.
+  https://www.nasa.gov/news-release/nasa-confirms-dart-mission-impact-changed-asteroids-motion-in-space/
+- NASA DART mission pages: impact Sept 26, 2022; ~14,000 mph (~6.1 km/s, NASA/APL roundings); Dimorphos ~160 m
+  (530 ft), Didymos ~780 m (2,560 ft); DRACO camera returned one image per second; final image only partially
+  transmitted; ejecta tail observed afterwards.  https://science.nasa.gov/mission/dart/
+CAVEAT: this session's network blocked nasa.gov, so these pages were NOT re-opened during production. The figures
+are NASA's published values as I know them. Re-check the two URLs before publishing.
+
+CANDIDATE FOOTAGE SOURCES EVALUATED (none used — see blockers)
+#  Source                                                          License                        Status
+1  NASA Image & Video Library: "DART's Impact with Asteroid        NASA media: generally not      Reachable only via
+   Dimorphos (Official NASA Broadcast)" 20220926-GSFC-...REV1a      copyrighted; NASA media        Higgsfield, which you
+   Credit: NASA / Johns Hopkins APL                                 guidelines apply (no implied   asked me not to use.
+                                                                    endorsement, no NASA insignia
+                                                                    as branding). APL-produced
+                                                                    imagery: verify per item.
+2  NASA library: "NASA's DART Mission, First-Ever Planetary        same as above                  same
+   Defense Test"
+3  NASA library: "The Results of Our DART Planetary Defense Test   same as above                  same
+   on This Week @NASA – Oct 14, 2022"
+4  NASA library: "DART Isolated Launch Views" (KSC, 2021)          same as above                  same
+5  NASA library: "Didymos Ridge Formation DART" (2024)             same as above                  same
+6  NASA's YouTube channel uploads of the DART impact broadcast     NASA-produced = generally PD;  www.youtube.com and
+                                                                    re-verify the uploader is NASA googlevideo.com are
+                                                                    and the item is NASA-produced  blocked by this session
+7  YouTube uploads marked Creative Commons BY (DART explainers)   CC BY 3.0: reuse OK with       blocked (same hosts);
+                                                                    attribution — verify per video license can't be checked
+8  TikTok DART clips                                               No reuse license exists on     REJECTED for footage;
+                                                                    TikTok; uploader owns rights   research only
+9  Pexels / Pixabay "asteroid" stock                               Pexels/Pixabay licenses allow  API key required
+                                                                    reuse                          (401/400) — blocked
+10 Wikimedia Commons DART/DRACO image files                        mixed (PD-NASA or CC BY) —     upload.wikimedia.org
+                                                                    per-file check                 blocked
+
+BLOCKERS AND THE RIGHTS-CLEARED ALTERNATIVE TAKEN
+- You asked for YouTube/TikTok as sources and no Higgsfield. From this container, www.youtube.com,
+  *.googlevideo.com, www.tiktok.com, nasa.gov hosts and upload.wikimedia.org are refused by the environment's
+  network policy, so no footage could be downloaded.
+- TikTok is research-only regardless: it offers no reuse license.
+- Alternative taken: fully original illustrated visuals, labelled on screen "ILLUSTRATION - NOT MISSION FOOTAGE"
+  so nothing is passed off as real mission imagery.
+- Real-footage v2: allow the hosts above in the environment's network settings, and only NASA-produced or
+  CC-BY-licensed YouTube uploads would be cut in, each logged here with URL, uploader and license.

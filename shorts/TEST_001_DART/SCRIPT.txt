@@ -1,0 +1,33 @@
+TEST 001 — "NASA Crashed a Spacecraft Into an Asteroid. On Purpose."
+Runtime 20.0 s · 1080x1920 · 30 fps · narration voice: Kokoro v1.0 "am_puck" (local, Apache-2.0)
+
+ARC: setup (flash-forward hook) -> tension (live camera feed) -> reveal (signal lost, silence) -> payoff (orbit changed)
+
+TIME        NARRATION                                                       VISUAL BEAT
+0.00–1.65   "NASA crashed a spacecraft into an asteroid."                   Illustrated asteroid rushes the lens; RANGE readout
+                                                                            counts down; camera shake builds.
+1.65–1.75                                                                   Impact frame (white) + sub-bass hit.
+1.75–2.35   "On purpose."                                                   SIGNAL LOST static, then the hook's payoff word in yellow.
+2.35–2.84                                                                   REWIND: the approach plays backwards to the start of the story.
+2.84–7.25   "In 2022, DART flew straight at Dimorphos,                      Mission diagram: Didymos + its moonlet Dimorphos, labelled
+             at fourteen thousand miles an hour."                           with sizes; DART icon on a dotted collision course;
+                                                                            SEPT 26, 2022 chip; "14,000 MPH / 6.1 km/s" callout.
+7.40–10.92  "Its camera sent back one image every second...                 Illustrated camera feed: four frames arriving one per second,
+             until the signal just stopped."                                each closer; the last one only partly arrives.
+10.92–11.75                                                                 SIGNAL LOST. Score drops out — held near-silence.
+11.75–16.08 "Weeks later, telescopes confirmed it.                          Orbit diagram: dashed old orbit, yellow new orbit draws on,
+             The asteroid's orbit was thirty-two minutes shorter."          ejecta tail behind Dimorphos; counter rolls 11 h 55 -> 11 h 23;
+                                                                            "-32 MIN" impact stamp.
+16.23–19.74 "The first time humans deliberately changed                     Slow pull-back; lower-third "FIRST PLANETARY DEFENSE TEST".
+             how a celestial body moves."
+19.80–20.00                                                                 Cut back to the opening asteroid shot (natural loop).
+
+ORIGINAL COMMENTARY VALUE
+The narration explains what the mission was, why the camera feed ends abruptly (the spacecraft was destroyed on
+impact), how success was measured (telescopes timing the moonlet's orbit), and why it matters (first deliberate change
+to a celestial body's motion — the first planetary-defense test). None of that is visible in the images alone.
+
+SCRIPT REVISION LOG
+v1 closing line said "the first time humans EVER changed how a celestial body moves". Corrected to "deliberately":
+NASA's claim is the first time humanity *purposely* changed a celestial object's motion (Deep Impact struck comet
+Tempel 1 in 2005 with an immeasurably small effect). Line re-voiced and re-rendered.
