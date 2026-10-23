@@ -1,0 +1,65 @@
+QUALITY REPORT — SPACE SECRETS EP02 (SPACE_SECRETS_EP02.mp4)
+
+TECHNICAL VALIDATION (npc_ranking/npc/qc.py + ffprobe on the delivered file)
+PASS  container      MP4 (+faststart)
+PASS  video_codec    H.264 High, yuv420p
+PASS  resolution     1080x1920 (9:16)
+PASS  fps            30/1 constant, 2100 frames
+PASS  duration       70.000 s (spec 65–75 s)
+PASS  audio          AAC-LC 48 kHz stereo, 256 kb/s
+PASS  bitrate        9.6 Mb/s (~84 MB; under GitHub's 100 MB per-file limit)
+PASS  loudness       -14.0 LUFS integrated (two-pass)
+PASS  true_peak      -2.3 dBFS (ceiling -1.0)
+PASS  black_frames   none
+PASS  silence_gaps   none (the post-impact hush and the restart hold are deliberate and < 1 s below -45 dB)
+PASS  clipping       0 clipped samples
+FLAG  no_black_bars  2055/2098 frames full-frame. The 43 flagged frames (0.07–1.47 s) are a FALSE POSITIVE:
+                     the whole planet sits in starry space and ffmpeg cropdetect treats edge columns as bars when their
+                     AVERAGE luma is under 24. Measured on frame 0.7 s: the left 66 columns average 5.6 but contain
+                     1,271 star pixels above 60 (peak 176). There's no letterbox; the image is space.
+
+STRUCTURE CHECK (required windows vs delivered)
+Scene 01  0:00–0:07  delivered 0:00.00–0:07.31  freeze on "stopped" at 1.07 s; impact + brief silence
+Scene 02  0:07–0:17  delivered 0:07.31–0:17.01  1,670 km/h labelled (+ mph, m/s, latitude values)
+Scene 03  0:17–0:29  delivered 0:17.01–0:29.56  frozen ground, racing clouds + wind streaks, gust comparison
+Scene 04  0:29–0:41  delivered 0:29.56–0:40.94  west- vs east-facing coasts; height explicitly "uncertain"
+Scene 05  0:41–0:54  delivered 0:40.94–0:54.04  inertia; latitude, altitude (friction), how suddenly (47 g vs 0.013 g)
+Scene 06  0:54–1:05  delivered 0:54.04–1:04.39  restart lurch on "lurches" (56.12 s); "another jolt"; out of step
+Scene 07  1:05–1:10  delivered 1:04.39–1:10.00  exact payoff line; ends on the opening framing (loop)
+Every scene has continuous motion (camera moves, spinning or frozen globe with moving clouds and particles, animated
+diagrams). There are no static slides.
+
+SCIENCE / HONESTY CHECK
+- The hypothetical is framed on screen ("HYPOTHETICAL SIMULATION · not real footage", story clock "t = x.x s / 5 s")
+  and in the description. The surface stops; the atmosphere and oceans retain their motion, exactly as specified.
+- Physical principles (rotation speed, cos-latitude dependence, inertia, acceleration figures) are separated from
+  speculative consequences (wind and ocean effects, shown as illustrative). No casualty estimates, no tsunami
+  heights, no claim of uniform global effects.
+- Numbers: 1,670 km/h (NASA Earth Fact Sheet, derived); 408 km/h record gust (WMO archive); 2.3 km, 47 g and 0.013 g
+  derived (see SOURCES.txt).
+- No NASA footage is claimed. The Earth imagery is Solar System Scope (CC BY 4.0, NASA-based), credited on screen.
+
+DEFECTS FOUND AND FIXED DURING QC
+1. Coastal surge masks: 450 km flat slabs and island streaks -> island removal (morphological opening), 1.8° fading
+   band, Gaussian soft edge.
+2. Top tag collided with the channel brand -> brand moved to the second row.
+3. Opening title overflowed the frame width -> resized.
+4. Atlantic close-up cut Brazil off -> reframed (centre 22°W, R 1250) so both coasts are in frame.
+5. Wind and ocean streaks too faint for phones -> thicker and brighter.
+6. Opening read as empty black space (and tripped cropdetect) -> denser starfield + faint galactic haze.
+7. Thin dark seam along the planet's limb in every scene -> halo blended on both sides of the limb; full re-render.
+
+KNOWN LIMITATIONS AND RISKS (honest)
+- NASA/NOAA hosts were blocked by the environment's network policy, so sources couldn't be re-opened in-session and
+  no NASA imagery or footage could be used. The Earth is rendered from CC BY textures instead.
+- No licensed music library was reachable; the score is original and synthesized (same engine as EP01).
+- Rotation is sped up for visibility (labelled). Wind and ocean visuals are illustrative, not fluid simulations.
+- Caption word timing is estimated from audio energy (no ASR model available): phrase-accurate; single words may be
+  off by ~0.1–0.2 s.
+- I can't listen to audio here; mix balance and voice naturalness were verified by measurement only. A human listen
+  is recommended before publishing.
+- No guarantee against platform claims; disclose the AI voice where asked.
+
+REBUILD
+tools/: tts_ep02.py -> align_ep02.py (timing.json) -> ep02.py (mix.wav + video.mp4; earth.py renders the globe;
+textures in tex/ from the three.js repo) -> master (see tools/README.txt).

@@ -1,0 +1,47 @@
+SPACE SECRETS — EPISODE 02
+"WHAT IF EARTH STOPPED SPINNING FOR 5 SECONDS?"
+Narration: Kokoro v1.0 "am_puck" (young adult American male), local TTS at natural speed. Same voice, captions, labels
+and audio engine as Episode 01. Times are output time in SPACE_SECRETS_EP02.mp4.
+
+ASSUMPTIONS OF THE THOUGHT EXPERIMENT (shown on screen and in the description)
+- Hypothetical: Earth cannot actually stop like this. Only the solid surface halts; the atmosphere and oceans keep
+  their rotational motion at first.
+- Physics (established): rotation speed, inertia, and the dependence on latitude.
+- Consequences (speculative, labelled as such): wind and ocean effects are illustrated, not predicted. No casualty
+  figures, no tsunami heights, and no claim that effects are the same everywhere.
+
+SCENE 01 · 0:00.00–0:07.31 · freeze
+  0:00.00  "What if Earth suddenly stopped spinning... for just five seconds? You might think nothing would happen.
+            But the consequences could be catastrophic."
+           Visual: Earth spinning (sped up, labelled); the surface freezes on "stopped" (1.07 s) with impact, shake,
+           flash and a brief silence. The cloud layer keeps drifting: "SURFACE: STOPPED · AIR + OCEANS: still moving".
+SCENE 02 · 0:07.31–0:17.01 · rotation speed
+  0:07.31  "At the equator, the ground carries you east at about 1,670 kilometers per hour. You don't feel it, because
+            the air and oceans move with you."
+           Visual: push-in to the equator; equator and 45°/60°N lines; EAST arrow; "1,670 km/h · 1,037 mph · 464 m/s";
+           "45°N ≈ 1,180 km/h", "60°N ≈ 835 km/h", "poles ≈ 0".
+SCENE 03 · 0:17.01–0:29.56 · atmosphere
+  0:17.01  "Now imagine the solid planet halts, but the atmosphere doesn't. Near the equator, air keeps rushing east at
+            up to 1,670 kilometers per hour, about four times the strongest gust ever measured."
+           Visual: frozen ground; clouds racing east; wind streaks (faster at low latitudes); bar chart 408 vs 1,670 km/h;
+           "in 5 s, equatorial air would slide ~2.3 km over the ground"; hypothetical clock t = 0.3 → 1.8 s.
+SCENE 04 · 0:29.56–0:40.94 · oceans
+  0:29.56  "The oceans keep moving too. Water could pile against west-facing coasts, and pull away from east-facing ones.
+            How far, or how high, is uncertain. It depends on depth and coastline shape."
+           Visual: camera move to the equatorial Atlantic; eastward ocean flow; West Africa's west-facing coast (water
+           piles up, cyan) and Brazil's east-facing coast (water pulls away, orange); "HOW HIGH? UNCERTAIN".
+SCENE 05 · 0:40.94–0:54.04 · inertia
+  0:40.94  "Why? Inertia. Anything not locked to the bedrock keeps moving. That motion is fastest at the equator, and
+            fades toward the poles. Friction slows the air near the ground first. And it all depends on how suddenly
+            the stop happens."
+           Visual: "INERTIA"; latitude arrows 1,670 / 1,450 / 835 / 290 km/h; altitude panel (air slowed near the
+           ground, faster aloft); "HOW SUDDENLY?": stop in 1 s ≈ 47 g vs over 1 hour ≈ 0.013 g; the real Earth's days
+           lengthen ~2 ms per century.
+SCENE 06 · 0:54.04–1:04.39 · restart
+  0:54.04  "Then, after five seconds, the surface lurches back into motion. Just as abruptly. Another jolt, leaving the
+            ground out of step with the air and sea."
+           Visual: on "lurches" (56.12 s) the surface snaps back to full spin: flash, shake, groan; "RESTART t = 5.0 s";
+           "ANOTHER JOLT"; ground vs air/sea arrows, "out of step"; held low rumble 62.1–64.4 s.
+SCENE 07 · 1:04.39–1:10.00 · payoff
+  1:04.39  "Five seconds sounds harmless. But on a rotating planet, how you stop matters more than how long."
+           Visual: "HOW YOU STOP / MATTERS MORE THAN HOW LONG"; Earth eases back to the exact opening framing (loop).

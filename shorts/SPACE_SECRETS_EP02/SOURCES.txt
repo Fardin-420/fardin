@@ -1,0 +1,52 @@
+SOURCES — SPACE SECRETS EP02 "What If Earth Stopped Spinning for 5 Seconds?"
+
+1. VISUAL ASSETS AND RIGHTS
+Asset                                   Origin / license                                               Class
+Earth day, night-lights, clouds,        Solar System Scope (solarsystemscope.com/textures), CC BY 4.0,   LICENSED (attributed
+  land-mask textures                    "based on NASA elevation and imagery data"; files obtained via    on screen + in
+                                        the three.js repository (examples/textures/planets/             description)
+                                        earth_day_4096.jpg, earth_night_4096.jpg,
+                                        earth_bump_roughness_clouds_4096.jpg), where three.js credits
+                                        them to Solar System Scope
+Rendered globe, wind streaks, ocean     Generated in this session (tools/earth.py, tools/ep02.py)          MINE
+  flow, coast highlights, diagrams
+Narration                               Kokoro v1.0 TTS (Apache-2.0), local                               LICENSED
+Score and SFX                           Synthesized in Python for this video                              MINE
+Fonts                                   Inter, JetBrains Mono (SIL OFL 1.1)                               LICENSED
+No NASA footage is used or implied. On-screen tags: "VISUALIZATION · rotation sped up for visibility",
+"HYPOTHETICAL SIMULATION · not real footage", "DIAGRAM · not to scale", "coastal effects illustrative · not to scale".
+
+2. PHYSICAL FACTS (established) AND HOW EACH NUMBER WAS OBTAINED
+Claim                                               Source / derivation
+Equatorial surface speed ≈ 1,670 km/h               NASA Goddard (NSSDCA) Earth Fact Sheet: equatorial radius 6,378.137 km,
+  (≈ 1,037 mph, ≈ 464 m/s)                            sidereal rotation 23.9345 h -> 2π·6378.137 / 23.9345 ≈ 1,674 km/h
+                                                      https://nssdc.gsfc.nasa.gov/planetary/factsheet/earthfact.html
+Speed falls with latitude: v = 1,670·cos(lat)       geometry: 30° ≈ 1,450, 45° ≈ 1,180, 60° ≈ 835, 80° ≈ 290 km/h; poles ≈ 0
+Atmosphere and oceans co-rotate with Earth          NOAA National Weather Service JetStream (global circulation, Coriolis);
+                                                      NASA Earth Observatory (atmospheric circulation)
+Strongest wind gust ever measured: 408 km/h         WMO World Weather & Climate Extremes Archive: 113.2 m/s, Barrow Island,
+  (Barrow Island, Australia, 10 Apr 1996)             Australia, Tropical Cyclone Olivia. https://wmo.asu.edu/
+"about four times"                                  1,670 / 408 ≈ 4.1
+Air slides ~2.3 km in 5 s                           464 m/s × 5 s ≈ 2.3 km (relative to a stopped equatorial surface)
+Stop in 1 s ≈ 47 g; over 1 hour ≈ 0.013 g           a = Δv/Δt: 464/1 = 464 m/s² ≈ 47 g; 464/3600 ≈ 0.13 m/s² ≈ 0.013 g
+Real Earth's spin is slowing; days lengthen         Stephenson, Morrison & Hohenkerk (2016), Proc. R. Soc. A 472: ~1.8 ms per
+  roughly 2 ms per century                            century from historical eclipses (tidal braking ~2.3 ms, partly
+                                                      offset); NASA coverage of Earth-rotation/length-of-day research
+Inertia (Newton's first law)                        NASA Glenn Research Center, "Newton's Laws of Motion"
+                                                      https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/newtons-laws-of-motion/
+
+3. SPECULATIVE CONSEQUENCES (illustrated, not predicted)
+- Extreme eastward winds relative to the ground: follows from inertia under the stated assumption. Real-world
+  severity would depend on friction, terrain, altitude and the (impossible) stopping mechanism, so it is not quantified
+  beyond the equatorial upper bound.
+- Ocean water piling against west-facing coasts and withdrawing from east-facing ones: the direction follows from
+  inertia (water keeps moving east). Heights and inland reach are explicitly NOT given ("HOW HIGH? UNCERTAIN").
+- Restart "jolt": an abrupt return to 464 m/s is the same magnitude of velocity change. Effects are not quantified.
+No casualty estimates are made, and effects are never said to be uniform; latitude dependence is shown explicitly.
+
+4. BLOCKERS
+nasa.gov, nssdc.gsfc.nasa.gov, noaa.gov, svs.gsfc.nasa.gov and visibleearth.nasa.gov were refused by this
+environment's network policy (HTTP 000), so no source page could be re-opened during production. Values are the
+published figures as I know them, with the derivations shown above. Re-check the URLs before publishing. For NASA Blue
+Marble imagery or NASA SVS visualizations in a future episode, allow visibleearth.nasa.gov / svs.gsfc.nasa.gov in the
+environment's network settings (https://code.claude.com/docs/en/cloud-environments#network-access).
