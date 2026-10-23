@@ -1,0 +1,590 @@
+{
+ "project": "NPC_RANKING_TEST_001",
+ "category": "Most relatable wake-up moments",
+ "title_card": "TOP 5 MOST RELATABLE WAKE-UPS",
+ "end_card": "WHICH ONE ARE YOU?",
+ "export": {
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "crf": 18,
+  "maxrate": "16M",
+  "audio_bitrate": "256k",
+  "loudness_lufs": -14.0,
+  "true_peak": -1.0,
+  "bitrate": "12M"
+ },
+ "voice": {
+  "engine": "kokoro",
+  "model": "/tmp/claude-0/-home-user-fardin/a6ad4762-d397-5227-b379-040b321fcd53/scratchpad/tts/kokoro-v1.0.onnx",
+  "voices": "/tmp/claude-0/-home-user-fardin/a6ad4762-d397-5227-b379-040b321fcd53/scratchpad/tts/voices-v1.0.bin",
+  "voice_id": "am_puck",
+  "speed": 1.12,
+  "lead_in": 0.32
+ },
+ "captions": {
+  "font": "/usr/share/fonts/opentype/inter/Inter-Black.otf",
+  "size": 92,
+  "stroke": 10,
+  "color": [
+   255,
+   255,
+   255
+  ],
+  "emphasis": [
+   255,
+   212,
+   0
+  ],
+  "y": 1585,
+  "max_width": 940,
+  "max_lines": 2
+ },
+ "style": {
+  "accent": [
+   255,
+   212,
+   0
+  ],
+  "panel": {
+   "x": 0,
+   "y": 400,
+   "size": 1080,
+   "radius": 34
+  },
+  "badge_font": "/usr/share/fonts/opentype/inter/Inter-Black.otf",
+  "label_font": "/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf",
+  "mono_font": "/usr/share/fonts/truetype/jetbrains-mono/JetBrainsMono-Bold.ttf",
+  "transition": "whip",
+  "transition_len": 0.24
+ },
+ "sound": {
+  "bpm": 120,
+  "music_level": 0.16,
+  "clip_audio_level": 0.35,
+  "sfx_level": 0.9,
+  "duck": 0.6
+ },
+ "sources": {
+  "bbb360": {
+   "file": "sources/bbb_me.mp4",
+   "offset": 0.0,
+   "url": "https://raw.githubusercontent.com/mediaelement/mediaelement-files/master/big_buck_bunny.mp4"
+  },
+  "bbb1080": {
+   "file": "sources/bbb_1080_30s.mp4",
+   "offset": 0.0,
+   "url": "https://raw.githubusercontent.com/bower-media-samples/big-buck-bunny-1080p-30s/master/video.mp4"
+  },
+  "bbb60": {
+   "file": "sources/bbb_1080_60fps_30s.mp4",
+   "offset": -4.4,
+   "url": "https://raw.githubusercontent.com/bower-media-samples/big-buck-bunny-1080p-60fps-30s/master/video.mp4"
+  }
+ },
+ "audio_source": "bbb360",
+ "credit": "Big Buck Bunny (c) Blender Foundation | bigbuckbunny.org | CC BY 3.0",
+ "segments": [
+  {
+   "id": "hook",
+   "rank": null,
+   "label": null,
+   "vo": "Five wake-ups that are way too relatable.",
+   "pieces": [
+    {
+     "src": "bbb360",
+     "a": 57.9,
+     "b": 59.9,
+     "speed": 1.0
+    }
+   ],
+   "focus": [
+    [
+     0,
+     0.5,
+     0.42
+    ]
+   ],
+   "zoom": [
+    [
+     0,
+     1.35
+    ],
+    [
+     2.0,
+     1.0
+    ]
+   ],
+   "fx": [
+    {
+     "type": "flash",
+     "t": 0.0
+    }
+   ]
+  },
+  {
+   "id": "r5",
+   "rank": 5,
+   "label": "THE FIRST YAWN",
+   "vo": "Number five: the first yawn of the day. Your soul is still buffering.",
+   "pieces": [
+    {
+     "src": "bbb1080",
+     "a": 15.85,
+     "b": 16.9,
+     "speed": 1.0
+    },
+    {
+     "src": "bbb60",
+     "a": 16.9,
+     "b": 17.9,
+     "speed": 0.35
+    },
+    {
+     "src": "bbb1080",
+     "a": 17.9,
+     "b": 19.5,
+     "speed": 1.0
+    }
+   ],
+   "track": {
+    "src": "bbb1080",
+    "a": 15.85,
+    "b": 19.5,
+    "box": [
+     0.36,
+     0.1,
+     0.6,
+     0.86
+    ]
+   },
+   "zoom": [
+    [
+     0,
+     1.0
+    ],
+    [
+     0.9,
+     1.0
+    ],
+    [
+     1.5,
+     1.55
+    ],
+    [
+     3.9,
+     1.55
+    ],
+    [
+     4.5,
+     1.15
+    ],
+    [
+     5.6,
+     1.15
+    ]
+   ],
+   "fx": [
+    {
+     "type": "chip",
+     "t0": 1.05,
+     "t1": 3.9,
+     "text": "SLOW-MO 0.35x"
+    },
+    {
+     "type": "ring",
+     "t0": 1.35,
+     "t1": 2.5,
+     "at": [
+      0.51,
+      0.25
+     ],
+     "r": 0.06
+    },
+    {
+     "type": "arrow",
+     "t0": 1.35,
+     "t1": 2.5,
+     "at": [
+      0.535,
+      0.22
+     ]
+    }
+   ]
+  },
+  {
+   "id": "r4",
+   "rank": 4,
+   "label": "REALIZING YOU'RE LATE",
+   "vo": "Number four: when you realize you're already late.",
+   "pieces": [
+    {
+     "src": "bbb1080",
+     "a": 19.5,
+     "b": 20.0,
+     "speed": 1.0
+    },
+    {
+     "src": "bbb60",
+     "a": 20.0,
+     "b": 20.85,
+     "speed": 0.3
+    },
+    {
+     "src": "bbb1080",
+     "a": 20.85,
+     "b": 21.25,
+     "speed": 1.0
+    },
+    {
+     "src": "bbb60",
+     "a": 20.0,
+     "b": 20.85,
+     "speed": 0.6
+    }
+   ],
+   "track": {
+    "src": "bbb1080",
+    "a": 19.5,
+    "b": 21.25,
+    "box": [
+     0.36,
+     0.1,
+     0.6,
+     0.86
+    ]
+   },
+   "zoom": [
+    [
+     0,
+     1.15
+    ],
+    [
+     0.45,
+     1.45
+    ],
+    [
+     0.6,
+     1.1
+    ],
+    [
+     3.3,
+     1.1
+    ],
+    [
+     5.2,
+     1.2
+    ]
+   ],
+   "fx": [
+    {
+     "type": "flash",
+     "t": 0.5
+    },
+    {
+     "type": "chip",
+     "t0": 0.5,
+     "t1": 3.33,
+     "text": "SLOW-MO 0.3x"
+    },
+    {
+     "type": "shake",
+     "t0": 0.5,
+     "t1": 0.9,
+     "amp": 14
+    },
+    {
+     "type": "chip",
+     "t0": 3.73,
+     "t1": 5.2,
+     "text": "REPLAY"
+    }
+   ]
+  },
+  {
+   "id": "r3",
+   "rank": 3,
+   "label": "BEFORE COFFEE",
+   "vo": "Number three. This is what you look like before coffee.",
+   "pieces": [
+    {
+     "src": "bbb360",
+     "a": 34.0,
+     "b": 42.0,
+     "speed": 2.5
+    },
+    {
+     "src": "bbb360",
+     "a": 42.0,
+     "b": 45.8,
+     "speed": 1.0
+    }
+   ],
+   "focus": [
+    [
+     0,
+     0.52,
+     0.52
+    ],
+    [
+     3.2,
+     0.53,
+     0.52
+    ],
+    [
+     7.0,
+     0.54,
+     0.5
+    ]
+   ],
+   "zoom": [
+    [
+     0,
+     1.0
+    ],
+    [
+     3.2,
+     1.15
+    ],
+    [
+     7.0,
+     1.6
+    ]
+   ],
+   "lift": 1.55,
+   "fx": [
+    {
+     "type": "chip",
+     "t0": 0.3,
+     "t1": 3.2,
+     "text": "FAST-FORWARD 2.5x"
+    },
+    {
+     "type": "flash",
+     "t": 5.2
+    }
+   ]
+  },
+  {
+   "id": "r2",
+   "rank": 2,
+   "label": "BRAIN FINALLY BOOTS UP",
+   "vo": "Number two... the exact second your brain boots up.",
+   "pieces": [
+    {
+     "src": "bbb360",
+     "a": 45.8,
+     "b": 46.4,
+     "speed": 0.5
+    },
+    {
+     "src": "bbb360",
+     "a": 46.4,
+     "b": 46.75,
+     "speed": 1.0
+    },
+    {
+     "freeze": 46.75,
+     "dur": 1.0
+    },
+    {
+     "src": "bbb360",
+     "a": 46.0,
+     "b": 47.0,
+     "speed": 0.4
+    },
+    {
+     "src": "bbb360",
+     "a": 47.0,
+     "b": 47.65,
+     "speed": 0.8
+    }
+   ],
+   "focus": [
+    [
+     0,
+     0.54,
+     0.4
+    ],
+    [
+     6.0,
+     0.54,
+     0.4
+    ]
+   ],
+   "zoom": [
+    [
+     0,
+     1.5
+    ],
+    [
+     1.5,
+     1.5
+    ],
+    [
+     1.62,
+     1.75
+    ],
+    [
+     2.55,
+     1.75
+    ],
+    [
+     2.7,
+     1.4
+    ],
+    [
+     6.0,
+     1.4
+    ]
+   ],
+   "lift": 1.35,
+   "fx": [
+    {
+     "type": "flash",
+     "t": 1.55
+    },
+    {
+     "type": "freeze_glow",
+     "t0": 1.55,
+     "t1": 2.55
+    },
+    {
+     "type": "arrow",
+     "t0": 1.6,
+     "t1": 2.55,
+     "at": [
+      0.546,
+      0.14
+     ]
+    },
+    {
+     "type": "chip",
+     "t0": 2.55,
+     "t1": 5.05,
+     "text": "REPLAY 0.4x"
+    }
+   ]
+  },
+  {
+   "id": "r1",
+   "rank": 1,
+   "label": "THE LEGENDARY STRETCH",
+   "vo": "And number one: the stretch. That full-body, every-bone-cracks stretch. Absolutely legendary.",
+   "pieces": [
+    {
+     "src": "bbb360",
+     "a": 47.75,
+     "b": 49.3,
+     "speed": 1.0
+    },
+    {
+     "src": "bbb360",
+     "a": 49.3,
+     "b": 50.5,
+     "speed": 0.5
+    },
+    {
+     "src": "bbb360",
+     "a": 50.5,
+     "b": 52.1,
+     "speed": 1.0
+    },
+    {
+     "src": "bbb360",
+     "a": 56.75,
+     "b": 59.98,
+     "speed": 0.72
+    },
+    {
+     "freeze": 59.98,
+     "dur": 1.65
+    }
+   ],
+   "track": {
+    "src": "bbb360",
+    "a": 47.75,
+    "b": 52.1,
+    "box": [
+     0.2,
+     0.25,
+     0.52,
+     0.95
+    ],
+    "method": "motion"
+   },
+   "focus_after": [
+    [
+     5.55,
+     0.5,
+     0.78
+    ],
+    [
+     7.4,
+     0.5,
+     0.5
+    ],
+    [
+     11.686111111111108,
+     0.5,
+     0.42
+    ]
+   ],
+   "zoom": [
+    [
+     0,
+     1.0
+    ],
+    [
+     1.5,
+     1.0
+    ],
+    [
+     1.75,
+     1.4
+    ],
+    [
+     3.8,
+     1.4
+    ],
+    [
+     4.0,
+     1.05
+    ],
+    [
+     5.54,
+     1.05
+    ],
+    [
+     5.55,
+     1.25
+    ],
+    [
+     10.036111111111108,
+     1.0
+    ],
+    [
+     11.686111111111108,
+     1.0
+    ]
+   ],
+   "fx": [
+    {
+     "type": "chip",
+     "t0": 1.55,
+     "t1": 3.95,
+     "text": "SLOW-MO 0.5x"
+    },
+    {
+     "type": "flash",
+     "t": 5.55
+    },
+    {
+     "type": "endcard",
+     "t0": 10.036
+    }
+   ]
+  }
+ ],
+ "end_vo": "Be honest. Which one are you?"
+}

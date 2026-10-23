@@ -1,0 +1,23 @@
+RANKING ORDER — TOP 5 MOST RELATABLE WAKE-UPS
+
+SCORING (Entertainment 30% · Surprise 25% · Visual intensity 20% · Replay 15% · Reaction potential 10%; each 1–10)
+Moment                                     Ent  Surp  Vis  Replay  React   Weighted
+The legendary stretch + rise into the sun   9    7     9     8       9       8.35   -> #1
+Ears spring up ("brain boots up")           8    9     7     9       8       8.20   -> #2
+Face slowly emerging from the dark burrow   8    8     6     7       8       7.45   -> #3
+Bird realizes it's late and launches        7    7     8     7       7       7.20   -> #4
+The bird's first yawn                       7    5     7     6       7       6.35   -> #5
+Rejected candidates (same footage): meadow/sky establishing shots (no action, 2.9), stream pan (2.6),
+"Peach Open Movie Project presents" title card (1.8), empty branch after take-off (2.2).
+
+Note on #2 vs #1: the ears score highest on surprise and replay, but the stretch wins overall. It is the bigger,
+longer and more complete payoff (squeeze-out, slow-mo stretch, then the low-angle "hero" rise), so it takes the final
+position as the brief requires.
+
+FINAL ORDER AND TIMING (output time)
+0:00.0 – 0:02.0  HOOK  low-angle rise + "TOP 5" title slam
+0:02.0 – 0:07.5  #5    THE FIRST YAWN
+0:07.5 – 0:12.7  #4    REALIZING YOU'RE LATE
+0:12.7 – 0:19.7  #3    BEFORE COFFEE
+0:19.7 – 0:25.5  #2    BRAIN FINALLY BOOTS UP
+0:25.5 – 0:37.2  #1    THE LEGENDARY STRETCH (end card "WHICH ONE ARE YOU?" from 0:35.6)

@@ -1,0 +1,50 @@
+SOURCE LINKS — NPC RANKING TEST 001
+
+FOOTAGE USED (all one work: "Big Buck Bunny", Blender Foundation / Peach Open Movie Project, 2008)
+License: Creative Commons Attribution 3.0 (CC BY 3.0). Reuse, edit and commercial use allowed WITH attribution.
+Required credit (burned in on screen and in the description):
+  "Big Buck Bunny (c) Blender Foundation | bigbuckbunny.org | CC BY 3.0"
+Official page: https://peach.blender.org/   License text: https://creativecommons.org/licenses/by/3.0/
+
+File                     Mirror URL (downloaded this session)                                                    Spec
+bbb_me.mp4 (bbb360)      https://raw.githubusercontent.com/mediaelement/mediaelement-files/master/big_buck_bunny.mp4  640x360 24fps 60.1s, with audio
+bbb_1080_30s.mp4         https://raw.githubusercontent.com/bower-media-samples/big-buck-bunny-1080p-30s/master/video.mp4  1920x1080 24fps 30.0s
+bbb_1080_60fps_30s.mp4   https://raw.githubusercontent.com/bower-media-samples/big-buck-bunny-1080p-60fps-30s/master/video.mp4  1920x1080 60fps 30.0s
+Sync (measured by frame correlation): bbb360 and bbb1080 identical timeline (r=0.99); bbb60 runs 4.4 s later (r=0.95).
+All timestamps below are on the bbb1080 / bbb360 timeline (= film time).
+
+MOMENTS USED (in / out, film time)
+Hook   0:57.90 – 0:59.90   low-angle bunny rising into the sky (teaser of #1)
+#5     0:15.85 – 0:19.50   bird wakes and yawns; 0:16.90–0:17.90 taken from the 60 fps master for true slow motion
+#4     0:19.50 – 0:21.25   bird snaps awake and launches off the branch; 0:20.00–0:20.85 from the 60 fps master (slow-mo + replay)
+#3     0:34.00 – 0:45.80   dark burrow; 0:34–0:42 fast-forwarded 2.5x, face emerges 0:42–0:45.8 at 1x
+#2     0:45.80 – 0:47.65   ears spring up (pop at ~0:46.45, full height 0:46.75); freeze + 0.4x replay
+#1     0:47.75 – 0:52.10   squeeze out of the burrow + full-body stretch (0:49.3–0:50.5 at 0.5x)
+       0:56.75 – 0:59.98   low-angle rise into the sun (0.72x), freeze for the end card
+
+DISCOVERY LOG AND BLOCKERS
+Requested: YouTube discovery of 20–30 source videos. Not possible in this environment:
+- www.youtube.com, *.googlevideo.com, www.tiktok.com: refused by the session's network policy (HTTP 000 / CONNECT 403).
+- www.googleapis.com/youtube/v3: reachable but needs an API key (403); none configured.
+- Pexels / Pixabay / Wikimedia / archive.org / NASA / download.blender.org: refused by network policy.
+- Even with access, re-uploading other creators' YouTube clips would need their permission or a CC BY license;
+  TikTok offers no reuse license at all.
+Reachable alternative: GitHub file hosting. 10 candidate mirrors were probed:
+  1 mediaelement big_buck_bunny.mp4 ............. OK, used (CC BY 3.0)
+  2 bower big-buck-bunny-1080p-30s ............... OK, used
+  3 bower big-buck-bunny-1080p-60fps-30s ......... OK, used (slow-mo source)
+  4 bower big-buck-bunny-480p-30s ................ OK, not needed (lower res duplicate)
+  5 mediaelement echo-hereweare.mp4 .............. OK but REJECTED: license unknown
+  6 chthomos big-buck-bunny-1080p-30sec .......... 403
+  7 chthomos big-buck-bunny-480p-30sec ........... 403
+  8 bower sintel-1080p-60s ....................... 404
+  9 bower tears-of-steel-1080p-60s ............... 404
+  10 bower elephants-dream-1080p-60s ............. 404
+  (plus bower big-buck-bunny 720p-30s / 1080p-60s / 720p-60s / 480p-60s / 720p-10s: all 404)
+To unlock real YouTube sourcing: allow www.youtube.com and *.googlevideo.com in the environment's network settings
+(https://code.claude.com/docs/en/cloud-environments#network-access) and restrict picks to CC BY uploads.
+
+OTHER ASSETS
+Narration: Kokoro v1.0 TTS (Apache-2.0), voice am_puck, generated locally.
+Music + SFX: synthesized in Python for this video (npc/audio.py). No third-party audio except the film's own soundtrack (CC BY 3.0).
+Fonts: Inter, JetBrains Mono (SIL OFL 1.1).

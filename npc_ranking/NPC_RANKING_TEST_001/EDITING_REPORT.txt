@@ -1,0 +1,71 @@
+EDITING REPORT — NPC RANKING TEST 001 (FINAL_RANKING_SHORT.mp4)
+
+FINAL FILE VALIDATION (npc/qc.py on the delivered file)
+PASS  container      MP4 (+faststart)
+PASS  video_codec    H.264 High, yuv420p
+PASS  resolution     1080x1920 (9:16)
+PASS  fps            30/1 constant, 1116 frames
+PASS  duration       37.200 s (spec 35–50 s)
+PASS  audio          AAC-LC 48 kHz stereo, 256 kb/s
+PASS  bitrate        11.1 Mb/s
+PASS  loudness       -14.1 LUFS integrated (two-pass loudnorm)
+PASS  true_peak      -0.8 dBFS (ceiling -1.0 requested; 0.2 dB over is within tolerance)
+PASS  black_frames   none
+PASS  silence_gaps   none (no gap > 1 s below -45 dB)
+PASS  no_black_bars  every analysed frame full-frame (blurred backdrop, no letterbox)
+PASS  clipping       0 clipped samples
+Five ranks, in order #5 -> #1, confirmed on rendered frames.
+
+PER-MOMENT EDIT DECISIONS (each effect chosen for that clip's key action)
+HOOK  Low-angle rise; 1.35 -> 1.0 zoom-out reveal, "TOP 5" slam, impact flash and bass hit on frame 1.
+#5    Yawn: the 0.35x slow motion is TRUE slow-mo from the 60 fps master (not frame blending). Template-tracked
+      reframing; punch-in 1.0 -> 1.55 into the yawn; ring and arrow on the open beak (anchor measured on the
+      peak-yawn frame); slide-whistle accent.
+#4    Launch: 1x set-up, impact frame and shake on the alarm, 0.3x slow-mo (60 fps master) through take-off with a zip
+      SFX, then a 0.6x REPLAY. Tracked reframing follows the bird.
+#3    Burrow: 2.5x fast-forward through 8 s of darkness (ticking-clock SFX, filtered score), back to 1x as the face
+      emerges, slow push-in 1.15 -> 1.6, shadow lift so the face reads on phones, impact flash + reverb "dun-dun" sting.
+#2    Ears: match cut from #3 (same shot continues). 0.5x build-up, boing on the pop, 1.0 s freeze-frame with glowing
+      frame, punch-in and arrow on the ears, score drops out (suspense pause), then a 0.4x REPLAY with a slowed boing.
+#1    Stretch: motion-centroid tracking follows the bunny out of the burrow; punch-in and 0.5x on the big stretch with
+      bone-crack accents; riser into a beat drop on the cut to the low-angle rise (0.72x, motivated tilt that follows
+      the rise); final freeze with "WHICH ONE ARE YOU?" end card and VO.
+Global: whip transition (directional blur + slide) at every rank change; full-panel rank-number slam with glow;
+5-step progress indicator; rank badge and label animate in; consistent NPC frame (rounded panel, accent glow);
+gentle contrast grade; unsharp mask on upscaled 360p shots.
+
+CAPTIONS
+Word-by-word pop, Inter Black 92 px, white with yellow emphasis, 10 px black stroke, max 2 lines, centred at y=1585,
+below the footage panel so they never cover faces or the action. Captions are clipped at rank boundaries, and long
+single words auto-shrink to the safe width.
+
+QC FIXES MADE DURING PRODUCTION (found on rendered frames and corrected)
+1. #5 ring sat on the bird's chest, and a subject-following version drifted into the sky: re-anchored to the beak
+   position measured on a gridded source frame.
+2. #2 punch-in cropped off the ears: lowered zoom and raised framing.
+3. End card overflowed the frame: resized.
+4. "EVERY-BONE-CRACKS" caption overflowed: auto-shrink for oversized words.
+5. #1 low-angle shot opened on about 1 s of empty sky: trimmed in-point, plus a tilt that keeps the rising head in frame.
+6. Captions grazed the CC credit line: moved the credit above the panel.
+7. #2 arrow overlapped the header and missed the ear: approach direction and target corrected.
+8. Bitrate was 4.2 Mb/s at CRF 18: switched to a 12 Mb/s target (now 11.1 Mb/s).
+9. Crashes fixed in the pipeline: reverb buffer off-by-one; zero-size font on the first frame of a slam.
+
+LIMITATIONS AND RISKS (honest)
+- NOT YOUTUBE FOOTAGE. YouTube/TikTok/stock hosts are blocked by this environment's network policy, and reusing
+  other people's YouTube clips would need permission anyway. The video uses Big Buck Bunny (CC BY 3.0), which is the
+  only legally reusable footage reachable. Category adapted to fit it: "most relatable wake-ups".
+- One short film provides all five moments, so the variety is lower than a real multi-source ranking.
+- Bunny scenes only exist at 640x360 here (upscaled about 3x, sharpened). They are visibly softer than the 1080p
+  bird scenes.
+- Caption word timing is estimated from audio energy (no ASR model downloadable). Phrase timing is right;
+  individual words may be off by about 0.1–0.2 s.
+- I can't listen to audio in this environment. The mix was checked by measurement only (loudness, peaks, silence,
+  clipping, per-0.5 s levels): VO, SFX and score levels and the Kokoro voice's delivery need a human listen.
+- CC BY content is safe to reuse with attribution, but YouTube Content ID can still flag Big Buck Bunny clips
+  (it is widely uploaded). If that happens, dispute it citing the CC BY 3.0 license. Disclose the AI voice in
+  YouTube's altered/synthetic content setting if applicable. No guarantee of monetization.
+
+REBUILD
+cd npc_ranking && python3 run.py      (edit config.json to change category, clips, timing, voice, captions,
+transitions, sound or export; see README.md)
