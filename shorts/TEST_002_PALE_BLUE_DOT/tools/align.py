@@ -1,0 +1,56 @@
+#!/usr/bin/env python3
+# Tempo the narration lines, place them on the 20 s timeline, and estimate word times from energy dips.
+import json, re, subprocess
+import numpy as np, soundfile as sf
+
+TEMPO = 1.05
+GAPS = [0.2, 0.25, 0.35, 0.8]   # 0.8 s of held silence after the cameras switch off
+SPOKEN = [
+    "This tiny dot might be the most humbling photo ever taken.",
+    "In nineteen ninety, Voyager one turned around, nearly four billion miles from home, for one last look back.",
+    "Earth showed up as less than a single pixel... floating in a beam of sunlight.",
+    "Soon after, its cameras were switched off for good.",
+    "Every person you've ever known lived on that speck.",
+]
+
+def syllables(w):
+    w = re.sub(r"[^a-z]", "", w.lower())
+    if w == "nasa": return 2
+    if w == "dart": return 1
+    n = len(re.findall(r"[aeiouy]+", w))
+    if w.endswith("e") and n > 1 and not w.endswith("le"): n -= 1
+    return max(1, n)
+
+def tempo(i):
+    out = f"T{i}.wav"
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", f"L{i}.wav", "-af", f"atempo={TEMPO}",
+                    "-ar", "48000", "-ac", "1", out], check=True)
+    return out
+
+def align(path, text):
+    s, sr = sf.read(path)
+    hop = int(0.01 * sr)
+    e = np.array([np.sqrt(np.mean(s[i:i + hop] ** 2)) for i in range(0, len(s) - hop, hop)])
+    e = np.convolve(e, np.ones(3) / 3, "same")
+    voiced = np.where(e > 0.02 * e.max())[0]
+    a, b = voiced[0], voiced[-1]
+    words = text.split()
+    wts = np.array([syllables(w) + (0.6 if re.search(r"[,.]$", w) else 0) for w in words], float)
+    bounds = a + (b - a) * np.concatenate([[0], np.cumsum(wts) / wts.sum()])
+    # snap interior boundaries to the quietest 10 ms frame within +-90 ms
+    for k in range(1, len(bounds) - 1):
+        c = int(bounds[k]); lo, hi = max(a, c - 9), min(b, c + 9)
+        bounds[k] = lo + int(np.argmin(e[lo:hi + 1]))
+    bounds = np.maximum.accumulate(bounds)
+    return [(w, bounds[k] * 0.01, bounds[k + 1] * 0.01) for k, w in enumerate(words)], len(s) / sr
+
+out, t = [], 0.0
+for i, text in enumerate(SPOKEN):
+    words, dur = align(tempo(i), text)
+    out.append({"line": i, "file": f"T{i}.wav", "start": round(t, 3), "dur": round(dur, 3),
+                "words": [(w, round(t + ws, 3), round(t + we, 3)) for w, ws, we in words]})
+    t += dur + (GAPS[i] if i < len(GAPS) else 0)
+json.dump(out, open("timing.json", "w"), indent=1)
+for l in out:
+    print(f"L{l['line']} @{l['start']:.2f} dur {l['dur']:.2f}: " + "  ".join(f"{w}@{s:.2f}" for w, s, _ in l["words"]))
+print("narration ends", round(out[-1]["start"] + out[-1]["dur"], 2))

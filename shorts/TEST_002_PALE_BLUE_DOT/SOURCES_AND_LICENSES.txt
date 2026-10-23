@@ -1,0 +1,32 @@
+SOURCES AND LICENSES — TEST 002
+
+RIGHTS CLASSIFICATION OF EVERY ASSET IN FINAL_SHORT.mp4 (classified before render)
+Asset                                  Origin                                                Class     Attribution
+All visuals (illustrated photo, rays,  Procedurally generated in Python (tools/short2.py)    MINE      none required
+ solar-system diagram, Voyager icon,   this session; no third-party pixels
+ pixel grid, iris, captions)
+Narration                              Kokoro v1.0 TTS run locally, voice "am_puck"          LICENSED  optional (Apache-2.0)
+                                       (hexgrad/Kokoro-82M Apache-2.0; ONNX build
+                                       thewh1teagle/kokoro-onnx, MIT)
+Score and all SFX                      Synthesized in Python                                 MINE      none required
+Fonts                                  Inter, JetBrains Mono (SIL OFL 1.1)                   LICENSED  none required
+UNKNOWN-class assets: none. The real Pale Blue Dot photo is NOT in this video; the frame is an illustration and is
+labelled on screen "ILLUSTRATION - NOT THE ORIGINAL NASA IMAGE".
+
+FACT SOURCES (research only — no media taken)
+- NASA/JPL, "Pale Blue Dot" image release (PIA00452) and the 30th-anniversary "Pale Blue Dot Revisited" (2020):
+  taken Feb 14, 1990 by Voyager 1 from about 6 billion km (3.7 billion miles); Earth is a point of light about
+  0.12 pixel in size; the light bands are sunlight scattered in the camera optics because Earth was close to the Sun
+  from Voyager's viewpoint; part of the "Family Portrait" mosaic, the last images Voyager 1 took before its cameras
+  were powered off to conserve power and memory for the rest of the mission.
+  https://photojournal.jpl.nasa.gov/catalog/PIA00452
+  https://www.jpl.nasa.gov/images/pia23645-pale-blue-dot-revisited/
+- The idea of turning the cameras back toward Earth is credited to Carl Sagan (paraphrased in the closing line,
+  not quoted).
+CAVEAT: nasa.gov / jpl.nasa.gov were unreachable from this session (network policy), so these pages were not re-opened
+during production. The figures are NASA's published values as I know them. Re-check before publishing.
+
+REAL-IMAGE OPTION
+The original Pale Blue Dot photo is NASA/JPL-Caltech and generally usable under NASA media guidelines (no implied
+endorsement, no NASA insignia as branding). It could be cut in once photojournal.jpl.nasa.gov or images-assets.nasa.gov
+is allowed in the environment's network settings.

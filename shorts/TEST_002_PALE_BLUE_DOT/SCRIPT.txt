@@ -1,0 +1,29 @@
+TEST 002 — "This Tiny Dot Might Be the Most Humbling Photo Ever Taken"
+Runtime 20.0 s · 1080x1920 · 30 fps · narration: Kokoro v1.0 "am_puck" (local, Apache-2.0), same voice as Test 001
+
+ARC: hook (the dot) -> setup (where/when) -> reveal (0.12 pixel) -> twist (cameras off forever) -> payoff (that's us)
+
+TIME         NARRATION                                                VISUAL BEAT
+0.00–2.98    "This tiny dot might be the most humbling photo          Illustrated photo: scattered-light rays, one faint
+              ever taken."                                            pale-blue point; ring lands on "dot"; slow push-in.
+3.17–9.07    "In 1990, Voyager 1 turned around, nearly four           Solar-system diagram: Sun, inner orbits, Earth labelled;
+              billion miles from home, for one last look back."       Voyager 1 rotates its dish back toward home on "turned
+                                                                      around"; dotted line of sight to Earth; "3.7 BILLION
+                                                                      MILES / 6 billion km" slam; FEB 14, 1990 chip; shutter
+                                                                      flash on "look back".
+9.32–12.96   "Earth showed up as less than a single pixel...          Back to the photo, zoom into the dot; one-pixel grid
+              floating in a beam of sunlight."                        appears, Earth drawn at 12% of a pixel's area:
+                                                                      "EARTH = 0.12 PIXEL"; pull back to show the ray,
+                                                                      labelled "SCATTERED SUNLIGHT".
+13.31–15.32  "Soon after, its cameras were switched off for good."    Voyager close-up; an iris shuts on "switched off";
+                                                                      power-down SFX; "CAMERA OFF — the last images it
+                                                                      ever took". Score cuts out: 0.8 s of held silence.
+16.12–18.21  "Every person you've ever known lived on that speck."    Slow push back into the dot to the exact framing of
+                                                                      frame 1 (seamless loop); lower-third
+                                                                      VOYAGER 1 · "PALE BLUE DOT" · 1990.
+
+ORIGINAL COMMENTARY VALUE
+Explains when and where the photo was taken, how small Earth really was in it (a fraction of one pixel), why it sits
+in a beam of light (sunlight scattered inside the camera, because Earth was close to the Sun from Voyager's view),
+and why it was a final act (the cameras were powered off to save power). It closes on the perspective the image is
+famous for.

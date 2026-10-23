@@ -1,0 +1,21 @@
+NICHE AND TOPIC SELECTION — TEST 002
+
+NICHE: Space & science marvels. Kept from Test 001: it scored highest (30/30 weighted) and Test 001 (DART) was well
+received. Same visual language and voice, so the channel builds a recognizable format.
+
+TOPIC CANDIDATES (space, explainable in 20 s with original graphics)
+Topic                                   Hook  Twist  Payoff  Fact certainty  Visual simplicity   Pick
+Voyager 1 "Pale Blue Dot" (1990)         5     5      5          5                5             CHOSEN
+Hubble Deep Field (1995)                 5     4      4          5                4
+Apollo 13 "Houston, we've had a problem" 5     4      4          4                3
+Perseverance "7 minutes of terror"        4     4      4          5                3
+Voyager Golden Record                     4     4      4          5                4
+Cassini's Grand Finale dive (2017)        4     5      4          5                4
+Webb's first deep field (2022)            4     3      4          5                4
+Ingenuity: first powered flight on Mars   4     3      4          5                4
+
+JUSTIFICATION
+The Pale Blue Dot has a one-image hook (a dot you can barely see), a measurable "wait, what?" detail (Earth is
+0.12 of a pixel), a real twist that is easy to miss (these were Voyager 1's last pictures ever; the cameras were
+switched off soon after), and the most emotionally loaded payoff in space history. It needs no footage to explain:
+the story is about smallness, which original graphics show more clearly than the real photo can on a phone screen.

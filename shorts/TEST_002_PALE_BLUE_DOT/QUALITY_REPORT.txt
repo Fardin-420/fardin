@@ -1,0 +1,37 @@
+QUALITY REPORT — TEST 002 (FINAL_SHORT.mp4)
+
+TECHNICAL VALIDATION (ffprobe/ffmpeg on the delivered file)
+Container/codec   MP4 (+faststart), H.264 High, yuv420p                         PASS
+Resolution        1080x1920 (9:16), full-frame graphics, no bars                 PASS
+Frame rate        30 fps constant, 600 frames                                    PASS
+Duration          20.000 s (test length, same as Test 001)                       PASS
+Audio             AAC-LC 48 kHz stereo 192 kb/s                                  PASS
+Loudness          -14.0 LUFS integrated                                          PASS
+True peak         -1.0 dBFS                                                      PASS (after fix, see below)
+Silence           no gap > 1 s below -45 dB (the held pause is 0.8 s)            PASS
+Black frames      none > 0.5 s (the CAMERA OFF card keeps text on screen)       PASS
+Bitrate / size    12.5 Mb/s, ~31 MB                                              PASS
+Loop seam         last frame uses the exact framing of frame 1 (mean pixel       PASS
+                  difference 6.7/255: grain, ring and lower-third only)
+
+EDITORIAL REVIEW
+Hook 0–3 s        A near-invisible dot plus the claim "most humbling photo ever taken"; ring lands on "dot" at 0.5 s.
+Curiosity 3–9 s   Where and when, with a moving camera action (Voyager turns around) and a scale number.
+Reveal 9–13 s     The 0.12-pixel grid gives the "wait, what?" moment, shown rather than just stated.
+Twist 13–16 s     The cameras shut off forever: iris close, power-down, held silence before the payoff.
+Payoff 16–20 s    The perspective line over a slow push back into the dot; loops cleanly into the hook.
+
+FIXES APPLIED DURING QC
+- The VOYAGER 1 label collided with captions: spacecraft and label moved up.
+- The spacecraft dish read as a flat line: redrawn as a full oval, icon enlarged.
+- First master clipped (true peak +0.6 dBFS): added gentle compression plus a brick-wall limiter, then re-mastered
+  to -14.0 LUFS / -1.0 dBTP.
+
+KNOWN LIMITATIONS / RISKS
+1. No real NASA imagery (hosts blocked here); the photo is an illustration, labelled on screen.
+2. Caption word timing is estimated from audio energy (no ASR model downloadable); phrase-accurate, single words
+   may be off by about 0.1–0.2 s.
+3. I can't play audio here: voice delivery and mix balance were verified by measurement only. Give it a listen.
+4. NASA pages couldn't be re-opened this session; figures are NASA's published values (see SOURCES_AND_LICENSES.txt).
+5. All assets are MINE or permissively licensed, which keeps claim risk low, but there's no guarantee against Content
+   ID or YouTube's AI/reused-content policies. Disclose the AI voice where YouTube asks.
