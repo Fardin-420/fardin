@@ -1,0 +1,30 @@
+TITLE
+What Would Happen If You Fell Into a Black Hole?
+
+A/B ALTERNATES
+You'd Never Quite Fall Into a Black Hole (Here's Why)
+Falling Into a Black Hole, Explained in 70 Seconds
+
+DESCRIPTION (YouTube Shorts / TikTok)
+What really happens if you fall into a black hole? Gravity bends light into a ring. Tidal forces can stretch you
+apart (yes, "spaghettification" is the real term). And time itself slows down for anyone watching, while for you
+it feels completely normal, right up to the point of no return.
+
+Visuals: the black hole is a simulation computed for this video from Einstein's equations (non-rotating black hole,
+simplified). Diagrams are not to scale. The real 2019 Event Horizon Telescope image is referenced but not shown.
+Science: NASA (Black Hole Anatomy; NASA Goddard black hole visualizations 2019 and 2024) and the Event Horizon
+Telescope collaboration. Narration: AI-generated voice (Kokoro TTS). Music: original.
+
+HASHTAGS
+#shorts #blackhole #space #physics #nasa #science #einstein #astronomy #spaghettification #eventhorizon
+
+TIKTOK CAPTION
+What happens if you fall into a black hole? 🕳️ (simulation built from Einstein's equations) #blackhole #space #physics #science
+
+PLATFORM NOTES
+- Flag as containing AI-generated/synthetic voice where the platform asks.
+- 70 s: above YouTube's legacy 60 s Shorts limit but within the current 3-minute Shorts limit; fine for TikTok.
+- First frame already shows the title and the black hole, so the auto-thumbnail works.
+
+FILE
+FINAL_DOCUMENTARY.mp4 — 1080x1920, 30 fps, H.264 High, AAC 48 kHz stereo (see QUALITY_REPORT.txt)

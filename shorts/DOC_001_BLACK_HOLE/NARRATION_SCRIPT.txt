@@ -1,0 +1,38 @@
+"WHAT WOULD HAPPEN IF YOU FELL INTO A BLACK HOLE?" — NARRATION SCRIPT
+Voice: Kokoro v1.0 "am_puck" (young adult American male), local TTS, natural speed (no time-stretch).
+Same voice and caption identity as TEST 001 / 002. Timings are output time in FINAL_DOCUMENTARY.mp4.
+
+ #  TIME          LINE                                                                             SCIENCE / BEAT
+ 0  00.00–03.81   "Fall into a black hole... and to everyone watching, you'd never quite make it   HOOK. Distant observers never see
+                   in."                                                                             the crossing (infinite redshift).
+ 1  04.41–10.14   "This is a simulation, built from Einstein's equations. That ring is             Labels the visuals honestly; the
+                   superheated gas, swirling around it."                                            accretion disk.
+ 2  10.44–15.46   "Its gravity bends light so much, you can see the far side of the disk, warped   GRAVITATIONAL LENSING (the disk's
+                   up and over the top."                                                            far side imaged above the shadow).
+ 3  15.86–23.06   "In 2019, telescopes captured the first real image of one: a glowing ring, 55    Real observation, stated, not shown:
+                   million light-years away."                                                       EHT image of M87*, April 2019.
+ 4  23.66–28.93   "Now, let's fall in. First problem: tidal forces. Gravity pulls your feet        TIDAL FORCES defined as a
+                   harder than your head."                                                          difference in pull.
+ 5  29.23–35.21   "Near a small black hole, that would stretch you apart, long before the edge.    Stellar-mass case:
+                   Scientists call it spaghettification."                                           spaghettification outside horizon.
+ 6  35.61–40.77   "But near a supermassive one, like the giant at the center of our galaxy,        Supermassive case (Sgr A*): tidal
+                   you'd cross in one piece."                                                       stretch small at the horizon.
+ 7  41.47–49.28   "Now it gets strange. To a friend far away, your clock ticks slower... and       GRAVITATIONAL TIME DILATION and
+                   slower. Your light fades redder and dimmer, until you seem to freeze at the      redshift, as seen by a distant
+                   edge."                                                                           observer.
+ 8  49.78–54.19   "But for you, time feels normal. You'd cross the event horizon without feeling   Proper time is normal for the
+                   a thing."                                                                        faller; no local marker at horizon.
+ 9  54.59–60.08   "Because it isn't a surface. It's the point of no return, where escaping would   EVENT HORIZON: a boundary in
+                   mean moving faster than light."                                                  spacetime, escape speed = c.
+10  60.48–65.74   "Past it, every path leads inward. And at the center? No one knows. It's where   Inside: all future paths lead
+                   our physics breaks down."                                                        inward; the singularity is unknown.
+    65.74–70.00   (no narration: score resolves, pull back to the opening shot for a seamless loop)
+
+HOW SPECULATION IS HANDLED
+- The ending says plainly that no one knows what happens at the center. No wormholes or "seeing the future of the
+  universe" claims.
+- "You'd never quite make it in" and "seem to freeze" are about what a distant observer SEES, which is
+  established general relativity, and the script says so ("to everyone watching", "to a friend far away").
+- "Without feeling a thing" is qualified by the line before it: it applies to a supermassive black hole.
+- Hook wording: "never quite make it in" means the distant observer never sees you cross, not that you don't cross.
+  Line 8 resolves it explicitly.

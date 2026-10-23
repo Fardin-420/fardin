@@ -1,0 +1,58 @@
+SOURCE REFERENCES — "What Would Happen If You Fell Into a Black Hole?"
+
+1. WHAT IS ON SCREEN, AND WHAT IT IS (every visual is classified and labelled in-frame)
+Visual                                   Class                     On-screen label
+Ray-traced black hole + accretion disk   SIMULATION (this video)   "SIMULATION · computed for this video from Einstein's equations"
+Face-on ring, blurred, orange colormap   SIMULATION, degraded      "SIMULATION blurred to telescope resolution · not the EHT image"
+                                                                   + "Real image: Event Horizon Telescope, M87*, April 2019 (not shown)"
+Fall sequences toward the shadow         SIMULATION (simplified)   "SIMULATION · simplified view from a hovering camera"
+Tidal / spaghettification / supermassive / light-cone / center scenes   DIAGRAM   "DIAGRAM · not to scale"
+No real telescope observations or NASA imagery appear in the video (see blockers, section 4).
+
+How the simulation was made (tools/raytrace.py): non-rotating (Schwarzschild) black hole; null geodesics traced
+backwards per pixel by integrating d²u/dφ² = 3u² − u (u = 1/r, G = M = c = 1) with RK4; disk from the innermost stable
+orbit r = 6M to 22M; Keplerian orbital speed; relativistic Doppler factor plus gravitational redshift drive brightness
+and color (approximate); procedural starfield lensed by the same geodesics. Simplifications: no spin (real M87* and
+Sgr A* are thought to spin), thin opaque disk, static/hovering camera (a free-falling camera would see aberration),
+artistic disk turbulence and colors.
+
+2. SCIENTIFIC CLAIMS AND THEIR SOURCES (NASA first)
+Claim                                                                    Source
+Gravity bends light; the far side of the disk appears above (and below)  NASA Goddard visualization, "NASA Visualization
+  the shadow                                                               Shows a Black Hole's Warped World" (Sept 2019)
+Falling into a supermassive black hole you can cross the horizon intact;  NASA Goddard, "New NASA Black Hole Visualization
+  near a stellar-mass one tidal forces would stretch you apart before      Takes Viewers Beyond the Brink" (May 2024)
+  the horizon ("spaghettification")
+First image of a black hole: M87*, Event Horizon Telescope, April 2019,  EHT Collaboration (2019); NASA coverage of the EHT
+  ~55 million light-years away                                             result and multiwavelength campaign
+Milky Way's central black hole Sagittarius A*: ~4 million solar masses   EHT Collaboration (May 2022); NASA coverage
+Sgr A* horizon ~24 million km across (Schwarzschild diameter 4GM/c²)     derived: 4 × 1.477 km × 4.0×10⁶ ≈ 23.6 million km
+~60 km horizon diameter for a 10-solar-mass black hole                   derived: 4 × 1.477 km × 10 ≈ 59 km
+Distant observers see infalling matter slow, redshift and dim near the   NASA Science, "Black Holes" / "Black Hole Anatomy";
+  horizon; the faller's own clock runs normally                            standard general relativity (gravitational time dilation)
+Event horizon = point of no return: escape would require exceeding the   NASA Science, "Black Hole Anatomy"
+  speed of light
+The singularity is where general relativity breaks down; unknown         NASA Science, "Black Holes" overview
+URLs (not re-opened this session; see caveat):
+  https://science.nasa.gov/universe/black-holes/
+  https://science.nasa.gov/universe/black-holes/anatomy/
+  https://www.nasa.gov/universe/new-nasa-black-hole-visualization-takes-viewers-beyond-the-brink/
+  https://svs.gsfc.nasa.gov/13326  (2019 black hole disk visualization, Jeremy Schnittman, NASA Goddard)
+  https://eventhorizontelescope.org/press-release-april-10-2019-astronomers-capture-first-image-black-hole
+CAVEAT: every NASA, EHT and ESA host was blocked by this environment's network policy (HTTP 000), so no page could
+be re-opened or quoted during production. Claims rest on NASA's published statements as I know them, and two
+figures are derived from the Schwarzschild formula as shown above. Re-check the URLs before publishing.
+
+3. AUDIO
+Narration: Kokoro v1.0 TTS (Apache-2.0), local. Music and all SFX: original, synthesized in Python for this video
+(tools/doc_bh.py: detuned-saw string pad, sub bass, timpani-style pulses, Shepard falling tones, risers, impacts).
+No third-party music.
+
+4. BLOCKERS AND WHAT WAS DONE INSTEAD
+- NASA imagery and visualizations (images-assets.nasa.gov, svs.gsfc.nasa.gov, science.nasa.gov, nasa.gov,
+  photojournal), EHT, ESA/Hubble, ESO and Chandra were all refused by the network policy. Instead, a physically based
+  simulation was computed in-session and labelled as such. The real EHT image is described but not shown.
+- Licensed music libraries (Free Music Archive, Incompetech) were refused too. Instead, an original score was written.
+- To use real NASA material: allow images-assets.nasa.gov and svs.gsfc.nasa.gov in the environment's network settings
+  (https://code.claude.com/docs/en/cloud-environments#network-access). NASA SVS visualizations are generally free to
+  use with credit (NASA media guidelines; no implied endorsement, no NASA insignia as branding).

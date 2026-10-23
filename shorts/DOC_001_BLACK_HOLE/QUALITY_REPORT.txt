@@ -1,0 +1,71 @@
+QUALITY REPORT — "What Would Happen If You Fell Into a Black Hole?" (FINAL_DOCUMENTARY.mp4)
+
+TECHNICAL VALIDATION (npc_ranking/npc/qc.py + ffprobe on the delivered file)
+PASS  container      MP4 (+faststart)
+PASS  video_codec    H.264 High, yuv420p
+PASS  resolution     1080x1920 (9:16)
+PASS  fps            30/1 constant, 2100 frames
+PASS  duration       70.000 s
+PASS  audio          AAC-LC 48 kHz stereo, 256 kb/s
+PASS  bitrate        10.0 Mb/s (~88 MB; kept under GitHub's 100 MB per-file limit)
+PASS  loudness       -14.0 LUFS integrated (two-pass)
+PASS  true_peak      -2.3 dBFS (ceiling -1.0)
+PASS  black_frames   none (no near-black stretch >= 0.25 s)
+PASS  silence_gaps   none (no gap > 1 s below -45 dB; the post-horizon hush is intentionally < 1 s)
+PASS  no_black_bars  every analysed frame full-frame
+PASS  clipping       0 clipped samples
+
+RETENTION / STORY CHECK
+00–02 s  Hook: the black hole and the title are on screen at frame 1, impact hit, the paradox line begins at 0.0 s.
+02–23 s  Context, lensing, and the first real image (named, not faked): new visual information every 2–4 s
+         (orbiting camera, callouts, lensing inset, telescope-resolution view, date and distance slams).
+23–41 s  Escalation: fall-in rush, tidal-force diagram, spaghettification, supermassive contrast.
+41–60 s  Strange part: time dilation (reddening, freezing astronaut, slowing clock), the fall through the shadow,
+         the horizon crossing with a held hush, light cones tipping inward.
+60–70 s  Payoff: "No one knows", physics glitching apart, pull-back to the opening frame (seamless loop).
+Motion: every scene animates (camera moves through the ray-traced simulation, or animated diagram elements on a
+drifting starfield). There are no static slides.
+
+SCIENCE ACCURACY REVIEW
+Gravitational lensing   Computed, not drawn: real Schwarzschild null geodesics show the disk's far side above the
+                        shadow, the photon ring and the distorted starfield.
+Event horizon           Presented as a boundary ("not a surface", "point of no return", escape > c), with a
+                        light-cone diagram.
+Tidal forces            Defined as a difference in pull. Stellar-mass case stretches outside the horizon;
+                        supermassive case crosses intact.
+Time dilation           Framed explicitly as the distant observer's view; the faller's clock is normal.
+Speculation             The center is presented as unknown. No wormhole, white-hole or "see the future" claims.
+Real vs simulated       Every frame is tagged SIMULATION / DIAGRAM. The EHT image is named as real and as "not
+                        shown"; the blurred ring is labelled as a simulation.
+
+DEFECTS FOUND AND FIXED DURING QC
+1. Ray tracer: jagged disk edge (orbit-angle quantization) -> linear interpolation along the orbit + translucent rim.
+2. Ray tracer: rays aimed away from the hole were unsupported -> outward-ray integration added.
+3. Garbled Doppler-factor expression -> standard relativistic Doppler factor 1/(γ(1 − β·cos ψ)).
+4. Telescope-view scene crashed (bloom assumed one resolution) -> size-agnostic tonemap.
+5. Cue timing: six captions/SFX keyed one word early (spaghettification, stretched-here, equation, cones) -> re-keyed.
+6. Light-cone diagram geometry rewritten; tilt progression strengthened; "future" axis added.
+7. Black-frame check failed at 60.5–63.0 s (center scene too dark) -> brighter converging paths + central glow,
+   frames re-rendered and spliced.
+8. Clipped "FEET" label, clipped clock labels, overlapping horizon sub-label -> repositioned; 720 frames
+   re-rendered and swapped frame-exact.
+9. First encode was 110 MB (over GitHub's limit) -> re-encoded at a 9.5 Mb/s target.
+
+KNOWN LIMITATIONS AND RISKS (honest)
+- NO NASA IMAGERY. NASA, SVS, EHT, ESA and ESO hosts were blocked by this environment's network policy. All visuals
+  are original simulations/diagrams. The brief asked for NASA imagery, and this delivery doesn't have it.
+- NO LICENSED MUSIC. Music libraries were blocked too, so the score is original and synthesized in code. It's
+  functional and dramatic, but not at the level of a recorded orchestral library track.
+- Simulation simplifications: non-rotating hole; hovering (not free-falling) camera during the fall; approximate
+  disk emission/Doppler; artistic colors and turbulence. All are stated in SOURCE_REFERENCES.txt.
+- Sources not re-opened in-session (blocked); figures are NASA/EHT published values or derived from the Schwarzschild
+  radius. Re-check the listed URLs before publishing.
+- Caption timing is estimated from audio energy (no ASR model downloadable): phrase-accurate, single words may be
+  off by ~0.1–0.2 s.
+- I can't listen to audio here; voice naturalness and mix balance were verified by measurement only. A human
+  listen is recommended.
+- Original assets keep claim risk low, but no platform outcome is guaranteed. Disclose the AI voice where asked.
+
+REBUILD
+tools/: tts_bh.py (voice) -> align_bh.py (timing.json) -> raytrace.py (make_sky -> sky.npy) -> doc_bh.py (mix.wav +
+video.mp4) -> master (see tools/README.txt).
