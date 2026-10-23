@@ -1,0 +1,7 @@
+NPC_CLIP_01: I raised my price 5x and sales went UP
+NPC_CLIP_02: My bakery lost 70% in six weeks. It wasn't the competition.
+NPC_CLIP_03: Do this tonight if your business is struggling
+NPC_CLIP_04: A $9 spreadsheet made her $11,000 by Friday
+NPC_CLIP_05: The biggest lie about starting a business
+NPC_CLIP_06: Most businesses don't have a sales problem
+NPC_CLIP_07: 27, broke, and back in my childhood bedroom

@@ -1,0 +1,633 @@
+{
+  "clip_id": "NPC_CLIP_04",
+  "version": 1,
+  "source": {
+    "path": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+    "url": null,
+    "name": "NPC Test Podcast",
+    "creator": null,
+    "rights": "MINE"
+  },
+  "window": {
+    "start": 89.362,
+    "end": 112.114,
+    "cold_open": true
+  },
+  "content_type": "podcast",
+  "caption_style": "npc_signature",
+  "density": "medium",
+  "look": "npc",
+  "music": {
+    "mood": "pulse",
+    "level_db": -24
+  },
+  "duration": 24.467,
+  "frames": 734,
+  "layout": {
+    "mode": "track",
+    "reason": "content-aware 9:16 crop that follows the active speaker; shots holding two separated speakers switch to split-screen",
+    "runs": [
+      {
+        "out_s": 0.0,
+        "out_e": 18.1397,
+        "mode": "track",
+        "faces_expected": true,
+        "two_faces": false
+      },
+      {
+        "out_s": 18.1397,
+        "out_e": 24.3057,
+        "mode": "split",
+        "faces_expected": true,
+        "two_faces": true
+      },
+      {
+        "out_s": 24.3057,
+        "out_e": 24.4667,
+        "mode": "track",
+        "faces_expected": true,
+        "two_faces": false
+      }
+    ]
+  },
+  "face_band": [
+    183,
+    618
+  ],
+  "caption_y": 1290,
+  "title_y": 1060,
+  "segments": [
+    {
+      "part": "teaser",
+      "src_s": 103.206,
+      "src_e": 105.5393,
+      "out_s": 0.0,
+      "out_e": 2.3333,
+      "frames": 70,
+      "base_zoom": 1.0
+    },
+    {
+      "part": "main",
+      "src_s": 89.302,
+      "src_e": 102.6687,
+      "out_s": 2.3333,
+      "out_e": 15.7,
+      "frames": 401,
+      "base_zoom": 1.0
+    },
+    {
+      "part": "main",
+      "src_s": 103.186,
+      "src_e": 105.4527,
+      "out_s": 15.7,
+      "out_e": 17.9667,
+      "frames": 68,
+      "base_zoom": 1.06
+    },
+    {
+      "part": "main",
+      "src_s": 105.794,
+      "src_e": 112.294,
+      "out_s": 17.9667,
+      "out_e": 24.4667,
+      "frames": 195,
+      "base_zoom": 1.0
+    }
+  ],
+  "words": [
+    {
+      "w": "11,000",
+      "s": 0.06,
+      "e": 0.86,
+      "src": 103.266,
+      "emph": true
+    },
+    {
+      "w": "dollars",
+      "s": 0.86,
+      "e": 1.18,
+      "src": 104.066
+    },
+    {
+      "w": "from",
+      "s": 1.18,
+      "e": 1.42,
+      "src": 104.386
+    },
+    {
+      "w": "a",
+      "s": 1.42,
+      "e": 1.5,
+      "src": 104.626
+    },
+    {
+      "w": "spreadsheet.",
+      "s": 1.5,
+      "e": 2.14,
+      "src": 104.706
+    },
+    {
+      "w": "So",
+      "s": 2.393,
+      "e": 2.553,
+      "src": 89.362
+    },
+    {
+      "w": "how",
+      "s": 2.553,
+      "e": 2.713,
+      "src": 89.522
+    },
+    {
+      "w": "do",
+      "s": 2.713,
+      "e": 2.873,
+      "src": 89.682
+    },
+    {
+      "w": "you",
+      "s": 2.873,
+      "e": 3.033,
+      "src": 89.842
+    },
+    {
+      "w": "go",
+      "s": 3.033,
+      "e": 3.193,
+      "src": 90.002
+    },
+    {
+      "w": "from",
+      "s": 3.193,
+      "e": 3.433,
+      "src": 90.162
+    },
+    {
+      "w": "that",
+      "s": 3.433,
+      "e": 3.593,
+      "src": 90.402
+    },
+    {
+      "w": "bedroom",
+      "s": 3.593,
+      "e": 4.233,
+      "src": 90.562
+    },
+    {
+      "w": "to",
+      "s": 4.233,
+      "e": 4.393,
+      "src": 91.202
+    },
+    {
+      "w": "where",
+      "s": 4.393,
+      "e": 4.633,
+      "src": 91.362
+    },
+    {
+      "w": "you",
+      "s": 4.633,
+      "e": 4.793,
+      "src": 91.602
+    },
+    {
+      "w": "are",
+      "s": 4.793,
+      "e": 5.033,
+      "src": 91.762
+    },
+    {
+      "w": "now?",
+      "s": 5.033,
+      "e": 5.353,
+      "src": 92.002
+    },
+    {
+      "w": "I",
+      "s": 5.753,
+      "e": 5.913,
+      "src": 92.722
+    },
+    {
+      "w": "started",
+      "s": 5.913,
+      "e": 6.233,
+      "src": 92.882
+    },
+    {
+      "w": "teaching",
+      "s": 6.233,
+      "e": 6.633,
+      "src": 93.202
+    },
+    {
+      "w": "other",
+      "s": 6.633,
+      "e": 6.873,
+      "src": 93.602
+    },
+    {
+      "w": "bakers",
+      "s": 6.873,
+      "e": 7.433,
+      "src": 93.842
+    },
+    {
+      "w": "how",
+      "s": 7.433,
+      "e": 7.593,
+      "src": 94.402
+    },
+    {
+      "w": "to",
+      "s": 7.593,
+      "e": 7.753,
+      "src": 94.562
+    },
+    {
+      "w": "price.",
+      "s": 7.753,
+      "e": 8.553,
+      "src": 94.722
+    },
+    {
+      "w": "One",
+      "s": 8.553,
+      "e": 8.793,
+      "src": 95.522
+    },
+    {
+      "w": "spreadsheet.",
+      "s": 8.873,
+      "e": 9.913,
+      "src": 95.842
+    },
+    {
+      "w": "I",
+      "s": 9.913,
+      "e": 10.153,
+      "src": 96.882
+    },
+    {
+      "w": "sold",
+      "s": 10.153,
+      "e": 10.473,
+      "src": 97.122
+    },
+    {
+      "w": "it",
+      "s": 10.473,
+      "e": 10.633,
+      "src": 97.442
+    },
+    {
+      "w": "for",
+      "s": 10.633,
+      "e": 10.793,
+      "src": 97.602
+    },
+    {
+      "w": "nine",
+      "s": 10.793,
+      "e": 11.113,
+      "src": 97.762
+    },
+    {
+      "w": "dollars",
+      "s": 11.113,
+      "e": 11.433,
+      "src": 98.082
+    },
+    {
+      "w": "on",
+      "s": 11.513,
+      "e": 11.673,
+      "src": 98.482
+    },
+    {
+      "w": "a",
+      "s": 11.673,
+      "e": 11.833,
+      "src": 98.642
+    },
+    {
+      "w": "Tuesday",
+      "s": 11.833,
+      "e": 12.233,
+      "src": 98.802
+    },
+    {
+      "w": "night",
+      "s": 12.233,
+      "e": 12.553,
+      "src": 99.202
+    },
+    {
+      "w": "and",
+      "s": 12.713,
+      "e": 12.873,
+      "src": 99.682
+    },
+    {
+      "w": "by",
+      "s": 12.873,
+      "e": 13.113,
+      "src": 99.842
+    },
+    {
+      "w": "Friday",
+      "s": 13.113,
+      "e": 13.593,
+      "src": 100.082
+    },
+    {
+      "w": "I",
+      "s": 13.593,
+      "e": 13.753,
+      "src": 100.562
+    },
+    {
+      "w": "had",
+      "s": 13.753,
+      "e": 13.913,
+      "src": 100.722
+    },
+    {
+      "w": "made",
+      "s": 13.913,
+      "e": 14.153,
+      "src": 100.882
+    },
+    {
+      "w": "eleven",
+      "s": 14.153,
+      "e": 14.553,
+      "src": 101.122
+    },
+    {
+      "w": "thousand",
+      "s": 14.553,
+      "e": 14.953,
+      "src": 101.522,
+      "emph": true
+    },
+    {
+      "w": "dollars.",
+      "s": 14.953,
+      "e": 15.593,
+      "src": 101.922
+    },
+    {
+      "w": "11,000",
+      "s": 15.78,
+      "e": 16.58,
+      "src": 103.266
+    },
+    {
+      "w": "dollars",
+      "s": 16.58,
+      "e": 16.9,
+      "src": 104.066
+    },
+    {
+      "w": "from",
+      "s": 16.9,
+      "e": 17.14,
+      "src": 104.386
+    },
+    {
+      "w": "a",
+      "s": 17.14,
+      "e": 17.22,
+      "src": 104.626
+    },
+    {
+      "w": "spreadsheet.",
+      "s": 17.22,
+      "e": 17.86,
+      "src": 104.706
+    },
+    {
+      "w": "From",
+      "s": 18.047,
+      "e": 18.367,
+      "src": 105.874
+    },
+    {
+      "w": "a",
+      "s": 18.367,
+      "e": 18.447,
+      "src": 106.194
+    },
+    {
+      "w": "spreadsheet.",
+      "s": 18.447,
+      "e": 19.407,
+      "src": 106.274
+    },
+    {
+      "w": "That's",
+      "s": 19.407,
+      "e": 19.727,
+      "src": 107.234
+    },
+    {
+      "w": "when",
+      "s": 19.727,
+      "e": 19.887,
+      "src": 107.554
+    },
+    {
+      "w": "I",
+      "s": 19.887,
+      "e": 20.047,
+      "src": 107.714
+    },
+    {
+      "w": "realized",
+      "s": 20.047,
+      "e": 20.527,
+      "src": 107.874
+    },
+    {
+      "w": "the",
+      "s": 20.527,
+      "e": 20.687,
+      "src": 108.354
+    },
+    {
+      "w": "thing",
+      "s": 20.687,
+      "e": 20.847,
+      "src": 108.514
+    },
+    {
+      "w": "that",
+      "s": 20.847,
+      "e": 21.007,
+      "src": 108.674
+    },
+    {
+      "w": "broke",
+      "s": 21.007,
+      "e": 21.487,
+      "src": 108.834,
+      "emph": true
+    },
+    {
+      "w": "me",
+      "s": 21.487,
+      "e": 21.647,
+      "src": 109.314
+    },
+    {
+      "w": "was",
+      "s": 21.647,
+      "e": 21.967,
+      "src": 109.474
+    },
+    {
+      "w": "the",
+      "s": 21.967,
+      "e": 22.207,
+      "src": 109.794
+    },
+    {
+      "w": "thing",
+      "s": 22.207,
+      "e": 22.447,
+      "src": 110.034
+    },
+    {
+      "w": "other",
+      "s": 22.447,
+      "e": 22.767,
+      "src": 110.274
+    },
+    {
+      "w": "people",
+      "s": 22.767,
+      "e": 23.087,
+      "src": 110.594
+    },
+    {
+      "w": "needed",
+      "s": 23.087,
+      "e": 23.487,
+      "src": 110.914
+    },
+    {
+      "w": "most.",
+      "s": 23.487,
+      "e": 24.287,
+      "src": 111.314
+    },
+    {
+      "w": "If",
+      "s": 24.287,
+      "e": 24.447,
+      "src": 112.114
+    },
+    {
+      "w": "someone",
+      "s": 24.447,
+      "e": 24.497,
+      "src": 112.274
+    }
+  ],
+  "zooms": [
+    {
+      "t": 14.513,
+      "type": "punch",
+      "amount": 0.1,
+      "attack": 0.12,
+      "hold": 1.8,
+      "release": 0.45,
+      "word": "thousand"
+    }
+  ],
+  "transitions": [
+    {
+      "t": 2.333,
+      "type": "whip",
+      "frames": 8
+    }
+  ],
+  "sfx": [
+    {
+      "t": 2.133,
+      "type": "whoosh",
+      "gain_db": -14
+    },
+    {
+      "t": 14.513,
+      "type": "impact",
+      "gain_db": -20
+    },
+    {
+      "t": 15.78,
+      "type": "pop",
+      "gain_db": -18
+    }
+  ],
+  "graphics": [
+    {
+      "type": "progress_bar",
+      "color": "#FF2B1C"
+    },
+    {
+      "type": "title_card",
+      "text": "$9 spreadsheet. $11,000.",
+      "y": 1060,
+      "dur": 1.96
+    },
+    {
+      "type": "stat",
+      "t": 15.78,
+      "value": "11,000",
+      "label": "",
+      "y": 1060
+    },
+    {
+      "type": "watermark",
+      "text": "NPC"
+    }
+  ],
+  "cut_times": [
+    2.3333,
+    15.7,
+    17.9667
+  ],
+  "score": 60.6,
+  "factors": {
+    "hook": 49.0,
+    "retention": 83.2,
+    "emotion": 32.6,
+    "curiosity": 74.0,
+    "standalone": 65.0,
+    "visual": 84.4,
+    "loop": 15.0
+  },
+  "hook_type": "question",
+  "package": {
+    "title": "A $9 spreadsheet made her $11,000 by Friday",
+    "hook": "11,000 dollars from a spreadsheet.",
+    "post_caption": "The thing that broke her business was the thing everyone else needed.",
+    "hashtags": [
+      "#sidehustle",
+      "#digitalproducts",
+      "#entrepreneur",
+      "#business"
+    ],
+    "keywords": [
+      "spreadsheet",
+      "dollars",
+      "teaching"
+    ],
+    "retention_notes": "A number-led teaser, then the story beat and the realization line at the end. Drop-off risk: the transition question at ~4 s.",
+    "cover_text": "$9 spreadsheet. $11,000."
+  },
+  "selected_by": "agent"
+}

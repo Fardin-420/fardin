@@ -1,0 +1,9 @@
+NPC_CLIP_01: source /home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4 · 2:12.87–2:44.18 · creator: n/a · rights: MINE (self-made test: Kokoro TTS voices + public-domain NASA portrait)
+NPC_CLIP_02: source /home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4 · 0:19.22–0:44.82 · creator: n/a · rights: MINE (self-made test: Kokoro TTS voices + public-domain NASA portrait)
+NPC_CLIP_03: source /home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4 · 1:52.11–2:12.87 · creator: n/a · rights: MINE (self-made test: Kokoro TTS voices + public-domain NASA portrait)
+NPC_CLIP_04: source /home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4 · 1:29.36–1:52.11 · creator: n/a · rights: MINE (self-made test: Kokoro TTS voices + public-domain NASA portrait)
+NPC_CLIP_05: source /home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4 · 2:44.18–3:06.02 · creator: n/a · rights: MINE (self-made test: Kokoro TTS voices + public-domain NASA portrait)
+NPC_CLIP_06: source /home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4 · 0:45.14–1:06.11 · creator: n/a · rights: MINE (self-made test: Kokoro TTS voices + public-domain NASA portrait)
+NPC_CLIP_07: source /home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4 · 1:06.71–1:28.69 · creator: n/a · rights: MINE (self-made test: Kokoro TTS voices + public-domain NASA portrait)
+
+Editing (captions, reframing, grading, music, SFX) is added value, not a copyright shield. No immunity from Content ID, claims, strikes or reused-content limits is implied.

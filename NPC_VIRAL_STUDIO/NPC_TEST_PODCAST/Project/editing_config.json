@@ -1,0 +1,25 @@
+{
+  "engine": "npc-clip 1.0",
+  "niche": "business",
+  "content_type": "podcast",
+  "style_arg": "viral-pro",
+  "brand": true,
+  "platform": "all",
+  "clips_requested": 12,
+  "clips_planned": 7,
+  "export": {
+    "resolution": "1080x1920",
+    "fps": 30,
+    "video": "H.264 High, CRF 18, yuv420p, bt709 tv-range",
+    "audio": "AAC 192k 48 kHz stereo, -14 LUFS, true peak ≤ -1.5 dBTP"
+  },
+  "rights": {
+    "classification": "MINE",
+    "note": "self-made test: Kokoro TTS voices + public-domain NASA portrait",
+    "cleared_for_render": true,
+    "requires_original_layer": false,
+    "declared_license_in_metadata": null
+  },
+  "fair_use_flagged": [],
+  "rerender": "npc-clip render --project /home/user/fardin/NPC_VIRAL_STUDIO/NPC_TEST_PODCAST"
+}

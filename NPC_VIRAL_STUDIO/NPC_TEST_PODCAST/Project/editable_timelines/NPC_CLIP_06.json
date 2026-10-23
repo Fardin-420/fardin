@@ -1,0 +1,558 @@
+{
+  "clip_id": "NPC_CLIP_06",
+  "version": 1,
+  "source": {
+    "path": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+    "url": null,
+    "name": "NPC Test Podcast",
+    "creator": null,
+    "rights": "MINE"
+  },
+  "window": {
+    "start": 45.138,
+    "end": 66.114,
+    "cold_open": false
+  },
+  "content_type": "podcast",
+  "caption_style": "high_energy_podcast",
+  "density": "high",
+  "look": "punchy",
+  "music": {
+    "mood": "pulse",
+    "level_db": -24
+  },
+  "duration": 21.1,
+  "frames": 633,
+  "layout": {
+    "mode": "track",
+    "reason": "content-aware 9:16 crop that follows the active speaker; shots holding two separated speakers switch to split-screen",
+    "runs": [
+      {
+        "out_s": 0.0,
+        "out_e": 14.873,
+        "mode": "track",
+        "faces_expected": true,
+        "two_faces": false
+      },
+      {
+        "out_s": 14.873,
+        "out_e": 21.1,
+        "mode": "split",
+        "faces_expected": true,
+        "two_faces": true
+      }
+    ]
+  },
+  "face_band": [
+    190,
+    618
+  ],
+  "caption_y": 1290,
+  "title_y": 1060,
+  "segments": [
+    {
+      "part": "main",
+      "src_s": 45.078,
+      "src_e": 56.078,
+      "out_s": 0.0,
+      "out_e": 11.0,
+      "frames": 330,
+      "base_zoom": 1.0
+    },
+    {
+      "part": "main",
+      "src_s": 56.194,
+      "src_e": 66.294,
+      "out_s": 11.0,
+      "out_e": 21.1,
+      "frames": 303,
+      "base_zoom": 1.07
+    }
+  ],
+  "words": [
+    {
+      "w": "What",
+      "s": 0.06,
+      "e": 0.3,
+      "src": 45.138
+    },
+    {
+      "w": "do",
+      "s": 0.3,
+      "e": 0.46,
+      "src": 45.378
+    },
+    {
+      "w": "you",
+      "s": 0.46,
+      "e": 0.62,
+      "src": 45.538
+    },
+    {
+      "w": "mean",
+      "s": 0.62,
+      "e": 0.78,
+      "src": 45.698
+    },
+    {
+      "w": "you",
+      "s": 0.94,
+      "e": 1.1,
+      "src": 46.018
+    },
+    {
+      "w": "didn't",
+      "s": 1.1,
+      "e": 1.42,
+      "src": 46.178
+    },
+    {
+      "w": "know",
+      "s": 1.42,
+      "e": 1.58,
+      "src": 46.498
+    },
+    {
+      "w": "your",
+      "s": 1.58,
+      "e": 1.74,
+      "src": 46.658
+    },
+    {
+      "w": "numbers?",
+      "s": 1.74,
+      "e": 2.38,
+      "src": 46.818
+    },
+    {
+      "w": "I",
+      "s": 3.036,
+      "e": 3.116,
+      "src": 48.114
+    },
+    {
+      "w": "didn't",
+      "s": 3.116,
+      "e": 3.356,
+      "src": 48.194
+    },
+    {
+      "w": "know",
+      "s": 3.356,
+      "e": 3.516,
+      "src": 48.434
+    },
+    {
+      "w": "that",
+      "s": 3.516,
+      "e": 3.676,
+      "src": 48.594
+    },
+    {
+      "w": "every",
+      "s": 3.676,
+      "e": 3.916,
+      "src": 48.754
+    },
+    {
+      "w": "croissant",
+      "s": 3.916,
+      "e": 4.556,
+      "src": 48.994
+    },
+    {
+      "w": "cost",
+      "s": 4.716,
+      "e": 4.956,
+      "src": 49.794
+    },
+    {
+      "w": "me",
+      "s": 4.956,
+      "e": 5.116,
+      "src": 50.034
+    },
+    {
+      "w": "two",
+      "s": 5.116,
+      "e": 5.356,
+      "src": 50.194
+    },
+    {
+      "w": "dollars",
+      "s": 5.356,
+      "e": 5.836,
+      "src": 50.434
+    },
+    {
+      "w": "and",
+      "s": 5.916,
+      "e": 6.156,
+      "src": 50.994
+    },
+    {
+      "w": "ten",
+      "s": 6.156,
+      "e": 6.476,
+      "src": 51.234
+    },
+    {
+      "w": "cents",
+      "s": 6.476,
+      "e": 6.796,
+      "src": 51.554
+    },
+    {
+      "w": "to",
+      "s": 6.796,
+      "e": 7.036,
+      "src": 51.874
+    },
+    {
+      "w": "make.",
+      "s": 7.036,
+      "e": 7.676,
+      "src": 52.114
+    },
+    {
+      "w": "I",
+      "s": 7.676,
+      "e": 7.836,
+      "src": 52.754
+    },
+    {
+      "w": "was",
+      "s": 7.836,
+      "e": 7.996,
+      "src": 52.914
+    },
+    {
+      "w": "proud",
+      "s": 7.996,
+      "e": 8.316,
+      "src": 53.074
+    },
+    {
+      "w": "of",
+      "s": 8.316,
+      "e": 8.476,
+      "src": 53.394
+    },
+    {
+      "w": "my",
+      "s": 8.476,
+      "e": 8.636,
+      "src": 53.554
+    },
+    {
+      "w": "margins",
+      "s": 8.636,
+      "e": 9.196,
+      "src": 53.714
+    },
+    {
+      "w": "and",
+      "s": 9.356,
+      "e": 9.516,
+      "src": 54.434
+    },
+    {
+      "w": "I",
+      "s": 9.516,
+      "e": 9.596,
+      "src": 54.594
+    },
+    {
+      "w": "didn't",
+      "s": 9.596,
+      "e": 9.916,
+      "src": 54.674
+    },
+    {
+      "w": "even",
+      "s": 9.916,
+      "e": 10.076,
+      "src": 54.994
+    },
+    {
+      "w": "have",
+      "s": 10.076,
+      "e": 10.236,
+      "src": 55.154
+    },
+    {
+      "w": "margins.",
+      "s": 10.236,
+      "e": 10.876,
+      "src": 55.314
+    },
+    {
+      "w": "That's",
+      "s": 11.08,
+      "e": 11.48,
+      "src": 56.274
+    },
+    {
+      "w": "honestly",
+      "s": 11.48,
+      "e": 11.96,
+      "src": 56.674
+    },
+    {
+      "w": "the",
+      "s": 11.96,
+      "e": 12.12,
+      "src": 57.154
+    },
+    {
+      "w": "most",
+      "s": 12.12,
+      "e": 12.36,
+      "src": 57.314
+    },
+    {
+      "w": "common",
+      "s": 12.36,
+      "e": 12.76,
+      "src": 57.554
+    },
+    {
+      "w": "mistake",
+      "s": 12.76,
+      "e": 13.24,
+      "src": 57.954,
+      "emph": true
+    },
+    {
+      "w": "I",
+      "s": 13.24,
+      "e": 13.48,
+      "src": 58.434
+    },
+    {
+      "w": "hear",
+      "s": 13.48,
+      "e": 13.72,
+      "src": 58.674
+    },
+    {
+      "w": "on",
+      "s": 13.72,
+      "e": 13.88,
+      "src": 58.914
+    },
+    {
+      "w": "this",
+      "s": 13.88,
+      "e": 14.04,
+      "src": 59.074
+    },
+    {
+      "w": "show.",
+      "s": 14.04,
+      "e": 14.84,
+      "src": 59.234
+    },
+    {
+      "w": "It",
+      "s": 14.84,
+      "e": 15.0,
+      "src": 60.034
+    },
+    {
+      "w": "is.",
+      "s": 15.0,
+      "e": 15.56,
+      "src": 60.194
+    },
+    {
+      "w": "Most",
+      "s": 15.56,
+      "e": 15.96,
+      "src": 60.754
+    },
+    {
+      "w": "people",
+      "s": 15.96,
+      "e": 16.2,
+      "src": 61.154
+    },
+    {
+      "w": "think",
+      "s": 16.28,
+      "e": 16.52,
+      "src": 61.474
+    },
+    {
+      "w": "they",
+      "s": 16.52,
+      "e": 16.68,
+      "src": 61.714
+    },
+    {
+      "w": "have",
+      "s": 16.68,
+      "e": 16.84,
+      "src": 61.874
+    },
+    {
+      "w": "a",
+      "s": 16.84,
+      "e": 16.92,
+      "src": 62.034
+    },
+    {
+      "w": "sales",
+      "s": 16.92,
+      "e": 17.48,
+      "src": 62.114
+    },
+    {
+      "w": "problem.",
+      "s": 17.48,
+      "e": 18.2,
+      "src": 62.674,
+      "emph": true
+    },
+    {
+      "w": "Ninety",
+      "s": 18.2,
+      "e": 18.68,
+      "src": 63.394
+    },
+    {
+      "w": "per",
+      "s": 18.68,
+      "e": 18.76,
+      "src": 63.874
+    },
+    {
+      "w": "cent",
+      "s": 18.76,
+      "e": 19.0,
+      "src": 63.954
+    },
+    {
+      "w": "of",
+      "s": 19.0,
+      "e": 19.08,
+      "src": 64.194
+    },
+    {
+      "w": "the",
+      "s": 19.08,
+      "e": 19.24,
+      "src": 64.274
+    },
+    {
+      "w": "time",
+      "s": 19.24,
+      "e": 19.4,
+      "src": 64.434
+    },
+    {
+      "w": "they",
+      "s": 19.48,
+      "e": 19.64,
+      "src": 64.674
+    },
+    {
+      "w": "have",
+      "s": 19.64,
+      "e": 19.8,
+      "src": 64.834
+    },
+    {
+      "w": "a",
+      "s": 19.8,
+      "e": 19.96,
+      "src": 64.994
+    },
+    {
+      "w": "pricing",
+      "s": 19.96,
+      "e": 20.44,
+      "src": 65.154
+    },
+    {
+      "w": "problem.",
+      "s": 20.44,
+      "e": 20.92,
+      "src": 65.634,
+      "emph": true
+    }
+  ],
+  "zooms": [
+    {
+      "t": 12.72,
+      "type": "punch",
+      "amount": 0.14,
+      "attack": 0.12,
+      "hold": 1.8,
+      "release": 0.45,
+      "word": "mistake"
+    }
+  ],
+  "transitions": [],
+  "sfx": [
+    {
+      "t": 12.72,
+      "type": "impact",
+      "gain_db": -20
+    }
+  ],
+  "graphics": [
+    {
+      "type": "progress_bar",
+      "color": "#FF3B30"
+    },
+    {
+      "type": "title_card",
+      "text": "It's not a sales problem",
+      "y": 1060,
+      "dur": 1.8
+    },
+    {
+      "type": "keyword_pop",
+      "t": 12.76,
+      "word": "mistake",
+      "y": 1080
+    },
+    {
+      "type": "watermark",
+      "text": "NPC"
+    }
+  ],
+  "cut_times": [
+    11.0
+  ],
+  "score": 66.9,
+  "factors": {
+    "hook": 70.4,
+    "retention": 79.2,
+    "emotion": 44.7,
+    "curiosity": 50.0,
+    "standalone": 100.0,
+    "visual": 84.6,
+    "loop": 15.0
+  },
+  "hook_type": "question",
+  "package": {
+    "title": "Most businesses don't have a sales problem",
+    "hook": "What do you mean you didn't know your numbers?",
+    "post_caption": "She was proud of her margins. She didn't have margins.",
+    "hashtags": [
+      "#pricing",
+      "#smallbusiness",
+      "#business"
+    ],
+    "keywords": [
+      "margins",
+      "problem",
+      "croissant"
+    ],
+    "retention_notes": "A short clip: question hook, a specific cost figure, and the 'ninety percent' claim as payoff. Drop-off risk: it depends on the margins line landing.",
+    "cover_text": "It's not a sales problem"
+  },
+  "selected_by": "agent"
+}

@@ -1,0 +1,36 @@
+{
+  "input": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+  "media_path": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+  "fingerprint_sha256_head": "eb11fc2598f56f05",
+  "ingested_at": "2026-10-23T15:22:17",
+  "display_name": "NPC Test Podcast",
+  "creator": null,
+  "url": null,
+  "platform_info": {},
+  "video": {
+    "width": 1920,
+    "height": 1080,
+    "fps": 30.0,
+    "duration": 186.6,
+    "vcodec": "h264",
+    "pix_fmt": "yuv420p",
+    "has_audio": true,
+    "acodec": "aac",
+    "sample_rate": 24000,
+    "channels": 1,
+    "tags": {
+      "major_brand": "isom",
+      "minor_version": "512",
+      "compatible_brands": "isomiso2avc1mp41",
+      "encoder": "Lavf60.16.100"
+    },
+    "size_bytes": 198566221
+  },
+  "rights": {
+    "classification": "MINE",
+    "note": "self-made test: Kokoro TTS voices + public-domain NASA portrait",
+    "cleared_for_render": true,
+    "requires_original_layer": false,
+    "declared_license_in_metadata": null
+  }
+}

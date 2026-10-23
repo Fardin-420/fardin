@@ -1,0 +1,9 @@
+sherpa-onnx
+opencv-python-headless
+scenedetect[opencv-headless]
+yt-dlp
+pyspellchecker
+soundfile
+scipy
+numpy
+pillow

@@ -1,0 +1,293 @@
+[
+  {
+    "clip": "NPC_CLIP_01",
+    "file": "Clips/NPC_CLIP_01.mp4",
+    "cover": "Covers/NPC_COVER_01.png",
+    "title": "I raised my price 5x and sales went UP",
+    "opening_hook": "Sales went up, not down, up.",
+    "post_caption": "She was terrified to go from $9 to $49. Then this happened.",
+    "hashtags": [
+      "#pricing",
+      "#smallbusiness",
+      "#entrepreneur",
+      "#business"
+    ],
+    "duration_s": 33.433,
+    "score": 72.3,
+    "factors": {
+      "hook": 50.9,
+      "retention": 90.4,
+      "emotion": 73.3,
+      "curiosity": 66.0,
+      "standalone": 90.0,
+      "visual": 93.6,
+      "loop": 45.0
+    },
+    "hook_type": "statement",
+    "caption_style": "hormozi",
+    "layout": "track",
+    "retention_assessment": "Cold-opens on the payoff line, then rewinds to the fear setup, so viewers stay to see why. 'Price is a message' is a quotable close that loops back to the opening. Drop-off risk: the host's 'Let's talk about fear' setup at ~3 s.",
+    "source": {
+      "url": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+      "start": 132.866,
+      "end": 164.178,
+      "rights": "MINE"
+    },
+    "selected_by": "agent",
+    "platforms": [
+      "TikTok",
+      "YouTube Shorts",
+      "Instagram Reels",
+      "Facebook Reels"
+    ]
+  },
+  {
+    "clip": "NPC_CLIP_02",
+    "file": "Clips/NPC_CLIP_02.mp4",
+    "cover": "Covers/NPC_COVER_02.png",
+    "title": "My bakery lost 70% in six weeks. It wasn't the competition.",
+    "opening_hook": "It failed because I never knew my numbers.",
+    "post_caption": "A $1 croissant across the street wasn't the real problem.",
+    "hashtags": [
+      "#bakery",
+      "#smallbusiness",
+      "#entrepreneur",
+      "#business"
+    ],
+    "duration_s": 28.467,
+    "score": 70.6,
+    "factors": {
+      "hook": 49.2,
+      "retention": 85.3,
+      "emotion": 60.7,
+      "curiosity": 72.0,
+      "standalone": 100.0,
+      "visual": 90.7,
+      "loop": 45.0
+    },
+    "hook_type": "statement",
+    "caption_style": "high_energy_podcast",
+    "layout": "track",
+    "retention_assessment": "The teaser states the twist before the story starts. Then come the stat (70%), the emotional beat (crying in the walk-in fridge) and the reveal. Drop-off risk: the chain/croissant explanation in the first 8 s.",
+    "source": {
+      "url": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+      "start": 19.218,
+      "end": 44.818,
+      "rights": "MINE"
+    },
+    "selected_by": "agent",
+    "platforms": [
+      "TikTok",
+      "YouTube Shorts",
+      "Instagram Reels",
+      "Facebook Reels"
+    ]
+  },
+  {
+    "clip": "NPC_CLIP_03",
+    "file": "Clips/NPC_CLIP_03.mp4",
+    "cover": "Covers/NPC_COVER_03.png",
+    "title": "Do this tonight if your business is struggling",
+    "opening_hook": "If someone is watching this and their business is struggling right now, what should they do tonight?",
+    "post_caption": "One question. One minute. If you can't answer it, stop spending.",
+    "hashtags": [
+      "#businesstips",
+      "#smallbusiness",
+      "#entrepreneur",
+      "#business"
+    ],
+    "duration_s": 23.633,
+    "score": 65.1,
+    "factors": {
+      "hook": 63.4,
+      "retention": 83.1,
+      "emotion": 30.6,
+      "curiosity": 70.0,
+      "standalone": 90.0,
+      "visual": 78.3,
+      "loop": 15.0
+    },
+    "hook_type": "statement",
+    "caption_style": "bold_viral",
+    "layout": "track",
+    "retention_assessment": "A direct-address question hook leads to a concrete, saveable action, with a short last line to close. Drop-off risk: the long opening question (6 s).",
+    "source": {
+      "url": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+      "start": 112.114,
+      "end": 132.866,
+      "rights": "MINE"
+    },
+    "selected_by": "agent",
+    "platforms": [
+      "TikTok",
+      "YouTube Shorts",
+      "Instagram Reels",
+      "Facebook Reels"
+    ]
+  },
+  {
+    "clip": "NPC_CLIP_04",
+    "file": "Clips/NPC_CLIP_04.mp4",
+    "cover": "Covers/NPC_COVER_04.png",
+    "title": "A $9 spreadsheet made her $11,000 by Friday",
+    "opening_hook": "11,000 dollars from a spreadsheet.",
+    "post_caption": "The thing that broke her business was the thing everyone else needed.",
+    "hashtags": [
+      "#sidehustle",
+      "#digitalproducts",
+      "#entrepreneur",
+      "#business"
+    ],
+    "duration_s": 24.467,
+    "score": 60.6,
+    "factors": {
+      "hook": 49.0,
+      "retention": 83.2,
+      "emotion": 32.6,
+      "curiosity": 74.0,
+      "standalone": 65.0,
+      "visual": 84.4,
+      "loop": 15.0
+    },
+    "hook_type": "question",
+    "caption_style": "npc_signature",
+    "layout": "track",
+    "retention_assessment": "A number-led teaser, then the story beat and the realization line at the end. Drop-off risk: the transition question at ~4 s.",
+    "source": {
+      "url": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+      "start": 89.362,
+      "end": 112.114,
+      "rights": "MINE"
+    },
+    "selected_by": "agent",
+    "platforms": [
+      "TikTok",
+      "YouTube Shorts",
+      "Instagram Reels",
+      "Facebook Reels"
+    ]
+  },
+  {
+    "clip": "NPC_CLIP_05",
+    "file": "Clips/NPC_CLIP_05.mp4",
+    "cover": "Covers/NPC_COVER_05.png",
+    "title": "The biggest lie about starting a business",
+    "opening_hook": "What's the biggest lie people believe about starting a business?",
+    "post_caption": "You don't need a great idea. Her idea was a spreadsheet.",
+    "hashtags": [
+      "#startup",
+      "#entrepreneur",
+      "#business"
+    ],
+    "duration_s": 22.067,
+    "score": 69.4,
+    "factors": {
+      "hook": 75.3,
+      "retention": 85.7,
+      "emotion": 47.2,
+      "curiosity": 54.0,
+      "standalone": 90.0,
+      "visual": 84.7,
+      "loop": 15.0
+    },
+    "hook_type": "question",
+    "caption_style": "hormozi",
+    "layout": "track",
+    "retention_assessment": "A curiosity-gap question gets a contrarian answer, with an emotional callback (the stars) to end on. Drop-off risk: 'Last question' at ~12 s reads like an ending.",
+    "source": {
+      "url": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+      "start": 164.178,
+      "end": 186.018,
+      "rights": "MINE"
+    },
+    "selected_by": "agent",
+    "platforms": [
+      "TikTok",
+      "YouTube Shorts",
+      "Instagram Reels",
+      "Facebook Reels"
+    ]
+  },
+  {
+    "clip": "NPC_CLIP_06",
+    "file": "Clips/NPC_CLIP_06.mp4",
+    "cover": "Covers/NPC_COVER_06.png",
+    "title": "Most businesses don't have a sales problem",
+    "opening_hook": "What do you mean you didn't know your numbers?",
+    "post_caption": "She was proud of her margins. She didn't have margins.",
+    "hashtags": [
+      "#pricing",
+      "#smallbusiness",
+      "#business"
+    ],
+    "duration_s": 21.1,
+    "score": 66.9,
+    "factors": {
+      "hook": 70.4,
+      "retention": 79.2,
+      "emotion": 44.7,
+      "curiosity": 50.0,
+      "standalone": 100.0,
+      "visual": 84.6,
+      "loop": 15.0
+    },
+    "hook_type": "question",
+    "caption_style": "high_energy_podcast",
+    "layout": "track",
+    "retention_assessment": "A short clip: question hook, a specific cost figure, and the 'ninety percent' claim as payoff. Drop-off risk: it depends on the margins line landing.",
+    "source": {
+      "url": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+      "start": 45.138,
+      "end": 66.114,
+      "rights": "MINE"
+    },
+    "selected_by": "agent",
+    "platforms": [
+      "TikTok",
+      "YouTube Shorts",
+      "Instagram Reels",
+      "Facebook Reels"
+    ]
+  },
+  {
+    "clip": "NPC_CLIP_07",
+    "file": "Clips/NPC_CLIP_07.mp4",
+    "cover": "Covers/NPC_COVER_07.png",
+    "title": "27, broke, and back in my childhood bedroom",
+    "opening_hook": "Okay, so you close the bakery, then what?",
+    "post_caption": "Her mom refused to take the glow-in-the-dark stars down. She was right.",
+    "hashtags": [
+      "#storytime",
+      "#entrepreneur",
+      "#business"
+    ],
+    "duration_s": 21.467,
+    "score": 53.0,
+    "factors": {
+      "hook": 43.1,
+      "retention": 83.3,
+      "emotion": 33.8,
+      "curiosity": 22.0,
+      "standalone": 65.0,
+      "visual": 84.2,
+      "loop": 45.0
+    },
+    "hook_type": "question",
+    "caption_style": "bold_viral",
+    "layout": "track",
+    "retention_assessment": "An emotional story clip with a warm payoff ('She was right, by the way'). Drop-off risk: the host's setup question; the visual detail carries the middle.",
+    "source": {
+      "url": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+      "start": 66.706,
+      "end": 88.69,
+      "rights": "MINE"
+    },
+    "selected_by": "agent",
+    "platforms": [
+      "TikTok",
+      "YouTube Shorts",
+      "Instagram Reels",
+      "Facebook Reels"
+    ]
+  }
+]

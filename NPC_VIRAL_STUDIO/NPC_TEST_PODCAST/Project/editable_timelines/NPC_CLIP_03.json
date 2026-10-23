@@ -1,0 +1,635 @@
+{
+  "clip_id": "NPC_CLIP_03",
+  "version": 1,
+  "source": {
+    "path": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+    "url": null,
+    "name": "NPC Test Podcast",
+    "creator": null,
+    "rights": "MINE"
+  },
+  "window": {
+    "start": 112.114,
+    "end": 132.866,
+    "cold_open": true
+  },
+  "content_type": "podcast",
+  "caption_style": "bold_viral",
+  "density": "high",
+  "look": "punchy",
+  "music": {
+    "mood": "pulse",
+    "level_db": -24
+  },
+  "duration": 23.633,
+  "frames": 709,
+  "layout": {
+    "mode": "track",
+    "reason": "content-aware 9:16 crop that follows the active speaker; shots holding two separated speakers switch to split-screen",
+    "runs": [
+      {
+        "out_s": 0.0,
+        "out_e": 23.6333,
+        "mode": "track",
+        "faces_expected": true,
+        "two_faces": false
+      }
+    ]
+  },
+  "face_band": [
+    185,
+    618
+  ],
+  "caption_y": 1290,
+  "title_y": 1060,
+  "segments": [
+    {
+      "part": "teaser",
+      "src_s": 117.734,
+      "src_e": 120.8673,
+      "out_s": 0.0,
+      "out_e": 3.1333,
+      "frames": 94,
+      "base_zoom": 1.0
+    },
+    {
+      "part": "main",
+      "src_s": 112.054,
+      "src_e": 127.4207,
+      "out_s": 3.1333,
+      "out_e": 18.5,
+      "frames": 461,
+      "base_zoom": 1.0
+    },
+    {
+      "part": "main",
+      "src_s": 127.906,
+      "src_e": 133.0393,
+      "out_s": 18.5,
+      "out_e": 23.6333,
+      "frames": 154,
+      "base_zoom": 1.07
+    }
+  ],
+  "words": [
+    {
+      "w": "tonight?",
+      "s": 0.0,
+      "e": 0.06,
+      "src": 117.074
+    },
+    {
+      "w": "Write",
+      "s": 0.06,
+      "e": 0.46,
+      "src": 117.794
+    },
+    {
+      "w": "down",
+      "s": 0.46,
+      "e": 0.62,
+      "src": 118.194
+    },
+    {
+      "w": "what",
+      "s": 0.62,
+      "e": 0.86,
+      "src": 118.354
+    },
+    {
+      "w": "one",
+      "s": 0.86,
+      "e": 1.1,
+      "src": 118.594
+    },
+    {
+      "w": "sale",
+      "s": 1.1,
+      "e": 1.58,
+      "src": 118.834
+    },
+    {
+      "w": "actually",
+      "s": 1.58,
+      "e": 1.9,
+      "src": 119.314,
+      "emph": true
+    },
+    {
+      "w": "costs",
+      "s": 1.9,
+      "e": 2.38,
+      "src": 119.634
+    },
+    {
+      "w": "you.",
+      "s": 2.38,
+      "e": 2.94,
+      "src": 120.114
+    },
+    {
+      "w": "Not",
+      "s": 2.94,
+      "e": 3.133,
+      "src": 120.674
+    },
+    {
+      "w": "most.",
+      "s": 3.133,
+      "e": 3.193,
+      "src": 111.314
+    },
+    {
+      "w": "If",
+      "s": 3.193,
+      "e": 3.353,
+      "src": 112.114
+    },
+    {
+      "w": "someone",
+      "s": 3.353,
+      "e": 3.753,
+      "src": 112.274
+    },
+    {
+      "w": "is",
+      "s": 3.753,
+      "e": 3.993,
+      "src": 112.674
+    },
+    {
+      "w": "watching",
+      "s": 3.993,
+      "e": 4.473,
+      "src": 112.914
+    },
+    {
+      "w": "this",
+      "s": 4.473,
+      "e": 4.713,
+      "src": 113.394
+    },
+    {
+      "w": "and",
+      "s": 4.713,
+      "e": 4.953,
+      "src": 113.634
+    },
+    {
+      "w": "their",
+      "s": 4.953,
+      "e": 5.113,
+      "src": 113.874
+    },
+    {
+      "w": "business",
+      "s": 5.113,
+      "e": 5.593,
+      "src": 114.034
+    },
+    {
+      "w": "is",
+      "s": 5.593,
+      "e": 5.833,
+      "src": 114.514
+    },
+    {
+      "w": "struggling",
+      "s": 5.833,
+      "e": 6.473,
+      "src": 114.754
+    },
+    {
+      "w": "right",
+      "s": 6.473,
+      "e": 6.713,
+      "src": 115.394
+    },
+    {
+      "w": "now,",
+      "s": 6.713,
+      "e": 7.353,
+      "src": 115.634
+    },
+    {
+      "w": "what",
+      "s": 7.353,
+      "e": 7.593,
+      "src": 116.274
+    },
+    {
+      "w": "should",
+      "s": 7.593,
+      "e": 7.753,
+      "src": 116.514
+    },
+    {
+      "w": "they",
+      "s": 7.753,
+      "e": 7.913,
+      "src": 116.674
+    },
+    {
+      "w": "do",
+      "s": 7.913,
+      "e": 8.153,
+      "src": 116.834
+    },
+    {
+      "w": "tonight?",
+      "s": 8.153,
+      "e": 8.873,
+      "src": 117.074
+    },
+    {
+      "w": "Write",
+      "s": 8.873,
+      "e": 9.273,
+      "src": 117.794
+    },
+    {
+      "w": "down",
+      "s": 9.273,
+      "e": 9.433,
+      "src": 118.194
+    },
+    {
+      "w": "what",
+      "s": 9.433,
+      "e": 9.673,
+      "src": 118.354
+    },
+    {
+      "w": "one",
+      "s": 9.673,
+      "e": 9.913,
+      "src": 118.594
+    },
+    {
+      "w": "sale",
+      "s": 9.913,
+      "e": 10.393,
+      "src": 118.834
+    },
+    {
+      "w": "actually",
+      "s": 10.393,
+      "e": 10.713,
+      "src": 119.314,
+      "emph": true
+    },
+    {
+      "w": "costs",
+      "s": 10.713,
+      "e": 11.193,
+      "src": 119.634
+    },
+    {
+      "w": "you.",
+      "s": 11.193,
+      "e": 11.753,
+      "src": 120.114
+    },
+    {
+      "w": "Not",
+      "s": 11.753,
+      "e": 11.993,
+      "src": 120.674
+    },
+    {
+      "w": "what",
+      "s": 11.993,
+      "e": 12.153,
+      "src": 120.914
+    },
+    {
+      "w": "you",
+      "s": 12.153,
+      "e": 12.313,
+      "src": 121.074
+    },
+    {
+      "w": "think,",
+      "s": 12.313,
+      "e": 12.873,
+      "src": 121.234
+    },
+    {
+      "w": "what",
+      "s": 12.873,
+      "e": 13.033,
+      "src": 121.794
+    },
+    {
+      "w": "it",
+      "s": 13.033,
+      "e": 13.273,
+      "src": 121.954
+    },
+    {
+      "w": "actually",
+      "s": 13.273,
+      "e": 13.513,
+      "src": 122.194,
+      "emph": true
+    },
+    {
+      "w": "costs.",
+      "s": 13.513,
+      "e": 14.393,
+      "src": 122.434
+    },
+    {
+      "w": "If",
+      "s": 14.393,
+      "e": 14.553,
+      "src": 123.314
+    },
+    {
+      "w": "you",
+      "s": 14.553,
+      "e": 14.713,
+      "src": 123.474
+    },
+    {
+      "w": "can't",
+      "s": 14.713,
+      "e": 15.033,
+      "src": 123.634
+    },
+    {
+      "w": "answer",
+      "s": 15.033,
+      "e": 15.353,
+      "src": 123.954
+    },
+    {
+      "w": "that",
+      "s": 15.353,
+      "e": 15.513,
+      "src": 124.274
+    },
+    {
+      "w": "in",
+      "s": 15.513,
+      "e": 15.673,
+      "src": 124.434
+    },
+    {
+      "w": "one",
+      "s": 15.673,
+      "e": 15.833,
+      "src": 124.594
+    },
+    {
+      "w": "minute,",
+      "s": 15.833,
+      "e": 16.313,
+      "src": 124.754
+    },
+    {
+      "w": "stop",
+      "s": 16.313,
+      "e": 16.633,
+      "src": 125.234
+    },
+    {
+      "w": "spending",
+      "s": 16.633,
+      "e": 17.033,
+      "src": 125.554
+    },
+    {
+      "w": "money",
+      "s": 17.033,
+      "e": 17.433,
+      "src": 125.954
+    },
+    {
+      "w": "until",
+      "s": 17.433,
+      "e": 17.833,
+      "src": 126.354
+    },
+    {
+      "w": "you",
+      "s": 17.833,
+      "e": 17.993,
+      "src": 126.754
+    },
+    {
+      "w": "can.",
+      "s": 17.993,
+      "e": 18.393,
+      "src": 126.914
+    },
+    {
+      "w": "Because",
+      "s": 18.58,
+      "e": 18.82,
+      "src": 127.986
+    },
+    {
+      "w": "you",
+      "s": 18.82,
+      "e": 18.98,
+      "src": 128.226
+    },
+    {
+      "w": "can",
+      "s": 18.98,
+      "e": 19.14,
+      "src": 128.386
+    },
+    {
+      "w": "survive",
+      "s": 19.14,
+      "e": 19.62,
+      "src": 128.546
+    },
+    {
+      "w": "a",
+      "s": 19.62,
+      "e": 19.7,
+      "src": 129.026
+    },
+    {
+      "w": "bad",
+      "s": 19.7,
+      "e": 20.02,
+      "src": 129.106
+    },
+    {
+      "w": "month.",
+      "s": 20.02,
+      "e": 20.66,
+      "src": 129.426
+    },
+    {
+      "w": "You",
+      "s": 20.66,
+      "e": 20.82,
+      "src": 130.066
+    },
+    {
+      "w": "cannot",
+      "s": 20.82,
+      "e": 21.14,
+      "src": 130.226
+    },
+    {
+      "w": "survive",
+      "s": 21.14,
+      "e": 21.62,
+      "src": 130.546
+    },
+    {
+      "w": "not",
+      "s": 21.62,
+      "e": 21.86,
+      "src": 131.026
+    },
+    {
+      "w": "knowing",
+      "s": 21.86,
+      "e": 22.18,
+      "src": 131.266
+    },
+    {
+      "w": "why",
+      "s": 22.18,
+      "e": 22.42,
+      "src": 131.586
+    },
+    {
+      "w": "it",
+      "s": 22.42,
+      "e": 22.5,
+      "src": 131.826
+    },
+    {
+      "w": "was",
+      "s": 22.5,
+      "e": 22.66,
+      "src": 131.906
+    },
+    {
+      "w": "bad.",
+      "s": 22.66,
+      "e": 23.46,
+      "src": 132.066
+    },
+    {
+      "w": "Let's",
+      "s": 23.46,
+      "e": 23.633,
+      "src": 132.866
+    }
+  ],
+  "zooms": [
+    {
+      "t": 1.54,
+      "type": "punch",
+      "amount": 0.14,
+      "attack": 0.12,
+      "hold": 1.8,
+      "release": 0.45,
+      "word": "actually"
+    },
+    {
+      "t": 13.233,
+      "type": "punch",
+      "amount": 0.14,
+      "attack": 0.12,
+      "hold": 1.8,
+      "release": 0.45,
+      "word": "actually"
+    }
+  ],
+  "transitions": [
+    {
+      "t": 3.133,
+      "type": "whip",
+      "frames": 8
+    }
+  ],
+  "sfx": [
+    {
+      "t": 2.933,
+      "type": "whoosh",
+      "gain_db": -14
+    },
+    {
+      "t": 1.54,
+      "type": "impact",
+      "gain_db": -20
+    },
+    {
+      "t": 13.233,
+      "type": "impact",
+      "gain_db": -20
+    }
+  ],
+  "graphics": [
+    {
+      "type": "progress_bar",
+      "color": "#FFE600"
+    },
+    {
+      "type": "title_card",
+      "text": "Do this tonight",
+      "y": 1060,
+      "dur": 1.89
+    },
+    {
+      "type": "keyword_pop",
+      "t": 13.273,
+      "word": "actually",
+      "y": 1080
+    },
+    {
+      "type": "keyword_pop",
+      "t": 10.393,
+      "word": "actually",
+      "y": 1080
+    },
+    {
+      "type": "watermark",
+      "text": "NPC"
+    }
+  ],
+  "cut_times": [
+    3.1333,
+    18.5
+  ],
+  "score": 65.1,
+  "factors": {
+    "hook": 63.4,
+    "retention": 83.1,
+    "emotion": 30.6,
+    "curiosity": 70.0,
+    "standalone": 90.0,
+    "visual": 78.3,
+    "loop": 15.0
+  },
+  "hook_type": "statement",
+  "package": {
+    "title": "Do this tonight if your business is struggling",
+    "hook": "If someone is watching this and their business is struggling right now, what should they do tonight?",
+    "post_caption": "One question. One minute. If you can't answer it, stop spending.",
+    "hashtags": [
+      "#businesstips",
+      "#smallbusiness",
+      "#entrepreneur",
+      "#business"
+    ],
+    "keywords": [
+      "costs",
+      "survive",
+      "someone"
+    ],
+    "retention_notes": "A direct-address question hook leads to a concrete, saveable action, with a short last line to close. Drop-off risk: the long opening question (6 s).",
+    "cover_text": "Do this tonight"
+  },
+  "selected_by": "agent"
+}

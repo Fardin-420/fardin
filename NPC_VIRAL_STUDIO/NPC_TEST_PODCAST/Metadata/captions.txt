@@ -1,0 +1,7 @@
+NPC_CLIP_01: She was terrified to go from $9 to $49. Then this happened.
+NPC_CLIP_02: A $1 croissant across the street wasn't the real problem.
+NPC_CLIP_03: One question. One minute. If you can't answer it, stop spending.
+NPC_CLIP_04: The thing that broke her business was the thing everyone else needed.
+NPC_CLIP_05: You don't need a great idea. Her idea was a spreadsheet.
+NPC_CLIP_06: She was proud of her margins. She didn't have margins.
+NPC_CLIP_07: Her mom refused to take the glow-in-the-dark stars down. She was right.

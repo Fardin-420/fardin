@@ -1,0 +1,3855 @@
+{
+  "engine": "nemo-parakeet-tdt-0.6b-v2-int8 (sherpa-onnx)",
+  "language": "en",
+  "duration": 186.581375,
+  "words": [
+    {
+      "w": "Okay,",
+      "s": 0.706,
+      "e": 1.106,
+      "filler": false
+    },
+    {
+      "w": "so",
+      "s": 1.106,
+      "e": 1.266,
+      "filler": false
+    },
+    {
+      "w": "you",
+      "s": 1.266,
+      "e": 1.506,
+      "filler": false
+    },
+    {
+      "w": "lost",
+      "s": 1.506,
+      "e": 1.826,
+      "filler": false
+    },
+    {
+      "w": "everything",
+      "s": 1.826,
+      "e": 2.146,
+      "filler": false
+    },
+    {
+      "w": "at",
+      "s": 2.226,
+      "e": 2.466,
+      "filler": false
+    },
+    {
+      "w": "twenty",
+      "s": 2.466,
+      "e": 2.866,
+      "filler": false
+    },
+    {
+      "w": "six.",
+      "s": 2.866,
+      "e": 3.506,
+      "filler": false
+    },
+    {
+      "w": "What",
+      "s": 3.506,
+      "e": 3.746,
+      "filler": false
+    },
+    {
+      "w": "actually",
+      "s": 3.906,
+      "e": 4.226,
+      "filler": false
+    },
+    {
+      "w": "happened?",
+      "s": 4.226,
+      "e": 4.866,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 5.186,
+      "e": 5.346,
+      "filler": false
+    },
+    {
+      "w": "had",
+      "s": 5.346,
+      "e": 5.506,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 5.506,
+      "e": 5.666,
+      "filler": false
+    },
+    {
+      "w": "bakery.",
+      "s": 5.666,
+      "e": 6.546,
+      "filler": false
+    },
+    {
+      "w": "Forty",
+      "s": 6.546,
+      "e": 6.946,
+      "filler": false
+    },
+    {
+      "w": "thousand",
+      "s": 6.946,
+      "e": 7.346,
+      "filler": false
+    },
+    {
+      "w": "dollars",
+      "s": 7.346,
+      "e": 7.746,
+      "filler": false
+    },
+    {
+      "w": "of",
+      "s": 7.746,
+      "e": 7.906,
+      "filler": false
+    },
+    {
+      "w": "savings,",
+      "s": 7.906,
+      "e": 8.626,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 8.626,
+      "e": 8.786,
+      "filler": false
+    },
+    {
+      "w": "loan",
+      "s": 8.786,
+      "e": 9.106,
+      "filler": false
+    },
+    {
+      "w": "from",
+      "s": 9.106,
+      "e": 9.266,
+      "filler": false
+    },
+    {
+      "w": "my",
+      "s": 9.266,
+      "e": 9.426,
+      "filler": false
+    },
+    {
+      "w": "dad,",
+      "s": 9.426,
+      "e": 9.986,
+      "filler": false
+    },
+    {
+      "w": "and",
+      "s": 9.986,
+      "e": 10.146,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 10.146,
+      "e": 10.226,
+      "filler": false
+    },
+    {
+      "w": "lease",
+      "s": 10.226,
+      "e": 10.626,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 10.626,
+      "e": 10.786,
+      "filler": false
+    },
+    {
+      "w": "definitely",
+      "s": 10.786,
+      "e": 11.266,
+      "filler": false
+    },
+    {
+      "w": "should",
+      "s": 11.266,
+      "e": 11.506,
+      "filler": false
+    },
+    {
+      "w": "not",
+      "s": 11.506,
+      "e": 11.666,
+      "filler": false
+    },
+    {
+      "w": "have",
+      "s": 11.666,
+      "e": 11.906,
+      "filler": false
+    },
+    {
+      "w": "signed.",
+      "s": 11.906,
+      "e": 12.706,
+      "filler": false
+    },
+    {
+      "w": "And",
+      "s": 12.706,
+      "e": 12.866,
+      "filler": false
+    },
+    {
+      "w": "for",
+      "s": 12.866,
+      "e": 13.026,
+      "filler": false
+    },
+    {
+      "w": "eight",
+      "s": 13.026,
+      "e": 13.266,
+      "filler": false
+    },
+    {
+      "w": "months",
+      "s": 13.266,
+      "e": 13.586,
+      "filler": false
+    },
+    {
+      "w": "it",
+      "s": 13.586,
+      "e": 13.826,
+      "filler": false
+    },
+    {
+      "w": "worked.",
+      "s": 13.826,
+      "e": 14.306,
+      "filler": false
+    },
+    {
+      "w": "Lines",
+      "s": 14.306,
+      "e": 14.786,
+      "filler": false
+    },
+    {
+      "w": "out",
+      "s": 14.786,
+      "e": 14.946,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 14.946,
+      "e": 15.106,
+      "filler": false
+    },
+    {
+      "w": "door.",
+      "s": 15.106,
+      "e": 15.586,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 15.586,
+      "e": 15.746,
+      "filler": false
+    },
+    {
+      "w": "thought",
+      "s": 15.746,
+      "e": 15.986,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 15.986,
+      "e": 16.066,
+      "filler": false
+    },
+    {
+      "w": "was",
+      "s": 16.066,
+      "e": 16.226,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 16.226,
+      "e": 16.306,
+      "filler": false
+    },
+    {
+      "w": "genius.",
+      "s": 16.306,
+      "e": 16.946,
+      "filler": false
+    },
+    {
+      "w": "So",
+      "s": 17.458,
+      "e": 17.698,
+      "filler": false
+    },
+    {
+      "w": "what",
+      "s": 17.858,
+      "e": 18.018,
+      "filler": false
+    },
+    {
+      "w": "changed?",
+      "s": 18.018,
+      "e": 18.658,
+      "filler": false
+    },
+    {
+      "w": "A",
+      "s": 19.218,
+      "e": 19.458,
+      "filler": false
+    },
+    {
+      "w": "chain",
+      "s": 19.458,
+      "e": 19.858,
+      "filler": false
+    },
+    {
+      "w": "opened",
+      "s": 19.858,
+      "e": 20.178,
+      "filler": false
+    },
+    {
+      "w": "across",
+      "s": 20.178,
+      "e": 20.498,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 20.498,
+      "e": 20.658,
+      "filler": false
+    },
+    {
+      "w": "street",
+      "s": 20.658,
+      "e": 20.978,
+      "filler": false
+    },
+    {
+      "w": "and",
+      "s": 20.978,
+      "e": 21.218,
+      "filler": false
+    },
+    {
+      "w": "sold",
+      "s": 21.218,
+      "e": 21.458,
+      "filler": false
+    },
+    {
+      "w": "croissants",
+      "s": 21.458,
+      "e": 22.258,
+      "filler": false
+    },
+    {
+      "w": "for",
+      "s": 22.338,
+      "e": 22.418,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 22.418,
+      "e": 22.578,
+      "filler": false
+    },
+    {
+      "w": "dollar.",
+      "s": 22.578,
+      "e": 23.218,
+      "filler": false
+    },
+    {
+      "w": "Mine",
+      "s": 23.218,
+      "e": 23.618,
+      "filler": false
+    },
+    {
+      "w": "were",
+      "s": 23.778,
+      "e": 23.938,
+      "filler": false
+    },
+    {
+      "w": "four.",
+      "s": 23.938,
+      "e": 24.578,
+      "filler": false
+    },
+    {
+      "w": "In",
+      "s": 24.578,
+      "e": 24.818,
+      "filler": false
+    },
+    {
+      "w": "six",
+      "s": 24.818,
+      "e": 25.058,
+      "filler": false
+    },
+    {
+      "w": "weeks",
+      "s": 25.058,
+      "e": 25.378,
+      "filler": false
+    },
+    {
+      "w": "my",
+      "s": 25.458,
+      "e": 25.618,
+      "filler": false
+    },
+    {
+      "w": "revenue",
+      "s": 25.618,
+      "e": 26.018,
+      "filler": false
+    },
+    {
+      "w": "dropped",
+      "s": 26.018,
+      "e": 26.418,
+      "filler": false
+    },
+    {
+      "w": "by",
+      "s": 26.418,
+      "e": 26.578,
+      "filler": false
+    },
+    {
+      "w": "70%.",
+      "s": 26.578,
+      "e": 27.858,
+      "filler": false
+    },
+    {
+      "w": "70%?",
+      "s": 27.858,
+      "e": 28.898,
+      "filler": false
+    },
+    {
+      "w": "That's",
+      "s": 28.898,
+      "e": 29.218,
+      "filler": false
+    },
+    {
+      "w": "brutal.",
+      "s": 29.218,
+      "e": 30.178,
+      "filler": false
+    },
+    {
+      "w": "It",
+      "s": 30.178,
+      "e": 30.338,
+      "filler": false
+    },
+    {
+      "w": "was",
+      "s": 30.338,
+      "e": 30.578,
+      "filler": false
+    },
+    {
+      "w": "terrifying.",
+      "s": 30.578,
+      "e": 31.698,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 31.698,
+      "e": 31.858,
+      "filler": false
+    },
+    {
+      "w": "remember",
+      "s": 31.858,
+      "e": 32.258,
+      "filler": false
+    },
+    {
+      "w": "sitting",
+      "s": 32.258,
+      "e": 32.578,
+      "filler": false
+    },
+    {
+      "w": "in",
+      "s": 32.578,
+      "e": 32.658,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 32.658,
+      "e": 32.818,
+      "filler": false
+    },
+    {
+      "w": "walk-in",
+      "s": 32.818,
+      "e": 33.218,
+      "filler": false
+    },
+    {
+      "w": "fridge,",
+      "s": 33.378,
+      "e": 33.938,
+      "filler": false
+    },
+    {
+      "w": "crying,",
+      "s": 33.938,
+      "e": 34.658,
+      "filler": false
+    },
+    {
+      "w": "because",
+      "s": 34.658,
+      "e": 34.898,
+      "filler": false
+    },
+    {
+      "w": "it",
+      "s": 34.898,
+      "e": 35.058,
+      "filler": false
+    },
+    {
+      "w": "was",
+      "s": 35.058,
+      "e": 35.218,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 35.218,
+      "e": 35.458,
+      "filler": false
+    },
+    {
+      "w": "only",
+      "s": 35.458,
+      "e": 35.698,
+      "filler": false
+    },
+    {
+      "w": "place",
+      "s": 35.698,
+      "e": 36.018,
+      "filler": false
+    },
+    {
+      "w": "nobody",
+      "s": 36.018,
+      "e": 36.498,
+      "filler": false
+    },
+    {
+      "w": "could",
+      "s": 36.498,
+      "e": 36.658,
+      "filler": false
+    },
+    {
+      "w": "hear",
+      "s": 36.658,
+      "e": 36.978,
+      "filler": false
+    },
+    {
+      "w": "me.",
+      "s": 36.978,
+      "e": 37.538,
+      "filler": false
+    },
+    {
+      "w": "And",
+      "s": 37.538,
+      "e": 37.778,
+      "filler": false
+    },
+    {
+      "w": "here's",
+      "s": 37.778,
+      "e": 38.018,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 38.018,
+      "e": 38.178,
+      "filler": false
+    },
+    {
+      "w": "part",
+      "s": 38.178,
+      "e": 38.418,
+      "filler": false
+    },
+    {
+      "w": "nobody",
+      "s": 38.578,
+      "e": 39.058,
+      "filler": false
+    },
+    {
+      "w": "tells",
+      "s": 39.058,
+      "e": 39.378,
+      "filler": false
+    },
+    {
+      "w": "you.",
+      "s": 39.378,
+      "e": 39.858,
+      "filler": false
+    },
+    {
+      "w": "The",
+      "s": 39.858,
+      "e": 40.018,
+      "filler": false
+    },
+    {
+      "w": "business",
+      "s": 40.018,
+      "e": 40.498,
+      "filler": false
+    },
+    {
+      "w": "didn't",
+      "s": 40.498,
+      "e": 40.818,
+      "filler": false
+    },
+    {
+      "w": "fail",
+      "s": 40.818,
+      "e": 41.138,
+      "filler": false
+    },
+    {
+      "w": "because",
+      "s": 41.138,
+      "e": 41.378,
+      "filler": false
+    },
+    {
+      "w": "of",
+      "s": 41.378,
+      "e": 41.458,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 41.458,
+      "e": 41.618,
+      "filler": false
+    },
+    {
+      "w": "chain.",
+      "s": 41.618,
+      "e": 42.178,
+      "filler": false
+    },
+    {
+      "w": "It",
+      "s": 42.418,
+      "e": 42.578,
+      "filler": false
+    },
+    {
+      "w": "failed",
+      "s": 42.738,
+      "e": 43.138,
+      "filler": false
+    },
+    {
+      "w": "because",
+      "s": 43.138,
+      "e": 43.378,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 43.378,
+      "e": 43.538,
+      "filler": false
+    },
+    {
+      "w": "never",
+      "s": 43.538,
+      "e": 43.858,
+      "filler": false
+    },
+    {
+      "w": "knew",
+      "s": 43.858,
+      "e": 44.098,
+      "filler": false
+    },
+    {
+      "w": "my",
+      "s": 44.098,
+      "e": 44.258,
+      "filler": false
+    },
+    {
+      "w": "numbers.",
+      "s": 44.258,
+      "e": 44.818,
+      "filler": false
+    },
+    {
+      "w": "What",
+      "s": 45.138,
+      "e": 45.378,
+      "filler": false
+    },
+    {
+      "w": "do",
+      "s": 45.378,
+      "e": 45.538,
+      "filler": false
+    },
+    {
+      "w": "you",
+      "s": 45.538,
+      "e": 45.698,
+      "filler": false
+    },
+    {
+      "w": "mean",
+      "s": 45.698,
+      "e": 45.858,
+      "filler": false
+    },
+    {
+      "w": "you",
+      "s": 46.018,
+      "e": 46.178,
+      "filler": false
+    },
+    {
+      "w": "didn't",
+      "s": 46.178,
+      "e": 46.498,
+      "filler": false
+    },
+    {
+      "w": "know",
+      "s": 46.498,
+      "e": 46.658,
+      "filler": false
+    },
+    {
+      "w": "your",
+      "s": 46.658,
+      "e": 46.818,
+      "filler": false
+    },
+    {
+      "w": "numbers?",
+      "s": 46.818,
+      "e": 47.458,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 48.114,
+      "e": 48.194,
+      "filler": false
+    },
+    {
+      "w": "didn't",
+      "s": 48.194,
+      "e": 48.434,
+      "filler": false
+    },
+    {
+      "w": "know",
+      "s": 48.434,
+      "e": 48.594,
+      "filler": false
+    },
+    {
+      "w": "that",
+      "s": 48.594,
+      "e": 48.754,
+      "filler": false
+    },
+    {
+      "w": "every",
+      "s": 48.754,
+      "e": 48.994,
+      "filler": false
+    },
+    {
+      "w": "croissa",
+      "s": 48.994,
+      "e": 49.634,
+      "filler": false
+    },
+    {
+      "w": "cost",
+      "s": 49.794,
+      "e": 50.034,
+      "filler": false
+    },
+    {
+      "w": "me",
+      "s": 50.034,
+      "e": 50.194,
+      "filler": false
+    },
+    {
+      "w": "two",
+      "s": 50.194,
+      "e": 50.434,
+      "filler": false
+    },
+    {
+      "w": "dollars",
+      "s": 50.434,
+      "e": 50.914,
+      "filler": false
+    },
+    {
+      "w": "and",
+      "s": 50.994,
+      "e": 51.234,
+      "filler": false
+    },
+    {
+      "w": "ten",
+      "s": 51.234,
+      "e": 51.554,
+      "filler": false
+    },
+    {
+      "w": "cents",
+      "s": 51.554,
+      "e": 51.874,
+      "filler": false
+    },
+    {
+      "w": "to",
+      "s": 51.874,
+      "e": 52.114,
+      "filler": false
+    },
+    {
+      "w": "make.",
+      "s": 52.114,
+      "e": 52.754,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 52.754,
+      "e": 52.914,
+      "filler": false
+    },
+    {
+      "w": "was",
+      "s": 52.914,
+      "e": 53.074,
+      "filler": false
+    },
+    {
+      "w": "proud",
+      "s": 53.074,
+      "e": 53.394,
+      "filler": false
+    },
+    {
+      "w": "of",
+      "s": 53.394,
+      "e": 53.554,
+      "filler": false
+    },
+    {
+      "w": "my",
+      "s": 53.554,
+      "e": 53.714,
+      "filler": false
+    },
+    {
+      "w": "margins",
+      "s": 53.714,
+      "e": 54.274,
+      "filler": false
+    },
+    {
+      "w": "and",
+      "s": 54.434,
+      "e": 54.594,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 54.594,
+      "e": 54.674,
+      "filler": false
+    },
+    {
+      "w": "didn't",
+      "s": 54.674,
+      "e": 54.994,
+      "filler": false
+    },
+    {
+      "w": "even",
+      "s": 54.994,
+      "e": 55.154,
+      "filler": false
+    },
+    {
+      "w": "have",
+      "s": 55.154,
+      "e": 55.314,
+      "filler": false
+    },
+    {
+      "w": "margins.",
+      "s": 55.314,
+      "e": 55.954,
+      "filler": false
+    },
+    {
+      "w": "That's",
+      "s": 56.274,
+      "e": 56.674,
+      "filler": false
+    },
+    {
+      "w": "honestly",
+      "s": 56.674,
+      "e": 57.154,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 57.154,
+      "e": 57.314,
+      "filler": false
+    },
+    {
+      "w": "most",
+      "s": 57.314,
+      "e": 57.554,
+      "filler": false
+    },
+    {
+      "w": "common",
+      "s": 57.554,
+      "e": 57.954,
+      "filler": false
+    },
+    {
+      "w": "mistake",
+      "s": 57.954,
+      "e": 58.434,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 58.434,
+      "e": 58.674,
+      "filler": false
+    },
+    {
+      "w": "hear",
+      "s": 58.674,
+      "e": 58.914,
+      "filler": false
+    },
+    {
+      "w": "on",
+      "s": 58.914,
+      "e": 59.074,
+      "filler": false
+    },
+    {
+      "w": "this",
+      "s": 59.074,
+      "e": 59.234,
+      "filler": false
+    },
+    {
+      "w": "show.",
+      "s": 59.234,
+      "e": 60.034,
+      "filler": false
+    },
+    {
+      "w": "It",
+      "s": 60.034,
+      "e": 60.194,
+      "filler": false
+    },
+    {
+      "w": "is.",
+      "s": 60.194,
+      "e": 60.754,
+      "filler": false
+    },
+    {
+      "w": "Most",
+      "s": 60.754,
+      "e": 61.154,
+      "filler": false
+    },
+    {
+      "w": "people",
+      "s": 61.154,
+      "e": 61.394,
+      "filler": false
+    },
+    {
+      "w": "think",
+      "s": 61.474,
+      "e": 61.714,
+      "filler": false
+    },
+    {
+      "w": "they",
+      "s": 61.714,
+      "e": 61.874,
+      "filler": false
+    },
+    {
+      "w": "have",
+      "s": 61.874,
+      "e": 62.034,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 62.034,
+      "e": 62.114,
+      "filler": false
+    },
+    {
+      "w": "sales",
+      "s": 62.114,
+      "e": 62.674,
+      "filler": false
+    },
+    {
+      "w": "problem.",
+      "s": 62.674,
+      "e": 63.394,
+      "filler": false
+    },
+    {
+      "w": "Ninety",
+      "s": 63.394,
+      "e": 63.874,
+      "filler": false
+    },
+    {
+      "w": "per",
+      "s": 63.874,
+      "e": 63.954,
+      "filler": false
+    },
+    {
+      "w": "cent",
+      "s": 63.954,
+      "e": 64.194,
+      "filler": false
+    },
+    {
+      "w": "of",
+      "s": 64.194,
+      "e": 64.274,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 64.274,
+      "e": 64.434,
+      "filler": false
+    },
+    {
+      "w": "time",
+      "s": 64.434,
+      "e": 64.594,
+      "filler": false
+    },
+    {
+      "w": "they",
+      "s": 64.674,
+      "e": 64.834,
+      "filler": false
+    },
+    {
+      "w": "have",
+      "s": 64.834,
+      "e": 64.994,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 64.994,
+      "e": 65.154,
+      "filler": false
+    },
+    {
+      "w": "pricing",
+      "s": 65.154,
+      "e": 65.634,
+      "filler": false
+    },
+    {
+      "w": "problem.",
+      "s": 65.634,
+      "e": 66.114,
+      "filler": false
+    },
+    {
+      "w": "Okay,",
+      "s": 66.706,
+      "e": 67.026,
+      "filler": false
+    },
+    {
+      "w": "so",
+      "s": 67.026,
+      "e": 67.266,
+      "filler": false
+    },
+    {
+      "w": "you",
+      "s": 67.266,
+      "e": 67.426,
+      "filler": false
+    },
+    {
+      "w": "close",
+      "s": 67.426,
+      "e": 67.666,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 67.666,
+      "e": 67.826,
+      "filler": false
+    },
+    {
+      "w": "bakery,",
+      "s": 67.826,
+      "e": 68.546,
+      "filler": false
+    },
+    {
+      "w": "then",
+      "s": 68.546,
+      "e": 68.786,
+      "filler": false
+    },
+    {
+      "w": "what?",
+      "s": 68.866,
+      "e": 69.186,
+      "filler": false
+    },
+    {
+      "w": "Then",
+      "s": 69.682,
+      "e": 70.002,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 70.002,
+      "e": 70.162,
+      "filler": false
+    },
+    {
+      "w": "moved",
+      "s": 70.162,
+      "e": 70.482,
+      "filler": false
+    },
+    {
+      "w": "back",
+      "s": 70.482,
+      "e": 70.722,
+      "filler": false
+    },
+    {
+      "w": "in",
+      "s": 70.722,
+      "e": 71.042,
+      "filler": false
+    },
+    {
+      "w": "with",
+      "s": 71.042,
+      "e": 71.202,
+      "filler": false
+    },
+    {
+      "w": "my",
+      "s": 71.202,
+      "e": 71.362,
+      "filler": false
+    },
+    {
+      "w": "parents.",
+      "s": 71.362,
+      "e": 72.242,
+      "filler": false
+    },
+    {
+      "w": "Twenty",
+      "s": 72.242,
+      "e": 72.562,
+      "filler": false
+    },
+    {
+      "w": "seven",
+      "s": 72.642,
+      "e": 72.962,
+      "filler": false
+    },
+    {
+      "w": "years",
+      "s": 72.962,
+      "e": 73.202,
+      "filler": false
+    },
+    {
+      "w": "old,",
+      "s": 73.202,
+      "e": 73.682,
+      "filler": false
+    },
+    {
+      "w": "sleeping",
+      "s": 73.682,
+      "e": 74.082,
+      "filler": false
+    },
+    {
+      "w": "in",
+      "s": 74.082,
+      "e": 74.242,
+      "filler": false
+    },
+    {
+      "w": "my",
+      "s": 74.242,
+      "e": 74.402,
+      "filler": false
+    },
+    {
+      "w": "childhood",
+      "s": 74.402,
+      "e": 74.962,
+      "filler": false
+    },
+    {
+      "w": "bedroom,",
+      "s": 74.962,
+      "e": 75.602,
+      "filler": false
+    },
+    {
+      "w": "with",
+      "s": 75.602,
+      "e": 75.842,
+      "filler": false
+    },
+    {
+      "w": "glow",
+      "s": 75.842,
+      "e": 76.242,
+      "filler": false
+    },
+    {
+      "w": "in",
+      "s": 76.242,
+      "e": 76.402,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 76.402,
+      "e": 76.482,
+      "filler": false
+    },
+    {
+      "w": "dark",
+      "s": 76.482,
+      "e": 76.882,
+      "filler": false
+    },
+    {
+      "w": "stars",
+      "s": 76.882,
+      "e": 77.282,
+      "filler": false
+    },
+    {
+      "w": "on",
+      "s": 77.282,
+      "e": 77.442,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 77.442,
+      "e": 77.522,
+      "filler": false
+    },
+    {
+      "w": "ceiling.",
+      "s": 77.522,
+      "e": 78.082,
+      "filler": false
+    },
+    {
+      "w": "No",
+      "s": 78.546,
+      "e": 78.786,
+      "filler": false
+    },
+    {
+      "w": "way,",
+      "s": 78.946,
+      "e": 79.266,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 79.266,
+      "e": 79.426,
+      "filler": false
+    },
+    {
+      "w": "stars",
+      "s": 79.426,
+      "e": 79.826,
+      "filler": false
+    },
+    {
+      "w": "were",
+      "s": 79.826,
+      "e": 79.986,
+      "filler": false
+    },
+    {
+      "w": "still",
+      "s": 79.986,
+      "e": 80.146,
+      "filler": false
+    },
+    {
+      "w": "up.",
+      "s": 80.146,
+      "e": 80.466,
+      "filler": false
+    },
+    {
+      "w": "The",
+      "s": 81.17,
+      "e": 81.41,
+      "filler": false
+    },
+    {
+      "w": "stars",
+      "s": 81.41,
+      "e": 81.89,
+      "filler": false
+    },
+    {
+      "w": "were",
+      "s": 81.89,
+      "e": 82.05,
+      "filler": false
+    },
+    {
+      "w": "still",
+      "s": 82.05,
+      "e": 82.29,
+      "filler": false
+    },
+    {
+      "w": "up.",
+      "s": 82.29,
+      "e": 82.69,
+      "filler": false
+    },
+    {
+      "w": "My",
+      "s": 82.69,
+      "e": 82.93,
+      "filler": false
+    },
+    {
+      "w": "mom",
+      "s": 82.93,
+      "e": 83.33,
+      "filler": false
+    },
+    {
+      "w": "refused",
+      "s": 83.33,
+      "e": 83.73,
+      "filler": false
+    },
+    {
+      "w": "to",
+      "s": 83.73,
+      "e": 83.97,
+      "filler": false
+    },
+    {
+      "w": "take",
+      "s": 83.97,
+      "e": 84.13,
+      "filler": false
+    },
+    {
+      "w": "them",
+      "s": 84.13,
+      "e": 84.37,
+      "filler": false
+    },
+    {
+      "w": "down.",
+      "s": 84.37,
+      "e": 84.93,
+      "filler": false
+    },
+    {
+      "w": "She",
+      "s": 84.93,
+      "e": 85.17,
+      "filler": false
+    },
+    {
+      "w": "said",
+      "s": 85.17,
+      "e": 85.33,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 85.33,
+      "e": 85.49,
+      "filler": false
+    },
+    {
+      "w": "would",
+      "s": 85.49,
+      "e": 85.73,
+      "filler": false
+    },
+    {
+      "w": "need",
+      "s": 85.73,
+      "e": 85.89,
+      "filler": false
+    },
+    {
+      "w": "them",
+      "s": 85.89,
+      "e": 86.05,
+      "filler": false
+    },
+    {
+      "w": "again",
+      "s": 86.05,
+      "e": 86.37,
+      "filler": false
+    },
+    {
+      "w": "some",
+      "s": 86.37,
+      "e": 86.45,
+      "filler": false
+    },
+    {
+      "w": "day.",
+      "s": 86.61,
+      "e": 87.17,
+      "filler": false
+    },
+    {
+      "w": "She",
+      "s": 87.17,
+      "e": 87.33,
+      "filler": false
+    },
+    {
+      "w": "was",
+      "s": 87.33,
+      "e": 87.57,
+      "filler": false
+    },
+    {
+      "w": "right,",
+      "s": 87.57,
+      "e": 88.05,
+      "filler": false
+    },
+    {
+      "w": "by",
+      "s": 88.05,
+      "e": 88.21,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 88.21,
+      "e": 88.29,
+      "filler": false
+    },
+    {
+      "w": "way.",
+      "s": 88.29,
+      "e": 88.69,
+      "filler": false
+    },
+    {
+      "w": "So",
+      "s": 89.362,
+      "e": 89.522,
+      "filler": false
+    },
+    {
+      "w": "how",
+      "s": 89.522,
+      "e": 89.682,
+      "filler": false
+    },
+    {
+      "w": "do",
+      "s": 89.682,
+      "e": 89.842,
+      "filler": false
+    },
+    {
+      "w": "you",
+      "s": 89.842,
+      "e": 90.002,
+      "filler": false
+    },
+    {
+      "w": "go",
+      "s": 90.002,
+      "e": 90.162,
+      "filler": false
+    },
+    {
+      "w": "from",
+      "s": 90.162,
+      "e": 90.402,
+      "filler": false
+    },
+    {
+      "w": "that",
+      "s": 90.402,
+      "e": 90.562,
+      "filler": false
+    },
+    {
+      "w": "bedroom",
+      "s": 90.562,
+      "e": 91.202,
+      "filler": false
+    },
+    {
+      "w": "to",
+      "s": 91.202,
+      "e": 91.362,
+      "filler": false
+    },
+    {
+      "w": "where",
+      "s": 91.362,
+      "e": 91.602,
+      "filler": false
+    },
+    {
+      "w": "you",
+      "s": 91.602,
+      "e": 91.762,
+      "filler": false
+    },
+    {
+      "w": "are",
+      "s": 91.762,
+      "e": 92.002,
+      "filler": false
+    },
+    {
+      "w": "now?",
+      "s": 92.002,
+      "e": 92.322,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 92.722,
+      "e": 92.882,
+      "filler": false
+    },
+    {
+      "w": "started",
+      "s": 92.882,
+      "e": 93.202,
+      "filler": false
+    },
+    {
+      "w": "teaching",
+      "s": 93.202,
+      "e": 93.602,
+      "filler": false
+    },
+    {
+      "w": "other",
+      "s": 93.602,
+      "e": 93.842,
+      "filler": false
+    },
+    {
+      "w": "bakers",
+      "s": 93.842,
+      "e": 94.402,
+      "filler": false
+    },
+    {
+      "w": "how",
+      "s": 94.402,
+      "e": 94.562,
+      "filler": false
+    },
+    {
+      "w": "to",
+      "s": 94.562,
+      "e": 94.722,
+      "filler": false
+    },
+    {
+      "w": "price.",
+      "s": 94.722,
+      "e": 95.522,
+      "filler": false
+    },
+    {
+      "w": "One",
+      "s": 95.522,
+      "e": 95.762,
+      "filler": false
+    },
+    {
+      "w": "spreadsheet.",
+      "s": 95.842,
+      "e": 96.882,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 96.882,
+      "e": 97.122,
+      "filler": false
+    },
+    {
+      "w": "sold",
+      "s": 97.122,
+      "e": 97.442,
+      "filler": false
+    },
+    {
+      "w": "it",
+      "s": 97.442,
+      "e": 97.602,
+      "filler": false
+    },
+    {
+      "w": "for",
+      "s": 97.602,
+      "e": 97.762,
+      "filler": false
+    },
+    {
+      "w": "nine",
+      "s": 97.762,
+      "e": 98.082,
+      "filler": false
+    },
+    {
+      "w": "dollars",
+      "s": 98.082,
+      "e": 98.402,
+      "filler": false
+    },
+    {
+      "w": "on",
+      "s": 98.482,
+      "e": 98.642,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 98.642,
+      "e": 98.802,
+      "filler": false
+    },
+    {
+      "w": "Tuesday",
+      "s": 98.802,
+      "e": 99.202,
+      "filler": false
+    },
+    {
+      "w": "night",
+      "s": 99.202,
+      "e": 99.522,
+      "filler": false
+    },
+    {
+      "w": "and",
+      "s": 99.682,
+      "e": 99.842,
+      "filler": false
+    },
+    {
+      "w": "by",
+      "s": 99.842,
+      "e": 100.082,
+      "filler": false
+    },
+    {
+      "w": "Friday",
+      "s": 100.082,
+      "e": 100.562,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 100.562,
+      "e": 100.722,
+      "filler": false
+    },
+    {
+      "w": "had",
+      "s": 100.722,
+      "e": 100.882,
+      "filler": false
+    },
+    {
+      "w": "made",
+      "s": 100.882,
+      "e": 101.122,
+      "filler": false
+    },
+    {
+      "w": "eleven",
+      "s": 101.122,
+      "e": 101.522,
+      "filler": false
+    },
+    {
+      "w": "thousand",
+      "s": 101.522,
+      "e": 101.922,
+      "filler": false
+    },
+    {
+      "w": "dollars.",
+      "s": 101.922,
+      "e": 102.562,
+      "filler": false
+    },
+    {
+      "w": "11,000",
+      "s": 103.266,
+      "e": 104.066,
+      "filler": false
+    },
+    {
+      "w": "dollars",
+      "s": 104.066,
+      "e": 104.386,
+      "filler": false
+    },
+    {
+      "w": "from",
+      "s": 104.386,
+      "e": 104.626,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 104.626,
+      "e": 104.706,
+      "filler": false
+    },
+    {
+      "w": "spreadsheet.",
+      "s": 104.706,
+      "e": 105.346,
+      "filler": false
+    },
+    {
+      "w": "From",
+      "s": 105.874,
+      "e": 106.194,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 106.194,
+      "e": 106.274,
+      "filler": false
+    },
+    {
+      "w": "spreadsheet.",
+      "s": 106.274,
+      "e": 107.234,
+      "filler": false
+    },
+    {
+      "w": "That's",
+      "s": 107.234,
+      "e": 107.554,
+      "filler": false
+    },
+    {
+      "w": "when",
+      "s": 107.554,
+      "e": 107.714,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 107.714,
+      "e": 107.874,
+      "filler": false
+    },
+    {
+      "w": "realized",
+      "s": 107.874,
+      "e": 108.354,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 108.354,
+      "e": 108.514,
+      "filler": false
+    },
+    {
+      "w": "thing",
+      "s": 108.514,
+      "e": 108.674,
+      "filler": false
+    },
+    {
+      "w": "that",
+      "s": 108.674,
+      "e": 108.834,
+      "filler": false
+    },
+    {
+      "w": "broke",
+      "s": 108.834,
+      "e": 109.314,
+      "filler": false
+    },
+    {
+      "w": "me",
+      "s": 109.314,
+      "e": 109.474,
+      "filler": false
+    },
+    {
+      "w": "was",
+      "s": 109.474,
+      "e": 109.794,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 109.794,
+      "e": 110.034,
+      "filler": false
+    },
+    {
+      "w": "thing",
+      "s": 110.034,
+      "e": 110.274,
+      "filler": false
+    },
+    {
+      "w": "other",
+      "s": 110.274,
+      "e": 110.594,
+      "filler": false
+    },
+    {
+      "w": "people",
+      "s": 110.594,
+      "e": 110.914,
+      "filler": false
+    },
+    {
+      "w": "needed",
+      "s": 110.914,
+      "e": 111.314,
+      "filler": false
+    },
+    {
+      "w": "most.",
+      "s": 111.314,
+      "e": 112.114,
+      "filler": false
+    },
+    {
+      "w": "If",
+      "s": 112.114,
+      "e": 112.274,
+      "filler": false
+    },
+    {
+      "w": "someone",
+      "s": 112.274,
+      "e": 112.674,
+      "filler": false
+    },
+    {
+      "w": "is",
+      "s": 112.674,
+      "e": 112.914,
+      "filler": false
+    },
+    {
+      "w": "watching",
+      "s": 112.914,
+      "e": 113.394,
+      "filler": false
+    },
+    {
+      "w": "this",
+      "s": 113.394,
+      "e": 113.634,
+      "filler": false
+    },
+    {
+      "w": "and",
+      "s": 113.634,
+      "e": 113.874,
+      "filler": false
+    },
+    {
+      "w": "their",
+      "s": 113.874,
+      "e": 114.034,
+      "filler": false
+    },
+    {
+      "w": "business",
+      "s": 114.034,
+      "e": 114.514,
+      "filler": false
+    },
+    {
+      "w": "is",
+      "s": 114.514,
+      "e": 114.754,
+      "filler": false
+    },
+    {
+      "w": "struggling",
+      "s": 114.754,
+      "e": 115.394,
+      "filler": false
+    },
+    {
+      "w": "right",
+      "s": 115.394,
+      "e": 115.634,
+      "filler": false
+    },
+    {
+      "w": "now,",
+      "s": 115.634,
+      "e": 116.274,
+      "filler": false
+    },
+    {
+      "w": "what",
+      "s": 116.274,
+      "e": 116.514,
+      "filler": false
+    },
+    {
+      "w": "should",
+      "s": 116.514,
+      "e": 116.674,
+      "filler": false
+    },
+    {
+      "w": "they",
+      "s": 116.674,
+      "e": 116.834,
+      "filler": false
+    },
+    {
+      "w": "do",
+      "s": 116.834,
+      "e": 117.074,
+      "filler": false
+    },
+    {
+      "w": "tonight?",
+      "s": 117.074,
+      "e": 117.794,
+      "filler": false
+    },
+    {
+      "w": "Write",
+      "s": 117.794,
+      "e": 118.194,
+      "filler": false
+    },
+    {
+      "w": "down",
+      "s": 118.194,
+      "e": 118.354,
+      "filler": false
+    },
+    {
+      "w": "what",
+      "s": 118.354,
+      "e": 118.594,
+      "filler": false
+    },
+    {
+      "w": "one",
+      "s": 118.594,
+      "e": 118.834,
+      "filler": false
+    },
+    {
+      "w": "sale",
+      "s": 118.834,
+      "e": 119.314,
+      "filler": false
+    },
+    {
+      "w": "actually",
+      "s": 119.314,
+      "e": 119.634,
+      "filler": false
+    },
+    {
+      "w": "costs",
+      "s": 119.634,
+      "e": 120.114,
+      "filler": false
+    },
+    {
+      "w": "you.",
+      "s": 120.114,
+      "e": 120.674,
+      "filler": false
+    },
+    {
+      "w": "Not",
+      "s": 120.674,
+      "e": 120.914,
+      "filler": false
+    },
+    {
+      "w": "what",
+      "s": 120.914,
+      "e": 121.074,
+      "filler": false
+    },
+    {
+      "w": "you",
+      "s": 121.074,
+      "e": 121.234,
+      "filler": false
+    },
+    {
+      "w": "think,",
+      "s": 121.234,
+      "e": 121.794,
+      "filler": false
+    },
+    {
+      "w": "what",
+      "s": 121.794,
+      "e": 121.954,
+      "filler": false
+    },
+    {
+      "w": "it",
+      "s": 121.954,
+      "e": 122.194,
+      "filler": false
+    },
+    {
+      "w": "actually",
+      "s": 122.194,
+      "e": 122.434,
+      "filler": false
+    },
+    {
+      "w": "costs.",
+      "s": 122.434,
+      "e": 123.314,
+      "filler": false
+    },
+    {
+      "w": "If",
+      "s": 123.314,
+      "e": 123.474,
+      "filler": false
+    },
+    {
+      "w": "you",
+      "s": 123.474,
+      "e": 123.634,
+      "filler": false
+    },
+    {
+      "w": "can't",
+      "s": 123.634,
+      "e": 123.954,
+      "filler": false
+    },
+    {
+      "w": "answer",
+      "s": 123.954,
+      "e": 124.274,
+      "filler": false
+    },
+    {
+      "w": "that",
+      "s": 124.274,
+      "e": 124.434,
+      "filler": false
+    },
+    {
+      "w": "in",
+      "s": 124.434,
+      "e": 124.594,
+      "filler": false
+    },
+    {
+      "w": "one",
+      "s": 124.594,
+      "e": 124.754,
+      "filler": false
+    },
+    {
+      "w": "minute,",
+      "s": 124.754,
+      "e": 125.234,
+      "filler": false
+    },
+    {
+      "w": "stop",
+      "s": 125.234,
+      "e": 125.554,
+      "filler": false
+    },
+    {
+      "w": "spending",
+      "s": 125.554,
+      "e": 125.954,
+      "filler": false
+    },
+    {
+      "w": "money",
+      "s": 125.954,
+      "e": 126.354,
+      "filler": false
+    },
+    {
+      "w": "until",
+      "s": 126.354,
+      "e": 126.754,
+      "filler": false
+    },
+    {
+      "w": "you",
+      "s": 126.754,
+      "e": 126.914,
+      "filler": false
+    },
+    {
+      "w": "can.",
+      "s": 126.914,
+      "e": 127.314,
+      "filler": false
+    },
+    {
+      "w": "Because",
+      "s": 127.986,
+      "e": 128.226,
+      "filler": false
+    },
+    {
+      "w": "you",
+      "s": 128.226,
+      "e": 128.386,
+      "filler": false
+    },
+    {
+      "w": "can",
+      "s": 128.386,
+      "e": 128.546,
+      "filler": false
+    },
+    {
+      "w": "survive",
+      "s": 128.546,
+      "e": 129.026,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 129.026,
+      "e": 129.106,
+      "filler": false
+    },
+    {
+      "w": "bad",
+      "s": 129.106,
+      "e": 129.426,
+      "filler": false
+    },
+    {
+      "w": "month.",
+      "s": 129.426,
+      "e": 130.066,
+      "filler": false
+    },
+    {
+      "w": "You",
+      "s": 130.066,
+      "e": 130.226,
+      "filler": false
+    },
+    {
+      "w": "cannot",
+      "s": 130.226,
+      "e": 130.546,
+      "filler": false
+    },
+    {
+      "w": "survive",
+      "s": 130.546,
+      "e": 131.026,
+      "filler": false
+    },
+    {
+      "w": "not",
+      "s": 131.026,
+      "e": 131.266,
+      "filler": false
+    },
+    {
+      "w": "knowing",
+      "s": 131.266,
+      "e": 131.586,
+      "filler": false
+    },
+    {
+      "w": "why",
+      "s": 131.586,
+      "e": 131.826,
+      "filler": false
+    },
+    {
+      "w": "it",
+      "s": 131.826,
+      "e": 131.906,
+      "filler": false
+    },
+    {
+      "w": "was",
+      "s": 131.906,
+      "e": 132.066,
+      "filler": false
+    },
+    {
+      "w": "bad.",
+      "s": 132.066,
+      "e": 132.866,
+      "filler": false
+    },
+    {
+      "w": "Let's",
+      "s": 132.866,
+      "e": 133.186,
+      "filler": false
+    },
+    {
+      "w": "talk",
+      "s": 133.186,
+      "e": 133.426,
+      "filler": false
+    },
+    {
+      "w": "about",
+      "s": 133.426,
+      "e": 133.746,
+      "filler": false
+    },
+    {
+      "w": "fear,",
+      "s": 133.746,
+      "e": 134.626,
+      "filler": false
+    },
+    {
+      "w": "because",
+      "s": 134.626,
+      "e": 134.866,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 134.866,
+      "e": 135.026,
+      "filler": false
+    },
+    {
+      "w": "think",
+      "s": 135.026,
+      "e": 135.266,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 135.346,
+      "e": 135.506,
+      "filler": false
+    },
+    {
+      "w": "lot",
+      "s": 135.506,
+      "e": 135.666,
+      "filler": false
+    },
+    {
+      "w": "of",
+      "s": 135.666,
+      "e": 135.826,
+      "filler": false
+    },
+    {
+      "w": "people",
+      "s": 135.826,
+      "e": 136.066,
+      "filler": false
+    },
+    {
+      "w": "are",
+      "s": 136.066,
+      "e": 136.306,
+      "filler": false
+    },
+    {
+      "w": "scared",
+      "s": 136.306,
+      "e": 136.786,
+      "filler": false
+    },
+    {
+      "w": "to",
+      "s": 136.786,
+      "e": 136.946,
+      "filler": false
+    },
+    {
+      "w": "raise",
+      "s": 136.946,
+      "e": 137.266,
+      "filler": false
+    },
+    {
+      "w": "their",
+      "s": 137.266,
+      "e": 137.506,
+      "filler": false
+    },
+    {
+      "w": "prices.",
+      "s": 137.506,
+      "e": 138.626,
+      "filler": false
+    },
+    {
+      "w": "Oh,",
+      "s": 138.626,
+      "e": 139.106,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 139.106,
+      "e": 139.266,
+      "filler": false
+    },
+    {
+      "w": "was",
+      "s": 139.266,
+      "e": 139.506,
+      "filler": false
+    },
+    {
+      "w": "terrified.",
+      "s": 139.506,
+      "e": 140.466,
+      "filler": false
+    },
+    {
+      "w": "The",
+      "s": 140.466,
+      "e": 140.706,
+      "filler": false
+    },
+    {
+      "w": "first",
+      "s": 140.706,
+      "e": 140.946,
+      "filler": false
+    },
+    {
+      "w": "time",
+      "s": 140.946,
+      "e": 141.186,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 141.186,
+      "e": 141.426,
+      "filler": false
+    },
+    {
+      "w": "raised",
+      "s": 141.426,
+      "e": 141.746,
+      "filler": false
+    },
+    {
+      "w": "my",
+      "s": 141.746,
+      "e": 141.906,
+      "filler": false
+    },
+    {
+      "w": "price",
+      "s": 141.906,
+      "e": 142.226,
+      "filler": false
+    },
+    {
+      "w": "from",
+      "s": 142.226,
+      "e": 142.466,
+      "filler": false
+    },
+    {
+      "w": "$9",
+      "s": 142.466,
+      "e": 142.706,
+      "filler": false
+    },
+    {
+      "w": "to",
+      "s": 142.786,
+      "e": 142.946,
+      "filler": false
+    },
+    {
+      "w": "$49,",
+      "s": 142.946,
+      "e": 144.146,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 144.146,
+      "e": 144.306,
+      "filler": false
+    },
+    {
+      "w": "thought",
+      "s": 144.306,
+      "e": 144.546,
+      "filler": false
+    },
+    {
+      "w": "everyone",
+      "s": 144.626,
+      "e": 145.026,
+      "filler": false
+    },
+    {
+      "w": "would",
+      "s": 145.026,
+      "e": 145.186,
+      "filler": false
+    },
+    {
+      "w": "leave.",
+      "s": 145.186,
+      "e": 145.666,
+      "filler": false
+    },
+    {
+      "w": "And",
+      "s": 146.45,
+      "e": 146.69,
+      "filler": false
+    },
+    {
+      "w": "did",
+      "s": 146.69,
+      "e": 146.85,
+      "filler": false
+    },
+    {
+      "w": "they?",
+      "s": 146.85,
+      "e": 147.25,
+      "filler": false
+    },
+    {
+      "w": "Sales",
+      "s": 147.762,
+      "e": 148.242,
+      "filler": false
+    },
+    {
+      "w": "went",
+      "s": 148.242,
+      "e": 148.482,
+      "filler": false
+    },
+    {
+      "w": "up,",
+      "s": 148.482,
+      "e": 148.962,
+      "filler": false
+    },
+    {
+      "w": "not",
+      "s": 148.962,
+      "e": 149.202,
+      "filler": false
+    },
+    {
+      "w": "down,",
+      "s": 149.202,
+      "e": 149.842,
+      "filler": false
+    },
+    {
+      "w": "up.",
+      "s": 149.842,
+      "e": 150.402,
+      "filler": false
+    },
+    {
+      "w": "When",
+      "s": 150.402,
+      "e": 150.562,
+      "filler": false
+    },
+    {
+      "w": "it",
+      "s": 150.562,
+      "e": 150.642,
+      "filler": false
+    },
+    {
+      "w": "was",
+      "s": 150.642,
+      "e": 150.802,
+      "filler": false
+    },
+    {
+      "w": "cheap,",
+      "s": 150.802,
+      "e": 151.282,
+      "filler": false
+    },
+    {
+      "w": "people",
+      "s": 151.282,
+      "e": 151.522,
+      "filler": false
+    },
+    {
+      "w": "didn't",
+      "s": 151.522,
+      "e": 151.842,
+      "filler": false
+    },
+    {
+      "w": "trust",
+      "s": 151.842,
+      "e": 152.162,
+      "filler": false
+    },
+    {
+      "w": "it.",
+      "s": 152.162,
+      "e": 152.642,
+      "filler": false
+    },
+    {
+      "w": "When",
+      "s": 152.642,
+      "e": 152.802,
+      "filler": false
+    },
+    {
+      "w": "it",
+      "s": 152.802,
+      "e": 152.882,
+      "filler": false
+    },
+    {
+      "w": "was",
+      "s": 152.882,
+      "e": 153.042,
+      "filler": false
+    },
+    {
+      "w": "forty-nine",
+      "s": 153.042,
+      "e": 153.682,
+      "filler": false
+    },
+    {
+      "w": "dollars,",
+      "s": 153.682,
+      "e": 154.162,
+      "filler": false
+    },
+    {
+      "w": "they",
+      "s": 154.162,
+      "e": 154.322,
+      "filler": false
+    },
+    {
+      "w": "assumed",
+      "s": 154.322,
+      "e": 154.722,
+      "filler": false
+    },
+    {
+      "w": "it",
+      "s": 154.722,
+      "e": 154.882,
+      "filler": false
+    },
+    {
+      "w": "worked.",
+      "s": 154.882,
+      "e": 155.682,
+      "filler": false
+    },
+    {
+      "w": "That",
+      "s": 155.682,
+      "e": 155.922,
+      "filler": false
+    },
+    {
+      "w": "is",
+      "s": 155.922,
+      "e": 156.162,
+      "filler": false
+    },
+    {
+      "w": "wild.",
+      "s": 156.162,
+      "e": 156.802,
+      "filler": false
+    },
+    {
+      "w": "Cheaper",
+      "s": 156.802,
+      "e": 157.362,
+      "filler": false
+    },
+    {
+      "w": "made",
+      "s": 157.362,
+      "e": 157.522,
+      "filler": false
+    },
+    {
+      "w": "it",
+      "s": 157.522,
+      "e": 157.602,
+      "filler": false
+    },
+    {
+      "w": "look",
+      "s": 157.602,
+      "e": 157.762,
+      "filler": false
+    },
+    {
+      "w": "worse.",
+      "s": 157.762,
+      "e": 158.322,
+      "filler": false
+    },
+    {
+      "w": "Cheap",
+      "s": 158.898,
+      "e": 159.458,
+      "filler": false
+    },
+    {
+      "w": "tells",
+      "s": 159.458,
+      "e": 159.698,
+      "filler": false
+    },
+    {
+      "w": "people",
+      "s": 159.698,
+      "e": 159.938,
+      "filler": false
+    },
+    {
+      "w": "you",
+      "s": 159.938,
+      "e": 160.098,
+      "filler": false
+    },
+    {
+      "w": "don't",
+      "s": 160.098,
+      "e": 160.338,
+      "filler": false
+    },
+    {
+      "w": "believe",
+      "s": 160.338,
+      "e": 160.658,
+      "filler": false
+    },
+    {
+      "w": "in",
+      "s": 160.658,
+      "e": 160.818,
+      "filler": false
+    },
+    {
+      "w": "it",
+      "s": 160.818,
+      "e": 160.978,
+      "filler": false
+    },
+    {
+      "w": "either.",
+      "s": 160.978,
+      "e": 161.618,
+      "filler": false
+    },
+    {
+      "w": "Price",
+      "s": 161.618,
+      "e": 162.018,
+      "filler": false
+    },
+    {
+      "w": "is",
+      "s": 162.018,
+      "e": 162.178,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 162.178,
+      "e": 162.258,
+      "filler": false
+    },
+    {
+      "w": "message,",
+      "s": 162.258,
+      "e": 162.978,
+      "filler": false
+    },
+    {
+      "w": "not",
+      "s": 162.978,
+      "e": 163.138,
+      "filler": false
+    },
+    {
+      "w": "just",
+      "s": 163.138,
+      "e": 163.378,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 163.378,
+      "e": 163.538,
+      "filler": false
+    },
+    {
+      "w": "number.",
+      "s": 163.538,
+      "e": 164.178,
+      "filler": false
+    },
+    {
+      "w": "What's",
+      "s": 164.178,
+      "e": 164.498,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 164.498,
+      "e": 164.658,
+      "filler": false
+    },
+    {
+      "w": "biggest",
+      "s": 164.658,
+      "e": 165.138,
+      "filler": false
+    },
+    {
+      "w": "lie",
+      "s": 165.138,
+      "e": 165.538,
+      "filler": false
+    },
+    {
+      "w": "people",
+      "s": 165.538,
+      "e": 165.778,
+      "filler": false
+    },
+    {
+      "w": "believe",
+      "s": 165.858,
+      "e": 166.338,
+      "filler": false
+    },
+    {
+      "w": "about",
+      "s": 166.338,
+      "e": 166.578,
+      "filler": false
+    },
+    {
+      "w": "starting",
+      "s": 166.578,
+      "e": 166.978,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 166.978,
+      "e": 167.058,
+      "filler": false
+    },
+    {
+      "w": "business?",
+      "s": 167.058,
+      "e": 167.698,
+      "filler": false
+    },
+    {
+      "w": "That",
+      "s": 168.258,
+      "e": 168.498,
+      "filler": false
+    },
+    {
+      "w": "you",
+      "s": 168.498,
+      "e": 168.658,
+      "filler": false
+    },
+    {
+      "w": "need",
+      "s": 168.658,
+      "e": 168.818,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 168.818,
+      "e": 168.898,
+      "filler": false
+    },
+    {
+      "w": "great",
+      "s": 168.898,
+      "e": 169.138,
+      "filler": false
+    },
+    {
+      "w": "idea.",
+      "s": 169.138,
+      "e": 169.938,
+      "filler": false
+    },
+    {
+      "w": "You",
+      "s": 169.938,
+      "e": 170.098,
+      "filler": false
+    },
+    {
+      "w": "don't.",
+      "s": 170.098,
+      "e": 170.738,
+      "filler": false
+    },
+    {
+      "w": "My",
+      "s": 170.738,
+      "e": 171.058,
+      "filler": false
+    },
+    {
+      "w": "idea",
+      "s": 171.058,
+      "e": 171.538,
+      "filler": false
+    },
+    {
+      "w": "was",
+      "s": 171.538,
+      "e": 171.698,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 171.698,
+      "e": 171.858,
+      "filler": false
+    },
+    {
+      "w": "spreadsheet.",
+      "s": 171.858,
+      "e": 172.738,
+      "filler": false
+    },
+    {
+      "w": "You",
+      "s": 172.738,
+      "e": 172.898,
+      "filler": false
+    },
+    {
+      "w": "need",
+      "s": 172.898,
+      "e": 173.058,
+      "filler": false
+    },
+    {
+      "w": "a",
+      "s": 173.058,
+      "e": 173.138,
+      "filler": false
+    },
+    {
+      "w": "painful",
+      "s": 173.138,
+      "e": 173.698,
+      "filler": false
+    },
+    {
+      "w": "problem",
+      "s": 173.698,
+      "e": 174.018,
+      "filler": false
+    },
+    {
+      "w": "and",
+      "s": 174.098,
+      "e": 174.258,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 174.258,
+      "e": 174.338,
+      "filler": false
+    },
+    {
+      "w": "guts",
+      "s": 174.338,
+      "e": 174.738,
+      "filler": false
+    },
+    {
+      "w": "to",
+      "s": 174.738,
+      "e": 174.898,
+      "filler": false
+    },
+    {
+      "w": "charge",
+      "s": 174.898,
+      "e": 175.218,
+      "filler": false
+    },
+    {
+      "w": "for",
+      "s": 175.218,
+      "e": 175.458,
+      "filler": false
+    },
+    {
+      "w": "fixing",
+      "s": 175.458,
+      "e": 175.858,
+      "filler": false
+    },
+    {
+      "w": "it.",
+      "s": 175.858,
+      "e": 176.498,
+      "filler": false
+    },
+    {
+      "w": "Last",
+      "s": 176.498,
+      "e": 176.898,
+      "filler": false
+    },
+    {
+      "w": "question.",
+      "s": 176.898,
+      "e": 177.618,
+      "filler": false
+    },
+    {
+      "w": "Would",
+      "s": 177.618,
+      "e": 177.858,
+      "filler": false
+    },
+    {
+      "w": "you",
+      "s": 177.858,
+      "e": 178.018,
+      "filler": false
+    },
+    {
+      "w": "open",
+      "s": 178.018,
+      "e": 178.258,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 178.338,
+      "e": 178.498,
+      "filler": false
+    },
+    {
+      "w": "bakery",
+      "s": 178.498,
+      "e": 179.218,
+      "filler": false
+    },
+    {
+      "w": "again?",
+      "s": 179.218,
+      "e": 179.858,
+      "filler": false
+    },
+    {
+      "w": "Honestly,",
+      "s": 179.858,
+      "e": 180.658,
+      "filler": false
+    },
+    {
+      "w": "yes.",
+      "s": 180.658,
+      "e": 181.378,
+      "filler": false
+    },
+    {
+      "w": "But",
+      "s": 181.378,
+      "e": 181.618,
+      "filler": false
+    },
+    {
+      "w": "this",
+      "s": 181.618,
+      "e": 181.778,
+      "filler": false
+    },
+    {
+      "w": "time",
+      "s": 181.778,
+      "e": 182.018,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 182.098,
+      "e": 182.258,
+      "filler": false
+    },
+    {
+      "w": "would",
+      "s": 182.258,
+      "e": 182.418,
+      "filler": false
+    },
+    {
+      "w": "know",
+      "s": 182.418,
+      "e": 182.658,
+      "filler": false
+    },
+    {
+      "w": "my",
+      "s": 182.658,
+      "e": 182.898,
+      "filler": false
+    },
+    {
+      "w": "numbers",
+      "s": 182.898,
+      "e": 183.298,
+      "filler": false
+    },
+    {
+      "w": "on",
+      "s": 183.298,
+      "e": 183.538,
+      "filler": false
+    },
+    {
+      "w": "day",
+      "s": 183.538,
+      "e": 183.778,
+      "filler": false
+    },
+    {
+      "w": "one,",
+      "s": 183.778,
+      "e": 184.258,
+      "filler": false
+    },
+    {
+      "w": "and",
+      "s": 184.258,
+      "e": 184.418,
+      "filler": false
+    },
+    {
+      "w": "I",
+      "s": 184.418,
+      "e": 184.578,
+      "filler": false
+    },
+    {
+      "w": "would",
+      "s": 184.578,
+      "e": 184.738,
+      "filler": false
+    },
+    {
+      "w": "put",
+      "s": 184.738,
+      "e": 184.818,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 184.818,
+      "e": 184.978,
+      "filler": false
+    },
+    {
+      "w": "stars",
+      "s": 184.978,
+      "e": 185.378,
+      "filler": false
+    },
+    {
+      "w": "in",
+      "s": 185.378,
+      "e": 185.458,
+      "filler": false
+    },
+    {
+      "w": "the",
+      "s": 185.458,
+      "e": 185.618,
+      "filler": false
+    },
+    {
+      "w": "shop.",
+      "s": 185.618,
+      "e": 186.018,
+      "filler": false
+    }
+  ],
+  "sentences": [
+    {
+      "s": 0.706,
+      "e": 3.506,
+      "wi": [
+        0,
+        7
+      ],
+      "text": "Okay, so you lost everything at twenty six."
+    },
+    {
+      "s": 3.506,
+      "e": 4.866,
+      "wi": [
+        8,
+        10
+      ],
+      "text": "What actually happened?"
+    },
+    {
+      "s": 5.186,
+      "e": 6.546,
+      "wi": [
+        11,
+        14
+      ],
+      "text": "I had a bakery."
+    },
+    {
+      "s": 6.546,
+      "e": 12.706,
+      "wi": [
+        15,
+        33
+      ],
+      "text": "Forty thousand dollars of savings, a loan from my dad, and a lease I definitely should not have signed."
+    },
+    {
+      "s": 12.706,
+      "e": 14.306,
+      "wi": [
+        34,
+        39
+      ],
+      "text": "And for eight months it worked."
+    },
+    {
+      "s": 14.306,
+      "e": 15.586,
+      "wi": [
+        40,
+        43
+      ],
+      "text": "Lines out the door."
+    },
+    {
+      "s": 15.586,
+      "e": 16.946,
+      "wi": [
+        44,
+        49
+      ],
+      "text": "I thought I was a genius."
+    },
+    {
+      "s": 17.458,
+      "e": 18.658,
+      "wi": [
+        50,
+        52
+      ],
+      "text": "So what changed?"
+    },
+    {
+      "s": 19.218,
+      "e": 23.218,
+      "wi": [
+        53,
+        64
+      ],
+      "text": "A chain opened across the street and sold croissants for a dollar."
+    },
+    {
+      "s": 23.218,
+      "e": 24.578,
+      "wi": [
+        65,
+        67
+      ],
+      "text": "Mine were four."
+    },
+    {
+      "s": 24.578,
+      "e": 27.858,
+      "wi": [
+        68,
+        75
+      ],
+      "text": "In six weeks my revenue dropped by 70%."
+    },
+    {
+      "s": 27.858,
+      "e": 28.898,
+      "wi": [
+        76,
+        76
+      ],
+      "text": "70%?"
+    },
+    {
+      "s": 28.898,
+      "e": 30.178,
+      "wi": [
+        77,
+        78
+      ],
+      "text": "That's brutal."
+    },
+    {
+      "s": 30.178,
+      "e": 31.698,
+      "wi": [
+        79,
+        81
+      ],
+      "text": "It was terrifying."
+    },
+    {
+      "s": 31.698,
+      "e": 37.538,
+      "wi": [
+        82,
+        99
+      ],
+      "text": "I remember sitting in the walk-in fridge, crying, because it was the only place nobody could hear me."
+    },
+    {
+      "s": 37.538,
+      "e": 39.858,
+      "wi": [
+        100,
+        106
+      ],
+      "text": "And here's the part nobody tells you."
+    },
+    {
+      "s": 39.858,
+      "e": 42.178,
+      "wi": [
+        107,
+        114
+      ],
+      "text": "The business didn't fail because of the chain."
+    },
+    {
+      "s": 42.418,
+      "e": 44.818,
+      "wi": [
+        115,
+        122
+      ],
+      "text": "It failed because I never knew my numbers."
+    },
+    {
+      "s": 45.138,
+      "e": 47.458,
+      "wi": [
+        123,
+        131
+      ],
+      "text": "What do you mean you didn't know your numbers?"
+    },
+    {
+      "s": 48.114,
+      "e": 52.754,
+      "wi": [
+        132,
+        146
+      ],
+      "text": "I didn't know that every croissa cost me two dollars and ten cents to make."
+    },
+    {
+      "s": 52.754,
+      "e": 55.954,
+      "wi": [
+        147,
+        158
+      ],
+      "text": "I was proud of my margins and I didn't even have margins."
+    },
+    {
+      "s": 56.274,
+      "e": 60.034,
+      "wi": [
+        159,
+        169
+      ],
+      "text": "That's honestly the most common mistake I hear on this show."
+    },
+    {
+      "s": 60.034,
+      "e": 60.754,
+      "wi": [
+        170,
+        171
+      ],
+      "text": "It is."
+    },
+    {
+      "s": 60.754,
+      "e": 63.394,
+      "wi": [
+        172,
+        179
+      ],
+      "text": "Most people think they have a sales problem."
+    },
+    {
+      "s": 63.394,
+      "e": 66.114,
+      "wi": [
+        180,
+        190
+      ],
+      "text": "Ninety per cent of the time they have a pricing problem."
+    },
+    {
+      "s": 66.706,
+      "e": 69.186,
+      "wi": [
+        191,
+        198
+      ],
+      "text": "Okay, so you close the bakery, then what?"
+    },
+    {
+      "s": 69.682,
+      "e": 72.242,
+      "wi": [
+        199,
+        206
+      ],
+      "text": "Then I moved back in with my parents."
+    },
+    {
+      "s": 72.242,
+      "e": 78.082,
+      "wi": [
+        207,
+        224
+      ],
+      "text": "Twenty seven years old, sleeping in my childhood bedroom, with glow in the dark stars on the ceiling."
+    },
+    {
+      "s": 78.546,
+      "e": 80.466,
+      "wi": [
+        225,
+        231
+      ],
+      "text": "No way, the stars were still up."
+    },
+    {
+      "s": 81.17,
+      "e": 82.69,
+      "wi": [
+        232,
+        236
+      ],
+      "text": "The stars were still up."
+    },
+    {
+      "s": 82.69,
+      "e": 84.93,
+      "wi": [
+        237,
+        243
+      ],
+      "text": "My mom refused to take them down."
+    },
+    {
+      "s": 84.93,
+      "e": 87.17,
+      "wi": [
+        244,
+        252
+      ],
+      "text": "She said I would need them again some day."
+    },
+    {
+      "s": 87.17,
+      "e": 88.69,
+      "wi": [
+        253,
+        258
+      ],
+      "text": "She was right, by the way."
+    },
+    {
+      "s": 89.362,
+      "e": 92.322,
+      "wi": [
+        259,
+        271
+      ],
+      "text": "So how do you go from that bedroom to where you are now?"
+    },
+    {
+      "s": 92.722,
+      "e": 95.522,
+      "wi": [
+        272,
+        279
+      ],
+      "text": "I started teaching other bakers how to price."
+    },
+    {
+      "s": 95.522,
+      "e": 96.882,
+      "wi": [
+        280,
+        281
+      ],
+      "text": "One spreadsheet."
+    },
+    {
+      "s": 96.882,
+      "e": 102.562,
+      "wi": [
+        282,
+        300
+      ],
+      "text": "I sold it for nine dollars on a Tuesday night and by Friday I had made eleven thousand dollars."
+    },
+    {
+      "s": 103.266,
+      "e": 105.346,
+      "wi": [
+        301,
+        305
+      ],
+      "text": "11,000 dollars from a spreadsheet."
+    },
+    {
+      "s": 105.874,
+      "e": 107.234,
+      "wi": [
+        306,
+        308
+      ],
+      "text": "From a spreadsheet."
+    },
+    {
+      "s": 107.234,
+      "e": 112.114,
+      "wi": [
+        309,
+        324
+      ],
+      "text": "That's when I realized the thing that broke me was the thing other people needed most."
+    },
+    {
+      "s": 112.114,
+      "e": 117.794,
+      "wi": [
+        325,
+        341
+      ],
+      "text": "If someone is watching this and their business is struggling right now, what should they do tonight?"
+    },
+    {
+      "s": 117.794,
+      "e": 120.674,
+      "wi": [
+        342,
+        349
+      ],
+      "text": "Write down what one sale actually costs you."
+    },
+    {
+      "s": 120.674,
+      "e": 123.314,
+      "wi": [
+        350,
+        357
+      ],
+      "text": "Not what you think, what it actually costs."
+    },
+    {
+      "s": 123.314,
+      "e": 127.314,
+      "wi": [
+        358,
+        371
+      ],
+      "text": "If you can't answer that in one minute, stop spending money until you can."
+    },
+    {
+      "s": 127.986,
+      "e": 130.066,
+      "wi": [
+        372,
+        378
+      ],
+      "text": "Because you can survive a bad month."
+    },
+    {
+      "s": 130.066,
+      "e": 132.866,
+      "wi": [
+        379,
+        387
+      ],
+      "text": "You cannot survive not knowing why it was bad."
+    },
+    {
+      "s": 132.866,
+      "e": 138.626,
+      "wi": [
+        388,
+        404
+      ],
+      "text": "Let's talk about fear, because I think a lot of people are scared to raise their prices."
+    },
+    {
+      "s": 138.626,
+      "e": 140.466,
+      "wi": [
+        405,
+        408
+      ],
+      "text": "Oh, I was terrified."
+    },
+    {
+      "s": 140.466,
+      "e": 145.666,
+      "wi": [
+        409,
+        424
+      ],
+      "text": "The first time I raised my price from $9 to $49, I thought everyone would leave."
+    },
+    {
+      "s": 146.45,
+      "e": 147.25,
+      "wi": [
+        425,
+        427
+      ],
+      "text": "And did they?"
+    },
+    {
+      "s": 147.762,
+      "e": 150.402,
+      "wi": [
+        428,
+        433
+      ],
+      "text": "Sales went up, not down, up."
+    },
+    {
+      "s": 150.402,
+      "e": 152.642,
+      "wi": [
+        434,
+        441
+      ],
+      "text": "When it was cheap, people didn't trust it."
+    },
+    {
+      "s": 152.642,
+      "e": 155.682,
+      "wi": [
+        442,
+        450
+      ],
+      "text": "When it was forty-nine dollars, they assumed it worked."
+    },
+    {
+      "s": 155.682,
+      "e": 156.802,
+      "wi": [
+        451,
+        453
+      ],
+      "text": "That is wild."
+    },
+    {
+      "s": 156.802,
+      "e": 158.322,
+      "wi": [
+        454,
+        458
+      ],
+      "text": "Cheaper made it look worse."
+    },
+    {
+      "s": 158.898,
+      "e": 161.618,
+      "wi": [
+        459,
+        467
+      ],
+      "text": "Cheap tells people you don't believe in it either."
+    },
+    {
+      "s": 161.618,
+      "e": 164.178,
+      "wi": [
+        468,
+        475
+      ],
+      "text": "Price is a message, not just a number."
+    },
+    {
+      "s": 164.178,
+      "e": 167.698,
+      "wi": [
+        476,
+        485
+      ],
+      "text": "What's the biggest lie people believe about starting a business?"
+    },
+    {
+      "s": 168.258,
+      "e": 169.938,
+      "wi": [
+        486,
+        491
+      ],
+      "text": "That you need a great idea."
+    },
+    {
+      "s": 169.938,
+      "e": 170.738,
+      "wi": [
+        492,
+        493
+      ],
+      "text": "You don't."
+    },
+    {
+      "s": 170.738,
+      "e": 172.738,
+      "wi": [
+        494,
+        498
+      ],
+      "text": "My idea was a spreadsheet."
+    },
+    {
+      "s": 172.738,
+      "e": 176.498,
+      "wi": [
+        499,
+        511
+      ],
+      "text": "You need a painful problem and the guts to charge for fixing it."
+    },
+    {
+      "s": 176.498,
+      "e": 177.618,
+      "wi": [
+        512,
+        513
+      ],
+      "text": "Last question."
+    },
+    {
+      "s": 177.618,
+      "e": 179.858,
+      "wi": [
+        514,
+        519
+      ],
+      "text": "Would you open the bakery again?"
+    },
+    {
+      "s": 179.858,
+      "e": 181.378,
+      "wi": [
+        520,
+        521
+      ],
+      "text": "Honestly, yes."
+    },
+    {
+      "s": 181.378,
+      "e": 186.018,
+      "wi": [
+        522,
+        541
+      ],
+      "text": "But this time I would know my numbers on day one, and I would put the stars in the shop."
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+[
+  {
+    "i": 46,
+    "j": 56,
+    "start": 132.866,
+    "end": 164.178,
+    "duration": 31.31,
+    "factors": {
+      "hook": 50.9,
+      "retention": 90.4,
+      "emotion": 73.3,
+      "curiosity": 66.0,
+      "standalone": 90.0,
+      "visual": 93.6,
+      "loop": 45.0
+    },
+    "score": 72.3,
+    "text": "Let's talk about fear, because I think a lot of people are scared to raise their prices. Oh, I was terrified. The first time I raised my price from $9 to $49, I thought everyone would leave. And did they? Sales went up, not down, up. When it was cheap, people didn't trust it. When it was forty-nine dollars, they assumed it worked. That is wild. Cheaper made it look worse. Cheap tells people you don't believe in it either. Price is a message, not just a number.",
+    "first_line": "Let's talk about fear, because I think a lot of people are scared to raise their prices.",
+    "last_line": "Price is a message, not just a number.",
+    "cold_open_sentence": 50,
+    "hook_type": "statement",
+    "package": {
+      "title": "I raised my price 5x and sales went UP",
+      "hook": "Sales went up, not down, up.",
+      "post_caption": "She was terrified to go from $9 to $49. Then this happened.",
+      "hashtags": [
+        "#pricing",
+        "#smallbusiness",
+        "#entrepreneur",
+        "#business"
+      ],
+      "keywords": [
+        "cheap",
+        "price",
+        "talk"
+      ],
+      "retention_notes": "Cold-opens on the payoff line, then rewinds to the fear setup, so viewers stay to see why. 'Price is a message' is a quotable close that loops back to the opening. Drop-off risk: the host's 'Let's talk about fear' setup at ~3 s.",
+      "cover_text": "Price 5x. Sales went up."
+    },
+    "selected_by": "agent"
+  },
+  {
+    "i": 8,
+    "j": 17,
+    "start": 19.218,
+    "end": 44.818,
+    "duration": 25.6,
+    "factors": {
+      "hook": 49.2,
+      "retention": 85.3,
+      "emotion": 60.7,
+      "curiosity": 72.0,
+      "standalone": 100.0,
+      "visual": 90.7,
+      "loop": 45.0
+    },
+    "score": 70.6,
+    "text": "A chain opened across the street and sold croissants for a dollar. Mine were four. In six weeks my revenue dropped by 70%. 70%? That's brutal. It was terrifying. I remember sitting in the walk-in fridge, crying, because it was the only place nobody could hear me. And here's the part nobody tells you. The business didn't fail because of the chain. It failed because I never knew my numbers.",
+    "first_line": "A chain opened across the street and sold croissants for a dollar.",
+    "last_line": "It failed because I never knew my numbers.",
+    "cold_open_sentence": 17,
+    "hook_type": "statement",
+    "package": {
+      "title": "My bakery lost 70% in six weeks. It wasn't the competition.",
+      "hook": "It failed because I never knew my numbers.",
+      "post_caption": "A $1 croissant across the street wasn't the real problem.",
+      "hashtags": [
+        "#bakery",
+        "#smallbusiness",
+        "#entrepreneur",
+        "#business"
+      ],
+      "keywords": [
+        "chain",
+        "opened",
+        "across"
+      ],
+      "retention_notes": "The teaser states the twist before the story starts. Then come the stat (70%), the emotional beat (crying in the walk-in fridge) and the reveal. Drop-off risk: the chain/croissant explanation in the first 8 s.",
+      "cover_text": "It wasn't the competition"
+    },
+    "selected_by": "agent"
+  },
+  {
+    "i": 40,
+    "j": 45,
+    "start": 112.114,
+    "end": 132.866,
+    "duration": 20.75,
+    "factors": {
+      "hook": 63.4,
+      "retention": 83.1,
+      "emotion": 30.6,
+      "curiosity": 70.0,
+      "standalone": 90.0,
+      "visual": 78.3,
+      "loop": 15.0
+    },
+    "score": 65.1,
+    "text": "If someone is watching this and their business is struggling right now, what should they do tonight? Write down what one sale actually costs you. Not what you think, what it actually costs. If you can't answer that in one minute, stop spending money until you can. Because you can survive a bad month. You cannot survive not knowing why it was bad.",
+    "first_line": "If someone is watching this and their business is struggling right now, what should they do tonight?",
+    "last_line": "You cannot survive not knowing why it was bad.",
+    "cold_open_sentence": 41,
+    "hook_type": "statement",
+    "package": {
+      "title": "Do this tonight if your business is struggling",
+      "hook": "If someone is watching this and their business is struggling right now, what should they do tonight?",
+      "post_caption": "One question. One minute. If you can't answer it, stop spending.",
+      "hashtags": [
+        "#businesstips",
+        "#smallbusiness",
+        "#entrepreneur",
+        "#business"
+      ],
+      "keywords": [
+        "costs",
+        "survive",
+        "someone"
+      ],
+      "retention_notes": "A direct-address question hook leads to a concrete, saveable action, with a short last line to close. Drop-off risk: the long opening question (6 s).",
+      "cover_text": "Do this tonight"
+    },
+    "selected_by": "agent"
+  },
+  {
+    "i": 33,
+    "j": 39,
+    "start": 89.362,
+    "end": 112.114,
+    "duration": 22.75,
+    "factors": {
+      "hook": 49.0,
+      "retention": 83.2,
+      "emotion": 32.6,
+      "curiosity": 74.0,
+      "standalone": 65.0,
+      "visual": 84.4,
+      "loop": 15.0
+    },
+    "score": 60.6,
+    "text": "So how do you go from that bedroom to where you are now? I started teaching other bakers how to price. One spreadsheet. I sold it for nine dollars on a Tuesday night and by Friday I had made eleven thousand dollars. 11,000 dollars from a spreadsheet. From a spreadsheet. That's when I realized the thing that broke me was the thing other people needed most.",
+    "first_line": "So how do you go from that bedroom to where you are now?",
+    "last_line": "That's when I realized the thing that broke me was the thing other people needed most.",
+    "cold_open_sentence": 37,
+    "hook_type": "question",
+    "package": {
+      "title": "A $9 spreadsheet made her $11,000 by Friday",
+      "hook": "11,000 dollars from a spreadsheet.",
+      "post_caption": "The thing that broke her business was the thing everyone else needed.",
+      "hashtags": [
+        "#sidehustle",
+        "#digitalproducts",
+        "#entrepreneur",
+        "#business"
+      ],
+      "keywords": [
+        "spreadsheet",
+        "dollars",
+        "teaching"
+      ],
+      "retention_notes": "A number-led teaser, then the story beat and the realization line at the end. Drop-off risk: the transition question at ~4 s.",
+      "cover_text": "$9 spreadsheet. $11,000."
+    },
+    "selected_by": "agent"
+  },
+  {
+    "i": 57,
+    "j": 65,
+    "start": 164.178,
+    "end": 186.018,
+    "duration": 21.84,
+    "factors": {
+      "hook": 75.3,
+      "retention": 85.7,
+      "emotion": 47.2,
+      "curiosity": 54.0,
+      "standalone": 90.0,
+      "visual": 84.7,
+      "loop": 15.0
+    },
+    "score": 69.4,
+    "text": "What's the biggest lie people believe about starting a business? That you need a great idea. You don't. My idea was a spreadsheet. You need a painful problem and the guts to charge for fixing it. Last question. Would you open the bakery again? Honestly, yes. But this time I would know my numbers on day one, and I would put the stars in the shop.",
+    "first_line": "What's the biggest lie people believe about starting a business?",
+    "last_line": "But this time I would know my numbers on day one, and I would put the stars in the shop.",
+    "cold_open_sentence": null,
+    "hook_type": "question",
+    "package": {
+      "title": "The biggest lie about starting a business",
+      "hook": "What's the biggest lie people believe about starting a business?",
+      "post_caption": "You don't need a great idea. Her idea was a spreadsheet.",
+      "hashtags": [
+        "#startup",
+        "#entrepreneur",
+        "#business"
+      ],
+      "keywords": [
+        "idea",
+        "what's",
+        "biggest"
+      ],
+      "retention_notes": "A curiosity-gap question gets a contrarian answer, with an emotional callback (the stars) to end on. Drop-off risk: 'Last question' at ~12 s reads like an ending.",
+      "cover_text": "The biggest lie"
+    },
+    "selected_by": "agent"
+  },
+  {
+    "i": 18,
+    "j": 24,
+    "start": 45.138,
+    "end": 66.114,
+    "duration": 20.98,
+    "factors": {
+      "hook": 70.4,
+      "retention": 79.2,
+      "emotion": 44.7,
+      "curiosity": 50.0,
+      "standalone": 100.0,
+      "visual": 84.6,
+      "loop": 15.0
+    },
+    "score": 66.9,
+    "text": "What do you mean you didn't know your numbers? I didn't know that every croissant cost me two dollars and ten cents to make. I was proud of my margins and I didn't even have margins. That's honestly the most common mistake I hear on this show. It is. Most people think they have a sales problem. Ninety per cent of the time they have a pricing problem.",
+    "first_line": "What do you mean you didn't know your numbers?",
+    "last_line": "Ninety per cent of the time they have a pricing problem.",
+    "cold_open_sentence": null,
+    "hook_type": "question",
+    "package": {
+      "title": "Most businesses don't have a sales problem",
+      "hook": "What do you mean you didn't know your numbers?",
+      "post_caption": "She was proud of her margins. She didn't have margins.",
+      "hashtags": [
+        "#pricing",
+        "#smallbusiness",
+        "#business"
+      ],
+      "keywords": [
+        "margins",
+        "problem",
+        "croissant"
+      ],
+      "retention_notes": "A short clip: question hook, a specific cost figure, and the 'ninety percent' claim as payoff. Drop-off risk: it depends on the margins line landing.",
+      "cover_text": "It's not a sales problem"
+    },
+    "selected_by": "agent"
+  },
+  {
+    "i": 25,
+    "j": 32,
+    "start": 66.706,
+    "end": 88.69,
+    "duration": 21.98,
+    "factors": {
+      "hook": 43.1,
+      "retention": 83.3,
+      "emotion": 33.8,
+      "curiosity": 22.0,
+      "standalone": 65.0,
+      "visual": 84.2,
+      "loop": 45.0
+    },
+    "score": 53.0,
+    "text": "Okay, so you close the bakery, then what? Then I moved back in with my parents. Twenty seven years old, sleeping in my childhood bedroom, with glow in the dark stars on the ceiling. No way, the stars were still up. The stars were still up. My mom refused to take them down. She said I would need them again some day. She was right, by the way.",
+    "first_line": "Okay, so you close the bakery, then what?",
+    "last_line": "She was right, by the way.",
+    "cold_open_sentence": null,
+    "hook_type": "question",
+    "package": {
+      "title": "27, broke, and back in my childhood bedroom",
+      "hook": "Okay, so you close the bakery, then what?",
+      "post_caption": "Her mom refused to take the glow-in-the-dark stars down. She was right.",
+      "hashtags": [
+        "#storytime",
+        "#entrepreneur",
+        "#business"
+      ],
+      "keywords": [
+        "stars",
+        "close",
+        "moved"
+      ],
+      "retention_notes": "An emotional story clip with a warm payoff ('She was right, by the way'). Drop-off risk: the host's setup question; the visual detail carries the middle.",
+      "cover_text": "Back in my childhood bedroom"
+    },
+    "selected_by": "agent"
+  }
+]

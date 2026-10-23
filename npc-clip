@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# NPC VIRAL STUDIO — clipping pipeline launcher. See NPC_STUDIO/CLIP_ENGINE/README.md
+HERE="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ENGINE="$HERE/NPC_STUDIO/CLIP_ENGINE"
+if [ ! -x "$ENGINE/.venv/bin/python" ]; then
+  echo "npc-clip: first run — installing dependencies and models" >&2
+  bash "$ENGINE/setup.sh" || exit 1
+fi
+PYTHONPATH="$ENGINE${PYTHONPATH:+:$PYTHONPATH}" exec "$ENGINE/.venv/bin/python" -m npc_clip.cli "$@"

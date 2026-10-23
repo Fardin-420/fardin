@@ -1,0 +1,848 @@
+{
+  "clip_id": "NPC_CLIP_01",
+  "version": 1,
+  "source": {
+    "path": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+    "url": null,
+    "name": "NPC Test Podcast",
+    "creator": null,
+    "rights": "MINE"
+  },
+  "window": {
+    "start": 132.866,
+    "end": 164.178,
+    "cold_open": true
+  },
+  "content_type": "podcast",
+  "caption_style": "hormozi",
+  "density": "high",
+  "look": "punchy",
+  "music": {
+    "mood": "pulse",
+    "level_db": -24
+  },
+  "duration": 33.433,
+  "frames": 1003,
+  "layout": {
+    "mode": "track",
+    "reason": "content-aware 9:16 crop that follows the active speaker; shots holding two separated speakers switch to split-screen",
+    "runs": [
+      {
+        "out_s": 0.0,
+        "out_e": 2.8667,
+        "mode": "track",
+        "faces_expected": true,
+        "two_faces": false
+      },
+      {
+        "out_s": 2.8667,
+        "out_e": 8.7277,
+        "mode": "split",
+        "faces_expected": true,
+        "two_faces": true
+      },
+      {
+        "out_s": 8.7277,
+        "out_e": 25.1963,
+        "mode": "track",
+        "faces_expected": true,
+        "two_faces": false
+      },
+      {
+        "out_s": 25.1963,
+        "out_e": 27.9,
+        "mode": "split",
+        "faces_expected": true,
+        "two_faces": true
+      },
+      {
+        "out_s": 27.9,
+        "out_e": 33.4333,
+        "mode": "track",
+        "faces_expected": true,
+        "two_faces": false
+      }
+    ]
+  },
+  "face_band": [
+    191,
+    619
+  ],
+  "caption_y": 1290,
+  "title_y": 1060,
+  "segments": [
+    {
+      "part": "teaser",
+      "src_s": 147.702,
+      "src_e": 150.5687,
+      "out_s": 0.0,
+      "out_e": 2.8667,
+      "frames": 86,
+      "base_zoom": 1.0
+    },
+    {
+      "part": "main",
+      "src_s": 132.806,
+      "src_e": 145.7727,
+      "out_s": 2.8667,
+      "out_e": 15.8333,
+      "frames": 389,
+      "base_zoom": 1.0
+    },
+    {
+      "part": "main",
+      "src_s": 146.37,
+      "src_e": 158.4367,
+      "out_s": 15.8333,
+      "out_e": 27.9,
+      "frames": 362,
+      "base_zoom": 1.07
+    },
+    {
+      "part": "main",
+      "src_s": 158.818,
+      "src_e": 164.3513,
+      "out_s": 27.9,
+      "out_e": 33.4333,
+      "frames": 166,
+      "base_zoom": 1.0
+    }
+  ],
+  "words": [
+    {
+      "w": "Sales",
+      "s": 0.06,
+      "e": 0.54,
+      "src": 147.762
+    },
+    {
+      "w": "went",
+      "s": 0.54,
+      "e": 0.78,
+      "src": 148.242
+    },
+    {
+      "w": "up,",
+      "s": 0.78,
+      "e": 1.26,
+      "src": 148.482
+    },
+    {
+      "w": "not",
+      "s": 1.26,
+      "e": 1.5,
+      "src": 148.962
+    },
+    {
+      "w": "down,",
+      "s": 1.5,
+      "e": 2.14,
+      "src": 149.202
+    },
+    {
+      "w": "up.",
+      "s": 2.14,
+      "e": 2.7,
+      "src": 149.842
+    },
+    {
+      "w": "When",
+      "s": 2.7,
+      "e": 2.86,
+      "src": 150.402
+    },
+    {
+      "w": "bad.",
+      "s": 2.867,
+      "e": 2.927,
+      "src": 132.066
+    },
+    {
+      "w": "Let's",
+      "s": 2.927,
+      "e": 3.247,
+      "src": 132.866
+    },
+    {
+      "w": "talk",
+      "s": 3.247,
+      "e": 3.487,
+      "src": 133.186
+    },
+    {
+      "w": "about",
+      "s": 3.487,
+      "e": 3.807,
+      "src": 133.426
+    },
+    {
+      "w": "fear,",
+      "s": 3.807,
+      "e": 4.687,
+      "src": 133.746,
+      "emph": true
+    },
+    {
+      "w": "because",
+      "s": 4.687,
+      "e": 4.927,
+      "src": 134.626
+    },
+    {
+      "w": "I",
+      "s": 4.927,
+      "e": 5.087,
+      "src": 134.866
+    },
+    {
+      "w": "think",
+      "s": 5.087,
+      "e": 5.327,
+      "src": 135.026
+    },
+    {
+      "w": "a",
+      "s": 5.407,
+      "e": 5.567,
+      "src": 135.346
+    },
+    {
+      "w": "lot",
+      "s": 5.567,
+      "e": 5.727,
+      "src": 135.506
+    },
+    {
+      "w": "of",
+      "s": 5.727,
+      "e": 5.887,
+      "src": 135.666
+    },
+    {
+      "w": "people",
+      "s": 5.887,
+      "e": 6.127,
+      "src": 135.826
+    },
+    {
+      "w": "are",
+      "s": 6.127,
+      "e": 6.367,
+      "src": 136.066
+    },
+    {
+      "w": "scared",
+      "s": 6.367,
+      "e": 6.847,
+      "src": 136.306,
+      "emph": true
+    },
+    {
+      "w": "to",
+      "s": 6.847,
+      "e": 7.007,
+      "src": 136.786
+    },
+    {
+      "w": "raise",
+      "s": 7.007,
+      "e": 7.327,
+      "src": 136.946
+    },
+    {
+      "w": "their",
+      "s": 7.327,
+      "e": 7.567,
+      "src": 137.266
+    },
+    {
+      "w": "prices.",
+      "s": 7.567,
+      "e": 8.687,
+      "src": 137.506
+    },
+    {
+      "w": "Oh,",
+      "s": 8.687,
+      "e": 9.167,
+      "src": 138.626
+    },
+    {
+      "w": "I",
+      "s": 9.167,
+      "e": 9.327,
+      "src": 139.106
+    },
+    {
+      "w": "was",
+      "s": 9.327,
+      "e": 9.567,
+      "src": 139.266
+    },
+    {
+      "w": "terrified.",
+      "s": 9.567,
+      "e": 10.527,
+      "src": 139.506,
+      "emph": true
+    },
+    {
+      "w": "The",
+      "s": 10.527,
+      "e": 10.767,
+      "src": 140.466
+    },
+    {
+      "w": "first",
+      "s": 10.767,
+      "e": 11.007,
+      "src": 140.706
+    },
+    {
+      "w": "time",
+      "s": 11.007,
+      "e": 11.247,
+      "src": 140.946
+    },
+    {
+      "w": "I",
+      "s": 11.247,
+      "e": 11.487,
+      "src": 141.186
+    },
+    {
+      "w": "raised",
+      "s": 11.487,
+      "e": 11.807,
+      "src": 141.426
+    },
+    {
+      "w": "my",
+      "s": 11.807,
+      "e": 11.967,
+      "src": 141.746
+    },
+    {
+      "w": "price",
+      "s": 11.967,
+      "e": 12.287,
+      "src": 141.906
+    },
+    {
+      "w": "from",
+      "s": 12.287,
+      "e": 12.527,
+      "src": 142.226
+    },
+    {
+      "w": "$9",
+      "s": 12.527,
+      "e": 12.767,
+      "src": 142.466
+    },
+    {
+      "w": "to",
+      "s": 12.847,
+      "e": 13.007,
+      "src": 142.786
+    },
+    {
+      "w": "$49,",
+      "s": 13.007,
+      "e": 14.207,
+      "src": 142.946
+    },
+    {
+      "w": "I",
+      "s": 14.207,
+      "e": 14.367,
+      "src": 144.146
+    },
+    {
+      "w": "thought",
+      "s": 14.367,
+      "e": 14.607,
+      "src": 144.306
+    },
+    {
+      "w": "everyone",
+      "s": 14.687,
+      "e": 15.087,
+      "src": 144.626,
+      "emph": true
+    },
+    {
+      "w": "would",
+      "s": 15.087,
+      "e": 15.247,
+      "src": 145.026
+    },
+    {
+      "w": "leave.",
+      "s": 15.247,
+      "e": 15.727,
+      "src": 145.186
+    },
+    {
+      "w": "And",
+      "s": 15.913,
+      "e": 16.153,
+      "src": 146.45
+    },
+    {
+      "w": "did",
+      "s": 16.153,
+      "e": 16.313,
+      "src": 146.69
+    },
+    {
+      "w": "they?",
+      "s": 16.313,
+      "e": 16.713,
+      "src": 146.85
+    },
+    {
+      "w": "Sales",
+      "s": 17.225,
+      "e": 17.705,
+      "src": 147.762
+    },
+    {
+      "w": "went",
+      "s": 17.705,
+      "e": 17.945,
+      "src": 148.242
+    },
+    {
+      "w": "up,",
+      "s": 17.945,
+      "e": 18.425,
+      "src": 148.482
+    },
+    {
+      "w": "not",
+      "s": 18.425,
+      "e": 18.665,
+      "src": 148.962
+    },
+    {
+      "w": "down,",
+      "s": 18.665,
+      "e": 19.305,
+      "src": 149.202
+    },
+    {
+      "w": "up.",
+      "s": 19.305,
+      "e": 19.865,
+      "src": 149.842
+    },
+    {
+      "w": "When",
+      "s": 19.865,
+      "e": 20.025,
+      "src": 150.402
+    },
+    {
+      "w": "it",
+      "s": 20.025,
+      "e": 20.105,
+      "src": 150.562
+    },
+    {
+      "w": "was",
+      "s": 20.105,
+      "e": 20.265,
+      "src": 150.642
+    },
+    {
+      "w": "cheap,",
+      "s": 20.265,
+      "e": 20.745,
+      "src": 150.802
+    },
+    {
+      "w": "people",
+      "s": 20.745,
+      "e": 20.985,
+      "src": 151.282
+    },
+    {
+      "w": "didn't",
+      "s": 20.985,
+      "e": 21.305,
+      "src": 151.522
+    },
+    {
+      "w": "trust",
+      "s": 21.305,
+      "e": 21.625,
+      "src": 151.842
+    },
+    {
+      "w": "it.",
+      "s": 21.625,
+      "e": 22.105,
+      "src": 152.162
+    },
+    {
+      "w": "When",
+      "s": 22.105,
+      "e": 22.265,
+      "src": 152.642
+    },
+    {
+      "w": "it",
+      "s": 22.265,
+      "e": 22.345,
+      "src": 152.802
+    },
+    {
+      "w": "was",
+      "s": 22.345,
+      "e": 22.505,
+      "src": 152.882
+    },
+    {
+      "w": "forty-nine",
+      "s": 22.505,
+      "e": 23.145,
+      "src": 153.042
+    },
+    {
+      "w": "dollars,",
+      "s": 23.145,
+      "e": 23.625,
+      "src": 153.682
+    },
+    {
+      "w": "they",
+      "s": 23.625,
+      "e": 23.785,
+      "src": 154.162
+    },
+    {
+      "w": "assumed",
+      "s": 23.785,
+      "e": 24.185,
+      "src": 154.322
+    },
+    {
+      "w": "it",
+      "s": 24.185,
+      "e": 24.345,
+      "src": 154.722
+    },
+    {
+      "w": "worked.",
+      "s": 24.345,
+      "e": 25.145,
+      "src": 154.882
+    },
+    {
+      "w": "That",
+      "s": 25.145,
+      "e": 25.385,
+      "src": 155.682
+    },
+    {
+      "w": "is",
+      "s": 25.385,
+      "e": 25.625,
+      "src": 155.922
+    },
+    {
+      "w": "wild.",
+      "s": 25.625,
+      "e": 26.265,
+      "src": 156.162,
+      "emph": true
+    },
+    {
+      "w": "Cheaper",
+      "s": 26.265,
+      "e": 26.825,
+      "src": 156.802
+    },
+    {
+      "w": "made",
+      "s": 26.825,
+      "e": 26.985,
+      "src": 157.362
+    },
+    {
+      "w": "it",
+      "s": 26.985,
+      "e": 27.065,
+      "src": 157.522
+    },
+    {
+      "w": "look",
+      "s": 27.065,
+      "e": 27.225,
+      "src": 157.602
+    },
+    {
+      "w": "worse.",
+      "s": 27.225,
+      "e": 27.785,
+      "src": 157.762
+    },
+    {
+      "w": "Cheap",
+      "s": 27.98,
+      "e": 28.54,
+      "src": 158.898
+    },
+    {
+      "w": "tells",
+      "s": 28.54,
+      "e": 28.78,
+      "src": 159.458
+    },
+    {
+      "w": "people",
+      "s": 28.78,
+      "e": 29.02,
+      "src": 159.698
+    },
+    {
+      "w": "you",
+      "s": 29.02,
+      "e": 29.18,
+      "src": 159.938
+    },
+    {
+      "w": "don't",
+      "s": 29.18,
+      "e": 29.42,
+      "src": 160.098
+    },
+    {
+      "w": "believe",
+      "s": 29.42,
+      "e": 29.74,
+      "src": 160.338
+    },
+    {
+      "w": "in",
+      "s": 29.74,
+      "e": 29.9,
+      "src": 160.658
+    },
+    {
+      "w": "it",
+      "s": 29.9,
+      "e": 30.06,
+      "src": 160.818
+    },
+    {
+      "w": "either.",
+      "s": 30.06,
+      "e": 30.7,
+      "src": 160.978
+    },
+    {
+      "w": "Price",
+      "s": 30.7,
+      "e": 31.1,
+      "src": 161.618
+    },
+    {
+      "w": "is",
+      "s": 31.1,
+      "e": 31.26,
+      "src": 162.018
+    },
+    {
+      "w": "a",
+      "s": 31.26,
+      "e": 31.34,
+      "src": 162.178
+    },
+    {
+      "w": "message,",
+      "s": 31.34,
+      "e": 32.06,
+      "src": 162.258
+    },
+    {
+      "w": "not",
+      "s": 32.06,
+      "e": 32.22,
+      "src": 162.978
+    },
+    {
+      "w": "just",
+      "s": 32.22,
+      "e": 32.46,
+      "src": 163.138
+    },
+    {
+      "w": "a",
+      "s": 32.46,
+      "e": 32.62,
+      "src": 163.378
+    },
+    {
+      "w": "number.",
+      "s": 32.62,
+      "e": 33.26,
+      "src": 163.538
+    },
+    {
+      "w": "What's",
+      "s": 33.26,
+      "e": 33.433,
+      "src": 164.178
+    }
+  ],
+  "zooms": [
+    {
+      "t": 3.767,
+      "type": "punch",
+      "amount": 0.14,
+      "attack": 0.12,
+      "hold": 1.8,
+      "release": 0.45,
+      "word": "fear,"
+    },
+    {
+      "t": 9.527,
+      "type": "punch",
+      "amount": 0.14,
+      "attack": 0.12,
+      "hold": 1.8,
+      "release": 0.45,
+      "word": "terrified."
+    },
+    {
+      "t": 14.647,
+      "type": "punch",
+      "amount": 0.14,
+      "attack": 0.12,
+      "hold": 1.8,
+      "release": 0.45,
+      "word": "everyone"
+    },
+    {
+      "t": 25.585,
+      "type": "punch",
+      "amount": 0.14,
+      "attack": 0.12,
+      "hold": 1.8,
+      "release": 0.45,
+      "word": "wild."
+    }
+  ],
+  "transitions": [
+    {
+      "t": 2.867,
+      "type": "whip",
+      "frames": 8
+    }
+  ],
+  "sfx": [
+    {
+      "t": 2.667,
+      "type": "whoosh",
+      "gain_db": -14
+    },
+    {
+      "t": 3.767,
+      "type": "impact",
+      "gain_db": -20
+    },
+    {
+      "t": 9.527,
+      "type": "impact",
+      "gain_db": -20
+    },
+    {
+      "t": 14.647,
+      "type": "impact",
+      "gain_db": -20
+    },
+    {
+      "t": 12.527,
+      "type": "pop",
+      "gain_db": -18
+    },
+    {
+      "t": 13.007,
+      "type": "pop",
+      "gain_db": -18
+    }
+  ],
+  "graphics": [
+    {
+      "type": "progress_bar",
+      "color": "#3CFF5A"
+    },
+    {
+      "type": "title_card",
+      "text": "Price 5x. Sales went up.",
+      "y": 1060,
+      "dur": 2.67
+    },
+    {
+      "type": "stat",
+      "t": 12.527,
+      "value": "$9",
+      "label": "",
+      "y": 1060
+    },
+    {
+      "type": "stat",
+      "t": 13.007,
+      "value": "$49",
+      "label": "",
+      "y": 1060
+    },
+    {
+      "type": "keyword_pop",
+      "t": 9.567,
+      "word": "terrified",
+      "y": 1080
+    },
+    {
+      "type": "watermark",
+      "text": "NPC"
+    }
+  ],
+  "cut_times": [
+    2.8667,
+    15.8333,
+    27.9
+  ],
+  "score": 72.3,
+  "factors": {
+    "hook": 50.9,
+    "retention": 90.4,
+    "emotion": 73.3,
+    "curiosity": 66.0,
+    "standalone": 90.0,
+    "visual": 93.6,
+    "loop": 45.0
+  },
+  "hook_type": "statement",
+  "package": {
+    "title": "I raised my price 5x and sales went UP",
+    "hook": "Sales went up, not down, up.",
+    "post_caption": "She was terrified to go from $9 to $49. Then this happened.",
+    "hashtags": [
+      "#pricing",
+      "#smallbusiness",
+      "#entrepreneur",
+      "#business"
+    ],
+    "keywords": [
+      "cheap",
+      "price",
+      "talk"
+    ],
+    "retention_notes": "Cold-opens on the payoff line, then rewinds to the fear setup, so viewers stay to see why. 'Price is a message' is a quotable close that loops back to the opening. Drop-off risk: the host's 'Let's talk about fear' setup at ~3 s.",
+    "cover_text": "Price 5x. Sales went up."
+  },
+  "selected_by": "agent"
+}

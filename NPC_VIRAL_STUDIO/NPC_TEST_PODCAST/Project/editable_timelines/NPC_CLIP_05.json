@@ -1,0 +1,576 @@
+{
+  "clip_id": "NPC_CLIP_05",
+  "version": 1,
+  "source": {
+    "path": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+    "url": null,
+    "name": "NPC Test Podcast",
+    "creator": null,
+    "rights": "MINE"
+  },
+  "window": {
+    "start": 164.178,
+    "end": 186.018,
+    "cold_open": false
+  },
+  "content_type": "podcast",
+  "caption_style": "hormozi",
+  "density": "high",
+  "look": "punchy",
+  "music": {
+    "mood": "pulse",
+    "level_db": -24
+  },
+  "duration": 22.067,
+  "frames": 662,
+  "layout": {
+    "mode": "track",
+    "reason": "content-aware 9:16 crop that follows the active speaker; shots holding two separated speakers switch to split-screen",
+    "runs": [
+      {
+        "out_s": 0.0,
+        "out_e": 12.349,
+        "mode": "track",
+        "faces_expected": true,
+        "two_faces": false
+      },
+      {
+        "out_s": 12.349,
+        "out_e": 15.749,
+        "mode": "split",
+        "faces_expected": true,
+        "two_faces": true
+      },
+      {
+        "out_s": 15.749,
+        "out_e": 22.0667,
+        "mode": "track",
+        "faces_expected": true,
+        "two_faces": false
+      }
+    ]
+  },
+  "face_band": [
+    193,
+    619
+  ],
+  "caption_y": 1290,
+  "title_y": 1060,
+  "segments": [
+    {
+      "part": "main",
+      "src_s": 164.118,
+      "src_e": 186.1847,
+      "out_s": 0.0,
+      "out_e": 22.0667,
+      "frames": 662,
+      "base_zoom": 1.0
+    }
+  ],
+  "words": [
+    {
+      "w": "number.",
+      "s": 0.0,
+      "e": 0.06,
+      "src": 163.538
+    },
+    {
+      "w": "What's",
+      "s": 0.06,
+      "e": 0.38,
+      "src": 164.178
+    },
+    {
+      "w": "the",
+      "s": 0.38,
+      "e": 0.54,
+      "src": 164.498
+    },
+    {
+      "w": "biggest",
+      "s": 0.54,
+      "e": 1.02,
+      "src": 164.658,
+      "emph": true
+    },
+    {
+      "w": "lie",
+      "s": 1.02,
+      "e": 1.42,
+      "src": 165.138
+    },
+    {
+      "w": "people",
+      "s": 1.42,
+      "e": 1.66,
+      "src": 165.538
+    },
+    {
+      "w": "believe",
+      "s": 1.74,
+      "e": 2.22,
+      "src": 165.858
+    },
+    {
+      "w": "about",
+      "s": 2.22,
+      "e": 2.46,
+      "src": 166.338
+    },
+    {
+      "w": "starting",
+      "s": 2.46,
+      "e": 2.86,
+      "src": 166.578
+    },
+    {
+      "w": "a",
+      "s": 2.86,
+      "e": 2.94,
+      "src": 166.978
+    },
+    {
+      "w": "business?",
+      "s": 2.94,
+      "e": 3.58,
+      "src": 167.058
+    },
+    {
+      "w": "That",
+      "s": 4.14,
+      "e": 4.38,
+      "src": 168.258
+    },
+    {
+      "w": "you",
+      "s": 4.38,
+      "e": 4.54,
+      "src": 168.498
+    },
+    {
+      "w": "need",
+      "s": 4.54,
+      "e": 4.7,
+      "src": 168.658
+    },
+    {
+      "w": "a",
+      "s": 4.7,
+      "e": 4.78,
+      "src": 168.818
+    },
+    {
+      "w": "great",
+      "s": 4.78,
+      "e": 5.02,
+      "src": 168.898
+    },
+    {
+      "w": "idea.",
+      "s": 5.02,
+      "e": 5.82,
+      "src": 169.138
+    },
+    {
+      "w": "You",
+      "s": 5.82,
+      "e": 5.98,
+      "src": 169.938
+    },
+    {
+      "w": "don't.",
+      "s": 5.98,
+      "e": 6.62,
+      "src": 170.098
+    },
+    {
+      "w": "My",
+      "s": 6.62,
+      "e": 6.94,
+      "src": 170.738
+    },
+    {
+      "w": "idea",
+      "s": 6.94,
+      "e": 7.42,
+      "src": 171.058
+    },
+    {
+      "w": "was",
+      "s": 7.42,
+      "e": 7.58,
+      "src": 171.538
+    },
+    {
+      "w": "a",
+      "s": 7.58,
+      "e": 7.74,
+      "src": 171.698
+    },
+    {
+      "w": "spreadsheet.",
+      "s": 7.74,
+      "e": 8.62,
+      "src": 171.858
+    },
+    {
+      "w": "You",
+      "s": 8.62,
+      "e": 8.78,
+      "src": 172.738
+    },
+    {
+      "w": "need",
+      "s": 8.78,
+      "e": 8.94,
+      "src": 172.898
+    },
+    {
+      "w": "a",
+      "s": 8.94,
+      "e": 9.02,
+      "src": 173.058
+    },
+    {
+      "w": "painful",
+      "s": 9.02,
+      "e": 9.58,
+      "src": 173.138,
+      "emph": true
+    },
+    {
+      "w": "problem",
+      "s": 9.58,
+      "e": 9.9,
+      "src": 173.698
+    },
+    {
+      "w": "and",
+      "s": 9.98,
+      "e": 10.14,
+      "src": 174.098
+    },
+    {
+      "w": "the",
+      "s": 10.14,
+      "e": 10.22,
+      "src": 174.258
+    },
+    {
+      "w": "guts",
+      "s": 10.22,
+      "e": 10.62,
+      "src": 174.338
+    },
+    {
+      "w": "to",
+      "s": 10.62,
+      "e": 10.78,
+      "src": 174.738
+    },
+    {
+      "w": "charge",
+      "s": 10.78,
+      "e": 11.1,
+      "src": 174.898
+    },
+    {
+      "w": "for",
+      "s": 11.1,
+      "e": 11.34,
+      "src": 175.218
+    },
+    {
+      "w": "fixing",
+      "s": 11.34,
+      "e": 11.74,
+      "src": 175.458
+    },
+    {
+      "w": "it.",
+      "s": 11.74,
+      "e": 12.38,
+      "src": 175.858
+    },
+    {
+      "w": "Last",
+      "s": 12.38,
+      "e": 12.78,
+      "src": 176.498
+    },
+    {
+      "w": "question.",
+      "s": 12.78,
+      "e": 13.5,
+      "src": 176.898
+    },
+    {
+      "w": "Would",
+      "s": 13.5,
+      "e": 13.74,
+      "src": 177.618
+    },
+    {
+      "w": "you",
+      "s": 13.74,
+      "e": 13.9,
+      "src": 177.858
+    },
+    {
+      "w": "open",
+      "s": 13.9,
+      "e": 14.14,
+      "src": 178.018
+    },
+    {
+      "w": "the",
+      "s": 14.22,
+      "e": 14.38,
+      "src": 178.338
+    },
+    {
+      "w": "bakery",
+      "s": 14.38,
+      "e": 15.1,
+      "src": 178.498,
+      "emph": true
+    },
+    {
+      "w": "again?",
+      "s": 15.1,
+      "e": 15.74,
+      "src": 179.218
+    },
+    {
+      "w": "Honestly,",
+      "s": 15.74,
+      "e": 16.54,
+      "src": 179.858
+    },
+    {
+      "w": "yes.",
+      "s": 16.54,
+      "e": 17.26,
+      "src": 180.658
+    },
+    {
+      "w": "But",
+      "s": 17.26,
+      "e": 17.5,
+      "src": 181.378
+    },
+    {
+      "w": "this",
+      "s": 17.5,
+      "e": 17.66,
+      "src": 181.618
+    },
+    {
+      "w": "time",
+      "s": 17.66,
+      "e": 17.9,
+      "src": 181.778
+    },
+    {
+      "w": "I",
+      "s": 17.98,
+      "e": 18.14,
+      "src": 182.098
+    },
+    {
+      "w": "would",
+      "s": 18.14,
+      "e": 18.3,
+      "src": 182.258
+    },
+    {
+      "w": "know",
+      "s": 18.3,
+      "e": 18.54,
+      "src": 182.418
+    },
+    {
+      "w": "my",
+      "s": 18.54,
+      "e": 18.78,
+      "src": 182.658
+    },
+    {
+      "w": "numbers",
+      "s": 18.78,
+      "e": 19.18,
+      "src": 182.898
+    },
+    {
+      "w": "on",
+      "s": 19.18,
+      "e": 19.42,
+      "src": 183.298
+    },
+    {
+      "w": "day",
+      "s": 19.42,
+      "e": 19.66,
+      "src": 183.538
+    },
+    {
+      "w": "one,",
+      "s": 19.66,
+      "e": 20.14,
+      "src": 183.778
+    },
+    {
+      "w": "and",
+      "s": 20.14,
+      "e": 20.3,
+      "src": 184.258
+    },
+    {
+      "w": "I",
+      "s": 20.3,
+      "e": 20.46,
+      "src": 184.418
+    },
+    {
+      "w": "would",
+      "s": 20.46,
+      "e": 20.62,
+      "src": 184.578
+    },
+    {
+      "w": "put",
+      "s": 20.62,
+      "e": 20.7,
+      "src": 184.738
+    },
+    {
+      "w": "the",
+      "s": 20.7,
+      "e": 20.86,
+      "src": 184.818
+    },
+    {
+      "w": "stars",
+      "s": 20.86,
+      "e": 21.26,
+      "src": 184.978
+    },
+    {
+      "w": "in",
+      "s": 21.26,
+      "e": 21.34,
+      "src": 185.378
+    },
+    {
+      "w": "the",
+      "s": 21.34,
+      "e": 21.5,
+      "src": 185.458
+    },
+    {
+      "w": "shop.",
+      "s": 21.5,
+      "e": 21.9,
+      "src": 185.618
+    }
+  ],
+  "zooms": [
+    {
+      "t": 0.5,
+      "type": "punch",
+      "amount": 0.14,
+      "attack": 0.12,
+      "hold": 1.8,
+      "release": 0.45,
+      "word": "biggest"
+    },
+    {
+      "t": 8.98,
+      "type": "punch",
+      "amount": 0.14,
+      "attack": 0.12,
+      "hold": 1.8,
+      "release": 0.45,
+      "word": "painful"
+    },
+    {
+      "t": 14.34,
+      "type": "punch",
+      "amount": 0.14,
+      "attack": 0.12,
+      "hold": 1.8,
+      "release": 0.45,
+      "word": "bakery"
+    }
+  ],
+  "transitions": [],
+  "sfx": [
+    {
+      "t": 0.5,
+      "type": "impact",
+      "gain_db": -20
+    },
+    {
+      "t": 8.98,
+      "type": "impact",
+      "gain_db": -20
+    },
+    {
+      "t": 14.34,
+      "type": "impact",
+      "gain_db": -20
+    }
+  ],
+  "graphics": [
+    {
+      "type": "progress_bar",
+      "color": "#3CFF5A"
+    },
+    {
+      "type": "title_card",
+      "text": "The biggest lie",
+      "y": 1060,
+      "dur": 1.8
+    },
+    {
+      "type": "keyword_pop",
+      "t": 9.02,
+      "word": "painful",
+      "y": 1080
+    },
+    {
+      "type": "watermark",
+      "text": "NPC"
+    }
+  ],
+  "cut_times": [],
+  "score": 69.4,
+  "factors": {
+    "hook": 75.3,
+    "retention": 85.7,
+    "emotion": 47.2,
+    "curiosity": 54.0,
+    "standalone": 90.0,
+    "visual": 84.7,
+    "loop": 15.0
+  },
+  "hook_type": "question",
+  "package": {
+    "title": "The biggest lie about starting a business",
+    "hook": "What's the biggest lie people believe about starting a business?",
+    "post_caption": "You don't need a great idea. Her idea was a spreadsheet.",
+    "hashtags": [
+      "#startup",
+      "#entrepreneur",
+      "#business"
+    ],
+    "keywords": [
+      "idea",
+      "what's",
+      "biggest"
+    ],
+    "retention_notes": "A curiosity-gap question gets a contrarian answer, with an emotional callback (the stars) to end on. Drop-off risk: 'Last question' at ~12 s reads like an ending.",
+    "cover_text": "The biggest lie"
+  },
+  "selected_by": "agent"
+}

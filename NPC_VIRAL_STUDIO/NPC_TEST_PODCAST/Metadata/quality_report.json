@@ -1,0 +1,439 @@
+{
+  "generated": "2026-10-23T15:30:42",
+  "clips": [
+    {
+      "file": "NPC_CLIP_01.mp4",
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "vcodec": "h264",
+        "pix_fmt": "yuv420p",
+        "fps": 30.0,
+        "frames": 1003,
+        "v_dur": 33.433333,
+        "acodec": "aac",
+        "a_sr": 48000,
+        "a_ch": 2,
+        "a_dur": 33.433,
+        "size_mb": 35.0
+      },
+      "loudness": {
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -1.7
+      },
+      "black_freeze": {
+        "black_segments": [],
+        "freezes_s": []
+      },
+      "silences_s": [],
+      "cropdetect": "1080:1920:0:0",
+      "faces": {
+        "faces_seen": 15,
+        "faces_cut_at_edge": 0,
+        "faces_under_captions": 0,
+        "missing_expected_face_at_s": []
+      },
+      "captions": {
+        "mismatched_vs_transcript": [],
+        "dictionary_unknown": [],
+        "note": "dictionary_unknown words need a human/agent check (names and slang are often valid); fix real errors with --fix-word WRONG=RIGHT"
+      },
+      "checks": {
+        "dimensions_1080x1920": true,
+        "h264_yuv420p": true,
+        "fps_30": true,
+        "aac_48k_stereo": true,
+        "duration_matches_timeline": true,
+        "av_in_sync_length": true,
+        "loudness_-14_lufs": true,
+        "true_peak_le_-1_dbfs": true,
+        "no_black_frames": true,
+        "no_frozen_video_over_3s": true,
+        "no_dead_air_over_1_5s": true,
+        "no_letterbox_bars": true,
+        "no_faces_cut_at_edges": true,
+        "captions_clear_of_faces": true,
+        "subject_visible_in_every_panel": true,
+        "captions_match_transcript": true
+      },
+      "passed": true,
+      "contact_sheet": "NPC_CLIP_01_contact_sheet.jpg",
+      "review_type": "automated checks + contact sheet; no human review implied",
+      "repairs": [],
+      "render_seconds": 175.5,
+      "clip": "NPC_CLIP_01"
+    },
+    {
+      "file": "NPC_CLIP_02.mp4",
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "vcodec": "h264",
+        "pix_fmt": "yuv420p",
+        "fps": 30.0,
+        "frames": 854,
+        "v_dur": 28.466667,
+        "acodec": "aac",
+        "a_sr": 48000,
+        "a_ch": 2,
+        "a_dur": 28.466,
+        "size_mb": 29.61
+      },
+      "loudness": {
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -1.7
+      },
+      "black_freeze": {
+        "black_segments": [],
+        "freezes_s": []
+      },
+      "silences_s": [],
+      "cropdetect": "1080:1920:0:0",
+      "faces": {
+        "faces_seen": 16,
+        "faces_cut_at_edge": 0,
+        "faces_under_captions": 0,
+        "missing_expected_face_at_s": []
+      },
+      "captions": {
+        "mismatched_vs_transcript": [],
+        "dictionary_unknown": [],
+        "note": "dictionary_unknown words need a human/agent check (names and slang are often valid); fix real errors with --fix-word WRONG=RIGHT"
+      },
+      "checks": {
+        "dimensions_1080x1920": true,
+        "h264_yuv420p": true,
+        "fps_30": true,
+        "aac_48k_stereo": true,
+        "duration_matches_timeline": true,
+        "av_in_sync_length": true,
+        "loudness_-14_lufs": true,
+        "true_peak_le_-1_dbfs": true,
+        "no_black_frames": true,
+        "no_frozen_video_over_3s": true,
+        "no_dead_air_over_1_5s": true,
+        "no_letterbox_bars": true,
+        "no_faces_cut_at_edges": true,
+        "captions_clear_of_faces": true,
+        "subject_visible_in_every_panel": true,
+        "captions_match_transcript": true
+      },
+      "passed": true,
+      "contact_sheet": "NPC_CLIP_02_contact_sheet.jpg",
+      "review_type": "automated checks + contact sheet; no human review implied",
+      "repairs": [],
+      "render_seconds": 165.3,
+      "clip": "NPC_CLIP_02"
+    },
+    {
+      "file": "NPC_CLIP_03.mp4",
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "vcodec": "h264",
+        "pix_fmt": "yuv420p",
+        "fps": 30.0,
+        "frames": 709,
+        "v_dur": 23.633333,
+        "acodec": "aac",
+        "a_sr": 48000,
+        "a_ch": 2,
+        "a_dur": 23.633,
+        "size_mb": 25.31
+      },
+      "loudness": {
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -1.7
+      },
+      "black_freeze": {
+        "black_segments": [],
+        "freezes_s": []
+      },
+      "silences_s": [],
+      "cropdetect": "1080:1920:0:0",
+      "faces": {
+        "faces_seen": 12,
+        "faces_cut_at_edge": 0,
+        "faces_under_captions": 0,
+        "missing_expected_face_at_s": []
+      },
+      "captions": {
+        "mismatched_vs_transcript": [],
+        "dictionary_unknown": [],
+        "note": "dictionary_unknown words need a human/agent check (names and slang are often valid); fix real errors with --fix-word WRONG=RIGHT"
+      },
+      "checks": {
+        "dimensions_1080x1920": true,
+        "h264_yuv420p": true,
+        "fps_30": true,
+        "aac_48k_stereo": true,
+        "duration_matches_timeline": true,
+        "av_in_sync_length": true,
+        "loudness_-14_lufs": true,
+        "true_peak_le_-1_dbfs": true,
+        "no_black_frames": true,
+        "no_frozen_video_over_3s": true,
+        "no_dead_air_over_1_5s": true,
+        "no_letterbox_bars": true,
+        "no_faces_cut_at_edges": true,
+        "captions_clear_of_faces": true,
+        "subject_visible_in_every_panel": true,
+        "captions_match_transcript": true
+      },
+      "passed": true,
+      "contact_sheet": "NPC_CLIP_03_contact_sheet.jpg",
+      "review_type": "automated checks + contact sheet; no human review implied",
+      "repairs": [],
+      "render_seconds": 132.9,
+      "clip": "NPC_CLIP_03"
+    },
+    {
+      "file": "NPC_CLIP_04.mp4",
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "vcodec": "h264",
+        "pix_fmt": "yuv420p",
+        "fps": 30.0,
+        "frames": 734,
+        "v_dur": 24.466667,
+        "acodec": "aac",
+        "a_sr": 48000,
+        "a_ch": 2,
+        "a_dur": 24.466,
+        "size_mb": 24.3
+      },
+      "loudness": {
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -1.8
+      },
+      "black_freeze": {
+        "black_segments": [],
+        "freezes_s": []
+      },
+      "silences_s": [],
+      "cropdetect": "1080:1920:0:0",
+      "faces": {
+        "faces_seen": 15,
+        "faces_cut_at_edge": 0,
+        "faces_under_captions": 0,
+        "missing_expected_face_at_s": []
+      },
+      "captions": {
+        "mismatched_vs_transcript": [],
+        "dictionary_unknown": [],
+        "note": "dictionary_unknown words need a human/agent check (names and slang are often valid); fix real errors with --fix-word WRONG=RIGHT"
+      },
+      "checks": {
+        "dimensions_1080x1920": true,
+        "h264_yuv420p": true,
+        "fps_30": true,
+        "aac_48k_stereo": true,
+        "duration_matches_timeline": true,
+        "av_in_sync_length": true,
+        "loudness_-14_lufs": true,
+        "true_peak_le_-1_dbfs": true,
+        "no_black_frames": true,
+        "no_frozen_video_over_3s": true,
+        "no_dead_air_over_1_5s": true,
+        "no_letterbox_bars": true,
+        "no_faces_cut_at_edges": true,
+        "captions_clear_of_faces": true,
+        "subject_visible_in_every_panel": true,
+        "captions_match_transcript": true
+      },
+      "passed": true,
+      "contact_sheet": "NPC_CLIP_04_contact_sheet.jpg",
+      "review_type": "automated checks + contact sheet; no human review implied",
+      "repairs": [],
+      "render_seconds": 129.1,
+      "clip": "NPC_CLIP_04"
+    },
+    {
+      "file": "NPC_CLIP_05.mp4",
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "vcodec": "h264",
+        "pix_fmt": "yuv420p",
+        "fps": 30.0,
+        "frames": 662,
+        "v_dur": 22.066667,
+        "acodec": "aac",
+        "a_sr": 48000,
+        "a_ch": 2,
+        "a_dur": 22.066,
+        "size_mb": 23.6
+      },
+      "loudness": {
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -1.8
+      },
+      "black_freeze": {
+        "black_segments": [],
+        "freezes_s": []
+      },
+      "silences_s": [],
+      "cropdetect": "1080:1920:0:0",
+      "faces": {
+        "faces_seen": 14,
+        "faces_cut_at_edge": 0,
+        "faces_under_captions": 0,
+        "missing_expected_face_at_s": []
+      },
+      "captions": {
+        "mismatched_vs_transcript": [],
+        "dictionary_unknown": [],
+        "note": "dictionary_unknown words need a human/agent check (names and slang are often valid); fix real errors with --fix-word WRONG=RIGHT"
+      },
+      "checks": {
+        "dimensions_1080x1920": true,
+        "h264_yuv420p": true,
+        "fps_30": true,
+        "aac_48k_stereo": true,
+        "duration_matches_timeline": true,
+        "av_in_sync_length": true,
+        "loudness_-14_lufs": true,
+        "true_peak_le_-1_dbfs": true,
+        "no_black_frames": true,
+        "no_frozen_video_over_3s": true,
+        "no_dead_air_over_1_5s": true,
+        "no_letterbox_bars": true,
+        "no_faces_cut_at_edges": true,
+        "captions_clear_of_faces": true,
+        "subject_visible_in_every_panel": true,
+        "captions_match_transcript": true
+      },
+      "passed": true,
+      "contact_sheet": "NPC_CLIP_05_contact_sheet.jpg",
+      "review_type": "automated checks + contact sheet; no human review implied",
+      "repairs": [],
+      "render_seconds": 119.9,
+      "clip": "NPC_CLIP_05"
+    },
+    {
+      "file": "NPC_CLIP_06.mp4",
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "vcodec": "h264",
+        "pix_fmt": "yuv420p",
+        "fps": 30.0,
+        "frames": 633,
+        "v_dur": 21.1,
+        "acodec": "aac",
+        "a_sr": 48000,
+        "a_ch": 2,
+        "a_dur": 21.1,
+        "size_mb": 21.84
+      },
+      "loudness": {
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -1.8
+      },
+      "black_freeze": {
+        "black_segments": [],
+        "freezes_s": []
+      },
+      "silences_s": [],
+      "cropdetect": "1080:1920:0:0",
+      "faces": {
+        "faces_seen": 16,
+        "faces_cut_at_edge": 0,
+        "faces_under_captions": 0,
+        "missing_expected_face_at_s": []
+      },
+      "captions": {
+        "mismatched_vs_transcript": [],
+        "dictionary_unknown": [],
+        "note": "dictionary_unknown words need a human/agent check (names and slang are often valid); fix real errors with --fix-word WRONG=RIGHT"
+      },
+      "checks": {
+        "dimensions_1080x1920": true,
+        "h264_yuv420p": true,
+        "fps_30": true,
+        "aac_48k_stereo": true,
+        "duration_matches_timeline": true,
+        "av_in_sync_length": true,
+        "loudness_-14_lufs": true,
+        "true_peak_le_-1_dbfs": true,
+        "no_black_frames": true,
+        "no_frozen_video_over_3s": true,
+        "no_dead_air_over_1_5s": true,
+        "no_letterbox_bars": true,
+        "no_faces_cut_at_edges": true,
+        "captions_clear_of_faces": true,
+        "subject_visible_in_every_panel": true,
+        "captions_match_transcript": true
+      },
+      "passed": true,
+      "contact_sheet": "NPC_CLIP_06_contact_sheet.jpg",
+      "review_type": "automated checks + contact sheet; no human review implied",
+      "repairs": [],
+      "render_seconds": 116.0,
+      "clip": "NPC_CLIP_06"
+    },
+    {
+      "file": "NPC_CLIP_07.mp4",
+      "probe": {
+        "width": 1080,
+        "height": 1920,
+        "vcodec": "h264",
+        "pix_fmt": "yuv420p",
+        "fps": 30.0,
+        "frames": 644,
+        "v_dur": 21.466667,
+        "acodec": "aac",
+        "a_sr": 48000,
+        "a_ch": 2,
+        "a_dur": 21.466,
+        "size_mb": 22.03
+      },
+      "loudness": {
+        "integrated_lufs": -14.0,
+        "true_peak_dbfs": -1.8
+      },
+      "black_freeze": {
+        "black_segments": [],
+        "freezes_s": []
+      },
+      "silences_s": [],
+      "cropdetect": "1080:1920:0:0",
+      "faces": {
+        "faces_seen": 16,
+        "faces_cut_at_edge": 0,
+        "faces_under_captions": 0,
+        "missing_expected_face_at_s": []
+      },
+      "captions": {
+        "mismatched_vs_transcript": [],
+        "dictionary_unknown": [],
+        "note": "dictionary_unknown words need a human/agent check (names and slang are often valid); fix real errors with --fix-word WRONG=RIGHT"
+      },
+      "checks": {
+        "dimensions_1080x1920": true,
+        "h264_yuv420p": true,
+        "fps_30": true,
+        "aac_48k_stereo": true,
+        "duration_matches_timeline": true,
+        "av_in_sync_length": true,
+        "loudness_-14_lufs": true,
+        "true_peak_le_-1_dbfs": true,
+        "no_black_frames": true,
+        "no_frozen_video_over_3s": true,
+        "no_dead_air_over_1_5s": true,
+        "no_letterbox_bars": true,
+        "no_faces_cut_at_edges": true,
+        "captions_clear_of_faces": true,
+        "subject_visible_in_every_panel": true,
+        "captions_match_transcript": true
+      },
+      "passed": true,
+      "contact_sheet": "NPC_CLIP_07_contact_sheet.jpg",
+      "review_type": "automated checks + contact sheet; no human review implied",
+      "repairs": [],
+      "render_seconds": 68.9,
+      "clip": "NPC_CLIP_07"
+    }
+  ]
+}

@@ -1,0 +1,128 @@
+[
+  {
+    "project": "NPC_TEST_PODCAST",
+    "clip": "NPC_CLIP_01",
+    "title": "I raised my price 5x and sales went UP",
+    "duration": 33.433,
+    "hook_type": "statement",
+    "caption_style": "hormozi",
+    "density": "high",
+    "content_type": "podcast",
+    "layout": "track",
+    "score": 72.3,
+    "creator": null,
+    "topic": [
+      "cheap",
+      "price",
+      "talk"
+    ]
+  },
+  {
+    "project": "NPC_TEST_PODCAST",
+    "clip": "NPC_CLIP_02",
+    "title": "My bakery lost 70% in six weeks. It wasn't the competition.",
+    "duration": 28.467,
+    "hook_type": "statement",
+    "caption_style": "high_energy_podcast",
+    "density": "high",
+    "content_type": "podcast",
+    "layout": "track",
+    "score": 70.6,
+    "creator": null,
+    "topic": [
+      "chain",
+      "opened",
+      "across"
+    ]
+  },
+  {
+    "project": "NPC_TEST_PODCAST",
+    "clip": "NPC_CLIP_03",
+    "title": "Do this tonight if your business is struggling",
+    "duration": 23.633,
+    "hook_type": "statement",
+    "caption_style": "bold_viral",
+    "density": "high",
+    "content_type": "podcast",
+    "layout": "track",
+    "score": 65.1,
+    "creator": null,
+    "topic": [
+      "costs",
+      "survive",
+      "someone"
+    ]
+  },
+  {
+    "project": "NPC_TEST_PODCAST",
+    "clip": "NPC_CLIP_04",
+    "title": "A $9 spreadsheet made her $11,000 by Friday",
+    "duration": 24.467,
+    "hook_type": "question",
+    "caption_style": "npc_signature",
+    "density": "medium",
+    "content_type": "podcast",
+    "layout": "track",
+    "score": 60.6,
+    "creator": null,
+    "topic": [
+      "spreadsheet",
+      "dollars",
+      "teaching"
+    ]
+  },
+  {
+    "project": "NPC_TEST_PODCAST",
+    "clip": "NPC_CLIP_05",
+    "title": "The biggest lie about starting a business",
+    "duration": 22.067,
+    "hook_type": "question",
+    "caption_style": "hormozi",
+    "density": "high",
+    "content_type": "podcast",
+    "layout": "track",
+    "score": 69.4,
+    "creator": null,
+    "topic": [
+      "idea",
+      "what's",
+      "biggest"
+    ]
+  },
+  {
+    "project": "NPC_TEST_PODCAST",
+    "clip": "NPC_CLIP_06",
+    "title": "Most businesses don't have a sales problem",
+    "duration": 21.1,
+    "hook_type": "question",
+    "caption_style": "high_energy_podcast",
+    "density": "high",
+    "content_type": "podcast",
+    "layout": "track",
+    "score": 66.9,
+    "creator": null,
+    "topic": [
+      "margins",
+      "problem",
+      "croissant"
+    ]
+  },
+  {
+    "project": "NPC_TEST_PODCAST",
+    "clip": "NPC_CLIP_07",
+    "title": "27, broke, and back in my childhood bedroom",
+    "duration": 21.467,
+    "hook_type": "question",
+    "caption_style": "bold_viral",
+    "density": "high",
+    "content_type": "podcast",
+    "layout": "track",
+    "score": 53.0,
+    "creator": null,
+    "topic": [
+      "stars",
+      "close",
+      "moved"
+    ]
+  }
+]

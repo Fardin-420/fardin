@@ -1,0 +1,543 @@
+{
+  "clip_id": "NPC_CLIP_07",
+  "version": 1,
+  "source": {
+    "path": "/home/user/fardin/NPC_STUDIO/CLIP_ENGINE/tests/sources/npc_test_podcast.mp4",
+    "url": null,
+    "name": "NPC Test Podcast",
+    "creator": null,
+    "rights": "MINE"
+  },
+  "window": {
+    "start": 66.706,
+    "end": 88.69,
+    "cold_open": false
+  },
+  "content_type": "podcast",
+  "caption_style": "bold_viral",
+  "density": "high",
+  "look": "punchy",
+  "music": {
+    "mood": "pulse",
+    "level_db": -24
+  },
+  "duration": 21.467,
+  "frames": 644,
+  "layout": {
+    "mode": "track",
+    "reason": "content-aware 9:16 crop that follows the active speaker; shots holding two separated speakers switch to split-screen",
+    "runs": [
+      {
+        "out_s": 0.0,
+        "out_e": 13.877,
+        "mode": "track",
+        "faces_expected": true,
+        "two_faces": false
+      },
+      {
+        "out_s": 13.877,
+        "out_e": 21.4667,
+        "mode": "split",
+        "faces_expected": true,
+        "two_faces": true
+      }
+    ]
+  },
+  "face_band": [
+    188,
+    619
+  ],
+  "caption_y": 1290,
+  "title_y": 1060,
+  "segments": [
+    {
+      "part": "main",
+      "src_s": 66.646,
+      "src_e": 78.2127,
+      "out_s": 0.0,
+      "out_e": 11.5667,
+      "frames": 347,
+      "base_zoom": 1.0
+    },
+    {
+      "part": "main",
+      "src_s": 78.466,
+      "src_e": 80.5993,
+      "out_s": 11.5667,
+      "out_e": 13.7,
+      "frames": 64,
+      "base_zoom": 1.07
+    },
+    {
+      "part": "main",
+      "src_s": 81.09,
+      "src_e": 88.8567,
+      "out_s": 13.7,
+      "out_e": 21.4667,
+      "frames": 233,
+      "base_zoom": 1.0
+    }
+  ],
+  "words": [
+    {
+      "w": "Okay,",
+      "s": 0.06,
+      "e": 0.38,
+      "src": 66.706
+    },
+    {
+      "w": "so",
+      "s": 0.38,
+      "e": 0.62,
+      "src": 67.026
+    },
+    {
+      "w": "you",
+      "s": 0.62,
+      "e": 0.78,
+      "src": 67.266
+    },
+    {
+      "w": "close",
+      "s": 0.78,
+      "e": 1.02,
+      "src": 67.426
+    },
+    {
+      "w": "the",
+      "s": 1.02,
+      "e": 1.18,
+      "src": 67.666
+    },
+    {
+      "w": "bakery,",
+      "s": 1.18,
+      "e": 1.9,
+      "src": 67.826
+    },
+    {
+      "w": "then",
+      "s": 1.9,
+      "e": 2.14,
+      "src": 68.546
+    },
+    {
+      "w": "what?",
+      "s": 2.22,
+      "e": 2.54,
+      "src": 68.866
+    },
+    {
+      "w": "Then",
+      "s": 3.036,
+      "e": 3.356,
+      "src": 69.682
+    },
+    {
+      "w": "I",
+      "s": 3.356,
+      "e": 3.516,
+      "src": 70.002
+    },
+    {
+      "w": "moved",
+      "s": 3.516,
+      "e": 3.836,
+      "src": 70.162
+    },
+    {
+      "w": "back",
+      "s": 3.836,
+      "e": 4.076,
+      "src": 70.482
+    },
+    {
+      "w": "in",
+      "s": 4.076,
+      "e": 4.396,
+      "src": 70.722
+    },
+    {
+      "w": "with",
+      "s": 4.396,
+      "e": 4.556,
+      "src": 71.042
+    },
+    {
+      "w": "my",
+      "s": 4.556,
+      "e": 4.716,
+      "src": 71.202
+    },
+    {
+      "w": "parents.",
+      "s": 4.716,
+      "e": 5.596,
+      "src": 71.362
+    },
+    {
+      "w": "Twenty",
+      "s": 5.596,
+      "e": 5.916,
+      "src": 72.242
+    },
+    {
+      "w": "seven",
+      "s": 5.996,
+      "e": 6.316,
+      "src": 72.642
+    },
+    {
+      "w": "years",
+      "s": 6.316,
+      "e": 6.556,
+      "src": 72.962
+    },
+    {
+      "w": "old,",
+      "s": 6.556,
+      "e": 7.036,
+      "src": 73.202
+    },
+    {
+      "w": "sleeping",
+      "s": 7.036,
+      "e": 7.436,
+      "src": 73.682
+    },
+    {
+      "w": "in",
+      "s": 7.436,
+      "e": 7.596,
+      "src": 74.082
+    },
+    {
+      "w": "my",
+      "s": 7.596,
+      "e": 7.756,
+      "src": 74.242
+    },
+    {
+      "w": "childhood",
+      "s": 7.756,
+      "e": 8.316,
+      "src": 74.402
+    },
+    {
+      "w": "bedroom,",
+      "s": 8.316,
+      "e": 8.956,
+      "src": 74.962
+    },
+    {
+      "w": "with",
+      "s": 8.956,
+      "e": 9.196,
+      "src": 75.602
+    },
+    {
+      "w": "glow",
+      "s": 9.196,
+      "e": 9.596,
+      "src": 75.842
+    },
+    {
+      "w": "in",
+      "s": 9.596,
+      "e": 9.756,
+      "src": 76.242
+    },
+    {
+      "w": "the",
+      "s": 9.756,
+      "e": 9.836,
+      "src": 76.402
+    },
+    {
+      "w": "dark",
+      "s": 9.836,
+      "e": 10.236,
+      "src": 76.482
+    },
+    {
+      "w": "stars",
+      "s": 10.236,
+      "e": 10.636,
+      "src": 76.882
+    },
+    {
+      "w": "on",
+      "s": 10.636,
+      "e": 10.796,
+      "src": 77.282
+    },
+    {
+      "w": "the",
+      "s": 10.796,
+      "e": 10.876,
+      "src": 77.442
+    },
+    {
+      "w": "ceiling.",
+      "s": 10.876,
+      "e": 11.436,
+      "src": 77.522
+    },
+    {
+      "w": "No",
+      "s": 11.647,
+      "e": 11.887,
+      "src": 78.546
+    },
+    {
+      "w": "way,",
+      "s": 12.047,
+      "e": 12.367,
+      "src": 78.946
+    },
+    {
+      "w": "the",
+      "s": 12.367,
+      "e": 12.527,
+      "src": 79.266
+    },
+    {
+      "w": "stars",
+      "s": 12.527,
+      "e": 12.927,
+      "src": 79.426
+    },
+    {
+      "w": "were",
+      "s": 12.927,
+      "e": 13.087,
+      "src": 79.826
+    },
+    {
+      "w": "still",
+      "s": 13.087,
+      "e": 13.247,
+      "src": 79.986
+    },
+    {
+      "w": "up.",
+      "s": 13.247,
+      "e": 13.567,
+      "src": 80.146
+    },
+    {
+      "w": "The",
+      "s": 13.78,
+      "e": 14.02,
+      "src": 81.17
+    },
+    {
+      "w": "stars",
+      "s": 14.02,
+      "e": 14.5,
+      "src": 81.41
+    },
+    {
+      "w": "were",
+      "s": 14.5,
+      "e": 14.66,
+      "src": 81.89
+    },
+    {
+      "w": "still",
+      "s": 14.66,
+      "e": 14.9,
+      "src": 82.05
+    },
+    {
+      "w": "up.",
+      "s": 14.9,
+      "e": 15.3,
+      "src": 82.29
+    },
+    {
+      "w": "My",
+      "s": 15.3,
+      "e": 15.54,
+      "src": 82.69
+    },
+    {
+      "w": "mom",
+      "s": 15.54,
+      "e": 15.94,
+      "src": 82.93
+    },
+    {
+      "w": "refused",
+      "s": 15.94,
+      "e": 16.34,
+      "src": 83.33
+    },
+    {
+      "w": "to",
+      "s": 16.34,
+      "e": 16.58,
+      "src": 83.73
+    },
+    {
+      "w": "take",
+      "s": 16.58,
+      "e": 16.74,
+      "src": 83.97
+    },
+    {
+      "w": "them",
+      "s": 16.74,
+      "e": 16.98,
+      "src": 84.13
+    },
+    {
+      "w": "down.",
+      "s": 16.98,
+      "e": 17.54,
+      "src": 84.37
+    },
+    {
+      "w": "She",
+      "s": 17.54,
+      "e": 17.78,
+      "src": 84.93
+    },
+    {
+      "w": "said",
+      "s": 17.78,
+      "e": 17.94,
+      "src": 85.17
+    },
+    {
+      "w": "I",
+      "s": 17.94,
+      "e": 18.1,
+      "src": 85.33
+    },
+    {
+      "w": "would",
+      "s": 18.1,
+      "e": 18.34,
+      "src": 85.49
+    },
+    {
+      "w": "need",
+      "s": 18.34,
+      "e": 18.5,
+      "src": 85.73
+    },
+    {
+      "w": "them",
+      "s": 18.5,
+      "e": 18.66,
+      "src": 85.89
+    },
+    {
+      "w": "again",
+      "s": 18.66,
+      "e": 18.98,
+      "src": 86.05
+    },
+    {
+      "w": "some",
+      "s": 18.98,
+      "e": 19.06,
+      "src": 86.37
+    },
+    {
+      "w": "day.",
+      "s": 19.22,
+      "e": 19.78,
+      "src": 86.61
+    },
+    {
+      "w": "She",
+      "s": 19.78,
+      "e": 19.94,
+      "src": 87.17
+    },
+    {
+      "w": "was",
+      "s": 19.94,
+      "e": 20.18,
+      "src": 87.33
+    },
+    {
+      "w": "right,",
+      "s": 20.18,
+      "e": 20.66,
+      "src": 87.57
+    },
+    {
+      "w": "by",
+      "s": 20.66,
+      "e": 20.82,
+      "src": 88.05
+    },
+    {
+      "w": "the",
+      "s": 20.82,
+      "e": 20.9,
+      "src": 88.21
+    },
+    {
+      "w": "way.",
+      "s": 20.9,
+      "e": 21.3,
+      "src": 88.29
+    }
+  ],
+  "zooms": [],
+  "transitions": [],
+  "sfx": [],
+  "graphics": [
+    {
+      "type": "progress_bar",
+      "color": "#FFE600"
+    },
+    {
+      "type": "title_card",
+      "text": "Back in my childhood bedroom",
+      "y": 1060,
+      "dur": 1.8
+    },
+    {
+      "type": "watermark",
+      "text": "NPC"
+    }
+  ],
+  "cut_times": [
+    11.5667,
+    13.7
+  ],
+  "score": 53.0,
+  "factors": {
+    "hook": 43.1,
+    "retention": 83.3,
+    "emotion": 33.8,
+    "curiosity": 22.0,
+    "standalone": 65.0,
+    "visual": 84.2,
+    "loop": 45.0
+  },
+  "hook_type": "question",
+  "package": {
+    "title": "27, broke, and back in my childhood bedroom",
+    "hook": "Okay, so you close the bakery, then what?",
+    "post_caption": "Her mom refused to take the glow-in-the-dark stars down. She was right.",
+    "hashtags": [
+      "#storytime",
+      "#entrepreneur",
+      "#business"
+    ],
+    "keywords": [
+      "stars",
+      "close",
+      "moved"
+    ],
+    "retention_notes": "An emotional story clip with a warm payoff ('She was right, by the way'). Drop-off risk: the host's setup question; the visual detail carries the middle.",
+    "cover_text": "Back in my childhood bedroom"
+  },
+  "selected_by": "agent"
+}
