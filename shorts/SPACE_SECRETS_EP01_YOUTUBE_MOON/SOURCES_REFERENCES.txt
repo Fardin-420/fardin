@@ -1,0 +1,45 @@
+SOURCE / REFERENCE LIST — SPACE SECRETS EP01 (YouTube): "What If the Moon Disappeared Tonight?"
+
+ACCESS NOTE: science.nasa.gov, oceanservice.noaa.gov, svs.gsfc.nasa.gov and ESA hosts were blocked by this production
+environment's network policy, so the starting-point URLs below could not be opened while editing. Claims were checked
+against the standard published values listed here. Re-verify links before publishing.
+
+CLIENT STARTING POINTS
+- NASA, Moon overview: https://science.nasa.gov/moon/
+- NASA, Moon facts: https://science.nasa.gov/moon/facts/
+- NOAA, Tides tutorial: https://oceanservice.noaa.gov/education/tutorial_tides/
+- NASA, Eclipses: https://science.nasa.gov/eclipses/
+
+CLAIM -> BASIS
+- The Moon has orbited Earth for ~4.5 billion years. Lunar samples / giant-impact formation ~4.4–4.5 Gyr ago (NASA Moon facts).
+- The Moon is the dominant tide raiser; the Sun's tidal force is ~46 % of the Moon's. Tidal force ∝ M/d³;
+  NOAA Tides tutorial ("the Sun's tide-generating force is about half that of the Moon").
+- Spring and neap tides come from Sun–Moon alignment. NOAA Tides tutorial.
+- Real tides rotate around amphidromic points shaped by basins. NOAA Tides tutorial; standard oceanography.
+- Full-Moon ground illumination ~0.1–0.3 lux; starlight/airglow ~0.001 lux. Standard photometric values
+  (e.g. Kyba et al. 2017, "Red is the new black: how the colour of urban skyglow varies with cloud cover").
+- Coral mass spawning is cued partly by moonlight / lunar cycle. Babcock et al. 1986 (GBR); Lin et al. 2021, PNAS,
+  "Moonlight and darkness cues for spawning".
+- Predator–prey activity changes with moonlight (lunar phobia/philia). Prugh & Golden 2014, J. Anim. Ecol. (meta-analysis).
+- Sea-turtle hatchlings orient toward the brighter, lower seaward horizon. Salmon et al. 1992; Witherington & Martin
+  (FWRI Tech. Rep. TR-2).
+- Tidal friction slows Earth's rotation and moves the Moon outward (angular-momentum transfer). NASA Moon facts; standard
+  celestial mechanics.
+- Day length in the past: ~21.9 h about 620 Myr ago (tidal rhythmites, Williams 2000, Rev. Geophys.); ~400 days/yr in the
+  Devonian (Wells 1963, Nature, coral growth bands). On screen they're labelled "approximate".
+- Lunar recession ~3.8 cm/yr, measured by Lunar Laser Ranging to Apollo retro-reflectors. NASA; Williams & Boggs 2016.
+- Earth's axial tilt ≈ 23.44° today; it varies between ~22.1° and 24.5° over a ~41,000-year cycle. Laskar et al. 2004 (A&A).
+- Without the Moon, SOME models give large chaotic obliquity swings (0°–85°): Laskar, Joutel & Robutel 1993, Nature 361.
+  OTHER models find more limited variation: Lissauer, Barnes & Chambers 2012, Icarus 217. The film presents this as an
+  open question, not a prediction.
+- Annual-mean sunlight vs latitude (insolation graph): computed in the film from orbital geometry (solar constant 1361
+  W/m², daily-mean insolation integrated over a year).
+- Sun ≈ 400× the Moon's diameter and ≈ 390–400× farther: Sun 1.39 million km across, ~150 million km away; Moon 3,474 km,
+  ~384,400 km (NASA Sun / Moon facts).
+- Total tidal dissipation ≈ 3.7 TW, ~1 TW of it in the deep ocean: Egbert & Ray 2000, Nature 405.
+- 12 people walked on the Moon, Apollo 11–17 (1969–1972). NASA.
+- 66 million years × 3.8 cm/yr ≈ 2,500 km. Labelled "at today's rate"; the rate has varied (Bills & Ray 1999, GRL).
+
+WHAT THE FILM DOESN'T CLAIM (per the brief)
+- No instant worldwide tsunamis. Earth's rotation doesn't stop. Solar tides remain. Earth keeps orbiting the Sun.
+- Axial instability is shown as a long-term scientific uncertainty, never a guaranteed catastrophe.

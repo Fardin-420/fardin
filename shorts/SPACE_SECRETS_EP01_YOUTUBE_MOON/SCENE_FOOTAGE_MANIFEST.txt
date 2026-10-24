@@ -1,0 +1,103 @@
+SCENE AND FOOTAGE MANIFEST — SPACE_SECRETS_EP01_YOUTUBE_16X9.mp4
+
+Every shot is original CGI or motion graphics rendered for this film. No stock, archival, NASA or ESA footage is used:
+NASA/ESA/NOAA sites were blocked by this production environment's network policy. Each shot carries an on-screen label
+(SIMULATION / ILLUSTRATION / DIAGRAM / SCHEMATIC / HYPOTHETICAL SIMULATION / TODAY'S REAL SYSTEM), so no animation is
+presented as observational footage.
+
+  #        IN    LEN  LINE  VISUAL  —  TYPE / SOURCE
+
+  1  00:00.00    2.7     0  Night city skyline; giant Moon / empty sky  —  ILLUSTRATION (procedural city, procedural Moon)
+  2  00:02.72    7.7     1  Night city skyline; giant Moon / empty sky  —  ILLUSTRATION (procedural city, procedural Moon)
+  3  00:10.44    6.7     2  Night city skyline; giant Moon / empty sky  —  ILLUSTRATION (procedural city, procedural Moon)
+  4  00:17.18    2.8     3  Telescope tracking display: 'MOON NOT FOUND'  —  HYPOTHETICAL SCENARIO graphic
+  5  00:20.01    1.5     4  3D Earth–Moon orbit view (vanish / empty orbit / today's system)  —  SIMULATION (Earth: Solar System Scope textures; Moon: procedural)
+  6  00:21.51   11.4     5  3D Earth–Moon orbit view (vanish / empty orbit / today's system)  —  SIMULATION (Earth: Solar System Scope textures; Moon: procedural)
+  7  00:32.87    1.9     6  3D Earth–Moon orbit view (vanish / empty orbit / today's system)  —  SIMULATION (Earth: Solar System Scope textures; Moon: procedural)
+  8  00:34.73    6.9     7  Rotating Earth with the three questions  —  SIMULATION + titles
+  9  00:41.61   14.0     8  Timescale bar: tonight → thousands → millions → billions of years  —  DIAGRAM over Earth
+ 10  00:55.61   16.1    11  The scenario's rule card; Moon fades away  —  HYPOTHETICAL SCENARIO graphic
+ 11  01:11.68    7.5    13  Vanish (our scenario) vs explode (not this film)  —  ILLUSTRATION
+ 12  01:19.18    8.4    15  Earth with intact atmosphere, no shock wave  —  SIMULATION
+ 13  01:27.58    5.2    17  Night city skyline; giant Moon / empty sky  —  ILLUSTRATION (procedural city, procedural Moon)
+ 14  01:32.77    1.9    18  Earth rotating; axis, angular-momentum vector or 24 h clock  —  SIMULATION (rotation sped up)
+ 15  01:34.64    1.7    19  Night city skyline; giant Moon / empty sky  —  ILLUSTRATION (procedural city, procedural Moon)
+ 16  01:36.37    2.1    20  Night city skyline; giant Moon / empty sky  —  ILLUSTRATION (procedural city, procedural Moon)
+ 17  01:38.47    6.2    21  Earth rotating; axis, angular-momentum vector or 24 h clock  —  SIMULATION (rotation sped up)
+ 18  01:44.63    3.8    22  Rural mountain night: full-Moon light, darkening, Milky Way, dawn  —  ILLUSTRATION (procedural landscape and sky)
+ 19  01:48.48   11.5    24  Rural mountain night: full-Moon light, darkening, Milky Way, dawn  —  ILLUSTRATION (procedural landscape and sky)
+ 20  01:59.97    8.1    26  Rural mountain night: full-Moon light, darkening, Milky Way, dawn  —  ILLUSTRATION (procedural landscape and sky)
+ 21  02:08.07    9.8    27  Rural mountain night: full-Moon light, darkening, Milky Way, dawn  —  ILLUSTRATION (procedural landscape and sky)
+ 22  02:17.91    8.7    29  Rural mountain night: full-Moon light, darkening, Milky Way, dawn  —  ILLUSTRATION (procedural landscape and sky)
+ 23  02:26.66    9.0    31  Beach cross-section with tide gauge (time-lapse)  —  ILLUSTRATION
+ 24  02:35.61   16.7    34  Top-down tidal bulges, Moon removal and relaxation, tidal torque  —  DIAGRAM (bulges exaggerated)
+ 25  02:52.34    8.7    37  Top-down tidal bulges, Moon removal and relaxation, tidal torque  —  DIAGRAM (bulges exaggerated)
+ 26  03:01.01    7.6    40  Ocean basin with rotating co-tidal lines (amphidromic points)  —  SCHEMATIC
+ 27  03:08.58   13.1    42  Top-down tidal bulges, Moon removal and relaxation, tidal torque  —  DIAGRAM (bulges exaggerated)
+ 28  03:21.66   20.6    45  Tide-raising force: Moon 1.00 vs Sun ≈0.46; spring–neap trace  —  DIAGRAM
+ 29  03:42.22   10.5    50  Beach cross-section with tide gauge (time-lapse)  —  ILLUSTRATION
+ 30  03:52.72    7.9    52  Beach cross-section with tide gauge (time-lapse)  —  ILLUSTRATION
+ 31  04:00.57    3.7    53  The real Moon rising over a landscape  —  ILLUSTRATION
+ 32  04:04.30    3.7    54  Ring of lunar phases: 29.5-day cycle  —  DIAGRAM
+ 33  04:07.97   12.5    55  Moonlit reef with coral spawning  —  ILLUSTRATION
+ 34  04:20.47    9.6    57  Predator and prey silhouettes, bright vs dark night  —  ILLUSTRATION
+ 35  04:30.03    6.2    60  Sea-turtle hatchlings heading for the bright sea horizon  —  ILLUSTRATION
+ 36  04:36.24    9.9    61  Fact cards  —  DIAGRAM / TEXT
+ 37  04:46.12   13.2    63  Illustrative population curves (adapt / steady / decline)  —  ILLUSTRATION, not a forecast
+ 38  04:59.36   15.8    67  Food-web network with a ripple  —  ILLUSTRATION
+ 39  05:15.20   14.3    70  Earth rotating; axis, angular-momentum vector or 24 h clock  —  SIMULATION (rotation sped up)
+ 40  05:29.49    3.1    74  Earth rotating; axis, angular-momentum vector or 24 h clock  —  SIMULATION (rotation sped up)
+ 41  05:32.58    3.3    75  Rural mountain night: full-Moon light, darkening, Milky Way, dawn  —  ILLUSTRATION (procedural landscape and sky)
+ 42  05:35.93    2.5    77  Earth orbiting the Sun  —  DIAGRAM (not to scale)
+ 43  05:38.39   16.7    78  Top-down tidal bulges, Moon removal and relaxation, tidal torque  —  DIAGRAM (bulges exaggerated)
+ 44  05:55.05   10.1    81  Length of day over geological time (+ qualitative future branches)  —  DIAGRAM (approximate published values)
+ 45  06:05.12   10.0    83  Length of day over geological time (+ qualitative future branches)  —  DIAGRAM (approximate published values)
+ 46  06:15.13    2.7    85  Rural mountain night: full-Moon light, darkening, Milky Way, dawn  —  ILLUSTRATION (procedural landscape and sky)
+ 47  06:17.82    7.7    86  Length of day over geological time (+ qualitative future branches)  —  DIAGRAM (approximate published values)
+ 48  06:25.49   16.6    87  Tilted Earth: 23.4° axis; hypothetical wandering axis; ice caps  —  DIAGRAM / HYPOTHETICAL SIMULATION
+ 49  06:42.10   10.2    91  Earth at the solstices and equinoxes around the Sun  —  DIAGRAM (not to scale)
+ 50  06:52.25   10.0    96  Axial tilt vs time: with the Moon; some models without it  —  DIAGRAM / HYPOTHETICAL (illustrative curve)
+ 51  07:02.30    9.0    98  Axial tilt vs time: with the Moon; some models without it  —  DIAGRAM / HYPOTHETICAL (illustrative curve)
+ 52  07:11.32    6.4   100  Tilted Earth: 23.4° axis; hypothetical wandering axis; ice caps  —  DIAGRAM / HYPOTHETICAL SIMULATION
+ 53  07:17.69   10.6   101  Annual-mean sunlight vs latitude for today's and a hypothetical tilt  —  HYPOTHETICAL SIMULATION (computed from orbital geometry)
+ 54  07:28.31    8.8   103  Tilted Earth: 23.4° axis; hypothetical wandering axis; ice caps  —  DIAGRAM / HYPOTHETICAL SIMULATION
+ 55  07:37.09   20.0   106  Fact cards  —  DIAGRAM / TEXT
+ 56  07:57.13   16.2   109  Sun, Earth, Moon, Jupiter: gravitational tugs on the spin axis  —  TODAY'S REAL SYSTEM (not to scale)
+ 57  08:13.30    4.2   111  Total lunar eclipse: copper Moon  —  SIMULATION
+ 58  08:17.45   12.1   113  Total solar eclipse with corona; 400× size/distance coincidence  —  SIMULATION
+ 59  08:29.54    8.9   116  Total solar eclipse with corona; 400× size/distance coincidence  —  SIMULATION
+ 60  08:38.45    8.1   118  Total solar eclipse with corona; 400× size/distance coincidence  —  SIMULATION
+ 61  08:46.56   11.9   119  Transit of Venus across the Sun  —  SIMULATION
+ 62  08:58.46   12.5   122  Ring of lunar phases: 29.5-day cycle  —  DIAGRAM
+ 63  09:10.99    6.3   124  Lunar surface with Earth in the sky / Earthrise  —  ILLUSTRATION
+ 64  09:17.31    4.9   126  Lunar surface with Earth in the sky / Earthrise  —  ILLUSTRATION
+ 65  09:22.25   21.8   127  Earth with moving cloud systems  —  SIMULATION
+ 66  09:44.06   15.8   132  Ocean cross-section: internal tides and deep mixing  —  SCHEMATIC
+ 67  09:59.85   20.5   135  Global ocean circulation on a world map  —  SCHEMATIC (Solar System Scope base map)
+ 68  10:20.32   13.4   138  Earth with moving cloud systems  —  SIMULATION
+ 69  10:33.74    5.3   141  Earth's night side with city lights; survival checklist  —  SIMULATION (Solar System Scope night texture)
+ 70  10:39.06   19.4   143  Earth's night side with city lights; survival checklist  —  SIMULATION (Solar System Scope night texture)
+ 71  10:58.50   11.2   149  Earth's night side with city lights; survival checklist  —  SIMULATION (Solar System Scope night texture)
+ 72  11:09.72   15.9   150  Fact cards  —  DIAGRAM / TEXT
+ 73  11:25.61    7.8   155  3D Earth–Moon orbit view (vanish / empty orbit / today's system)  —  SIMULATION (Earth: Solar System Scope textures; Moon: procedural)
+ 74  11:33.44   11.1   158  3D Earth–Moon orbit view (vanish / empty orbit / today's system)  —  SIMULATION (Earth: Solar System Scope textures; Moon: procedural)
+ 75  11:44.50   12.1   160  Moon receding 3.8 cm/yr; ruler; 66 million years  —  TODAY'S REAL SYSTEM (not to scale)
+ 76  11:56.59    8.8   163  Moon receding 3.8 cm/yr; ruler; 66 million years  —  TODAY'S REAL SYSTEM (not to scale)
+ 77  12:05.43   14.9   166  Moon receding 3.8 cm/yr; ruler; 66 million years  —  TODAY'S REAL SYSTEM (not to scale)
+ 78  12:20.29   15.9   169  The real Moon rising over a landscape  —  ILLUSTRATION
+ 79  12:36.19   15.3   172  Lunar surface with Earth in the sky / Earthrise  —  ILLUSTRATION
+ 80  12:51.47    5.5     -  End screen: SPACE SECRETS — EXPLORE THE UNKNOWN.
+
+TRANSITIONS: 0.5 s cross-dissolves between shots; hard cuts only in the hook (the Moon vanishes on "gone").
+CHAPTER CARDS: 'CHAPTER 0N / TITLE' lower-left during each chapter break (3 s pause in the narration).
+SUBTITLES: documentary style, one line, centred near the bottom (Inter Display Medium 34 px on a 50 % black band).
+
+ASSETS
+- Moon: procedural (moonr.py). Albedo and relief built from the real near-side layout (maria at their selenographic
+  positions; Tycho, Copernicus, Kepler, Aristarchus, Plato), with Lommel-Seeliger shading. No third-party imagery.
+- Earth: earth.py, using Solar System Scope textures (day, night lights, clouds/relief), CC BY 4.0, based on NASA
+  imagery, via the three.js repository. Credit is required in the YouTube description (included).
+- Sun / corona: procedural (star.py). Skies, Milky Way, landscapes, city, reef, animals: procedural (gfx.py, scenes.py).
+- Fonts: Inter / Inter Display, JetBrains Mono (SIL OFL 1.1).
+- Narration: Kokoro v1.0 TTS (Apache-2.0 model), voice am_puck. AI voice; disclose as altered/synthetic content on YouTube.
+- Music and sound design: original, synthesized in code (pads, felt-piano plucks, sub, swells, impacts, ambience).

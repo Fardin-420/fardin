@@ -1,0 +1,10626 @@
+{
+"lines": [
+{
+"line": 0,
+"chapter": 0,
+"para": 0,
+"text": "Imagine looking up tonight... and the Moon is gone.",
+"file": "vo/T000.wav",
+"start": 0.3,
+"dur": 2.665,
+"words": [
+[
+"Imagine",
+0.3,
+0.89
+],
+[
+"looking",
+0.89,
+1.17
+],
+[
+"up",
+1.17,
+1.47
+],
+[
+"tonight...",
+1.47,
+1.82
+],
+[
+"and",
+1.82,
+2.0
+],
+[
+"the",
+2.0,
+2.33
+],
+[
+"Moon",
+2.33,
+2.49
+],
+[
+"is",
+2.49,
+2.72
+],
+[
+"gone.",
+2.72,
+2.93
+]
+]
+},
+{
+"line": 1,
+"chapter": 0,
+"para": 1,
+"text": "No explosion. No warning. Just an empty sky where something familiar has always been.",
+"file": "vo/T001.wav",
+"start": 4.565,
+"dur": 5.801,
+"words": [
+[
+"No",
+4.565,
+4.705
+],
+[
+"explosion.",
+4.705,
+5.715
+],
+[
+"No",
+5.715,
+5.775
+],
+[
+"warning.",
+5.775,
+6.555
+],
+[
+"Just",
+6.555,
+6.715
+],
+[
+"an",
+6.715,
+6.835
+],
+[
+"empty",
+6.835,
+7.415
+],
+[
+"sky",
+7.415,
+7.685
+],
+[
+"where",
+7.685,
+7.945
+],
+[
+"something",
+7.945,
+8.485
+],
+[
+"familiar",
+8.485,
+9.335
+],
+[
+"has",
+9.335,
+9.555
+],
+[
+"always",
+9.555,
+9.965
+],
+[
+"been.",
+9.965,
+10.315
+]
+]
+},
+{
+"line": 2,
+"chapter": 0,
+"para": 2,
+"text": "At first, you might think it's a strange cloud. Maybe an eclipse. Maybe your eyes are playing tricks on you.",
+"file": "vo/T002.wav",
+"start": 10.787,
+"dur": 6.326,
+"words": [
+[
+"At",
+10.787,
+10.957
+],
+[
+"first,",
+10.957,
+11.387
+],
+[
+"you",
+11.387,
+11.747
+],
+[
+"might",
+11.747,
+12.017
+],
+[
+"think",
+12.017,
+12.287
+],
+[
+"it's",
+12.287,
+12.647
+],
+[
+"a",
+12.647,
+12.737
+],
+[
+"strange",
+12.737,
+13.177
+],
+[
+"cloud.",
+13.177,
+13.507
+],
+[
+"Maybe",
+13.507,
+13.767
+],
+[
+"an",
+13.767,
+14.077
+],
+[
+"eclipse.",
+14.077,
+14.717
+],
+[
+"Maybe",
+14.717,
+15.057
+],
+[
+"your",
+15.057,
+15.327
+],
+[
+"eyes",
+15.327,
+15.627
+],
+[
+"are",
+15.627,
+15.877
+],
+[
+"playing",
+15.877,
+16.147
+],
+[
+"tricks",
+16.147,
+16.437
+],
+[
+"on",
+16.437,
+16.547
+],
+[
+"you.",
+16.547,
+17.067
+]
+]
+},
+{
+"line": 3,
+"chapter": 0,
+"para": 3,
+"text": "But then astronomers confirm the impossible.",
+"file": "vo/T003.wav",
+"start": 17.532,
+"dur": 2.41,
+"words": [
+[
+"But",
+17.542,
+17.652
+],
+[
+"then",
+17.652,
+17.972
+],
+[
+"astronomers",
+17.972,
+18.542
+],
+[
+"confirm",
+18.542,
+18.932
+],
+[
+"the",
+18.932,
+19.162
+],
+[
+"impossible.",
+19.162,
+19.892
+]
+]
+},
+{
+"line": 4,
+"chapter": 0,
+"para": 4,
+"text": "The Moon has vanished.",
+"file": "vo/T004.wav",
+"start": 20.362,
+"dur": 1.083,
+"words": [
+[
+"The",
+20.362,
+20.432
+],
+[
+"Moon",
+20.432,
+20.772
+],
+[
+"has",
+20.772,
+20.822
+],
+[
+"vanished.",
+20.822,
+21.422
+]
+]
+},
+{
+"line": 5,
+"chapter": 0,
+"para": 5,
+"text": "For billions of years, this enormous natural satellite has traveled around Earth. It has shaped our tides, illuminated our nights, and influenced the evolution of life itself.",
+"file": "vo/T005.wav",
+"start": 21.865,
+"dur": 10.932,
+"words": [
+[
+"For",
+21.875,
+22.005
+],
+[
+"billions",
+22.005,
+22.455
+],
+[
+"of",
+22.455,
+22.625
+],
+[
+"years,",
+22.625,
+23.135
+],
+[
+"this",
+23.135,
+23.155
+],
+[
+"enormous",
+23.155,
+23.965
+],
+[
+"natural",
+23.965,
+24.415
+],
+[
+"satellite",
+24.415,
+25.195
+],
+[
+"has",
+25.195,
+25.275
+],
+[
+"traveled",
+25.275,
+26.025
+],
+[
+"around",
+26.025,
+26.475
+],
+[
+"Earth.",
+26.475,
+26.785
+],
+[
+"It",
+26.785,
+27.005
+],
+[
+"has",
+27.005,
+27.075
+],
+[
+"shaped",
+27.075,
+27.605
+],
+[
+"our",
+27.605,
+27.815
+],
+[
+"tides,",
+27.815,
+28.395
+],
+[
+"illuminated",
+28.395,
+29.385
+],
+[
+"our",
+29.385,
+29.585
+],
+[
+"nights,",
+29.585,
+29.975
+],
+[
+"and",
+29.975,
+30.145
+],
+[
+"influenced",
+30.145,
+30.655
+],
+[
+"the",
+30.655,
+30.975
+],
+[
+"evolution",
+30.975,
+31.685
+],
+[
+"of",
+31.685,
+31.935
+],
+[
+"life",
+31.935,
+32.255
+],
+[
+"itself.",
+32.255,
+32.745
+]
+]
+},
+{
+"line": 6,
+"chapter": 0,
+"para": 6,
+"text": "And now, suddenly, it's gone.",
+"file": "vo/T006.wav",
+"start": 33.217,
+"dur": 1.441,
+"words": [
+[
+"And",
+33.217,
+33.277
+],
+[
+"now,",
+33.277,
+33.567
+],
+[
+"suddenly,",
+33.567,
+34.157
+],
+[
+"it's",
+34.157,
+34.437
+],
+[
+"gone.",
+34.437,
+34.607
+]
+]
+},
+{
+"line": 7,
+"chapter": 0,
+"para": 7,
+"text": "Would the oceans swallow our cities? Would Earth lose control of its rotation? Could humanity survive?",
+"file": "vo/T007.wav",
+"start": 35.078,
+"dur": 6.229,
+"words": [
+[
+"Would",
+35.078,
+35.258
+],
+[
+"the",
+35.258,
+35.608
+],
+[
+"oceans",
+35.608,
+36.028
+],
+[
+"swallow",
+36.028,
+36.568
+],
+[
+"our",
+36.568,
+36.698
+],
+[
+"cities?",
+36.698,
+37.208
+],
+[
+"Would",
+37.208,
+37.458
+],
+[
+"Earth",
+37.458,
+37.708
+],
+[
+"lose",
+37.708,
+38.018
+],
+[
+"control",
+38.018,
+38.318
+],
+[
+"of",
+38.318,
+38.728
+],
+[
+"its",
+38.728,
+38.828
+],
+[
+"rotation?",
+38.828,
+39.678
+],
+[
+"Could",
+39.678,
+39.798
+],
+[
+"humanity",
+39.798,
+40.848
+],
+[
+"survive?",
+40.848,
+41.258
+]
+]
+},
+{
+"line": 8,
+"chapter": 0,
+"para": 8,
+"text": "The answer is stranger than you might expect.",
+"file": "vo/T008.wav",
+"start": 41.957,
+"dur": 2.264,
+"words": [
+[
+"The",
+41.957,
+42.097
+],
+[
+"answer",
+42.097,
+42.567
+],
+[
+"is",
+42.567,
+42.697
+],
+[
+"stranger",
+42.697,
+43.017
+],
+[
+"than",
+43.017,
+43.217
+],
+[
+"you",
+43.217,
+43.577
+],
+[
+"might",
+43.577,
+43.667
+],
+[
+"expect.",
+43.667,
+44.197
+]
+]
+},
+{
+"line": 9,
+"chapter": 0,
+"para": 9,
+"text": "Because the most dangerous consequences might not happen tonight.",
+"file": "vo/T009.wav",
+"start": 44.642,
+"dur": 3.622,
+"words": [
+[
+"Because",
+44.652,
+44.972
+],
+[
+"the",
+44.972,
+45.342
+],
+[
+"most",
+45.342,
+45.382
+],
+[
+"dangerous",
+45.382,
+45.992
+],
+[
+"consequences",
+45.992,
+46.902
+],
+[
+"might",
+46.902,
+46.982
+],
+[
+"not",
+46.982,
+47.232
+],
+[
+"happen",
+47.232,
+47.652
+],
+[
+"tonight.",
+47.652,
+48.212
+]
+]
+},
+{
+"line": 10,
+"chapter": 0,
+"para": 10,
+"text": "They could unfold over thousands, millions, or even billions of years.",
+"file": "vo/T010.wav",
+"start": 48.684,
+"dur": 4.279,
+"words": [
+[
+"They",
+48.694,
+48.844
+],
+[
+"could",
+48.844,
+49.224
+],
+[
+"unfold",
+49.224,
+49.564
+],
+[
+"over",
+49.564,
+50.124
+],
+[
+"thousands,",
+50.124,
+50.584
+],
+[
+"millions,",
+50.584,
+51.284
+],
+[
+"or",
+51.284,
+51.354
+],
+[
+"even",
+51.354,
+51.894
+],
+[
+"billions",
+51.894,
+52.404
+],
+[
+"of",
+52.404,
+52.624
+],
+[
+"years.",
+52.624,
+52.904
+]
+]
+},
+{
+"line": 11,
+"chapter": 1,
+"para": 0,
+"text": "Let's establish one important rule.",
+"file": "vo/T011.wav",
+"start": 55.962,
+"dur": 1.915,
+"words": [
+[
+"Let's",
+55.962,
+56.122
+],
+[
+"establish",
+56.122,
+56.722
+],
+[
+"one",
+56.722,
+56.752
+],
+[
+"important",
+56.752,
+57.282
+],
+[
+"rule.",
+57.282,
+57.832
+]
+]
+},
+{
+"line": 12,
+"chapter": 1,
+"para": 1,
+"text": "In this hypothetical scenario, the Moon simply disappears. It doesn't explode into fragments. It doesn't crash into Earth. Its mass and gravitational influence vanish without releasing destructive energy.",
+"file": "vo/T012.wav",
+"start": 58.297,
+"dur": 13.315,
+"words": [
+[
+"In",
+58.297,
+58.577
+],
+[
+"this",
+58.577,
+58.767
+],
+[
+"hypothetical",
+58.767,
+59.837
+],
+[
+"scenario,",
+59.837,
+60.847
+],
+[
+"the",
+60.847,
+61.017
+],
+[
+"Moon",
+61.017,
+61.157
+],
+[
+"simply",
+61.157,
+61.597
+],
+[
+"disappears.",
+61.597,
+62.467
+],
+[
+"It",
+62.467,
+62.827
+],
+[
+"doesn't",
+62.827,
+62.997
+],
+[
+"explode",
+62.997,
+63.487
+],
+[
+"into",
+63.487,
+63.937
+],
+[
+"fragments.",
+63.937,
+64.527
+],
+[
+"It",
+64.527,
+64.717
+],
+[
+"doesn't",
+64.717,
+65.027
+],
+[
+"crash",
+65.027,
+65.137
+],
+[
+"into",
+65.137,
+65.707
+],
+[
+"Earth.",
+65.707,
+66.107
+],
+[
+"Its",
+66.107,
+66.307
+],
+[
+"mass",
+66.307,
+66.467
+],
+[
+"and",
+66.467,
+66.677
+],
+[
+"gravitational",
+66.677,
+68.007
+],
+[
+"influence",
+68.007,
+68.417
+],
+[
+"vanish",
+68.417,
+68.827
+],
+[
+"without",
+68.827,
+69.417
+],
+[
+"releasing",
+69.417,
+70.097
+],
+[
+"destructive",
+70.097,
+70.817
+],
+[
+"energy.",
+70.817,
+71.567
+]
+]
+},
+{
+"line": 13,
+"chapter": 1,
+"para": 2,
+"text": "That distinction matters.",
+"file": "vo/T013.wav",
+"start": 72.032,
+"dur": 1.245,
+"words": [
+[
+"That",
+72.032,
+72.192
+],
+[
+"distinction",
+72.192,
+72.852
+],
+[
+"matters.",
+72.852,
+73.242
+]
+]
+},
+{
+"line": 14,
+"chapter": 1,
+"para": 3,
+"text": "If the Moon exploded, the resulting debris could create a completely different disaster.",
+"file": "vo/T014.wav",
+"start": 73.877,
+"dur": 5.237,
+"words": [
+[
+"If",
+73.877,
+74.047
+],
+[
+"the",
+74.047,
+74.187
+],
+[
+"Moon",
+74.187,
+74.557
+],
+[
+"exploded,",
+74.557,
+75.227
+],
+[
+"the",
+75.227,
+75.297
+],
+[
+"resulting",
+75.297,
+75.967
+],
+[
+"debris",
+75.967,
+76.407
+],
+[
+"could",
+76.407,
+76.587
+],
+[
+"create",
+76.587,
+76.677
+],
+[
+"a",
+76.677,
+77.037
+],
+[
+"completely",
+77.037,
+77.697
+],
+[
+"different",
+77.697,
+78.287
+],
+[
+"disaster.",
+78.287,
+79.067
+]
+]
+},
+{
+"line": 15,
+"chapter": 1,
+"para": 4,
+"text": "But if it simply vanished, there would be no giant shock wave racing through space.",
+"file": "vo/T015.wav",
+"start": 79.534,
+"dur": 4.781,
+"words": [
+[
+"But",
+79.544,
+79.754
+],
+[
+"if",
+79.754,
+79.924
+],
+[
+"it",
+79.924,
+80.184
+],
+[
+"simply",
+80.184,
+80.794
+],
+[
+"vanished,",
+80.794,
+81.634
+],
+[
+"there",
+81.634,
+81.724
+],
+[
+"would",
+81.724,
+82.104
+],
+[
+"be",
+82.104,
+82.264
+],
+[
+"no",
+82.264,
+82.514
+],
+[
+"giant",
+82.514,
+82.784
+],
+[
+"shock",
+82.784,
+82.914
+],
+[
+"wave",
+82.914,
+83.274
+],
+[
+"racing",
+83.274,
+83.644
+],
+[
+"through",
+83.644,
+83.794
+],
+[
+"space.",
+83.794,
+84.264
+]
+]
+},
+{
+"line": 16,
+"chapter": 1,
+"para": 5,
+"text": "And Earth's atmosphere wouldn't suddenly be blown away.",
+"file": "vo/T016.wav",
+"start": 84.735,
+"dur": 2.779,
+"words": [
+[
+"And",
+84.735,
+84.875
+],
+[
+"Earth's",
+84.875,
+85.045
+],
+[
+"atmosphere",
+85.045,
+85.825
+],
+[
+"wouldn't",
+85.825,
+85.855
+],
+[
+"suddenly",
+85.855,
+86.595
+],
+[
+"be",
+86.595,
+86.725
+],
+[
+"blown",
+86.725,
+87.005
+],
+[
+"away.",
+87.005,
+87.465
+]
+]
+},
+{
+"line": 17,
+"chapter": 1,
+"para": 6,
+"text": "In fact, almost everyone on the planet would initially feel nothing unusual.",
+"file": "vo/T017.wav",
+"start": 87.934,
+"dur": 4.767,
+"words": [
+[
+"In",
+87.934,
+88.084
+],
+[
+"fact,",
+88.084,
+88.414
+],
+[
+"almost",
+88.414,
+88.934
+],
+[
+"everyone",
+88.934,
+89.454
+],
+[
+"on",
+89.454,
+89.674
+],
+[
+"the",
+89.674,
+89.964
+],
+[
+"planet",
+89.964,
+90.194
+],
+[
+"would",
+90.194,
+90.414
+],
+[
+"initially",
+90.414,
+91.394
+],
+[
+"feel",
+91.394,
+91.424
+],
+[
+"nothing",
+91.424,
+91.934
+],
+[
+"unusual.",
+91.934,
+92.654
+]
+]
+},
+{
+"line": 18,
+"chapter": 1,
+"para": 7,
+"text": "Earth would continue spinning.",
+"file": "vo/T018.wav",
+"start": 93.122,
+"dur": 1.449,
+"words": [
+[
+"Earth",
+93.122,
+93.312
+],
+[
+"would",
+93.312,
+93.482
+],
+[
+"continue",
+93.482,
+94.052
+],
+[
+"spinning.",
+94.052,
+94.522
+]
+]
+},
+{
+"line": 19,
+"chapter": 1,
+"para": 8,
+"text": "People would keep walking.",
+"file": "vo/T019.wav",
+"start": 94.991,
+"dur": 1.31,
+"words": [
+[
+"People",
+94.991,
+95.401
+],
+[
+"would",
+95.401,
+95.601
+],
+[
+"keep",
+95.601,
+95.671
+],
+[
+"walking.",
+95.671,
+96.271
+]
+]
+},
+{
+"line": 20,
+"chapter": 1,
+"para": 9,
+"text": "Airplanes would remain in the sky.",
+"file": "vo/T020.wav",
+"start": 96.721,
+"dur": 1.679,
+"words": [
+[
+"Airplanes",
+96.721,
+97.221
+],
+[
+"would",
+97.221,
+97.311
+],
+[
+"remain",
+97.311,
+97.821
+],
+[
+"in",
+97.821,
+97.941
+],
+[
+"the",
+97.941,
+97.981
+],
+[
+"sky.",
+97.981,
+98.351
+]
+]
+},
+{
+"line": 21,
+"chapter": 1,
+"para": 10,
+"text": "The Moon is incredibly important, but its disappearance wouldn't instantly destroy the planet.",
+"file": "vo/T021.wav",
+"start": 98.82,
+"dur": 5.741,
+"words": [
+[
+"The",
+98.82,
+98.94
+],
+[
+"Moon",
+98.94,
+99.34
+],
+[
+"is",
+99.34,
+99.41
+],
+[
+"incredibly",
+99.41,
+100.25
+],
+[
+"important,",
+100.25,
+101.1
+],
+[
+"but",
+101.1,
+101.27
+],
+[
+"its",
+101.27,
+101.57
+],
+[
+"disappearance",
+101.57,
+102.34
+],
+[
+"wouldn't",
+102.34,
+102.64
+],
+[
+"instantly",
+102.64,
+103.39
+],
+[
+"destroy",
+103.39,
+103.67
+],
+[
+"the",
+103.67,
+104.0
+],
+[
+"planet.",
+104.0,
+104.52
+]
+]
+},
+{
+"line": 22,
+"chapter": 1,
+"para": 11,
+"text": "There is, however, one immediate change.",
+"file": "vo/T022.wav",
+"start": 104.981,
+"dur": 1.975,
+"words": [
+[
+"There",
+104.981,
+105.111
+],
+[
+"is,",
+105.111,
+105.331
+],
+[
+"however,",
+105.331,
+106.041
+],
+[
+"one",
+106.041,
+106.171
+],
+[
+"immediate",
+106.171,
+106.711
+],
+[
+"change.",
+106.711,
+106.921
+]
+]
+},
+{
+"line": 23,
+"chapter": 1,
+"para": 12,
+"text": "The night sky.",
+"file": "vo/T023.wav",
+"start": 107.376,
+"dur": 0.85,
+"words": [
+[
+"The",
+107.376,
+107.666
+],
+[
+"night",
+107.666,
+107.776
+],
+[
+"sky.",
+107.776,
+108.176
+]
+]
+},
+{
+"line": 24,
+"chapter": 1,
+"para": 13,
+"text": "Without the Moon, a major natural source of nighttime illumination would disappear.",
+"file": "vo/T024.wav",
+"start": 108.826,
+"dur": 5.102,
+"words": [
+[
+"Without",
+108.826,
+109.196
+],
+[
+"the",
+109.196,
+109.356
+],
+[
+"Moon,",
+109.356,
+109.836
+],
+[
+"a",
+109.836,
+109.896
+],
+[
+"major",
+109.896,
+110.446
+],
+[
+"natural",
+110.446,
+110.946
+],
+[
+"source",
+110.946,
+111.336
+],
+[
+"of",
+111.336,
+111.356
+],
+[
+"nighttime",
+111.356,
+111.826
+],
+[
+"illumination",
+111.826,
+112.976
+],
+[
+"would",
+112.976,
+113.166
+],
+[
+"disappear.",
+113.166,
+113.876
+]
+]
+},
+{
+"line": 25,
+"chapter": 1,
+"para": 14,
+"text": "On a clear night, especially during what would otherwise be a full Moon, the difference could be dramatic.",
+"file": "vo/T025.wav",
+"start": 114.348,
+"dur": 5.55,
+"words": [
+[
+"On",
+114.348,
+114.598
+],
+[
+"a",
+114.598,
+114.708
+],
+[
+"clear",
+114.708,
+114.988
+],
+[
+"night,",
+114.988,
+115.278
+],
+[
+"especially",
+115.278,
+116.018
+],
+[
+"during",
+116.018,
+116.328
+],
+[
+"what",
+116.328,
+116.498
+],
+[
+"would",
+116.498,
+116.658
+],
+[
+"otherwise",
+116.658,
+117.218
+],
+[
+"be",
+117.218,
+117.418
+],
+[
+"a",
+117.418,
+117.528
+],
+[
+"full",
+117.528,
+117.688
+],
+[
+"Moon,",
+117.688,
+118.158
+],
+[
+"the",
+118.158,
+118.238
+],
+[
+"difference",
+118.238,
+118.728
+],
+[
+"could",
+118.728,
+118.978
+],
+[
+"be",
+118.978,
+119.168
+],
+[
+"dramatic.",
+119.168,
+119.848
+]
+]
+},
+{
+"line": 26,
+"chapter": 1,
+"para": 15,
+"text": "Rural landscapes would become darker. Shadows would fade. Familiar nighttime scenery would look completely different.",
+"file": "vo/T026.wav",
+"start": 120.318,
+"dur": 7.678,
+"words": [
+[
+"Rural",
+120.318,
+120.768
+],
+[
+"landscapes",
+120.768,
+121.418
+],
+[
+"would",
+121.418,
+121.708
+],
+[
+"become",
+121.708,
+122.098
+],
+[
+"darker.",
+122.098,
+122.838
+],
+[
+"Shadows",
+122.838,
+123.298
+],
+[
+"would",
+123.298,
+123.568
+],
+[
+"fade.",
+123.568,
+123.888
+],
+[
+"Familiar",
+123.888,
+124.528
+],
+[
+"nighttime",
+124.528,
+125.108
+],
+[
+"scenery",
+125.108,
+125.718
+],
+[
+"would",
+125.718,
+125.868
+],
+[
+"look",
+125.868,
+126.268
+],
+[
+"completely",
+126.268,
+127.198
+],
+[
+"different.",
+127.198,
+127.958
+]
+]
+},
+{
+"line": 27,
+"chapter": 1,
+"para": 16,
+"text": "And the sky itself would reveal something beautiful.",
+"file": "vo/T027.wav",
+"start": 128.416,
+"dur": 2.693,
+"words": [
+[
+"And",
+128.416,
+128.686
+],
+[
+"the",
+128.686,
+128.696
+],
+[
+"sky",
+128.696,
+129.026
+],
+[
+"itself",
+129.026,
+129.406
+],
+[
+"would",
+129.406,
+129.466
+],
+[
+"reveal",
+129.466,
+129.766
+],
+[
+"something",
+129.766,
+130.446
+],
+[
+"beautiful.",
+130.446,
+131.056
+]
+]
+},
+{
+"line": 28,
+"chapter": 1,
+"para": 17,
+"text": "With less moonlight washing out the stars, the Milky Way could become easier to see from dark locations.",
+"file": "vo/T028.wav",
+"start": 131.528,
+"dur": 6.31,
+"words": [
+[
+"With",
+131.528,
+131.688
+],
+[
+"less",
+131.688,
+131.988
+],
+[
+"moonlight",
+131.988,
+132.508
+],
+[
+"washing",
+132.508,
+132.898
+],
+[
+"out",
+132.898,
+133.188
+],
+[
+"the",
+133.188,
+133.378
+],
+[
+"stars,",
+133.378,
+133.908
+],
+[
+"the",
+133.908,
+134.058
+],
+[
+"Milky",
+134.058,
+134.448
+],
+[
+"Way",
+134.448,
+134.858
+],
+[
+"could",
+134.858,
+135.068
+],
+[
+"become",
+135.068,
+135.438
+],
+[
+"easier",
+135.438,
+135.918
+],
+[
+"to",
+135.918,
+136.148
+],
+[
+"see",
+136.148,
+136.538
+],
+[
+"from",
+136.538,
+136.778
+],
+[
+"dark",
+136.778,
+136.828
+],
+[
+"locations.",
+136.828,
+137.788
+]
+]
+},
+{
+"line": 29,
+"chapter": 1,
+"para": 18,
+"text": "Our world would lose something familiar.",
+"file": "vo/T029.wav",
+"start": 138.258,
+"dur": 1.775,
+"words": [
+[
+"Our",
+138.258,
+138.408
+],
+[
+"world",
+138.408,
+138.628
+],
+[
+"would",
+138.628,
+138.738
+],
+[
+"lose",
+138.738,
+138.968
+],
+[
+"something",
+138.968,
+139.388
+],
+[
+"familiar.",
+139.388,
+139.978
+]
+]
+},
+{
+"line": 30,
+"chapter": 1,
+"para": 19,
+"text": "But the universe above it might appear even more extraordinary.",
+"file": "vo/T030.wav",
+"start": 140.453,
+"dur": 3.552,
+"words": [
+[
+"But",
+140.453,
+140.553
+],
+[
+"the",
+140.553,
+140.893
+],
+[
+"universe",
+140.893,
+141.263
+],
+[
+"above",
+141.263,
+141.703
+],
+[
+"it",
+141.703,
+141.783
+],
+[
+"might",
+141.783,
+142.073
+],
+[
+"appear",
+142.073,
+142.453
+],
+[
+"even",
+142.453,
+142.853
+],
+[
+"more",
+142.853,
+143.033
+],
+[
+"extraordinary.",
+143.033,
+143.953
+]
+]
+},
+{
+"line": 31,
+"chapter": 2,
+"para": 0,
+"text": "Now comes the question most people ask.",
+"file": "vo/T031.wav",
+"start": 147.005,
+"dur": 2.172,
+"words": [
+[
+"Now",
+147.005,
+147.265
+],
+[
+"comes",
+147.265,
+147.645
+],
+[
+"the",
+147.645,
+147.715
+],
+[
+"question",
+147.715,
+148.295
+],
+[
+"most",
+148.295,
+148.355
+],
+[
+"people",
+148.355,
+148.735
+],
+[
+"ask.",
+148.735,
+149.125
+]
+]
+},
+{
+"line": 32,
+"chapter": 2,
+"para": 1,
+"text": "What happens to the tides?",
+"file": "vo/T032.wav",
+"start": 149.597,
+"dur": 1.286,
+"words": [
+[
+"What",
+149.597,
+149.857
+],
+[
+"happens",
+149.857,
+150.077
+],
+[
+"to",
+150.077,
+150.257
+],
+[
+"the",
+150.257,
+150.557
+],
+[
+"tides?",
+150.557,
+150.837
+]
+]
+},
+{
+"line": 33,
+"chapter": 2,
+"para": 2,
+"text": "Every day, coastlines experience rising and falling sea levels.",
+"file": "vo/T033.wav",
+"start": 151.533,
+"dur": 4.007,
+"words": [
+[
+"Every",
+151.533,
+152.233
+],
+[
+"day,",
+152.233,
+152.563
+],
+[
+"coastlines",
+152.563,
+153.073
+],
+[
+"experience",
+153.073,
+153.623
+],
+[
+"rising",
+153.623,
+154.213
+],
+[
+"and",
+154.213,
+154.423
+],
+[
+"falling",
+154.423,
+154.773
+],
+[
+"sea",
+154.773,
+154.883
+],
+[
+"levels.",
+154.883,
+155.493
+]
+]
+},
+{
+"line": 34,
+"chapter": 2,
+"para": 3,
+"text": "The Moon is the dominant contributor to Earth's tides, although the Sun also plays a major role.",
+"file": "vo/T034.wav",
+"start": 155.96,
+"dur": 6.151,
+"words": [
+[
+"The",
+155.97,
+156.09
+],
+[
+"Moon",
+156.09,
+156.49
+],
+[
+"is",
+156.49,
+156.56
+],
+[
+"the",
+156.56,
+156.89
+],
+[
+"dominant",
+156.89,
+157.39
+],
+[
+"contributor",
+157.39,
+158.25
+],
+[
+"to",
+158.25,
+158.64
+],
+[
+"Earth's",
+158.64,
+158.74
+],
+[
+"tides,",
+158.74,
+159.36
+],
+[
+"although",
+159.36,
+159.71
+],
+[
+"the",
+159.71,
+159.92
+],
+[
+"Sun",
+159.92,
+160.14
+],
+[
+"also",
+160.14,
+160.64
+],
+[
+"plays",
+160.64,
+160.89
+],
+[
+"a",
+160.89,
+160.97
+],
+[
+"major",
+160.97,
+161.53
+],
+[
+"role.",
+161.53,
+162.06
+]
+]
+},
+{
+"line": 35,
+"chapter": 2,
+"para": 4,
+"text": "The gravitational influence of the Moon helps create tidal bulges in Earth's oceans.",
+"file": "vo/T035.wav",
+"start": 162.531,
+"dur": 5.339,
+"words": [
+[
+"The",
+162.531,
+162.681
+],
+[
+"gravitational",
+162.681,
+164.081
+],
+[
+"influence",
+164.081,
+164.571
+],
+[
+"of",
+164.571,
+164.811
+],
+[
+"the",
+164.811,
+164.891
+],
+[
+"Moon",
+164.891,
+165.251
+],
+[
+"helps",
+165.251,
+165.551
+],
+[
+"create",
+165.551,
+165.681
+],
+[
+"tidal",
+165.681,
+166.131
+],
+[
+"bulges",
+166.131,
+166.661
+],
+[
+"in",
+166.661,
+166.831
+],
+[
+"Earth's",
+166.831,
+167.151
+],
+[
+"oceans.",
+167.151,
+167.811
+]
+]
+},
+{
+"line": 36,
+"chapter": 2,
+"para": 5,
+"text": "As Earth rotates, different regions move through these changing patterns.",
+"file": "vo/T036.wav",
+"start": 168.289,
+"dur": 3.986,
+"words": [
+[
+"As",
+168.289,
+168.519
+],
+[
+"Earth",
+168.519,
+168.689
+],
+[
+"rotates,",
+168.689,
+169.439
+],
+[
+"different",
+169.439,
+170.219
+],
+[
+"regions",
+170.219,
+170.549
+],
+[
+"move",
+170.549,
+170.829
+],
+[
+"through",
+170.829,
+171.079
+],
+[
+"these",
+171.079,
+171.169
+],
+[
+"changing",
+171.169,
+171.569
+],
+[
+"patterns.",
+171.569,
+172.229
+]
+]
+},
+{
+"line": 37,
+"chapter": 2,
+"para": 6,
+"text": "But here's where science becomes interesting.",
+"file": "vo/T037.wav",
+"start": 172.695,
+"dur": 2.1,
+"words": [
+[
+"But",
+172.695,
+172.846
+],
+[
+"here's",
+172.846,
+173.216
+],
+[
+"where",
+173.216,
+173.306
+],
+[
+"science",
+173.306,
+173.596
+],
+[
+"becomes",
+173.596,
+174.045
+],
+[
+"interesting.",
+174.045,
+174.755
+]
+]
+},
+{
+"line": 38,
+"chapter": 2,
+"para": 7,
+"text": "If the Moon vanished, the oceans wouldn't simply flatten in one second.",
+"file": "vo/T038.wav",
+"start": 175.215,
+"dur": 3.904,
+"words": [
+[
+"If",
+175.215,
+175.365
+],
+[
+"the",
+175.365,
+175.525
+],
+[
+"Moon",
+175.525,
+175.815
+],
+[
+"vanished,",
+175.815,
+176.525
+],
+[
+"the",
+176.525,
+176.785
+],
+[
+"oceans",
+176.785,
+177.065
+],
+[
+"wouldn't",
+177.065,
+177.285
+],
+[
+"simply",
+177.285,
+177.695
+],
+[
+"flatten",
+177.695,
+178.075
+],
+[
+"in",
+178.075,
+178.375
+],
+[
+"one",
+178.375,
+178.605
+],
+[
+"second.",
+178.605,
+179.105
+]
+]
+},
+{
+"line": 39,
+"chapter": 2,
+"para": 8,
+"text": "Water has momentum.",
+"file": "vo/T039.wav",
+"start": 179.539,
+"dur": 1.222,
+"words": [
+[
+"Water",
+179.539,
+179.989
+],
+[
+"has",
+179.989,
+180.019
+],
+[
+"momentum.",
+180.019,
+180.739
+]
+]
+},
+{
+"line": 40,
+"chapter": 2,
+"para": 9,
+"text": "Ocean basins have complex shapes.",
+"file": "vo/T040.wav",
+"start": 181.362,
+"dur": 1.986,
+"words": [
+[
+"Ocean",
+181.362,
+181.752
+],
+[
+"basins",
+181.752,
+182.152
+],
+[
+"have",
+182.152,
+182.362
+],
+[
+"complex",
+182.362,
+182.762
+],
+[
+"shapes.",
+182.762,
+183.302
+]
+]
+},
+{
+"line": 41,
+"chapter": 2,
+"para": 10,
+"text": "Coastlines, currents, and underwater terrain all influence how tides behave.",
+"file": "vo/T041.wav",
+"start": 183.767,
+"dur": 4.746,
+"words": [
+[
+"Coastlines,",
+183.777,
+184.567
+],
+[
+"currents,",
+184.567,
+185.037
+],
+[
+"and",
+185.037,
+185.307
+],
+[
+"underwater",
+185.307,
+186.237
+],
+[
+"terrain",
+186.237,
+186.697
+],
+[
+"all",
+186.697,
+186.877
+],
+[
+"influence",
+186.877,
+187.267
+],
+[
+"how",
+187.267,
+187.497
+],
+[
+"tides",
+187.497,
+187.967
+],
+[
+"behave.",
+187.967,
+188.457
+]
+]
+},
+{
+"line": 42,
+"chapter": 2,
+"para": 11,
+"text": "The existing ocean motion would continue adjusting to the new gravitational conditions.",
+"file": "vo/T042.wav",
+"start": 188.933,
+"dur": 5.5,
+"words": [
+[
+"The",
+188.943,
+189.173
+],
+[
+"existing",
+189.173,
+189.883
+],
+[
+"ocean",
+189.883,
+190.303
+],
+[
+"motion",
+190.303,
+190.693
+],
+[
+"would",
+190.693,
+190.893
+],
+[
+"continue",
+190.893,
+191.183
+],
+[
+"adjusting",
+191.183,
+191.973
+],
+[
+"to",
+191.973,
+192.203
+],
+[
+"the",
+192.203,
+192.253
+],
+[
+"new",
+192.253,
+192.483
+],
+[
+"gravitational",
+192.483,
+193.593
+],
+[
+"conditions.",
+193.593,
+194.383
+]
+]
+},
+{
+"line": 43,
+"chapter": 2,
+"para": 12,
+"text": "Over time, the familiar lunar tidal pattern would disappear.",
+"file": "vo/T043.wav",
+"start": 194.853,
+"dur": 3.376,
+"words": [
+[
+"Over",
+194.853,
+195.163
+],
+[
+"time,",
+195.163,
+195.593
+],
+[
+"the",
+195.593,
+195.613
+],
+[
+"familiar",
+195.613,
+196.223
+],
+[
+"lunar",
+196.223,
+196.583
+],
+[
+"tidal",
+196.583,
+196.893
+],
+[
+"pattern",
+196.893,
+197.373
+],
+[
+"would",
+197.373,
+197.503
+],
+[
+"disappear.",
+197.503,
+198.183
+]
+]
+},
+{
+"line": 44,
+"chapter": 2,
+"para": 13,
+"text": "But the tides themselves would not vanish completely.",
+"file": "vo/T044.wav",
+"start": 198.649,
+"dur": 2.938,
+"words": [
+[
+"But",
+198.649,
+198.749
+],
+[
+"the",
+198.749,
+198.929
+],
+[
+"tides",
+198.929,
+199.349
+],
+[
+"themselves",
+199.349,
+200.009
+],
+[
+"would",
+200.009,
+200.119
+],
+[
+"not",
+200.119,
+200.389
+],
+[
+"vanish",
+200.389,
+200.739
+],
+[
+"completely.",
+200.739,
+201.539
+]
+]
+},
+{
+"line": 45,
+"chapter": 2,
+"para": 14,
+"text": "Why?",
+"file": "vo/T045.wav",
+"start": 202.008,
+"dur": 0.512,
+"words": [
+[
+"Why?",
+202.008,
+202.498
+]
+]
+},
+{
+"line": 46,
+"chapter": 2,
+"para": 15,
+"text": "Because the Sun also generates tides.",
+"file": "vo/T046.wav",
+"start": 203.119,
+"dur": 2.232,
+"words": [
+[
+"Because",
+203.129,
+203.389
+],
+[
+"the",
+203.389,
+203.589
+],
+[
+"Sun",
+203.589,
+203.869
+],
+[
+"also",
+203.869,
+204.229
+],
+[
+"generates",
+204.229,
+204.769
+],
+[
+"tides.",
+204.769,
+205.309
+]
+]
+},
+{
+"line": 47,
+"chapter": 2,
+"para": 16,
+"text": "Solar tidal forces are weaker than lunar tidal forces, but they're still significant.",
+"file": "vo/T047.wav",
+"start": 205.771,
+"dur": 5.484,
+"words": [
+[
+"Solar",
+205.771,
+206.221
+],
+[
+"tidal",
+206.221,
+206.701
+],
+[
+"forces",
+206.701,
+207.201
+],
+[
+"are",
+207.201,
+207.261
+],
+[
+"weaker",
+207.261,
+207.721
+],
+[
+"than",
+207.721,
+207.981
+],
+[
+"lunar",
+207.981,
+208.541
+],
+[
+"tidal",
+208.541,
+209.001
+],
+[
+"forces,",
+209.001,
+209.531
+],
+[
+"but",
+209.531,
+209.771
+],
+[
+"they're",
+209.771,
+209.931
+],
+[
+"still",
+209.931,
+210.251
+],
+[
+"significant.",
+210.251,
+211.201
+]
+]
+},
+{
+"line": 48,
+"chapter": 2,
+"para": 17,
+"text": "Without the Moon, Earth would continue experiencing solar tides.",
+"file": "vo/T048.wav",
+"start": 211.676,
+"dur": 3.738,
+"words": [
+[
+"Without",
+211.686,
+212.016
+],
+[
+"the",
+212.016,
+212.416
+],
+[
+"Moon,",
+212.416,
+212.596
+],
+[
+"Earth",
+212.596,
+212.936
+],
+[
+"would",
+212.936,
+213.096
+],
+[
+"continue",
+213.096,
+213.616
+],
+[
+"experiencing",
+213.616,
+214.356
+],
+[
+"solar",
+214.356,
+214.776
+],
+[
+"tides.",
+214.776,
+215.366
+]
+]
+},
+{
+"line": 49,
+"chapter": 2,
+"para": 18,
+"text": "The overall tidal system would become substantially weaker and very different from the one we know today.",
+"file": "vo/T049.wav",
+"start": 215.833,
+"dur": 6.316,
+"words": [
+[
+"The",
+215.843,
+216.013
+],
+[
+"overall",
+216.013,
+216.563
+],
+[
+"tidal",
+216.563,
+217.073
+],
+[
+"system",
+217.073,
+217.403
+],
+[
+"would",
+217.403,
+217.653
+],
+[
+"become",
+217.653,
+218.173
+],
+[
+"substantially",
+218.173,
+218.933
+],
+[
+"weaker",
+218.933,
+219.403
+],
+[
+"and",
+219.403,
+219.503
+],
+[
+"very",
+219.503,
+219.883
+],
+[
+"different",
+219.883,
+220.623
+],
+[
+"from",
+220.623,
+220.663
+],
+[
+"the",
+220.663,
+220.983
+],
+[
+"one",
+220.983,
+221.243
+],
+[
+"we",
+221.243,
+221.433
+],
+[
+"know",
+221.433,
+221.623
+],
+[
+"today.",
+221.623,
+222.103
+]
+]
+},
+{
+"line": 50,
+"chapter": 2,
+"para": 19,
+"text": "Some coastal ecosystems would experience major changes.",
+"file": "vo/T050.wav",
+"start": 222.57,
+"dur": 3.691,
+"words": [
+[
+"Some",
+222.58,
+222.84
+],
+[
+"coastal",
+222.84,
+223.29
+],
+[
+"ecosystems",
+223.29,
+224.29
+],
+[
+"would",
+224.29,
+224.5
+],
+[
+"experience",
+224.5,
+225.1
+],
+[
+"major",
+225.1,
+225.51
+],
+[
+"changes.",
+225.51,
+226.21
+]
+]
+},
+{
+"line": 51,
+"chapter": 2,
+"para": 20,
+"text": "Tidal flats, estuaries, and intertidal habitats depend on regular flooding and exposure.",
+"file": "vo/T051.wav",
+"start": 226.68,
+"dur": 5.964,
+"words": [
+[
+"Tidal",
+226.68,
+227.17
+],
+[
+"flats,",
+227.17,
+227.47
+],
+[
+"estuaries,",
+227.47,
+228.3
+],
+[
+"and",
+228.3,
+228.51
+],
+[
+"intertidal",
+228.51,
+229.25
+],
+[
+"habitats",
+229.25,
+230.0
+],
+[
+"depend",
+230.0,
+230.24
+],
+[
+"on",
+230.24,
+230.61
+],
+[
+"regular",
+230.61,
+231.21
+],
+[
+"flooding",
+231.21,
+231.69
+],
+[
+"and",
+231.69,
+231.91
+],
+[
+"exposure.",
+231.91,
+232.59
+]
+]
+},
+{
+"line": 52,
+"chapter": 2,
+"para": 21,
+"text": "And when those rhythms change, the consequences extend far beyond the waterline.",
+"file": "vo/T052.wav",
+"start": 233.065,
+"dur": 4.853,
+"words": [
+[
+"And",
+233.065,
+233.265
+],
+[
+"when",
+233.265,
+233.655
+],
+[
+"those",
+233.655,
+233.875
+],
+[
+"rhythms",
+233.875,
+234.135
+],
+[
+"change,",
+234.135,
+234.545
+],
+[
+"the",
+234.545,
+234.775
+],
+[
+"consequences",
+234.775,
+235.785
+],
+[
+"extend",
+235.785,
+236.305
+],
+[
+"far",
+236.305,
+236.455
+],
+[
+"beyond",
+236.455,
+236.795
+],
+[
+"the",
+236.795,
+236.875
+],
+[
+"waterline.",
+236.875,
+237.865
+]
+]
+},
+{
+"line": 53,
+"chapter": 3,
+"para": 0,
+"text": "For humans, the Moon is often something beautiful to look at.",
+"file": "vo/T053.wav",
+"start": 240.918,
+"dur": 3.307,
+"words": [
+[
+"For",
+240.918,
+241.028
+],
+[
+"humans,",
+241.028,
+241.618
+],
+[
+"the",
+241.618,
+241.648
+],
+[
+"Moon",
+241.648,
+242.008
+],
+[
+"is",
+242.008,
+242.178
+],
+[
+"often",
+242.178,
+242.488
+],
+[
+"something",
+242.488,
+243.048
+],
+[
+"beautiful",
+243.048,
+243.518
+],
+[
+"to",
+243.518,
+243.778
+],
+[
+"look",
+243.778,
+243.798
+],
+[
+"at.",
+243.798,
+244.178
+]
+]
+},
+{
+"line": 54,
+"chapter": 3,
+"para": 1,
+"text": "For many animals, it's part of a biological calendar.",
+"file": "vo/T054.wav",
+"start": 244.645,
+"dur": 3.26,
+"words": [
+[
+"For",
+244.645,
+244.725
+],
+[
+"many",
+244.725,
+245.085
+],
+[
+"animals,",
+245.085,
+245.725
+],
+[
+"it's",
+245.725,
+245.915
+],
+[
+"part",
+245.915,
+246.205
+],
+[
+"of",
+246.205,
+246.425
+],
+[
+"a",
+246.425,
+246.455
+],
+[
+"biological",
+246.455,
+247.215
+],
+[
+"calendar.",
+247.215,
+247.865
+]
+]
+},
+{
+"line": 55,
+"chapter": 3,
+"para": 2,
+"text": "Some marine species coordinate reproductive activity with lunar cycles.",
+"file": "vo/T055.wav",
+"start": 248.324,
+"dur": 4.679,
+"words": [
+[
+"Some",
+248.324,
+248.614
+],
+[
+"marine",
+248.614,
+249.044
+],
+[
+"species",
+249.044,
+249.434
+],
+[
+"coordinate",
+249.434,
+250.114
+],
+[
+"reproductive",
+250.114,
+250.814
+],
+[
+"activity",
+250.814,
+251.794
+],
+[
+"with",
+251.794,
+251.934
+],
+[
+"lunar",
+251.934,
+252.394
+],
+[
+"cycles.",
+252.394,
+252.954
+]
+]
+},
+{
+"line": 56,
+"chapter": 3,
+"para": 3,
+"text": "Certain corals, for example, use environmental signals associated with the Moon to help synchronize spawning.",
+"file": "vo/T056.wav",
+"start": 253.424,
+"dur": 6.974,
+"words": [
+[
+"Certain",
+253.424,
+253.854
+],
+[
+"corals,",
+253.854,
+254.424
+],
+[
+"for",
+254.424,
+254.644
+],
+[
+"example,",
+254.644,
+255.424
+],
+[
+"use",
+255.424,
+255.624
+],
+[
+"environmental",
+255.624,
+256.634
+],
+[
+"signals",
+256.634,
+257.204
+],
+[
+"associated",
+257.204,
+258.004
+],
+[
+"with",
+258.004,
+258.344
+],
+[
+"the",
+258.344,
+258.554
+],
+[
+"Moon",
+258.554,
+258.604
+],
+[
+"to",
+258.604,
+258.894
+],
+[
+"help",
+258.894,
+259.204
+],
+[
+"synchronize",
+259.204,
+259.844
+],
+[
+"spawning.",
+259.844,
+260.344
+]
+]
+},
+{
+"line": 57,
+"chapter": 3,
+"para": 4,
+"text": "Other creatures respond to changes in moonlight.",
+"file": "vo/T057.wav",
+"start": 260.817,
+"dur": 2.677,
+"words": [
+[
+"Other",
+260.817,
+261.277
+],
+[
+"creatures",
+261.277,
+261.857
+],
+[
+"respond",
+261.857,
+262.247
+],
+[
+"to",
+262.247,
+262.267
+],
+[
+"changes",
+262.267,
+262.817
+],
+[
+"in",
+262.817,
+262.867
+],
+[
+"moonlight.",
+262.867,
+263.437
+]
+]
+},
+{
+"line": 58,
+"chapter": 3,
+"para": 5,
+"text": "Nocturnal predators may hunt differently on bright nights.",
+"file": "vo/T058.wav",
+"start": 263.914,
+"dur": 3.083,
+"words": [
+[
+"Nocturnal",
+263.914,
+264.474
+],
+[
+"predators",
+264.474,
+265.034
+],
+[
+"may",
+265.034,
+265.224
+],
+[
+"hunt",
+265.224,
+265.504
+],
+[
+"differently",
+265.504,
+266.154
+],
+[
+"on",
+266.154,
+266.404
+],
+[
+"bright",
+266.404,
+266.724
+],
+[
+"nights.",
+266.724,
+266.954
+]
+]
+},
+{
+"line": 59,
+"chapter": 3,
+"para": 6,
+"text": "Prey animals may change how and where they move.",
+"file": "vo/T059.wav",
+"start": 267.418,
+"dur": 2.546,
+"words": [
+[
+"Prey",
+267.418,
+267.678
+],
+[
+"animals",
+267.678,
+268.308
+],
+[
+"may",
+268.308,
+268.408
+],
+[
+"change",
+268.408,
+268.708
+],
+[
+"how",
+268.708,
+268.848
+],
+[
+"and",
+268.848,
+269.158
+],
+[
+"where",
+269.158,
+269.448
+],
+[
+"they",
+269.448,
+269.548
+],
+[
+"move.",
+269.548,
+269.938
+]
+]
+},
+{
+"line": 60,
+"chapter": 3,
+"para": 7,
+"text": "Sea turtles and other coastal wildlife can also be affected by nighttime light conditions.",
+"file": "vo/T060.wav",
+"start": 270.384,
+"dur": 5.786,
+"words": [
+[
+"Sea",
+270.384,
+270.694
+],
+[
+"turtles",
+270.694,
+271.174
+],
+[
+"and",
+271.174,
+271.294
+],
+[
+"other",
+271.294,
+271.694
+],
+[
+"coastal",
+271.694,
+272.214
+],
+[
+"wildlife",
+272.214,
+272.804
+],
+[
+"can",
+272.804,
+272.964
+],
+[
+"also",
+272.964,
+273.444
+],
+[
+"be",
+273.444,
+273.604
+],
+[
+"affected",
+273.604,
+274.254
+],
+[
+"by",
+274.254,
+274.674
+],
+[
+"nighttime",
+274.674,
+275.064
+],
+[
+"light",
+275.064,
+275.314
+],
+[
+"conditions.",
+275.314,
+276.124
+]
+]
+},
+{
+"line": 61,
+"chapter": 3,
+"para": 8,
+"text": "If the Moon disappeared, these systems wouldn't all collapse overnight.",
+"file": "vo/T061.wav",
+"start": 276.59,
+"dur": 3.723,
+"words": [
+[
+"If",
+276.59,
+276.76
+],
+[
+"the",
+276.76,
+276.91
+],
+[
+"Moon",
+276.91,
+277.18
+],
+[
+"disappeared,",
+277.18,
+278.15
+],
+[
+"these",
+278.15,
+278.41
+],
+[
+"systems",
+278.41,
+278.69
+],
+[
+"wouldn't",
+278.69,
+279.0
+],
+[
+"all",
+279.0,
+279.04
+],
+[
+"collapse",
+279.04,
+279.61
+],
+[
+"overnight.",
+279.61,
+280.26
+]
+]
+},
+{
+"line": 62,
+"chapter": 3,
+"para": 9,
+"text": "Animals are adaptable, and species respond to many different environmental cues.",
+"file": "vo/T062.wav",
+"start": 280.733,
+"dur": 5.317,
+"words": [
+[
+"Animals",
+280.733,
+281.323
+],
+[
+"are",
+281.323,
+281.623
+],
+[
+"adaptable,",
+281.623,
+282.363
+],
+[
+"and",
+282.363,
+282.613
+],
+[
+"species",
+282.613,
+283.153
+],
+[
+"respond",
+283.153,
+283.433
+],
+[
+"to",
+283.433,
+283.753
+],
+[
+"many",
+283.753,
+284.153
+],
+[
+"different",
+284.153,
+284.583
+],
+[
+"environmental",
+284.583,
+285.763
+],
+[
+"cues.",
+285.763,
+286.003
+]
+]
+},
+{
+"line": 63,
+"chapter": 3,
+"para": 10,
+"text": "But some populations could face serious disruption.",
+"file": "vo/T063.wav",
+"start": 286.47,
+"dur": 3.042,
+"words": [
+[
+"But",
+286.47,
+286.59
+],
+[
+"some",
+286.59,
+286.86
+],
+[
+"populations",
+286.86,
+287.84
+],
+[
+"could",
+287.84,
+288.09
+],
+[
+"face",
+288.09,
+288.25
+],
+[
+"serious",
+288.25,
+288.68
+],
+[
+"disruption.",
+288.68,
+289.46
+]
+]
+},
+{
+"line": 64,
+"chapter": 3,
+"para": 11,
+"text": "Over generations, ecosystems would begin adjusting to a world without lunar rhythms.",
+"file": "vo/T064.wav",
+"start": 289.932,
+"dur": 5.667,
+"words": [
+[
+"Over",
+289.932,
+290.282
+],
+[
+"generations,",
+290.282,
+291.402
+],
+[
+"ecosystems",
+291.402,
+292.352
+],
+[
+"would",
+292.352,
+292.472
+],
+[
+"begin",
+292.472,
+292.882
+],
+[
+"adjusting",
+292.882,
+293.582
+],
+[
+"to",
+293.582,
+293.912
+],
+[
+"a",
+293.912,
+294.112
+],
+[
+"world",
+294.112,
+294.232
+],
+[
+"without",
+294.232,
+294.652
+],
+[
+"lunar",
+294.652,
+295.112
+],
+[
+"rhythms.",
+295.112,
+295.552
+]
+]
+},
+{
+"line": 65,
+"chapter": 3,
+"para": 12,
+"text": "Certain species might adapt.",
+"file": "vo/T065.wav",
+"start": 296.019,
+"dur": 1.558,
+"words": [
+[
+"Certain",
+296.019,
+296.429
+],
+[
+"species",
+296.429,
+296.799
+],
+[
+"might",
+296.799,
+297.099
+],
+[
+"adapt.",
+297.099,
+297.529
+]
+]
+},
+{
+"line": 66,
+"chapter": 3,
+"para": 13,
+"text": "Others could decline.",
+"file": "vo/T066.wav",
+"start": 297.997,
+"dur": 1.109,
+"words": [
+[
+"Others",
+297.997,
+298.337
+],
+[
+"could",
+298.337,
+298.587
+],
+[
+"decline.",
+298.587,
+299.057
+]
+]
+},
+{
+"line": 67,
+"chapter": 3,
+"para": 14,
+"text": "The Moon's disappearance would not simply change how Earth looks.",
+"file": "vo/T067.wav",
+"start": 299.706,
+"dur": 3.457,
+"words": [
+[
+"The",
+299.706,
+299.846
+],
+[
+"Moon's",
+299.846,
+300.206
+],
+[
+"disappearance",
+300.206,
+301.016
+],
+[
+"would",
+301.016,
+301.376
+],
+[
+"not",
+301.376,
+301.596
+],
+[
+"simply",
+301.596,
+302.096
+],
+[
+"change",
+302.096,
+302.356
+],
+[
+"how",
+302.356,
+302.596
+],
+[
+"Earth",
+302.596,
+302.656
+],
+[
+"looks.",
+302.656,
+303.116
+]
+]
+},
+{
+"line": 68,
+"chapter": 3,
+"para": 15,
+"text": "It would change some of the signals life has evolved to recognize.",
+"file": "vo/T068.wav",
+"start": 303.583,
+"dur": 3.792,
+"words": [
+[
+"It",
+303.583,
+303.843
+],
+[
+"would",
+303.843,
+303.963
+],
+[
+"change",
+303.963,
+304.243
+],
+[
+"some",
+304.243,
+304.353
+],
+[
+"of",
+304.353,
+304.603
+],
+[
+"the",
+304.603,
+304.923
+],
+[
+"signals",
+304.923,
+305.193
+],
+[
+"life",
+305.193,
+305.583
+],
+[
+"has",
+305.583,
+305.623
+],
+[
+"evolved",
+305.623,
+306.373
+],
+[
+"to",
+306.373,
+306.523
+],
+[
+"recognize.",
+306.523,
+307.333
+]
+]
+},
+{
+"line": 69,
+"chapter": 3,
+"para": 16,
+"text": "And those changes could ripple through food webs in ways that are difficult to predict.",
+"file": "vo/T069.wav",
+"start": 307.795,
+"dur": 4.759,
+"words": [
+[
+"And",
+307.795,
+307.925
+],
+[
+"those",
+307.925,
+308.235
+],
+[
+"changes",
+308.235,
+308.795
+],
+[
+"could",
+308.795,
+308.845
+],
+[
+"ripple",
+308.845,
+309.385
+],
+[
+"through",
+309.385,
+309.705
+],
+[
+"food",
+309.705,
+309.765
+],
+[
+"webs",
+309.765,
+309.985
+],
+[
+"in",
+309.985,
+310.345
+],
+[
+"ways",
+310.345,
+310.505
+],
+[
+"that",
+310.505,
+310.685
+],
+[
+"are",
+310.685,
+311.065
+],
+[
+"difficult",
+311.065,
+311.625
+],
+[
+"to",
+311.625,
+311.815
+],
+[
+"predict.",
+311.815,
+312.505
+]
+]
+},
+{
+"line": 70,
+"chapter": 4,
+"para": 0,
+"text": "Now let's address one of the biggest misconceptions.",
+"file": "vo/T070.wav",
+"start": 315.554,
+"dur": 2.756,
+"words": [
+[
+"Now",
+315.554,
+315.654
+],
+[
+"let's",
+315.654,
+316.004
+],
+[
+"address",
+316.004,
+316.414
+],
+[
+"one",
+316.414,
+316.514
+],
+[
+"of",
+316.514,
+316.834
+],
+[
+"the",
+316.834,
+316.884
+],
+[
+"biggest",
+316.884,
+317.254
+],
+[
+"misconceptions.",
+317.254,
+318.264
+]
+]
+},
+{
+"line": 71,
+"chapter": 4,
+"para": 1,
+"text": "Without the Moon, Earth would not suddenly stop rotating.",
+"file": "vo/T071.wav",
+"start": 318.729,
+"dur": 3.158,
+"words": [
+[
+"Without",
+318.729,
+319.049
+],
+[
+"the",
+319.049,
+319.399
+],
+[
+"Moon,",
+319.399,
+319.579
+],
+[
+"Earth",
+319.579,
+319.909
+],
+[
+"would",
+319.909,
+319.989
+],
+[
+"not",
+319.989,
+320.329
+],
+[
+"suddenly",
+320.329,
+320.869
+],
+[
+"stop",
+320.869,
+321.069
+],
+[
+"rotating.",
+321.069,
+321.839
+]
+]
+},
+{
+"line": 72,
+"chapter": 4,
+"para": 2,
+"text": "Our planet already possesses rotational angular momentum.",
+"file": "vo/T072.wav",
+"start": 322.307,
+"dur": 3.685,
+"words": [
+[
+"Our",
+322.307,
+322.437
+],
+[
+"planet",
+322.437,
+322.917
+],
+[
+"already",
+322.917,
+323.457
+],
+[
+"possesses",
+323.457,
+323.917
+],
+[
+"rotational",
+323.917,
+324.767
+],
+[
+"angular",
+324.767,
+325.197
+],
+[
+"momentum.",
+325.197,
+325.957
+]
+]
+},
+{
+"line": 73,
+"chapter": 4,
+"para": 3,
+"text": "Removing the Moon doesn't magically erase that motion.",
+"file": "vo/T073.wav",
+"start": 326.412,
+"dur": 3.006,
+"words": [
+[
+"Removing",
+326.412,
+326.942
+],
+[
+"the",
+326.942,
+327.252
+],
+[
+"Moon",
+327.252,
+327.382
+],
+[
+"doesn't",
+327.382,
+327.632
+],
+[
+"magically",
+327.632,
+328.222
+],
+[
+"erase",
+328.222,
+328.682
+],
+[
+"that",
+328.682,
+328.842
+],
+[
+"motion.",
+328.842,
+329.372
+]
+]
+},
+{
+"line": 74,
+"chapter": 4,
+"para": 4,
+"text": "A day would not instantly become longer or shorter.",
+"file": "vo/T074.wav",
+"start": 329.837,
+"dur": 2.67,
+"words": [
+[
+"A",
+329.837,
+329.957
+],
+[
+"day",
+329.957,
+330.247
+],
+[
+"would",
+330.247,
+330.337
+],
+[
+"not",
+330.337,
+330.627
+],
+[
+"instantly",
+330.627,
+331.137
+],
+[
+"become",
+331.137,
+331.507
+],
+[
+"longer",
+331.507,
+331.747
+],
+[
+"or",
+331.747,
+331.977
+],
+[
+"shorter.",
+331.977,
+332.457
+]
+]
+},
+{
+"line": 75,
+"chapter": 4,
+"para": 5,
+"text": "The Sun would still rise.",
+"file": "vo/T075.wav",
+"start": 332.928,
+"dur": 1.285,
+"words": [
+[
+"The",
+332.928,
+333.098
+],
+[
+"Sun",
+333.098,
+333.388
+],
+[
+"would",
+333.388,
+333.498
+],
+[
+"still",
+333.498,
+333.908
+],
+[
+"rise.",
+333.908,
+334.178
+]
+]
+},
+{
+"line": 76,
+"chapter": 4,
+"para": 6,
+"text": "The Sun would still set.",
+"file": "vo/T076.wav",
+"start": 334.633,
+"dur": 1.224,
+"words": [
+[
+"The",
+334.633,
+334.773
+],
+[
+"Sun",
+334.773,
+335.143
+],
+[
+"would",
+335.143,
+335.173
+],
+[
+"still",
+335.173,
+335.443
+],
+[
+"set.",
+335.443,
+335.813
+]
+]
+},
+{
+"line": 77,
+"chapter": 4,
+"para": 7,
+"text": "And Earth would continue orbiting the Sun.",
+"file": "vo/T077.wav",
+"start": 336.277,
+"dur": 2.046,
+"words": [
+[
+"And",
+336.277,
+336.417
+],
+[
+"Earth",
+336.417,
+336.657
+],
+[
+"would",
+336.657,
+336.857
+],
+[
+"continue",
+336.857,
+337.307
+],
+[
+"orbiting",
+337.307,
+337.827
+],
+[
+"the",
+337.827,
+337.937
+],
+[
+"Sun.",
+337.937,
+338.277
+]
+]
+},
+{
+"line": 78,
+"chapter": 4,
+"para": 8,
+"text": "However, the Moon has played a major role in Earth's rotational history.",
+"file": "vo/T078.wav",
+"start": 338.743,
+"dur": 4.182,
+"words": [
+[
+"However,",
+338.743,
+339.313
+],
+[
+"the",
+339.313,
+339.673
+],
+[
+"Moon",
+339.673,
+339.873
+],
+[
+"has",
+339.873,
+339.943
+],
+[
+"played",
+339.943,
+340.213
+],
+[
+"a",
+340.213,
+340.273
+],
+[
+"major",
+340.273,
+340.733
+],
+[
+"role",
+340.733,
+341.093
+],
+[
+"in",
+341.093,
+341.263
+],
+[
+"Earth's",
+341.263,
+341.513
+],
+[
+"rotational",
+341.513,
+342.133
+],
+[
+"history.",
+342.133,
+342.873
+]
+]
+},
+{
+"line": 79,
+"chapter": 4,
+"para": 9,
+"text": "Over enormous spans of time, tidal interactions transfer angular momentum between Earth and the Moon.",
+"file": "vo/T079.wav",
+"start": 343.344,
+"dur": 6.295,
+"words": [
+[
+"Over",
+343.344,
+343.684
+],
+[
+"enormous",
+343.684,
+344.504
+],
+[
+"spans",
+344.504,
+344.644
+],
+[
+"of",
+344.644,
+344.934
+],
+[
+"time,",
+344.934,
+345.244
+],
+[
+"tidal",
+345.244,
+345.654
+],
+[
+"interactions",
+345.654,
+346.424
+],
+[
+"transfer",
+346.424,
+346.984
+],
+[
+"angular",
+346.984,
+347.464
+],
+[
+"momentum",
+347.464,
+348.274
+],
+[
+"between",
+348.274,
+348.524
+],
+[
+"Earth",
+348.524,
+348.894
+],
+[
+"and",
+348.894,
+348.994
+],
+[
+"the",
+348.994,
+349.194
+],
+[
+"Moon.",
+349.194,
+349.604
+]
+]
+},
+{
+"line": 80,
+"chapter": 4,
+"para": 10,
+"text": "This process gradually slows Earth's rotation while pushing the Moon farther away.",
+"file": "vo/T080.wav",
+"start": 350.06,
+"dur": 4.918,
+"words": [
+[
+"This",
+350.06,
+350.26
+],
+[
+"process",
+350.26,
+350.76
+],
+[
+"gradually",
+350.76,
+351.42
+],
+[
+"slows",
+351.42,
+351.72
+],
+[
+"Earth's",
+351.72,
+351.84
+],
+[
+"rotation",
+351.84,
+352.46
+],
+[
+"while",
+352.46,
+353.08
+],
+[
+"pushing",
+353.08,
+353.51
+],
+[
+"the",
+353.51,
+353.69
+],
+[
+"Moon",
+353.69,
+353.98
+],
+[
+"farther",
+353.98,
+354.32
+],
+[
+"away.",
+354.32,
+354.93
+]
+]
+},
+{
+"line": 81,
+"chapter": 4,
+"para": 11,
+"text": "That's one reason Earth's days have lengthened over geological history.",
+"file": "vo/T081.wav",
+"start": 355.398,
+"dur": 4.242,
+"words": [
+[
+"That's",
+355.398,
+355.578
+],
+[
+"one",
+355.578,
+355.728
+],
+[
+"reason",
+355.728,
+356.198
+],
+[
+"Earth's",
+356.198,
+356.398
+],
+[
+"days",
+356.398,
+356.768
+],
+[
+"have",
+356.768,
+356.798
+],
+[
+"lengthened",
+356.798,
+357.438
+],
+[
+"over",
+357.438,
+357.988
+],
+[
+"geological",
+357.988,
+358.868
+],
+[
+"history.",
+358.868,
+359.588
+]
+]
+},
+{
+"line": 82,
+"chapter": 4,
+"para": 12,
+"text": "Without the Moon, this particular mechanism of rotational slowing would disappear.",
+"file": "vo/T082.wav",
+"start": 360.059,
+"dur": 4.987,
+"words": [
+[
+"Without",
+360.059,
+360.429
+],
+[
+"the",
+360.429,
+360.589
+],
+[
+"Moon,",
+360.589,
+361.069
+],
+[
+"this",
+361.069,
+361.129
+],
+[
+"particular",
+361.129,
+362.099
+],
+[
+"mechanism",
+362.099,
+362.659
+],
+[
+"of",
+362.659,
+362.919
+],
+[
+"rotational",
+362.919,
+363.619
+],
+[
+"slowing",
+363.619,
+364.119
+],
+[
+"would",
+364.119,
+364.309
+],
+[
+"disappear.",
+364.309,
+364.999
+]
+]
+},
+{
+"line": 83,
+"chapter": 4,
+"para": 13,
+"text": "Solar tides would still produce some tidal braking, but the long-term evolution of Earth's rotation would change.",
+"file": "vo/T083.wav",
+"start": 365.466,
+"dur": 7.187,
+"words": [
+[
+"Solar",
+365.466,
+365.956
+],
+[
+"tides",
+365.956,
+366.396
+],
+[
+"would",
+366.396,
+366.736
+],
+[
+"still",
+366.736,
+366.936
+],
+[
+"produce",
+366.936,
+367.426
+],
+[
+"some",
+367.426,
+367.616
+],
+[
+"tidal",
+367.616,
+368.066
+],
+[
+"braking,",
+368.066,
+368.736
+],
+[
+"but",
+368.736,
+369.036
+],
+[
+"the",
+369.036,
+369.356
+],
+[
+"long-term",
+369.356,
+369.856
+],
+[
+"evolution",
+369.856,
+370.686
+],
+[
+"of",
+370.686,
+371.046
+],
+[
+"Earth's",
+371.046,
+371.296
+],
+[
+"rotation",
+371.296,
+371.956
+],
+[
+"would",
+371.956,
+372.306
+],
+[
+"change.",
+372.306,
+372.616
+]
+]
+},
+{
+"line": 84,
+"chapter": 4,
+"para": 14,
+"text": "So the immediate answer is reassuring.",
+"file": "vo/T084.wav",
+"start": 373.073,
+"dur": 1.992,
+"words": [
+[
+"So",
+373.073,
+373.213
+],
+[
+"the",
+373.213,
+373.383
+],
+[
+"immediate",
+373.383,
+373.903
+],
+[
+"answer",
+373.903,
+374.273
+],
+[
+"is",
+374.273,
+374.463
+],
+[
+"reassuring.",
+374.463,
+375.013
+]
+]
+},
+{
+"line": 85,
+"chapter": 4,
+"para": 15,
+"text": "Tomorrow would still have a normal sunrise.",
+"file": "vo/T085.wav",
+"start": 375.485,
+"dur": 2.27,
+"words": [
+[
+"Tomorrow",
+375.485,
+376.045
+],
+[
+"would",
+376.045,
+376.175
+],
+[
+"still",
+376.175,
+376.535
+],
+[
+"have",
+376.535,
+376.545
+],
+[
+"a",
+376.545,
+376.915
+],
+[
+"normal",
+376.915,
+377.265
+],
+[
+"sunrise.",
+377.265,
+377.715
+]
+]
+},
+{
+"line": 86,
+"chapter": 4,
+"para": 16,
+"text": "But the future length of Earth's day would evolve differently over millions of years.",
+"file": "vo/T086.wav",
+"start": 378.175,
+"dur": 4.662,
+"words": [
+[
+"But",
+378.175,
+378.425
+],
+[
+"the",
+378.425,
+378.615
+],
+[
+"future",
+378.615,
+379.045
+],
+[
+"length",
+379.045,
+379.265
+],
+[
+"of",
+379.265,
+379.465
+],
+[
+"Earth's",
+379.465,
+379.615
+],
+[
+"day",
+379.615,
+379.965
+],
+[
+"would",
+379.965,
+380.015
+],
+[
+"evolve",
+380.015,
+380.605
+],
+[
+"differently",
+380.605,
+381.315
+],
+[
+"over",
+381.315,
+381.885
+],
+[
+"millions",
+381.885,
+382.205
+],
+[
+"of",
+382.205,
+382.525
+],
+[
+"years.",
+382.525,
+382.785
+]
+]
+},
+{
+"line": 87,
+"chapter": 5,
+"para": 0,
+"text": "Now we reach one of the most important parts of this entire scenario.",
+"file": "vo/T087.wav",
+"start": 385.838,
+"dur": 4.167,
+"words": [
+[
+"Now",
+385.838,
+385.968
+],
+[
+"we",
+385.968,
+386.288
+],
+[
+"reach",
+386.288,
+386.458
+],
+[
+"one",
+386.458,
+386.648
+],
+[
+"of",
+386.648,
+387.008
+],
+[
+"the",
+387.008,
+387.248
+],
+[
+"most",
+387.248,
+387.338
+],
+[
+"important",
+387.338,
+387.958
+],
+[
+"parts",
+387.958,
+388.258
+],
+[
+"of",
+388.258,
+388.498
+],
+[
+"this",
+388.498,
+388.708
+],
+[
+"entire",
+388.708,
+389.248
+],
+[
+"scenario.",
+389.248,
+389.958
+]
+]
+},
+{
+"line": 88,
+"chapter": 5,
+"para": 1,
+"text": "Earth doesn't spin perfectly upright.",
+"file": "vo/T088.wav",
+"start": 390.425,
+"dur": 1.818,
+"words": [
+[
+"Earth",
+390.425,
+390.685
+],
+[
+"doesn't",
+390.685,
+390.925
+],
+[
+"spin",
+390.925,
+391.015
+],
+[
+"perfectly",
+391.015,
+391.565
+],
+[
+"upright.",
+391.565,
+392.195
+]
+]
+},
+{
+"line": 89,
+"chapter": 5,
+"para": 2,
+"text": "Its rotational axis is tilted by about {23.5\u00b0|twenty-three and a half degrees} relative to its orbital plane.",
+"file": "vo/T089.wav",
+"start": 392.663,
+"dur": 6.61,
+"words": [
+[
+"Its",
+392.663,
+392.793
+],
+[
+"rotational",
+392.793,
+393.673
+],
+[
+"axis",
+393.673,
+394.283
+],
+[
+"is",
+394.283,
+394.523
+],
+[
+"tilted",
+394.523,
+394.793
+],
+[
+"by",
+394.793,
+395.063
+],
+[
+"about",
+395.063,
+395.623
+],
+[
+"23.5\u00b0",
+395.623,
+397.183
+],
+[
+"relative",
+397.183,
+397.823
+],
+[
+"to",
+397.823,
+397.883
+],
+[
+"its",
+397.883,
+398.273
+],
+[
+"orbital",
+398.273,
+398.813
+],
+[
+"plane.",
+398.813,
+399.223
+]
+]
+},
+{
+"line": 90,
+"chapter": 5,
+"para": 3,
+"text": "That tilt is responsible for our seasons.",
+"file": "vo/T090.wav",
+"start": 399.693,
+"dur": 2.334,
+"words": [
+[
+"That",
+399.693,
+399.883
+],
+[
+"tilt",
+399.883,
+400.133
+],
+[
+"is",
+400.133,
+400.183
+],
+[
+"responsible",
+400.183,
+401.123
+],
+[
+"for",
+401.123,
+401.353
+],
+[
+"our",
+401.353,
+401.423
+],
+[
+"seasons.",
+401.423,
+401.973
+]
+]
+},
+{
+"line": 91,
+"chapter": 5,
+"para": 4,
+"text": "As Earth travels around the Sun, different hemispheres receive different amounts of sunlight.",
+"file": "vo/T091.wav",
+"start": 402.447,
+"dur": 4.947,
+"words": [
+[
+"As",
+402.447,
+402.687
+],
+[
+"Earth",
+402.687,
+402.867
+],
+[
+"travels",
+402.867,
+403.207
+],
+[
+"around",
+403.207,
+403.497
+],
+[
+"the",
+403.497,
+403.837
+],
+[
+"Sun,",
+403.837,
+404.137
+],
+[
+"different",
+404.137,
+404.557
+],
+[
+"hemispheres",
+404.557,
+405.447
+],
+[
+"receive",
+405.447,
+405.677
+],
+[
+"different",
+405.677,
+406.207
+],
+[
+"amounts",
+406.207,
+406.677
+],
+[
+"of",
+406.677,
+406.807
+],
+[
+"sunlight.",
+406.807,
+407.347
+]
+]
+},
+{
+"line": 92,
+"chapter": 5,
+"para": 5,
+"text": "Summer.",
+"file": "vo/T092.wav",
+"start": 407.814,
+"dur": 0.547,
+"words": [
+[
+"Summer.",
+407.814,
+408.344
+]
+]
+},
+{
+"line": 93,
+"chapter": 5,
+"para": 6,
+"text": "Winter.",
+"file": "vo/T093.wav",
+"start": 408.961,
+"dur": 0.654,
+"words": [
+[
+"Winter.",
+408.961,
+409.591
+]
+]
+},
+{
+"line": 94,
+"chapter": 5,
+"para": 7,
+"text": "Spring.",
+"file": "vo/T094.wav",
+"start": 410.215,
+"dur": 0.618,
+"words": [
+[
+"Spring.",
+410.215,
+410.785
+]
+]
+},
+{
+"line": 95,
+"chapter": 5,
+"para": 8,
+"text": "Autumn.",
+"file": "vo/T095.wav",
+"start": 411.433,
+"dur": 0.567,
+"words": [
+[
+"Autumn.",
+411.433,
+411.973
+]
+]
+},
+{
+"line": 96,
+"chapter": 5,
+"para": 9,
+"text": "The Moon helps influence the long-term stability of Earth's axial tilt.",
+"file": "vo/T096.wav",
+"start": 412.6,
+"dur": 4.249,
+"words": [
+[
+"The",
+412.6,
+412.74
+],
+[
+"Moon",
+412.74,
+413.03
+],
+[
+"helps",
+413.03,
+413.22
+],
+[
+"influence",
+413.22,
+413.88
+],
+[
+"the",
+413.88,
+413.94
+],
+[
+"long-term",
+413.94,
+414.47
+],
+[
+"stability",
+414.47,
+415.55
+],
+[
+"of",
+415.55,
+415.78
+],
+[
+"Earth's",
+415.78,
+415.91
+],
+[
+"axial",
+415.91,
+416.37
+],
+[
+"tilt.",
+416.37,
+416.8
+]
+]
+},
+{
+"line": 97,
+"chapter": 5,
+"para": 10,
+"text": "Without it, the gravitational interactions affecting Earth's rotation would be different.",
+"file": "vo/T097.wav",
+"start": 417.269,
+"dur": 4.96,
+"words": [
+[
+"Without",
+417.269,
+417.689
+],
+[
+"it,",
+417.689,
+417.889
+],
+[
+"the",
+417.889,
+418.069
+],
+[
+"gravitational",
+418.069,
+418.979
+],
+[
+"interactions",
+418.979,
+419.779
+],
+[
+"affecting",
+419.779,
+420.409
+],
+[
+"Earth's",
+420.409,
+420.519
+],
+[
+"rotation",
+420.519,
+421.079
+],
+[
+"would",
+421.079,
+421.299
+],
+[
+"be",
+421.299,
+421.469
+],
+[
+"different.",
+421.469,
+422.189
+]
+]
+},
+{
+"line": 98,
+"chapter": 5,
+"para": 11,
+"text": "Over very long timescales, the tilt could potentially experience much larger variations under some models.",
+"file": "vo/T098.wav",
+"start": 422.649,
+"dur": 6.769,
+"words": [
+[
+"Over",
+422.649,
+422.989
+],
+[
+"very",
+422.989,
+423.599
+],
+[
+"long",
+423.599,
+423.629
+],
+[
+"timescales,",
+423.629,
+424.619
+],
+[
+"the",
+424.619,
+425.019
+],
+[
+"tilt",
+425.019,
+425.049
+],
+[
+"could",
+425.049,
+425.349
+],
+[
+"potentially",
+425.349,
+426.129
+],
+[
+"experience",
+426.129,
+426.779
+],
+[
+"much",
+426.779,
+427.169
+],
+[
+"larger",
+427.169,
+427.429
+],
+[
+"variations",
+427.429,
+428.179
+],
+[
+"under",
+428.179,
+428.589
+],
+[
+"some",
+428.589,
+428.749
+],
+[
+"models.",
+428.749,
+429.369
+]
+]
+},
+{
+"line": 99,
+"chapter": 5,
+"para": 12,
+"text": "And that matters enormously.",
+"file": "vo/T099.wav",
+"start": 429.838,
+"dur": 1.409,
+"words": [
+[
+"And",
+429.838,
+430.058
+],
+[
+"that",
+430.058,
+430.058
+],
+[
+"matters",
+430.058,
+430.468
+],
+[
+"enormously.",
+430.468,
+431.198
+]
+]
+},
+{
+"line": 100,
+"chapter": 5,
+"para": 13,
+"text": "Imagine a planet where the angle of its axis changes substantially over geological time.",
+"file": "vo/T100.wav",
+"start": 431.667,
+"dur": 5.958,
+"words": [
+[
+"Imagine",
+431.667,
+432.387
+],
+[
+"a",
+432.387,
+432.477
+],
+[
+"planet",
+432.477,
+432.897
+],
+[
+"where",
+432.897,
+433.217
+],
+[
+"the",
+433.217,
+433.287
+],
+[
+"angle",
+433.287,
+433.897
+],
+[
+"of",
+433.897,
+434.117
+],
+[
+"its",
+434.117,
+434.147
+],
+[
+"axis",
+434.147,
+434.577
+],
+[
+"changes",
+434.577,
+435.187
+],
+[
+"substantially",
+435.187,
+436.047
+],
+[
+"over",
+436.047,
+436.347
+],
+[
+"geological",
+436.347,
+437.157
+],
+[
+"time.",
+437.157,
+437.597
+]
+]
+},
+{
+"line": 101,
+"chapter": 5,
+"para": 14,
+"text": "Sunlight could be distributed very differently across latitudes.",
+"file": "vo/T101.wav",
+"start": 438.045,
+"dur": 3.724,
+"words": [
+[
+"Sunlight",
+438.045,
+438.485
+],
+[
+"could",
+438.485,
+438.515
+],
+[
+"be",
+438.515,
+438.775
+],
+[
+"distributed",
+438.775,
+439.535
+],
+[
+"very",
+439.535,
+439.915
+],
+[
+"differently",
+439.915,
+440.605
+],
+[
+"across",
+440.605,
+440.925
+],
+[
+"latitudes.",
+440.925,
+441.725
+]
+]
+},
+{
+"line": 102,
+"chapter": 5,
+"para": 15,
+"text": "Regions that currently experience moderate seasonal changes could face radically different patterns.",
+"file": "vo/T102.wav",
+"start": 442.189,
+"dur": 6.055,
+"words": [
+[
+"Regions",
+442.189,
+442.509
+],
+[
+"that",
+442.509,
+442.879
+],
+[
+"currently",
+442.879,
+443.519
+],
+[
+"experience",
+443.519,
+444.159
+],
+[
+"moderate",
+444.159,
+444.739
+],
+[
+"seasonal",
+444.739,
+445.259
+],
+[
+"changes",
+445.259,
+445.659
+],
+[
+"could",
+445.659,
+445.949
+],
+[
+"face",
+445.949,
+446.159
+],
+[
+"radically",
+446.159,
+446.999
+],
+[
+"different",
+446.999,
+447.569
+],
+[
+"patterns.",
+447.569,
+448.189
+]
+]
+},
+{
+"line": 103,
+"chapter": 5,
+"para": 16,
+"text": "Ice sheets might expand or retreat under altered climate conditions.",
+"file": "vo/T103.wav",
+"start": 448.664,
+"dur": 4.159,
+"words": [
+[
+"Ice",
+448.664,
+448.874
+],
+[
+"sheets",
+448.874,
+449.184
+],
+[
+"might",
+449.184,
+449.274
+],
+[
+"expand",
+449.274,
+449.804
+],
+[
+"or",
+449.804,
+450.024
+],
+[
+"retreat",
+450.024,
+450.464
+],
+[
+"under",
+450.464,
+450.954
+],
+[
+"altered",
+450.954,
+451.444
+],
+[
+"climate",
+451.444,
+452.054
+],
+[
+"conditions.",
+452.054,
+452.774
+]
+]
+},
+{
+"line": 104,
+"chapter": 5,
+"para": 17,
+"text": "Habitats could shift.",
+"file": "vo/T104.wav",
+"start": 453.242,
+"dur": 1.317,
+"words": [
+[
+"Habitats",
+453.242,
+453.822
+],
+[
+"could",
+453.822,
+454.092
+],
+[
+"shift.",
+454.092,
+454.502
+]
+]
+},
+{
+"line": 105,
+"chapter": 5,
+"para": 18,
+"text": "Agricultural zones could change.",
+"file": "vo/T105.wav",
+"start": 455.16,
+"dur": 1.863,
+"words": [
+[
+"Agricultural",
+455.16,
+456.19
+],
+[
+"zones",
+456.19,
+456.41
+],
+[
+"could",
+456.41,
+456.76
+],
+[
+"change.",
+456.76,
+456.98
+]
+]
+},
+{
+"line": 106,
+"chapter": 5,
+"para": 19,
+"text": "But we need to be careful.",
+"file": "vo/T106.wav",
+"start": 457.443,
+"dur": 1.278,
+"words": [
+[
+"But",
+457.443,
+457.553
+],
+[
+"we",
+457.553,
+457.803
+],
+[
+"need",
+457.803,
+457.803
+],
+[
+"to",
+457.803,
+458.023
+],
+[
+"be",
+458.023,
+458.073
+],
+[
+"careful.",
+458.073,
+458.693
+]
+]
+},
+{
+"line": 107,
+"chapter": 5,
+"para": 20,
+"text": "Scientists do not agree that removing the Moon would inevitably cause extreme axial instability. The outcome depends on Earth's spin rate, gravitational interactions, and the timescale being considered.",
+"file": "vo/T107.wav",
+"start": 459.141,
+"dur": 13.726,
+"words": [
+[
+"Scientists",
+459.141,
+459.631
+],
+[
+"do",
+459.631,
+459.891
+],
+[
+"not",
+459.891,
+460.011
+],
+[
+"agree",
+460.011,
+460.371
+],
+[
+"that",
+460.371,
+460.511
+],
+[
+"removing",
+460.511,
+461.151
+],
+[
+"the",
+461.151,
+461.441
+],
+[
+"Moon",
+461.441,
+461.641
+],
+[
+"would",
+461.641,
+462.031
+],
+[
+"inevitably",
+462.031,
+463.111
+],
+[
+"cause",
+463.111,
+463.441
+],
+[
+"extreme",
+463.441,
+463.901
+],
+[
+"axial",
+463.901,
+464.381
+],
+[
+"instability.",
+464.381,
+465.661
+],
+[
+"The",
+465.661,
+465.771
+],
+[
+"outcome",
+465.771,
+466.221
+],
+[
+"depends",
+466.221,
+466.691
+],
+[
+"on",
+466.691,
+467.031
+],
+[
+"Earth's",
+467.031,
+467.341
+],
+[
+"spin",
+467.341,
+467.571
+],
+[
+"rate,",
+467.571,
+467.941
+],
+[
+"gravitational",
+467.941,
+468.961
+],
+[
+"interactions,",
+468.961,
+470.021
+],
+[
+"and",
+470.021,
+470.261
+],
+[
+"the",
+470.261,
+470.621
+],
+[
+"timescale",
+470.621,
+471.491
+],
+[
+"being",
+471.491,
+471.841
+],
+[
+"considered.",
+471.841,
+472.831
+]
+]
+},
+{
+"line": 108,
+"chapter": 5,
+"para": 21,
+"text": "So this isn't a prediction that Earth would suddenly tip onto its side.",
+"file": "vo/T108.wav",
+"start": 473.287,
+"dur": 3.774,
+"words": [
+[
+"So",
+473.297,
+473.457
+],
+[
+"this",
+473.457,
+473.617
+],
+[
+"isn't",
+473.617,
+473.957
+],
+[
+"a",
+473.957,
+474.107
+],
+[
+"prediction",
+474.107,
+474.727
+],
+[
+"that",
+474.727,
+474.977
+],
+[
+"Earth",
+474.977,
+475.137
+],
+[
+"would",
+475.137,
+475.267
+],
+[
+"suddenly",
+475.267,
+475.977
+],
+[
+"tip",
+475.977,
+475.997
+],
+[
+"onto",
+475.997,
+476.437
+],
+[
+"its",
+476.437,
+476.597
+],
+[
+"side.",
+476.597,
+477.007
+]
+]
+},
+{
+"line": 109,
+"chapter": 5,
+"para": 22,
+"text": "It's a reminder that the Moon is part of a complicated gravitational system that helps shape our planet's long-term behavior.",
+"file": "vo/T109.wav",
+"start": 477.481,
+"dur": 8.054,
+"words": [
+[
+"It's",
+477.481,
+477.621
+],
+[
+"a",
+477.621,
+477.901
+],
+[
+"reminder",
+477.901,
+478.641
+],
+[
+"that",
+478.641,
+478.791
+],
+[
+"the",
+478.791,
+479.191
+],
+[
+"Moon",
+479.191,
+479.421
+],
+[
+"is",
+479.421,
+479.471
+],
+[
+"part",
+479.471,
+479.811
+],
+[
+"of",
+479.811,
+480.081
+],
+[
+"a",
+480.081,
+480.201
+],
+[
+"complicated",
+480.201,
+481.271
+],
+[
+"gravitational",
+481.271,
+482.401
+],
+[
+"system",
+482.401,
+482.871
+],
+[
+"that",
+482.871,
+483.121
+],
+[
+"helps",
+483.121,
+483.341
+],
+[
+"shape",
+483.341,
+483.521
+],
+[
+"our",
+483.521,
+483.801
+],
+[
+"planet's",
+483.801,
+484.101
+],
+[
+"long-term",
+484.101,
+484.571
+],
+[
+"behavior.",
+484.571,
+485.491
+]
+]
+},
+{
+"line": 110,
+"chapter": 5,
+"para": 23,
+"text": "And even a gradual change can matter when the timescale is millions of years.",
+"file": "vo/T110.wav",
+"start": 485.955,
+"dur": 4.691,
+"words": [
+[
+"And",
+485.955,
+486.095
+],
+[
+"even",
+486.095,
+486.505
+],
+[
+"a",
+486.505,
+486.785
+],
+[
+"gradual",
+486.785,
+487.325
+],
+[
+"change",
+487.325,
+487.475
+],
+[
+"can",
+487.475,
+487.645
+],
+[
+"matter",
+487.645,
+488.105
+],
+[
+"when",
+488.105,
+488.315
+],
+[
+"the",
+488.315,
+488.435
+],
+[
+"timescale",
+488.435,
+489.365
+],
+[
+"is",
+489.365,
+489.695
+],
+[
+"millions",
+489.695,
+490.025
+],
+[
+"of",
+490.025,
+490.325
+],
+[
+"years.",
+490.325,
+490.595
+]
+]
+},
+{
+"line": 111,
+"chapter": 6,
+"para": 0,
+"text": "There's another remarkable consequence.",
+"file": "vo/T111.wav",
+"start": 493.646,
+"dur": 1.963,
+"words": [
+[
+"There's",
+493.656,
+493.866
+],
+[
+"another",
+493.866,
+494.316
+],
+[
+"remarkable",
+494.316,
+495.036
+],
+[
+"consequence.",
+495.036,
+495.566
+]
+]
+},
+{
+"line": 112,
+"chapter": 6,
+"para": 1,
+"text": "No more lunar eclipses.",
+"file": "vo/T112.wav",
+"start": 496.029,
+"dur": 1.356,
+"words": [
+[
+"No",
+496.029,
+496.249
+],
+[
+"more",
+496.249,
+496.399
+],
+[
+"lunar",
+496.399,
+496.709
+],
+[
+"eclipses.",
+496.709,
+497.339
+]
+]
+},
+{
+"line": 113,
+"chapter": 6,
+"para": 2,
+"text": "No more solar eclipses caused by the Moon.",
+"file": "vo/T113.wav",
+"start": 497.805,
+"dur": 2.341,
+"words": [
+[
+"No",
+497.805,
+497.995
+],
+[
+"more",
+497.995,
+498.255
+],
+[
+"solar",
+498.255,
+498.625
+],
+[
+"eclipses",
+498.625,
+499.135
+],
+[
+"caused",
+499.135,
+499.475
+],
+[
+"by",
+499.475,
+499.635
+],
+[
+"the",
+499.635,
+499.895
+],
+[
+"Moon.",
+499.895,
+500.105
+]
+]
+},
+{
+"line": 114,
+"chapter": 6,
+"para": 3,
+"text": "The extraordinary alignment that sometimes allows the Moon to cover the Sun would be gone.",
+"file": "vo/T114.wav",
+"start": 500.566,
+"dur": 5.119,
+"words": [
+[
+"The",
+500.576,
+500.776
+],
+[
+"extraordinary",
+500.776,
+501.616
+],
+[
+"alignment",
+501.616,
+502.286
+],
+[
+"that",
+502.286,
+502.446
+],
+[
+"sometimes",
+502.446,
+503.136
+],
+[
+"allows",
+503.136,
+503.526
+],
+[
+"the",
+503.526,
+503.886
+],
+[
+"Moon",
+503.886,
+504.076
+],
+[
+"to",
+504.076,
+504.086
+],
+[
+"cover",
+504.086,
+504.636
+],
+[
+"the",
+504.636,
+504.836
+],
+[
+"Sun",
+504.836,
+505.026
+],
+[
+"would",
+505.026,
+505.076
+],
+[
+"be",
+505.076,
+505.226
+],
+[
+"gone.",
+505.226,
+505.626
+]
+]
+},
+{
+"line": 115,
+"chapter": 6,
+"para": 4,
+"text": "Think about how unusual total solar eclipses really are.",
+"file": "vo/T115.wav",
+"start": 506.105,
+"dur": 3.369,
+"words": [
+[
+"Think",
+506.105,
+506.235
+],
+[
+"about",
+506.235,
+506.735
+],
+[
+"how",
+506.735,
+506.765
+],
+[
+"unusual",
+506.765,
+507.365
+],
+[
+"total",
+507.365,
+507.845
+],
+[
+"solar",
+507.845,
+508.265
+],
+[
+"eclipses",
+508.265,
+508.725
+],
+[
+"really",
+508.725,
+509.145
+],
+[
+"are.",
+509.145,
+509.425
+]
+]
+},
+{
+"line": 116,
+"chapter": 6,
+"para": 5,
+"text": "From Earth, the Sun and Moon appear to have nearly the same angular size.",
+"file": "vo/T116.wav",
+"start": 509.894,
+"dur": 4.095,
+"words": [
+[
+"From",
+509.894,
+510.084
+],
+[
+"Earth,",
+510.084,
+510.444
+],
+[
+"the",
+510.444,
+510.684
+],
+[
+"Sun",
+510.684,
+510.814
+],
+[
+"and",
+510.814,
+511.164
+],
+[
+"Moon",
+511.164,
+511.364
+],
+[
+"appear",
+511.364,
+511.694
+],
+[
+"to",
+511.694,
+511.974
+],
+[
+"have",
+511.974,
+512.034
+],
+[
+"nearly",
+512.034,
+512.614
+],
+[
+"the",
+512.614,
+512.844
+],
+[
+"same",
+512.844,
+512.874
+],
+[
+"angular",
+512.874,
+513.694
+],
+[
+"size.",
+513.694,
+513.944
+]
+]
+},
+{
+"line": 117,
+"chapter": 6,
+"para": 6,
+"text": "The Sun is vastly larger, but it's also vastly farther away.",
+"file": "vo/T117.wav",
+"start": 514.409,
+"dur": 3.967,
+"words": [
+[
+"The",
+514.409,
+514.599
+],
+[
+"Sun",
+514.599,
+514.929
+],
+[
+"is",
+514.929,
+515.049
+],
+[
+"vastly",
+515.049,
+515.399
+],
+[
+"larger,",
+515.399,
+516.129
+],
+[
+"but",
+516.129,
+516.289
+],
+[
+"it's",
+516.289,
+516.489
+],
+[
+"also",
+516.489,
+516.959
+],
+[
+"vastly",
+516.959,
+517.299
+],
+[
+"farther",
+517.299,
+517.709
+],
+[
+"away.",
+517.709,
+518.329
+]
+]
+},
+{
+"line": 118,
+"chapter": 6,
+"para": 7,
+"text": "That coincidence allows the Moon to block the bright solar disk and reveal the Sun's outer atmosphere during totality.",
+"file": "vo/T118.wav",
+"start": 518.796,
+"dur": 7.69,
+"words": [
+[
+"That",
+518.796,
+519.036
+],
+[
+"coincidence",
+519.036,
+519.846
+],
+[
+"allows",
+519.846,
+520.336
+],
+[
+"the",
+520.336,
+520.426
+],
+[
+"Moon",
+520.426,
+520.816
+],
+[
+"to",
+520.816,
+521.026
+],
+[
+"block",
+521.026,
+521.296
+],
+[
+"the",
+521.296,
+521.456
+],
+[
+"bright",
+521.456,
+521.606
+],
+[
+"solar",
+521.606,
+522.206
+],
+[
+"disk",
+522.206,
+522.426
+],
+[
+"and",
+522.426,
+522.646
+],
+[
+"reveal",
+522.646,
+523.056
+],
+[
+"the",
+523.056,
+523.326
+],
+[
+"Sun's",
+523.326,
+523.596
+],
+[
+"outer",
+523.596,
+524.186
+],
+[
+"atmosphere",
+524.186,
+524.746
+],
+[
+"during",
+524.746,
+525.256
+],
+[
+"totality.",
+525.256,
+526.436
+]
+]
+},
+{
+"line": 119,
+"chapter": 6,
+"para": 8,
+"text": "Without the Moon, that experience would disappear.",
+"file": "vo/T119.wav",
+"start": 526.906,
+"dur": 2.505,
+"words": [
+[
+"Without",
+526.906,
+527.196
+],
+[
+"the",
+527.196,
+527.546
+],
+[
+"Moon,",
+527.546,
+527.716
+],
+[
+"that",
+527.716,
+527.936
+],
+[
+"experience",
+527.936,
+528.516
+],
+[
+"would",
+528.516,
+528.646
+],
+[
+"disappear.",
+528.646,
+529.356
+]
+]
+},
+{
+"line": 120,
+"chapter": 6,
+"para": 9,
+"text": "There would still be planetary transits and other astronomical events.",
+"file": "vo/T120.wav",
+"start": 529.831,
+"dur": 3.971,
+"words": [
+[
+"There",
+529.831,
+530.111
+],
+[
+"would",
+530.111,
+530.271
+],
+[
+"still",
+530.271,
+530.491
+],
+[
+"be",
+530.491,
+530.681
+],
+[
+"planetary",
+530.681,
+531.301
+],
+[
+"transits",
+531.301,
+531.641
+],
+[
+"and",
+531.641,
+532.011
+],
+[
+"other",
+532.011,
+532.231
+],
+[
+"astronomical",
+532.231,
+533.341
+],
+[
+"events.",
+533.341,
+533.751
+]
+]
+},
+{
+"line": 121,
+"chapter": 6,
+"para": 10,
+"text": "But nothing quite like the familiar spectacle of a total solar eclipse.",
+"file": "vo/T121.wav",
+"start": 534.222,
+"dur": 4.164,
+"words": [
+[
+"But",
+534.222,
+534.502
+],
+[
+"nothing",
+534.502,
+534.732
+],
+[
+"quite",
+534.732,
+534.992
+],
+[
+"like",
+534.992,
+535.192
+],
+[
+"the",
+535.192,
+535.362
+],
+[
+"familiar",
+535.362,
+535.972
+],
+[
+"spectacle",
+535.972,
+536.662
+],
+[
+"of",
+536.662,
+536.882
+],
+[
+"a",
+536.882,
+536.952
+],
+[
+"total",
+536.952,
+537.392
+],
+[
+"solar",
+537.392,
+537.792
+],
+[
+"eclipse.",
+537.792,
+538.332
+]
+]
+},
+{
+"line": 122,
+"chapter": 6,
+"para": 11,
+"text": "Human civilization would also lose a powerful scientific and cultural reference point.",
+"file": "vo/T122.wav",
+"start": 538.806,
+"dur": 5.364,
+"words": [
+[
+"Human",
+538.806,
+539.216
+],
+[
+"civilization",
+539.216,
+540.166
+],
+[
+"would",
+540.166,
+540.366
+],
+[
+"also",
+540.366,
+540.896
+],
+[
+"lose",
+540.896,
+541.016
+],
+[
+"a",
+541.016,
+541.146
+],
+[
+"powerful",
+541.146,
+541.766
+],
+[
+"scientific",
+541.766,
+542.466
+],
+[
+"and",
+542.466,
+542.586
+],
+[
+"cultural",
+542.586,
+543.286
+],
+[
+"reference",
+543.286,
+543.726
+],
+[
+"point.",
+543.726,
+544.146
+]
+]
+},
+{
+"line": 123,
+"chapter": 6,
+"para": 12,
+"text": "For thousands of years, the Moon has shaped calendars, navigation, art, mythology, and exploration.",
+"file": "vo/T123.wav",
+"start": 544.59,
+"dur": 6.332,
+"words": [
+[
+"For",
+544.59,
+544.75
+],
+[
+"thousands",
+544.75,
+545.29
+],
+[
+"of",
+545.29,
+545.32
+],
+[
+"years,",
+545.32,
+545.75
+],
+[
+"the",
+545.75,
+545.87
+],
+[
+"Moon",
+545.87,
+546.23
+],
+[
+"has",
+546.23,
+546.34
+],
+[
+"shaped",
+546.34,
+546.68
+],
+[
+"calendars,",
+546.68,
+547.57
+],
+[
+"navigation,",
+547.57,
+548.5
+],
+[
+"art,",
+548.5,
+548.86
+],
+[
+"mythology,",
+548.86,
+549.8
+],
+[
+"and",
+549.8,
+550.01
+],
+[
+"exploration.",
+550.01,
+550.87
+]
+]
+},
+{
+"line": 124,
+"chapter": 6,
+"para": 13,
+"text": "It was the first world beyond Earth where humans walked.",
+"file": "vo/T124.wav",
+"start": 551.341,
+"dur": 2.941,
+"words": [
+[
+"It",
+551.341,
+551.601
+],
+[
+"was",
+551.601,
+551.771
+],
+[
+"the",
+551.771,
+552.041
+],
+[
+"first",
+552.041,
+552.351
+],
+[
+"world",
+552.351,
+552.421
+],
+[
+"beyond",
+552.421,
+552.781
+],
+[
+"Earth",
+552.781,
+553.041
+],
+[
+"where",
+553.041,
+553.191
+],
+[
+"humans",
+553.191,
+553.691
+],
+[
+"walked.",
+553.691,
+554.241
+]
+]
+},
+{
+"line": 125,
+"chapter": 6,
+"para": 14,
+"text": "Its absence would be more than a physical change.",
+"file": "vo/T125.wav",
+"start": 554.702,
+"dur": 2.537,
+"words": [
+[
+"Its",
+554.702,
+554.812
+],
+[
+"absence",
+554.812,
+555.352
+],
+[
+"would",
+555.352,
+555.462
+],
+[
+"be",
+555.462,
+555.602
+],
+[
+"more",
+555.602,
+555.952
+],
+[
+"than",
+555.952,
+556.162
+],
+[
+"a",
+556.162,
+556.212
+],
+[
+"physical",
+556.212,
+556.972
+],
+[
+"change.",
+556.972,
+557.202
+]
+]
+},
+{
+"line": 126,
+"chapter": 6,
+"para": 15,
+"text": "It would be a change to the human story.",
+"file": "vo/T126.wav",
+"start": 557.659,
+"dur": 1.946,
+"words": [
+[
+"It",
+557.659,
+557.859
+],
+[
+"would",
+557.859,
+558.019
+],
+[
+"be",
+558.019,
+558.119
+],
+[
+"a",
+558.119,
+558.399
+],
+[
+"change",
+558.399,
+558.489
+],
+[
+"to",
+558.489,
+558.729
+],
+[
+"the",
+558.729,
+558.729
+],
+[
+"human",
+558.729,
+559.099
+],
+[
+"story.",
+559.099,
+559.559
+]
+]
+},
+{
+"line": 127,
+"chapter": 7,
+"para": 0,
+"text": "Would Earth's weather immediately become catastrophic?",
+"file": "vo/T127.wav",
+"start": 562.605,
+"dur": 2.697,
+"words": [
+[
+"Would",
+562.605,
+562.785
+],
+[
+"Earth's",
+562.785,
+563.005
+],
+[
+"weather",
+563.005,
+563.285
+],
+[
+"immediately",
+563.285,
+564.195
+],
+[
+"become",
+564.195,
+564.465
+],
+[
+"catastrophic?",
+564.465,
+565.265
+]
+]
+},
+{
+"line": 128,
+"chapter": 7,
+"para": 1,
+"text": "No.",
+"file": "vo/T128.wav",
+"start": 565.952,
+"dur": 0.511,
+"words": [
+[
+"No.",
+565.952,
+566.442
+]
+]
+},
+{
+"line": 129,
+"chapter": 7,
+"para": 2,
+"text": "Weather is primarily driven by solar heating, atmospheric circulation, Earth's rotation, oceans, and many other interacting processes.",
+"file": "vo/T129.wav",
+"start": 567.063,
+"dur": 9.216,
+"words": [
+[
+"Weather",
+567.063,
+567.533
+],
+[
+"is",
+567.533,
+567.603
+],
+[
+"primarily",
+567.603,
+568.463
+],
+[
+"driven",
+568.463,
+569.033
+],
+[
+"by",
+569.033,
+569.213
+],
+[
+"solar",
+569.213,
+569.603
+],
+[
+"heating,",
+569.603,
+570.213
+],
+[
+"atmospheric",
+570.213,
+570.973
+],
+[
+"circulation,",
+570.973,
+572.063
+],
+[
+"Earth's",
+572.063,
+572.213
+],
+[
+"rotation,",
+572.213,
+573.063
+],
+[
+"oceans,",
+573.063,
+573.523
+],
+[
+"and",
+573.523,
+573.793
+],
+[
+"many",
+573.793,
+574.093
+],
+[
+"other",
+574.093,
+574.693
+],
+[
+"interacting",
+574.693,
+575.403
+],
+[
+"processes.",
+575.403,
+576.233
+]
+]
+},
+{
+"line": 130,
+"chapter": 7,
+"para": 3,
+"text": "Removing the Moon would not instantly create planet-wide hurricanes.",
+"file": "vo/T130.wav",
+"start": 576.699,
+"dur": 4.164,
+"words": [
+[
+"Removing",
+576.699,
+577.309
+],
+[
+"the",
+577.309,
+577.669
+],
+[
+"Moon",
+577.669,
+577.889
+],
+[
+"would",
+577.889,
+577.929
+],
+[
+"not",
+577.929,
+578.209
+],
+[
+"instantly",
+578.209,
+578.809
+],
+[
+"create",
+578.809,
+579.219
+],
+[
+"planet-wide",
+579.219,
+579.709
+],
+[
+"hurricanes.",
+579.709,
+580.809
+]
+]
+},
+{
+"line": 131,
+"chapter": 7,
+"para": 4,
+"text": "It would not turn the atmosphere into a giant storm.",
+"file": "vo/T131.wav",
+"start": 581.283,
+"dur": 2.711,
+"words": [
+[
+"It",
+581.283,
+581.493
+],
+[
+"would",
+581.493,
+581.763
+],
+[
+"not",
+581.763,
+581.783
+],
+[
+"turn",
+581.783,
+582.073
+],
+[
+"the",
+582.073,
+582.253
+],
+[
+"atmosphere",
+582.253,
+582.883
+],
+[
+"into",
+582.883,
+583.343
+],
+[
+"a",
+583.343,
+583.423
+],
+[
+"giant",
+583.423,
+583.553
+],
+[
+"storm.",
+583.553,
+583.963
+]
+]
+},
+{
+"line": 132,
+"chapter": 7,
+"para": 5,
+"text": "But the long-term picture is more complicated.",
+"file": "vo/T132.wav",
+"start": 584.414,
+"dur": 2.626,
+"words": [
+[
+"But",
+584.414,
+584.524
+],
+[
+"the",
+584.524,
+584.904
+],
+[
+"long-term",
+584.904,
+585.254
+],
+[
+"picture",
+585.254,
+585.544
+],
+[
+"is",
+585.544,
+585.814
+],
+[
+"more",
+585.814,
+585.964
+],
+[
+"complicated.",
+585.964,
+586.984
+]
+]
+},
+{
+"line": 133,
+"chapter": 7,
+"para": 6,
+"text": "Tides help mix ocean waters, and tidal energy contributes to processes in the deep ocean.",
+"file": "vo/T133.wav",
+"start": 587.46,
+"dur": 5.872,
+"words": [
+[
+"Tides",
+587.46,
+587.84
+],
+[
+"help",
+587.84,
+588.16
+],
+[
+"mix",
+588.16,
+588.33
+],
+[
+"ocean",
+588.33,
+588.68
+],
+[
+"waters,",
+588.68,
+589.17
+],
+[
+"and",
+589.17,
+589.53
+],
+[
+"tidal",
+589.53,
+589.76
+],
+[
+"energy",
+589.76,
+590.46
+],
+[
+"contributes",
+590.46,
+591.25
+],
+[
+"to",
+591.25,
+591.42
+],
+[
+"processes",
+591.42,
+592.22
+],
+[
+"in",
+592.22,
+592.25
+],
+[
+"the",
+592.25,
+592.53
+],
+[
+"deep",
+592.53,
+592.7
+],
+[
+"ocean.",
+592.7,
+593.29
+]
+]
+},
+{
+"line": 134,
+"chapter": 7,
+"para": 7,
+"text": "Ocean mixing influences how heat, nutrients, and other materials move through marine systems.",
+"file": "vo/T134.wav",
+"start": 593.752,
+"dur": 6.027,
+"words": [
+[
+"Ocean",
+593.752,
+594.322
+],
+[
+"mixing",
+594.322,
+594.792
+],
+[
+"influences",
+594.792,
+595.362
+],
+[
+"how",
+595.362,
+595.762
+],
+[
+"heat,",
+595.762,
+596.152
+],
+[
+"nutrients,",
+596.152,
+596.782
+],
+[
+"and",
+596.782,
+596.982
+],
+[
+"other",
+596.982,
+597.502
+],
+[
+"materials",
+597.502,
+598.042
+],
+[
+"move",
+598.042,
+598.332
+],
+[
+"through",
+598.332,
+598.562
+],
+[
+"marine",
+598.562,
+599.032
+],
+[
+"systems.",
+599.032,
+599.732
+]
+]
+},
+{
+"line": 135,
+"chapter": 7,
+"para": 8,
+"text": "If the lunar component of tidal forcing disappeared, ocean circulation and mixing would adjust.",
+"file": "vo/T135.wav",
+"start": 600.199,
+"dur": 6.126,
+"words": [
+[
+"If",
+600.199,
+600.369
+],
+[
+"the",
+600.369,
+600.539
+],
+[
+"lunar",
+600.539,
+601.069
+],
+[
+"component",
+601.069,
+601.609
+],
+[
+"of",
+601.609,
+601.769
+],
+[
+"tidal",
+601.769,
+602.179
+],
+[
+"forcing",
+602.179,
+602.649
+],
+[
+"disappeared,",
+602.649,
+603.599
+],
+[
+"ocean",
+603.599,
+604.069
+],
+[
+"circulation",
+604.069,
+604.959
+],
+[
+"and",
+604.959,
+605.189
+],
+[
+"mixing",
+605.189,
+605.529
+],
+[
+"would",
+605.529,
+605.809
+],
+[
+"adjust.",
+605.809,
+606.269
+]
+]
+},
+{
+"line": 136,
+"chapter": 7,
+"para": 9,
+"text": "The precise climate consequences would depend on how those changes interacted with winds, currents, temperature gradients, and geography.",
+"file": "vo/T136.wav",
+"start": 606.745,
+"dur": 8.467,
+"words": [
+[
+"The",
+606.745,
+606.885
+],
+[
+"precise",
+606.885,
+607.405
+],
+[
+"climate",
+607.405,
+607.835
+],
+[
+"consequences",
+607.835,
+608.695
+],
+[
+"would",
+608.695,
+608.995
+],
+[
+"depend",
+608.995,
+609.465
+],
+[
+"on",
+609.465,
+609.695
+],
+[
+"how",
+609.695,
+609.945
+],
+[
+"those",
+609.945,
+610.025
+],
+[
+"changes",
+610.025,
+610.595
+],
+[
+"interacted",
+610.595,
+611.375
+],
+[
+"with",
+611.375,
+611.775
+],
+[
+"winds,",
+611.775,
+612.125
+],
+[
+"currents,",
+612.125,
+612.625
+],
+[
+"temperature",
+612.625,
+613.485
+],
+[
+"gradients,",
+613.485,
+614.115
+],
+[
+"and",
+614.115,
+614.355
+],
+[
+"geography.",
+614.355,
+615.155
+]
+]
+},
+{
+"line": 137,
+"chapter": 7,
+"para": 10,
+"text": "Scientists would need sophisticated models to estimate the full response.",
+"file": "vo/T137.wav",
+"start": 615.632,
+"dur": 4.621,
+"words": [
+[
+"Scientists",
+615.632,
+616.012
+],
+[
+"would",
+616.012,
+616.352
+],
+[
+"need",
+616.352,
+616.512
+],
+[
+"sophisticated",
+616.512,
+617.752
+],
+[
+"models",
+617.752,
+618.252
+],
+[
+"to",
+618.252,
+618.362
+],
+[
+"estimate",
+618.362,
+619.082
+],
+[
+"the",
+619.082,
+619.272
+],
+[
+"full",
+619.272,
+619.692
+],
+[
+"response.",
+619.692,
+620.212
+]
+]
+},
+{
+"line": 138,
+"chapter": 7,
+"para": 11,
+"text": "It's tempting to imagine an immediate disaster.",
+"file": "vo/T138.wav",
+"start": 620.673,
+"dur": 2.556,
+"words": [
+[
+"It's",
+620.673,
+620.883
+],
+[
+"tempting",
+620.883,
+621.123
+],
+[
+"to",
+621.123,
+621.303
+],
+[
+"imagine",
+621.303,
+621.783
+],
+[
+"an",
+621.783,
+622.003
+],
+[
+"immediate",
+622.003,
+622.473
+],
+[
+"disaster.",
+622.473,
+623.183
+]
+]
+},
+{
+"line": 139,
+"chapter": 7,
+"para": 12,
+"text": "But the scientifically interesting possibility is subtler.",
+"file": "vo/T139.wav",
+"start": 623.649,
+"dur": 3.149,
+"words": [
+[
+"But",
+623.649,
+623.769
+],
+[
+"the",
+623.769,
+623.949
+],
+[
+"scientifically",
+623.949,
+624.709
+],
+[
+"interesting",
+624.709,
+625.309
+],
+[
+"possibility",
+625.309,
+626.089
+],
+[
+"is",
+626.089,
+626.349
+],
+[
+"subtler.",
+626.349,
+626.749
+]
+]
+},
+{
+"line": 140,
+"chapter": 7,
+"para": 13,
+"text": "A planet can change profoundly without collapsing in a single night.",
+"file": "vo/T140.wav",
+"start": 627.218,
+"dur": 3.873,
+"words": [
+[
+"A",
+627.218,
+627.328
+],
+[
+"planet",
+627.328,
+627.748
+],
+[
+"can",
+627.748,
+627.998
+],
+[
+"change",
+627.998,
+628.298
+],
+[
+"profoundly",
+628.298,
+628.948
+],
+[
+"without",
+628.948,
+629.228
+],
+[
+"collapsing",
+629.228,
+629.848
+],
+[
+"in",
+629.848,
+630.178
+],
+[
+"a",
+630.178,
+630.208
+],
+[
+"single",
+630.208,
+630.698
+],
+[
+"night.",
+630.698,
+631.038
+]
+]
+},
+{
+"line": 141,
+"chapter": 8,
+"para": 0,
+"text": "So let's finally answer the biggest question.",
+"file": "vo/T141.wav",
+"start": 634.091,
+"dur": 2.277,
+"words": [
+[
+"So",
+634.091,
+634.351
+],
+[
+"let's",
+634.351,
+634.491
+],
+[
+"finally",
+634.491,
+634.921
+],
+[
+"answer",
+634.921,
+635.341
+],
+[
+"the",
+635.341,
+635.461
+],
+[
+"biggest",
+635.461,
+635.941
+],
+[
+"question.",
+635.941,
+636.311
+]
+]
+},
+{
+"line": 142,
+"chapter": 8,
+"para": 1,
+"text": "Could humanity survive without the Moon?",
+"file": "vo/T142.wav",
+"start": 636.788,
+"dur": 1.972,
+"words": [
+[
+"Could",
+636.788,
+636.898
+],
+[
+"humanity",
+636.898,
+637.678
+],
+[
+"survive",
+637.678,
+638.038
+],
+[
+"without",
+638.038,
+638.458
+],
+[
+"the",
+638.458,
+638.638
+],
+[
+"Moon?",
+638.638,
+638.728
+]
+]
+},
+{
+"line": 143,
+"chapter": 8,
+"para": 2,
+"text": "Almost certainly, yes... at least in the immediate aftermath of the disappearance scenario we've described.",
+"file": "vo/T143.wav",
+"start": 639.409,
+"dur": 6.372,
+"words": [
+[
+"Almost",
+639.409,
+639.859
+],
+[
+"certainly,",
+639.859,
+640.649
+],
+[
+"yes...",
+640.649,
+640.979
+],
+[
+"at",
+640.979,
+641.189
+],
+[
+"least",
+641.189,
+641.319
+],
+[
+"in",
+641.319,
+641.459
+],
+[
+"the",
+641.459,
+641.749
+],
+[
+"immediate",
+641.749,
+642.349
+],
+[
+"aftermath",
+642.349,
+642.859
+],
+[
+"of",
+642.859,
+643.239
+],
+[
+"the",
+643.239,
+643.279
+],
+[
+"disappearance",
+643.279,
+644.179
+],
+[
+"scenario",
+644.179,
+644.759
+],
+[
+"we've",
+644.759,
+644.989
+],
+[
+"described.",
+644.989,
+645.759
+]
+]
+},
+{
+"line": 144,
+"chapter": 8,
+"para": 3,
+"text": "Earth would still have an atmosphere.",
+"file": "vo/T144.wav",
+"start": 646.202,
+"dur": 1.604,
+"words": [
+[
+"Earth",
+646.202,
+646.382
+],
+[
+"would",
+646.382,
+646.652
+],
+[
+"still",
+646.652,
+646.652
+],
+[
+"have",
+646.652,
+646.912
+],
+[
+"an",
+646.912,
+647.192
+],
+[
+"atmosphere.",
+647.192,
+647.762
+]
+]
+},
+{
+"line": 145,
+"chapter": 8,
+"para": 4,
+"text": "It would still receive energy from the Sun.",
+"file": "vo/T145.wav",
+"start": 648.226,
+"dur": 2.092,
+"words": [
+[
+"It",
+648.226,
+648.416
+],
+[
+"would",
+648.416,
+648.536
+],
+[
+"still",
+648.536,
+648.756
+],
+[
+"receive",
+648.756,
+649.126
+],
+[
+"energy",
+649.126,
+649.586
+],
+[
+"from",
+649.586,
+649.836
+],
+[
+"the",
+649.836,
+649.926
+],
+[
+"Sun.",
+649.926,
+650.266
+]
+]
+},
+{
+"line": 146,
+"chapter": 8,
+"para": 5,
+"text": "It would still have liquid oceans.",
+"file": "vo/T146.wav",
+"start": 650.738,
+"dur": 1.67,
+"words": [
+[
+"It",
+650.738,
+651.008
+],
+[
+"would",
+651.008,
+651.018
+],
+[
+"still",
+651.018,
+651.348
+],
+[
+"have",
+651.348,
+651.518
+],
+[
+"liquid",
+651.518,
+651.948
+],
+[
+"oceans.",
+651.948,
+652.368
+]
+]
+},
+{
+"line": 147,
+"chapter": 8,
+"para": 6,
+"text": "Gravity at Earth's surface would remain almost the same.",
+"file": "vo/T147.wav",
+"start": 652.828,
+"dur": 3.003,
+"words": [
+[
+"Gravity",
+652.828,
+653.418
+],
+[
+"at",
+653.418,
+653.588
+],
+[
+"Earth's",
+653.588,
+653.908
+],
+[
+"surface",
+653.908,
+654.268
+],
+[
+"would",
+654.268,
+654.358
+],
+[
+"remain",
+654.358,
+654.788
+],
+[
+"almost",
+654.788,
+655.198
+],
+[
+"the",
+655.198,
+655.378
+],
+[
+"same.",
+655.378,
+655.778
+]
+]
+},
+{
+"line": 148,
+"chapter": 8,
+"para": 7,
+"text": "The planet would continue orbiting the Sun.",
+"file": "vo/T148.wav",
+"start": 656.251,
+"dur": 2.18,
+"words": [
+[
+"The",
+656.251,
+656.341
+],
+[
+"planet",
+656.341,
+656.881
+],
+[
+"would",
+656.881,
+656.891
+],
+[
+"continue",
+656.891,
+657.441
+],
+[
+"orbiting",
+657.441,
+657.911
+],
+[
+"the",
+657.911,
+658.031
+],
+[
+"Sun.",
+658.031,
+658.391
+]
+]
+},
+{
+"line": 149,
+"chapter": 8,
+"para": 8,
+"text": "Human civilization would face major scientific, environmental, and cultural challenges, but the Moon's absence alone would not mean immediate human extinction.",
+"file": "vo/T149.wav",
+"start": 658.851,
+"dur": 10.795,
+"words": [
+[
+"Human",
+658.851,
+659.371
+],
+[
+"civilization",
+659.371,
+660.561
+],
+[
+"would",
+660.561,
+660.611
+],
+[
+"face",
+660.611,
+660.911
+],
+[
+"major",
+660.911,
+661.481
+],
+[
+"scientific,",
+661.481,
+662.191
+],
+[
+"environmental,",
+662.191,
+663.601
+],
+[
+"and",
+663.601,
+663.831
+],
+[
+"cultural",
+663.831,
+664.541
+],
+[
+"challenges,",
+664.541,
+665.201
+],
+[
+"but",
+665.201,
+665.451
+],
+[
+"the",
+665.451,
+665.781
+],
+[
+"Moon's",
+665.781,
+665.891
+],
+[
+"absence",
+665.891,
+666.391
+],
+[
+"alone",
+666.391,
+666.941
+],
+[
+"would",
+666.941,
+667.081
+],
+[
+"not",
+667.081,
+667.391
+],
+[
+"mean",
+667.391,
+667.681
+],
+[
+"immediate",
+667.681,
+668.361
+],
+[
+"human",
+668.361,
+668.851
+],
+[
+"extinction.",
+668.851,
+669.601
+]
+]
+},
+{
+"line": 150,
+"chapter": 8,
+"para": 9,
+"text": "The greatest difficulties could emerge over longer timescales.",
+"file": "vo/T150.wav",
+"start": 670.066,
+"dur": 3.483,
+"words": [
+[
+"The",
+670.066,
+670.176
+],
+[
+"greatest",
+670.176,
+670.606
+],
+[
+"difficulties",
+670.606,
+671.386
+],
+[
+"could",
+671.386,
+671.456
+],
+[
+"emerge",
+671.456,
+671.926
+],
+[
+"over",
+671.926,
+672.226
+],
+[
+"longer",
+672.226,
+672.586
+],
+[
+"timescales.",
+672.586,
+673.496
+]
+]
+},
+{
+"line": 151,
+"chapter": 8,
+"para": 10,
+"text": "Changing coastal ecosystems.",
+"file": "vo/T151.wav",
+"start": 673.969,
+"dur": 1.866,
+"words": [
+[
+"Changing",
+673.969,
+674.419
+],
+[
+"coastal",
+674.419,
+674.719
+],
+[
+"ecosystems.",
+674.719,
+675.789
+]
+]
+},
+{
+"line": 152,
+"chapter": 8,
+"para": 11,
+"text": "Different ocean dynamics.",
+"file": "vo/T152.wav",
+"start": 676.435,
+"dur": 1.384,
+"words": [
+[
+"Different",
+676.435,
+676.885
+],
+[
+"ocean",
+676.885,
+677.295
+],
+[
+"dynamics.",
+677.295,
+677.775
+]
+]
+},
+{
+"line": 153,
+"chapter": 8,
+"para": 12,
+"text": "Altered biological rhythms.",
+"file": "vo/T153.wav",
+"start": 678.419,
+"dur": 1.72,
+"words": [
+[
+"Altered",
+678.419,
+679.089
+],
+[
+"biological",
+679.089,
+679.709
+],
+[
+"rhythms.",
+679.709,
+680.089
+]
+]
+},
+{
+"line": 154,
+"chapter": 8,
+"para": 13,
+"text": "And potentially important changes in Earth's rotational and climate evolution.",
+"file": "vo/T154.wav",
+"start": 680.739,
+"dur": 4.803,
+"words": [
+[
+"And",
+680.739,
+680.879
+],
+[
+"potentially",
+680.879,
+681.649
+],
+[
+"important",
+681.649,
+682.399
+],
+[
+"changes",
+682.399,
+682.829
+],
+[
+"in",
+682.829,
+682.849
+],
+[
+"Earth's",
+682.849,
+683.139
+],
+[
+"rotational",
+683.139,
+683.869
+],
+[
+"and",
+683.869,
+684.229
+],
+[
+"climate",
+684.229,
+684.519
+],
+[
+"evolution.",
+684.519,
+685.479
+]
+]
+},
+{
+"line": 155,
+"chapter": 8,
+"para": 14,
+"text": "Some consequences would be predictable.",
+"file": "vo/T155.wav",
+"start": 685.963,
+"dur": 2.1,
+"words": [
+[
+"Some",
+685.963,
+686.223
+],
+[
+"consequences",
+686.223,
+686.783
+],
+[
+"would",
+686.783,
+687.003
+],
+[
+"be",
+687.003,
+687.173
+],
+[
+"predictable.",
+687.173,
+688.013
+]
+]
+},
+{
+"line": 156,
+"chapter": 8,
+"para": 15,
+"text": "Others would be difficult to calculate.",
+"file": "vo/T156.wav",
+"start": 688.483,
+"dur": 1.982,
+"words": [
+[
+"Others",
+688.483,
+688.873
+],
+[
+"would",
+688.873,
+689.003
+],
+[
+"be",
+689.003,
+689.233
+],
+[
+"difficult",
+689.233,
+689.653
+],
+[
+"to",
+689.653,
+689.893
+],
+[
+"calculate.",
+689.893,
+690.413
+]
+]
+},
+{
+"line": 157,
+"chapter": 8,
+"para": 16,
+"text": "That's what makes this scenario so fascinating.",
+"file": "vo/T157.wav",
+"start": 690.885,
+"dur": 2.481,
+"words": [
+[
+"That's",
+690.885,
+691.075
+],
+[
+"what",
+691.075,
+691.145
+],
+[
+"makes",
+691.145,
+691.565
+],
+[
+"this",
+691.565,
+691.795
+],
+[
+"scenario",
+691.795,
+692.295
+],
+[
+"so",
+692.295,
+692.535
+],
+[
+"fascinating.",
+692.535,
+693.315
+]
+]
+},
+{
+"line": 158,
+"chapter": 8,
+"para": 17,
+"text": "The Moon isn't a magical object holding Earth together.",
+"file": "vo/T158.wav",
+"start": 693.786,
+"dur": 3.338,
+"words": [
+[
+"The",
+693.786,
+693.906
+],
+[
+"Moon",
+693.906,
+694.296
+],
+[
+"isn't",
+694.296,
+694.346
+],
+[
+"a",
+694.346,
+694.586
+],
+[
+"magical",
+694.586,
+695.186
+],
+[
+"object",
+695.186,
+695.626
+],
+[
+"holding",
+695.626,
+696.016
+],
+[
+"Earth",
+696.016,
+696.356
+],
+[
+"together.",
+696.356,
+697.076
+]
+]
+},
+{
+"line": 159,
+"chapter": 8,
+"para": 18,
+"text": "But it is a major part of the system that helped shape the world we inherited.",
+"file": "vo/T159.wav",
+"start": 697.544,
+"dur": 4.311,
+"words": [
+[
+"But",
+697.554,
+697.764
+],
+[
+"it",
+697.764,
+697.894
+],
+[
+"is",
+697.894,
+698.204
+],
+[
+"a",
+698.204,
+698.344
+],
+[
+"major",
+698.344,
+698.764
+],
+[
+"part",
+698.764,
+698.894
+],
+[
+"of",
+698.894,
+699.114
+],
+[
+"the",
+699.114,
+699.314
+],
+[
+"system",
+699.314,
+699.634
+],
+[
+"that",
+699.634,
+699.754
+],
+[
+"helped",
+699.754,
+700.204
+],
+[
+"shape",
+700.204,
+700.454
+],
+[
+"the",
+700.454,
+700.464
+],
+[
+"world",
+700.464,
+700.834
+],
+[
+"we",
+700.834,
+700.894
+],
+[
+"inherited.",
+700.894,
+701.804
+]
+]
+},
+{
+"line": 160,
+"chapter": 9,
+"para": 0,
+"text": "Here's the detail that makes this story even more extraordinary.",
+"file": "vo/T160.wav",
+"start": 704.855,
+"dur": 3.553,
+"words": [
+[
+"Here's",
+704.855,
+705.125
+],
+[
+"the",
+705.125,
+705.415
+],
+[
+"detail",
+705.415,
+705.755
+],
+[
+"that",
+705.755,
+705.875
+],
+[
+"makes",
+705.875,
+706.225
+],
+[
+"this",
+706.225,
+706.465
+],
+[
+"story",
+706.465,
+706.885
+],
+[
+"even",
+706.885,
+707.115
+],
+[
+"more",
+707.115,
+707.445
+],
+[
+"extraordinary.",
+707.445,
+708.365
+]
+]
+},
+{
+"line": 161,
+"chapter": 9,
+"para": 1,
+"text": "The Moon is already moving away from us.",
+"file": "vo/T161.wav",
+"start": 708.828,
+"dur": 2.142,
+"words": [
+[
+"The",
+708.828,
+708.898
+],
+[
+"Moon",
+708.898,
+709.248
+],
+[
+"is",
+709.248,
+709.318
+],
+[
+"already",
+709.318,
+709.748
+],
+[
+"moving",
+709.748,
+710.198
+],
+[
+"away",
+710.198,
+710.418
+],
+[
+"from",
+710.418,
+710.728
+],
+[
+"us.",
+710.728,
+710.918
+]
+]
+},
+{
+"line": 162,
+"chapter": 9,
+"para": 2,
+"text": "Measurements show that it recedes from Earth by about {3.8|three point eight} centimeters per year.",
+"file": "vo/T162.wav",
+"start": 711.39,
+"dur": 5.128,
+"words": [
+[
+"Measurements",
+711.39,
+712.3
+],
+[
+"show",
+712.3,
+712.36
+],
+[
+"that",
+712.36,
+712.58
+],
+[
+"it",
+712.58,
+712.85
+],
+[
+"recedes",
+712.85,
+713.36
+],
+[
+"from",
+713.36,
+713.75
+],
+[
+"Earth",
+713.75,
+713.77
+],
+[
+"by",
+713.77,
+714.03
+],
+[
+"about",
+714.03,
+714.39
+],
+[
+"3.8",
+714.39,
+715.05
+],
+[
+"centimeters",
+715.05,
+715.91
+],
+[
+"per",
+715.91,
+716.11
+],
+[
+"year.",
+716.11,
+716.47
+]
+]
+},
+{
+"line": 163,
+"chapter": 9,
+"para": 3,
+"text": "That's roughly the rate at which fingernails grow.",
+"file": "vo/T163.wav",
+"start": 716.938,
+"dur": 2.467,
+"words": [
+[
+"That's",
+716.938,
+717.088
+],
+[
+"roughly",
+717.088,
+717.558
+],
+[
+"the",
+717.558,
+717.858
+],
+[
+"rate",
+717.858,
+717.928
+],
+[
+"at",
+717.928,
+718.148
+],
+[
+"which",
+718.148,
+718.308
+],
+[
+"fingernails",
+718.308,
+718.928
+],
+[
+"grow.",
+718.928,
+719.358
+]
+]
+},
+{
+"line": 164,
+"chapter": 9,
+"para": 4,
+"text": "The movement is extremely slow on a human timescale.",
+"file": "vo/T164.wav",
+"start": 719.824,
+"dur": 3.046,
+"words": [
+[
+"The",
+719.824,
+720.074
+],
+[
+"movement",
+720.074,
+720.494
+],
+[
+"is",
+720.494,
+720.644
+],
+[
+"extremely",
+720.644,
+721.184
+],
+[
+"slow",
+721.184,
+721.524
+],
+[
+"on",
+721.524,
+721.524
+],
+[
+"a",
+721.524,
+721.774
+],
+[
+"human",
+721.774,
+722.044
+],
+[
+"timescale.",
+722.044,
+722.824
+]
+]
+},
+{
+"line": 165,
+"chapter": 9,
+"para": 5,
+"text": "But over millions of years, it adds up.",
+"file": "vo/T165.wav",
+"start": 723.29,
+"dur": 2.075,
+"words": [
+[
+"But",
+723.29,
+723.5
+],
+[
+"over",
+723.5,
+723.92
+],
+[
+"millions",
+723.92,
+724.11
+],
+[
+"of",
+724.11,
+724.47
+],
+[
+"years,",
+724.47,
+724.65
+],
+[
+"it",
+724.65,
+724.87
+],
+[
+"adds",
+724.87,
+725.12
+],
+[
+"up.",
+725.12,
+725.33
+]
+]
+},
+{
+"line": 166,
+"chapter": 9,
+"para": 6,
+"text": "The Moon we see tonight is not in exactly the same place it occupied when dinosaurs walked the Earth.",
+"file": "vo/T166.wav",
+"start": 725.785,
+"dur": 6.104,
+"words": [
+[
+"The",
+725.795,
+725.915
+],
+[
+"Moon",
+725.915,
+726.235
+],
+[
+"we",
+726.235,
+726.485
+],
+[
+"see",
+726.485,
+726.625
+],
+[
+"tonight",
+726.625,
+727.055
+],
+[
+"is",
+727.055,
+727.235
+],
+[
+"not",
+727.235,
+727.575
+],
+[
+"in",
+727.575,
+727.845
+],
+[
+"exactly",
+727.845,
+728.395
+],
+[
+"the",
+728.395,
+728.595
+],
+[
+"same",
+728.595,
+728.835
+],
+[
+"place",
+728.835,
+729.165
+],
+[
+"it",
+729.165,
+729.275
+],
+[
+"occupied",
+729.275,
+730.035
+],
+[
+"when",
+730.035,
+730.205
+],
+[
+"dinosaurs",
+730.205,
+730.805
+],
+[
+"walked",
+730.805,
+731.355
+],
+[
+"the",
+731.355,
+731.455
+],
+[
+"Earth.",
+731.455,
+731.845
+]
+]
+},
+{
+"line": 167,
+"chapter": 9,
+"para": 7,
+"text": "And it won't remain at exactly the same distance forever.",
+"file": "vo/T167.wav",
+"start": 732.309,
+"dur": 3.195,
+"words": [
+[
+"And",
+732.309,
+732.509
+],
+[
+"it",
+732.509,
+732.739
+],
+[
+"won't",
+732.739,
+732.779
+],
+[
+"remain",
+732.779,
+733.239
+],
+[
+"at",
+733.239,
+733.499
+],
+[
+"exactly",
+733.499,
+733.919
+],
+[
+"the",
+733.919,
+734.239
+],
+[
+"same",
+734.239,
+734.479
+],
+[
+"distance",
+734.479,
+734.689
+],
+[
+"forever.",
+734.689,
+735.449
+]
+]
+},
+{
+"line": 168,
+"chapter": 9,
+"para": 8,
+"text": "Our planet and its satellite are part of a constantly evolving system.",
+"file": "vo/T168.wav",
+"start": 735.924,
+"dur": 4.294,
+"words": [
+[
+"Our",
+735.924,
+736.124
+],
+[
+"planet",
+736.124,
+736.594
+],
+[
+"and",
+736.594,
+736.804
+],
+[
+"its",
+736.804,
+736.934
+],
+[
+"satellite",
+736.934,
+737.554
+],
+[
+"are",
+737.554,
+737.694
+],
+[
+"part",
+737.694,
+738.084
+],
+[
+"of",
+738.084,
+738.134
+],
+[
+"a",
+738.134,
+738.374
+],
+[
+"constantly",
+738.374,
+738.934
+],
+[
+"evolving",
+738.934,
+739.594
+],
+[
+"system.",
+739.594,
+740.194
+]
+]
+},
+{
+"line": 169,
+"chapter": 9,
+"para": 9,
+"text": "So when you look at the Moon tonight, you're not just seeing a glowing object in the sky.",
+"file": "vo/T169.wav",
+"start": 740.638,
+"dur": 4.726,
+"words": [
+[
+"So",
+740.638,
+740.908
+],
+[
+"when",
+740.908,
+741.068
+],
+[
+"you",
+741.068,
+741.338
+],
+[
+"look",
+741.338,
+741.498
+],
+[
+"at",
+741.498,
+741.618
+],
+[
+"the",
+741.618,
+741.918
+],
+[
+"Moon",
+741.918,
+742.158
+],
+[
+"tonight,",
+742.158,
+742.748
+],
+[
+"you're",
+742.748,
+742.818
+],
+[
+"not",
+742.818,
+743.098
+],
+[
+"just",
+743.098,
+743.378
+],
+[
+"seeing",
+743.378,
+743.458
+],
+[
+"a",
+743.458,
+743.778
+],
+[
+"glowing",
+743.778,
+744.198
+],
+[
+"object",
+744.198,
+744.468
+],
+[
+"in",
+744.468,
+744.858
+],
+[
+"the",
+744.858,
+744.888
+],
+[
+"sky.",
+744.888,
+745.318
+]
+]
+},
+{
+"line": 170,
+"chapter": 9,
+"para": 10,
+"text": "You're seeing a world that has influenced Earth's oceans, rotation, biology, and history for billions of years.",
+"file": "vo/T170.wav",
+"start": 745.784,
+"dur": 7.291,
+"words": [
+[
+"You're",
+745.784,
+746.094
+],
+[
+"seeing",
+746.094,
+746.304
+],
+[
+"a",
+746.304,
+746.464
+],
+[
+"world",
+746.464,
+746.854
+],
+[
+"that",
+746.854,
+746.994
+],
+[
+"has",
+746.994,
+747.234
+],
+[
+"influenced",
+747.234,
+747.934
+],
+[
+"Earth's",
+747.934,
+748.324
+],
+[
+"oceans,",
+748.324,
+748.974
+],
+[
+"rotation,",
+748.974,
+749.824
+],
+[
+"biology,",
+749.824,
+750.744
+],
+[
+"and",
+750.744,
+750.974
+],
+[
+"history",
+750.974,
+751.654
+],
+[
+"for",
+751.654,
+751.894
+],
+[
+"billions",
+751.894,
+752.454
+],
+[
+"of",
+752.454,
+752.714
+],
+[
+"years.",
+752.714,
+753.024
+]
+]
+},
+{
+"line": 171,
+"chapter": 9,
+"para": 11,
+"text": "A world that helped make our planet what it is today.",
+"file": "vo/T171.wav",
+"start": 753.496,
+"dur": 2.62,
+"words": [
+[
+"A",
+753.496,
+753.626
+],
+[
+"world",
+753.626,
+753.906
+],
+[
+"that",
+753.906,
+754.026
+],
+[
+"helped",
+754.026,
+754.296
+],
+[
+"make",
+754.296,
+754.526
+],
+[
+"our",
+754.526,
+754.706
+],
+[
+"planet",
+754.706,
+755.126
+],
+[
+"what",
+755.126,
+755.166
+],
+[
+"it",
+755.166,
+755.476
+],
+[
+"is",
+755.476,
+755.566
+],
+[
+"today.",
+755.566,
+756.066
+]
+]
+},
+{
+"line": 172,
+"chapter": 9,
+"para": 12,
+"text": "And perhaps the strangest part of all is this.",
+"file": "vo/T172.wav",
+"start": 756.536,
+"dur": 2.45,
+"words": [
+[
+"And",
+756.536,
+756.686
+],
+[
+"perhaps",
+756.686,
+757.116
+],
+[
+"the",
+757.116,
+757.276
+],
+[
+"strangest",
+757.276,
+757.786
+],
+[
+"part",
+757.786,
+758.066
+],
+[
+"of",
+758.066,
+758.096
+],
+[
+"all",
+758.096,
+758.486
+],
+[
+"is",
+758.486,
+758.526
+],
+[
+"this.",
+758.526,
+758.936
+]
+]
+},
+{
+"line": 173,
+"chapter": 9,
+"para": 13,
+"text": "If the Moon disappeared tonight, humanity might survive.",
+"file": "vo/T173.wav",
+"start": 759.406,
+"dur": 3.049,
+"words": [
+[
+"If",
+759.406,
+759.546
+],
+[
+"the",
+759.546,
+759.656
+],
+[
+"Moon",
+759.656,
+759.946
+],
+[
+"disappeared",
+759.946,
+760.536
+],
+[
+"tonight,",
+760.536,
+760.986
+],
+[
+"humanity",
+760.986,
+761.786
+],
+[
+"might",
+761.786,
+762.016
+],
+[
+"survive.",
+762.016,
+762.406
+]
+]
+},
+{
+"line": 174,
+"chapter": 9,
+"para": 14,
+"text": "But Earth would never be quite the same again.",
+"file": "vo/T174.wav",
+"start": 762.875,
+"dur": 2.19,
+"words": [
+[
+"But",
+762.875,
+763.035
+],
+[
+"Earth",
+763.035,
+763.295
+],
+[
+"would",
+763.295,
+763.375
+],
+[
+"never",
+763.375,
+763.845
+],
+[
+"be",
+763.845,
+763.965
+],
+[
+"quite",
+763.965,
+764.215
+],
+[
+"the",
+764.215,
+764.395
+],
+[
+"same",
+764.395,
+764.625
+],
+[
+"again.",
+764.625,
+765.015
+]
+]
+}
+],
+"chapters": [
+{
+"title": "THE NIGHT EVERYTHING CHANGES",
+"start": 0.3
+},
+{
+"title": "THE FIRST FEW SECONDS",
+"start": 55.962
+},
+{
+"title": "WHAT HAPPENS TO THE OCEANS?",
+"start": 147.005
+},
+{
+"title": "THE ANIMALS THAT FOLLOW THE MOON",
+"start": 240.918
+},
+{
+"title": "WOULD EARTH STOP SPINNING?",
+"start": 315.554
+},
+{
+"title": "EARTH'S AXIS: THE HIDDEN DANGER",
+"start": 385.838
+},
+{
+"title": "A WORLD WITHOUT ECLIPSES",
+"start": 493.646
+},
+{
+"title": "WHAT ABOUT THE WEATHER?",
+"start": 562.605
+},
+{
+"title": "COULD HUMANITY SURVIVE?",
+"start": 634.091
+},
+{
+"title": "THE FINAL REVELATION",
+"start": 704.855
+}
+]
+}
