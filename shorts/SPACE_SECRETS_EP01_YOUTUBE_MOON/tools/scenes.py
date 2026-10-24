@@ -558,8 +558,8 @@ def sh_turtles(t, s0, s1):
     tag(d, "illus")
     return img
 
-def sh_cards(t, s0, s1, title, items, kind="diag", bg="stars"):
-    base = stars_half_up() * 0.75 if bg == "stars" else globe(1500, 560, 380, lon=-30 - 4 * (t - s0)) * 0.55
+def sh_cards(t, s0, s1, title, items, kind="diag", bg="earth"):
+    base = stars_half_up() * 0.75 if bg == "stars" else globe(1500, 560, 380, lon=-30 - 4 * (t - s0), night_gain=2.4) * 0.7
     img = finish(base, 0.15); d = ImageDraw.Draw(img, "RGBA")
     headline(d, 160, 200, title, seg(t, s0, s0 + 0.5), 44, GOLD)
     for i, (txt, cue, col) in enumerate(items):
@@ -568,8 +568,15 @@ def sh_cards(t, s0, s1, title, items, kind="diag", bg="stars"):
     tag(d, kind)
     return img
 
+def chart_bg():
+    def make():
+        yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+        g = np.exp(-(((xx - W * 0.55) / 900) ** 2 + ((yy - H * 0.5) / 520) ** 2))
+        return stars_half_up() * 0.6 + g[..., None] * np.array([18, 34, 62], np.float32)
+    return cache("chartbg", make)
+
 def sh_popgraph(t, s0, s1):
-    img = finish(stars_half_up() * 0.6, 0.1); d = ImageDraw.Draw(img, "RGBA")
+    img = finish(chart_bg(), 0.1); d = ImageDraw.Draw(img, "RGBA")
     gx, gy, gw, gh = 200, 260, 1400, 560
     d.line((gx, gy + gh, gx + gw, gy + gh), fill=(255, 255, 255, 150), width=2); d.line((gx, gy, gx, gy + gh), fill=(255, 255, 255, 150), width=2)
     d.text((gx + gw, gy + gh + 30), "generations →", font=font(F_LIGHT, 26), fill=SOFT, anchor="rm")
@@ -742,7 +749,7 @@ def _obl_chart(d, t, s0, show_nomoon, gx=200, gy=240, gw=1500, gh=560):
     d.text((gx + gw, gy + gh + 30), "time → (many millions of years)", font=font(F_LIGHT, 22), fill=SOFT, anchor="rm")
 
 def sh_obliquity(t, s0, s1, nomoon_at=None):
-    img = finish(stars_half_up() * 0.5, 0.1); d = ImageDraw.Draw(img, "RGBA")
+    img = finish(chart_bg(), 0.1); d = ImageDraw.Draw(img, "RGBA")
     headline(d, 200, 150, "EARTH'S AXIAL TILT OVER TIME", seg(t, s0, s0 + 0.5), 36, TEAL)
     _obl_chart(d, t, s0, nomoon_at)
     tag(d, "hyp" if nomoon_at else "diag", "red curve is illustrative, not a prediction")

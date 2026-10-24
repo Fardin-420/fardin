@@ -9,5 +9,5 @@ for ((a=0; a<NF; a+=STEP)); do
   python3 doc.py range $a $b $f >> render.log 2>&1 || { echo "FAILED $a" >> render.log; exit 1; }
   echo ok > "$f.done"
 done
-ls seg/s_*.mp4 | sort | sed "s/^/file '/; s/$/'/" > seg/list.txt
+ls seg/s_*.mp4 | sort | sed "s#^seg/#file '#; s/$/'/" > seg/list.txt
 ffmpeg -y -v error -f concat -safe 0 -i seg/list.txt -c copy video.mp4 && echo "ALL DONE" >> render.log

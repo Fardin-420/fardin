@@ -59,7 +59,7 @@ SHOTS = [
  (55, S.sh_reef, dict(spawn_at=find(56, "spawning"))),
  (57, S.sh_savanna, dict(bright_to=0.0)),
  (60, S.sh_turtles, {}),
- (61, S.sh_cards, dict(title="NO OVERNIGHT COLLAPSE", items=[(("Adaptable", "animals respond to many environmental cues"), (62, "adaptable"), (130, 230, 170)),
+ (61, S.sh_cards, dict(title="NO OVERNIGHT COLLAPSE", items=[(("Not all at once", "these systems wouldn't collapse overnight"), (61, "collapse"), GOLD), (("Adaptable", "animals respond to many environmental cues"), (62, "adaptable"), (130, 230, 170)),
                                                            (("Many signals", "day length, temperature, tides, moonlight"), (62, "cues"), ICE)])),
  (63, S.sh_popgraph, {}),
  (67, S.sh_foodweb, {}),

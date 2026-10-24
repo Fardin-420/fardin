@@ -1,0 +1,45 @@
+QUALITY-CONTROL REPORT — SPACE_SECRETS_EP01_YOUTUBE_16X9.mp4
+
+TECHNICAL (npc_ranking/npc/qc.py + ffprobe on the delivered file)
+PASS  container      MP4 (+faststart), H.264 High, yuv420p, AAC-LC 48 kHz stereo 256 kb/s
+PASS  resolution     1920×1080, 16:9, full frame (23292/23308 frames full-frame; the rest are the dark end screen)
+PASS  fps            30/1, 23,310 frames
+PASS  duration       777.0 s = 12:57 (target 11–13 min)
+PASS  loudness       -14.0 LUFS integrated (two-pass loudnorm), true peak -2.3 dBFS, 0 clipped samples
+PASS  silence gaps   none (the only deliberate silence is ~1.3 s after the Moon vanishes at 0:02.7)
+NOTE  bitrate        ~4.1 Mb/s total (3.9 Mb/s video), to fit the 400 MiB delivery limit here. The content is mostly dark
+                     and slow, so it holds up; YouTube re-encodes on upload. A 5.0 Mb/s (466 MiB) master also exists.
+NOTE  black frames   only 12:51–12:57, the end screen (white/gold text on deep space, by design).
+                     First pass flagged near-empty dark moments at ~4:37, 4:46, 4:55, 7:01 and 7:37. FIXED: Earth / soft-blue
+                     chart backgrounds and an extra fact card; those segments were re-rendered and re-checked.
+NOTE  4K             1920×1080 delivered (the brief's minimum). 4K would need 15+ hours of CPU rendering in this environment.
+
+REVIEW CHECKLIST
+- First 30 seconds: frame 0 is a giant Moon over a night city; no logo, greeting or disclaimer. On "gone" (2.72 s) the
+  Moon vanishes in one frame, the sky drops to a moonless tone, and an afterimage ring fades over 0.5 s. One sub-bass
+  impact, then ~1.3 s of silence before the score returns. 0:17 telescope "MOON NOT FOUND"; 0:20 empty orbit;
+  0:21 the real system with tides / night light / life cards.
+- Transitions: 78 shots, 0.5 s cross-dissolves; hard cuts only in the hook. Chapter cards in every chapter break.
+  Contact sheets reviewed across the whole film (about 90 frames).
+- Narration continuity: 175 lines, one voice, constant speed (never time-stretched), designed pauses; chapter breaks 3 s.
+- Sync: every graphic is keyed to word times (energy-dip alignment; no ASR available). Phrase-accurate; a single word
+  can be off by ±0.1–0.2 s.
+- Scientific accuracy: see SOURCES_REFERENCES.txt. Every brief rule is met: hypothetical framing, no instant tsunamis,
+  solar tides remain, rotation doesn't stop, orbit continues, tilt instability shown as a disputed long-term
+  possibility (Laskar 1993 vs Lissauer 2012), recession 3.8 cm/yr.
+- Caption readability: documentary subtitles, one line, centred at y≈968 on a 50 % black band, Inter Display Medium 34 px.
+  Large text is used only for short emphasis cards.
+- Visual continuity: one Moon model, one Earth model and one star/Sun model throughout; consistent labels
+  (SIMULATION / ILLUSTRATION / DIAGRAM / SCHEMATIC / HYPOTHETICAL).
+- Audio mix: narration ducks the music by ~60 %; chapter swells; felt-piano motif in the last two chapters; impacts used
+  sparingly (18 marks over 13 min). Mix verified by measurement only; I can't listen in this environment, so a human
+  listen is recommended.
+- Ending: final line at 12:45; "THE MOON IS MORE IMPORTANT THAN IT LOOKS." over Earthrise; end screen
+  "SPACE SECRETS — EXPLORE THE UNKNOWN." (5.5 s, usable for YouTube end-screen elements).
+
+KNOWN LIMITATIONS (honest)
+- No authentic NASA/ESA/NOAA imagery or real wildlife footage: those hosts were blocked by the network policy.
+  Everything is original CGI or motion graphics, labelled so that no animation is passed off as real footage.
+- Animals (reef, predators, turtles) are stylized illustrations, not nature cinematography.
+- The narration is an AI voice (Kokoro): natural-sounding but not a human performance. Mark "altered or synthetic
+  content" on upload.
