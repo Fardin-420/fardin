@@ -1,0 +1,56 @@
+QUALITY-CONTROL REPORT — SPACE_SECRETS_TIKTOK_EP03.mp4
+
+TECHNICAL (npc_ranking/npc/qc.py + ffprobe on the delivered file)
+PASS  container      MP4 (+faststart), H.264 High, yuv420p
+PASS  resolution     1080x1920 (9:16), 30/1 fps, 2,580 frames
+PASS  duration       86.000 s (spec 85–95 s)
+PASS  audio          AAC-LC 48 kHz stereo 256 kb/s
+PASS  bitrate        8.7 Mb/s (~93 MB, under GitHub's 100 MB per-file limit)
+PASS  loudness       -14.0 LUFS integrated (two-pass)
+PASS  true_peak      -2.3 dBFS
+PASS  black_frames   none
+PASS  silence_gaps   none (the 3.7 s after the final hit is a quiet tail with an eerie tone, by design)
+PASS  no_black_bars  2578/2578 frames full-frame
+PASS  clipping       0 clipped samples
+Fixed during QC: the master initially stopped at 70 s (a leftover limit from earlier episodes). Re-mastered to the full
+86 s and re-encoded at 8.6 Mb/s to fit GitHub's per-file limit.
+
+OPENING HOOK (first 3 s reviewed separately; preview frames at 0.0/0.1/0.5/1.0/1.5/2.0/2.6/3.0 s)
+- Frame 0: hundreds of glass shards already flying at the camera out of a blue storm tunnel, with "IT RAINS GLASS?!"
+  already on screen (no fade-in, logo or title card).
+- 0.30 s: first glass-crack impact on the "lens" (shatter + sub-bass + flash + camera shake), inside the 0.5 s window.
+- 0.10 s: narration starts: "On this planet, the rain could tear you apart."
+- 1.32 s: second crack on "tear you apart"; 2.51 s smash cut to the planet emerging from darkness.
+- Fix applied after the first review: frame 0 originally had small, faint shards and the title still scaling in.
+  The shards are now larger and brighter, and the title is visible at ≥80 % size on frame 0.
+
+AUDIO SYNCHRONIZATION
+- All visual events are keyed to word times from timing.json (energy-dip alignment of each narration line):
+  crack on "tear" 1.32 s · "HD 189733 b" card on "HD" 8.51 s · Earth inset on "Earth" 15.04 s · "NOT OCEANS" on
+  "oceans" 17.59 s · silicate callout on "silicate" 21.32 s · droplets condense on "droplets" 25.32 s · wind counter
+  lands on "5,400" 31.47 s · comparison on "That's" 34.47 s · thermometer fills to 2,000°F on "2,000" 42.62 s ·
+  "NO SOLID SURFACE" on "no" 46.80 s · lightning on "violent" 51.81 s · 63 light-years on "63" 57.42 s · Hubble /
+  Spitzer / 2015 cards on "Hubble", "observations", "extreme" · "NEVER SEEN" on "haven't" 68.11 s · storm reveal on
+  "hide" 80.74 s · final bass hit on the end of "weather" 82.34 s.
+- Caveat: no ASR model was available, so word times are estimated from audio energy: phrase-accurate, with single
+  words possibly ±0.1–0.2 s.
+- The voice is never time-stretched; pacing comes from Kokoro's speed setting (0.87–1.02x) and designed pauses.
+
+CAPTION PLACEMENT (TikTok safe area)
+- Captions centred at x = 510 (shifted left of the right-hand action buttons) with max width 860 px (x ≈ 80–940),
+  vertical centre y = 1390 (two-line block ≈ 1340–1440), above the bottom caption/UI zone (y > 1500).
+- Headlines and graphics sit between y ≈ 250 and 1330. The visualization tag is at y 196–240, below TikTok's top tabs.
+- Key words highlighted in yellow: GLASS, HD 189733 b, OCEANS, SILICATE, DROPLETS, SIDEWAYS, 5,400 MPH, 2,000°F,
+  NO SOLID, VIOLENT, 63 LIGHT-YEARS, HUBBLE, HAVEN'T, POSSIBILITY, PRETTIEST, DEADLIEST WEATHER.
+- Known minor issue: during the 0.14 s pop on the first crack, "GLASS?!" briefly overshoots the side margins.
+
+SCIENCE / HONESTY
+- "SCIENTIFIC VISUALIZATION · not real footage" on screen throughout. The glass-rain sequence is labelled
+  "NOT RECORDED FOOTAGE / NEVER SEEN", and the droplets "a possibility scientists propose · not observed".
+- Real measurements are shown separately as "REAL OBSERVATIONS": Hubble 2013 colour, Spitzer 2007 temperature map,
+  2015 wind measurement. No invented discoveries, measurements or footage.
+
+KNOWN LIMITATIONS
+- NASA/ESA sites and imagery were blocked by the network policy, so all planet/star imagery is procedural (labelled).
+- I can't listen here; the mix was checked by measurement only. A human listen is recommended.
+- AI voice: use TikTok's "AI-generated content" label.
