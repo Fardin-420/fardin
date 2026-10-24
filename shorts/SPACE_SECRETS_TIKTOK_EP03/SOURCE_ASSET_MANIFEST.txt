@@ -1,0 +1,42 @@
+SOURCE / ASSET MANIFEST — SPACE_SECRETS_TIKTOK_EP03.mp4
+
+RESEARCH REFERENCES (supplied by the client; contents used as stated below)
+1. NASA — "NASA's Hubble Finds a True Blue Planet" (2013):
+   https://science.nasa.gov/missions/hubble/nasas-hubble-finds-a-true-blue-planet/
+   -> deep-blue colour measured by Hubble (STIS); ~63 light-years; dayside near 2,000 °F; the colour may come from a hazy
+      atmosphere with silicate particles, which could condense into glass droplets (a proposed possibility).
+2. NASA — "5,400mph Winds Discovered Hurtling Around Planet Outside Solar System" (2015):
+   https://science.nasa.gov/universe/exoplanets/5400mph-winds-discovered-hurtling-around-planet-outside-solar-system/
+   -> ~5,400 mph (~2 km/s) winds measured (Univ. of Warwick, HARPS spectrograph, ground telescope); ~7× the speed of sound.
+3. NASA — "First Map of an Exoplanet Atmosphere" (Spitzer, 2007):
+   https://science.nasa.gov/resource/first-map-of-an-exoplanet-atmosphere/
+   -> first temperature map of an exoplanet; hottest region offset from the point facing the star (used for the
+      night-side glow and the shifted hot spot in the heat scene).
+NOTE: science.nasa.gov and all NASA/ESA image hosts were blocked by this environment's network policy, so the pages
+couldn't be re-opened while editing. The figures above match the client's script and those references.
+Other numbers on screen (standard values): orbit ~2.2 days; ~0.031 AU from its star (~13× closer than Mercury is to the
+Sun, 0.39 AU); radius ~1.1 Jupiter (~12–13 Earths, Earth drawn to scale); constellation Vulpecula; Earth's fastest
+measured winds ≈ 300 mph (1999 Bridge Creek–Moore tornado, Doppler radar).
+Distance: NASA's article gives ~63 ly; newer Gaia parallax gives ~64.5 ly. The script's "about sixty-three" is kept.
+
+VISUALS (all original, rendered frame by frame)
+- HD 189733 b: procedural gas-giant renderer (planet.py). Zonal bands with differential flow, Rayleigh-blue limb, soft
+  terminator, night-side thermal glow, eastward-shifted hot spot. An artistic, scientifically informed visualization,
+  NOT an image of the planet (no image of it exists).
+- Host star HD 189733 A (orange K dwarf): procedural star (star.py).
+- Earth (scale inset): Solar System Scope textures, CC BY 4.0, based on NASA imagery (via the three.js repository). Credited on screen.
+- Glass shards, cracks, silicate haze, condensing droplets, superstorm, sideways glass rain, cloud dive, lightning,
+  thermometer, orbit, distance scale, observation cards: original particle and volumetric simulations and motion graphics in code.
+- No NASA/ESA imagery, stock footage, AI-generated images, or YouTube/TikTok clips are used.
+- Labels on screen: "SCIENTIFIC VISUALIZATION · not real footage" throughout; "NOT RECORDED FOOTAGE" and "NEVER SEEN" on the
+  glass-rain sequence; "a possibility scientists propose · not observed" on the droplets.
+
+AUDIO
+- Narration: Kokoro v1.0 ONNX TTS, voice am_puck (Apache-2.0 model), generated locally. AI voice.
+- Music and sound design: original, synthesized (pads, sub, pulses, glass shatter and tinkle synthesis, wind, rumble,
+  crystalline shimmer, descending tone, lightning cracks, impacts, risers). No library samples.
+
+FONTS: Inter Black / ExtraBold, JetBrains Mono Bold (SIL OFL 1.1).
+
+TOOLS (tools/): lines.py, tts_ep03.py -> align_ep03.py (timing.json) -> ep03.py (+ planet.py, star.py, earth.py, sfx.py)
+-> master (acompressor/alimiter, two-pass loudnorm -14 LUFS, x264 ~9.5 Mb/s, AAC 256k).
