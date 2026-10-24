@@ -1,0 +1,23 @@
+SPACE SECRETS — WARM-UP 01 — "WHAT IF THE SUN DISAPPEARED?"
+English voice-over script (15 s, vertical TikTok)
+Voice: Kokoro v1.0 "am_puck" (American male), slowed to 0.90–1.00x for a suspenseful read. AI-generated voice.
+
+TIME         VOICE-OVER                                                 ON SCREEN
+0:00–0:03    "What if the Sun vanished... right now?"                   WHAT IF THE SUN DISAPPEARED?  ->  THE SUN DISAPPEARS
+             (Sun collapses on "now"; bass impact, white flash)
+0:03–0:07    "For about eight minutes, Earth wouldn't even know."       LIGHT + GRAVITY TRAVEL TIME 0:00 -> 8:20,
+             (Earth still lit; the last sunlight travels down)           8 MINUTES LATER...
+0:07–0:11    "Then suddenly... darkness. And the Sun's gravity          DARKNESS (no incoming sunlight anywhere)
+             is gone."                                                   ORBIT -> GRAVITY: GONE
+             (Light ends on "darkness"; orbit lets go on "gone")         (Earth coasts off in a straight line, ~30 km/s)
+0:11–0:15    "Could humanity survive?"                                   WOULD WE SURVIVE?
+             (Camera pulls back; the Sun re-ignites for the loop)        hypothetical · the Sun can't actually vanish
+
+Word count: 24. Narration ends at 12.7 s; the last 2.3 s are the pullback and the loop.
+
+SCIENCE NOTES (what the script does and doesn't claim)
+- Hypothetical: the Sun can't vanish (mass-energy is conserved). This is labelled on screen the whole time.
+- Light takes ~8 min 20 s (499 s) to cross 1 AU. Changes in gravity also travel at light speed (confirmed by
+  GW170817), so Earth keeps its orbit AND its daylight for the same ~8 min 20 s. The countdown runs to 8:20.
+- After that, Earth would move off along a straight line at its orbital speed (~29.8 km/s).
+- The video does NOT say Earth freezes instantly or that humanity dies right away: it ends on an open question.

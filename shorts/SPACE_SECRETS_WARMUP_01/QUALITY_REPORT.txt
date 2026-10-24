@@ -1,0 +1,31 @@
+QUALITY REPORT — SPACE_SECRETS_WARMUP_01.mp4
+
+TECHNICAL (npc_ranking/npc/qc.py + ffprobe on the delivered file)
+PASS  container      MP4 (+faststart), H.264 High, yuv420p
+PASS  resolution     1080x1920 (9:16)
+PASS  fps            30/1, 450 frames
+PASS  duration       15.000 s
+PASS  audio          AAC-LC 48 kHz stereo 256 kb/s
+PASS  loudness       -14.1 LUFS integrated (two-pass)
+PASS  true_peak      -2.1 dBFS
+PASS  black_frames   none
+PASS  silence_gaps   none
+PASS  clipping       0 clipped samples
+FLAG  no_black_bars  400/448 frames full-frame. FALSE POSITIVE: in the space shots, cropdetect reads the
+                     vignetted, starry top and bottom edges (average luma < 24) as bars. There is no letterbox.
+
+STRUCTURE
+0:00–0:03  Sun on screen at frame 0 (hook < 0.5 s), title in 0.25 s; collapse on "now" (1.60 s), impact + flash at 1.88 s
+0:03–0:07  lit Earth, countdown 0:00 -> 8:20, last-sunlight beam descending; "8 MINUTES LATER..." when count passes 8:00 (6.28 s)
+0:07–0:11  light ends on "darkness" (7.85 s); orbit diagram; Earth leaves on a tangent on "gone" (9.57 s)
+0:11–0:15  pullback to a night-side Earth, "WOULD WE SURVIVE?"; Sun re-ignites into the exact opening framing (loop)
+
+SCIENCE
+- Labelled hypothetical throughout; "the Sun can't actually vanish" shown at the end.
+- Countdown ends at 8:20 (~499 s light time). Light and gravity changes arrive together.
+- No claim of instant freezing or immediate extinction.
+
+KNOWN LIMITATIONS
+- Word timings are estimated from audio energy (no ASR); phrase-accurate, ±0.1–0.2 s per word.
+- I can't listen here; the mix was verified by measurement only. A quick human listen is recommended.
+- AI voice: disclose on TikTok ("AI-generated content" label).

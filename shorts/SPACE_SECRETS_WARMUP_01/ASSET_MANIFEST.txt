@@ -1,0 +1,27 @@
+SOURCE / ASSET MANIFEST — SPACE_SECRETS_WARMUP_01.mp4
+
+VISUALS
+- Sun: procedural, rendered frame by frame for this video (sun.py). Includes limb darkening, two animated granulation
+  layers, sunspots, faculae, rim prominences and a streamed corona. No third-party imagery. Original work.
+- Earth: rendered with earth.py (per-pixel sphere projection, day/night, clouds, ocean glint, atmosphere) from
+  Solar System Scope textures (earth_day_4096, earth_night_4096, bump/roughness/clouds), CC BY 4.0, based on NASA
+  imagery, obtained via the three.js examples repository. Credited on screen.
+- Starfield, light beam, countdown, orbit diagram, collapse streaks, shock ring and titles: original, generated in code.
+- No NASA footage, stock footage, YouTube or TikTok clips are used.
+
+AUDIO
+- Narration: Kokoro v1.0 ONNX TTS, voice "am_puck" (Apache-2.0 model), generated locally. AI voice.
+- Score and sound design: original, synthesized in numpy/scipy (pads, 41 Hz drone, heartbeat, sub drops, whooshes,
+  risers, countdown ticks, ear-ring). No music library samples.
+
+FONTS
+- Inter Black / ExtraBold (SIL OFL 1.1), JetBrains Mono Bold (SIL OFL 1.1).
+
+FACT SOURCES (for the numbers on screen)
+- 1 AU light travel time ≈ 499 s (8 min 19 s): IAU 2012 AU definition, c = 299,792,458 m/s.
+- Speed of gravity = speed of light: LIGO/Virgo + Fermi GW170817 / GRB 170817A (Abbott et al. 2017, ApJL 848 L13).
+- Earth's mean orbital speed 29.78 km/s: NASA Earth Fact Sheet.
+
+TOOLS (in tools/)
+tts_sun.py -> align_sun.py (timing.json) -> sun.py (mix.wav + video.mp4; earth.py, sfx.py) -> master
+(acompressor + alimiter, two-pass loudnorm to -14 LUFS, x264 9.5 Mb/s, AAC 256k).
