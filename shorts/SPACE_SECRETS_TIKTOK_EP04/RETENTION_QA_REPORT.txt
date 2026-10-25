@@ -1,0 +1,48 @@
+RETENTION QA REPORT — SPACE_SECRETS_TIKTOK_EP04.mp4 (Viral Retention System V3)
+
+TECHNICAL (npc_ranking/npc/qc.py + ffprobe on the delivered file)
+PASS  1080×1920 · 9:16 · 30 fps · H.264 High · yuv420p · AAC 48 kHz stereo · +faststart
+PASS  duration 82.0 s (narration 79 s at a natural pace + 3 s closing hold; not stretched to 90 s)
+PASS  loudness -14.0 LUFS · true peak -2.3 dBFS · 0 clipped samples · no silence gaps · no black frames
+PASS  bitrate 9.8 Mb/s (~100 MB)
+FLAG  no_black_bars 2391/2458: FALSE POSITIVE. In the dark under-ice and space shots, cropdetect reads the dark vignetted
+      edges as bars. The picture is full-frame (verified on extracted frames).
+
+RULE 5 — OPENING GATE (first 3 s inspected separately on the FINAL file: frames 0, 3, 15, 30, 60, 90)
+1. Makes sense on a muted phone?        YES: bright ice jets erupt from a moon's horizon, Saturn behind, "AN OCEAN IN SPACE?!"
+2. Narration starts immediately?         YES: VO at 0.05 s, impact on frame 0.
+3. Opening sentence understood in 2 s?   YES: "This moon is shooting its ocean into space!" ends at 2.2 s.
+4. Clear visual event?                   YES: the eruption is in motion on frame 0, with ice grains streaking past the camera.
+5. Real payoff in the first 8 s?         YES: 0:02 a real mission fact (NASA flew Cassini through the spray), 0:05 the
+                                         reveal of Enceladus, 0:07 its size (504 km, about as wide as Arizona).
+6. Captions visible and timed?           YES: hook caption only for 0–2.3 s, then word captions inside the safe area
+                                         (x 80–940, y ≈1340–1440).
+7. Every scene advances the story?       YES: 18 scenes, each tied to a new line of information (table below).
+GATE HISTORY: the first composition FAILED item 1/4 (on mute it read as "warp-speed stars over a dark hill" and the
+plume was hidden behind the caption). Fix: horizon lowered, four tall backlit jets through the frame centre, Saturn
+moved clear of the text. Re-checked: PASS.
+
+STORY BEATS (Rule 3)
+0:00–0:02  Hook: ocean erupting into space
+0:02–0:08  Mystery + payoff: NASA flew through it → meet Enceladus, tiny, orbiting Saturn
+0:08–0:19  Revelation: "lifeless ball of ice" → cutaway → descent through the shell into a global ocean
+0:19–0:31  Escalation: tiger stripes → jets erupting (2 camera angles) → Cassini flies through and samples
+0:31–0:51  Implication: water / salts / organics → H₂ = chemical energy (vents) → phosphorus → E ring
+0:51–1:03  Turn: "NOT ALIENS" → the ingredients for life checklist (life: not found)
+1:03–1:22  Payoff: an ocean hidden from sunlight → samples sprayed into space → "IS THERE LIFE BELOW?" → back to the plume (loop)
+
+VISUAL VARIETY: 18 distinct compositions (limb plume, flyby ×2 with different paths, full moon with Saturn, cratered close-up,
+cutaway, ice descent, pole view, oblique eruption, backlit limb ×2, evidence board, seafloor vents, phosphorus tile, E ring,
+moon vs Saturn, under-ice checklist, deep ocean). No repeated background loop; no slideshow.
+
+SCIENCE / HONESTY
+- Measured vs interpreted is kept separate (SOURCES.txt). Vents are labelled "possible". No creatures are shown, and the
+  final scene says so on screen. "NOT ALIENS" plus "Life itself: not found" are explicit.
+- All CGI is labelled; Cassini is labelled "CGI RECONSTRUCTION · not real footage". No NASA imagery was used (blocked).
+
+KNOWN LIMITATIONS
+- No real NASA/Cassini imagery (network policy). All visuals are original CGI.
+- The voice is an AI voice (Kokoro). Turn on TikTok's "AI-generated content" label.
+- Word timings are estimated from audio energy (±0.1–0.2 s on single words).
+- The mix was checked by measurement; a human listen is recommended. Virality isn't guaranteed: this is optimized for
+  clarity, curiosity and retention.
