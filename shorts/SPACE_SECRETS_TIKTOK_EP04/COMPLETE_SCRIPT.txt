@@ -1,0 +1,46 @@
+SPACE SECRETS — TIKTOK EP04 — "THE MOON THAT SPRAYS AN OCEAN INTO SPACE"
+COMPLETE SCRIPT (timecodes match SPACE_SECRETS_TIKTOK_EP04.mp4)
+Voice: Kokoro v1.0 'am_puck' (American male), AI-generated, 0.90–1.02x per line (never time-stretched).
+
+VOICE-OVER (client script, verbatim)
+[0:00.05]  This moon is shooting its ocean into SPACE!
+[0:02.33]  And NASA actually flew a spacecraft through the spray.
+[0:05.32]  Meet Enceladus.
+[0:06.68]  A tiny, frozen moon orbiting Saturn.
+[0:08.92]  From a distance, it looks like a lifeless ball of ice.
+[0:11.79]  But something extraordinary is happening beneath its surface.
+[0:15.36]  Hidden under that frozen shell is a global ocean of liquid water.
+[0:19.58]  And near the south pole, enormous cracks cut through the ice.
+[0:22.74]  Through these fractures, water vapor and icy particles erupt into space.
+[0:27.14]  NASA's Cassini spacecraft flew through these plumes and analyzed their contents.
+[0:31.79]  What scientists discovered was incredible.
+[0:34.25]  Water.
+[0:35.05]  Salts.
+[0:35.88]  Organic compounds.
+[0:37.37]  And evidence of chemical reactions that could provide energy for life.
+[0:41.53]  Later analysis even revealed phosphorus, an element essential to life as we know it, in ice grains from Saturn's E ring, which is supplied by Enceladus.
+[0:51.38]  But here's the most important part.
+[0:53.34]  Scientists have NOT discovered aliens there.
+[0:55.92]  They've discovered ingredients and conditions that make this frozen moon one of the most fascinating places to search for life.
+[1:03.30]  Imagine an ocean completely hidden from sunlight.
+[1:06.27]  An ocean buried beneath kilometers of ice.
+[1:08.87]  And a moon that sends samples of that ocean directly into space.
+[1:12.74]  Somewhere beneath that frozen surface, an extraordinary mystery is waiting.
+[1:17.41]  Could something be alive down there?
+
+Narration ends 1:18.98; video ends 1:22.0 with a 3 s ocean hold that leads back toward the opening plume (loop).
+Runtime: about 82 s, not 90 s. The script read at a natural pace runs 79 s, and per the brief the voice was not slowed to fill time.
+
+ON-SCREEN TEXT (in order)
+0:00 AN OCEAN / IN SPACE?!  ·  0:02 REAL MISSION: Cassini dove through the plume · 2008–2015  ·  0:05 ENCELADUS (moon of Saturn)
+0:07 504 km WIDE (about as wide as Arizona)  ·  0:10 LIFELESS?  ·  0:12 BENEATH THE ICE (ice shell / ocean / rocky core)
+0:17 A GLOBAL OCEAN (of liquid water, under ~20–25 km of ice)  ·  0:21 TIGER STRIPES (4 huge fractures · each ~130 km long)
+0:25 ERUPTING INTO SPACE  ·  0:29 SAMPLED IN FLIGHT (mass spectrometer + dust analyser)  ·  0:32 WHAT CASSINI FOUND: WATER / SALTS / ORGANIC COMPOUNDS
+0:38 H₂ IN THE PLUME = CHEMICAL ENERGY  ·  0:43 P 15 PHOSPHORUS (found as phosphates in ice grains, 2023)  ·  0:48 SATURN'S E RING
+0:53 NOT ALIENS (no life has been found there)  ·  0:56 THE INGREDIENTS FOR LIFE (✓ water ✓ salts ✓ organics ✓ energy ✓ phosphorus ? life: not found)
+1:05 NO SUNLIGHT  ·  1:07 KM OF ICE ABOVE  ·  1:10 OCEAN SAMPLES  ·  1:17 IS THERE LIFE / BELOW?
+
+MEASURED vs INTERPRETED (also in SOURCES.txt)
+Measured: plumes of water vapour and ice grains; salts, organics, H₂, phosphates in the grains/gas; E ring supplied by the plumes.
+Interpreted: global ocean (from libration / gravity data); hydrothermal water–rock reactions (from H₂ and silica); habitability.
+Not found: any life.

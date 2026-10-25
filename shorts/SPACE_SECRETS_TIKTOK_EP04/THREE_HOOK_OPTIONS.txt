@@ -1,0 +1,35 @@
+SPACE SECRETS — TIKTOK EP04 — ENCELADUS — THREE HOOK OPTIONS (Retention System V3, Rule 2)
+
+HOOK A — SHOCKING SCIENTIFIC FACT   ✅ SELECTED (the client's opening line)
+1. Narration: "This moon is shooting its ocean into SPACE!" (VO starts at 0.05 s)
+2. First frame: Enceladus's limb across the lower half, four bright backlit ice jets towering up from the south-polar
+   fractures through the middle of the frame, and Saturn with its rings in the upper right. The eruption is already in
+   full flow on frame 0.
+3. Camera: a rush toward and up the plume (push 1.00→1.18 over 2.3 s), with ice grains streaking past the lens and an
+   impact shake on frame 0.
+4. Sound: sub-bass impact on frame 0, a rushing particle hiss, a rising tone into the cut.
+5. On-screen text: "AN OCEAN / IN SPACE?!" (the only text during the hook; word captions start at 2.3 s).
+6. Why they stay: an impossible-sounding claim plus a visible eruption, readable on mute. It's paid off immediately by a
+   real mission fact ("NASA actually flew a spacecraft through the spray").
+
+HOOK B — TERRIFYING HYPOTHETICAL / CONSEQUENCE
+1. Narration: "If there's life beyond Earth, it might be swimming in the dark under this ice."
+2. First frame: blackness beneath an ice ceiling, with faint particles drifting and a warm vent glow far below.
+3. Camera: slow descent through the dark water.
+4. Sound: ice creaks and a deep drone.
+5. On-screen text: "LIFE UNDER THE ICE?"
+6. Weak because: frame 0 is dark and low-contrast (fails the muted-phone test), and it leans toward implying alien life,
+   which the brief forbids. Its imagery is reused as the ending.
+
+HOOK C — UNEXPECTED VISUAL REVEAL
+1. Narration: "This tiny moon is hiding a secret ocean, and it's leaking."
+2. First frame: a bright white moon that cracks open into a cutaway (ice shell, ocean, core).
+3. Camera: a fast push into the cutaway wedge.
+4. Sound: an ice crack plus an impact.
+5. On-screen text: "A HIDDEN OCEAN"
+6. Weak because: the reveal needs about 1 s to read, so frame 0 is just a white ball (a "static planet" opening, which
+   the rules forbid). Reused at 0:11–0:15 as the cutaway.
+
+WHY A WINS: clearest (one sentence, understood in under 2 s), most immediate (motion on frame 0), accurate (the plumes
+are water vapour and ice grains from a subsurface ocean, sampled by Cassini), and visually strongest (bright backlit jets
+plus Saturn).

@@ -1,0 +1,34 @@
+SOURCES — SPACE SECRETS EP04 (Enceladus)
+
+ACCESS NOTE: science.nasa.gov is blocked by this environment's network policy, so the two client links couldn't be
+re-opened during production. Claims were checked against the published results below. Re-verify before posting.
+- NASA Enceladus: https://science.nasa.gov/saturn/moons/enceladus/
+- NASA Cassini:   https://science.nasa.gov/mission/cassini/
+
+CLAIM — STATUS — BASIS
+- Enceladus is a small icy moon of Saturn, ~504 km across (about Arizona's width) — MEASURED — NASA Enceladus facts.
+- Plumes of water vapour and ice grains erupt from four south-polar "tiger stripe" fractures (~130 km long, ~35 km apart)
+  — MEASURED (Cassini images and in-situ sampling) — Porco et al. 2006, Science 311; Spencer et al. 2006.
+- Cassini flew through the plume several times (2008–2015); the deepest pass (E21, Oct 2015) was ~49 km above the surface
+  — MEASURED — NASA/JPL Cassini mission pages.
+- A global subsurface ocean of liquid water lies beneath the ice — STRONG INFERENCE from libration (wobble) measurements
+  — Thomas et al. 2016, Icarus 264; gravity: Iess et al. 2014, Science 344 (regional sea first).
+- The ice shell is ~20–25 km thick on average and thinner at the south pole — MODEL ESTIMATES — Čadek et al. 2016; Thomas et al. 2016.
+- Salts (sodium salts) in plume/E-ring ice grains — MEASURED (Cassini Cosmic Dust Analyzer) — Postberg et al. 2009 & 2011, Nature.
+- Organic compounds, including complex macromolecular organics — MEASURED (CDA + INMS) — Waite et al. 2009; Postberg et al. 2018, Nature 558.
+- Molecular hydrogen (H₂) in the plume, consistent with ongoing hydrothermal water–rock reactions that could supply
+  chemical energy usable by microbes — H₂ MEASURED (INMS); hydrothermal source and energy availability are INTERPRETATIONS
+  — Waite et al. 2017, Science 356. (Silica nanograins also point to hot water–rock interaction: Hsu et al. 2015, Nature 519.)
+- Phosphorus (as phosphates) found in E-ring ice grains originating from Enceladus — MEASURED in Cassini CDA data
+  (analysis published 2023) — Postberg et al. 2023, Nature 618.
+- Saturn's E ring is supplied by Enceladus's plumes — MEASURED/ESTABLISHED — Cassini; Spahn et al. 2006.
+- No life has been detected on Enceladus — FACT. Enceladus is considered one of the most promising places to search for
+  life — SCIENTIFIC ASSESSMENT (NASA).
+- "Hidden from sunlight": the ocean lies under kilometres of ice, so no sunlight reaches it — follows from the ice thickness.
+
+VISUAL HONESTY
+- All visuals are original CGI (procedural Enceladus, Saturn, plumes, cutaway, vents, under-ice ocean) and labelled
+  "SCIENTIFIC VISUALIZATION" or "CGI RECONSTRUCTION · not real footage". The Cassini model is a stylized reconstruction.
+- No NASA imagery is used (blocked), so no CGI is presented as NASA footage.
+- No creatures are shown. The final scene is labelled "no creatures shown, none are known".
+- Hydrothermal vents are labelled "possible seafloor vents" (an interpretation, not observed).
