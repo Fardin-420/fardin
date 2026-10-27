@@ -1,0 +1,95 @@
+NPC — EDIT REPORT: ChatGPT Go, 1 month via Rappi
+================================================================
+
+DURATION
+  Original recording : 91.99 s (two uploaded parts joined losslessly, 2759 frames)
+  Final video        : 37.70 s (1131 frames @ 30 fps)
+                       hook 2.2 s + tutorial 30.30 s + result hold 3.4 s + outro 1.8 s
+  Source footage kept: 59.20 s of 91.99 s; removed 32.79 s outright, the rest compressed by speed ramps
+  Shorter by         : 54.29 s (59 %)
+
+SOURCE FINDINGS
+  Audio: silent (-91 dBFS digital floor in both uploaded parts): no narration exists. Captions are therefore step captions written from the screen (English),
+  not a transcript; there was no voice to clean, so no voice processing was applied.
+  Service verified on screen: RappiPro benefit 'ChatGPT Go - Gratis por 30 dias, con Pro 3 meses o con Pro
+  Black 6 meses', 'Aplica para usuarios nuevos a ChatGPT Go'; ChatGPT then shows 'Go - $110 -> $0 MXN for
+  the first month, You've got a promo code for discounted Go for 1 month, Claim free offer'.
+  Shown limitation: ChatGPT first answers 'Promo Unavailable - This promotion isn't available in your
+  country or region'; the offer appears only after a VPN is switched to Mexico. The edit states this and
+  notes that a VPN may break the offer's terms. The recording ends before 'Claim free offer' is tapped.
+
+MAJOR CUTS
+  0.00-20.00 s  0.00-20.00: chatgpt.com pricing page (a separate ChatGPT *Plus* offer), tab switcher, typing 'rappi' with personal search history, Google results for 'rappi' - not part of the Rappi method
+  CUT 28  -> transition: whip_left
+  CUT 33  -> transition: flash
+  CUT 40  -> transition: zoom_punch
+  CUT 60  -> transition: glitch
+  CUT 79  -> transition: whip_up
+  CUT 88  -> transition: impact
+  91.95-91.99 s  end of recording
+
+SPEED EFFECTS (eased speed ramps inside each continuous run)
+   20.00- 23.30 s  x2.5  fast-forward rappi.com.co home (idle) - sped up
+   24.60- 28.00 s  x3.0  fast-forward login page loading, translate prompt - sped up
+   31.00- 33.30 s  x3.0  fast-forward CUT 28.55-31.00 Google sign-in (black about:blank / accounts page). Terms sheet loading
+   33.90- 35.60 s  x1.2  fast-forward CUT 33.30-33.90 black page flicker. Tick the three terms boxes, tap Continuar
+   35.60- 39.00 s  x6.0  fast-forward Rappi loading animation - sped up
+   39.00- 40.30 s  x2.0  fast-forward logged-in Rappi home
+   45.40- 47.00 s  x2.0  fast-forward CUT 40.30-45.40 typing in the address bar (suggestions show personal browsing history). Google results for 'rappi chatgpt go'
+   47.00- 50.60 s  x1.6  fast-forward Google AI overview: Rappi Pro Black 6 months / Rappi Pro 3 months of ChatGPT Go; benefits-pro.rappi.com.co result
+   51.70- 54.00 s  x5.0  fast-forward page loading - sped up
+   55.60- 57.60 s  x5.0  fast-forward skeleton loading - sped up
+   62.90- 64.10 s  x4.0  fast-forward activation loading - sped up
+   65.50- 69.60 s  x6.0  fast-forward chatgpt.com promo link loading (URL with code masked) - sped up
+   69.60- 70.85 s  x3.0  fast-forward ChatGPT opens - sped up
+   70.85- 71.75 s  x0.5  slow-down    'Promo Unavailable - This promotion isn't available in your country or region.' held with a 0.5x slow-down so it can be read
+   71.75- 79.80 s  x3.2  fast-forward VPN app: location set to Mexico, connected - sped up
+   82.00- 84.80 s  x2.0  fast-forward CUT 79.80-82.00 back in ChatGPT, still unavailable before reload. Re-open the promo link (URL / clipboard with the code masked)
+   84.80- 88.00 s  x5.0  fast-forward loading - sped up
+
+ZOOM / FOCUS LOCATIONS (camera keyframes, 1.0 = full width; base views 0.9)
+  src  23.20 s  -> out 0:03.51  zoom 1.25  focus (600, 520)
+  src  27.90 s  -> out 0:05.97  zoom 1.30  focus (502, 1334)
+  src  34.00 s  -> out 0:07.38  zoom 1.15  focus (530, 1547)
+  src  47.20 s  -> out 0:10.86  zoom 1.10  focus (432, 650)
+  src  50.40 s  -> out 0:12.87  zoom 1.10  focus (372, 970)
+  src  54.90 s  -> out 0:15.45  zoom 1.30  focus (511, 1124)
+  src  57.70 s  -> out 0:16.69  zoom 1.20  focus (424, 814)
+  src  59.00 s  -> out 0:17.96  zoom 1.22  focus (423, 984)
+  src  61.50 s  -> out 0:18.97  zoom 1.30  focus (488, 1024)
+  src  64.10 s  -> out 0:20.72  zoom 1.30  focus (490, 742)
+  src  74.00 s  -> out 0:25.64  zoom 1.15  focus (432, 700)
+  src  77.00 s  -> out 0:26.57  zoom 1.10  focus (432, 600)
+  src  89.20 s  -> out 0:29.77  zoom 1.30  focus (382, 711)
+  result hold +0.0 s  zoom 1.30  focus (382, 711)
+  result hold +1.6 s  zoom 1.45  focus (520, 826)
+  Annotations: CLICK HERE, IMPORTANT, MX$110 → $0 FIRST MONTH, NEXT STEP, OPEN THIS, SUCCESS, THE OFFER, TICK ALL 3
+
+TRANSITIONS
+  0:06.53 whip_left, 0:07.30 flash, 0:09.93 zoom_punch, 0:18.97 glitch, 0:27.43 whip_up, 0:29.47 impact, 0:32.50 freeze; hook -> tutorial whip at 0:02.20
+
+PRIVACY PROTECTION (opaque masks burned into source frames before any zoom or transition)
+  OCR scanned every source frame the render reads (1196 frames incl. earlier full-scan frames; 887 required, all present); masks dilated +-4 frames.
+  - Promo code / promo URL (address bar, clipboard chip, chatgpt.com/p/ link): 65.17-66.33s, 66.97-71.97s, 82.00-87.83s, 88.90-91.90s
+  - Account name (RappiPro 'Bienvenido' + 'Felicitaciones' screens): 53.47-56.30s, 63.70-66.80s
+  - Google profile photo: 20.00-20.07s, 45.53-46.57s
+  - VPN server IP address: 71.57-80.00s
+  - E-mail / phone numbers: none found
+  Removed instead of masked: address-bar typing with personal browsing history (13-17 s, 40-45 s),
+  tab switcher, Google account sign-in screens.
+
+RENDERING VERIFICATION (measured on FINAL/NPC_CHATGPT_GO_FINAL.mp4)
+  1080x1920 h264 yuv420p 30/1 fps, 1131 frames (expected 1131: OK)
+  audio aac 48000 Hz 2 ch; A/V delta 0.0 s; decode errors: 0
+  loudness -14.8 LUFS integrated, true peak -2.6 dBTP
+  black >0.1 s: none; frozen >1 s: [['34.3667', '35.6667']] (expected: the result hold)
+  privacy OCR of every output frame: 1131/1131 scanned, automatic hits: 4 at [9.97, 15.97, 16.07, 23.5]
+  review: All 4 automatic hits were inspected frame by frame: 9.97 s OCR misread of the zoom-blurred 'Farmacia' category label; 15.97-16.07 s the 'Bienvenido' screen with the name masked (QC read the mask label); 23.5 s glitch-transition frame of the 'Promo Unavailable' sheet. No name, promo code, IP, e-mail or phone number is readable in any frame. Earlier renders that leaked (name at 22.17 s, VPN IP at 26.2 s) were fixed and are not delivered.
+
+DELIVERABLES
+  FINAL/NPC_CHATGPT_GO_FINAL.mp4  (19.0 MB)
+  PREVIEW/NPC_CHATGPT_GO_PREVIEW.mp4  (3.6 MB)
+  CAPTIONS/NPC_CHATGPT_GO_CAPTIONS.srt  (0.0 MB)
+  THUMBNAIL/NPC_CHATGPT_GO_THUMBNAIL.png  (2.1 MB)
+
+REPRODUCE: cd NPC_CHATGPT_GO_EDIT/EDITING_PROJECT && see README.md (source stays private)

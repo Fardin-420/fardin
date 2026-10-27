@@ -37,3 +37,9 @@ NPC_ELEVENLABS_TUTORIAL/SOURCE/*.mov
 # Mix stem is reproducible with audio.py; the finals carry it.
 NPC_ELEVENLABS_TUTORIAL/AUDIO/*.wav
 NPC_ELEVENLABS_TUTORIAL/PREVIEW/.*.mp4
+
+# --- NPC_CHATGPT_GO_EDIT ---
+# The raw recording shows private data (name, promo code): never commit it.
+NPC_CHATGPT_GO_EDIT/SOURCE/*.mp4
+NPC_CHATGPT_GO_EDIT/AUDIO/*.wav
+NPC_CHATGPT_GO_EDIT/PREVIEW/.*.mp4
