@@ -1,0 +1,85 @@
+{
+ "project": "RICH_STONES_EN",
+ "title": "If I find this, will I get rich? (English)",
+ "source_video": "source/original.mp4",
+ "voice": {
+  "engine": "kokoro",
+  "blend": {
+   "af_heart": 1.0
+  },
+  "speed": 1.0,
+  "max_speed": 1.1,
+  "lang": "en-us"
+ },
+ "caption_band": {
+  "y": 1215,
+  "h": 330
+ },
+ "caption_y": 1380,
+ "segments": [
+  {
+   "start": 0.0,
+   "text": "If I find this, will I get rich?"
+  },
+  {
+   "start": 2.45,
+   "text": "This is dioptase. Such a beautiful green!"
+  },
+  {
+   "start": 4.95,
+   "text": "It's rare, and collectors love it."
+  },
+  {
+   "start": 7.45,
+   "text": "A special piece can be pricey."
+  },
+  {
+   "start": 9.45,
+   "text": "Otherwise, it's not worth much."
+  },
+  {
+   "start": 11.45,
+   "text": "If I find this, will I get rich?"
+  },
+  {
+   "start": 13.7,
+   "text": "This is fluorite matrix,"
+  },
+  {
+   "start": 15.2,
+   "text": "a rare stone that forms"
+  },
+  {
+   "start": 16.6,
+   "text": "amazing cube shapes all on its own."
+  },
+  {
+   "start": 18.7,
+   "text": "If you find large pieces,"
+  },
+  {
+   "start": 20.45,
+   "text": "you could sell them for a fortune."
+  },
+  {
+   "start": 22.65,
+   "text": "If I find this, will I get rich?"
+  },
+  {
+   "start": 25.0,
+   "text": "This is Super Seven, or Melody Stone,"
+  },
+  {
+   "start": 27.2,
+   "text": "a rare blend of minerals."
+  },
+  {
+   "start": 28.7,
+   "text": "Find one with a special color,"
+  },
+  {
+   "start": 30.2,
+   "text": "you could buy yourself a new car."
+  }
+ ]
+}
