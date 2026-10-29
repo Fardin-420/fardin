@@ -53,6 +53,19 @@ Copy `PROJECTS/NPC_NO_EDITOR_JUST_CODE`, edit `source/script.json`, add or adapt
 in `RENDER_ENGINE/src/scenes/` (each one is `update(ctx) → post params`, with cues coming from the timeline),
 and run `produce.py`. The voice profile, brand palette, fonts, sound library and post stack are shared.
 
+## Flat 2D explainers
+
+For character-driven explainers there is a lighter pipeline that needs no WebGL:
+
+```bash
+python produce_explainer.py PROJECTS/PERSIAN_TWO_DIALECTS_EN
+```
+
+* `VOICE_ENGINE/explainer_narration.py`: Kokoro TTS per line. Word times are aligned from the pauses in the audio so captions land on the words.
+* `RENDER_ENGINE/pipeline/build_explainer_timeline.py`: scenes, 1–2 word caption chunks, and named cues bound to spoken words.
+* `SOUND_ENGINE/explainer_sound.py`: plucked score in a Shur-flavoured mode, plus cartoon foley on cues, ducked under the voice, mastered to −14 LUFS.
+* `RENDER_ENGINE/flat2d/`: `explainer.js` draws every frame as SVG (characters, props, maps, kinetic captions). `render.mjs` captures the frames in parallel with headless Chromium and muxes the mix.
+
 ## Showreel: NPC — NO EDITOR. JUST CODE.
 
 | Scene | Lines | Technique |

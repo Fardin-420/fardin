@@ -1,0 +1,412 @@
+{
+ "project": "PERSIAN_TWO_DIALECTS_EN",
+ "title": "Iranian vs Afghan Persian — one language, two dialects",
+ "adapted_from": "Persian-language original (Iranian Farsi vs Afghan Dari), translated to English",
+ "voice": {
+  "engine": "kokoro",
+  "blend": {
+   "am_michael": 0.6,
+   "am_puck": 0.4
+  },
+  "speed": 1.08
+ },
+ "width": 1080,
+ "height": 1920,
+ "fps": 30,
+ "lead_in": 0.35,
+ "tail": 1.6,
+ "highlight": {
+  "iran": [
+   "Iranians",
+   "Iranian",
+   "Iran",
+   "Iran:"
+  ],
+  "afghan": [
+   "Afghans",
+   "Afghan",
+   "Afghanistan",
+   "Afghanistan:"
+  ]
+ },
+ "lines": [
+  {
+   "id": "L01",
+   "scene": "intro",
+   "text": "Iranians and Afghans both speak Persian.",
+   "pause_after": 0.2
+  },
+  {
+   "id": "L02",
+   "scene": "intro",
+   "text": "So what's the difference?",
+   "pause_after": 0.35,
+   "hl": {
+    "difference?": "gold"
+   }
+  },
+  {
+   "id": "L03",
+   "scene": "tomato",
+   "text": "Afghans never eat tomatoes...",
+   "pause_after": 0.3,
+   "hl": {
+    "tomatoes...": "red"
+   }
+  },
+  {
+   "id": "L04",
+   "scene": "tomato",
+   "text": "because over there, they call it a Roman eggplant!",
+   "say": "because over there, they call it a Roman eggplant!",
+   "pause_after": 0.45,
+   "hl": {
+    "Roman": "afghan",
+    "eggplant!": "afghan"
+   }
+  },
+  {
+   "id": "L05",
+   "scene": "words",
+   "text": "Iranians say sib-zamini. Afghans say kachalu.",
+   "say": "Iranians say, seeb zameenee. Afghans say, kachaloo.",
+   "pause_after": 0.25,
+   "hl": {
+    "sib-zamini.": "iran",
+    "kachalu.": "afghan"
+   }
+  },
+  {
+   "id": "L06",
+   "scene": "words",
+   "text": "Car? Motar. Ice cream? Shir-yakh!",
+   "say": "Car? Motor. Ice cream? Sheer yakh!",
+   "pause_after": 0.4,
+   "hl": {
+    "Car?": "iran",
+    "Motar.": "afghan",
+    "Ice": "iran",
+    "cream?": "iran",
+    "Shir-yakh!": "afghan"
+   }
+  },
+  {
+   "id": "L07",
+   "scene": "maqbul",
+   "text": "If an Afghan calls you maqbul...",
+   "say": "If an Afghan calls you, mukbool...",
+   "pause_after": 0.2,
+   "hl": {
+    "maqbul...": "afghan"
+   }
+  },
+  {
+   "id": "L08",
+   "scene": "maqbul",
+   "text": "no, you didn't pass the exam. It means you're good-looking!",
+   "pause_after": 0.45,
+   "hl": {
+    "exam.": "gold",
+    "good-looking!": "pink"
+   }
+  },
+  {
+   "id": "L09",
+   "scene": "greet",
+   "text": "Iranians say khaste nabashi, don't be tired.",
+   "say": "Iranians say, khasteh nabaashee. Don't be tired.",
+   "pause_after": 0.15,
+   "hl": {
+    "khaste": "iran",
+    "nabashi,": "iran"
+   }
+  },
+  {
+   "id": "L10",
+   "scene": "greet",
+   "text": "Afghans say mande nabashi.",
+   "say": "Afghans say, maandeh nabaashee.",
+   "pause_after": 0.25,
+   "hl": {
+    "mande": "afghan",
+    "nabashi.": "afghan"
+   }
+  },
+  {
+   "id": "L11",
+   "scene": "greet",
+   "text": "Iranians say merci. Afghans say zinda bashi!",
+   "say": "Iranians say, mersee. Afghans say, zindah baashee!",
+   "pause_after": 0.5,
+   "hl": {
+    "merci.": "iran",
+    "zinda": "afghan",
+    "bashi!": "afghan"
+   }
+  },
+  {
+   "id": "L12",
+   "scene": "taarof",
+   "text": "Now, the clichés.",
+   "pause_after": 0.2,
+   "hl": {
+    "clichés.": "gold"
+   }
+  },
+  {
+   "id": "L13",
+   "scene": "taarof",
+   "text": "Iranians are champions of taarof.",
+   "say": "Iranians are champions of taarof.",
+   "pause_after": 0.2,
+   "hl": {
+    "champions": "gold",
+    "taarof.": "gold"
+   }
+  },
+  {
+   "id": "L14",
+   "scene": "taarof",
+   "text": "After you. No, after you! I insist!",
+   "pause_after": 0.25,
+   "hl": {
+    "insist!": "gold"
+   }
+  },
+  {
+   "id": "L15",
+   "scene": "taarof",
+   "text": "Ten minutes later, nobody has walked through the door.",
+   "pause_after": 0.45,
+   "hl": {
+    "Ten": "cyan",
+    "minutes": "cyan",
+    "nobody": "red"
+   }
+  },
+  {
+   "id": "L16",
+   "scene": "hospitality",
+   "text": "Afghans? Champions of hospitality.",
+   "pause_after": 0.2,
+   "hl": {
+    "Champions": "gold",
+    "hospitality.": "gold"
+   }
+  },
+  {
+   "id": "L17",
+   "scene": "hospitality",
+   "text": "You drop by for a five-minute tea,",
+   "pause_after": 0.1,
+   "hl": {
+    "five-minute": "cyan",
+    "tea,": "cyan"
+   }
+  },
+  {
+   "id": "L18",
+   "scene": "hospitality",
+   "text": "eat three rounds of Kabuli pulao, and come back the next day.",
+   "say": "eat three rounds of Kabuli pulao, and come back the next day.",
+   "pause_after": 0.45,
+   "hl": {
+    "three": "red",
+    "rounds": "red",
+    "Kabuli": "gold",
+    "pulao,": "gold",
+    "next": "cyan",
+    "day.": "cyan"
+   }
+  },
+  {
+   "id": "L19",
+   "scene": "slipper",
+   "text": "And the moms? They share one secret weapon...",
+   "pause_after": 0.15,
+   "hl": {
+    "moms?": "pink",
+    "weapon...": "red"
+   }
+  },
+  {
+   "id": "L20",
+   "scene": "slipper",
+   "text": "the slipper!",
+   "pause_after": 0.6,
+   "hl": {
+    "slipper!": "red"
+   }
+  },
+  {
+   "id": "L21",
+   "scene": "shir",
+   "text": "But here's something most people don't know.",
+   "pause_after": 0.2
+  },
+  {
+   "id": "L22",
+   "scene": "shir",
+   "text": "In Iran, shir is both the lion and the milk.",
+   "say": "In Iran, sheer is both the lion, and the milk.",
+   "pause_after": 0.2,
+   "hl": {
+    "shir": "gold",
+    "lion": "gold",
+    "milk.": "cyan"
+   }
+  },
+  {
+   "id": "L23",
+   "scene": "shir",
+   "text": "Afghans tell them apart: sher is the lion, shir is the milk.",
+   "say": "Afghans tell them apart. Share, is the lion. Sheer, is the milk.",
+   "pause_after": 0.2,
+   "hl": {
+    "apart:": "gold",
+    "sher": "gold",
+    "lion,": "gold",
+    "shir": "cyan",
+    "milk.": "cyan"
+   }
+  },
+  {
+   "id": "L24",
+   "scene": "shir",
+   "text": "And that's the older pronunciation, from the time of Hafez and Rumi.",
+   "say": "And that's the older pronunciation, from the time of Hafez, and Rumi.",
+   "pause_after": 0.45,
+   "hl": {
+    "older": "gold",
+    "Hafez": "gold",
+    "Rumi.": "gold"
+   }
+  },
+  {
+   "id": "L25",
+   "scene": "rumi",
+   "text": "Speaking of Rumi, who does he belong to?",
+   "pause_after": 0.2,
+   "hl": {
+    "Rumi,": "gold"
+   }
+  },
+  {
+   "id": "L26",
+   "scene": "rumi",
+   "text": "Iran: he's ours!",
+   "pause_after": 0.15,
+   "hl": {
+    "ours!": "iran"
+   }
+  },
+  {
+   "id": "L27",
+   "scene": "rumi",
+   "text": "Afghanistan: he was born in Balkh, he's ours!",
+   "pause_after": 0.15,
+   "hl": {
+    "Balkh,": "afghan",
+    "ours!": "afghan"
+   }
+  },
+  {
+   "id": "L28",
+   "scene": "rumi",
+   "text": "Turkey: his tomb is right here!",
+   "pause_after": 0.5,
+   "hl": {
+    "Turkey:": "red",
+    "tomb": "red",
+    "here!": "red"
+   }
+  },
+  {
+   "id": "L29",
+   "scene": "outro",
+   "text": "Bottom line: one language, one table.",
+   "pause_after": 0.2,
+   "hl": {
+    "language,": "gold",
+    "table.": "gold"
+   }
+  },
+  {
+   "id": "L30",
+   "scene": "outro",
+   "text": "Only the tomato goes by a different name.",
+   "pause_after": 0.0,
+   "hl": {
+    "tomato": "red"
+   }
+  }
+ ],
+ "scene_labels": {
+  "intro": "01 · Iranian or Afghan?",
+  "tomato": "One language · two dialects",
+  "words": "One language · two dialects",
+  "maqbul": "One language · two dialects",
+  "greet": "Greetings & thanks",
+  "taarof": "Cliché 1 · Taarof",
+  "hospitality": "Cliché 2 · Hospitality",
+  "slipper": "Cliché 3 · Secret weapon",
+  "shir": "Fact · Pronunciation",
+  "rumi": "Last question · Rumi",
+  "outro": "One table"
+ },
+ "cues": {
+  "map_iran": "L01:Iranians",
+  "map_afghan": "L01:Afghans",
+  "title": "L02:So",
+  "tomato": "L03:eat",
+  "label_iran_tomato": "L03:tomatoes...",
+  "label_roman": "L04:Roman",
+  "potato_iran": "L05:sib-zamini.",
+  "potato_afghan": "L05:kachalu.",
+  "car_iran": "L06:Car?",
+  "car_afghan": "L06:Motar.",
+  "ice_iran": "L06:Ice",
+  "ice_afghan": "L06:Shir-yakh!",
+  "maqbul": "L07:maqbul...",
+  "exam": "L08:exam.",
+  "heart": "L08:good-looking!",
+  "tired_iran": "L09:khaste",
+  "tired_afghan": "L10:mande",
+  "merci": "L11:merci.",
+  "zinda": "L11:zinda",
+  "cliche": "L12:clichés.",
+  "taarof_champ": "L13:champions",
+  "after1": "L14:After",
+  "after2": "L14:No,",
+  "insist": "L14:insist!",
+  "clock": "L15:Ten",
+  "nobody": "L15:nobody",
+  "hosp_champ": "L16:Champions",
+  "tea": "L17:five-minute",
+  "plates": "L18:three",
+  "pulao": "L18:Kabuli",
+  "nextday": "L18:next",
+  "moms": "L19:moms?",
+  "weapon": "L19:weapon...",
+  "slipper": "L20:slipper!",
+  "shir_word": "L22:shir",
+  "lion": "L22:lion",
+  "milk": "L22:milk.",
+  "apart": "L23:apart:",
+  "sher": "L23:sher",
+  "shir2": "L23:shir",
+  "older": "L24:older",
+  "hafez": "L24:Hafez",
+  "rumi_name": "L24:Rumi.",
+  "dervish": "L25:Rumi,",
+  "claim_iran": "L26:Iran:",
+  "claim_afghan": "L27:Afghanistan:",
+  "balkh": "L27:Balkh,",
+  "claim_turkey": "L28:Turkey:",
+  "tomb": "L28:tomb",
+  "table": "L29:one",
+  "tomato_end": "L30:tomato",
+  "end": "L30:end",
+  "exam_card": "L08:no,"
+ }
+}

@@ -1,0 +1,2665 @@
+{
+ "project": "PERSIAN_TWO_DIALECTS_EN",
+ "voice": "KOKORO:am_michael@0.6+am_puck@0.4",
+ "width": 1080,
+ "height": 1920,
+ "fps": 30,
+ "duration": 77.39,
+ "durationInFrames": 2322,
+ "highlight": {
+  "iran": [
+   "Iranians",
+   "Iranian",
+   "Iran",
+   "Iran:"
+  ],
+  "afghan": [
+   "Afghans",
+   "Afghan",
+   "Afghanistan",
+   "Afghanistan:"
+  ]
+ },
+ "lines": [
+  {
+   "id": "L01",
+   "scene": "intro",
+   "text": "Iranians and Afghans both speak Persian.",
+   "start": 0.35,
+   "end": 2.7,
+   "words": [
+    {
+     "w": "Iranians",
+     "start": 0.35,
+     "end": 0.861
+    },
+    {
+     "w": "and",
+     "start": 0.861,
+     "end": 1.116
+    },
+    {
+     "w": "Afghans",
+     "start": 1.116,
+     "end": 1.576
+    },
+    {
+     "w": "both",
+     "start": 1.576,
+     "end": 1.883
+    },
+    {
+     "w": "speak",
+     "start": 1.883,
+     "end": 2.24
+    },
+    {
+     "w": "Persian.",
+     "start": 2.24,
+     "end": 2.7
+    }
+   ],
+   "hl": {},
+   "captions": [
+    {
+     "text": "Iranians and",
+     "words": [
+      "Iranians",
+      "and"
+     ],
+     "start": 0.35,
+     "end": 1.116
+    },
+    {
+     "text": "Afghans both",
+     "words": [
+      "Afghans",
+      "both"
+     ],
+     "start": 1.116,
+     "end": 1.883
+    },
+    {
+     "text": "speak Persian.",
+     "words": [
+      "speak",
+      "Persian."
+     ],
+     "start": 1.883,
+     "end": 2.9
+    }
+   ]
+  },
+  {
+   "id": "L02",
+   "scene": "intro",
+   "text": "So what's the difference?",
+   "start": 2.9,
+   "end": 4.04,
+   "words": [
+    {
+     "w": "So",
+     "start": 2.9,
+     "end": 3.057
+    },
+    {
+     "w": "what's",
+     "start": 3.057,
+     "end": 3.372
+    },
+    {
+     "w": "the",
+     "start": 3.372,
+     "end": 3.568
+    },
+    {
+     "w": "difference?",
+     "start": 3.568,
+     "end": 4.04
+    }
+   ],
+   "hl": {
+    "difference?": "gold"
+   },
+   "captions": [
+    {
+     "text": "So what's",
+     "words": [
+      "So",
+      "what's"
+     ],
+     "start": 2.9,
+     "end": 3.372
+    },
+    {
+     "text": "the difference?",
+     "words": [
+      "the",
+      "difference?"
+     ],
+     "start": 3.372,
+     "end": 4.39
+    }
+   ]
+  },
+  {
+   "id": "L03",
+   "scene": "tomato",
+   "text": "Afghans never eat tomatoes...",
+   "start": 4.39,
+   "end": 6.1,
+   "words": [
+    {
+     "w": "Afghans",
+     "start": 4.39,
+     "end": 4.886
+    },
+    {
+     "w": "never",
+     "start": 4.886,
+     "end": 5.273
+    },
+    {
+     "w": "eat",
+     "start": 5.273,
+     "end": 5.548
+    },
+    {
+     "w": "tomatoes...",
+     "start": 5.548,
+     "end": 6.1
+    }
+   ],
+   "hl": {
+    "tomatoes...": "red"
+   },
+   "captions": [
+    {
+     "text": "Afghans never",
+     "words": [
+      "Afghans",
+      "never"
+     ],
+     "start": 4.39,
+     "end": 5.273
+    },
+    {
+     "text": "eat tomatoes...",
+     "words": [
+      "eat",
+      "tomatoes..."
+     ],
+     "start": 5.273,
+     "end": 6.4
+    }
+   ]
+  },
+  {
+   "id": "L04",
+   "scene": "tomato",
+   "text": "because over there, they call it a Roman eggplant!",
+   "start": 6.4,
+   "end": 8.85,
+   "words": [
+    {
+     "w": "because",
+     "start": 6.4,
+     "end": 6.784
+    },
+    {
+     "w": "over",
+     "start": 6.784,
+     "end": 7.04
+    },
+    {
+     "w": "there,",
+     "start": 7.04,
+     "end": 7.339
+    },
+    {
+     "w": "they",
+     "start": 7.339,
+     "end": 7.591
+    },
+    {
+     "w": "call",
+     "start": 7.591,
+     "end": 7.843
+    },
+    {
+     "w": "it",
+     "start": 7.843,
+     "end": 8.011
+    },
+    {
+     "w": "a",
+     "start": 8.011,
+     "end": 8.137
+    },
+    {
+     "w": "Roman",
+     "start": 8.137,
+     "end": 8.43
+    },
+    {
+     "w": "eggplant!",
+     "start": 8.43,
+     "end": 8.85
+    }
+   ],
+   "hl": {
+    "Roman": "afghan",
+    "eggplant!": "afghan"
+   },
+   "captions": [
+    {
+     "text": "because over",
+     "words": [
+      "because",
+      "over"
+     ],
+     "start": 6.4,
+     "end": 7.04
+    },
+    {
+     "text": "there,",
+     "words": [
+      "there,"
+     ],
+     "start": 7.04,
+     "end": 7.339
+    },
+    {
+     "text": "they call",
+     "words": [
+      "they",
+      "call"
+     ],
+     "start": 7.339,
+     "end": 7.843
+    },
+    {
+     "text": "it a",
+     "words": [
+      "it",
+      "a"
+     ],
+     "start": 7.843,
+     "end": 8.137
+    },
+    {
+     "text": "Roman eggplant!",
+     "words": [
+      "Roman",
+      "eggplant!"
+     ],
+     "start": 8.137,
+     "end": 9.3
+    }
+   ]
+  },
+  {
+   "id": "L05",
+   "scene": "words",
+   "text": "Iranians say sib-zamini. Afghans say kachalu.",
+   "start": 9.3,
+   "end": 12.7,
+   "words": [
+    {
+     "w": "Iranians",
+     "start": 9.3,
+     "end": 9.907
+    },
+    {
+     "w": "say",
+     "start": 9.907,
+     "end": 10.211
+    },
+    {
+     "w": "sib-zamini.",
+     "start": 10.211,
+     "end": 10.94
+    },
+    {
+     "w": "Afghans",
+     "start": 11.29,
+     "end": 11.842
+    },
+    {
+     "w": "say",
+     "start": 11.842,
+     "end": 12.148
+    },
+    {
+     "w": "kachalu.",
+     "start": 12.148,
+     "end": 12.7
+    }
+   ],
+   "hl": {
+    "sib-zamini.": "iran",
+    "kachalu.": "afghan"
+   },
+   "captions": [
+    {
+     "text": "Iranians say",
+     "words": [
+      "Iranians",
+      "say"
+     ],
+     "start": 9.3,
+     "end": 10.211
+    },
+    {
+     "text": "sib-zamini.",
+     "words": [
+      "sib-zamini."
+     ],
+     "start": 10.211,
+     "end": 11.29
+    },
+    {
+     "text": "Afghans say",
+     "words": [
+      "Afghans",
+      "say"
+     ],
+     "start": 11.29,
+     "end": 12.148
+    },
+    {
+     "text": "kachalu.",
+     "words": [
+      "kachalu."
+     ],
+     "start": 12.148,
+     "end": 12.95
+    }
+   ]
+  },
+  {
+   "id": "L06",
+   "scene": "words",
+   "text": "Car? Motar. Ice cream? Shir-yakh!",
+   "start": 12.95,
+   "end": 14.75,
+   "words": [
+    {
+     "w": "Car?",
+     "start": 12.95,
+     "end": 13.227
+    },
+    {
+     "w": "Motar.",
+     "start": 13.227,
+     "end": 13.596
+    },
+    {
+     "w": "Ice",
+     "start": 13.596,
+     "end": 13.846
+    },
+    {
+     "w": "cream?",
+     "start": 13.846,
+     "end": 14.196
+    },
+    {
+     "w": "Shir-yakh!",
+     "start": 14.196,
+     "end": 14.75
+    }
+   ],
+   "hl": {
+    "Car?": "iran",
+    "Motar.": "afghan",
+    "Ice": "iran",
+    "cream?": "iran",
+    "Shir-yakh!": "afghan"
+   },
+   "captions": [
+    {
+     "text": "Car?",
+     "words": [
+      "Car?"
+     ],
+     "start": 12.95,
+     "end": 13.227
+    },
+    {
+     "text": "Motar.",
+     "words": [
+      "Motar."
+     ],
+     "start": 13.227,
+     "end": 13.596
+    },
+    {
+     "text": "Ice cream?",
+     "words": [
+      "Ice",
+      "cream?"
+     ],
+     "start": 13.596,
+     "end": 14.196
+    },
+    {
+     "text": "Shir-yakh!",
+     "words": [
+      "Shir-yakh!"
+     ],
+     "start": 14.196,
+     "end": 15.15
+    }
+   ]
+  },
+  {
+   "id": "L07",
+   "scene": "maqbul",
+   "text": "If an Afghan calls you maqbul...",
+   "start": 15.15,
+   "end": 16.86,
+   "words": [
+    {
+     "w": "If",
+     "start": 15.15,
+     "end": 15.34
+    },
+    {
+     "w": "an",
+     "start": 15.34,
+     "end": 15.53
+    },
+    {
+     "w": "Afghan",
+     "start": 15.53,
+     "end": 15.91
+    },
+    {
+     "w": "calls",
+     "start": 15.91,
+     "end": 16.242
+    },
+    {
+     "w": "you",
+     "start": 16.242,
+     "end": 16.48
+    },
+    {
+     "w": "maqbul...",
+     "start": 16.48,
+     "end": 16.86
+    }
+   ],
+   "hl": {
+    "maqbul...": "afghan"
+   },
+   "captions": [
+    {
+     "text": "If an",
+     "words": [
+      "If",
+      "an"
+     ],
+     "start": 15.15,
+     "end": 15.53
+    },
+    {
+     "text": "Afghan calls",
+     "words": [
+      "Afghan",
+      "calls"
+     ],
+     "start": 15.53,
+     "end": 16.242
+    },
+    {
+     "text": "you maqbul...",
+     "words": [
+      "you",
+      "maqbul..."
+     ],
+     "start": 16.242,
+     "end": 17.06
+    }
+   ]
+  },
+  {
+   "id": "L08",
+   "scene": "maqbul",
+   "text": "no, you didn't pass the exam. It means you're good-looking!",
+   "start": 17.06,
+   "end": 20.08,
+   "words": [
+    {
+     "w": "no,",
+     "start": 17.06,
+     "end": 17.276
+    },
+    {
+     "w": "you",
+     "start": 17.276,
+     "end": 17.5
+    },
+    {
+     "w": "didn't",
+     "start": 17.5,
+     "end": 17.858
+    },
+    {
+     "w": "pass",
+     "start": 17.858,
+     "end": 18.127
+    },
+    {
+     "w": "the",
+     "start": 18.127,
+     "end": 18.351
+    },
+    {
+     "w": "exam.",
+     "start": 18.351,
+     "end": 18.62
+    },
+    {
+     "w": "It",
+     "start": 18.9,
+     "end": 19.043
+    },
+    {
+     "w": "means",
+     "start": 19.043,
+     "end": 19.293
+    },
+    {
+     "w": "you're",
+     "start": 19.293,
+     "end": 19.579
+    },
+    {
+     "w": "good-looking!",
+     "start": 19.579,
+     "end": 20.08
+    }
+   ],
+   "hl": {
+    "exam.": "gold",
+    "good-looking!": "pink"
+   },
+   "captions": [
+    {
+     "text": "no,",
+     "words": [
+      "no,"
+     ],
+     "start": 17.06,
+     "end": 17.276
+    },
+    {
+     "text": "you didn't",
+     "words": [
+      "you",
+      "didn't"
+     ],
+     "start": 17.276,
+     "end": 17.858
+    },
+    {
+     "text": "pass the",
+     "words": [
+      "pass",
+      "the"
+     ],
+     "start": 17.858,
+     "end": 18.351
+    },
+    {
+     "text": "exam.",
+     "words": [
+      "exam."
+     ],
+     "start": 18.351,
+     "end": 18.9
+    },
+    {
+     "text": "It means",
+     "words": [
+      "It",
+      "means"
+     ],
+     "start": 18.9,
+     "end": 19.293
+    },
+    {
+     "text": "you're",
+     "words": [
+      "you're"
+     ],
+     "start": 19.293,
+     "end": 19.579
+    },
+    {
+     "text": "good-looking!",
+     "words": [
+      "good-looking!"
+     ],
+     "start": 19.579,
+     "end": 20.53
+    }
+   ]
+  },
+  {
+   "id": "L09",
+   "scene": "greet",
+   "text": "Iranians say khaste nabashi, don't be tired.",
+   "start": 20.53,
+   "end": 23.4,
+   "words": [
+    {
+     "w": "Iranians",
+     "start": 20.53,
+     "end": 21.111
+    },
+    {
+     "w": "say",
+     "start": 21.111,
+     "end": 21.402
+    },
+    {
+     "w": "khaste",
+     "start": 21.402,
+     "end": 21.867
+    },
+    {
+     "w": "nabashi,",
+     "start": 21.867,
+     "end": 22.39
+    },
+    {
+     "w": "don't",
+     "start": 22.59,
+     "end": 22.905
+    },
+    {
+     "w": "be",
+     "start": 22.905,
+     "end": 23.085
+    },
+    {
+     "w": "tired.",
+     "start": 23.085,
+     "end": 23.4
+    }
+   ],
+   "hl": {
+    "khaste": "iran",
+    "nabashi,": "iran"
+   },
+   "captions": [
+    {
+     "text": "Iranians say",
+     "words": [
+      "Iranians",
+      "say"
+     ],
+     "start": 20.53,
+     "end": 21.402
+    },
+    {
+     "text": "khaste nabashi,",
+     "words": [
+      "khaste",
+      "nabashi,"
+     ],
+     "start": 21.402,
+     "end": 22.59
+    },
+    {
+     "text": "don't be",
+     "words": [
+      "don't",
+      "be"
+     ],
+     "start": 22.59,
+     "end": 23.085
+    },
+    {
+     "text": "tired.",
+     "words": [
+      "tired."
+     ],
+     "start": 23.085,
+     "end": 23.55
+    }
+   ]
+  },
+  {
+   "id": "L10",
+   "scene": "greet",
+   "text": "Afghans say mande nabashi.",
+   "start": 23.55,
+   "end": 25.28,
+   "words": [
+    {
+     "w": "Afghans",
+     "start": 23.55,
+     "end": 24.069
+    },
+    {
+     "w": "say",
+     "start": 24.069,
+     "end": 24.357
+    },
+    {
+     "w": "mande",
+     "start": 24.357,
+     "end": 24.761
+    },
+    {
+     "w": "nabashi.",
+     "start": 24.761,
+     "end": 25.28
+    }
+   ],
+   "hl": {
+    "mande": "afghan",
+    "nabashi.": "afghan"
+   },
+   "captions": [
+    {
+     "text": "Afghans say",
+     "words": [
+      "Afghans",
+      "say"
+     ],
+     "start": 23.55,
+     "end": 24.357
+    },
+    {
+     "text": "mande nabashi.",
+     "words": [
+      "mande",
+      "nabashi."
+     ],
+     "start": 24.357,
+     "end": 25.53
+    }
+   ]
+  },
+  {
+   "id": "L11",
+   "scene": "greet",
+   "text": "Iranians say merci. Afghans say zinda bashi!",
+   "start": 25.53,
+   "end": 28.72,
+   "words": [
+    {
+     "w": "Iranians",
+     "start": 25.53,
+     "end": 26.103
+    },
+    {
+     "w": "say",
+     "start": 26.103,
+     "end": 26.389
+    },
+    {
+     "w": "merci.",
+     "start": 26.389,
+     "end": 26.79
+    },
+    {
+     "w": "Afghans",
+     "start": 27.12,
+     "end": 27.634
+    },
+    {
+     "w": "say",
+     "start": 27.634,
+     "end": 27.92
+    },
+    {
+     "w": "zinda",
+     "start": 27.92,
+     "end": 28.32
+    },
+    {
+     "w": "bashi!",
+     "start": 28.32,
+     "end": 28.72
+    }
+   ],
+   "hl": {
+    "merci.": "iran",
+    "zinda": "afghan",
+    "bashi!": "afghan"
+   },
+   "captions": [
+    {
+     "text": "Iranians say",
+     "words": [
+      "Iranians",
+      "say"
+     ],
+     "start": 25.53,
+     "end": 26.389
+    },
+    {
+     "text": "merci.",
+     "words": [
+      "merci."
+     ],
+     "start": 26.389,
+     "end": 27.12
+    },
+    {
+     "text": "Afghans say",
+     "words": [
+      "Afghans",
+      "say"
+     ],
+     "start": 27.12,
+     "end": 27.92
+    },
+    {
+     "text": "zinda bashi!",
+     "words": [
+      "zinda",
+      "bashi!"
+     ],
+     "start": 27.92,
+     "end": 29.22
+    }
+   ]
+  },
+  {
+   "id": "L12",
+   "scene": "taarof",
+   "text": "Now, the clichés.",
+   "start": 29.22,
+   "end": 30.27,
+   "words": [
+    {
+     "w": "Now,",
+     "start": 29.22,
+     "end": 29.52
+    },
+    {
+     "w": "the",
+     "start": 29.52,
+     "end": 29.788
+    },
+    {
+     "w": "clichés.",
+     "start": 29.788,
+     "end": 30.27
+    }
+   ],
+   "hl": {
+    "clichés.": "gold"
+   },
+   "captions": [
+    {
+     "text": "Now,",
+     "words": [
+      "Now,"
+     ],
+     "start": 29.22,
+     "end": 29.52
+    },
+    {
+     "text": "the clichés.",
+     "words": [
+      "the",
+      "clichés."
+     ],
+     "start": 29.52,
+     "end": 30.47
+    }
+   ]
+  },
+  {
+   "id": "L13",
+   "scene": "taarof",
+   "text": "Iranians are champions of taarof.",
+   "start": 30.47,
+   "end": 32.45,
+   "words": [
+    {
+     "w": "Iranians",
+     "start": 30.47,
+     "end": 30.991
+    },
+    {
+     "w": "are",
+     "start": 30.991,
+     "end": 31.252
+    },
+    {
+     "w": "champions",
+     "start": 31.252,
+     "end": 31.825
+    },
+    {
+     "w": "of",
+     "start": 31.825,
+     "end": 32.033
+    },
+    {
+     "w": "taarof.",
+     "start": 32.033,
+     "end": 32.45
+    }
+   ],
+   "hl": {
+    "champions": "gold",
+    "taarof.": "gold"
+   },
+   "captions": [
+    {
+     "text": "Iranians are",
+     "words": [
+      "Iranians",
+      "are"
+     ],
+     "start": 30.47,
+     "end": 31.252
+    },
+    {
+     "text": "champions of",
+     "words": [
+      "champions",
+      "of"
+     ],
+     "start": 31.252,
+     "end": 32.033
+    },
+    {
+     "text": "taarof.",
+     "words": [
+      "taarof."
+     ],
+     "start": 32.033,
+     "end": 32.65
+    }
+   ]
+  },
+  {
+   "id": "L14",
+   "scene": "taarof",
+   "text": "After you. No, after you! I insist!",
+   "start": 32.65,
+   "end": 34.6,
+   "words": [
+    {
+     "w": "After",
+     "start": 32.65,
+     "end": 32.994
+    },
+    {
+     "w": "you.",
+     "start": 32.994,
+     "end": 33.24
+    },
+    {
+     "w": "No,",
+     "start": 33.24,
+     "end": 33.466
+    },
+    {
+     "w": "after",
+     "start": 33.466,
+     "end": 33.81
+    },
+    {
+     "w": "you!",
+     "start": 33.81,
+     "end": 34.056
+    },
+    {
+     "w": "I",
+     "start": 34.056,
+     "end": 34.204
+    },
+    {
+     "w": "insist!",
+     "start": 34.204,
+     "end": 34.6
+    }
+   ],
+   "hl": {
+    "insist!": "gold"
+   },
+   "captions": [
+    {
+     "text": "After you.",
+     "words": [
+      "After",
+      "you."
+     ],
+     "start": 32.65,
+     "end": 33.24
+    },
+    {
+     "text": "No,",
+     "words": [
+      "No,"
+     ],
+     "start": 33.24,
+     "end": 33.466
+    },
+    {
+     "text": "after you!",
+     "words": [
+      "after",
+      "you!"
+     ],
+     "start": 33.466,
+     "end": 34.056
+    },
+    {
+     "text": "I insist!",
+     "words": [
+      "I",
+      "insist!"
+     ],
+     "start": 34.056,
+     "end": 34.85
+    }
+   ]
+  },
+  {
+   "id": "L15",
+   "scene": "taarof",
+   "text": "Ten minutes later, nobody has walked through the door.",
+   "start": 34.85,
+   "end": 37.5,
+   "words": [
+    {
+     "w": "Ten",
+     "start": 34.85,
+     "end": 35.064
+    },
+    {
+     "w": "minutes",
+     "start": 35.064,
+     "end": 35.45
+    },
+    {
+     "w": "later,",
+     "start": 35.45,
+     "end": 35.75
+    },
+    {
+     "w": "nobody",
+     "start": 35.88,
+     "end": 36.196
+    },
+    {
+     "w": "has",
+     "start": 36.196,
+     "end": 36.394
+    },
+    {
+     "w": "walked",
+     "start": 36.394,
+     "end": 36.71
+    },
+    {
+     "w": "through",
+     "start": 36.71,
+     "end": 37.065
+    },
+    {
+     "w": "the",
+     "start": 37.065,
+     "end": 37.263
+    },
+    {
+     "w": "door.",
+     "start": 37.263,
+     "end": 37.5
+    }
+   ],
+   "hl": {
+    "Ten": "cyan",
+    "minutes": "cyan",
+    "nobody": "red"
+   },
+   "captions": [
+    {
+     "text": "Ten minutes",
+     "words": [
+      "Ten",
+      "minutes"
+     ],
+     "start": 34.85,
+     "end": 35.45
+    },
+    {
+     "text": "later,",
+     "words": [
+      "later,"
+     ],
+     "start": 35.45,
+     "end": 35.88
+    },
+    {
+     "text": "nobody has",
+     "words": [
+      "nobody",
+      "has"
+     ],
+     "start": 35.88,
+     "end": 36.394
+    },
+    {
+     "text": "walked through",
+     "words": [
+      "walked",
+      "through"
+     ],
+     "start": 36.394,
+     "end": 37.065
+    },
+    {
+     "text": "the door.",
+     "words": [
+      "the",
+      "door."
+     ],
+     "start": 37.065,
+     "end": 37.95
+    }
+   ]
+  },
+  {
+   "id": "L16",
+   "scene": "hospitality",
+   "text": "Afghans? Champions of hospitality.",
+   "start": 37.95,
+   "end": 40.11,
+   "words": [
+    {
+     "w": "Afghans?",
+     "start": 37.95,
+     "end": 38.504
+    },
+    {
+     "w": "Champions",
+     "start": 38.504,
+     "end": 39.135
+    },
+    {
+     "w": "of",
+     "start": 39.135,
+     "end": 39.364
+    },
+    {
+     "w": "hospitality.",
+     "start": 39.364,
+     "end": 40.11
+    }
+   ],
+   "hl": {
+    "Champions": "gold",
+    "hospitality.": "gold"
+   },
+   "captions": [
+    {
+     "text": "Afghans?",
+     "words": [
+      "Afghans?"
+     ],
+     "start": 37.95,
+     "end": 38.504
+    },
+    {
+     "text": "Champions of",
+     "words": [
+      "Champions",
+      "of"
+     ],
+     "start": 38.504,
+     "end": 39.364
+    },
+    {
+     "text": "hospitality.",
+     "words": [
+      "hospitality."
+     ],
+     "start": 39.364,
+     "end": 40.31
+    }
+   ]
+  },
+  {
+   "id": "L17",
+   "scene": "hospitality",
+   "text": "You drop by for a five-minute tea,",
+   "start": 40.31,
+   "end": 42.14,
+   "words": [
+    {
+     "w": "You",
+     "start": 40.31,
+     "end": 40.533
+    },
+    {
+     "w": "drop",
+     "start": 40.533,
+     "end": 40.801
+    },
+    {
+     "w": "by",
+     "start": 40.801,
+     "end": 40.98
+    },
+    {
+     "w": "for",
+     "start": 40.98,
+     "end": 41.203
+    },
+    {
+     "w": "a",
+     "start": 41.203,
+     "end": 41.337
+    },
+    {
+     "w": "five-minute",
+     "start": 41.337,
+     "end": 41.917
+    },
+    {
+     "w": "tea,",
+     "start": 41.917,
+     "end": 42.14
+    }
+   ],
+   "hl": {
+    "five-minute": "cyan",
+    "tea,": "cyan"
+   },
+   "captions": [
+    {
+     "text": "You drop",
+     "words": [
+      "You",
+      "drop"
+     ],
+     "start": 40.31,
+     "end": 40.801
+    },
+    {
+     "text": "by for",
+     "words": [
+      "by",
+      "for"
+     ],
+     "start": 40.801,
+     "end": 41.203
+    },
+    {
+     "text": "a five-minute",
+     "words": [
+      "a",
+      "five-minute"
+     ],
+     "start": 41.203,
+     "end": 41.917
+    },
+    {
+     "text": "tea,",
+     "words": [
+      "tea,"
+     ],
+     "start": 41.917,
+     "end": 42.24
+    }
+   ]
+  },
+  {
+   "id": "L18",
+   "scene": "hospitality",
+   "text": "eat three rounds of Kabuli pulao, and come back the next day.",
+   "start": 42.24,
+   "end": 45.93,
+   "words": [
+    {
+     "w": "eat",
+     "start": 42.24,
+     "end": 42.499
+    },
+    {
+     "w": "three",
+     "start": 42.499,
+     "end": 42.862
+    },
+    {
+     "w": "rounds",
+     "start": 42.862,
+     "end": 43.276
+    },
+    {
+     "w": "of",
+     "start": 43.276,
+     "end": 43.483
+    },
+    {
+     "w": "Kabuli",
+     "start": 43.483,
+     "end": 43.897
+    },
+    {
+     "w": "pulao,",
+     "start": 43.897,
+     "end": 44.26
+    },
+    {
+     "w": "and",
+     "start": 44.53,
+     "end": 44.742
+    },
+    {
+     "w": "come",
+     "start": 44.742,
+     "end": 44.997
+    },
+    {
+     "w": "back",
+     "start": 44.997,
+     "end": 45.251
+    },
+    {
+     "w": "the",
+     "start": 45.251,
+     "end": 45.463
+    },
+    {
+     "w": "next",
+     "start": 45.463,
+     "end": 45.718
+    },
+    {
+     "w": "day.",
+     "start": 45.718,
+     "end": 45.93
+    }
+   ],
+   "hl": {
+    "three": "red",
+    "rounds": "red",
+    "Kabuli": "gold",
+    "pulao,": "gold",
+    "next": "cyan",
+    "day.": "cyan"
+   },
+   "captions": [
+    {
+     "text": "eat three",
+     "words": [
+      "eat",
+      "three"
+     ],
+     "start": 42.24,
+     "end": 42.862
+    },
+    {
+     "text": "rounds of",
+     "words": [
+      "rounds",
+      "of"
+     ],
+     "start": 42.862,
+     "end": 43.483
+    },
+    {
+     "text": "Kabuli pulao,",
+     "words": [
+      "Kabuli",
+      "pulao,"
+     ],
+     "start": 43.483,
+     "end": 44.53
+    },
+    {
+     "text": "and come",
+     "words": [
+      "and",
+      "come"
+     ],
+     "start": 44.53,
+     "end": 44.997
+    },
+    {
+     "text": "back the",
+     "words": [
+      "back",
+      "the"
+     ],
+     "start": 44.997,
+     "end": 45.463
+    },
+    {
+     "text": "next day.",
+     "words": [
+      "next",
+      "day."
+     ],
+     "start": 45.463,
+     "end": 46.38
+    }
+   ]
+  },
+  {
+   "id": "L19",
+   "scene": "slipper",
+   "text": "And the moms? They share one secret weapon...",
+   "start": 46.38,
+   "end": 48.64,
+   "words": [
+    {
+     "w": "And",
+     "start": 46.38,
+     "end": 46.602
+    },
+    {
+     "w": "the",
+     "start": 46.602,
+     "end": 46.824
+    },
+    {
+     "w": "moms?",
+     "start": 46.824,
+     "end": 47.09
+    },
+    {
+     "w": "They",
+     "start": 47.18,
+     "end": 47.438
+    },
+    {
+     "w": "share",
+     "start": 47.438,
+     "end": 47.738
+    },
+    {
+     "w": "one",
+     "start": 47.738,
+     "end": 47.953
+    },
+    {
+     "w": "secret",
+     "start": 47.953,
+     "end": 48.296
+    },
+    {
+     "w": "weapon...",
+     "start": 48.296,
+     "end": 48.64
+    }
+   ],
+   "hl": {
+    "moms?": "pink",
+    "weapon...": "red"
+   },
+   "captions": [
+    {
+     "text": "And the",
+     "words": [
+      "And",
+      "the"
+     ],
+     "start": 46.38,
+     "end": 46.824
+    },
+    {
+     "text": "moms?",
+     "words": [
+      "moms?"
+     ],
+     "start": 46.824,
+     "end": 47.18
+    },
+    {
+     "text": "They share",
+     "words": [
+      "They",
+      "share"
+     ],
+     "start": 47.18,
+     "end": 47.738
+    },
+    {
+     "text": "one secret",
+     "words": [
+      "one",
+      "secret"
+     ],
+     "start": 47.738,
+     "end": 48.296
+    },
+    {
+     "text": "weapon...",
+     "words": [
+      "weapon..."
+     ],
+     "start": 48.296,
+     "end": 48.79
+    }
+   ]
+  },
+  {
+   "id": "L20",
+   "scene": "slipper",
+   "text": "the slipper!",
+   "start": 48.79,
+   "end": 49.56,
+   "words": [
+    {
+     "w": "the",
+     "start": 48.79,
+     "end": 49.065
+    },
+    {
+     "w": "slipper!",
+     "start": 49.065,
+     "end": 49.56
+    }
+   ],
+   "hl": {
+    "slipper!": "red"
+   },
+   "captions": [
+    {
+     "text": "the slipper!",
+     "words": [
+      "the",
+      "slipper!"
+     ],
+     "start": 48.79,
+     "end": 50.16
+    }
+   ]
+  },
+  {
+   "id": "L21",
+   "scene": "shir",
+   "text": "But here's something most people don't know.",
+   "start": 50.16,
+   "end": 52.06,
+   "words": [
+    {
+     "w": "But",
+     "start": 50.16,
+     "end": 50.346
+    },
+    {
+     "w": "here's",
+     "start": 50.346,
+     "end": 50.644
+    },
+    {
+     "w": "something",
+     "start": 50.644,
+     "end": 51.054
+    },
+    {
+     "w": "most",
+     "start": 51.054,
+     "end": 51.278
+    },
+    {
+     "w": "people",
+     "start": 51.278,
+     "end": 51.576
+    },
+    {
+     "w": "don't",
+     "start": 51.576,
+     "end": 51.836
+    },
+    {
+     "w": "know.",
+     "start": 51.836,
+     "end": 52.06
+    }
+   ],
+   "hl": {},
+   "captions": [
+    {
+     "text": "But here's",
+     "words": [
+      "But",
+      "here's"
+     ],
+     "start": 50.16,
+     "end": 50.644
+    },
+    {
+     "text": "something most",
+     "words": [
+      "something",
+      "most"
+     ],
+     "start": 50.644,
+     "end": 51.278
+    },
+    {
+     "text": "people don't",
+     "words": [
+      "people",
+      "don't"
+     ],
+     "start": 51.278,
+     "end": 51.836
+    },
+    {
+     "text": "know.",
+     "words": [
+      "know."
+     ],
+     "start": 51.836,
+     "end": 52.26
+    }
+   ]
+  },
+  {
+   "id": "L22",
+   "scene": "shir",
+   "text": "In Iran, shir is both the lion and the milk.",
+   "start": 52.26,
+   "end": 54.71,
+   "words": [
+    {
+     "w": "In",
+     "start": 52.26,
+     "end": 52.456
+    },
+    {
+     "w": "Iran,",
+     "start": 52.456,
+     "end": 52.75
+    },
+    {
+     "w": "shir",
+     "start": 52.75,
+     "end": 53.023
+    },
+    {
+     "w": "is",
+     "start": 53.023,
+     "end": 53.206
+    },
+    {
+     "w": "both",
+     "start": 53.206,
+     "end": 53.479
+    },
+    {
+     "w": "the",
+     "start": 53.479,
+     "end": 53.707
+    },
+    {
+     "w": "lion",
+     "start": 53.707,
+     "end": 53.981
+    },
+    {
+     "w": "and",
+     "start": 53.981,
+     "end": 54.209
+    },
+    {
+     "w": "the",
+     "start": 54.209,
+     "end": 54.437
+    },
+    {
+     "w": "milk.",
+     "start": 54.437,
+     "end": 54.71
+    }
+   ],
+   "hl": {
+    "shir": "gold",
+    "lion": "gold",
+    "milk.": "cyan"
+   },
+   "captions": [
+    {
+     "text": "In Iran,",
+     "words": [
+      "In",
+      "Iran,"
+     ],
+     "start": 52.26,
+     "end": 52.75
+    },
+    {
+     "text": "shir is",
+     "words": [
+      "shir",
+      "is"
+     ],
+     "start": 52.75,
+     "end": 53.206
+    },
+    {
+     "text": "both the",
+     "words": [
+      "both",
+      "the"
+     ],
+     "start": 53.206,
+     "end": 53.707
+    },
+    {
+     "text": "lion and",
+     "words": [
+      "lion",
+      "and"
+     ],
+     "start": 53.707,
+     "end": 54.209
+    },
+    {
+     "text": "the milk.",
+     "words": [
+      "the",
+      "milk."
+     ],
+     "start": 54.209,
+     "end": 54.91
+    }
+   ]
+  },
+  {
+   "id": "L23",
+   "scene": "shir",
+   "text": "Afghans tell them apart: sher is the lion, shir is the milk.",
+   "start": 54.91,
+   "end": 58.32,
+   "words": [
+    {
+     "w": "Afghans",
+     "start": 54.91,
+     "end": 55.309
+    },
+    {
+     "w": "tell",
+     "start": 55.309,
+     "end": 55.574
+    },
+    {
+     "w": "them",
+     "start": 55.574,
+     "end": 55.84
+    },
+    {
+     "w": "apart:",
+     "start": 55.84,
+     "end": 56.15
+    },
+    {
+     "w": "sher",
+     "start": 56.37,
+     "end": 56.634
+    },
+    {
+     "w": "is",
+     "start": 56.634,
+     "end": 56.809
+    },
+    {
+     "w": "the",
+     "start": 56.809,
+     "end": 57.029
+    },
+    {
+     "w": "lion,",
+     "start": 57.029,
+     "end": 57.292
+    },
+    {
+     "w": "shir",
+     "start": 57.292,
+     "end": 57.586
+    },
+    {
+     "w": "is",
+     "start": 57.586,
+     "end": 57.782
+    },
+    {
+     "w": "the",
+     "start": 57.782,
+     "end": 58.026
+    },
+    {
+     "w": "milk.",
+     "start": 58.026,
+     "end": 58.32
+    }
+   ],
+   "hl": {
+    "apart:": "gold",
+    "sher": "gold",
+    "lion,": "gold",
+    "shir": "cyan",
+    "milk.": "cyan"
+   },
+   "captions": [
+    {
+     "text": "Afghans tell",
+     "words": [
+      "Afghans",
+      "tell"
+     ],
+     "start": 54.91,
+     "end": 55.574
+    },
+    {
+     "text": "them apart:",
+     "words": [
+      "them",
+      "apart:"
+     ],
+     "start": 55.574,
+     "end": 56.37
+    },
+    {
+     "text": "sher is",
+     "words": [
+      "sher",
+      "is"
+     ],
+     "start": 56.37,
+     "end": 56.809
+    },
+    {
+     "text": "the lion,",
+     "words": [
+      "the",
+      "lion,"
+     ],
+     "start": 56.809,
+     "end": 57.292
+    },
+    {
+     "text": "shir is",
+     "words": [
+      "shir",
+      "is"
+     ],
+     "start": 57.292,
+     "end": 57.782
+    },
+    {
+     "text": "the milk.",
+     "words": [
+      "the",
+      "milk."
+     ],
+     "start": 57.782,
+     "end": 58.52
+    }
+   ]
+  },
+  {
+   "id": "L24",
+   "scene": "shir",
+   "text": "And that's the older pronunciation, from the time of Hafez and Rumi.",
+   "start": 58.52,
+   "end": 62.18,
+   "words": [
+    {
+     "w": "And",
+     "start": 58.52,
+     "end": 58.728
+    },
+    {
+     "w": "that's",
+     "start": 58.728,
+     "end": 59.06
+    },
+    {
+     "w": "the",
+     "start": 59.06,
+     "end": 59.267
+    },
+    {
+     "w": "older",
+     "start": 59.267,
+     "end": 59.558
+    },
+    {
+     "w": "pronunciation,",
+     "start": 59.558,
+     "end": 60.18
+    },
+    {
+     "w": "from",
+     "start": 60.42,
+     "end": 60.691
+    },
+    {
+     "w": "the",
+     "start": 60.691,
+     "end": 60.916
+    },
+    {
+     "w": "time",
+     "start": 60.916,
+     "end": 61.187
+    },
+    {
+     "w": "of",
+     "start": 61.187,
+     "end": 61.368
+    },
+    {
+     "w": "Hafez",
+     "start": 61.368,
+     "end": 61.684
+    },
+    {
+     "w": "and",
+     "start": 61.684,
+     "end": 61.909
+    },
+    {
+     "w": "Rumi.",
+     "start": 61.909,
+     "end": 62.18
+    }
+   ],
+   "hl": {
+    "older": "gold",
+    "Hafez": "gold",
+    "Rumi.": "gold"
+   },
+   "captions": [
+    {
+     "text": "And that's",
+     "words": [
+      "And",
+      "that's"
+     ],
+     "start": 58.52,
+     "end": 59.06
+    },
+    {
+     "text": "the older",
+     "words": [
+      "the",
+      "older"
+     ],
+     "start": 59.06,
+     "end": 59.558
+    },
+    {
+     "text": "pronunciation,",
+     "words": [
+      "pronunciation,"
+     ],
+     "start": 59.558,
+     "end": 60.42
+    },
+    {
+     "text": "from the",
+     "words": [
+      "from",
+      "the"
+     ],
+     "start": 60.42,
+     "end": 60.916
+    },
+    {
+     "text": "time of",
+     "words": [
+      "time",
+      "of"
+     ],
+     "start": 60.916,
+     "end": 61.368
+    },
+    {
+     "text": "Hafez and",
+     "words": [
+      "Hafez",
+      "and"
+     ],
+     "start": 61.368,
+     "end": 61.909
+    },
+    {
+     "text": "Rumi.",
+     "words": [
+      "Rumi."
+     ],
+     "start": 61.909,
+     "end": 62.63
+    }
+   ]
+  },
+  {
+   "id": "L25",
+   "scene": "rumi",
+   "text": "Speaking of Rumi, who does he belong to?",
+   "start": 62.63,
+   "end": 64.83,
+   "words": [
+    {
+     "w": "Speaking",
+     "start": 62.63,
+     "end": 63.115
+    },
+    {
+     "w": "of",
+     "start": 63.115,
+     "end": 63.309
+    },
+    {
+     "w": "Rumi,",
+     "start": 63.309,
+     "end": 63.6
+    },
+    {
+     "w": "who",
+     "start": 63.74,
+     "end": 63.942
+    },
+    {
+     "w": "does",
+     "start": 63.942,
+     "end": 64.184
+    },
+    {
+     "w": "he",
+     "start": 64.184,
+     "end": 64.346
+    },
+    {
+     "w": "belong",
+     "start": 64.346,
+     "end": 64.669
+    },
+    {
+     "w": "to?",
+     "start": 64.669,
+     "end": 64.83
+    }
+   ],
+   "hl": {
+    "Rumi,": "gold"
+   },
+   "captions": [
+    {
+     "text": "Speaking of",
+     "words": [
+      "Speaking",
+      "of"
+     ],
+     "start": 62.63,
+     "end": 63.309
+    },
+    {
+     "text": "Rumi,",
+     "words": [
+      "Rumi,"
+     ],
+     "start": 63.309,
+     "end": 63.74
+    },
+    {
+     "text": "who does",
+     "words": [
+      "who",
+      "does"
+     ],
+     "start": 63.74,
+     "end": 64.184
+    },
+    {
+     "text": "he belong",
+     "words": [
+      "he",
+      "belong"
+     ],
+     "start": 64.184,
+     "end": 64.669
+    },
+    {
+     "text": "to?",
+     "words": [
+      "to?"
+     ],
+     "start": 64.669,
+     "end": 65.03
+    }
+   ]
+  },
+  {
+   "id": "L26",
+   "scene": "rumi",
+   "text": "Iran: he's ours!",
+   "start": 65.03,
+   "end": 66.16,
+   "words": [
+    {
+     "w": "Iran:",
+     "start": 65.03,
+     "end": 65.425
+    },
+    {
+     "w": "he's",
+     "start": 65.425,
+     "end": 65.793
+    },
+    {
+     "w": "ours!",
+     "start": 65.793,
+     "end": 66.16
+    }
+   ],
+   "hl": {
+    "ours!": "iran"
+   },
+   "captions": [
+    {
+     "text": "Iran:",
+     "words": [
+      "Iran:"
+     ],
+     "start": 65.03,
+     "end": 65.425
+    },
+    {
+     "text": "he's ours!",
+     "words": [
+      "he's",
+      "ours!"
+     ],
+     "start": 65.425,
+     "end": 66.31
+    }
+   ]
+  },
+  {
+   "id": "L27",
+   "scene": "rumi",
+   "text": "Afghanistan: he was born in Balkh, he's ours!",
+   "start": 66.31,
+   "end": 68.97,
+   "words": [
+    {
+     "w": "Afghanistan:",
+     "start": 66.31,
+     "end": 67.12
+    },
+    {
+     "w": "he",
+     "start": 67.29,
+     "end": 67.45
+    },
+    {
+     "w": "was",
+     "start": 67.45,
+     "end": 67.65
+    },
+    {
+     "w": "born",
+     "start": 67.65,
+     "end": 67.89
+    },
+    {
+     "w": "in",
+     "start": 67.89,
+     "end": 68.05
+    },
+    {
+     "w": "Balkh,",
+     "start": 68.05,
+     "end": 68.33
+    },
+    {
+     "w": "he's",
+     "start": 68.33,
+     "end": 68.65
+    },
+    {
+     "w": "ours!",
+     "start": 68.65,
+     "end": 68.97
+    }
+   ],
+   "hl": {
+    "Balkh,": "afghan",
+    "ours!": "afghan"
+   },
+   "captions": [
+    {
+     "text": "Afghanistan:",
+     "words": [
+      "Afghanistan:"
+     ],
+     "start": 66.31,
+     "end": 67.29
+    },
+    {
+     "text": "he was",
+     "words": [
+      "he",
+      "was"
+     ],
+     "start": 67.29,
+     "end": 67.65
+    },
+    {
+     "text": "born in",
+     "words": [
+      "born",
+      "in"
+     ],
+     "start": 67.65,
+     "end": 68.05
+    },
+    {
+     "text": "Balkh,",
+     "words": [
+      "Balkh,"
+     ],
+     "start": 68.05,
+     "end": 68.33
+    },
+    {
+     "text": "he's ours!",
+     "words": [
+      "he's",
+      "ours!"
+     ],
+     "start": 68.33,
+     "end": 69.12
+    }
+   ]
+  },
+  {
+   "id": "L28",
+   "scene": "rumi",
+   "text": "Turkey: his tomb is right here!",
+   "start": 69.12,
+   "end": 70.74,
+   "words": [
+    {
+     "w": "Turkey:",
+     "start": 69.12,
+     "end": 69.504
+    },
+    {
+     "w": "his",
+     "start": 69.504,
+     "end": 69.724
+    },
+    {
+     "w": "tomb",
+     "start": 69.724,
+     "end": 69.989
+    },
+    {
+     "w": "is",
+     "start": 69.989,
+     "end": 70.166
+    },
+    {
+     "w": "right",
+     "start": 70.166,
+     "end": 70.475
+    },
+    {
+     "w": "here!",
+     "start": 70.475,
+     "end": 70.74
+    }
+   ],
+   "hl": {
+    "Turkey:": "red",
+    "tomb": "red",
+    "here!": "red"
+   },
+   "captions": [
+    {
+     "text": "Turkey:",
+     "words": [
+      "Turkey:"
+     ],
+     "start": 69.12,
+     "end": 69.504
+    },
+    {
+     "text": "his tomb",
+     "words": [
+      "his",
+      "tomb"
+     ],
+     "start": 69.504,
+     "end": 69.989
+    },
+    {
+     "text": "is right",
+     "words": [
+      "is",
+      "right"
+     ],
+     "start": 69.989,
+     "end": 70.475
+    },
+    {
+     "text": "here!",
+     "words": [
+      "here!"
+     ],
+     "start": 70.475,
+     "end": 71.24
+    }
+   ]
+  },
+  {
+   "id": "L29",
+   "scene": "outro",
+   "text": "Bottom line: one language, one table.",
+   "start": 71.24,
+   "end": 73.39,
+   "words": [
+    {
+     "w": "Bottom",
+     "start": 71.24,
+     "end": 71.659
+    },
+    {
+     "w": "line:",
+     "start": 71.659,
+     "end": 71.973
+    },
+    {
+     "w": "one",
+     "start": 71.973,
+     "end": 72.234
+    },
+    {
+     "w": "language,",
+     "start": 72.234,
+     "end": 72.755
+    },
+    {
+     "w": "one",
+     "start": 72.755,
+     "end": 73.019
+    },
+    {
+     "w": "table.",
+     "start": 73.019,
+     "end": 73.39
+    }
+   ],
+   "hl": {
+    "language,": "gold",
+    "table.": "gold"
+   },
+   "captions": [
+    {
+     "text": "Bottom line:",
+     "words": [
+      "Bottom",
+      "line:"
+     ],
+     "start": 71.24,
+     "end": 71.973
+    },
+    {
+     "text": "one language,",
+     "words": [
+      "one",
+      "language,"
+     ],
+     "start": 71.973,
+     "end": 72.755
+    },
+    {
+     "text": "one table.",
+     "words": [
+      "one",
+      "table."
+     ],
+     "start": 72.755,
+     "end": 73.59
+    }
+   ]
+  },
+  {
+   "id": "L30",
+   "scene": "outro",
+   "text": "Only the tomato goes by a different name.",
+   "start": 73.59,
+   "end": 75.79,
+   "words": [
+    {
+     "w": "Only",
+     "start": 73.59,
+     "end": 73.859
+    },
+    {
+     "w": "the",
+     "start": 73.859,
+     "end": 74.084
+    },
+    {
+     "w": "tomato",
+     "start": 74.084,
+     "end": 74.443
+    },
+    {
+     "w": "goes",
+     "start": 74.443,
+     "end": 74.712
+    },
+    {
+     "w": "by",
+     "start": 74.712,
+     "end": 74.892
+    },
+    {
+     "w": "a",
+     "start": 74.892,
+     "end": 75.027
+    },
+    {
+     "w": "different",
+     "start": 75.027,
+     "end": 75.521
+    },
+    {
+     "w": "name.",
+     "start": 75.521,
+     "end": 75.79
+    }
+   ],
+   "hl": {
+    "tomato": "red"
+   },
+   "captions": [
+    {
+     "text": "Only the",
+     "words": [
+      "Only",
+      "the"
+     ],
+     "start": 73.59,
+     "end": 74.084
+    },
+    {
+     "text": "tomato goes",
+     "words": [
+      "tomato",
+      "goes"
+     ],
+     "start": 74.084,
+     "end": 74.712
+    },
+    {
+     "text": "by a",
+     "words": [
+      "by",
+      "a"
+     ],
+     "start": 74.712,
+     "end": 75.027
+    },
+    {
+     "text": "different name.",
+     "words": [
+      "different",
+      "name."
+     ],
+     "start": 75.027,
+     "end": 76.39
+    }
+   ]
+  }
+ ],
+ "scenes": [
+  {
+   "id": "intro",
+   "label": "01 · Iranian or Afghan?",
+   "start": 0.0,
+   "end": 4.14
+  },
+  {
+   "id": "tomato",
+   "label": "One language · two dialects",
+   "start": 4.14,
+   "end": 9.05
+  },
+  {
+   "id": "words",
+   "label": "One language · two dialects",
+   "start": 9.05,
+   "end": 14.9
+  },
+  {
+   "id": "maqbul",
+   "label": "One language · two dialects",
+   "start": 14.9,
+   "end": 20.28
+  },
+  {
+   "id": "greet",
+   "label": "Greetings & thanks",
+   "start": 20.28,
+   "end": 28.97
+  },
+  {
+   "id": "taarof",
+   "label": "Cliché 1 · Taarof",
+   "start": 28.97,
+   "end": 37.7
+  },
+  {
+   "id": "hospitality",
+   "label": "Cliché 2 · Hospitality",
+   "start": 37.7,
+   "end": 46.13
+  },
+  {
+   "id": "slipper",
+   "label": "Cliché 3 · Secret weapon",
+   "start": 46.13,
+   "end": 49.91
+  },
+  {
+   "id": "shir",
+   "label": "Fact · Pronunciation",
+   "start": 49.91,
+   "end": 62.38
+  },
+  {
+   "id": "rumi",
+   "label": "Last question · Rumi",
+   "start": 62.38,
+   "end": 70.99
+  },
+  {
+   "id": "outro",
+   "label": "One table",
+   "start": 70.99,
+   "end": 77.39
+  }
+ ],
+ "cues": {
+  "scene_intro": 0.0,
+  "map_iran": 0.35,
+  "map_afghan": 1.116,
+  "title": 2.9,
+  "scene_tomato": 4.14,
+  "tomato": 5.273,
+  "label_iran_tomato": 5.548,
+  "label_roman": 8.137,
+  "scene_words": 9.05,
+  "potato_iran": 10.211,
+  "potato_afghan": 12.148,
+  "car_iran": 12.95,
+  "car_afghan": 13.227,
+  "ice_iran": 13.596,
+  "ice_afghan": 14.196,
+  "scene_maqbul": 14.9,
+  "maqbul": 16.48,
+  "exam_card": 17.06,
+  "exam": 18.351,
+  "heart": 19.579,
+  "scene_greet": 20.28,
+  "tired_iran": 21.402,
+  "tired_afghan": 24.357,
+  "merci": 26.389,
+  "zinda": 27.92,
+  "scene_taarof": 28.97,
+  "cliche": 29.788,
+  "taarof_champ": 31.252,
+  "after1": 32.65,
+  "after2": 33.24,
+  "insist": 34.204,
+  "clock": 34.85,
+  "nobody": 35.88,
+  "scene_hospitality": 37.7,
+  "hosp_champ": 38.504,
+  "tea": 41.337,
+  "plates": 42.499,
+  "pulao": 43.483,
+  "nextday": 45.463,
+  "scene_slipper": 46.13,
+  "moms": 46.824,
+  "weapon": 48.296,
+  "slipper": 49.065,
+  "scene_shir": 49.91,
+  "shir_word": 52.75,
+  "lion": 53.707,
+  "milk": 54.437,
+  "apart": 55.84,
+  "sher": 56.37,
+  "shir2": 57.292,
+  "older": 59.267,
+  "hafez": 61.368,
+  "rumi_name": 61.909,
+  "scene_rumi": 62.38,
+  "dervish": 63.309,
+  "claim_iran": 65.03,
+  "claim_afghan": 66.31,
+  "balkh": 68.05,
+  "claim_turkey": 69.12,
+  "tomb": 69.724,
+  "scene_outro": 70.99,
+  "table": 71.973,
+  "tomato_end": 74.084,
+  "end": 75.79
+ }
+}
