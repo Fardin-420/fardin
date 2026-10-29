@@ -1,102 +1,185 @@
 {
- "duration": 32.54,
- "voice": "af_heart",
+ "duration": 33.46,
+ "voices": {
+  "asker": "am_puck",
+  "expert": "am_michael+am_onyx"
+ },
  "segments": [
   {
    "text": "If I find this, will I get rich?",
+   "speaker": "asker",
    "start": 0.0,
-   "end": 1.82,
-   "speed": 1.0
+   "end": 1.66,
+   "speed": 1.0,
+   "caption": [
+    0.0,
+    2.433
+   ]
   },
   {
    "text": "This is dioptase. Such a beautiful green!",
+   "speaker": "expert",
    "start": 2.45,
-   "end": 4.96,
-   "speed": 1.1
+   "end": 5.11,
+   "speed": 1.1,
+   "caption": [
+    2.433,
+    4.967
+   ]
   },
   {
    "text": "It's rare, and collectors love it.",
-   "start": 5.08,
-   "end": 6.91,
-   "speed": 1.0
+   "speaker": "expert",
+   "start": 5.23,
+   "end": 7.15,
+   "speed": 0.98,
+   "caption": [
+    4.967,
+    7.467
+   ]
   },
   {
    "text": "A special piece can be pricey.",
+   "speaker": "expert",
    "start": 7.45,
-   "end": 9.07,
-   "speed": 1.0
+   "end": 9.31,
+   "speed": 0.98,
+   "caption": [
+    7.467,
+    9.6
+   ]
   },
   {
    "text": "Otherwise, it's not worth much.",
+   "speaker": "expert",
    "start": 9.45,
-   "end": 11.14,
-   "speed": 1.0
+   "end": 11.35,
+   "speed": 0.98,
+   "caption": [
+    9.6,
+    11.4
+   ]
   },
   {
    "text": "If I find this, will I get rich?",
-   "start": 11.45,
-   "end": 13.27,
-   "speed": 1.0
+   "speaker": "asker",
+   "start": 11.47,
+   "end": 13.13,
+   "speed": 1.0,
+   "caption": [
+    11.4,
+    13.833
+   ]
   },
   {
    "text": "This is fluorite matrix,",
+   "speaker": "expert",
    "start": 13.7,
-   "end": 15.09,
-   "speed": 1.0
+   "end": 15.22,
+   "speed": 1.1,
+   "caption": [
+    13.833,
+    15.267
+   ]
   },
   {
    "text": "a rare stone that forms",
-   "start": 15.21,
-   "end": 16.51,
-   "speed": 1.035
+   "speaker": "expert",
+   "start": 15.34,
+   "end": 16.78,
+   "speed": 1.1,
+   "caption": [
+    15.267,
+    16.833
+   ]
   },
   {
    "text": "amazing cube shapes all on its own.",
-   "start": 16.63,
-   "end": 18.61,
-   "speed": 1.0
+   "speaker": "expert",
+   "start": 16.9,
+   "end": 18.99,
+   "speed": 1.1,
+   "caption": [
+    16.833,
+    18.8
+   ]
   },
   {
    "text": "If you find large pieces,",
-   "start": 18.73,
-   "end": 20.26,
-   "speed": 1.0
+   "speaker": "expert",
+   "start": 19.11,
+   "end": 20.76,
+   "speed": 1.1,
+   "caption": [
+    18.8,
+    20.6
+   ]
   },
   {
    "text": "you could sell them for a fortune.",
-   "start": 20.45,
-   "end": 22.03,
-   "speed": 1.0
+   "speaker": "expert",
+   "start": 20.88,
+   "end": 22.56,
+   "speed": 1.086,
+   "caption": [
+    20.6,
+    22.5
+   ]
   },
   {
    "text": "If I find this, will I get rich?",
-   "start": 22.65,
-   "end": 24.47,
-   "speed": 1.0
+   "speaker": "asker",
+   "start": 22.68,
+   "end": 24.34,
+   "speed": 1.0,
+   "caption": [
+    22.5,
+    25.033
+   ]
   },
   {
    "text": "This is Super Seven, or Melody Stone,",
+   "speaker": "expert",
    "start": 25.0,
-   "end": 27.11,
-   "speed": 1.067
+   "end": 27.27,
+   "speed": 1.1,
+   "caption": [
+    25.033,
+    27.2
+   ]
   },
   {
    "text": "a rare blend of minerals.",
-   "start": 27.23,
-   "end": 28.56,
-   "speed": 1.063
+   "speaker": "expert",
+   "start": 27.39,
+   "end": 28.94,
+   "speed": 1.1,
+   "caption": [
+    27.2,
+    28.833
+   ]
   },
   {
    "text": "Find one with a special color,",
-   "start": 28.7,
-   "end": 30.23,
-   "speed": 1.1
+   "speaker": "expert",
+   "start": 29.06,
+   "end": 30.74,
+   "speed": 1.1,
+   "caption": [
+    28.833,
+    30.333
+   ]
   },
   {
    "text": "you could buy yourself a new car.",
-   "start": 30.35,
-   "end": 31.94,
-   "speed": 1.0
+   "speaker": "expert",
+   "start": 30.86,
+   "end": 32.86,
+   "speed": 0.98,
+   "caption": [
+    30.333,
+    33.46
+   ]
   }
  ]
 }
