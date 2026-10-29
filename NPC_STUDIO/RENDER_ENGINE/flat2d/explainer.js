@@ -508,7 +508,7 @@ const sceneFns = {
     g += chipPill(540, 450, '+10 min', C.cyan, pop(t, c.clock + 0.2));
     if (t >= c.nobody) {
       // dust + "nobody passed" counter
-      g += tag(540, 560, 'Nobody has gone through', { color: C.red, s: pop(t, c.nobody), size: 40 });
+      g += tag(540, 1130, 'Nobody has gone through', { color: C.red, s: pop(t, c.nobody), size: 40 });
       for (let i = 0; i < 10; i++) g += `<circle cx="${f1(450 + hash(i) * 180)}" cy="${f1(620 + ((t * 30 + i * 37) % 360))}" r="3" fill="#fff" opacity=".35"/>`;
     }
     return g;
@@ -585,7 +585,7 @@ const sceneFns = {
     const on = (a) => (t >= a ? 1 : 0);
     const active = t >= c.claim_turkey ? 'turkey' : t >= c.claim_afghan ? 'afghanistan' : t >= c.claim_iran ? 'iran' : null;
     const country = (name, color, at) => {
-      const p = prog(t, c.dervish - 0.3 + at, 0.6);
+      const p = prog(t, c.scene_rumi + 0.1 + at, 0.6);
       const lit = active === name ? 1 : 0;
       return `<path d="${GEO.countries[name].d}" fill="${color}" fill-opacity="${f1(0.12 + 0.3 * lit)}" stroke="${color}" stroke-width="${f1(4 / s)}" stroke-linejoin="round" opacity="${f1(p)}"/>` +
         (lit ? `<path d="${GEO.countries[name].d}" fill="none" stroke="${color}" stroke-width="${f1(16 / s)}" opacity=".5" filter="url(#glow)"/>` : '');
@@ -598,7 +598,7 @@ const sceneFns = {
     const k = inOut(prog(t, at, 0.5));
     const dx = active ? lerp(prev[0], target[0], k) : 540, dy = active ? lerp(prev[1], target[1], k) - 60 : 640;
     g += dervish(dx, dy, pop(t, c.dervish) * 0.72, t);
-    g += T(540, 220, 'Who does Rumi', { size: 66, fill: '#fff', op: fade(t, c.dervish) }) + T(540, 300, 'belong to?', { size: 80, weight: 900, fill: C.gold, op: fade(t, c.dervish + 0.3) });
+    g += T(540, 220, 'Who does Rumi', { size: 66, fill: '#fff', op: fade(t, c.scene_rumi + 0.15) }) + T(540, 300, 'belong to?', { size: 80, weight: 900, fill: C.gold, op: fade(t, c.scene_rumi + 0.4) });
     const bk = P(GEO.places.balkh), ko = P(GEO.places.konya);
     g += pin(bk[0], bk[1], pop(t, c.balkh), C.afghan, 'Balkh');
     g += pin(ko[0], ko[1], pop(t, c.tomb), C.red, 'Konya');
