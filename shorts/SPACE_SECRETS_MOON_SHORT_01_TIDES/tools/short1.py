@@ -245,7 +245,8 @@ def bulge_zoom(t, t0):
     img = bulge(t, t0 - 20, moon_off=t0 - 30.0, plain=True)
     k = 1.0 + 0.35 * ease(seg(t, t0, t0 + 4))
     w, h = W / k, H / k
-    img = img.resize((W, H), Image.BICUBIC, box=(540 - w / 2, 1000 - h * 0.55, 540 + w / 2, 1000 + h * 0.45))
+    y0 = clamp(1000 - h * 0.55, 0, H - h)
+    img = img.resize((W, H), Image.BICUBIC, box=(540 - w / 2, y0, 540 + w / 2, y0 + h))
     d = ImageDraw.Draw(img, "RGBA")
     if t >= ws(7, 1): pop(d, SAFE_CX, 330, "BUT NOT ALL TIDES", 76, t - ws(7, 1), YELLOW, 8)
     if t >= ls(8): pop(d, SAFE_CX, 440, "WHY?", 110, t - ls(8), WHITE)
@@ -301,14 +302,14 @@ def bars(t, t0, remove_at):
 
 def trace(t, t0):
     img = finish(stars() * 0.7, 0.1); d = ImageDraw.Draw(img, "RGBA")
-    pop(d, SAFE_CX, 330, "LUNAR TIDE FADES", 88, ws(6, 6) - 0.2 - 0 if t >= ws(6, 6) - 0.2 else -1, (255, 170, 150), 9)
+    pop(d, SAFE_CX, 330, "LUNAR TIDE FADES", 88, t - t0, (255, 170, 150), 9)
     sub(d, SAFE_CX, 425, "sea level at one coast (illustrative)", (220, 225, 235), 26)
     gx0, gx1, gy = 70, 1010, 860
     d.line((gx0, gy, gx1, gy), fill=(255, 255, 255, 60), width=2)
     vx = gx0 + 0.3 * (gx1 - gx0)
     d.line((vx, 560, vx, 1160), fill=(255, 255, 255, 90), width=2)
     d.text((vx + 12, 580), "Moon vanishes", font=font(F_MONO, 24), fill=(230, 230, 230), anchor="lm")
-    k = seg(t, t0, t0 + 3.2)
+    k = lerp(0.3, 1.0, seg(t, t0, t0 + 2.6))                                   # starts already drawn: never an empty frame
     pts = []
     for i in range(int(400 * k) + 1):
         x = i / 400

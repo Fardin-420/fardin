@@ -1,0 +1,31 @@
+RETENTION QA REPORT — MOON SHORT #1 "NO MOON = NO TIDES?" (FINAL_VIDEO.mp4)
+Pipeline: /yt-shorts (span) → /yt-script hookscore (82 STRONG) → /yt-package (100/100) → Retention System V3 → QC.
+
+TECHNICAL (qc.py + ffprobe on the delivered file)
+PASS  1080×1920 · 30 fps · H.264 High · AAC 48 kHz · 46.8 s · 9.6 Mb/s (~56 MB)
+PASS  -14.0 LUFS · true peak -2.4 dBFS · 0 clipped samples · no silence gaps · no black bars
+PASS  black frames: none. The first render had 0.3 s of near-black at 0:24.9 (the tide graph starting empty). Fixed by
+      starting it already drawn, re-rendered and re-checked.
+
+OPENING GATE (first 3 s, inspected separately)
+1. Muted phone? YES: a full Moon over a night beach, a tide post, "NO MOON = NO TIDES?".
+2. Narration immediate? YES: VO at 0.05 s; impact on frame 0.
+3. Understood in 2 s? YES: "Lose the Moon..." at 0.4 s, with the Moon vanishing on the word.
+4. Clear visual event? YES: the Moon vanishes at 0.45 s (inside 0.5 s) with a ring, a flash and a shake.
+5. Payoff by 8 s? YES: by 3 s the post shows the top 2 ft "LOST" and 1 ft "kept (Sun)".
+6. Captions? YES: hook caption only (y 740–875, safe area), then word captions at y≈1390.
+7. Every scene advances the story? YES (below).
+GATE HISTORY: v1 FAILED. The Moon vanished at 0.59 s, the hook caption sat in TikTok's bottom UI zone, and the beach
+was crude. Fixed: vanish at 0.45 s, caption moved up, perspective shoreline with a tide post.
+Review also caught the bulge diagram repeating 5 times, breaking the no-repeat rule. Replaced with a time-lapse beach,
+an illustrative tide curve and a zoomed bulge.
+
+BEATS
+0:00 hook (Moon vanishes, 2 of 3 ft lost) · 0:05 water keeps moving (bulge sloshes) · 0:10 momentum (time-lapse beach)
+0:11 ocean basins (amphidromic schematic) · 0:19 still adjusting (beach) · 0:25 lunar tide fades (tide curve)
+0:29 "but not all tides... why?" (zoomed bulge) · 0:33 the Sun makes tides too · 0:36 pull bars, Moon 1.00 vs Sun 0.46
+→ the Moon's bar collapses · 0:41 solar tides stay (a third of today's range) · 0:46 blends back into frame 0 (loop).
+
+SCIENCE: labelled ILLUSTRATION / DIAGRAM / SCHEMATIC throughout; the bulges are marked as exaggerated. "About 2 of every
+3 feet" follows from the Sun's tide force being ~46% of the Moon's (range ≈ 0.46/1.46 ≈ 1/3 remains); local tides vary.
+LIMITS: AI voice (label it on TikTok); mix verified by measurement only; hookscore is a heuristic, not a promise of views.
