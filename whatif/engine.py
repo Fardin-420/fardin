@@ -8,7 +8,7 @@ import sys
 import wave
 
 import numpy as np
-from PIL import Image, ImageDraw, ImageFilter, ImageFont
+from PIL import Image, ImageChops, ImageDraw, ImageFilter, ImageFont
 
 W, H, FPS = 576, 1024, 30
 PAD = 1.12  # background is rendered larger so the camera can push in
@@ -566,6 +566,28 @@ def make_audio(story, path):
         w.writeframes(st.tobytes())
 
 
+# ---------------------------------------------------------------- 3D clips
+CLIP_DIR = __file__.rsplit("/", 1)[0] + "/clips"
+
+
+def clip_frames(name, nf):
+    """Yield nf RGB frames from clips/<name>.mp4 (rendered by blender/render_story.sh), holding the last one."""
+    p = subprocess.Popen(["ffmpeg", "-v", "error", "-i", f"{CLIP_DIR}/{name}.mp4", "-f", "rawvideo", "-pix_fmt", "rgb24",
+                          "-s", f"{W}x{H}", "-"], stdout=subprocess.PIPE)
+    last = None
+    for _ in range(nf):
+        buf = p.stdout.read(W * H * 3)
+        if len(buf) == W * H * 3:
+            last = Image.frombytes("RGB", (W, H), buf)
+        yield last.copy()
+    p.kill()
+
+
+def bloom(img, thresh=170, radius=14, amount=0.55):
+    hi = img.point(lambda v: max(0, v - thresh) * 255 // (255 - thresh)).filter(ImageFilter.GaussianBlur(radius))
+    return ImageChops.add(img, Image.eval(hi, lambda v: int(v * amount)))
+
+
 # ---------------------------------------------------------------- render
 def render(story, out):
     wav = out.replace(".mp4", ".wav")
@@ -577,7 +599,9 @@ def render(story, out):
     for idx, sc in enumerate(story):
         dur = sc["dur"]
         nf = int(dur * FPS)
-        if sc["type"] != "end":
+        if sc["type"] == "clip":
+            frames = clip_frames(sc["p"]["clip"], nf)
+        elif sc["type"] != "end":
             key = (sc["type"], repr(sorted(sc.get("p", {}).items())))
             if key not in cache:
                 cache[key] = SCENES[sc["type"]](np.random.default_rng(hash(key) % 2**32), sc.get("p", {}))
@@ -589,6 +613,9 @@ def render(story, out):
             u = t / dur
             if sc["type"] == "end":
                 img = end_card(sc, t)
+            elif sc["type"] == "clip":
+                img = bloom(next(frames))
+                draw_overlay(img, sc, t, dur)
             else:
                 prog = pr0 + (pr1 - pr0) * ease(u / 0.85)
                 base = dyn.arr_hook(A, t) if hasattr(dyn, "arr_hook") else A

@@ -99,3 +99,19 @@ NET = [
 ]
 
 STORIES = dict(men=MEN, bees=BEES, internet=NET)
+
+
+def _as_3d(story, clips):
+    """Swap 2D scene types for rendered Blender clips (None keeps the 2D scene)."""
+    out = []
+    for sc, clip in zip(story, clips):
+        sc = dict(sc)
+        if clip:
+            sc["type"], sc["p"], sc["prog"] = "clip", dict(clip=clip), (0, 0)
+        out.append(sc)
+    return out
+
+
+MEN_3D = _as_3d(MEN, ["city_crowd", "city_vanish", "sky_plane", "street_fire", "city_dark", "vigil", None, "prison",
+                      "street_calm", "construction", "lab", "lab_close", "park", "campfire", "snow_girl", None])
+STORIES["men3d"] = MEN_3D
