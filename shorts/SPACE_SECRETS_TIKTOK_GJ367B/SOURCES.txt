@@ -1,13 +1,23 @@
 SPACE SECRETS — GJ 367 b — SOURCES AND FACT CHECK
 
-IMPORTANT — VERIFICATION STATUS
-This production environment blocks NASA, ESA, arXiv, ADS, the NASA Exoplanet Archive and journal sites, so nothing
-could be re-checked online during production. Figures below come from the published literature as known up to mid-2026.
- * The June 22, 2026 peer-reviewed revision (new mass and radius; interior models giving an iron mass fraction of about
-   50–70%) was SUPPLIED BY THE CLIENT. I could NOT verify it independently, and I don't have its authors, journal or DOI.
-   >>> Before posting, confirm the paper and add its citation here and in the caption. <<<
-   The video reports it only as "new research ... revised its mass and its size" and "interior models now suggest ...
-   roughly 50 to 70 percent", and never as settled fact.
+VERIFICATION STATUS (updated for V3)
+ * The 2026 revision is now matched to an identifiable publication:
+     Lee, R. A. et al. (2026), "Revisiting the Exo-Mercury Candidate GJ 367 b with ESPRESSO and a Self-consistent
+     Tidal Distortion Model", The Astronomical Journal 172, DOI 10.3847/1538-3881/ae6cec; preprint arXiv:2606.18355
+     (posted June 16, 2026); astrobiology.com coverage dated June 22, 2026.
+   Reported: radius 0.736 ± 0.035 R⊕ (TESS); mass 0.503 ± 0.078 M⊕ (ESPRESSO radial velocities); bulk density about
+   6.9 g/cm³; with a tidal-distortion interior model, an iron mass fraction of about 50–70%, "broadly consistent with
+   Mercury" and less iron-rich than earlier estimates.
+   How it was checked: search-engine records for arXiv, IOP Science (the AJ publisher) and astrobiology.com agree on the
+   title, the DOI and these numbers. The publisher and arXiv pages themselves are blocked from this production environment,
+   so the full text was NOT read. The author list differs slightly between listings, so it is cited as "Lee et al."
+   Search: https://arxiv.org/abs/2606.18355 · https://iopscience.iop.org/article/10.3847/1538-3881/ae6cec ·
+   https://astrobiology.com/2026/06/22/revisiting-the-exo-mercury-candidate-gj-367-b-with-espresso-and-a-self-consistent-tidal-distortion-model/
+ * Wording kept qualified: "interior models now SUGGEST ... ROUGHLY 50 to 70 percent". On screen: "interior models · Lee et al. 2026".
+ * The exact "June 22" date is the coverage/publication date found in listings. The narration says only "June 2026".
+ * With the revised radius (0.736), the narration's "roughly three-quarters of its width" is accurate; the screen now says ~0.74×.
+ * New on screen in V3: orbital speed ≈ 240 km/s = 2π × 0.0071 AU / 7.7 h (Earth ≈ 30 km/s); Mercury ≈ 0.383 Earth widths,
+   so GJ 367 b ≈ 1.9× Mercury's width.
 
 CORE REFERENCES (pre-2026)
  1. Lam, K. W. F. et al. (2021), "GJ 367b: A dense, ultrashort-period sub-Earth planet transiting a nearby red dwarf
@@ -25,13 +35,13 @@ FIGURES USED ON SCREEN / IN NARRATION
                                   orbit), so it is called "probably" and is never used as the "day"     [1]
  Distance                         ~9.4 pc ≈ 31 light-years, constellation Vela                         [1]
  Size                             ~0.70 Earth radii. The narration says "roughly three-quarters"; the screen shows
-                                  "~0.7×". Slightly generous rounding, flagged.                         [1,2]
+                                  "~0.74×" (V3); matches the 2026 radius of 0.736.                         [1,2]
  Star                             M dwarf GJ 367, ~0.46 R☉, ~3,500 K; drawn to scale against the Sun   [1]
  Orbit size                       ~0.007 AU (<1/100 of Earth–Sun); about 3.4 stellar radii from the
                                   star's centre in the inset                                            [1]
  Dayside temperature              "may reach around 2,700 °F" (≈1,500 °C), labelled an estimate        [1,3]
  Earlier composition              up to ~90% iron (model-dependent)                                    [2]
- 2026 composition                 ~50–70% iron by mass (interior models)                    CLIENT-SUPPLIED, UNVERIFIED
+ 2026 composition                 ~50–70% iron by mass (interior models)                    Lee et al. 2026 (AJ)
  Earth iron fraction              ~32% by mass ("about one-third")                     standard planetary-science value
  Mercury iron fraction            ~70% by mass (core)                                   standard planetary-science value
 
