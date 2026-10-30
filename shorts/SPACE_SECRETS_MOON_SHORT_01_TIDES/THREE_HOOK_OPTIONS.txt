@@ -1,0 +1,27 @@
+MOON SHORT #1 — "NO MOON = NO TIDES?" — THREE HOOK OPTIONS
+(/yt-script + hookscore.py; Retention System V3 Rule 2. Scores are a heuristic, not a prediction.)
+
+HOOK A — SHOCKING SCIENTIFIC FACT   ✅ SELECTED   hookscore 82 STRONG (The Question)
+1. Narration: "Lose the Moon, and you lose about two of every three feet of tide. But why not all of it?"
+2. First frame: a full Moon over a night beach, moonlight glittering on the sea, a tide post at 3 ft on the left.
+3. Camera: locked-off with an impact shake as the Moon vanishes (0.45 s); a time-lapse tide keeps moving.
+4. Sound: sub-bass impact on frame 0, a deep "whoomp" and crack as the Moon vanishes, surf bed.
+5. On-screen text: "NO MOON = / NO TIDES?" (only text during the hook); the post marks the top 2 ft "LOST" and the rest "kept (Sun)".
+6. Why they stay: a concrete number ("2 of every 3 feet") they can see on the post, plus an open question ("why not
+   all?") that the Short answers at 0:33.
+   Accuracy: the Sun's tide-raising force is ~46% of the Moon's, so the combined range shrinks to roughly a third.
+   Local tides vary, which is why the line says "about".
+
+HOOK B — TERRIFYING HYPOTHETICAL   hookscore 63 WORKABLE
+1. "If the Moon vanished tonight, would your beach flood? No, but you would lose most of your tides. Why?"
+2. The same beach with the water surging at night.  3. Push-in on the shoreline.  4. A wave crash plus a boom.  5. "WOULD IT FLOOD?"
+6. Weaker: too long (22 words), and it raises a fear (flooding) only to deny it, which is close to misleading.
+
+HOOK C — UNEXPECTED VISUAL REVEAL   hookscore 52 WEAK
+1. "Watch what happens to your beach in the 4 seconds after the Moon vanishes."
+2. The beach, with the Moon vanishing on frame 0.  3. Static, then a time-lapse.  4. Impact plus silence.  5. "WATCH THE WATER"
+6. Weaker: it implies an instant visible change, which contradicts the science in the Short ("wouldn't flatten in one second").
+
+PACKAGING (/yt-package, title.py)
+SHIP: Title "No Moon, No Tides? About 1/3 Would Stay" (39 characters) + cover text "WHY NOT ALL?": 100/100
+Rejected: "No Moon, No Tides? The Answer Is 46%" also scored 100/100 but misleads (46% is the Sun's pull, not the tide you keep).
