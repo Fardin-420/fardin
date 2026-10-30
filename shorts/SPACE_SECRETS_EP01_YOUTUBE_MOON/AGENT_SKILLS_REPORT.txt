@@ -1,0 +1,52 @@
+YOUTUBE AGENT SKILLS — RUN ON "WHAT IF THE MOON DISAPPEARED TONIGHT?" + CHANNEL
+(github.com/Jakeschincariol/youtube-agent-skill, MIT. Voice profile: .claude/youtube/voice.md)
+
+/yt-audit — THE ONE FIX
+All 6 channel openings score WEAK (33–40/100) on hookscore.py, and the weakest property in 5 of 6 is STAKES: the first
+line describes an event but never says what it costs YOU, with no "you" and no number. Titles are fine (76–98/100).
+This matches the black-hole result (12% retention, biggest drop at 0:01).
+FIX: from now on the first spoken line must score ≥72 (STRONG) before anything is rendered, by putting the viewer and a
+concrete number at stake. Everything else waits.
+(Still needed for a full audit: channel URL, upload dates, views per video, thumbnails at feed size.)
+
+/yt-package — Moon documentary
+Current : "What If the Moon Disappeared Tonight? (The Real Consequences)" + "NO MORE MOON?!": 58/100
+          (61 characters, cut on desktop and mobile; the thumbnail repeats "moon")
+SHIP    : "What If the Moon Disappeared Tonight?" (37 characters, survives the mobile feed) + thumbnail "NO MORE TIDES?": 98/100
+Alt     : "What If the Moon Vanished? 4.5 Billion Years, Gone" + "NO MORE TIDES?": 98/100 (cut on mobile)
+
+/yt-seo — Moon documentary description (first two lines are the search snippet)
+What would happen to Earth if the Moon disappeared tonight? Tides, Earth's rotation and tilt, eclipses, animals and
+whether humans could survive, explained with science from NASA and NOAA.
+(Then the chapters below, then the existing long description from YOUTUBE_UPLOAD_PACKAGE.txt.)
+Queries this should win: "what if the moon disappeared", "what would happen without the moon",
+"would earth survive without the moon".
+Tags (disambiguation only): what if the moon disappeared, moon disappeared, earth without the moon, no moon, tides without moon,
+earth axial tilt, lunar recession, solar eclipse, space documentary, space secrets
+
+/yt-chapters — chapters.py found 10 boundaries, identical to the film's chapter cards (valid: starts at 00:00, ≥3, each ≥10 s). Retitled:
+0:00 The Night the Moon Vanishes
+0:53 The First Few Seconds
+2:24 What Happens to the Tides?
+3:58 Animals That Follow the Moon
+5:12 Would Earth Stop Spinning?
+6:23 The Hidden Danger: Earth's Tilt
+8:10 A World Without Eclipses
+9:19 What About the Weather?
+10:31 Could Humanity Survive?
+11:42 The Moon Is Leaving
+
+/yt-edit — deadair.py on the narration track
+0 filler, 0 retakes. 28 "dead" gaps, 27.0 s in total. All are designed: nine 3.0 s chapter breaks (chapter cards on screen) and
+0.6 s beats after one-word lines. No cuts recommended. Optional: shorten the chapter breaks 3.0 → 2.0 s (−9 s).
+
+/yt-shorts — see SHORTS_FROM_DOCUMENTARY.txt (5 Shorts, best hook 82/100 STRONG).
+
+NEEDS YOUR INPUT (the skills refuse to invent data)
+/yt-retention : YouTube Studio → video → Analytics → Engagement → retention chart → download "Audience retention" CSV.
+/yt-comment   : paste the comments from any posted video.
+/yt-viral     : 3–5 space channels you compete with (URLs). YouTube is blocked from this environment, so paste
+                their video lists (title + views), or let me know if a list is available.
+/yt-plan      : how many hours a week you have, and the best posting day from your analytics.
+
+ship it, or change it?
