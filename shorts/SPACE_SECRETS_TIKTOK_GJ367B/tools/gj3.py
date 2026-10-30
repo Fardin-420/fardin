@@ -718,8 +718,8 @@ def sc_locked3(t, t0, t1):
 def sc_heat3(t, t0, t1):                                                         # face-on to the glowing dayside
     k = seg(t, t0, t1)
     arr = stars().copy()
-    arr = rock(arr, 600, 880, lerp(500, 545, ease(k)), light=(-0.22, 0.12, 0.97), hot=1.75, lon=-12 * k)
-    img = finish(arr, 0.75); d = ImageDraw.Draw(img, "RGBA"); tag(d)
+    arr = rock(arr, 600, 880, lerp(500, 545, ease(k)), light=(-0.22, 0.12, 0.97), hot=1.15, lon=-12 * k)
+    img = finish(arr, 0.5); d = ImageDraw.Draw(img, "RGBA"); tag(d)
     if t >= ws(10, 4):
         kk = ease_out(seg(t, ws(10, 4), ws(10, 6) + 0.2))
         x, y0, y1 = 100, 1180, 560
@@ -847,7 +847,7 @@ def sc_unknown(t, t0, t1):                                                      
     if g > 0: wire_sphere(d, 540, 820, lerp(360, 385, z), 0.4 * (t - t0), g)
     q1, q2 = seg(t, ws(17, 7), ws(17, 7) + 0.3), seg(t, ws(17, 11), ws(17, 11) + 0.3)
     if q1 > 0: label(d, 540, 300, "INTERIOR: inferred, not observed", None, int(255 * q1), (130, 215, 255))
-    if q2 > 0: label(d, 540, 1250, "SURFACE: never imaged", None, int(255 * q2), (255, 200, 150))
+    if q2 > 0: label(d, 540, 352, "SURFACE: never imaged", None, int(255 * q2), (255, 200, 150))
     tag(d, "MODEL  ·  what we can't see directly", (110, 220, 210))
     return img
 
