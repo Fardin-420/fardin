@@ -227,10 +227,18 @@ def orbit_view(t, hours, cx=540, cy=620, Rs=105, tilt=0.30, planet_px=26, flare=
     return img, (px, py)
 
 # ------------------------------------------------------------------ scenes
+def hook_bg():
+    def make():
+        yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+        dist = np.hypot(xx - 540, (yy - 620) * 0.8)
+        g = 55 * np.exp(-dist / 430) + 21 * np.exp(-dist / 1500)
+        return stars() + g[..., None] * np.array([1.0, 0.42, 0.26], np.float32)
+    return cache("hookbg", make)
+
 def sc_hook(t):
     hrs = 24 * t / HOOK_T if VARIANT != "B" else P_H * seg(t, 0, HOOK_T)
     flare = max(0.0, 1 - t / 0.25)
-    img, (px, py) = orbit_view(t, hrs, flare=flare)
+    img, (px, py) = orbit_view(t, hrs, flare=flare, base=hook_bg().copy())
     d = ImageDraw.Draw(img, "RGBA")
     if t < 0.4:                                                                   # frame-0 impact shockwave (no white flash)
         rr = 120 + 900 * ease_out(t / 0.4)
@@ -313,9 +321,15 @@ def sc_stars(t, t0, t1):
     tag(d, "ILLUSTRATION  ·  star sizes to scale", ORANGE)
     return img
 
+def backdrop(t, hot=0.5):
+    """Lit planet limb under the diagram so a diagram scene never opens on a near-black frame."""
+    arr = stars().copy()
+    arr = red_dwarf(arr, 1120, 1500, 260, t)
+    return rock(arr, 470, 2380, 900, light=(0.55, 0.75, 0.35), hot=hot)
+
 def sc_distance(t, t0, t1):
     k = seg(t, t0, t1)
-    img = finish(stars() * 0.9, 0.1); d = ImageDraw.Draw(img, "RGBA")
+    img = finish(backdrop(t), 0.4); d = ImageDraw.Draw(img, "RGBA")
     x0, x1, y = 80, 1000, 760
     d.line((x0, y, x1, y), fill=(190, 220, 255, 230), width=6)
     d.ellipse((x0 - 22, y - 22, x0 + 22, y + 22), fill=(255, 220, 120))
@@ -331,10 +345,10 @@ def sc_distance(t, t0, t1):
         sub(d, x0 + 30, y + 235, "less than 1/100 of Earth's distance", (240, 220, 200), 26, int(255 * q), "lm")
     z = ease_out(seg(t, ws(7, 7) + 0.6, ws(7, 7) + 1.2))
     if z > 0:
-        bx0, by0, bx1, by1 = 120, 1040, 960, 1310; zc = (540, 1175)
+        bx0, by0, bx1, by1 = 120, 1030, 960, 1250; zc = (540, 1140)
         d.rounded_rectangle((bx0, by0, bx1, by1), 16, fill=(0, 0, 0, int(200 * z)), outline=(255, 150, 70, int(255 * z)), width=3)
         d.line((x0 + 6, y + 330, bx0 + 30, by0), fill=(255, 150, 70, int(160 * z)), width=2)
-        ro, rs = 370 * z, 370 * z * 0.0021 / 0.0071                                 # star radius ~0.0021 AU vs orbit 0.0071 AU
+        ro, rs = 340 * z, 340 * z * 0.0021 / 0.0071                                 # star radius ~0.0021 AU vs orbit 0.0071 AU
         d.arc((zc[0] - ro, zc[1] - ro * 0.3, zc[0] + ro, zc[1] + ro * 0.3), 0, 360, fill=(255, 210, 180, int(200 * z)), width=3)
         d.ellipse((zc[0] - rs, zc[1] - rs, zc[0] + rs, zc[1] + rs), fill=(235, 95, 50, int(255 * z)))
         d.arc((zc[0] - ro, zc[1] - ro * 0.3, zc[0] + ro, zc[1] + ro * 0.3), 0, 180, fill=(255, 220, 190, int(230 * z)), width=3)
@@ -399,8 +413,8 @@ def interior(d, cx, cy, R, core_frac, rng_lo=None, rng_hi=None, t=0.0):
     return rc, rc
 
 def sc_old_model(t, t0, t1):
-    img = finish(stars() * 0.8, 0.1); d = ImageDraw.Draw(img, "RGBA")
-    if t >= ws(11, 3): pop(d, SAFE_CX, 330, "WHAT IS IT MADE OF?", 84, t - ws(11, 3), WHITE, 8)
+    img = finish(backdrop(t, 0.8), 0.4); d = ImageDraw.Draw(img, "RGBA")
+    pop(d, SAFE_CX, 330, "WHAT IS IT MADE OF?", 84, t - t0, WHITE, 8)
     if t >= ls(12) - 0.1:
         g = ease_out(seg(t, ls(12) - 0.1, ls(12) + 0.6))
         interior(d, 540, 820, 300 * g + 1, 0.9)

@@ -1,0 +1,50 @@
+SPACE SECRETS — GJ 367 b "THREE YEARS IN ONE DAY" — RETENTION + QA REPORT
+File inspected: GJ367B_TIKTOK_FINAL_9X16.mp4 (the actual rendered and mastered file; 97.1 MB)
+
+AUTOMATED QC (npc.qc.validate on the final MP4)                                    ALL PASS
+ container mp4 · H.264 High · 1080x1920 (9:16) · 30/1 fps · yuv420p · 88.600 s (target 85–100)
+ AAC 48 kHz stereo · 8.8 Mb/s · -14.0 LUFS integrated · true peak -2.3 dBFS · 0 clipped samples
+ black frames: none · silence gaps: none · black bars: 2656/2656 frames full-frame
+
+ISSUES FOUND AND FIXED BEFORE SIGN-OFF
+ 1. Hook preview: the hook scene cut away at 1.28 s, before the 3 laps finished. It now holds to 3.0 s, with laps completing at 0.80 / 1.60 / 2.41 s.
+ 2. The frame-0 flare turned the red dwarf yellow-white, like the Sun. The flare is now kept red, and the impact is an orange shockwave ring.
+ 3. The birthday scene duplicated the caption with pop text (two competing text blocks). The pops were removed and replaced by a data label.
+ 4. In the Earth-day scene, the YEAR labels collided with the caption band. The clock and labels moved up.
+ 5. Star-size labels overlapped the Sun disc. The labels moved into clear space.
+ 6. The ~90%-iron cutaway read as a blank white disc. It is now a shaded IRON core with a ROCK leader.
+ 7. "Less than 1/100" was invisible on the 1 AU scale. Added a zoom inset of the GJ 367 system to scale.
+ 8. QC flagged near-black frames at 23.9–24.4 s and 41.7–42.4 s. Both scenes got a lit planet-limb backdrop.
+ 9. QC black-bar detector flagged 0.07–2.97 s (the hook's dark edges). Added a warm red-dwarf glow; now 100% full-frame.
+10. The first master was 108 MB (over GitHub's 100 MiB limit). Re-encoded at 8.6 Mb/s, giving 97.1 MB.
+ Fixes 8–9 were re-rendered for the affected frames only and spliced into the full render (tools/splice.py).
+
+RULE 5 GATE (frames 0.0 / 0.1 / 0.5 / 1.0 / 2.0 / 3.0 s, from the final MP4)
+ 1. Makes sense on a muted phone?   YES. "3 YEARS / 1 EARTH DAY" over a planet orbiting a small red star, with a 24 h clock.
+ 2. Narration starts immediately?   YES. "Three" at 0.00 s; bass impact on frame 0.
+ 3. Opening understood within 2 s?  YES. By 2.0 s, counters 1 and 2 are lit with the clock at 19:11; all 3 by 2.41 s with the clock at 24:00.
+ 4. Clear visual event?             YES. The planet is moving on frame 0 (trail visible); a shockwave ring; three orbital pulses.
+ 5. Real payoff by 8 s?             YES. "A birthday every 7.7 hours" (2.8 s), then "one day on Earth = it circles its star 3 times" (6.8–10.5 s).
+ 6. Captions visible and timed?     YES. Word-synced from the alignment; Inter Black 92 px, white/yellow with black stroke; centred
+                                    x 510, y 1390 (inside the safe area); no word captions during the hook.
+ 7. Every scene advances the story? YES. 14 scenes, each with new information (see COMPLETE_SCRIPT.txt); no repeated background loop.
+
+SCIENCE CHECKS
+ 7.7 h figure:     narration at 2.8 s; on screen "1 ORBIT = 1 YEAR = 7.7 h"; clock arcs at 7.7 h steps.
+ Earth day:        always "one EARTH day" / "24 h"; orbit ≠ rotation (tidal lock is said with "probably").
+ Red dwarf scale:  ~0.46× the Sun, drawn to scale beside the Sun; never Sun-sized.
+ 2026 details:     chip "NEW RESEARCH · JUNE 22, 2026 · peer-reviewed · revised mass and radius" (49.5–54.4 s), then
+                   "50–70% IRON" (from 57.1 s) as a range band labelled "interior models · not observed directly".
+                   The older "almost pure iron" claim is labelled EARLIER ESTIMATE (Goffo et al. 2023) and is not presented as settled.
+                   !! The 2026 paper is CLIENT-SUPPLIED and could not be verified here; see SOURCES.txt.
+ No fabricated photos: every planet frame carries "SCIENTIFIC RECONSTRUCTION · not a photograph"; graphs are "illustrative signals".
+ Flagged rounding: the narration says "roughly three-quarters of its width"; the published value is ~0.70 (shown as ~0.7× on screen).
+
+AUDIO
+ Discovery impact (riser + boom + bell) on "research" at 50.3 s; heat rumble under the 2,700 °F line; three pulses in the finale.
+ Music ducks under the voice (-62% sidechain). No clipping; no dead air (deadair.py: 3 pauses ≤0.05 s over the floor, kept as beats).
+
+DURATION / EXPORT
+ 88.6 s; 9:16 1080x1920; the final 0.6 s cross-fades into frame 0 for a seamless loop.
+
+NOT PROMISED: virality. Post-publication skills (/yt-retention etc.) need your real analytics.
