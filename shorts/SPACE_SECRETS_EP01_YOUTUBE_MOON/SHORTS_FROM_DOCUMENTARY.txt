@@ -1,0 +1,75 @@
+/yt-shorts — 5 SHORTS INSIDE "WHAT IF THE MOON DISAPPEARED TONIGHT?" (12:57)
+Picked with the yt-shorts rules: 20–55 s; opens on a complete thought; contains a turn; ends on a line.
+New first lines scored with yt-script/hookscore.py (a heuristic, not a predictor), and fact-checked.
+Every Short also follows SPACE_SECRETS_RETENTION_SYSTEM.md (visual event on frame 0, hook caption, gate on the first 3 s).
+
+──────────────────────────────────────────────────────────────────────────────
+#1  NO MOON, NO TIDES?            02:55.2 – 03:35.4  (40 s · lines 38–48)
+Original first line : "If the Moon vanished, the oceans wouldn't simply flatten in one second."
+NEW first line      : "Lose the Moon and you lose about 2 of every 3 feet of tide. But why not all of it?"   hookscore 82 STRONG
+                      (Fact: the Sun's tide-raising force is ~46% of the Moon's, so roughly two-thirds of the tidal
+                      range goes. Local tides vary; "about" stays in.)
+Turn                : water has momentum → the lunar pattern fades → but the Sun keeps its own tides.
+Ends on             : "Without the Moon, Earth would continue experiencing solar tides."
+On-screen (0–2 s)   : "NO MOON = NO TIDES?"
+Loop point          : the ending names solar tides, which is the answer to the opening "why not all of it?"
+Vertical framing    : a centre crop FAILS. The bulge diagram has Earth at x≈700 and the Moon at x≈1500, and the force
+                      bars run full width. Re-render vertically: Earth on top, Moon below, bars stacked.
+
+#2  THE 400× COINCIDENCE           08:26.1 – 08:58.4  (32 s · lines 115–121)
+Original first line : "Think about how unusual total solar eclipses really are."
+NEW first line      : "Lose the Moon and you lose every total solar eclipse. Why? A 400-to-1 coincidence nobody planned."   hookscore 73 STRONG
+Turn                : the Sun is ~400× wider but ~400× farther away → the corona appears only in totality → gone without the Moon.
+Ends on             : "But nothing quite like the familiar spectacle of a total solar eclipse."
+On-screen (0–2 s)   : "400× BIGGER. SAME SIZE?"
+Loop point          : the last word "eclipse" sets up the first line's "lose every total solar eclipse".
+Vertical framing    : a centre crop WORKS. The eclipse sits at frame centre. The two fact cards (x≈100 and x≈1300) are
+                      cut off, so re-place them top and bottom.
+
+#3  THE MOON IS LEAVING            11:48.8 – 12:15.5  (27 s · lines 161–167)
+Original first line : "The Moon is already moving away from us."
+NEW first line      : "Every year you lose 3.8 centimeters of Moon. It is drifting away, but why?"   hookscore 71 WORKABLE
+Turn                : too slow to notice → over millions of years it adds up → it wasn't here when dinosaurs walked.
+Ends on             : "And it won't remain at exactly the same distance forever."
+On-screen (0–2 s)   : "THE MOON IS LEAVING"
+Loop point          : "won't remain ... forever" leads straight back to "every year you lose 3.8 cm".
+Vertical framing    : a centre crop FAILS. Earth is at x≈300 and the Moon at x≈1300–1560. Re-render vertically:
+                      Earth at the bottom, Moon above, distance arrow running upward.
+Note                : the "why" in the hook is answered in the long video (tidal friction), not in this span. Either add
+                      line 80 ("This process gradually slows Earth's rotation while pushing the Moon farther away", +5 s)
+                      or drop "but why?".
+
+#4  WOULD WE SURVIVE?              10:36.8 – 11:09.6  (33 s · lines 142–149)
+Original first line : "Could humanity survive without the Moon?"
+NEW first line      : "If the Moon vanished tonight, would you die before morning? Almost certainly not, but here's what you'd lose."   hookscore 67 WORKABLE
+Turn                : "almost certainly, yes" → the checklist (atmosphere, Sun, oceans, gravity, orbit) → challenges, not extinction.
+Ends on             : "...but the Moon's absence alone would not mean immediate human extinction."
+On-screen (0–2 s)   : "NO MOON. NO HUMANS?"
+Loop point          : "not immediate extinction" answers "would you die before morning?"
+Vertical framing    : a centre crop is PARTIAL. The globe sits at x≈1240, so half is lost, and the checklist at x≈120 is
+                      cut. Re-render with the globe centred and the checklist below it.
+
+#5  A SKY YOU'VE NEVER HAD          01:48.8 – 02:24.0  (35 s · lines 24–30)
+Original first line : "Without the Moon, a major natural source of nighttime illumination would disappear."
+NEW first line      : "Without the Moon, you'd never see a moonlit night again. But you would gain something. What?"   hookscore 64 WORKABLE
+Turn                : darker landscapes, shadows fade → but the Milky Way gets easier to see.
+Ends on             : "But the universe above it might appear even more extraordinary."
+On-screen (0–2 s)   : "THE LAST MOONLIT NIGHT"
+Loop point          : "the universe above" answers "you would gain something. What?"
+Vertical framing    : a centre crop WORKS for the landscape and Milky Way band. The lux meter (x≈1480) is cut, so move it
+                      to the top. The Moon (x≈1500) leaves the frame early; keep it by panning right during the first 2 s.
+
+Runners-up: "Earth won't stop spinning" (05:18.7–05:59.6, 41 s, lines 71–81); "corals that spawn by moonlight"
+(04:08.3–04:46.1, 38 s, lines 55–62).
+
+RECOMMENDED ORDER TO POST: #1 tides (strongest hook) → #2 eclipse (best visual) → #3 recession → #4 survival → #5 Milky Way.
+
+──────────────────────────────────────────────────────────────────────────────
+COPY BLOCK
+#1 02:55.2–03:35.4 | "Lose the Moon and you lose about 2 of every 3 feet of tide. But why not all of it?" | NO MOON = NO TIDES?
+#2 08:26.1–08:58.4 | "Lose the Moon and you lose every total solar eclipse. Why? A 400-to-1 coincidence nobody planned." | 400× BIGGER. SAME SIZE?
+#3 11:48.8–12:15.5 | "Every year you lose 3.8 centimeters of Moon. It is drifting away, but why?" | THE MOON IS LEAVING
+#4 10:36.8–11:09.6 | "If the Moon vanished tonight, would you die before morning? Almost certainly not, but here's what you'd lose." | NO MOON. NO HUMANS?
+#5 01:48.8–02:24.0 | "Without the Moon, you'd never see a moonlit night again. But you would gain something. What?" | THE LAST MOONLIT NIGHT
+
+ship it, or change it?
