@@ -1,0 +1,84 @@
+1
+00:00:00,000 --> 00:00:01,030
+Three years in one day!
+
+2
+00:00:01,280 --> 00:00:06,429
+You'd have a birthday every 7.7 hours here, but you would never survive one. Why?
+
+3
+00:00:06,828 --> 00:00:10,475
+So while one day passes on Earth, it circles its star three times.
+
+4
+00:00:10,926 --> 00:00:12,899
+Meet GJ 367 b.
+
+5
+00:00:13,299 --> 00:00:16,233
+A real rocky world, about 31 light-years away.
+
+6
+00:00:16,533 --> 00:00:19,638
+It's a little smaller than Earth, roughly three-quarters of its width.
+
+7
+00:00:20,038 --> 00:00:23,643
+And it orbits a red dwarf, a star smaller and cooler than our Sun.
+
+8
+00:00:23,943 --> 00:00:29,764
+But it hugs that star incredibly closely, less than one hundredth of the distance between Earth and the Sun.
+
+9
+00:00:30,064 --> 00:00:31,549
+That's why its year is so short.
+
+10
+00:00:31,999 --> 00:00:35,896
+It's probably tidally locked, with one side always facing its star.
+
+11
+00:00:36,197 --> 00:00:41,248
+That side may reach around 2,700 °F. Hot enough to melt rock.
+
+12
+00:00:41,748 --> 00:00:43,852
+But the real mystery is what it's made of.
+
+13
+00:00:44,302 --> 00:00:49,046
+Early measurements made it look incredibly dense... like a ball of almost pure iron.
+
+14
+00:00:49,446 --> 00:00:54,419
+But new research, published in June 2026, revised its mass and its size.
+
+15
+00:00:54,718 --> 00:00:59,963
+Interior models now suggest iron makes up roughly 50 to 70 percent of its mass.
+
+16
+00:01:00,364 --> 00:01:03,239
+That's still far more than Earth, which is about one-third iron.
+
+17
+00:01:03,539 --> 00:01:08,790
+So it's probably not pure iron. It looks more like a scorched, oversized cousin of Mercury.
+
+18
+00:01:09,240 --> 00:01:14,139
+And scientists still don't know exactly what's inside, or what its surface really looks like.
+
+19
+00:01:14,439 --> 00:01:18,494
+Everything you're seeing is a reconstruction, built from measurements of starlight.
+
+20
+00:01:18,994 --> 00:01:22,490
+So remember: in the time it takes you to live one ordinary day...
+
+21
+00:01:22,740 --> 00:01:26,017
+this tiny iron-rich world races through three entire years.
+

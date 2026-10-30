@@ -1,0 +1,36 @@
+SPACE SECRETS — "THREE YEARS IN ONE DAY" (GJ 367 b) — THREE HOOK OPTIONS
+Rules: SPACE_SECRETS_RETENTION_SYSTEM.md (Retention System V3, Rule 2) + /yt-script hookscore.py (needs >=72 STRONG).
+All three were rendered as 3-second previews and inspected at 0.0 / 0.1 / 0.5 / 1.0 / 2.0 / 3.0 s (contact sheet: hook_test_contact_sheet.jpg).
+
+HOOK A — shocking scientific fact  >>> CHOSEN <<<
+ 1. Narration: "Three years in one day! You'd have a birthday every 7.7 hours here, but you would never survive one. Why?"
+    hookscore: 73 STRONG (formula: The Impossible Claim; weakest axis STAKES)
+ 2. Frame 0: small RED dwarf at the top (clearly not Sun-sized), GJ 367 b already moving on its orbit with a motion trail,
+    a 24-hour EARTH clock under it, three empty orbit counters 1·2·3. Caption: "3 YEARS / 1 EARTH DAY".
+ 3. Camera: locked wide, so the motion is the planet itself. The planet runs 3 complete laps while the clock goes 00:00 -> 24:00 in 2.5 s.
+ 4. Sound: bass impact plus an orange shockwave ring on frame 0; one rising pulse each time a lap completes (0.80 / 1.60 / 2.41 s).
+ 5. On-screen text: "3 YEARS / 1 EARTH DAY" only (no word captions until 3.0 s); small "orbit to scale · planet enlarged" label.
+ 6. Why they keep watching: the claim is proven visually in 2.5 s (counters fill 1-2-3 as the clock hits 24 h), then
+    "you would never survive one. Why?" opens the question the rest of the video answers.
+
+HOOK B — terrifying hypothetical / consequence
+ 1. Narration: "Three years in one day! A year here lasts 7.7 hours, and you'd never survive one."   hookscore: 45 WEAK
+ 2. Frame 0: same orbit, caption "1 YEAR = 7.7 HOURS", a single orbit counter.
+ 3. Camera: locked wide; one slow lap over 2.5 s.
+ 4. Sound: frame-0 impact, a single pulse at the end of the lap.
+ 5. Text: "1 YEAR = 7.7 HOURS".
+ 6. Why: a precise number. But in the preview only ONE lap is visible in 3 s and the clock stops at 06:09. The "three years"
+    claim is never shown, so it is the least immediate on a muted phone. Rejected.
+
+HOOK C — unexpected visual reveal
+ 1. Narration: "Three years in one day! Three complete orbits in 24 hours, but you would never survive one."   hookscore: 54 WEAK
+ 2. Frame 0: identical composition to A; caption "3 ORBITS / 24 HOURS".
+ 3-4. As A.
+ 5. Text: "3 ORBITS / 24 HOURS".
+ 6. Why: visually as clear as A, but "orbits" is more technical than "years", and the narration loses the human "birthday"
+    stakes. Rejected on hook score.
+
+Decision: A wins on clarity (the claim is proven on screen by 2.5 s), immediacy (VO at 0.00 s, motion on frame 0),
+accuracy (orbit, not rotation; an EARTH day; the 7.7 h period) and visual impact.
+Reused from the losers: B's "1 ORBIT = 1 YEAR = 7.7 h" label (0:03–0:06); C's orbit-counting returns in the finale
+(the "YEAR 1 / 2 / 3" ticks on an ordinary Earth day).

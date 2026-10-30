@@ -1,0 +1,27 @@
+SPACE SECRETS — GJ 367 b — /yt-package + /yt-seo + /yt-edit
+
+/yt-package (title + cover text as ONE pairing; title.py lint)
+ TITLE:      A Year Here Lasts Only 7.7 Hours      (32 chars, score 100/100, fits the 40-char mobile cut)
+ COVER TEXT: 3 YEARS DAILY                          (3 words; no word repeated from the title)
+ Alternative: "GJ 367 b: A Year Every 7.7 Hours" + "3 YEARS DAILY" (100/100)
+ Rejected:    "You'd Age 3 Years Every Day Here" (94; the cover repeats "3 / day / years")
+ Cover frame: hook frame at ~2.4 s (three counters lit, clock at 24:00, red dwarf + planet with trail).
+
+/yt-seo — TikTok / Shorts caption
+ A year on GJ 367 b lasts just 7.7 hours, so one Earth day = three of its years. 🪐🔥
+ It's a real rocky planet 31 light-years away, hugging a red dwarf so closely its dayside may hit ~1,500 °C.
+ Once called a "ball of almost pure iron", it was revised by new 2026 research to roughly 50–70% iron.
+ Visuals are scientific reconstructions, not photos.
+ #space #astronomy #exoplanet #science #spacesecrets #planets #nasa #jwst #universe #sciencetok
+ (Add the 2026 paper's citation once verified; see SOURCES.txt.)
+
+ Search queries this targets: "planet with shortest year", "GJ 367 b", "iron planet", "ultra short period planet",
+ "planet that orbits in 8 hours".
+
+/yt-edit — deadair.py on narration.srt (21 cues, 86.02 s, floor 0.45 s)
+ 3 flagged gaps (0.00 / 0.05 / 0.05 s over the floor) at 10.70, 41.47 and 78.72 s. All three are deliberate beat pauses
+ before "Meet GJ 367 b", "But the real mystery..." and "So remember...". Kept; 0.1 s total, nothing to cut.
+
+/yt-chapters: not applicable (vertical short).
+Post-publication (/yt-retention, /yt-comment, /yt-viral, /yt-plan, /yt-audit): waiting for your real analytics/comments.
+No numbers have been invented.

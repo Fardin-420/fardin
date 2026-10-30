@@ -1,0 +1,47 @@
+SPACE SECRETS — GJ 367 b — SOURCES AND FACT CHECK
+
+IMPORTANT — VERIFICATION STATUS
+This production environment blocks NASA, ESA, arXiv, ADS, the NASA Exoplanet Archive and journal sites, so nothing
+could be re-checked online during production. Figures below come from the published literature as known up to mid-2026.
+ * The June 22, 2026 peer-reviewed revision (new mass and radius; interior models giving an iron mass fraction of about
+   50–70%) was SUPPLIED BY THE CLIENT. I could NOT verify it independently, and I don't have its authors, journal or DOI.
+   >>> Before posting, confirm the paper and add its citation here and in the caption. <<<
+   The video reports it only as "new research ... revised its mass and its size" and "interior models now suggest ...
+   roughly 50 to 70 percent", and never as settled fact.
+
+CORE REFERENCES (pre-2026)
+ 1. Lam, K. W. F. et al. (2021), "GJ 367b: A dense, ultrashort-period sub-Earth planet transiting a nearby red dwarf
+    star", Science 374, 1271. Discovery with TESS + HARPS: orbital period ≈ 7.7 h (0.32 d), radius ≈ 0.72 R⊕,
+    dayside up to ~1,500 °C.
+ 2. Goffo, E. et al. (2023), ApJ Letters 955, L3. Refined mass ≈ 0.63 M⊕ and radius ≈ 0.70 R⊕; a very high
+    density implying an iron core of roughly 90% of the mass ("super-Mercury"). This is the "EARLIER ESTIMATE" in the
+    video, and is what popular coverage turned into "nearly pure iron".
+ 3. Zhang, M. et al. (2024), ApJ Letters (JWST MIRI). Dayside thermal emission is consistent with a dark, bare rock with
+    no thick atmosphere, which supports the airless dark-rock reconstruction and the hot dayside.
+
+FIGURES USED ON SCREEN / IN NARRATION
+ Orbital period (= its "year")    ~7.7 h → ~3.1 orbits per 24-h Earth day ("three years in one day")   [1]
+ Orbit vs rotation                Narration says "circles its star"; rotation is presumed tidally locked (equal to the
+                                  orbit), so it is called "probably" and is never used as the "day"     [1]
+ Distance                         ~9.4 pc ≈ 31 light-years, constellation Vela                         [1]
+ Size                             ~0.70 Earth radii. The narration says "roughly three-quarters"; the screen shows
+                                  "~0.7×". Slightly generous rounding, flagged.                         [1,2]
+ Star                             M dwarf GJ 367, ~0.46 R☉, ~3,500 K; drawn to scale against the Sun   [1]
+ Orbit size                       ~0.007 AU (<1/100 of Earth–Sun); about 3.4 stellar radii from the
+                                  star's centre in the inset                                            [1]
+ Dayside temperature              "may reach around 2,700 °F" (≈1,500 °C), labelled an estimate        [1,3]
+ Earlier composition              up to ~90% iron (model-dependent)                                    [2]
+ 2026 composition                 ~50–70% iron by mass (interior models)                    CLIENT-SUPPLIED, UNVERIFIED
+ Earth iron fraction              ~32% by mass ("about one-third")                     standard planetary-science value
+ Mercury iron fraction            ~70% by mass (core)                                   standard planetary-science value
+
+WHAT THE VIDEO DOES NOT CLAIM
+ - No surface photo exists; every planet image is labelled "SCIENTIFIC RECONSTRUCTION · not a photograph".
+ - Interior cutaways are labelled "INTERIOR MODEL · illustration, not observed".
+ - The red dwarf is shown smaller than the Sun (to scale), never Sun-sized.
+ - The planet is enlarged in the orbit views (labelled "planet enlarged"); the orbit radius is to scale.
+ - The measurement graphs are labelled "illustrative signals"; they are not real data plots.
+
+ASSETS
+ Earth texture: Solar System Scope (CC BY 4.0), credited on screen. All other visuals are procedural (original CGI).
+ Voice: Kokoro-82M (Apache-2.0), am_puck. Music and SFX: synthesized in code.

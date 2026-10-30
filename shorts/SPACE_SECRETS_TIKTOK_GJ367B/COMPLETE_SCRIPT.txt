@@ -1,0 +1,36 @@
+SPACE SECRETS — "THREE YEARS IN ONE DAY" (GJ 367 b) — COMPLETE SCRIPT
+Voice: Kokoro am_puck, natural pace (per-line speed 0.94–1.0, no time-stretching). Narration 0:00–1:26; video 1:28.6.
+Script by /yt-script (no narration was supplied; the client's opening line "Three years in one day!" is kept verbatim).
+Hook unit (L0+L1) hookscore 73 STRONG. Visuals = original CGI / diagrams, labelled on screen; no telescope photos.
+
+TIME         | NARRATION                                                                                     | ON SCREEN
+0:00.00–0:01.03 | Three years in one day!                                                                       | HOOK: 3 laps around a small red dwarf + 24 h Earth clock, counters 1·2·3, '3 YEARS / 1 EARTH DAY'
+0:01.28–0:06.43 | You'd have a birthday every 7.7 hours here, but you would never survive one. Why?             | Close orbit, '1 ORBIT = 1 YEAR = 7.7 h'; heat ring '~1,500 °C dayside' on 'never survive'
+0:06.83–0:10.47 | So while one day passes on Earth, it circles its star three times.                            | Earth + 24 h clock fills with three 7.7 h arcs, 'YEAR 1 / 2 / 3'
+0:10.93–0:12.90 | Meet GJ 367 b.                                                                                | Reconstruction of GJ 367 b beside its star, title 'GJ 367 b'
+0:13.30–0:16.23 | A real rocky world, about 31 light-years away.                                                | Chip 'REAL EXOPLANET · ~31 light-years away · constellation Vela'
+0:16.53–0:19.64 | It's a little smaller than Earth, roughly three-quarters of its width.                        | Earth vs GJ 367 b to scale, '~0.7× Earth's width'
+0:20.04–0:23.64 | And it orbits a red dwarf, a star smaller and cooler than our Sun.                            | Red dwarf vs our Sun to scale (~0.46× the Sun's width)
+0:23.94–0:29.76 | But it hugs that star incredibly closely, less than one hundredth of the distance between Earth and the Sun. | Scale bar 1 AU vs ~0.007 AU, zoom inset of the GJ 367 system
+0:30.06–0:31.55 | That's why its year is so short.                                                              | 'SO CLOSE, SO FAST'
+0:32.00–0:35.90 | It's probably tidally locked, with one side always facing its star.                           | Orbit with a fixed marker toward the star, 'TIDALLY LOCKED' ('probably')
+0:36.20–0:41.25 | That side may reach around 2,700 °F. Hot enough to melt rock.                                 | Glowing dayside, thermometer to ~2,700 °F (≈1,500 °C, 'estimated')
+0:41.75–0:43.85 | But the real mystery is what it's made of.                                                    | 'WHAT IS IT MADE OF?'
+0:44.30–0:49.05 | Early measurements made it look incredibly dense... like a ball of almost pure iron.          | Interior cutaway, earlier estimate up to ~90% iron (Goffo et al. 2023)
+0:49.45–0:54.42 | But new research, published in June 2026, revised its mass and its size.                      | Discovery impact, chip 'NEW RESEARCH · JUNE 22, 2026 · revised mass and radius'
+0:54.72–0:59.96 | Interior models now suggest iron makes up roughly 50 to 70 percent of its mass.               | Core shrinks to a 50–70% range band, '50–70% IRON'
+1:00.36–1:03.24 | That's still far more than Earth, which is about one-third iron.                              | Iron-by-mass bars: Earth ~32%
+1:03.54–1:08.79 | So it's probably not pure iron. It looks more like a scorched, oversized cousin of Mercury.   | GJ 367 b 50–70%, Mercury ~70%, 'a scorched, oversized cousin of Mercury'
+1:09.24–1:14.14 | And scientists still don't know exactly what's inside, or what its surface really looks like. | Transit-dip and radial-velocity signals, 'WHAT WE ACTUALLY MEASURE'
+1:14.44–1:18.49 | Everything you're seeing is a reconstruction, built from measurements of starlight.           | 'size + mass → density → interior models', 'RECONSTRUCTION'
+1:18.99–1:22.49 | So remember: in the time it takes you to live one ordinary day...                             | An ordinary Earth day timeline (sleep / work / evening) with three year ticks
+1:22.74–1:26.02 | this tiny iron-rich world races through three entire years.                                   | '3 ENTIRE YEARS'; blends seamlessly back into frame 0 (loop)
+
+RETENTION BEATS
+ 0–2 s    claim proven on screen: 3 laps = 1 Earth day
+ 2–8 s    payoff: a birthday every 7.7 h; one Earth day = three of its years
+ 8–30 s   context: real planet, 31 ly, smaller than Earth, red dwarf, <1/100 of Earth's distance (why the year is short)
+ 30–41 s  escalation: tidally locked, ~2,700 °F dayside
+ 41–69 s  the composition mystery: "pure iron" early estimate → June 2026 revision → 50–70% iron, Mercury cousin
+ 69–78 s  honesty beat: what is unknown, everything shown is a reconstruction from starlight
+ 78–88 s  memorable comparison: your ordinary day = its three entire years; loop back to frame 0
