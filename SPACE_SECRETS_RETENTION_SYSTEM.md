@@ -75,3 +75,18 @@ If any answer is no, revise and re-check before the full render.
 - Deliverables: `FINAL_VIDEO.mp4`, `THREE_HOOK_OPTIONS.txt`, `FINAL_SCRIPT.txt`, `RETENTION_QA_REPORT.txt`.
 - Inspect the actual rendered file (ffprobe + QC + frame review) before claiming it's complete.
 - Never promise virality. Optimize for comprehension, curiosity, retention and shareability.
+
+## Rule 7 — Native Full HD quality (TikTok Quality Advisor: "Enhance video resolution")
+Applies to every new Space Secrets video from now on.
+1. **Format:** export native 1080×1920 (9:16) or larger, at a constant 30 fps unless the source justifies another rate.
+2. **Video encode:** H.264 High in MP4, at 12–20 Mb/s video where practical. Use one final encode straight from the rendered frames (no re-encode chains); audio is muxed with `-c:v copy`.
+3. **Audio encode:** AAC at 48 kHz, 192–320 kb/s.
+4. **Source resolution:** render or source every visual at ≥ output resolution BEFORE editing. Never enlarge 480p/720p material or low-res textures and present it as native Full HD.
+   - Textures must cover the on-screen size: about 1 texel per output pixel at the shot's largest size.
+   - Macro and zoom shots must crop no tighter than 1:1 from their source plate.
+   - CGI renders run at native 1080×1920.
+5. **Never upscale to 4K** to claim quality. Genuine source detail first.
+6. **Artifacts:** avoid aggressive compression, blurry textures, pixelated stars, banding (keep film grain and aq-mode 3), and small or unreadable captions.
+7. **Verification:** inspect the actual final MP4 with ffprobe, plus 100% crops of sampled frames. Check sharpness during camera motion (consecutive frames mid-move), not only on stills.
+8. **Content:** the first 2 s must be spectacular and immediately understandable. Keep scenes varied and matched to the narration, captions phrase-based and synced, and pacing tight (remove dead pauses).
+9. **Reporting:** report the final resolution, frame rate, codec, bitrate and file size. Never claim TikTok will preserve the original quality: it may recompress uploads.

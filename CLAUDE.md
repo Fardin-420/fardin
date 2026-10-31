@@ -6,6 +6,7 @@ This repo produces **SPACE SECRETS** space-science videos (TikTok/Shorts in `sho
   an unmissable first frame, three hooks before editing, story-driven retention beats, a quality gate on the first 3 s,
   and the deliverables `FINAL_VIDEO.mp4`, `THREE_HOOK_OPTIONS.txt`, `FINAL_SCRIPT.txt` and `RETENTION_QA_REPORT.txt`.
 - Don't re-edit already published videos unless asked; the rules apply to new incoming videos.
+- **Quality (Rule 7 in SPACE_SECRETS_RETENTION_SYSTEM.md):** native 1080×1920 renders and source visuals at ≥ output resolution (no upscaled 480p/720p), one final H.264 High encode at 12–20 Mb/s, AAC 48 kHz 192–320 kb/s, verify with ffprobe + full-res frame crops in motion. Report resolution/fps/codec/bitrate/size; never promise TikTok won't recompress.
 - Brand: Inter Black captions, white with yellow (#FFD400) emphasis and a black stroke; Kokoro voice `am_puck`; mix to -14 LUFS.
 - YouTube agent skills (MIT, github.com/Jakeschincariol/youtube-agent-skill) are installed in `.claude/skills/yt-*`.
   At session start, copy `.claude/youtube/voice.md` to `~/.claude/youtube/voice.md` (the skills read it there).
