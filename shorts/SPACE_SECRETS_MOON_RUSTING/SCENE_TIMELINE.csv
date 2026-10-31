@@ -1,0 +1,23 @@
+shot,start_s,end_s,beat,visual,shot_type,imagery_status
+01,0.00,2.55,Impossible discovery,Extreme macro of regolith grains; some turn to hematite red; whip pullback to the Moon above a huge Earth; O+ stream begins,Macro → orbital,CGI + scientific visualization
+02a,2.55,8.56,Why this makes no sense,"Low-angle dolly across cratered regolith, hard side light, black sky",Low-angle terrain,CGI reconstruction
+02b,8.56,10.80,No air,"Camera rises: hard horizon, black sky with the Sun as a point; 'no air to scatter sunlight'",Wide horizon,CGI reconstruction
+03a,10.80,14.81,The discovery,Chandrayaan-1 reconstruction crossing above the Moon; M3 label,Orbital,Labelled reconstruction
+03b,14.81,17.30,Spectral evidence,Nadir view: push-broom scan line reveals a muted mineral map; hematite-like pixels flagged,Top-down orbital,Illustration
+03c,17.30,21.30,Near the poles,Orbit up over the north pole; high-latitude hematite overlay; HEMATITE — IRON OXIDE,Fast orbital move,Illustrative map
+04,21.30,27.04,Earth connection,Globe swings far side → near side with Earth rising; split near/far comparison; MORE DETECTED ON THE NEAR SIDE,Orbital + comparison,Illustrative map
+05a,27.04,30.01,Back to Earth,Fast flight from the Moon toward Earth,Fast orbital move,CGI
+05b,30.01,37.43,Oxygen escapes,"Sun above, Earth's magnetosphere: dipole field lines, bow shock, solar wind, O+ ions rising into the magnetotail",Space environment,Scientific visualization
+06a,37.43,42.30,Moon in the tail,Camera travels down the tail; the Moon crosses it; ions stream onto its Earth-facing side,Space environment,Scientific visualization (hypothesis)
+06b,42.30,48.10,Possible formation,Orbital → microscopic: ions settle on grains; some become hematite,Macro,CGI concept
+07a,48.10,49.84,Mystery continues,Camera swings around to the far side of the Moon (real albedo map),Orbital,CGI
+07b,49.84,55.81,2025 evidence,Micrometre-scale troilite grain with hematite/maghemite crystals; 2025 headline,Extreme macro,CGI reconstruction (not the micrograph)
+07c,55.81,58.75,Chang'e-6,Lander reconstruction on cratered terrain,Low-angle terrain,Labelled reconstruction
+07d,58.75,61.35,Far side,Far-side globe with the Chang'e-6 site in South Pole–Aitken marked,Orbital,"CGI, position approximate"
+08a,61.35,64.68,Second explanation,"Impactor streak, flash, ballistic ejecta, glowing hot zone on terrain",Wide terrain,Illustrative CGI
+08b,64.68,68.03,Heated soil,"Inside the hot zone: glowing grains cool; oxides form (~700–1,000 °C, proposed)",Macro,CGI concept
+09a,68.03,74.25,Unsolved,Split screen: Earth's oxygen on polar terrain | impact-heated soil,Split,CGI
+09b,74.25,78.30,More than one process,"Telephoto polar panorama, Earth at true apparent size above the horizon",Wide telephoto,CGI
+10a,78.30,79.41,Final revelation,"A single hematite-bearing grain field, pulling back",Macro,CGI
+10b,79.41,84.03,Silent rock in our sky,Rising off the surface; lens tightens until Earth hangs in the black sky,Rise + telephoto,CGI
+10c,84.03,94.20,Callback + payoff,"Moon above Earth with the O+ stream (opening image), then wide Earth–Moon shot, sizes to scale; THE MOON STILL HAS SECRETS",Wide space,CGI + visualization
