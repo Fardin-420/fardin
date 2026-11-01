@@ -1,0 +1,19 @@
+shot,start_s,end_s,beat,visual,camera_scale,status
+01,0.00,3.10,Hook,Frame 0: a dark lens sweeps in from the right across a dense bulge star field; star arcs + shadow; title AN INVISIBLE BLACK HOLE?!,extreme close-up / VFX,visualization (lensing exaggerated)
+02,3.10,5.82,Found one,Pull back: the lens shrinks into the crowded field,pull-back,visualization
+03,5.82,11.74,How most are found,"Typical black-hole binary: companion star, gas stream, accretion disk",orbital,illustration (not OGLE-2011-BLG-0462)
+04,11.74,14.29,Alone,"Isolated lens drifting, no companion, no disk",tracking,visualization
+05,14.29,18.83,Name,Fly-in toward the Milky Way's bulge; name card,wide galactic,CGI model
+06,18.83,25.41,Mass,Seven suns collapse into one dark lens; ~7 solar masses; no light detected,graphic + VFX,graphic
+07,25.41,28.30,How?,Observatory dome under the Milky Way band,ground wide,CGI
+08,28.30,29.68,Hubble,Hubble reconstruction above Earth,orbital,CGI reconstruction
+09,29.68,32.36,The star,Zoom into the crowded bulge field; reticle on the background star,observational zoom,simulated field
+10,32.36,35.30,Alignment,Earth–lens–star geometry; lens crosses the line of sight; bent light paths,diagram,not to scale
+11,35.30,39.09,Bent light,"Lens crosses the target star: arcs, magnification",close-up VFX,visualization
+12,39.09,44.19,Brighten + shift,Live light curve + centroid-shift path under the lensing view,split / data,"simplified, shape only"
+13,44.19,46.92,Hubble over years,"11 simulated Hubble cutouts appear, epoch by epoch",data montage,"simulated, shift exaggerated"
+14,46.92,53.91,Result,Strong-lens close-up; STELLAR-MASS BLACK HOLE · 7.15 ± 0.83 M☉,close-up,visualization
+15,53.91,60.91,Distance,"Top-down galaxy pull-back: Sun ↔ black hole ≈ 5,000 ly; no evidence it's approaching",wide galactic,CGI model
+16,60.91,62.56,Hypothetical,"HYPOTHETICAL CLOSE PASS card, simulated lens approaching",title beat,label
+17,62.56,72.96,Close pass,N-body: 7 M☉ BH passes ~35 AU from the Sun; outer orbits perturbed,"simulation, Sun-centred",simulation (hypothetical)
+18,72.96,85.20,Invisible universe,"Calm field, a subtle lens drifting across distant stars; final title","wide, slow pull-back",visualization

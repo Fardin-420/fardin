@@ -1,0 +1,27 @@
+SPACE SECRETS — THE INVISIBLE BLACK HOLE — NARRATION
+Voice: Kokoro-82M am_puck (American English male), documentary pace (speed 0.86–0.91), no time-stretching.
+Script: client-supplied, recorded verbatim. 'OGLE-2011-BLG-0462' is spoken as 'Ogle twenty eleven, B L G, zero four six two'.
+Hook score (hookscore.py): 'An invisible black hole is moving through our galaxy. And scientists have actually found one.' = 36 WEAK (low STAKES). Kept, as mandated.
+Packaging (/yt-package title.py): title 'A 7-Sun Object Nobody Can See' (29 chars, 100/100) + cover text 'INVISIBLE BLACK HOLE?!' (3 words).
+  Alternative: 'Hubble Found Something 7× the Sun's Mass' (40 chars, 100/100).
+
+0:00.00–0:02.90  An invisible black hole is moving through our galaxy.
+0:03.20–0:05.12  And scientists have actually found one.
+0:05.92–0:11.54  Most black holes are discovered through their effects on nearby stars, or glowing material.
+0:11.84–0:13.59  But this one was completely alone.
+0:14.39–0:18.58  It's called OGLE-2011-BLG-0462.
+0:18.93–0:24.71  Its mass is about seven times our Sun's, yet it gives off no light we can directly detect.
+0:25.51–0:28.15  So how did astronomers find something invisible?
+0:28.40–0:31.66  They watched a distant star behave in a very strange way.
+0:32.46–0:38.49  As the black hole crossed in front of the background star, its gravity bent and magnified the star's light.
+0:39.19–0:43.99  The star appeared to brighten, and its apparent position shifted by a tiny amount.
+0:44.29–0:46.22  Hubble tracked that movement over years.
+0:47.02–0:53.21  Scientists combined those measurements to determine that the hidden object was a stellar-mass black hole.
+0:54.01–0:56.29  It's roughly 5,000 light-years away.
+0:56.59–1:00.66  There is no evidence that this object is approaching our solar system.
+1:02.66–1:07.01  But imagine a different black hole passing close to our planetary neighborhood.
+1:07.31–1:12.16  Its gravity could disturb planetary orbits, depending on its mass and distance.
+1:13.06–1:15.32  The frightening part isn't that one is coming.
+1:15.67–1:19.17  It's that the universe can hide something this massive in plain sight.
+
+Narration ends 79.17 s; video 85.2 s (closing visual + title + quiet chime).
