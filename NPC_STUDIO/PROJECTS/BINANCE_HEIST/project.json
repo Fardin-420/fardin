@@ -1,0 +1,9 @@
+{
+  "title": "THE 20-MINUTE HEIST",
+  "CHANNEL_NAME": "",
+  "facts_as_of": "2026-11-03",
+  "format": { "width": 1920, "height": 1080, "fps": 30 },
+  "voice": { "profile": "NPC_VOICE_V1", "fallbacks_disabled": true, "note": "Narration uses only the owner's own cloned voice. No ElevenLabs, no Kokoro stand-in." },
+  "burnCaptions": true,
+  "excluded": ["AI influencer generation", "TikTok publishing", "any auto-publishing"]
+}
