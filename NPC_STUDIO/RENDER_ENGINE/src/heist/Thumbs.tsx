@@ -30,7 +30,7 @@ export const ThumbA: React.FC = () => (
         <PlateLaptop len={400} mode="half" />
       </Rebase>
     </AbsoluteFill>
-    <AbsoluteFill style={{ background: 'linear-gradient(90deg, #07080B 30%, transparent 62%)' }} />
+    <AbsoluteFill style={{ background: 'linear-gradient(90deg, #07080B 40%, rgba(7,8,11,.6) 55%, transparent 75%)' }} />
     <div style={{ position: 'absolute', left: 80, top: 210 }}>
       <div style={{ position: 'relative', fontFamily: F.display, fontSize: 470, lineHeight: 0.9, color: C.gold, textShadow: `0 0 60px ${C.gold}88, 0 10px 0 #6b4a12` }}>
         $6.3B
