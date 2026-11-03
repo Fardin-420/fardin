@@ -1,9 +1,28 @@
 {
-  "title": "THE 20-MINUTE HEIST",
-  "CHANNEL_NAME": "",
-  "facts_as_of": "2026-11-03",
-  "format": { "width": 1920, "height": 1080, "fps": 30 },
-  "voice": { "profile": "NPC_VOICE_V1", "fallbacks_disabled": true, "note": "Narration uses only the owner's own cloned voice. No ElevenLabs, no Kokoro stand-in." },
-  "burnCaptions": true,
-  "excluded": ["AI influencer generation", "TikTok publishing", "any auto-publishing"]
+ "title": "THE 20-MINUTE HEIST",
+ "CHANNEL_NAME": "",
+ "facts_as_of": "2026-11-03",
+ "format": {
+  "width": 1920,
+  "height": 1080,
+  "fps": 30
+ },
+ "voice": {
+  "brand": "Space Secrets",
+  "engine": "Kokoro-82M via kokoro-onnx (local, Apache-2.0)",
+  "voice": "am_puck",
+  "speeds": {
+   "reveals": 0.87,
+   "normal": "0.91\u20130.92",
+   "heist_and_freeze": 0.95
+  },
+  "swap": "scripts/build_vo.py --voice <id> \u2192 build_timeline.py \u2192 build_captions.py \u2192 sound.py \u2192 render \u2192 finalize.py",
+  "note": "Changed from NPC_VOICE_V1 at the owner's request (Nov 3, 2026). No ElevenLabs."
+ },
+ "burnCaptions": true,
+ "excluded": [
+  "AI influencer generation",
+  "TikTok publishing",
+  "any auto-publishing"
+ ]
 }

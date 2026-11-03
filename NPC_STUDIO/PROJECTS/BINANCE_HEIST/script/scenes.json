@@ -1,0 +1,407 @@
+{
+ "asOf": "2026-11-03",
+ "note": "Fallback chain per shot: AI file in assets/ai \u2192 stock (Pexels/Pixabay) \u2192 designed MG plate. No AI files supplied; stock + price APIs refused by the session proxy, so every shot resolved to the designed fallback. A missing asset never blocks the render.",
+ "data": {
+  "btc_price": "UNAVAILABLE (CoinGecko, Binance, Kraken, Coinbase, CryptoCompare, Yahoo all refused) \u2192 MarketBoard with Reuters-sourced lows only"
+ },
+ "scenes": [
+  {
+   "id": "S01",
+   "title": "COLD OPEN",
+   "start_s": 0.0,
+   "end_s": 56.0,
+   "cues": [
+    "clock",
+    "binance",
+    "billions",
+    "total",
+    "safe",
+    "corridor",
+    "laptop",
+    "montage",
+    "question",
+    "titlecard"
+   ],
+   "mg": [
+    "UTCClock",
+    "ChainNetwork",
+    "Struck",
+    "Counter",
+    "FlowPath",
+    "NonceLock",
+    "FreezeStamp",
+    "DossierReveal",
+    "GlitchQuestion",
+    "TitleCard"
+   ],
+   "ai_shots": [
+    "AI-04 vault",
+    "AI-01 corridor",
+    "AI-02 laptop"
+   ],
+   "used": [
+    "AI-04 vault \u2192 PlateVault",
+    "AI-01 corridor \u2192 PlateCorridor",
+    "AI-02 laptop \u2192 PlateLaptop(closed)"
+   ],
+   "stock_queries": [
+    "server room red light",
+    "laptop dark room night",
+    "bank vault door"
+   ],
+   "stock_used": []
+  },
+  {
+   "id": "S02",
+   "title": "CHAPTER 1: THE FORTRESS",
+   "start_s": 56.0,
+   "end_s": 109.83,
+   "cues": [
+    "users",
+    "custody",
+    "store",
+    "vault",
+    "register",
+    "street",
+    "before"
+   ],
+   "mg": [
+    "Counter",
+    "HotColdExplainer",
+    "FlashbackGrade"
+   ],
+   "ai_shots": [
+    "AI-03 aerial"
+   ],
+   "used": [
+    "AI-03 aerial \u2192 PlateCity"
+   ],
+   "stock_queries": [
+    "city night aerial"
+   ],
+   "stock_used": []
+  },
+  {
+   "id": "S03",
+   "title": "CHAPTER 2: THE FIRST HEIST",
+   "start_s": 109.83,
+   "end_s": 203.03,
+   "cues": [
+    "may2019",
+    "7000",
+    "apikeys",
+    "phishing",
+    "waited",
+    "quote2019",
+    "alarm",
+    "cz",
+    "rewrite",
+    "quoteCZ",
+    "safu",
+    "2022",
+    "lesson",
+    "around"
+   ],
+   "mg": [
+    "TxCard",
+    "FlipTiles",
+    "PhishCard",
+    "AccountsGrid",
+    "QuoteCard\u00d72",
+    "AlarmVault",
+    "LiveFrame",
+    "BlockRewind",
+    "SafuVault",
+    "FastCard",
+    "KeyGridCollapse"
+   ],
+   "ai_shots": [
+    "AI-05 coins"
+   ],
+   "used": [
+    "AI-05 coins \u2192 PlateCoins"
+   ],
+   "stock_queries": [
+    "gold coins macro"
+   ],
+   "stock_used": []
+  },
+  {
+   "id": "S04",
+   "title": "CHAPTER 3: THE DOOR",
+   "start_s": 203.03,
+   "end_s": 278.1,
+   "cues": [
+    "back",
+    "laptop2",
+    "container",
+    "unauth",
+    "additional",
+    "oneclick",
+    "36h",
+    "nokeys",
+    "sign",
+    "how",
+    "20min"
+   ],
+   "mg": [
+    "FlowPath(attack path)",
+    "QuoteCard",
+    "CalendarDrip",
+    "Stamp",
+    "SignatureCard",
+    "LaptopToBillions",
+    "Countdown"
+   ],
+   "ai_shots": [
+    "AI-06 keyboard"
+   ],
+   "used": [
+    "AI-06 keyboard \u2192 PlateKeyboard"
+   ],
+   "stock_queries": [
+    "typing keyboard dark"
+   ],
+   "stock_used": []
+  },
+  {
+   "id": "S05",
+   "title": "CHAPTER 4: THE 20 MINUTES",
+   "start_s": 278.1,
+   "end_s": 386.3,
+   "cues": [
+    "t2005",
+    "xrp",
+    "ordinary",
+    "ethdiff",
+    "t2020",
+    "b14",
+    "fifty",
+    "eip",
+    "why",
+    "slips",
+    "onefit",
+    "sweeper",
+    "eth167",
+    "eth38",
+    "btc18",
+    "gone",
+    "wave2"
+   ],
+   "mg": [
+    "HUD(UTCClock+TimelineRail)",
+    "ChainNetwork",
+    "NonceLock",
+    "LowerThird(EIP-7702)",
+    "SweepVortex",
+    "Counter\u00d73",
+    "Bars"
+   ],
+   "ai_shots": [
+    "AI-07 vortex",
+    "AI-08 monitors"
+   ],
+   "used": [
+    "AI-07 vortex \u2192 PlateVortexBg",
+    "AI-08 monitors \u2192 PlateMonitors"
+   ],
+   "stock_queries": [
+    "abstract particles vortex",
+    "monitors data dark room"
+   ],
+   "stock_used": []
+  },
+  {
+   "id": "S06",
+   "title": "CHAPTER 5: THE RACE TO FREEZE",
+   "start_s": 386.3,
+   "end_s": 497.1,
+   "cues": [
+    "race",
+    "stables",
+    "t2101",
+    "t2104",
+    "t2124",
+    "t2125",
+    "others",
+    "suspend",
+    "arb",
+    "frozen3",
+    "nofreeze",
+    "dump",
+    "aave",
+    "remain",
+    "peel"
+   ],
+   "mg": [
+    "RaceSplit",
+    "StableSplit",
+    "FreezeStamp\u00d72",
+    "QuoteCard",
+    "Counter",
+    "Stamp",
+    "AlarmWash",
+    "Bars",
+    "MeltThrough",
+    "FlowLines",
+    "PeelChain"
+   ],
+   "ai_shots": [
+    "AI-09 ice"
+   ],
+   "used": [
+    "AI-09 ice \u2192 PlateIce"
+   ],
+   "stock_queries": [
+    "ice forming macro"
+   ],
+   "stock_used": []
+  },
+  {
+   "id": "S07",
+   "title": "CHAPTER 6: THE NAME",
+   "start_s": 497.1,
+   "end_s": 607.9,
+   "cues": [
+    "name",
+    "tt",
+    "bitget",
+    "fbi",
+    "deny",
+    "lawenf",
+    "bybit",
+    "dmm",
+    "playbook",
+    "remember",
+    "pattern",
+    "burst"
+   ],
+   "mg": [
+    "DossierReveal",
+    "ConvergeFlows",
+    "QuoteCard(FBI)",
+    "DenyCard",
+    "LineCard",
+    "HeistTimeline",
+    "RecruiterEmail",
+    "PlaybookCards",
+    "Checklist"
+   ],
+   "ai_shots": [
+    "AI-10 lamp",
+    "AI-11 silhouette"
+   ],
+   "used": [
+    "AI-10 lamp \u2192 PlateDossierLamp",
+    "AI-11 silhouette \u2192 PlateSilhouette (\u22643 s, labeled)"
+   ],
+   "stock_queries": [
+    "documents desk lamp",
+    "hacker silhouette screens"
+   ],
+   "stock_used": []
+  },
+  {
+   "id": "S08",
+   "title": "CHAPTER 7: THE MORNING AFTER",
+   "start_s": 607.9,
+   "end_s": 694.5,
+   "cues": [
+    "markets",
+    "btclow",
+    "634",
+    "teng",
+    "czcard",
+    "withdraw",
+    "net",
+    "98",
+    "95"
+   ],
+   "mg": [
+    "MarketBoard",
+    "Bars",
+    "QuoteCard\u00d72",
+    "NameCard",
+    "StatusBoard",
+    "FlowDonut",
+    "ProgressRing"
+   ],
+   "ai_shots": [
+    "AI-12 dawn"
+   ],
+   "used": [
+    "AI-12 dawn \u2192 PlateDawn"
+   ],
+   "stock_queries": [
+    "city sunrise skyline"
+   ],
+   "stock_used": []
+  },
+  {
+   "id": "S09",
+   "title": "CHAPTER 8: THE QUESTION",
+   "start_s": 694.5,
+   "end_s": 777.9,
+   "cues": [
+    "q1",
+    "nov3",
+    "hr",
+    "ceo",
+    "assignment",
+    "q2",
+    "aitool",
+    "token",
+    "q3",
+    "q4",
+    "y2019",
+    "y2026",
+    "moved",
+    "years"
+   ],
+   "mg": [
+    "QuestionCards",
+    "JobMessage",
+    "VideoTiles",
+    "FolderAlarm",
+    "FlowPath(reveal)",
+    "SplitCompare",
+    "UTCClock"
+   ],
+   "ai_shots": [
+    "AI-13 laptop closing"
+   ],
+   "used": [
+    "AI-13 laptop closing \u2192 PlateLaptop(closing)"
+   ],
+   "stock_queries": [
+    "laptop closing dark"
+   ],
+   "stock_used": []
+  },
+  {
+   "id": "S10",
+   "title": "OUTRO: WHAT IT MEANS FOR YOU",
+   "start_s": 777.9,
+   "end_s": 833.8,
+   "cues": [
+    "tip1",
+    "tip2",
+    "tip3",
+    "tip4",
+    "sub",
+    "endscreen"
+   ],
+   "mg": [
+    "TipCards",
+    "EndScreen",
+    "ChainNetwork(15%)"
+   ],
+   "ai_shots": [],
+   "used": [
+    "MG only"
+   ],
+   "stock_queries": [],
+   "stock_used": []
+  }
+ ]
+}

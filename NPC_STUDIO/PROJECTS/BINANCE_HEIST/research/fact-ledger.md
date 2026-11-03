@@ -52,6 +52,14 @@ Status key: **VERIFIED** (≥2 independent reports or primary statement) · **UP
 | C3 | **UPDATED** | Bitget, Sep 24, 2026: $351.6M confirmed (later reports up to ~$388M) → screen "$352M+" | Insurance Journal; Startup Fortune; Gizmodo |
 | H1–H6 | VERIFIED | 2019/2022 history unchanged; CZ quote "the most immutable ledger on the planet" ✓ (venue: AMA/statement — card says "CZ · MAY 2019", not "on X") | Decrypt; FXStreet; The Block |
 
+### Phase 1b additions (2026-11-03, after Checkpoint A)
+| # | Status | Final wording | Basis |
+|---|---|---|---|
+| F14a | **SOFTENED (kept)** | Suspension minute: compilations conflict (≈22:30 UTC Oct 29 SOCRadar · 00:13 UTC Oct 30 Stingrai · 02:23 UTC Oct 30 AirdropAlert; may reflect staged per-network pauses) → "That night" / screen "OCT 29–30 · REPORTED TIMES VARY". 21:24 and 21:25 also remain unconfirmed → "Soon after" | Search-index summaries of Stingrai, SOCRadar, HackenProof, AirdropAlert |
+| F14b | **UPDATED** | Binance later clarified that deposits were unaffected → "suspended withdrawals" | Stingrai (via search) |
+| F25a | NOTE | Teng's X post ("…replenished 90%… Our users will not bear the financial impact of this incident.") is dated Oct 31 from the 90% milestone (80% Oct 30 → 90% Oct 31 → 95% Nov 1) | Teng on X; Crypto Briefing |
+| F28a | VERIFIED | Status board: BTC (first, ~06:20 UTC), ETH, BNB, USDT, USDC + "+10 MORE" = 15 networks in phase one. Only assets named in reporting are shown | CoinDesk; Yahoo/Benzinga (FBI-day coverage) |
+
 ## Baseline ledger (imported from master prompt §14, unchanged)
 
 
