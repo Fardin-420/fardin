@@ -159,7 +159,7 @@ export const S05: React.FC<{ s: SceneData }> = ({ s }) => {
             <Counter to={1.62} decimals={2} at={8} len={26} prefix="~" suffix="B USDT" size={120} color={C.bone} />
             <Counter to={60} at={16} len={20} prefix="~" suffix=" TOKENS" size={120} color={C.bone} />
           </AbsoluteFill>
-          <AbsoluteFill style={{ top: 230 }}>
+          <AbsoluteFill style={{ top: 110 }}>
             <Center>
               <Stamp text="UNDER 4 MINUTES" at={30} color={C.alarm} size={72} rotate={-2} />
             </Center>

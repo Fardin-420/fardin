@@ -22,8 +22,43 @@ def run(*a):
     subprocess.run(list(map(str, a)), check=True)
 
 
+CHUNK_START = {1: 0, 2: 1800, 3: 13000, 4: 19000}
+
+
+def apply_patches():
+    """Splice re-rendered windows (out/chunks/patches/p<start>_<end>.mp4, global frames) into their chunk.
+
+    Patches are frame-exact re-renders of the same composition after a layout fix, so splicing only
+    swaps the frames that changed. The patched chunk is re-encoded once at CRF 14 (visually lossless).
+    """
+    pdir = CH / "patches"
+    if not pdir.exists():
+        return
+    by_chunk: dict[int, list] = {}
+    starts = sorted(CHUNK_START.items(), key=lambda kv: kv[1])
+    for p in sorted(pdir.glob("p*_*.mp4")):
+        a, b = map(int, p.stem[1:].split("_"))
+        k = max(k for k, s in starts if s <= a)
+        by_chunk.setdefault(k, []).append((a - CHUNK_START[k], b - CHUNK_START[k], p))
+    for k, plist in by_chunk.items():
+        src = CH / f"c{k}.mp4"
+        orig = CH / f"c{k}_orig.mp4"
+        if not orig.exists():
+            src.rename(orig)
+        inputs, chain, last = ["-i", str(orig)], [], "0:v"
+        for i, (a, b, p) in enumerate(plist, 1):
+            inputs += ["-i", str(p)]
+            chain.append(f"[{i}:v]setpts=PTS-STARTPTS+{a}/30/TB[p{i}]")
+            chain.append(f"[{last}][p{i}]overlay=eof_action=pass:enable='between(n,{a},{b})'[v{i}]")
+            last = f"v{i}"
+        run("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *inputs, "-filter_complex", ";".join(chain), "-map", f"[{last}]",
+            "-c:v", "libx264", "-preset", "medium", "-crf", "14", "-pix_fmt", "yuv420p",
+            "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709", src)
+
+
 def main():
-    chunks = sorted(CH.glob("c*.mp4"), key=lambda p: int(p.stem[1:]))
+    apply_patches()
+    chunks = sorted((p for p in CH.glob("c*.mp4") if p.stem[1:].isdigit()), key=lambda p: int(p.stem[1:]))
     lst = CH / "list.txt"
     lst.write_text("".join(f"file '{c.name}'\n" for c in chunks))
     video = CH / "video_full.mp4"

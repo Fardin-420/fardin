@@ -90,7 +90,7 @@ export const AlarmVault: React.FC = () => {
   return (
     <AbsoluteFill>
       <AbsoluteFill style={{ background: C.alarm, opacity: on ? 0.16 : 0.04 }} />
-      <Center gap={30}>
+      <Center gap={30} style={{ paddingBottom: 260 }}>
         <svg width={420} height={420} viewBox="-210 -210 420 420">
           <circle r={190} fill="none" stroke={C.mute} strokeWidth={8} />
           <circle r={130} fill="none" stroke={C.mute} strokeWidth={4} strokeDasharray="12 10" />
@@ -175,7 +175,7 @@ export const SafuVault: React.FC<{ stampAt: number }> = ({ stampAt }) => {
       <div style={{ position: 'absolute', left: 1310, top: 300 }}>
         <Kicker size={22} color={C.gold}>← 10% OF TRADING FEES</Kicker>
       </div>
-      <div style={{ position: 'absolute', left: 0, right: 0, top: 720, textAlign: 'center' }}>
+      <div style={{ position: 'absolute', left: 1290, top: 560 }}>
         <Stamp text="WITHDRAWALS BACK" sub="MAY 15, 2019" at={stampAt} color={C.green} size={56} rotate={-3} />
       </div>
     </AbsoluteFill>

@@ -207,7 +207,7 @@ export const HotColdExplainer: React.FC<{ drawAt?: number; vaultAt: number; regi
             const ph = ((f - registerAt) / 30 + k / 3) % 1;
             return <path key={k} d={`M ${960 - 40 - ph * 60} ${590 - ph * 40} Q 960 ${560 - ph * 80} ${960 + 40 + ph * 60} ${590 - ph * 40}`} fill="none" stroke={C.gold} strokeWidth={3} opacity={1 - ph} />;
           })}
-        <text x={1110} y={810} fill={C.mute} fontFamily="monospace" fontSize={22} letterSpacing={6} opacity={d}>
+        <text x={1110} y={760} fill={C.mute} fontFamily="monospace" fontSize={22} letterSpacing={6} opacity={d}>
           STREET →
         </text>
       </svg>
@@ -466,7 +466,7 @@ export const TxCard: React.FC<{ at?: number; hash: string }> = ({ at = 0, hash }
       <svg width={1920} height={1080} style={{ position: 'absolute', inset: 0 }}>
         <line x1={640} y1={370} x2={lerp(640, 1240, b)} y2={370} stroke={C.gold} strokeWidth={5} strokeDasharray="14 10" strokeDashoffset={-f * 2} />
       </svg>
-      <div style={{ position: 'absolute', left: lerp(640, 1150, b) - 120, top: 250, opacity: prog(f, at + 12, 8) }}>
+      <div style={{ position: 'absolute', left: lerp(640, 940, b) - 120, top: 210, opacity: prog(f, at + 12, 8) }}>
         <div style={{ fontFamily: F.display, fontSize: 84, color: C.gold, textShadow: `0 0 30px ${C.gold}88` }}>7,000 BTC</div>
       </div>
       <div style={{ position: 'absolute', left: 1260, top: 300, opacity: c, transform: `translateX(${(1 - c) * 40}px)` }}>
