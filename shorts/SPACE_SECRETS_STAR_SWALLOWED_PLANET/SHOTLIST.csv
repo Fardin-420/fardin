@@ -1,0 +1,18 @@
+shot,start_s,end_s,beat,visual,camera_scale,status
+01,0.00,2.50,Hook,Gas giant ploughing into a huge orange star's outer atmosphere; stripped gas; A STAR ATE A PLANET?!,close-up VFX,reconstruction
+02,2.50,8.08,Webb,JWST reconstruction turning in space,orbital,CGI reconstruction
+03,8.08,14.42,Where,"Galaxy top-down: Sun → ZTF SLRN-2020, ~12,000 ly",wide galactic,CGI model
+04,14.42,21.39,Flare,A point in a crowded field flares; simplified optical (~10 d) vs infrared (months) curves,observational + graph,simulated field / simplified
+05,21.39,25.46,Name,"ZTF SLRN-2020 name card, push-in on the point",observational zoom,simulated field
+06,25.46,34.45,2023 evidence,Jupiter-like giant close to its orange star,orbital close,reconstruction (size inferred)
+07,34.45,40.62,2023 hypothesis,Star swells into a red giant and overtakes the orbit,diagram-cinematic,illustration of the old idea
+08,40.62,43.67,Webb looks,JWST from a new angle,orbital,CGI reconstruction
+09,43.67,47.63,Twist,The 'red giant' deflates into a modest orange star; THE TWIST,VFX,illustration
+10,47.63,53.30,Prime of life,Our Sun vs this ~0.7 M☉ K-type star,comparison,illustration
+11,53.30,63.04,Orbital decay,"Spiralling orbit, lap after lap, timescale compressed",top-down orbital,illustration
+12,63.04,66.65,Plunge (payoff),"Grazing the outer atmosphere, then plunging in",close-up VFX,reconstruction
+13,66.65,73.18,Gas → dust,Gas blasted from the star's outer layers expands and cools into dust,wide VFX,reconstruction
+14,73.18,82.30,What Webb found (payoff),"Hot molecular gas incl. CO close in, colder dust farther out; camera orbits",orbital wide,reconstruction from spectra
+15,82.30,91.62,One point of light,Pull back to a single point; illustrative IR spectrum with CO,pull-back + graphic,simulated / illustrative
+16,91.62,95.07,No threat,"Galaxy: us vs the event, ~12,000 ly",wide galactic,CGI model
+17,95.07,104.30,Written in light,"Quiet aftermath: star, dust ring, the planet's spiral path fading; WRITTEN IN LIGHT","wide, slow push",reconstruction

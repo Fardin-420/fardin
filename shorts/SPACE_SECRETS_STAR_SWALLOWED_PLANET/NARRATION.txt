@@ -1,0 +1,28 @@
+SPACE SECRETS — A STAR SWALLOWED A PLANET — THEN WEBB FOUND A TWIST — NARRATION
+No narration/storyboard was attached to the brief; this script was written via /yt-script around the mandated opener 'A star ate its own planet.'
+Voice: Kokoro-82M am_puck (American English male), natural pace, no time-stretching.
+Hook unit score (hookscore.py): 64 WORKABLE. The CLAUDE.md target of >=72 was not reachable: the mandated 6-word opener blocks the 'you within the first six words' (ADDRESS) term. 10 variants were tested (36–65); the best accurate one was used.
+Packaging (title.py): 'Webb's 2025 Twist on a Swallowed World' (38 chars, 98/100) + cover 'A STAR ATE A PLANET?!' (mandated; 5 words exceeds the 3-word guideline).
+
+0:00.00–0:01.33  A star ate its own planet.
+0:01.68–0:07.73  You'd never guess why: in 2025, NASA's Webb found the star wasn't dying. So how did it happen?
+0:08.18–0:14.22  12,000 light-years away, in the constellation Aquila, a star suddenly flared up in 2020.
+0:14.52–0:21.04  For about ten days, it blazed far brighter than normal. Then it faded, but kept glowing in infrared for months.
+0:21.49–0:25.16  Astronomers named it ZTF SLRN-2020.
+0:25.56–0:34.25  In 2023, a team announced the first direct evidence of a star swallowing a planet, most likely a gas giant, roughly the size of Jupiter.
+0:34.55–0:40.27  Their explanation: an aging star, swelling into a red giant, had engulfed the planet in its path.
+0:40.72–0:43.52  Then the James Webb Space Telescope took a closer look.
+0:43.77–0:44.96  And Webb found a twist.
+0:45.41–0:47.43  The star was too faint to be a red giant.
+0:47.73–0:53.00  It's most likely a star still in the prime of its life, slightly smaller and cooler than our Sun.
+0:53.40–0:57.39  So the star didn't grow to reach the planet. The planet fell into the star.
+0:57.84–1:02.84  Its orbit probably shrank over a very long time, each lap a little closer than the last.
+1:03.14–1:06.30  Until it grazed the star's outer atmosphere, and plunged in.
+1:06.75–1:12.82  The star blasted gas away from its outer layers. As that gas expanded and cooled, it formed dust.
+1:13.28–1:19.69  And Webb found what was left: hot molecular gas, including carbon monoxide, still glowing close to the star,
+1:19.94–1:21.95  surrounded by colder dust, farther out.
+1:22.40–1:31.22  These pictures are reconstructions. To Webb, the whole system is a single point of light. Every detail came from splitting that light into a spectrum.
+1:31.72–1:34.77  This happened far from us, and it poses no threat to Earth.
+1:35.17–1:40.93  But somewhere out there, a planet's final moments are still written in light, and Webb is learning to read them.
+
+Narration ends 100.93 s; video 104.3 s.
