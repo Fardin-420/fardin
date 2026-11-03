@@ -78,7 +78,7 @@ export const DossierReveal: React.FC<{ at?: number }> = ({ at = 0 }) => {
           <div style={{ width: 120, height: 120, borderRadius: 120, background: '#8d1414', boxShadow: '0 0 30px #8d141488' }} />
         </div>
       </div>
-      <div style={{ position: 'absolute', left: 0, right: 0, top: 800, textAlign: 'center', opacity: prog(f, at + 38, 14) }}>
+      <div style={{ position: 'absolute', left: 0, right: 0, top: 110, textAlign: 'center', opacity: prog(f, at + 38, 14) }}>
         <Kicker color={C.bone} size={22}>ATTRIBUTION: TRM LABS · CHAINALYSIS · ELLIPTIC · FBI</Kicker>
       </div>
     </AbsoluteFill>

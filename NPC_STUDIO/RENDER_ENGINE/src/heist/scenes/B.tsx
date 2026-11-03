@@ -324,11 +324,11 @@ export const S06: React.FC<{ s: SceneData }> = ({ s }) => {
       enter: 'zoom',
       el: (
         <>
-          <AbsoluteFill style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: 120, top: -120 }}>
+          <AbsoluteFill style={{ flexDirection: 'row', justifyContent: 'center', alignItems: 'center', gap: 120, top: -170 }}>
             <Counter to={420_000} at={0} len={30} suffix="+ ETH" size={150} />
             <Counter to={18_270} at={8} len={28} suffix=" BTC" size={150} />
           </AbsoluteFill>
-          <AbsoluteFill style={{ top: 200 }}>
+          <AbsoluteFill style={{ top: 110 }}>
             <Center>
               <Stamp text="~$2.4B BEYOND ANY FREEZE" at={30} color={C.alarm} size={76} rotate={-2} />
             </Center>
