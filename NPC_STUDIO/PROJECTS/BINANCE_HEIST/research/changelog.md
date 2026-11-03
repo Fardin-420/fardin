@@ -55,3 +55,10 @@ Every phase appends a 3-line status. Fact changes after Nov 3, 2026 are listed u
 - Remotion edit in RENDER_ENGINE/src/heist (10 scenes, ~40 MG components, cue-locked shots, punch/impact camera, dipBlack/filmBurn/iceWipe/dataWipe presentations, glitch/zoom/push shot transitions, 2019 grade). Fonts self-hosted.
 - Sound: 7 generated score acts (no licensed tracks supplied), cue-locked procedural SFX, music −12 dB under VO; master −14.0 LUFS / −1.5 dBTP.
 - Captions: 240 pages, ≤2×34 chars, gold active word, key-term pops, 15 hide windows against doubled text; out/captions_en.srt.
+
+## Phase 7 — Full render · 2026-11-03
+- Rendered in four chunks (0–1799, 1800–12999, 13000–18999, 19000–25013) because background jobs cap at 2 h; ~2.6 h total at 1.9–2.6 fps on 4 cores. Every chunk was checked for its exact frame count.
+- Frame-by-frame review (one frame every 3 s) found eight places where on-screen text collided with the burned-in captions; none were factual. Fixed in code, then only the affected windows were re-rendered and spliced in (`scripts/finalize.py` → `apply_patches`):
+  - 2019 hot/cold "STREET →" label, the "7,000 BTC" label clipped by the TO panel, the "ALARMS: AFTER THE FACT" headline, the "WITHDRAWALS BACK" stamp
+  - the "UNDER 4 MINUTES" and "~$2.4B BEYOND ANY FREEZE" stamps, the TraderTraitor dossier attribution line, the end-screen footer
+- The cold-open montage keeps the dossier snapshot with its attribution line at the bottom; it doesn't collide there.

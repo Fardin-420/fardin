@@ -677,7 +677,7 @@ export const EndScreen: React.FC = () => {
       {[0, 1].map((k) => (
         <div key={k} style={{ position: 'absolute', left: 980, top: 170 + k * 330, width: 800, height: 290, border: `2px solid ${C.line}`, borderRadius: 12, background: 'rgba(19,22,27,.5)', opacity: prog(f, 10 + k * 8, 14) }} />
       ))}
-      <div style={{ position: 'absolute', left: 0, right: 0, top: 840, textAlign: 'center', opacity: prog(f, 24, 14) }}>
+      <div style={{ position: 'absolute', left: 0, right: 0, top: 990, textAlign: 'center', opacity: prog(f, 24, 14) }}>
         <Kicker size={22}>SOURCES IN THE DESCRIPTION · FACTS AS OF NOV 3, 2026</Kicker>
       </div>
     </AbsoluteFill>
