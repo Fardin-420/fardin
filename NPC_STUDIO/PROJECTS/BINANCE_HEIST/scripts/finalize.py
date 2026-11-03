@@ -43,15 +43,33 @@ def apply_patches():
     for k, plist in by_chunk.items():
         src = CH / f"c{k}.mp4"
         orig = CH / f"c{k}_orig.mp4"
+        if orig.exists() and src.exists() and src.stat().st_mtime > max(p.stat().st_mtime for *_, p in plist):
+            continue  # already spliced with the current patches
         if not orig.exists():
             src.rename(orig)
-        inputs, chain, last = ["-i", str(orig)], [], "0:v"
+        # Frame-exact splice: original [0, a) + patch [a, b] + original (b, end] ... via trim + concat.
+        plist.sort()
+        inputs, chain, segs, cur = ["-i", str(orig)], [], [], 0
         for i, (a, b, p) in enumerate(plist, 1):
             inputs += ["-i", str(p)]
-            chain.append(f"[{i}:v]setpts=PTS-STARTPTS+{a}/30/TB[p{i}]")
-            chain.append(f"[{last}][p{i}]overlay=eof_action=pass:enable='between(n,{a},{b})'[v{i}]")
-            last = f"v{i}"
-        run("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *inputs, "-filter_complex", ";".join(chain), "-map", f"[{last}]",
+            if a > cur:
+                chain.append(f"[0:v]trim=start_frame={cur}:end_frame={a},setpts=PTS-STARTPTS[o{i}]")
+                segs.append(f"[o{i}]")
+            chain.append(f"[{i}:v]trim=start_frame=0:end_frame={b - a + 1},setpts=PTS-STARTPTS[p{i}]")
+            segs.append(f"[p{i}]")
+            cur = b + 1
+        total = int(subprocess.run(["ffprobe", "-v", "error", "-count_packets", "-select_streams", "v:0", "-show_entries",
+                                    "stream=nb_read_packets", "-of", "csv=p=0", str(orig)], capture_output=True, text=True).stdout)
+        if cur < total:
+            chain.append(f"[0:v]trim=start_frame={cur},setpts=PTS-STARTPTS[tail]")
+            segs.append("[tail]")
+        uses = [c for c in chain if c.startswith("[0:v]")]
+        for j, c in enumerate(uses):
+            chain[chain.index(c)] = f"[src{j}]" + c[len("[0:v]"):]
+        chain.insert(0, f"[0:v]split={len(uses)}" + "".join(f"[src{j}]" for j in range(len(uses))))
+        chain.append(f"{''.join(segs)}concat=n={len(segs)}:v=1:a=0,fps=30[out]")
+        last = "out"
+        run("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *inputs, "-filter_complex", ";".join(chain), "-map", f"[{last}]", "-video_track_timescale", "90000",
             "-c:v", "libx264", "-preset", "medium", "-crf", "14", "-pix_fmt", "yuv420p",
             "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709", src)
 
@@ -59,10 +77,21 @@ def apply_patches():
 def main():
     apply_patches()
     chunks = sorted((p for p in CH.glob("c*.mp4") if p.stem[1:].isdigit()), key=lambda p: int(p.stem[1:]))
+    # Remotion and the patch encoder write different MP4 timescales (1/90000 vs 1/15360); a stream-copy
+    # concat of mixed timescales produces a broken timeline, so remux every chunk to 90 kHz first.
+    norm = []
+    for c in chunks:
+        t = CH / f"ts_{c.name}"
+        run("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", c, "-c", "copy", "-video_track_timescale", "90000", t)
+        norm.append(t)
     lst = CH / "list.txt"
-    lst.write_text("".join(f"file '{c.name}'\n" for c in chunks))
+    lst.write_text("".join(f"file '{c.name}'\n" for c in norm))
     video = CH / "video_full.mp4"
     run("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", lst, "-c", "copy", video)
+    n = int(subprocess.run(["ffprobe", "-v", "error", "-count_packets", "-select_streams", "v:0", "-show_entries",
+                            "stream=nb_read_packets", "-of", "csv=p=0", str(video)], capture_output=True, text=True).stdout)
+    expected = 25014
+    assert n == expected, f"concatenated video has {n} frames, expected {expected}"
     master = OUT / "master_1080p.mp4"
     run("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", video, "-i", AUDIO, "-map", "0:v:0", "-map", "1:a:0",
         "-c:v", "copy", "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-ac", "2", "-shortest",
