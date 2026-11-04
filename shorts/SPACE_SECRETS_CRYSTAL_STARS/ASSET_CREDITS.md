@@ -1,0 +1,12 @@
+# Asset credits
+- **Imagery:** all imagery is original procedural CGI and schematic graphics, rendered for this video at native 1080×1920. No ESA, NASA or journal images were used or imitated.
+  - No image of a white dwarf's interior exists.
+  - Gaia's evidence is statistical (colours, brightnesses and distances of many stars). The pile-up diagram is a labelled schematic, not Gaia data.
+- **White dwarf, cutaway and crystal lattice:** procedural models drawn in code; the lattice is a hugely magnified schematic.
+- **Gaia spacecraft:** a simplified geometric reconstruction, labelled "CGI reconstruction · not ESA imagery".
+- **Red-giant photosphere:** procedural 6144×3072 granulation map.
+- **Earth:** procedural globe shaded from the 4096×2048 texture set used in earlier Space Secrets videos.
+- **Star fields:** procedural plates, supersampled at 2×.
+- **Voice:** Kokoro-82M (Apache-2.0), voice am_puck, run locally.
+- **Music, ambience and sound effects:** synthesized in code. The crystal chimes are artistic sound design, not real sounds from space.
+- **Fonts:** Inter (SIL OFL 1.1), JetBrains Mono (SIL OFL 1.1).

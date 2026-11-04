@@ -1,0 +1,21 @@
+shot,start_s,end_s,beat,visual,label
+01,0.00,2.30,Hook,White dwarf cutaway: liquid C/O layer + glinting crystal lattice core; STARS TURN INTO CRYSTALS?!,scientific CGI
+02,2.30,9.31,Setup,"Faint white dwarf in a star field, then ESA Gaia reconstruction push-in",simulated field / CGI reconstruction
+03,9.31,16.14,Origin,"Sun-like star swells to a red giant, sheds a planetary nebula, exposes its core","scientific CGI, timescale compressed"
+04,16.14,17.44,Name,"Nebula ring, white dwarf grows into frame; A WHITE DWARF",scientific CGI
+05,17.44,21.65,Scale,Earth beside an Earth-sized white dwarf,approximately to scale
+06,21.65,23.99,Density,Teaspoon above the white dwarf limb; 1 TEASPOON ≈ SEVERAL TONS,illustration
+07,23.99,27.91,Cooling,White dwarf colour cools on a billions-of-years timeline,scientific CGI
+08,27.91,31.62,Dive,Camera plunges into the star; warm interior glow; DEEP INSIDE,scientific CGI
+09,31.62,35.69,Interior,Cutaway opens on the carbon–oxygen core; a crystal front starts to grow,scientific CGI
+10,35.69,37.91,SURPRISE ~35.8 s,"NOT ICE. / A CRYSTAL. Crystal front sweeps outward, chimes",scientific CGI
+11,37.91,44.71,Lattice,"3D lattice of C/O nuclei with a free-flowing electron sea, orbiting camera","schematic, not to scale"
+12,44.71,50.39,Not a gem,"Pull-out from the lattice; NOT A GEMSTONE; ~1,000,000× DENSER THAN WATER",schematic
+13,50.39,53.83,Problem,A faint point of light: the interior is hidden,simulated field
+14,53.83,61.94,GAIA REVEAL ~54 s,"Gaia reconstruction, then a schematic cooling-sequence scatter with a highlighted PILE-UP","schematic after Tremblay et al. 2019, not Gaia data"
+15,61.94,68.00,Why,Latent heat pulses from the crystal front; cooling curve with vs without freezing,scientific CGI + schematic
+16,68.00,72.61,Younger,Three white dwarfs; UP TO 2 BILLION YEARS YOUNGER-LOOKING,scientific CGI
+17,72.61,77.15,TWIST ~72.7 s,2024 · NATURE / A STRANGER TWIST over a new cutaway,scientific CGI
+18,77.15,84.52,Distillation,"Light crystals float up, heavier liquid sinks",schematic of Bédard et al. 2024 model
+19,84.52,90.11,Stall,Cooling curve flattens for billions of years; COOLING ON PAUSE,schematic
+20,90.11,99.30,Ending,"Field of faint old white dwarfs, one with a crystal heart; A HEART OF CRYSTAL",scientific CGI
