@@ -25,53 +25,73 @@ def run(*a):
 CHUNK_START = {1: 0, 2: 1800, 3: 13000, 4: 19000}
 
 
-def apply_patches():
-    """Splice re-rendered windows (out/chunks/patches/p<start>_<end>.mp4, global frames) into their chunk.
+def nframes(p: Path) -> int:
+    return int(subprocess.run(["ffprobe", "-v", "error", "-count_packets", "-select_streams", "v:0", "-show_entries",
+                               "stream=nb_read_packets", "-of", "csv=p=0", str(p)], capture_output=True, text=True).stdout)
 
-    Patches are frame-exact re-renders of the same composition after a layout fix, so splicing only
-    swaps the frames that changed. The patched chunk is re-encoded once at CRF 14 (visually lossless).
+
+def apply_patches():
+    """Splice re-rendered windows (out/chunks/patches/p<start>_<end>.mp4, global frames) into the chunks.
+
+    Patches may overlap and may cross chunk boundaries. Each frame comes from the newest patch that
+    covers it (by file time), otherwise from the original chunk. Splices are frame-exact (trim + concat)
+    and a patched chunk is re-encoded once at CRF 14 (visually lossless).
     """
     pdir = CH / "patches"
     if not pdir.exists():
         return
-    by_chunk: dict[int, list] = {}
-    starts = sorted(CHUNK_START.items(), key=lambda kv: kv[1])
-    for p in sorted(pdir.glob("p*_*.mp4")):
+    patches = []
+    for p in pdir.glob("p*_*.mp4"):
+        if ".part" in p.name:
+            continue
         a, b = map(int, p.stem[1:].split("_"))
-        k = max(k for k, s in starts if s <= a)
-        by_chunk.setdefault(k, []).append((a - CHUNK_START[k], b - CHUNK_START[k], p))
-    for k, plist in by_chunk.items():
-        src = CH / f"c{k}.mp4"
-        orig = CH / f"c{k}_orig.mp4"
-        if orig.exists() and src.exists() and src.stat().st_mtime > max(p.stat().st_mtime for *_, p in plist):
+        patches.append((p.stat().st_mtime, a, b, p))
+    patches.sort()
+    bounds = sorted(CHUNK_START.items(), key=lambda kv: kv[1])
+    for ci, (k, c0) in enumerate(bounds):
+        src, orig = CH / f"c{k}.mp4", CH / f"c{k}_orig.mp4"
+        base = orig if orig.exists() else src
+        total = nframes(base)
+        mine = [(m, a, b, p) for m, a, b, p in patches if a < c0 + total and b >= c0]
+        if not mine:
+            continue
+        if orig.exists() and src.exists() and src.stat().st_mtime > max(m for m, *_ in mine):
             continue  # already spliced with the current patches
         if not orig.exists():
             src.rename(orig)
-        # Frame-exact splice: original [0, a) + patch [a, b] + original (b, end] ... via trim + concat.
-        plist.sort()
-        inputs, chain, segs, cur = ["-i", str(orig)], [], [], 0
-        for i, (a, b, p) in enumerate(plist, 1):
-            inputs += ["-i", str(p)]
-            if a > cur:
-                chain.append(f"[0:v]trim=start_frame={cur}:end_frame={a},setpts=PTS-STARTPTS[o{i}]")
-                segs.append(f"[o{i}]")
-            chain.append(f"[{i}:v]trim=start_frame=0:end_frame={b - a + 1},setpts=PTS-STARTPTS[p{i}]")
-            segs.append(f"[p{i}]")
-            cur = b + 1
-        total = int(subprocess.run(["ffprobe", "-v", "error", "-count_packets", "-select_streams", "v:0", "-show_entries",
-                                    "stream=nb_read_packets", "-of", "csv=p=0", str(orig)], capture_output=True, text=True).stdout)
-        if cur < total:
-            chain.append(f"[0:v]trim=start_frame={cur},setpts=PTS-STARTPTS[tail]")
-            segs.append("[tail]")
-        uses = [c for c in chain if c.startswith("[0:v]")]
-        for j, c in enumerate(uses):
-            chain[chain.index(c)] = f"[src{j}]" + c[len("[0:v]"):]
-        chain.insert(0, f"[0:v]split={len(uses)}" + "".join(f"[src{j}]" for j in range(len(uses))))
-        chain.append(f"{''.join(segs)}concat=n={len(segs)}:v=1:a=0,fps=30[out]")
-        last = "out"
-        run("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *inputs, "-filter_complex", ";".join(chain), "-map", f"[{last}]", "-video_track_timescale", "90000",
-            "-c:v", "libx264", "-preset", "medium", "-crf", "14", "-pix_fmt", "yuv420p",
+        owner = [-1] * total
+        for idx, (m, a, b, p) in enumerate(mine):
+            for f in range(max(a, c0) - c0, min(b, c0 + total - 1) - c0 + 1):
+                owner[f] = idx
+        segs, s0 = [], 0
+        for f in range(1, total + 1):
+            if f == total or owner[f] != owner[s0]:
+                segs.append((owner[s0], s0, f - 1))
+                s0 = f
+        used = sorted({o for o, *_ in segs if o >= 0})
+        inputs = ["-i", str(orig)] + sum([["-i", str(mine[o][3])] for o in used], [])
+        ipos = {o: i + 1 for i, o in enumerate(used)}
+        uses = {}
+        for o, *_ in segs:
+            uses[o] = uses.get(o, 0) + 1
+        chain, labels, cnt = [], [], {}
+        for o, n in uses.items():
+            inp = "0:v" if o < 0 else f"{ipos[o]}:v"
+            chain.append(f"[{inp}]split={n}" + "".join(f"[s{o + 1}_{j}]" for j in range(n)))
+        for i, (o, f0, f1) in enumerate(segs):
+            j = cnt.get(o, 0)
+            cnt[o] = j + 1
+            off = 0 if o < 0 else c0 + 0 - mine[o][1]  # chunk-local frame -> patch-local frame
+            st, en = f0 + off, f1 + off + 1
+            chain.append(f"[s{o + 1}_{j}]trim=start_frame={st}:end_frame={en},setpts=PTS-STARTPTS[g{i}]")
+            labels.append(f"[g{i}]")
+        chain.append(f"{''.join(labels)}concat=n={len(labels)}:v=1:a=0,fps=30[out]")
+        print(f"c{k}: {len(segs)} segments from {len(used)} patches")
+        run("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *inputs, "-filter_complex", ";".join(chain), "-map", "[out]",
+            "-video_track_timescale", "90000", "-c:v", "libx264", "-preset", "medium", "-crf", "14", "-pix_fmt", "yuv420p",
             "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709", src)
+        n = nframes(src)
+        assert n == total, f"c{k}: spliced {n} frames, expected {total}"
 
 
 def main():

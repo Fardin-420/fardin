@@ -1,6 +1,7 @@
 // THE 20-MINUTE HEIST — render driver.
 //   node pipeline/render_heist.mjs stills <outDir> <frame,frame,...>
 //   node pipeline/render_heist.mjs video <out.mp4> [startFrame] [endFrame]   (silent H.264, CRF 16)
+//   node pipeline/render_heist.mjs ranges <outDir> <windows.json>   (one bundle; each [a,b] -> p<a>_<b>.mp4, skips existing)
 //   node pipeline/render_heist.mjs thumbs <outDir>
 import { bundle } from '@remotion/bundler';
 import { renderMedia, renderStill, selectComposition } from '@remotion/renderer';
@@ -60,6 +61,28 @@ if (mode === 'stills') {
     },
   });
   console.log(`video -> ${out}  (${((Date.now() - t0) / 60000).toFixed(1)} min, concurrency ${conc})`);
+} else if (mode === 'ranges') {
+  const comp = await selectComposition({ serveUrl, id: 'Heist', inputProps: { burnCaptions: true }, browserExecutable, chromiumOptions });
+  fs.mkdirSync(out, { recursive: true });
+  const wins = JSON.parse(fs.readFileSync(a, 'utf8'));
+  const total = wins.reduce((n, [s, e]) => n + e - s + 1, 0);
+  let done = 0;
+  const t0 = Date.now();
+  for (const [s, e] of wins) {
+    const dst = path.join(out, `p${s}_${e}.mp4`);
+    if (fs.existsSync(dst)) { done += e - s + 1; continue; }
+    const tmp = dst.replace(/\.mp4$/, '.part.mp4');
+    await renderMedia({
+      serveUrl, composition: comp, codec: 'h264', crf: 16, x264Preset: 'medium', pixelFormat: 'yuv420p', colorSpace: 'bt709',
+      muted: true, enforceAudioTrack: false, outputLocation: tmp, frameRange: [s, e], concurrency: conc,
+      browserExecutable, chromiumOptions, inputProps: { burnCaptions: true }, timeoutInMilliseconds: 120000,
+    });
+    fs.renameSync(tmp, dst);
+    done += e - s + 1;
+    const fps = done / ((Date.now() - t0) / 1000);
+    console.log(`${dst.split('/').pop()}  ${done}/${total} frames  ~${fps.toFixed(1)} fps`);
+  }
+  console.log(`ranges -> ${out}  (${((Date.now() - t0) / 60000).toFixed(1)} min)`);
 } else if (mode === 'thumbs') {
   fs.mkdirSync(out, { recursive: true });
   for (const id of ['ThumbA', 'ThumbB', 'ThumbC']) {

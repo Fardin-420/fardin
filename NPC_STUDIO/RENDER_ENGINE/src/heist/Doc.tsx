@@ -1,4 +1,5 @@
 import React from 'react';
+import { PaceCam } from './components/pace';
 import { AbsoluteFill } from 'remotion';
 import { TransitionSeries, linearTiming } from '@remotion/transitions';
 import { TL, SceneData } from './tl';
@@ -45,7 +46,9 @@ export const Doc: React.FC<DocProps> = ({ burnCaptions = true }) => {
   });
   return (
     <AbsoluteFill style={{ background: '#000' }}>
-      <TransitionSeries>{items}</TransitionSeries>
+      <PaceCam>
+        <TransitionSeries>{items}</TransitionSeries>
+      </PaceCam>
       <Vignette amount={0.22} />
       <FilmGrain opacity={0.04} />
       <CaptionTrack enabled={burnCaptions} />
