@@ -3,7 +3,7 @@
     .venv/bin/python scripts/finalize.py
 
 out/master_1080p.mp4   H.264 High (CRF 16 from Remotion, stream-copied) + AAC 48 kHz 320 kbps
-out/upload_1080p.mp4   2-pass ≈ 8 Mbps H.264 + AAC 256 kbps, +faststart
+out/upload_1080p.mp4   CRF 17 H.264 (≤12 Mbps) + the master AAC (copied), +faststart
 out/preview_coldopen.mp4  0:00–1:00 with audio
 """
 from __future__ import annotations
@@ -97,12 +97,12 @@ def main():
         "-c:v", "copy", "-c:a", "aac", "-b:a", "320k", "-ar", "48000", "-ac", "2", "-shortest",
         "-metadata", "title=The 20-Minute Heist", "-movflags", "+faststart", master)
     up = OUT / "upload_1080p.mp4"
-    common = ["-c:v", "libx264", "-preset", "slow", "-profile:v", "high", "-pix_fmt", "yuv420p", "-b:v", "8000k",
-              "-maxrate", "12000k", "-bufsize", "16000k", "-g", "60", "-bf", "2", "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709"]
-    plog = str(CH / "x264pass")
-    run("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", master, *common, "-pass", "1", "-passlogfile", plog, "-an", "-f", "mp4", "/dev/null")
-    run("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", master, *common, "-pass", "2", "-passlogfile", plog,
-        "-c:a", "aac", "-b:a", "256k", "-ar", "48000", "-movflags", "+faststart", up)
+    # Quality-targeted (CRF 17, capped at 12 Mbps), not a fixed 8 Mbps: these flat graphics need far less than
+    # 8 Mbps, and a fixed bitrate pushed the file over the ~800 MB limit for no visible gain.
+    run("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", master, "-c:v", "libx264", "-preset", "slow", "-profile:v", "high",
+        "-crf", "17", "-maxrate", "12000k", "-bufsize", "24000k", "-g", "60", "-bf", "2", "-pix_fmt", "yuv420p",
+        "-colorspace", "bt709", "-color_primaries", "bt709", "-color_trc", "bt709",
+        "-c:a", "copy", "-movflags", "+faststart", up)  # reuse the master AAC: re-encoding pushed true peak to -0.8 dBTP
     run("ffmpeg", "-hide_banner", "-loglevel", "error", "-y", "-i", master, "-t", "60", "-c:v", "libx264", "-preset", "medium", "-crf", "18",
         "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "256k", "-movflags", "+faststart", OUT / "preview_coldopen.mp4")
     for p in (master, up, OUT / "preview_coldopen.mp4"):

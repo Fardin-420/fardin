@@ -9,22 +9,22 @@ Automated by `scripts/qa.py` on the final files, plus the manual review notes be
 | Frame rate | 30/1 | 30/1 | 30 |
 | Codec / profile | h264 High | h264 High | H.264 High |
 | Pixel format | yuv420p | yuv420p | yuv420p |
-| Frames | 25014 (timeline 25014) | 4271 | equal |
-| Duration video / audio | 142.33 s / 142.314 s | 142.367 s / 142.314 s | match |
-| Audio | aac 48000 Hz 2 ch 325 kbps | aac 268 kbps | AAC 48 kHz 320 / 256 |
-| Video bitrate (total) | 18.61 Mbps | 8.19 Mbps | CRF 16 / ≈8 Mbps |
-| Size | 331.0 MB | **145.7 MB** | upload ≤ ~800 MB ✅ |
+| Frames | 25014 (timeline 25014) | 25014 | equal |
+| Duration video / audio | 833.8 s / 833.8 s | 833.8 s / 833.813 s | match |
+| Audio | aac 48000 Hz 2 ch 324 kbps | aac 269 kbps | AAC 48 kHz 320 / 256 |
+| Video bitrate (total) | 3.45 Mbps | 8.32 Mbps | CRF 16 / ≈8 Mbps |
+| Size | 359.9 MB | **867.7 MB** | upload ≤ ~800 MB ❌ |
 
 ## Loudness (ebur128 on the encoded AAC)
-- master: **-14.1 LUFS** integrated, true peak **-1.2 dBTP**, LRA 4.1 LU — target −14 ±0.5 LUFS ✅, ≤ −1 dBTP ✅
-- upload: -14.2 LUFS, -1.0 dBTP
+- master: **-14.0 LUFS** integrated, true peak **-1.1 dBTP**, LRA 4.5 LU — target −14 ±0.5 LUFS ✅, ≤ −1 dBTP ✅
+- upload: -14.1 LUFS, -0.8 dBTP
 - Music ducks −12 dB under the voice, driven by VO activity; SFX −4 dB under the voice. The voice was normalized 5 LU above the music bed before the master.
 
 ## Picture integrity
-- Black segments ≥ 0.5 s: 0 → none (intended: dipBlack chapter breaks, the end of Scene 09)
+- Black segments ≥ 0.5 s: 3 → 497.1–497.6s, 758.0–759.9s, 776.8–778.1s (intended: dipBlack chapter breaks, the end of Scene 09)
 - Freezes ≥ 2.5 s (freezedetect): 1 → 53.1–55.7s
-- Visible changes (scene score > 0.06 on a 6 fps proxy): 54; median gap 1.5 s
-- Gaps > 6 s without a hard visual change: 6 → 0.0s (+24.7s), 24.7s (+14.5s), 94.5s (+7.2s), 110.2s (+6.5s), 119.0s (+6.7s), 134.2s (+8.2s). Within those spans, drift, counters, typing, particles and builds keep moving; see notes.
+- Visible changes (scene score > 0.06 on a 6 fps proxy): 67; median gap 2.7 s
+- Gaps > 6 s without a hard visual change: 26 → 0.0s (+24.7s), 24.7s (+14.5s), 58.5s (+8.2s), 66.7s (+40.2s), 112.3s (+6.2s), 118.5s (+29.8s), 153.7s (+31.3s), 185.0s (+17.8s), 205.5s (+8.0s), 213.5s (+50.8s), 264.3s (+11.0s), 278.2s (+65.2s), 344.0s (+33.5s), 386.2s (+31.2s), 417.3s (+18.3s), 435.7s (+27.5s), 463.2s (+33.8s), 499.7s (+7.2s), 507.7s (+11.7s), 519.7s (+76.0s), 595.7s (+9.7s), 612.3s (+21.3s), 633.7s (+17.0s), 650.7s (+37.7s), 694.3s (+77.2s), 778.0s (+55.8s). Within those spans, drift, counters, typing, particles and builds keep moving; see notes.
 
 ## Captions
 - 240 pages, overlaps 0 ✅, max 2 lines × 34 chars ✅

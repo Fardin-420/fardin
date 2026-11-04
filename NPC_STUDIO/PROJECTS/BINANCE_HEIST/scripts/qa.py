@@ -55,15 +55,25 @@ def freezes(p: Path) -> list:
     return list(zip(st, en))
 
 
-def cadence(p: Path) -> dict:
-    """Times of visible changes (scene score > 0.06 on a 6 fps proxy); report gaps."""
-    s = sh("ffmpeg", "-hide_banner", "-i", p, "-vf", "fps=6,scale=480:-1,select='gt(scene,0.06)',showinfo", "-an", "-f", "null", "-")
-    ts = [float(x) for x in re.findall(r"pts_time:([\d.]+)", s)]
-    dur = probe(p)["duration_s"]
-    pts = [0.0] + ts + [dur]
+def cadence(p: Path, th: float = 1.5) -> dict:
+    """Visible picture changes outside the caption band.
+
+    Decodes at 2 fps, 320x180 grey, drops the bottom 32 % (captions), and counts a change when the mean
+    absolute difference to the previous sample exceeds `th` (0-255 scale; grain and drift sit below ~1).
+    Catches fades, pushes and builds that a hard-cut scene detector misses.
+    """
+    import numpy as np
+    W, H = 320, 180
+    raw = subprocess.run(["ffmpeg", "-v", "error", "-i", str(p), "-vf", f"fps=2,scale={W}:{H},format=gray", "-f", "rawvideo", "-"],
+                         capture_output=True, check=True).stdout
+    fr = np.frombuffer(raw, np.uint8).reshape(-1, H, W)[:, : int(H * 0.68), :].astype(np.float32)
+    d = np.abs(np.diff(fr, axis=0)).mean(axis=(1, 2))
+    ts = (np.where(d > th)[0] + 1) / 2.0
+    pts = [0.0] + [float(t) for t in ts] + [len(fr) / 2.0]
     gaps = [(round(a, 1), round(b - a, 1)) for a, b in zip(pts, pts[1:])]
     long = [g for g in gaps if g[1] > 6.0]
-    return {"changes": len(ts), "median_gap_s": sorted(g[1] for g in gaps)[len(gaps) // 2], "gaps_over_6s": long}
+    return {"changes": len(ts), "median_gap_s": sorted(g[1] for g in gaps)[len(gaps) // 2], "gaps_over_6s": long,
+            "share_in_long_holds": round(sum(g for _, g in long) / pts[-1], 3)}
 
 
 def main():
@@ -157,8 +167,8 @@ def write_report(r, tl):
         f"| Pixel format | {m.get('pix_fmt')} | {u.get('pix_fmt')} | yuv420p |",
         f"| Frames | {m.get('frames')} (timeline {r['timeline_frames']}) | {u.get('frames')} | equal |",
         f"| Duration video / audio | {m.get('vdur')} s / {m.get('adur')} s | {u.get('vdur')} s / {u.get('adur')} s | match |",
-        f"| Audio | {m.get('acodec')} {m.get('a_sr')} Hz {m.get('a_ch')} ch {m.get('a_kbps')} kbps | {u.get('acodec')} {u.get('a_kbps')} kbps | AAC 48 kHz 320 / 256 |",
-        f"| Video bitrate (total) | {m.get('bitrate_mbps')} Mbps | {u.get('bitrate_mbps')} Mbps | CRF 16 / ≈8 Mbps |",
+        f"| Audio | {m.get('acodec')} {m.get('a_sr')} Hz {m.get('a_ch')} ch {m.get('a_kbps')} kbps | {u.get('acodec')} {u.get('a_kbps')} kbps | AAC 48 kHz 320 (both) |",
+        f"| Video bitrate (total) | {m.get('bitrate_mbps')} Mbps | {u.get('bitrate_mbps')} Mbps | CRF 16 / CRF 17 |",
         f"| Size | {m.get('size_mb')} MB | **{u.get('size_mb')} MB** | upload ≤ ~800 MB {ok((u.get('size_mb') or 1e9) <= 800)} |",
         "",
         "## Loudness (ebur128 on the encoded AAC)",
@@ -169,8 +179,8 @@ def write_report(r, tl):
         "## Picture integrity",
         f"- Black segments ≥ 0.5 s: {len(r['black'])} → " + (", ".join(f"{a:.1f}–{b:.1f}s" for a, b in r['black']) or "none") + " (intended: dipBlack chapter breaks, the end of Scene 09)",
         f"- Freezes ≥ 2.5 s (freezedetect): {len(r['freeze'])} → " + (", ".join(f"{a:.1f}–{b:.1f}s" for a, b in r['freeze']) or "none"),
-        f"- Visible changes (scene score > 0.06 on a 6 fps proxy): {r['cadence']['changes']}; median gap {r['cadence']['median_gap_s']} s",
-        f"- Gaps > 6 s without a hard visual change: {len(r['cadence']['gaps_over_6s'])} → " + (", ".join(f"{a}s (+{g}s)" for a, g in r['cadence']['gaps_over_6s']) or "none") + ". Within those spans, drift, counters, typing, particles and builds keep moving; see notes.",
+        f"- Visible picture changes (mean abs. difference > 1.5/255 between 0.5 s samples, caption band excluded): {r['cadence']['changes']}; median gap {r['cadence']['median_gap_s']} s",
+        f"- Holds > 6 s with only small motion: {len(r['cadence']['gaps_over_6s'])} ({r['cadence']['share_in_long_holds'] * 100:.0f}% of runtime) → " + (", ".join(f"{a}s (+{g}s)" for a, g in r['cadence']['gaps_over_6s']) or "none") + ". **Below the 3–6 s change target.** In these spans the frame keeps moving (counters, nonce ticks, typing, drift, particles), but the composition doesn't change enough to count. The longest are the Binance 14 / EIP-7702 explainer (~5:06–5:38), the 2019 reorg/backlash beat (~3:34–3:57) and the S08/S09 status and question cards.",
         "",
         "## Captions",
         f"- {r['captions']['pages']} pages, overlaps {r['captions']['overlaps']} {ok(r['captions']['overlaps'] == 0)}, max {r['captions']['max_lines']} lines × {r['captions']['max_line_chars']} chars {ok(r['captions']['max_line_chars'] <= 34)}",
