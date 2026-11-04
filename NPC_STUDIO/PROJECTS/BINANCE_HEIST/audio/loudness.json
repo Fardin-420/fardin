@@ -1,0 +1,15 @@
+{
+ "file": "mix_master.wav",
+ "integrated_lufs": -14.0,
+ "true_peak_dbtp": -1.5,
+ "lra_lu": 4.5,
+ "music_sources": {
+  "act1_coldopen": "generated",
+  "act2_flashback": "generated",
+  "act3_heist": "generated",
+  "act4_freeze": "generated",
+  "act5_name": "generated",
+  "act6_aftermath": "generated",
+  "act7_outro": "generated"
+ }
+}

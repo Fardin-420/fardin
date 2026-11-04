@@ -10,14 +10,24 @@
   "dependencies": {
     "@react-three/fiber": "^9.8.2",
     "@remotion/bundler": "^4.0.537",
+    "@remotion/captions": "4.0.537",
     "@remotion/cli": "^4.0.537",
+    "@remotion/google-fonts": "4.0.537",
+    "@remotion/install-whisper-cpp": "4.0.537",
+    "@remotion/media-utils": "4.0.537",
+    "@remotion/motion-blur": "4.0.537",
+    "@remotion/noise": "4.0.537",
+    "@remotion/paths": "4.0.537",
     "@remotion/renderer": "^4.0.537",
+    "@remotion/shapes": "4.0.537",
     "@remotion/three": "^4.0.537",
+    "@remotion/transitions": "4.0.537",
     "opentype.js": "^2.0.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "remotion": "^4.0.537",
-    "three": "^0.186.1"
+    "three": "^0.186.1",
+    "zod": "4.5.4"
   },
   "devDependencies": {
     "@types/node": "^26.6.5",
