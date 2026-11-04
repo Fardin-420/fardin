@@ -62,3 +62,12 @@ Every phase appends a 3-line status. Fact changes after Nov 3, 2026 are listed u
   - 2019 hot/cold "STREET →" label, the "7,000 BTC" label clipped by the TO panel, the "ALARMS: AFTER THE FACT" headline, the "WITHDRAWALS BACK" stamp
   - the "UNDER 4 MINUTES" and "~$2.4B BEYOND ANY FREEZE" stamps, the TraderTraitor dossier attribution line, the end-screen footer
 - The cold-open montage keeps the dossier snapshot with its attribution line at the bottom; it doesn't collide there.
+
+## Phase 7b — Pacing pass (v2) · 2026-11-04
+- Problem: 37 stretches longer than 6 s without a real picture change (51% of runtime). Worst was the Binance 14 / EIP-7702 explainer at ~5:06.
+- Fix: a global camera layer (`components/pace.tsx`, driven by `data/pace.json`, which `scripts/pace_plan.py` generates from the rendered v1). It adds a beat every ~3.8 s inside each hold, cycling eased punch-in → hard-cut detail → wide push. Framing is measured from the v1 frames, with a guard that keeps everything shown in the hold above the caption band. Identity outside the windows.
+- Four detail inserts (`components/inserts.tsx`) in the priority hold, each locked to its VO line: 50 authorizations (F9), Ethereum | EIP-7702 split (F35), wallet → code delegation, and a nonce counter. The last two are labeled as illustrations, and no new facts were added.
+- The end screen (last 20 s) was left static for YouTube end-screen element slots.
+- 36 windows (12,231 frames) re-rendered and spliced frame-exactly. The splice handles overlapping patches, with the newest patch winning. VO, mix, captions and chapter timings are unchanged; 25,014 frames, −14.0 LUFS / −1.1 dBTP.
+- Result: holds over 6 s went from 37 to 1 (the end screen). Upload 337.8 MB, master 423.3 MB.
+- Off-container save: GitHub Release creation is refused for this session type, and lfs.github.com is blocked by the network policy, so the MP4s live only in the container (v1 in out/v1/, v2 in out/).

@@ -12,8 +12,8 @@ Automated by `scripts/qa.py` on the final files, plus the manual review notes be
 | Frames | 25014 (timeline 25014) | 25014 | equal |
 | Duration video / audio | 833.8 s / 833.8 s | 833.8 s / 833.8 s | match |
 | Audio | aac 48000 Hz 2 ch 324 kbps | aac 324 kbps | AAC 48 kHz 320 (both) |
-| Video bitrate (total) | 3.45 Mbps | 2.86 Mbps | CRF 16 / CRF 17 |
-| Size | 359.9 MB | **298.5 MB** | upload ≤ ~800 MB ✅ |
+| Video bitrate (total) | 4.06 Mbps | 3.24 Mbps | CRF 16 / CRF 17 |
+| Size | 423.3 MB | **337.8 MB** | upload ≤ ~800 MB ✅ |
 
 ## Loudness (ebur128 on the encoded AAC)
 - master: **-14.0 LUFS** integrated, true peak **-1.1 dBTP**, LRA 4.5 LU — target −14 ±0.5 LUFS ✅, ≤ −1 dBTP ✅
@@ -21,10 +21,10 @@ Automated by `scripts/qa.py` on the final files, plus the manual review notes be
 - Music ducks −12 dB under the voice, driven by VO activity; SFX −4 dB under the voice. The voice was normalized 5 LU above the music bed before the master.
 
 ## Picture integrity
-- Black segments ≥ 0.5 s: 3 → 497.1–497.6s, 758.0–759.9s, 776.8–778.1s (intended: dipBlack chapter breaks, the end of Scene 09)
+- Black segments ≥ 0.5 s: 2 → 497.1–497.6s, 776.8–778.1s (intended: dipBlack into Chapter 6 and into the outro)
 - Freezes ≥ 2.5 s (freezedetect): 1 → 53.1–55.7s
-- Visible picture changes (mean abs. difference > 1.5/255 between 0.5 s samples, caption band excluded): 450; median gap 0.5 s
-- Holds > 6 s with only small motion: 37 (51% of runtime) → 25.0s (+6.5s), 91.5s (+8.5s), 162.5s (+7.5s), 214.0s (+23.0s), 244.5s (+11.0s), 256.0s (+8.5s), 281.0s (+23.0s), 306.5s (+32.0s), 344.0s (+7.0s), 356.5s (+11.0s), 394.0s (+8.5s), 403.0s (+10.0s), 424.0s (+6.5s), 440.0s (+11.5s), 452.5s (+10.5s), 468.5s (+14.5s), 484.5s (+9.0s), 500.0s (+7.0s), 508.0s (+11.5s), 527.0s (+10.0s), 540.5s (+12.5s), 554.0s (+14.0s), 568.0s (+14.5s), 613.0s (+14.0s), 634.5s (+11.0s), 651.0s (+11.0s), 663.0s (+11.0s), 675.5s (+7.5s), 703.5s (+8.5s), 722.0s (+14.5s), 737.5s (+10.0s), 747.5s (+6.5s), 754.0s (+7.0s), 779.0s (+7.0s), 793.5s (+8.0s), 801.5s (+12.5s), 814.0s (+20.0s). **Below the 3–6 s change target.** In these spans the frame keeps moving (counters, nonce ticks, typing, drift, particles), but the composition doesn't change enough to count. The longest are the Binance 14 / EIP-7702 explainer (~5:06–5:38), the 2019 reorg/backlash beat (~3:34–3:57) and the S08/S09 status and question cards.
+- Visible picture changes (mean abs. difference > 1.5/255 between 0.5 s samples, caption band excluded): 915; median gap 0.5 s
+- Holds > 6 s with only small motion: 1 (2% of runtime) → 814.0s (+20.0s). Every other stretch changes picture within 6 s (pacing pass v2: camera punch-ins, detail cuts, pushes and four detail inserts in the Binance 14 / EIP-7702 explainer). Any hold starting at or after 13:34 is the YouTube end screen, which is kept static on purpose: its element slots must not move.
 
 ## Captions
 - 240 pages, overlaps 0 ✅, max 2 lines × 34 chars ✅
@@ -109,17 +109,22 @@ Automated by `scripts/qa.py` on the final files, plus the manual review notes be
 
 No mismatches found: every figure above traces to `research/fact-ledger.md` (Phase 1 table).
 
-## Manual review (one frame every 3 s, all 13:53)
-- Eight places where text collided with the burned-in captions were fixed in code and spliced in as frame-exact re-renders (see changelog, Phase 7). Each spliced frame was checked after splicing.
+## Manual review (v2, one frame every 3 s, all 13:53)
+- **Pacing pass v2.** The 37 v1 holds over 6 s (51% of runtime) were broken into 3–4.5 s camera beats: eased punch-ins, hard-cut detail crops and wide lateral pushes, framed from the rendered v1 so nothing is pushed under the captions. The Binance 14 / EIP-7702 explainer (~5:06–5:38) also gets four detail inserts, each locked to its line of VO: the count to 50 authorizations (TRM Labs · Blockaid), an Ethereum | EIP-7702 split screen (live since May 2025), a wallet → code delegation diagram and a generic nonce counter. The last two are labeled as illustrations. No new facts were added. VO, audio mix and timing are unchanged (same 25,014 frames, same mix_master.wav). Only the 36 affected windows (12,231 frames) were re-rendered and spliced in frame-exactly.
+- Remaining hold over 6 s: **1**, the end screen (13:34–13:54). It is left static on purpose, because YouTube end-screen elements are placed over fixed slots.
+- A sample of camera beats across all holds was checked: no collisions with captions or HUD. Some detail crops cut text at the frame edge on purpose (e.g. the hot/cold wallet panel and the closing checklist).
 - Freeze at 0:53–0:56 is intended: the held "?" on "…the one question nobody can answer yet", before the title card.
-- Black at 8:17, 12:38 and 12:57 is intended: the dip to black into Chapter 6, the [[SILENCE]] after the Scene 09 reveal, and the dip into the outro.
-- **Known shortfall: pacing.** 37 holds run longer than 6 s with only small motion (see Picture integrity). The film reads as a calm explainer rather than the 3–6 s cutting rhythm in the brief. The fix is more inserts and punch-ins inside those holds, then re-rendering only those windows with the same patch pipeline (about 1–1.5 h of render time).
-- Not yet watched end to end with sound by a person. Before upload, play the master once at 1×, mainly to judge the generated score and SFX levels.
+- Black at 8:17 and 12:57 is intended: the dips into Chapter 6 and the outro. (v1 also flagged 12:38. That frame is a very dark split card, not a dip, and the v2 punch-in on "$40M" lifts it above the black-detect threshold.)
+- The eight caption-collision fixes from v1 are kept (changelog, Phase 7).
+- Not yet watched end to end with sound by a person. Before upload, play the upload file once at 1×, mainly to judge the generated score and SFX levels.
 
 ## Deliverables
 | File | Where | Notes |
 |---|---|---|
-| out/master_1080p.mp4 | container only (git-ignored, 360 MB) | archive master |
-| out/upload_1080p.mp4 | container only (git-ignored, 299 MB) | the file to upload to YouTube |
-| out/preview_coldopen.mp4 | committed (19.5 MB) | first 60 s, with audio |
-| out/captions_en.srt, out/thumbnail_{A,B,C}.png, out/youtube_metadata.md, out/voice_tests/*.wav | committed | |
+| out/upload_1080p_v2.mp4 (= out/upload_1080p.mp4) | container only (git-ignored, 337.8 MB) | **the file to upload to YouTube** |
+| out/master_1080p_v2.mp4 (= out/master_1080p.mp4) | container only (git-ignored, 423.3 MB) | archive master |
+| out/v1/{upload,master}_1080p.mp4 | container only | v1, before the pacing pass |
+| out/preview_coldopen.mp4 | committed (19.1 MB) | first 60 s of v2, with audio |
+| out/captions_en.srt, out/thumbnail_{A,B,C}.png, out/youtube_metadata.md, out/voice_tests/*.wav | committed | captions and chapters unchanged (timing unchanged) |
+
+GitHub Release upload (v1-binance-heist) was refused for this session type, and Git LFS is blocked by the network policy (lfs.github.com), so the MP4s were not saved outside the container.
