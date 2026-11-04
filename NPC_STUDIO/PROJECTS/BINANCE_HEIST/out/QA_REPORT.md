@@ -10,21 +10,21 @@ Automated by `scripts/qa.py` on the final files, plus the manual review notes be
 | Codec / profile | h264 High | h264 High | H.264 High |
 | Pixel format | yuv420p | yuv420p | yuv420p |
 | Frames | 25014 (timeline 25014) | 25014 | equal |
-| Duration video / audio | 833.8 s / 833.8 s | 833.8 s / 833.813 s | match |
-| Audio | aac 48000 Hz 2 ch 324 kbps | aac 269 kbps | AAC 48 kHz 320 / 256 |
-| Video bitrate (total) | 3.45 Mbps | 8.32 Mbps | CRF 16 / ≈8 Mbps |
-| Size | 359.9 MB | **867.7 MB** | upload ≤ ~800 MB ❌ |
+| Duration video / audio | 833.8 s / 833.8 s | 833.8 s / 833.8 s | match |
+| Audio | aac 48000 Hz 2 ch 324 kbps | aac 324 kbps | AAC 48 kHz 320 (both) |
+| Video bitrate (total) | 3.45 Mbps | 2.86 Mbps | CRF 16 / CRF 17 |
+| Size | 359.9 MB | **298.5 MB** | upload ≤ ~800 MB ✅ |
 
 ## Loudness (ebur128 on the encoded AAC)
 - master: **-14.0 LUFS** integrated, true peak **-1.1 dBTP**, LRA 4.5 LU — target −14 ±0.5 LUFS ✅, ≤ −1 dBTP ✅
-- upload: -14.1 LUFS, -0.8 dBTP
+- upload: -14.0 LUFS, -1.1 dBTP
 - Music ducks −12 dB under the voice, driven by VO activity; SFX −4 dB under the voice. The voice was normalized 5 LU above the music bed before the master.
 
 ## Picture integrity
 - Black segments ≥ 0.5 s: 3 → 497.1–497.6s, 758.0–759.9s, 776.8–778.1s (intended: dipBlack chapter breaks, the end of Scene 09)
 - Freezes ≥ 2.5 s (freezedetect): 1 → 53.1–55.7s
-- Visible changes (scene score > 0.06 on a 6 fps proxy): 67; median gap 2.7 s
-- Gaps > 6 s without a hard visual change: 26 → 0.0s (+24.7s), 24.7s (+14.5s), 58.5s (+8.2s), 66.7s (+40.2s), 112.3s (+6.2s), 118.5s (+29.8s), 153.7s (+31.3s), 185.0s (+17.8s), 205.5s (+8.0s), 213.5s (+50.8s), 264.3s (+11.0s), 278.2s (+65.2s), 344.0s (+33.5s), 386.2s (+31.2s), 417.3s (+18.3s), 435.7s (+27.5s), 463.2s (+33.8s), 499.7s (+7.2s), 507.7s (+11.7s), 519.7s (+76.0s), 595.7s (+9.7s), 612.3s (+21.3s), 633.7s (+17.0s), 650.7s (+37.7s), 694.3s (+77.2s), 778.0s (+55.8s). Within those spans, drift, counters, typing, particles and builds keep moving; see notes.
+- Visible picture changes (mean abs. difference > 1.5/255 between 0.5 s samples, caption band excluded): 450; median gap 0.5 s
+- Holds > 6 s with only small motion: 37 (51% of runtime) → 25.0s (+6.5s), 91.5s (+8.5s), 162.5s (+7.5s), 214.0s (+23.0s), 244.5s (+11.0s), 256.0s (+8.5s), 281.0s (+23.0s), 306.5s (+32.0s), 344.0s (+7.0s), 356.5s (+11.0s), 394.0s (+8.5s), 403.0s (+10.0s), 424.0s (+6.5s), 440.0s (+11.5s), 452.5s (+10.5s), 468.5s (+14.5s), 484.5s (+9.0s), 500.0s (+7.0s), 508.0s (+11.5s), 527.0s (+10.0s), 540.5s (+12.5s), 554.0s (+14.0s), 568.0s (+14.5s), 613.0s (+14.0s), 634.5s (+11.0s), 651.0s (+11.0s), 663.0s (+11.0s), 675.5s (+7.5s), 703.5s (+8.5s), 722.0s (+14.5s), 737.5s (+10.0s), 747.5s (+6.5s), 754.0s (+7.0s), 779.0s (+7.0s), 793.5s (+8.0s), 801.5s (+12.5s), 814.0s (+20.0s). **Below the 3–6 s change target.** In these spans the frame keeps moving (counters, nonce ticks, typing, drift, particles), but the composition doesn't change enough to count. The longest are the Binance 14 / EIP-7702 explainer (~5:06–5:38), the 2019 reorg/backlash beat (~3:34–3:57) and the S08/S09 status and question cards.
 
 ## Captions
 - 240 pages, overlaps 0 ✅, max 2 lines × 34 chars ✅
@@ -108,3 +108,18 @@ Automated by `scripts/qa.py` on the final files, plus the manual review notes be
 | S09 | 2019 $40M vs 2026 ~$6.3B (~157×) | H1, F2 |
 
 No mismatches found: every figure above traces to `research/fact-ledger.md` (Phase 1 table).
+
+## Manual review (one frame every 3 s, all 13:53)
+- Eight places where text collided with the burned-in captions were fixed in code and spliced in as frame-exact re-renders (see changelog, Phase 7). Each spliced frame was checked after splicing.
+- Freeze at 0:53–0:56 is intended: the held "?" on "…the one question nobody can answer yet", before the title card.
+- Black at 8:17, 12:38 and 12:57 is intended: the dip to black into Chapter 6, the [[SILENCE]] after the Scene 09 reveal, and the dip into the outro.
+- **Known shortfall: pacing.** 37 holds run longer than 6 s with only small motion (see Picture integrity). The film reads as a calm explainer rather than the 3–6 s cutting rhythm in the brief. The fix is more inserts and punch-ins inside those holds, then re-rendering only those windows with the same patch pipeline (about 1–1.5 h of render time).
+- Not yet watched end to end with sound by a person. Before upload, play the master once at 1×, mainly to judge the generated score and SFX levels.
+
+## Deliverables
+| File | Where | Notes |
+|---|---|---|
+| out/master_1080p.mp4 | container only (git-ignored, 360 MB) | archive master |
+| out/upload_1080p.mp4 | container only (git-ignored, 299 MB) | the file to upload to YouTube |
+| out/preview_coldopen.mp4 | committed (19.5 MB) | first 60 s, with audio |
+| out/captions_en.srt, out/thumbnail_{A,B,C}.png, out/youtube_metadata.md, out/voice_tests/*.wav | committed | |
