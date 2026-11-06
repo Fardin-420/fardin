@@ -1,0 +1,18 @@
+shot,start_s,end_s,beat,visual,label
+01,0.00,2.24,Hook,"Blue-white star racing up and away from the luminous Milky Way disk, wake behind it; ESCAPING THE GALAXY?!","scientific CGI, star not to scale"
+02,2.24,7.63,Speed reveal,Chase shot of the star with parallax streaks; ≈2.7 MILLION MPH,"scientific CGI, streaks artistic"
+03,7.63,16.62,Where,"Milky Way model, push-in then cut: US 708 marked high above the disk; ≈1,200 KM/S; UNBOUND","Milky Way model, path schematic"
+04,16.62,21.08,Suspect,Lensed view of the galactic-centre black hole; THE USUAL SUSPECT,simulated lensing view
+05,21.08,26.58,MYSTERY ~25 s,Path traced backward from US 708: it misses the centre (red X),schematic path after Geier et al. 2015
+06,26.58,28.73,Origin,Highlighted launch region in the disk; BORN IN THE DISK,schematic path
+07,28.73,34.30,The star,"Close-up: compact hot helium star, spin arrows; HOT HELIUM STAR",scientific CGI
+08,34.30,38.85,Clue,Dashed orbit with a ghost partner '?'; A CLOSE PARTNER?,scientific reconstruction
+09,38.85,47.41,TWIST ~39 s,Helium star and white dwarf in a tight orbit; ONE ORBIT = MINUTES,"scientific reconstruction, time sped up"
+10,47.41,54.27,Transfer + Type Ia,Helium stream and accretion ring; white dwarf flares and detonates; THERMONUCLEAR SUPERNOVA,scientific reconstruction
+11,54.27,60.84,Blast,Filamentary ejecta shell; the released star flies off in a straight line; RELEASED,scientific reconstruction
+12,60.84,62.58,Sling,"Diagram: circular motion, then the tangent line",diagram
+13,62.58,71.61,CAVEAT ~63 s,"Fading remnant, distant star; NO ONE SAW IT; SCIENTIFIC RECONSTRUCTION: SPEED · PATH · MAKEUP",scientific reconstruction
+14,71.61,79.18,Open question,"Two speed bars: 2015 ~1,200 km/s vs later ~900–1,000 km/s; CASE NOT CLOSED",bars to scale
+15,79.18,81.75,Escape,Dashed path out of the galaxy; STILL FAST ENOUGH TO ESCAPE,schematic path
+16,81.75,86.18,Coasting,Steady chase shot; NOT SPEEDING UP / COASTING,scientific CGI
+17,86.18,93.40,Final payoff,Whole Milky Way behind a lone blue star heading into the dark; GONE FOREVER,"scientific CGI, star not to scale"
