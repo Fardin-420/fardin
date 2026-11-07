@@ -1,0 +1,19 @@
+shot,start_s,end_s,beat,visual,label
+01,0.00,1.98,Hook,"Black gas-giant silhouette crossing a blazing Sun-like star, thin red atmospheric rim; DARKER THAN COAL?!","CGI, artist's impression, sizes not to scale"
+02,1.98,9.88,Paint vs planet,"Black-paint card beside the near-black planet, then starlight rays: under 1% bounces back; at over 1,000 °C",illustration + CGI diagram
+03,9.88,14.98,Name,"Simulated star field, host star circled: TrES-2b (Kepler-1b), a hot Jupiter, ~750 light-years",simulated star field
+04,14.98,20.17,Orbit,"Tight orbit around the host star; 1 ORBIT ≈ 2.5 DAYS; OVER 1,000 °C","CGI, not to scale"
+05,20.17,26.03,Kepler,Kepler space telescope reconstruction; 2011,"CGI reconstruction, not NASA imagery"
+06,26.03,33.64,Measurement,"Schematic light curve: transit dip and a tiny phase variation, zoom to ~6.5 parts per million",schematic after Kipping & Spiegel 2011
+07,33.64,35.05,Result,Push toward the black planet beside its star,CGI
+08,35.05,38.97,<1% REVEAL ~35 s,"Albedo bars: Jupiter ~54%, Earth ~43%, Moon ~12%, TrES-2b <1%; LESS THAN 1% + measurement tones","measurement, approximate albedos"
+09,38.97,45.66,COAL ~39 s,Lump of coal beside the planet; darker than coal / black acrylic paint / any planet or moon in our solar system,illustration + CGI
+10,45.66,47.35,Why?,Dive toward the planet; SO WHY SO DARK?,CGI
+11,47.35,55.49,MYSTERY ~46 s,"Atmosphere slice: photons absorbed by Na, K, TiO (proposed)",schematic
+12,55.49,60.59,Mystery,Planet beside its star; STILL A MYSTERY,CGI
+13,60.59,61.88,Twist card,Unlit silhouette; THE TWIST,CGI
+14,61.88,69.87,RED GLOW ~62 s,The planet's own dull-red thermal glow fades up; stove-coil comparison,CGI + illustration
+15,69.87,74.93,Two kinds of light,Reflected starlight (tiny) vs emitted heat (red arrows),CGI + diagram
+16,74.93,79.17,Separation,Planet's signal split: thermal glow vs reflected part (tiny),"schematic, proportions illustrative"
+17,79.17,85.96,Wide,"The dark world sweeping past its star, dull red glow",CGI
+18,85.96,92.50,Final payoff,Silhouette against the star with red rim; BLACKER THAN COAL,CGI
