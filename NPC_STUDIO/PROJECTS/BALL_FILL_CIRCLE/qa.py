@@ -119,21 +119,26 @@ notes = json.loads((BUILD / "notes.json").read_text())["notes"]
 seg = slice(0, SR * 12)
 cc = signal.correlate(dec[seg], src[seg], mode="full", method="fft")
 lag = int(np.argmax(cc)) - (len(src[seg]) - 1)
-# (2) onset of isolated notes measured in the decoded MP4 vs frame/60
-errs = []
+# (2) onset of isolated notes (>= 150 ms after the previous one) measured in the decoded MP4:
+#     steepest rise of the high-passed mallet transient within +-25 ms of N/60
+hp = signal.sosfiltfilt(signal.butter(4, 3000, "hp", fs=SR, output="sos"), dec)
+env = np.convolve(np.abs(hp), np.ones(24) / 24, mode="same")
+errs, prev = [], -1e9
 for nt in notes:
     t_exp = nt["frame"] / FPS
-    if t_exp > 12 or len(errs) >= 12:
+    if t_exp > 15 or len(errs) >= 12:
         break
-    s0 = int(t_exp * SR)
-    w = np.abs(dec[s0 - 2400: s0 + 2400])
-    pre = np.abs(dec[s0 - 2400: s0 - 600]).max()
-    thr = max(pre * 3, w.max() * 0.25)
-    onset = np.argmax(w > thr) + s0 - 2400
+    isolated = t_exp - prev >= 0.15
+    prev = t_exp
+    if not isolated:
+        continue
+    s0 = int(round(t_exp * SR))
+    w = env[s0 - 1200: s0 + 1200]
+    onset = int(np.argmax(np.diff(w))) + s0 - 1200 - 12   # undo half the smoothing window
     errs.append((onset / SR - t_exp) * 1000)
 errs = np.array(errs)
 check("audio_sync", abs(lag) <= 48 and np.max(np.abs(errs)) <= 5,
-      f"master→mp4 lag {lag} samples ({lag / SR * 1000:.2f} ms); onset error of first {len(errs)} notes vs N/60: "
+      f"master→mp4 lag {lag} samples ({lag / SR * 1000:.2f} ms); onset error of {len(errs)} isolated notes vs N/60: "
       f"mean {errs.mean():+.2f} ms, max |{np.max(np.abs(errs)):.2f}| ms")
 fr = np.array([nt["frame"] for nt in notes])
 rate = int(max(np.sum((fr >= f) & (fr < f + FPS)) for f in fr))

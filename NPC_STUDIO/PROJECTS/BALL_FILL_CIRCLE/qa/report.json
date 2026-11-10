@@ -1,0 +1,57 @@
+{
+  "video_spec": {
+    "pass": true,
+    "detail": "h264 1080x1920 60/1 1800 frames yuv420p"
+  },
+  "audio_spec": {
+    "pass": true,
+    "detail": "aac 48000 Hz 2 ch, container 30.000s"
+  },
+  "loudness": {
+    "pass": true,
+    "detail": "-14.1 LUFS integrated, -1.1 dBTP"
+  },
+  "contact_sheet": "/home/user/fardin/NPC_STUDIO/PROJECTS/BALL_FILL_CIRCLE/qa/contact_sheet.png",
+  "no_escape_before_finale": {
+    "pass": true,
+    "detail": "sim max overflow 2.27e-13px, escapes 0, lit pixels outside wall 0.000%"
+  },
+  "glow_not_blown_out": {
+    "pass": true,
+    "detail": "clipped-white inside circle: 0s 0.00%, 5s 0.00%, 10s 0.00%, 18s 0.00%, 26s 0.00%"
+  },
+  "title_clear_of_circle": {
+    "pass": true,
+    "detail": "title bottom y=298, circle glow top y=380, gap 82px, title width 710px, font Inter Display"
+  },
+  "counter_readable": {
+    "pass": true,
+    "detail": "128px type; white glyph coverage 0s 17.0%, 5s 18.3%, 10s 24.7%, 18s 21.2%, 26s 21.5%"
+  },
+  "audio_sync": {
+    "pass": true,
+    "detail": "master\u2192mp4 lag 0 samples (0.00 ms); onset error of 12 isolated notes vs N/60: mean +1.09 ms, max |2.67| ms"
+  },
+  "note_rate": {
+    "pass": true,
+    "detail": "386 notes, peak 20 notes/s (hits merged)"
+  },
+  "count_by_second": {
+    "0": 1,
+    "2": 2,
+    "4": 4,
+    "6": 5,
+    "8": 13,
+    "10": 20,
+    "12": 32,
+    "14": 64,
+    "16": 128,
+    "18": 256,
+    "20": 460,
+    "22": 731,
+    "24": 1221,
+    "26": 2048,
+    "28": 2048
+  },
+  "first_frame_at_2048": 1552
+}
