@@ -1,0 +1,535 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>1 Ball → Fill the Circle</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  body { display: flex; align-items: center; justify-content: center; font-family: system-ui, sans-serif; }
+  canvas { display: block; background: #000; height: 100vh; width: calc(100vh * 9 / 16); max-width: 100vw; max-height: calc(100vw * 16 / 9); }
+  #hud { position: fixed; left: 10px; bottom: 10px; color: #777; font: 12px/1.4 ui-monospace, monospace; pointer-events: none; }
+  #start { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; color: #fff;
+           font: 700 22px system-ui, sans-serif; background: rgba(0,0,0,.55); cursor: pointer; }
+  .render #hud, .render #start { display: none; }
+</style>
+</head>
+<body>
+<canvas id="c" width="1080" height="1920"></canvas>
+<div id="hud"></div>
+<div id="start">Click to play (sound on) · Space pause · R restart · ←/→ seek</div>
+<script>
+'use strict';
+/*
+ * "1 Ball → Fill the Circle" — deterministic physics Short.
+ *
+ * Every frame is a pure function of the frame number: renderFrame(n) re-simulates
+ * from frame 0 if asked to go backwards, so headless renders and the live preview are
+ * bit-identical. Physics runs 4 fixed substeps per frame (1/240 s of sim time; during the
+ * slow-motion finale the substep is scaled by the time-scale, still fixed per frame).
+ */
+(() => {
+// ---------------------------------------------------------------- constants
+const W = 1080, H = 1920;
+const CX = 540, CY = 870, R = 460;                 // circle slightly above middle (960)
+const FPS = 60, SUB = 4, DT = 1 / 240, TOTAL_FRAMES = 30 * FPS;
+const MAX_BALLS = 2048, SEED = 0x1BA11;
+const G = 480;                                      // px/s², moderate gravity
+const HIT_MIN = 35;                                 // normal speed (px/s) that counts as a "hit"
+const T_FIRST = 0.55, WAVE = 2.3, MAX_WAVE = 11;    // split waves: quota 2,4,...,2048 every 2.3 s
+const SPLIT_COOLDOWN = 0.25;
+const R0 = 58, R_EXP = 0.26;                        // ball radius = R0 * N^-0.26  (58px → ~8px at 2048)
+const T_CRACK = 27.0, T_SHATTER = 27.8, T_PART2 = 28.55;
+const TRAIL = 6, HUE_STEP = 7, BUCKETS = 36;
+const TEXT_FONT = '"Inter Display", "Inter", "Arial Black", "Helvetica Neue", Helvetica, Arial, sans-serif';
+
+const quotaAt = t => t < T_FIRST ? 1 : 2 ** Math.min(MAX_WAVE, Math.floor((t - T_FIRST) / WAVE) + 1);
+const rTarget = n => R0 * Math.pow(n, -R_EXP);
+const clamp01 = v => v < 0 ? 0 : v > 1 ? 1 : v;
+const smooth = v => { v = clamp01(v); return v * v * (3 - 2 * v); };
+function timeScale(tv) {
+  if (tv < T_CRACK) return 1;
+  if (tv < T_SHATTER) return 1 - 0.45 * smooth((tv - T_CRACK) / (T_SHATTER - T_CRACK)); // tension slow-down
+  return 0.16 + 0.42 * smooth((tv - T_SHATTER) / 2.2);                                 // slow-mo burst
+}
+function mulberry32(a) {
+  return () => { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; };
+}
+
+// ---------------------------------------------------------------- state
+const x = new Float64Array(MAX_BALLS), y = new Float64Array(MAX_BALLS);
+const vx = new Float64Array(MAX_BALLS), vy = new Float64Array(MAX_BALLS);
+const hue = new Uint16Array(MAX_BALLS), lastSplit = new Float64Array(MAX_BALLS);
+const trailX = new Float32Array(MAX_BALLS * TRAIL), trailY = new Float32Array(MAX_BALLS * TRAIL);
+const countAtFrame = new Uint16Array(TOTAL_FRAMES + 1), simTAtFrame = new Float64Array(TOTAL_FRAMES + 1);
+const hitFrameStart = new Int32Array(TOTAL_FRAMES + 2);
+// grid scratch
+let gridCount = new Int32Array(1), gridStart = new Int32Array(2), gridIdx = new Int32Array(MAX_BALLS), cellOf = new Int32Array(MAX_BALLS);
+
+let N, r, simT, frame, spawnCounter, shattered, shatterSimT, rng, E_START;
+let hits;        // flat: [frame, angleDeg, countAfter, split] * k
+let stats;
+
+function reset() {
+  rng = mulberry32(SEED);
+  N = 1; r = R0; simT = 0; frame = 0; spawnCounter = 1; shattered = false; shatterSimT = 0;
+  x[0] = CX - 40; y[0] = CY - 120; vx[0] = 470; vy[0] = -210; hue[0] = 0; lastSplit[0] = -1;
+  E_START = energyPerBall();
+  for (let k = 0; k < TRAIL; k++) { trailX[k] = x[0]; trailY[k] = y[0]; }
+  hits = []; hitFrameStart.fill(0);
+  stats = { maxOverflowBeforeCrack: 0, maxOverlap: 0, escapedBeforeCrack: 0, wallHits: 0, splits: 0 };
+  countAtFrame[0] = 1; simTAtFrame[0] = 0;
+}
+
+function energyPerBall() {
+  let e = 0;
+  for (let i = 0; i < N; i++) e += 0.5 * (vx[i] * vx[i] + vy[i] * vy[i]) + G * (CY + R - y[i]);
+  return e / N;
+}
+
+// ---------------------------------------------------------------- physics
+function spawnTwin(i, nx, ny) {
+  const tx = -ny, ty = nx;
+  const s = Math.hypot(vx[i], vy[i]);
+  let vt = vx[i] * tx + vy[i] * ty;
+  const sg = vt >= 0 ? 1 : -1;
+  if (Math.abs(vt) < 0.38 * s) vt = sg * 0.38 * s;          // guarantee they fly apart
+  const vn = -Math.sqrt(Math.max(s * s - vt * vt, 0));       // inward, speed preserved
+  const a1 = (rng() - 0.5) * 0.30, a2 = (rng() - 0.5) * 0.30; // small random angles
+  const ux = vn * nx + vt * tx, uy = vn * ny + vt * ty;       // original
+  const wx = vn * nx - vt * tx, wy = vn * ny - vt * ty;       // mirrored twin
+  const c1 = Math.cos(a1), s1 = Math.sin(a1), c2 = Math.cos(a2), s2 = Math.sin(a2);
+  const j = N++;
+  vx[i] = ux * c1 - uy * s1; vy[i] = ux * s1 + uy * c1;
+  vx[j] = wx * c2 - wy * s2; vy[j] = wx * s2 + wy * c2;
+  const off = r * 0.75, px = x[i], py = y[i];
+  x[i] = px + tx * sg * off; y[i] = py + ty * sg * off;
+  x[j] = px - tx * sg * off; y[j] = py - ty * sg * off;
+  for (const k of [i, j]) {                                  // keep both inside the wall
+    const dx = x[k] - CX, dy = y[k] - CY, d = Math.hypot(dx, dy), lim = R - r - 0.5;
+    if (d > lim) { x[k] = CX + dx / d * lim; y[k] = CY + dy / d * lim; }
+  }
+  hue[j] = (spawnCounter++ * HUE_STEP) % 360;
+  lastSplit[i] = lastSplit[j] = simT;
+  for (let k = 0; k < TRAIL; k++) { trailX[j * TRAIL + k] = x[j]; trailY[j * TRAIL + k] = y[j]; }
+  stats.splits++;
+}
+
+function collideBalls() {
+  const cs = 2 * r + 0.5;
+  const gx0 = CX - R - cs, gy0 = CY - R - cs;
+  const gw = Math.ceil((2 * R + 2 * cs) / cs) + 1, cells = gw * gw;
+  if (gridCount.length < cells) { gridCount = new Int32Array(cells); gridStart = new Int32Array(cells + 1); }
+  gridCount.fill(0, 0, cells);
+  for (let i = 0; i < N; i++) {
+    let cx = ((x[i] - gx0) / cs) | 0, cy = ((y[i] - gy0) / cs) | 0;
+    cx = cx < 0 ? 0 : cx >= gw ? gw - 1 : cx; cy = cy < 0 ? 0 : cy >= gw ? gw - 1 : cy;
+    const c = cy * gw + cx; cellOf[i] = c; gridCount[c]++;
+  }
+  gridStart[0] = 0;
+  for (let c = 0; c < cells; c++) gridStart[c + 1] = gridStart[c] + gridCount[c];
+  gridCount.fill(0, 0, cells);
+  for (let i = 0; i < N; i++) { const c = cellOf[i]; gridIdx[gridStart[c] + gridCount[c]++] = i; }
+  const minD = 2 * r, minD2 = minD * minD;
+  for (let i = 0; i < N; i++) {
+    const c = cellOf[i], cx = c % gw, cy = (c / gw) | 0;
+    for (let oy = -1; oy <= 1; oy++) {
+      const yy = cy + oy; if (yy < 0 || yy >= gw) continue;
+      for (let ox = -1; ox <= 1; ox++) {
+        const xx = cx + ox; if (xx < 0 || xx >= gw) continue;
+        const cc = yy * gw + xx;
+        for (let k = gridStart[cc], e = gridStart[cc + 1]; k < e; k++) {
+          const j = gridIdx[k]; if (j <= i) continue;
+          const dx = x[j] - x[i], dy = y[j] - y[i], d2 = dx * dx + dy * dy;
+          if (d2 >= minD2 || d2 < 1e-9) continue;
+          const d = Math.sqrt(d2), nx = dx / d, ny = dy / d;
+          const rel = (vx[j] - vx[i]) * nx + (vy[j] - vy[i]) * ny;
+          if (rel < 0) { vx[i] += rel * nx; vy[i] += rel * ny; vx[j] -= rel * nx; vy[j] -= rel * ny; } // elastic, equal mass
+          const ov = (minD - d) * 0.5 * 0.9;
+          x[i] -= nx * ov; y[i] -= ny * ov; x[j] += nx * ov; y[j] += ny * ov;
+        }
+      }
+    }
+  }
+}
+
+function walls(logFrame) {
+  const quota = quotaAt(simT), lim = R - r, lim2 = lim * lim, n0 = N;
+  for (let i = 0; i < n0; i++) {
+    const dx = x[i] - CX, dy = y[i] - CY, d2 = dx * dx + dy * dy;
+    if (d2 <= lim2) continue;
+    const d = Math.sqrt(d2), nx = dx / d, ny = dy / d;
+    x[i] = CX + nx * lim; y[i] = CY + ny * lim;
+    const vn = vx[i] * nx + vy[i] * ny;
+    if (vn <= 0) continue;
+    vx[i] -= 2 * vn * nx; vy[i] -= 2 * vn * ny;                  // perfectly elastic
+    if (vn < HIT_MIN) continue;
+    let split = 0;
+    if (N < quota && N < MAX_BALLS && simT - lastSplit[i] > SPLIT_COOLDOWN) { spawnTwin(i, nx, ny); split = 1; }
+    let a = Math.atan2(ny, nx) * 180 / Math.PI; if (a < 0) a += 360;
+    hits.push(logFrame, Math.round(a) % 360, N, split);
+    stats.wallHits++;
+  }
+}
+
+// Gentle energy thermostat: keeps the swarm "hot" as it grows so it fills the circle
+// instead of puddling (numerical position correction otherwise bleeds energy).
+function thermostat(dt) {
+  if (N < 2) return;
+  const target = E_START * (1 + 0.55 * clamp01(Math.log2(N) / 8));
+  let ke = 0, pe = 0;
+  for (let i = 0; i < N; i++) { ke += 0.5 * (vx[i] * vx[i] + vy[i] * vy[i]); pe += G * (CY + R - y[i]); }
+  const gain = 2.0 * Math.min(1, N / 16) * dt;
+  const want = Math.max(ke + (target * N - (ke + pe)) * gain, ke * 0.5);
+  const s = Math.sqrt(want / Math.max(ke, 1e-6));
+  for (let i = 0; i < N; i++) { vx[i] *= s; vy[i] *= s; }
+}
+
+function step(dt, logFrame) {
+  if (!shattered) r += (rTarget(N) - r) * (1 - Math.exp(-dt / 0.2));
+  const g = shattered ? G * 0.12 : G;
+  for (let i = 0; i < N; i++) { vy[i] += g * dt; x[i] += vx[i] * dt; y[i] += vy[i] * dt; }
+  if (!shattered) {
+    collideBalls();
+    if (N > 600) collideBalls();
+    walls(logFrame);
+    thermostat(dt);
+  }
+  simT += dt;
+}
+
+function shatter() {
+  shattered = true; shatterSimT = simT;
+  for (let i = 0; i < N; i++) {
+    let dx = x[i] - CX, dy = y[i] - CY, d = Math.hypot(dx, dy);
+    if (d < 1e-3) { const a = rng() * 6.283; dx = Math.cos(a); dy = Math.sin(a); d = 1; }
+    const nx = dx / d, ny = dy / d, f = d / R;
+    const sp = 260 + 1050 * f + 160 * rng();
+    const ja = (rng() - 0.5) * 0.25, c = Math.cos(ja), s = Math.sin(ja);
+    const ex = nx * c - ny * s, ey = nx * s + ny * c;
+    vx[i] = vx[i] * 0.25 + ex * sp; vy[i] = vy[i] * 0.25 + ey * sp - 120;
+  }
+}
+
+function advanceFrame() {
+  const f = frame + 1, tv = f / FPS;
+  hitFrameStart[f] = hits.length / 4;
+  if (!shattered && tv >= T_SHATTER) shatter();
+  const dt = DT * timeScale(tv);
+  for (let s = 0; s < SUB; s++) step(dt, f);
+  hitFrameStart[f + 1] = hits.length / 4;
+  // escape / overlap audit (before the finale nothing may leave the circle)
+  if (tv < T_CRACK) {
+    for (let i = 0; i < N; i++) {
+      const ov = Math.hypot(x[i] - CX, y[i] - CY) + r - R;
+      if (ov > stats.maxOverflowBeforeCrack) stats.maxOverflowBeforeCrack = ov;
+      if (ov > 1) stats.escapedBeforeCrack++;
+    }
+  }
+  const slot = f % TRAIL;
+  for (let i = 0; i < N; i++) { trailX[i * TRAIL + slot] = x[i]; trailY[i * TRAIL + slot] = y[i]; }
+  frame = f; countAtFrame[f] = N; simTAtFrame[f] = simT;
+}
+
+function seek(n) {
+  n = Math.max(0, Math.min(TOTAL_FRAMES - 1, n | 0));
+  if (n < frame) reset();
+  while (frame < n) advanceFrame();
+}
+
+// ---------------------------------------------------------------- finale geometry (separate RNG)
+const vis = mulberry32(SEED ^ 0xC0FFEE);
+const CRACKS = [];
+for (let k = 0; k < 8; k++) {
+  const a0 = (k / 8) * Math.PI * 2 + (vis() - 0.5) * 0.6 - Math.PI / 2;
+  const mk = (sx, sy, dir, len) => {
+    const pts = [[sx, sy]]; let px = sx, py = sy, L = 0;
+    while (L < len) {
+      const st = 10 + vis() * 16, da = dir + (vis() - 0.5) * 1.3;
+      px += Math.cos(da) * st; py += Math.sin(da) * st; L += st; pts.push([px, py]);
+    }
+    return pts;
+  };
+  const sx = CX + Math.cos(a0) * R, sy = CY + Math.sin(a0) * R;
+  const inward = a0 + Math.PI, lines = [mk(sx, sy, inward + (vis() - 0.5) * 0.5, 90 + vis() * 130),
+                                        mk(sx, sy, a0 + (vis() - 0.5) * 0.6, 30 + vis() * 40)];
+  const main = lines[0], bi = 2 + ((vis() * (main.length - 3)) | 0);
+  if (main[bi]) lines.push(mk(main[bi][0], main[bi][1], inward + (vis() < 0.5 ? -0.9 : 0.9), 40 + vis() * 60));
+  CRACKS.push({ t0: T_CRACK + k * 0.085 + vis() * 0.04, a: a0, lines });
+}
+const SHARDS = [];
+{ let a = -Math.PI / 2; const n = 22;
+  for (let k = 0; k < n; k++) {
+    const span = (Math.PI * 2 / n) * (0.7 + vis() * 0.6), a1 = Math.min(a + span, -Math.PI / 2 + Math.PI * 2);
+    const mid = (a + a1) / 2, sp = 380 + vis() * 520;
+    SHARDS.push({ a0: a, a1, mid, vx: Math.cos(mid) * sp + (vis() - 0.5) * 120, vy: Math.sin(mid) * sp + (vis() - 0.5) * 120,
+                  om: (vis() - 0.5) * 5 });
+    a = a1;
+  }
+}
+
+// ---------------------------------------------------------------- rendering
+const canvas = document.getElementById('c');
+const ctx = canvas.getContext('2d', { alpha: false });
+const hueColor = (h, l = 60, a = 1) => `hsla(${h},100%,${l}%,${a})`;
+const glowSprite = [], coreSprite = [];
+function makeSprites() {
+  for (let b = 0; b < BUCKETS; b++) {
+    const h = b * (360 / BUCKETS);
+    const g = document.createElement('canvas'); g.width = g.height = 128;
+    const gc = g.getContext('2d'), gr = gc.createRadialGradient(64, 64, 0, 64, 64, 64);
+    gr.addColorStop(0, hueColor(h, 62, 0.85)); gr.addColorStop(0.22, hueColor(h, 58, 0.42));
+    gr.addColorStop(0.5, hueColor(h, 55, 0.11)); gr.addColorStop(1, hueColor(h, 50, 0));
+    gc.fillStyle = gr; gc.fillRect(0, 0, 128, 128); glowSprite.push(g);
+    const c = document.createElement('canvas'); c.width = c.height = 128;
+    const cc = c.getContext('2d'), cr = cc.createRadialGradient(52, 50, 0, 64, 64, 62);
+    cr.addColorStop(0, hueColor(h, 94)); cr.addColorStop(0.35, hueColor(h, 72)); cr.addColorStop(1, hueColor(h, 52));
+    cc.fillStyle = cr; cc.beginPath(); cc.arc(64, 64, 62, 0, Math.PI * 2); cc.fill(); coreSprite.push(c);
+  }
+}
+const flashSprite = (() => {
+  const s = document.createElement('canvas'); s.width = s.height = 128;
+  const c = s.getContext('2d'), g = c.createRadialGradient(64, 64, 0, 64, 64, 64);
+  g.addColorStop(0, 'rgba(255,255,255,0.9)'); g.addColorStop(0.25, 'rgba(220,235,255,0.35)'); g.addColorStop(1, 'rgba(200,220,255,0)');
+  c.fillStyle = g; c.fillRect(0, 0, 128, 128); return s;
+})();
+
+const bucketOf = h => ((h / (360 / BUCKETS)) | 0) % BUCKETS;
+const byBucket = Array.from({ length: BUCKETS }, () => []);
+const flashAcc = new Float32Array(90);
+
+function drawText(txt, px, py, size, opts = {}) {
+  ctx.font = `900 ${size}px ${TEXT_FONT}`;
+  ctx.textAlign = 'center'; ctx.textBaseline = 'alphabetic'; ctx.lineJoin = 'round';
+  ctx.lineWidth = opts.stroke ?? size * 0.16; ctx.strokeStyle = '#000';
+  ctx.shadowColor = 'rgba(0,0,0,0)'; ctx.strokeText(txt, px, py);
+  ctx.shadowColor = opts.glow ?? 'rgba(255,255,255,0.35)'; ctx.shadowBlur = opts.blur ?? 18;
+  ctx.fillStyle = opts.fill ?? '#fff'; ctx.fillText(txt, px, py);
+  ctx.shadowBlur = 0; ctx.shadowColor = 'rgba(0,0,0,0)';
+}
+
+function draw(n) {
+  const tv = n / FPS;
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = 1;
+  ctx.fillStyle = '#000'; ctx.fillRect(0, 0, W, H);
+
+  // camera shake while cracking
+  let sx = 0, sy = 0;
+  if (tv >= T_CRACK && tv < T_SHATTER + 0.6) {
+    const amp = tv < T_SHATTER ? 2 + 9 * smooth((tv - T_CRACK) / (T_SHATTER - T_CRACK)) : 16 * Math.exp(-(tv - T_SHATTER) / 0.18);
+    sx = Math.sin(n * 2.31) * amp + Math.sin(n * 5.7) * amp * 0.4; sy = Math.cos(n * 1.93) * amp + Math.sin(n * 4.1) * amp * 0.4;
+  }
+  ctx.setTransform(1, 0, 0, 1, sx, sy);
+
+  for (const b of byBucket) b.length = 0;
+  for (let i = 0; i < N; i++) {
+    if (x[i] < -60 || x[i] > W + 60 || y[i] < -60 || y[i] > H + 60) continue;
+    byBucket[bucketOf(hue[i])].push(i);
+  }
+  const density = Math.sqrt(1 + N / 120);
+
+  // motion trails (additive)
+  ctx.globalCompositeOperation = 'lighter'; ctx.lineCap = 'round';
+  for (let k = 1; k < TRAIL; k++) {
+    const sA = (n - k + 1 + TRAIL * 64) % TRAIL, sB = (n - k + TRAIL * 64) % TRAIL;
+    if (n - k < 0) break;
+    ctx.globalAlpha = (0.34 / density + 0.05) * (1 - k / TRAIL);
+    ctx.lineWidth = Math.max(1.5, 2 * r * 0.8 * (1 - (k - 1) / TRAIL));
+    for (let b = 0; b < BUCKETS; b++) {
+      const list = byBucket[b]; if (!list.length) continue;
+      ctx.strokeStyle = hueColor(b * 10, 60); ctx.beginPath();
+      for (const i of list) {
+        const ax = trailX[i * TRAIL + sA], ay = trailY[i * TRAIL + sA], bx = trailX[i * TRAIL + sB], by = trailY[i * TRAIL + sB];
+        if (Math.abs(ax - bx) + Math.abs(ay - by) < 0.8) continue;
+        ctx.moveTo(ax, ay); ctx.lineTo(bx, by);
+      }
+      ctx.stroke();
+    }
+  }
+  // soft glow halos (additive, toned down as the swarm densifies so it never blows out)
+  ctx.globalAlpha = Math.min(0.95, 0.95 / density + 0.06);
+  const gs = r * (1.6 + 1.6 / density);
+  for (let b = 0; b < BUCKETS; b++) for (const i of byBucket[b]) ctx.drawImage(glowSprite[b], x[i] - gs, y[i] - gs, gs * 2, gs * 2);
+  // solid cores
+  ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = 1;
+  for (let b = 0; b < BUCKETS; b++) for (const i of byBucket[b]) ctx.drawImage(coreSprite[b], x[i] - r, y[i] - r, r * 2, r * 2);
+
+  // ---- wall
+  ctx.globalCompositeOperation = 'lighter';
+  if (!shattered) {
+    let wallA = 0.95;
+    if (tv >= T_CRACK) wallA = 0.75 + 0.25 * Math.abs(Math.sin(n * 1.7));
+    ctx.globalAlpha = 0.07; ctx.strokeStyle = '#fff'; ctx.lineWidth = 18;
+    ctx.beginPath(); ctx.arc(CX, CY, R + 2, 0, Math.PI * 2); ctx.stroke();
+    ctx.globalAlpha = wallA; ctx.lineWidth = 4; ctx.shadowColor = 'rgba(255,255,255,0.9)'; ctx.shadowBlur = 22;
+    ctx.beginPath(); ctx.arc(CX, CY, R + 2, 0, Math.PI * 2); ctx.stroke(); ctx.shadowBlur = 0;
+
+    // impact flashes, aggregated into 4° buckets over the last 18 frames
+    flashAcc.fill(0);
+    const w = 1 / (1 + N / 14);
+    for (let f = Math.max(1, n - 17); f <= n; f++) {
+      const fade = Math.exp(-((n - f) / FPS) / 0.09);
+      for (let h = hitFrameStart[f], e = hitFrameStart[f + 1]; h < e; h++) flashAcc[(hits[h * 4 + 1] / 4) | 0] += fade * (hits[h * 4 + 3] ? 1.6 : 1) * w;
+    }
+    for (let b = 0; b < 90; b++) {
+      const v = Math.min(1, flashAcc[b]); if (v < 0.02) continue;
+      const a = (b * 4 + 2) * Math.PI / 180, fx = CX + Math.cos(a) * (R + 2), fy = CY + Math.sin(a) * (R + 2), s = (34 + 30 * v) * (0.6 + 0.4 / Math.sqrt(1 + N / 64));
+      ctx.globalAlpha = 0.8 * v; ctx.drawImage(flashSprite, fx - s, fy - s, s * 2, s * 2);
+      ctx.globalAlpha = 0.6 * v; ctx.lineWidth = 5; ctx.beginPath(); ctx.arc(CX, CY, R + 2, a - 0.07, a + 0.07); ctx.stroke();
+    }
+    // cracks
+    for (const c of CRACKS) {
+      const p = clamp01((tv - c.t0) / 0.32); if (p <= 0) continue;
+      ctx.globalAlpha = 0.95; ctx.strokeStyle = '#fff'; ctx.lineWidth = 3; ctx.lineJoin = 'miter';
+      ctx.shadowColor = 'rgba(190,220,255,1)'; ctx.shadowBlur = 16;
+      for (const pts of c.lines) {
+        const m = Math.max(2, Math.ceil(pts.length * p));
+        ctx.beginPath(); ctx.moveTo(pts[0][0], pts[0][1]);
+        for (let k = 1; k < m && k < pts.length; k++) ctx.lineTo(pts[k][0], pts[k][1]);
+        ctx.stroke();
+      }
+      ctx.shadowBlur = 0;
+      const fa = Math.exp(-(tv - c.t0) / 0.12);
+      ctx.globalAlpha = fa; const s = 90;
+      ctx.drawImage(flashSprite, CX + Math.cos(c.a) * R - s, CY + Math.sin(c.a) * R - s, s * 2, s * 2);
+    }
+  } else {
+    // flying shards of the wall
+    const e = simT - shatterSimT;
+    ctx.strokeStyle = '#fff'; ctx.lineCap = 'round';
+    for (const s of SHARDS) {
+      const a = Math.max(0, 1 - e / 0.75); if (a <= 0) continue;
+      const mx = CX + Math.cos(s.mid) * R, my = CY + Math.sin(s.mid) * R;
+      ctx.save();
+      ctx.translate(mx + s.vx * e, my + s.vy * e); ctx.rotate(s.om * e); ctx.translate(-mx, -my);
+      ctx.globalAlpha = a; ctx.lineWidth = 4; ctx.shadowColor = 'rgba(255,255,255,0.9)'; ctx.shadowBlur = 18;
+      ctx.beginPath(); ctx.arc(CX, CY, R + 2, s.a0 + 0.012, s.a1 - 0.012); ctx.stroke();
+      ctx.restore();
+    }
+    ctx.shadowBlur = 0;
+    // shockwave ring
+    const p = (tv - T_SHATTER) / 0.9;
+    if (p < 1) {
+      ctx.globalAlpha = 0.5 * (1 - p); ctx.lineWidth = 40 * (1 - p) + 2;
+      ctx.beginPath(); ctx.arc(CX, CY, R + p * 900, 0, Math.PI * 2); ctx.stroke();
+    }
+  }
+
+  // ---- text (no shake on UI)
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.globalCompositeOperation = 'source-over'; ctx.globalAlpha = 1;
+  drawText('Can 1 ball', CX, 178, 108);
+  drawText('fill the circle?', CX, 296, 108);
+
+  // counter with pop-scale
+  const counterA = 1 - smooth((tv - 28.15) / 0.4);
+  if (counterA > 0) {
+    let m = n; while (m > 0 && countAtFrame[m] === countAtFrame[m - 1]) m--;
+    const c = countAtFrame[n], age = (n - m) / FPS;
+    const big = m > 0 && (c & (c - 1)) === 0;
+    const amp = m === 0 ? 0 : big ? 0.34 : 0.09;
+    const sc = 1 + amp * Math.exp(-age * 7) * Math.cos(age * 20);
+    const newest = hue[Math.max(0, c - 1)];
+    ctx.save(); ctx.globalAlpha = counterA; ctx.translate(CX, CY + R + 165); ctx.scale(sc, sc);
+    drawText(`BALLS: ${c}`, 0, 44, 128, { glow: hueColor(newest, 60, 0.9), blur: 30 });
+    ctx.restore();
+  }
+
+  // finale flash + "Part 2?"
+  if (tv >= T_SHATTER) {
+    const fl = 0.92 * Math.exp(-(tv - T_SHATTER) / 0.16);
+    if (fl > 0.003) { ctx.globalAlpha = fl; ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, W, H); ctx.globalAlpha = 1; }
+  }
+  if (tv >= T_PART2) {
+    const p = clamp01((tv - T_PART2) / 0.45);
+    const back = 1 + 2.7 * Math.pow(p - 1, 3) + 1.7 * Math.pow(p - 1, 2);   // easeOutBack
+    const bg = ctx.createRadialGradient(CX, CY, 0, CX, CY, 420);
+    bg.addColorStop(0, 'rgba(0,0,0,0.75)'); bg.addColorStop(1, 'rgba(0,0,0,0)');
+    ctx.globalAlpha = clamp01(p * 2); ctx.fillStyle = bg; ctx.fillRect(CX - 420, CY - 420, 840, 840);
+    ctx.save(); ctx.globalAlpha = clamp01(p * 2.5); ctx.translate(CX, CY + 20); ctx.scale(0.4 + 0.6 * back, 0.4 + 0.6 * back);
+    drawText('Part 2?', 0, 60, 190, { glow: 'rgba(255,255,255,0.8)', blur: 40, stroke: 26 });
+    ctx.restore();
+  }
+}
+
+// ---------------------------------------------------------------- public API
+function renderFrame(n) { seek(n); draw(frame); return frame; }
+function getEvents() {
+  return {
+    fps: FPS, totalFrames: TOTAL_FRAMES, hitFields: ['frame', 'angleDeg', 'countAfter', 'split'],
+    hits: Array.from(hits),
+    crackFrames: CRACKS.map(c => Math.ceil(c.t0 * FPS)),
+    shatterFrame: Math.ceil(T_SHATTER * FPS), part2Frame: Math.ceil(T_PART2 * FPS), crackStartFrame: Math.ceil(T_CRACK * FPS),
+    countAtFrame: Array.from(countAtFrame.slice(0, frame + 1)),
+    stats: { ...stats, finalCount: N, framesSimulated: frame },
+    layout: layout(),
+  };
+}
+function layout() {
+  ctx.font = `900 108px ${TEXT_FONT}`;
+  const m = ctx.measureText('fill the circle?');
+  return { circle: { cx: CX, cy: CY, r: R, top: CY - R, bottom: CY + R }, titleBottom: 296 + m.actualBoundingBoxDescent,
+           titleWidth: Math.max(m.width, ctx.measureText('Can 1 ball').width), counterCenterY: CY + R + 165,
+           counterFontPx: 128, fontUsed: document.fonts.check(`900 108px "Inter Display"`) ? 'Inter Display' : 'fallback' };
+}
+function probe() {            // tuning helper: vertical distribution + speed
+  const rows = new Array(10).fill(0); let sp = 0;
+  for (let i = 0; i < N; i++) { rows[Math.min(9, Math.max(0, ((y[i] - (CY - R)) / (2 * R) * 10) | 0))]++; sp += Math.hypot(vx[i], vy[i]); }
+  return { t: frame / FPS, N, r: +r.toFixed(2), meanSpeed: Math.round(sp / N), rows };
+}
+async function ready() { try { await document.fonts.load(`900 108px "Inter Display"`); } catch (e) {} makeSprites(); reset(); return true; }
+Object.assign(window, { renderFrame, getEvents, probe, ready, TOTAL_FRAMES, FPS, seekSim: seek });
+
+// ---------------------------------------------------------------- live preview (+ WebAudio sketch of the soundtrack)
+const RENDER = /[?&]render\b/.test(location.search);
+if (RENDER) { document.body.classList.add('render'); return; }
+const hud = document.getElementById('hud'), startEl = document.getElementById('start');
+let playing = false, t0 = 0, pausedAt = 0, ac = null, lastAudioFrame = 0, lastNoteT = -1, noteIdx = 0;
+const PENT = [0, 2, 4, 7, 9], PATTERN = [0, 2, 4, 1, 3, 5, 2, 4];
+const noteMidi = (count, k) => { const deg = Math.floor(Math.log2(count)) + PATTERN[k % PATTERN.length]; return 60 + 12 * Math.floor(deg / 5) + PENT[deg % 5]; };
+function tone(f, when, amp, dec, type = 'sine') {
+  const o = ac.createOscillator(), g = ac.createGain(); o.type = type; o.frequency.value = f;
+  g.gain.setValueAtTime(0, when); g.gain.linearRampToValueAtTime(amp, when + 0.003); g.gain.exponentialRampToValueAtTime(1e-4, when + dec);
+  o.connect(g).connect(ac.destination); o.start(when); o.stop(when + dec + 0.05);
+}
+function audioFor(f) {
+  if (!ac) return;
+  const now = ac.currentTime + 0.02;
+  for (let h = hitFrameStart[f], e = hitFrameStart[f + 1]; h < e; h++) {
+    if (f / FPS - lastNoteT < 0.04) break;
+    lastNoteT = f / FPS; const fr = 440 * 2 ** ((noteMidi(hits[h * 4 + 2], noteIdx++) - 69) / 12);
+    tone(fr, now, 0.16, 0.9); tone(fr * 3.93, now, 0.04, 0.25); if (hits[h * 4 + 3]) tone(fr * 2, now, 0.05, 1.2, 'triangle');
+    break;
+  }
+  if (f === Math.ceil(T_SHATTER * FPS)) { const o = ac.createOscillator(), g = ac.createGain(); o.frequency.setValueAtTime(90, now);
+    o.frequency.exponentialRampToValueAtTime(30, now + 1.5); g.gain.setValueAtTime(0.6, now); g.gain.exponentialRampToValueAtTime(1e-4, now + 2);
+    o.connect(g).connect(ac.destination); o.start(now); o.stop(now + 2.1); }
+}
+function tick() {
+  if (playing) {
+    let target = Math.floor((performance.now() - t0) / 1000 * FPS);
+    if (target >= TOTAL_FRAMES + 60) { t0 = performance.now(); target = 0; lastNoteT = -1; noteIdx = 0; }
+    const n = Math.min(target, TOTAL_FRAMES - 1);
+    if (n < frame) { lastAudioFrame = 0; }
+    renderFrame(n);
+    for (let f = Math.max(lastAudioFrame + 1, n - 3); f <= n; f++) audioFor(f);
+    lastAudioFrame = n;
+    hud.textContent = `t ${(n / FPS).toFixed(2)}s  frame ${n}  balls ${N}`;
+  }
+  requestAnimationFrame(tick);
+}
+function seekTo(n) { renderFrame(n); t0 = performance.now() - n / FPS * 1000; pausedAt = n; lastAudioFrame = n; lastNoteT = n / FPS; }
+startEl.onclick = () => { startEl.remove(); try { ac = new AudioContext(); } catch (e) {} t0 = performance.now(); playing = true; };
+addEventListener('keydown', e => {
+  if (e.code === 'Space') { if (playing) { playing = false; pausedAt = frame; } else { seekTo(pausedAt); playing = true; } }
+  if (e.code === 'KeyR') { seekTo(0); }
+  if (e.code === 'ArrowRight') seekTo(frame + 5 * FPS);
+  if (e.code === 'ArrowLeft') seekTo(frame - 5 * FPS);
+});
+ready().then(() => { renderFrame(0); requestAnimationFrame(tick); });
+})();
+</script>
+</body>
+</html>
