@@ -1,0 +1,4 @@
+node_modules/
+build/
+# master is ~300 MB (CRF 18 + film grain) — over GitHub limits; rebuild with `npm run build`
+out/ww2_germany_60s.mp4

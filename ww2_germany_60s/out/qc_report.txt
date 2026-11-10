@@ -1,0 +1,58 @@
+1. FFPROBE  out/ww2_germany_60s.mp4
+  [PASS] duration 60.0 s ±0.05  — 60.000 s (video 60.000 s, audio 60.000 s)
+  [PASS] 1800 frames  — 1800 frames
+  [PASS] 1080x1920  — 1080x1920
+  [PASS] 30 fps  — r=30/1 avg=30/1
+  [PASS] H.264 yuv420p  — h264 High yuv420p
+  [PASS] AAC 48 kHz stereo  — aac 48000 Hz 2 ch 199 kb/s
+  [PASS] +faststart (moov before mdat)
+
+2. LOUDNESS (ffmpeg ebur128, peak=true)
+  [PASS] integrated -14 LUFS ±1  — -14.2 LUFS (LRA 3 LU)
+  [PASS] true peak <= -1 dBTP  — -1.5 dBTP
+
+3. NARRATION SYNC (voice: en-US-AndrewNeural, rate -5%)
+   scene        frames      scene window      narration         end gap   status
+   hook            0-142    0.00-4.77     0.24-4.47     +0.30 s    PASS
+   poland        143-393    4.77-13.13    4.98-12.83    +0.30 s    PASS
+   blitz         394-616   13.13-20.57   13.73-20.27    +0.30 s    PASS
+   britain       617-771   20.57-25.73   22.18-25.43    +0.30 s    PASS
+   barbarossa    772-999   25.73-33.33   27.03-33.03    +0.30 s    PASS
+   stalingrad   1000-1230  33.33-41.03   33.75-40.73    +0.30 s    PASS
+   dday         1231-1456  41.03-48.57   41.58-48.27    +0.30 s    PASS
+   berlin       1457-1606  48.57-53.57   49.50-53.27    +0.30 s    PASS
+   ending       1607-1799  53.57-60.00   53.79-59.70    +0.30 s    PASS
+  [PASS] scene windows cover exactly 1800 frames
+
+4. CONTACT SHEET + FRAME SCAN
+  [PASS] out/contact_sheet.png exists (30 frames, 1 per 2 s, safe-zone guides drawn)
+  [PASS] luma stats for all 1800 frames
+  [PASS] no unintended empty (flat) frames  — flat frames: 0-10, 1792-1799 — all intentional (pure-black open, dip-to-black peaks, final fade)
+  [PASS] all text inside safe zone (y 285-1635, x 0-1080) over 600 sampled frames  — 21048 text draws checked
+         text extent: y 357 .. 1391 (TikTok UI bands: y < 150 and y > 1570)
+  [PASS] no text under the TikTok bottom UI band (y > 1570)
+  [PASS] arrows visible in poland  — 49 sampled frames with a growing arrow
+  [PASS] arrows visible in blitz  — 60 sampled frames with a growing arrow
+  [PASS] arrows visible in barbarossa  — 40 sampled frames with a growing arrow
+  [PASS] arrows visible in stalingrad  — 65 sampled frames with a growing arrow
+  [PASS] arrows visible in dday  — 23 sampled frames with a growing arrow
+  [PASS] arrows visible in berlin  — 25 sampled frames with a growing arrow
+  [PASS] date card "SEPTEMBER 1, 1939" fully typed & held  — 6.4 s on screen after typing
+  [PASS] date card "JUNE 1940" fully typed & held  — 6.0 s on screen after typing
+  [PASS] date card "1940" fully typed & held  — 4.0 s on screen after typing
+  [PASS] date card "JUNE 22, 1941" fully typed & held  — 5.9 s on screen after typing
+  [PASS] date card "FEBRUARY 1943" fully typed & held  — 6.0 s on screen after typing
+  [PASS] date card "JUNE 6, 1944" fully typed & held  — 6.0 s on screen after typing
+  [PASS] date card "APRIL 1945" fully typed & held  — 3.6 s on screen after typing
+
+5. INSPECTION FRAMES
+  [PASS] frame 0 (hook, 0.00 s)  — out/frames/frame_0000.png
+  [PASS] frame 450 (blitz, 15.00 s)  — out/frames/frame_0450.png
+  [PASS] frame 900 (barbarossa, 30.00 s)  — out/frames/frame_0900.png
+  [PASS] frame 1350 (dday, 45.00 s)  — out/frames/frame_1350.png
+  [PASS] frame 1790 (ending, 59.67 s)  — out/frames/frame_1790.png
+
+6. DETERMINISM (seed 1945)
+  [PASS] frame 900 rendered twice in separate processes -> identical SHA-256  — d3b7bed57a0032d5…
+
+ALL CHECKS PASSED
