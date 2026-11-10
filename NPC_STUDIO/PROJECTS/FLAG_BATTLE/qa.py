@@ -71,7 +71,7 @@ picks = [("hook", 70), ("1st elimination", ev["banners"][0]["from"] + 25), ("mid
          ("final duel", ev["gapCloseFrame"] + 40 if ev["gapCloseFrame"] else int(T * 0.65)),
          ("slow-mo zoom", (ev["slowStartFrame"] + ev["killFrame"]) // 2), ("winner", ev["winnerFrame"] + 90), ("CTA", ev["ctaFrame"] + 60)]
 frames = {lab: grab(n) for lab, n in picks}
-font = ImageFont.truetype(subprocess.run(["fc-match", "-f", "%{file}", "Inter Display:black"], capture_output=True, text=True).stdout, 34)
+font = ImageFont.truetype(subprocess.run(["fc-match", "-f", "%{file}", "Inter Display:black"], capture_output=True, text=True).stdout, 27)
 tw, th = 300, 533
 sheet = Image.new("RGB", (tw * 4 + 50, (th + 56) * 2 + 20), (18, 18, 24))
 d = ImageDraw.Draw(sheet)
@@ -86,7 +86,7 @@ results["contact_sheet"] = str(QA / "contact_sheet.png")
 mid = frames["winner"][700:1300, 100:980].reshape(-1, 3).astype(int)
 q = (mid // 32).astype(int)
 keys, counts = np.unique(q[:, 0] * 64 + q[:, 1] * 8 + q[:, 2], return_counts=True)
-dom = [((k // 64) * 32 + 16, (k // 8 % 8) * 32 + 16, (k % 8) * 32 + 16) for k in keys[np.argsort(-counts)][:3]]
+dom = [(int(k // 64) * 32 + 16, int(k // 8 % 8) * 32 + 16, int(k % 8) * 32 + 16) for k in keys[np.argsort(-counts)][:3]]
 results["winner_screen_dominant_rgb"] = dom
 check("winner_screen", ev["winner"] == m["winner"], f'winner "{ev["winner"]}" (sim) = banner/title text; dominant colours {dom} (see sheet)')
 

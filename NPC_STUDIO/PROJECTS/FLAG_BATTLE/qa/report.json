@@ -1,0 +1,53 @@
+{
+  "video_spec": {
+    "pass": true,
+    "detail": "h264 1080x1920 60/1 fps, 2916/2916 frames"
+  },
+  "duration_45_60": {
+    "pass": true,
+    "detail": "48.60s, audio aac 48000 Hz"
+  },
+  "loudness": {
+    "pass": true,
+    "detail": "-14.2 LUFS, -0.9 dBTP"
+  },
+  "fair_close_fight": {
+    "pass": true,
+    "detail": "seed 601: Japan wins; 1v1 started at [['France', 2.8], ['Japan', 10.7]]; winner ends on 10.7 HP; 9 knock-outs, 6 escapes; final blow is a hit"
+  },
+  "ui_no_overlap": {
+    "pass": true,
+    "detail": "16 banners, none during the hook (first at 3.03s) and never two at once; zones {'hook': [130, 330], 'counter': [357, 433], 'bannerZone': [153, 257], 'leaderboard': [1465, 1631]}"
+  },
+  "contact_sheet": "/home/user/fardin/NPC_STUDIO/PROJECTS/FLAG_BATTLE/qa/contact_sheet.png",
+  "winner_screen_dominant_rgb": [
+    [
+      176,
+      16,
+      48
+    ],
+    [
+      144,
+      16,
+      48
+    ],
+    [
+      240,
+      240,
+      240
+    ]
+  ],
+  "winner_screen": {
+    "pass": true,
+    "detail": "winner \"Japan\" (sim) = banner/title text; dominant colours [(176, 16, 48), (144, 16, 48), (240, 240, 240)] (see sheet)"
+  },
+  "audio_hits_on_collisions": {
+    "pass": true,
+    "detail": "master\u2192mp4 lag 0 samples; 21 isolated hit sounds start +0.18 ms (max |2.02| ms) from frame/60; 189 hit sounds, 0 without a collision on that frame"
+  },
+  "contact_gap_px_at_sound_frame": {
+    "median": 3.7649999999999997,
+    "max": 26.02,
+    "note": "ball surfaces' separation on the frame the sound starts (< one frame of travel)"
+  }
+}
