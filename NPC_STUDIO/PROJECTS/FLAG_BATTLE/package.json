@@ -1,0 +1,8 @@
+{
+  "name": "flag-battle",
+  "private": true,
+  "type": "module",
+  "description": "Country Flag Battle Royale — deterministic physics Short",
+  "scripts": { "render": "node render.mjs" },
+  "dependencies": { "flag-icons": "^7.6.0" }
+}
