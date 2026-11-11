@@ -5,7 +5,8 @@ Reads  build/timeline_base.json   (written by `node src/timeline.js --dump`)
 Writes build/narration/line_XX.wav  (48 kHz mono float, silence-trimmed)
        build/narration_timing.json  (per-line duration + per-word start/end, seconds from line start)
 
-Voice:  edge-tts "en-US-AndrewNeural" (fallback "en-US-GuyNeural"), rate -5%.
+Voice:  edge-tts "en-US-AndrewNeural" (fallback "en-US-GuyNeural"), rate +19% (the 45 s cut; the
+        original 60 s brief used -5%).
         Override with env NARRATION_VOICE / NARRATION_RATE.
 Custom: if ./narration.wav exists in the project root it is used instead of TTS. It is split into
         one segment per scene at its longest pauses; word timing is distributed by syllable count.
@@ -33,7 +34,7 @@ NARR_DIR = BUILD / "narration"
 CACHE = BUILD / "tts_cache"
 SR = 48000
 VOICES = [os.environ.get("NARRATION_VOICE", "en-US-AndrewNeural"), "en-US-GuyNeural"]
-BASE_RATE = int(os.environ.get("NARRATION_RATE", "-5").replace("%", ""))
+BASE_RATE = int(os.environ.get("NARRATION_RATE", "19").replace("%", ""))
 TICKS = 10_000_000  # edge-tts offsets are in 100 ns ticks
 
 

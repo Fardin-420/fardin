@@ -12,8 +12,8 @@ const { seg, clamp, easeInOutCubic, easeOutCubic, envelope } = require('../lib/e
 const { travelCam, territory, baseDist } = require('./common');
 
 const ARROWS = [
-  { path: [[7.1, 52.4], [6.0, 52.5], [4.9, 52.3]], at: 'tactics', delay: -0.2, dur: 0.9 },    // Netherlands
-  { path: [[6.9, 51.0], [5.6, 51.1], [4.3, 50.8]], at: 'tactics', delay: 0.05, dur: 0.9 },    // Belgium
+  { path: [[7.1, 52.4], [6.0, 52.5], [4.9, 52.3]], at: 'lightning-fast', delay: -0.2, dur: 0.9 },    // Netherlands
+  { path: [[6.9, 51.0], [5.6, 51.1], [4.3, 50.8]], at: 'lightning-fast', delay: 0.05, dur: 0.9 },    // Belgium
   { path: [[6.6, 49.9], [4.6, 49.6], [2.2, 50.3]], at: 'german', delay: 0, dur: 1.1 },        // Ardennes -> Channel
   { path: [[6.4, 49.3], [4.2, 48.9], [2.5, 48.5]], at: 'overrun', delay: 0, dur: 1.1 },       // -> Paris
   { path: [[2.6, 48.3], [1.6, 47.0], [-0.3, 46.3]], at: 'france', delay: -0.5, dur: 1.0 },    // -> south-west
@@ -57,7 +57,7 @@ function render(ctx, s) {
   drawLabel(ctx, cam, 'FRANCE', [2.4, 47.0], { alpha: seg(t, tEur - 0.4, tEur + 0.2), size: 40 });
 
   // speed lines while the armour is moving (westward)
-  drawSpeedLines(ctx, t, { alpha: envelope(t, s.w('tactics') - 0.6, s.w('tactics'), tFalls - 0.4, tFalls + 0.2) * 0.9, dir: -1 });
+  drawSpeedLines(ctx, t, { alpha: envelope(t, s.w('lightning-fast') - 0.6, s.w('lightning-fast'), tFalls - 0.4, tFalls + 0.2) * 0.9, dir: -1 });
 
   for (const a of ARROWS) {
     const t0 = s.w(a.at) + a.delay;

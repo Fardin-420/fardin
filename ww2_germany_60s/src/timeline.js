@@ -38,8 +38,8 @@ const path = require('path');
 const FPS = 30;
 const WIDTH = 1080;
 const HEIGHT = 1920;
-const TOTAL_FRAMES = 1800;
-const DURATION = TOTAL_FRAMES / FPS; // 60.0 s
+const TOTAL_FRAMES = 1350; // 45.0 s: tightened from the original 60 s brief for completion rate
+const DURATION = TOTAL_FRAMES / FPS; // 45.0 s
 const SEED = 1945;
 const NARRATION_TAIL = 0.3; // scene end = narration end + 0.3 s
 const MIN_LEAD = 0.2;       // narration never starts before this much of a scene has passed
@@ -70,25 +70,22 @@ const COLORS = {
 const SCENES = [
   {
     id: 'hook', module: 's1_hook', start: 0.0, end: 3.0,
-    narration: "In just six years, one nation's war would change the entire world.",
+    // Hook: a question, spoken over a frame that is already full ("1939" + hook line on frame 0).
+    narration: 'How did one nation drag the entire world into war, in just six years?',
     dateCard: null,
     transitionIn: null,
     cues: [
-      { sfx: 'heartbeat', at: 0.10, gain: -12 },
+      { sfx: 'drum', at: 0.0, gain: -11 },      // impact on frame 0 (no silent/black open)
       { sfx: 'heartbeat', frac: 0.30, gain: -13 },
-      // typewriter keys for the "1939" type-on (one per digit), matching s1_hook.js
-      { sfx: 'typekey', frac: 0.16, gain: -14 },
-      { sfx: 'typekey', frac: 0.22, gain: -14 },
-      { sfx: 'typekey', frac: 0.28, gain: -14 },
-      { sfx: 'typekey', frac: 0.34, gain: -13 },
+      { sfx: 'heartbeat', frac: 0.52, gain: -14 },
       { sfx: 'glitch', frac: 0.70, gain: -18 },
       { sfx: 'subboom', fromEnd: 0.5, gain: -10 }, // brief: sub-boom at f75 of a 90-frame scene
     ],
     music: { intensity: 0.15 },
   },
   {
-    id: 'poland', module: 's2_poland', start: 3.0, end: 10.0,
-    narration: 'September first, 1939. Germany invades Poland. Two days later, Britain and France declare war.',
+    id: 'poland', module: 's2_poland', start: 3.0, end: 8.2,
+    narration: 'September 1, 1939: Germany invades Poland. Britain and France declare war.',
     dateCard: { text: 'SEPTEMBER 1, 1939', at: 0.6 },
     transitionIn: 'dip',
     cues: [
@@ -101,8 +98,8 @@ const SCENES = [
     music: { intensity: 0.35 },
   },
   {
-    id: 'blitz', module: 's3_blitz', start: 10.0, end: 18.0,
-    narration: 'With lightning-fast tactics, German forces overrun Western Europe. France falls in just six weeks.',
+    id: 'blitz', module: 's3_blitz', start: 8.2, end: 14.1,
+    narration: 'Lightning-fast German forces overrun Western Europe. France falls in six weeks.',
     dateCard: { text: 'JUNE 1940', at: 0.5 },
     transitionIn: 'burn',
     cues: [
@@ -113,7 +110,7 @@ const SCENES = [
     music: { intensity: 0.55 },
   },
   {
-    id: 'britain', module: 's4_britain', start: 18.0, end: 25.0,
+    id: 'britain', module: 's4_britain', start: 14.1, end: 19.3,
     narration: 'But Britain holds out, fighting for survival in the skies.',
     dateCard: { text: '1940', at: 0.5 },
     transitionIn: 'dip',
@@ -129,7 +126,7 @@ const SCENES = [
     music: { intensity: 0.4 },
   },
   {
-    id: 'barbarossa', module: 's5_barbarossa', start: 25.0, end: 34.0,
+    id: 'barbarossa', module: 's5_barbarossa', start: 19.3, end: 25.9,
     narration: 'June 1941. Germany invades the Soviet Union, the largest invasion in history.',
     dateCard: { text: 'JUNE 22, 1941', at: 0.6 },
     transitionIn: 'burn',
@@ -141,8 +138,8 @@ const SCENES = [
     music: { intensity: 0.75 },
   },
   {
-    id: 'stalingrad', module: 's6_stalingrad', start: 34.0, end: 42.0,
-    narration: 'At Stalingrad, the tide turns. In February 1943, the German Sixth Army surrenders.',
+    id: 'stalingrad', module: 's6_stalingrad', start: 25.9, end: 31.8,
+    narration: 'At Stalingrad, the tide turns. February 1943: the German Sixth Army surrenders.',
     dateCard: { text: 'FEBRUARY 1943', at: 0.6 },
     transitionIn: 'dip',
     cues: [
@@ -155,8 +152,8 @@ const SCENES = [
     music: { intensity: 0.3, cello: true, silenceAt: { word: 'surrenders', offset: 0 } },
   },
   {
-    id: 'dday', module: 's7_dday', start: 42.0, end: 50.0,
-    narration: 'June 6, 1944. Allied forces land in Normandy. Germany now fights on two fronts.',
+    id: 'dday', module: 's7_dday', start: 31.8, end: 37.7,
+    narration: 'June 6, 1944: the Allies land in Normandy. Germany now fights on two fronts.',
     dateCard: { text: 'JUNE 6, 1944', at: 0.5 },
     transitionIn: 'burn',
     cues: [
@@ -170,7 +167,7 @@ const SCENES = [
     music: { intensity: 0.85 },
   },
   {
-    id: 'berlin', module: 's8_berlin', start: 50.0, end: 56.0,
+    id: 'berlin', module: 's8_berlin', start: 37.7, end: 42.1,
     narration: 'By April 1945, Soviet troops reach Berlin.',
     dateCard: { text: 'APRIL 1945', at: 0.5 },
     transitionIn: 'dip',
@@ -184,8 +181,8 @@ const SCENES = [
     music: { intensity: 1.0, hardCut: true },
   },
   {
-    id: 'ending', module: 's9_ending', start: 56.0, end: 60.0,
-    narration: 'May 8, 1945. The war in Europe is over. But the world would never be the same.',
+    id: 'ending', module: 's9_ending', start: 42.1, end: 45.0,
+    narration: 'May 8, 1945. The war in Europe is over. The world would never be the same.',
     dateCard: null, // the ending typesets its own title card
     transitionIn: 'dip',
     cues: [

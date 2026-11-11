@@ -2,7 +2,7 @@
   "name": "ww2-germany-60s",
   "version": "1.0.0",
   "private": true,
-  "description": "60-second procedurally generated vertical WWII documentary. Everything (visuals, narration timing, music, SFX, subtitles) is built from code.",
+  "description": "45-second looping, procedurally generated vertical WWII documentary. Everything (visuals, narration timing, music, SFX, subtitles) is built from code.",
   "type": "commonjs",
   "engines": { "node": ">=20" },
   "scripts": {

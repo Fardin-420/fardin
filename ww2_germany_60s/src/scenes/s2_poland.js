@@ -20,7 +20,7 @@ const ARROWS = [
 
 function render(ctx, s) {
   const { t, p, C } = s;
-  const tInv = s.w('invades'), tTwo = s.w('two'), tBrit = s.w('britain'), tFra = s.w('france');
+  const tInv = s.w('invades'), tTwo = s.w('britain') - 0.6, tBrit = s.w('britain'), tFra = s.w('france');
   const cam = travelCam(p, { lon: 13.5, lat: 51.9, zoom: 1.95 }, { lon: 10.2, lat: 51.2, zoom: 1.95 }, { travelStart: 0.45, travelEnd: 1 });
 
   const fills = {};

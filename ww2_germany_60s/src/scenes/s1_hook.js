@@ -1,6 +1,8 @@
 /**
- * SCENE 1 — HOOK. Pure black -> grain fades in -> huge "1939" types on (one key-click per digit),
- * the documentary title appears, then the year cracks, glitches and splits on the sub-boom.
+ * SCENE 1 — HOOK. Frame 0 is already full: huge "1939" plus the hook line "6 YEARS THAT BROKE THE
+ * WORLD" in the top safe area, hit by a drum on frame 0. The year then cracks, glitches and splits on
+ * the sub-boom. drawOpening() is the exact frame-0 composition; the ending dissolves back into it so
+ * the video loops seamlessly.
  */
 'use strict';
 
@@ -72,25 +74,46 @@ function drawYear(ctx, digits, alpha) {
   }
 }
 
+/** "6 YEARS THAT / BROKE THE WORLD" — on screen from frame 0, top of the safe zone. */
+function drawHookLine(ctx, alpha) {
+  if (alpha <= 0) return;
+  ctx.save();
+  ctx.globalAlpha = alpha;
+  ctx.textBaseline = 'middle';
+  ctx.font = '700 76px Oswald';
+  ctx.fillStyle = '#e2dccd';
+  spacedText(ctx, '6 YEARS THAT', CX, 420, 6);
+  ctx.fillStyle = '#e8c170';
+  spacedText(ctx, 'BROKE THE WORLD', CX, 510, 6);
+  ctx.fillStyle = 'rgba(207,200,184,0.5)';
+  ctx.fillRect(CX - 150, 572, 300, 2);
+  ctx.restore();
+}
+
+function drawBackdrop(ctx) {
+  ctx.fillStyle = '#0a0a0a';
+  ctx.fillRect(0, 0, 1080, 1920);
+  const g = ctx.createRadialGradient(CX, CY, 0, CX, CY, 700);
+  g.addColorStop(0, 'rgba(120,105,80,0.12)');
+  g.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = g;
+  ctx.fillRect(0, 0, 1080, 1920);
+}
+
+/** The exact composition of frame 0 (also used by the ending to close the loop). */
+function drawOpening(ctx) {
+  drawBackdrop(ctx);
+  drawYear(ctx, [1, 1, 1, 1], 1);
+  drawHookLine(ctx, 1);
+}
+
 function render(ctx, s) {
   const { t, p, dur } = s;
-  const keys = s.cues('typekey');
   const tGlitch = s.cue('glitch');
   const tBoom = s.cue('subboom');
   const crackStart = tGlitch - 0.75;
 
-  ctx.fillStyle = '#0a0a0a';
-  ctx.fillRect(0, 0, 1080, 1920);
-
-  // faint warm light falloff behind the type (gives the black some depth)
-  const glowA = 0.12 * seg(t, keys[0], keys[3] + 0.3);
-  if (glowA > 0) {
-    const g = ctx.createRadialGradient(CX, CY, 0, CX, CY, 700);
-    g.addColorStop(0, `rgba(120,105,80,${glowA})`);
-    g.addColorStop(1, 'rgba(0,0,0,0)');
-    ctx.fillStyle = g;
-    ctx.fillRect(0, 0, 1080, 1920);
-  }
+  drawBackdrop(ctx);
 
   // ---- year layer -------------------------------------------------------------------------------
   const L = s.layer('year');
@@ -100,7 +123,7 @@ function render(ctx, s) {
   const z = pushIn(p);
   lc.scale(z, z);
   lc.translate(-CX, -CY);
-  const digits = keys.map((k) => clamp((t - k) / 0.06));
+  const digits = [1, 1, 1, 1]; // fully on screen from frame 0
   const yearAlpha = 1 - seg(t, tBoom + 0.05, dur - 0.05);
   drawYear(lc, digits, yearAlpha);
   // cracks (drawn into the type)
@@ -162,23 +185,8 @@ function render(ctx, s) {
     }
   }
 
-  // ---- title -------------------------------------------------------------------------------------
-  const ta = easeOutCubic(seg(t, keys[3] + 0.35, keys[3] + 1.1)) * (1 - seg(t, tBoom - 0.1, tBoom + 0.25));
-  if (ta > 0) {
-    ctx.save();
-    ctx.globalAlpha = ta;
-    ctx.textBaseline = 'middle';
-    ctx.font = '500 50px Oswald';
-    ctx.fillStyle = '#cfc8b8';
-    spacedText(ctx, "GERMANY'S WAR", CX, CY + 300 + (1 - ta) * 14, 16);
-    ctx.font = 'italic 400 38px "Libre Baskerville"';
-    ctx.fillStyle = '#9d9686';
-    ctx.textAlign = 'center';
-    ctx.fillText('1939 – 1945', CX, CY + 370 + (1 - ta) * 14);
-    ctx.fillStyle = 'rgba(207,200,184,0.5)';
-    ctx.fillRect(CX - 140 * ta, CY + 255, 280 * ta, 2);
-    ctx.restore();
-  }
+  // ---- hook line: full on frame 0, holds ~2.2 s, then clears before the glitch --------------------
+  drawHookLine(ctx, 1 - seg(t, Math.min(2.2, tGlitch - 0.6), Math.min(2.6, tGlitch - 0.2)));
 
   // ---- sub-boom flash ----------------------------------------------------------------------------
   const flash = clamp(1 - (t - tBoom) / 0.25) * (t >= tBoom ? 1 : 0);
@@ -188,8 +196,7 @@ function render(ctx, s) {
   }
 
   const shake = t >= tBoom ? 16 * Math.exp(-(t - tBoom) * 7) : (gWin ? 4 : 0);
-  // pure black first, then the grain fades in
-  return { grain: seg(t, 0.05, 0.7), dust: seg(t, 0.4, 1.2), shake };
+  return { shake };
 }
 
-module.exports = { render };
+module.exports = { render, drawOpening };

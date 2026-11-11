@@ -10,7 +10,7 @@
  *   4. transitions (8-frame dip-to-black / film-burn flash at scene boundaries)
  *   5. film FX: flicker, vignette, grain, dust, scratches
  *   6. burned-in word-by-word subtitles
- *   7. final fade (last 15 frames)
+ *   (no final fade: the ending dissolves back into frame 0 so the video loops seamlessly)
  *
  * CLI (used by scripts/build.sh):
  *   node src/render.js --out build/video.mp4 [--scale 0.5] [--workers 4]
@@ -27,7 +27,7 @@ const ROOT = path.resolve(__dirname, '..');
 const { registerFonts } = require('./lib/fonts');
 const filmfx = require('./lib/filmfx');
 const { drawDateCard, buildSubtitles, drawSubtitles } = require('./lib/text');
-const { clamp, seg } = require('./lib/easing');
+const { clamp } = require('./lib/easing');
 const { DATE_TYPE_INTERVAL } = require('./timeline');
 
 registerFonts();
@@ -113,7 +113,11 @@ function renderFrame(frame, { scale = 1 } = {}) {
   ctx.setTransform(1, 0, 0, 1, 0, 0);
   ctx.fillStyle = '#000';
   ctx.fillRect(0, 0, frameCanvas.width, frameCanvas.height);
-  const [wx, wy] = filmfx.weave(frame);
+  // weave is made periodic: over the last 15 frames it blends into the drift just before frame 0,
+  // so the loop cut (last frame -> frame 0) moves no more than an ordinary frame step
+  const kL = clamp((frame - (TL.totalFrames - 16)) / 15);
+  const wa = filmfx.weave(frame), wb = filmfx.weave(frame - TL.totalFrames);
+  const wx = wa[0] * (1 - kL) + wb[0] * kL, wy = wa[1] * (1 - kL) + wb[1] * kL;
   let sx = 0, sy = 0;
   if (fx.shake) {
     sx = fx.shake * Math.sin(frame * 2.7 + 1.3);
@@ -132,9 +136,6 @@ function renderFrame(frame, { scale = 1 } = {}) {
   // 6. subtitles
   drawSubtitles(ctx, SUBS, s.time);
 
-  // 7. final 15 frames fade to black (everything, grain included)
-  const fade = seg(frame, TL.totalFrames - 16, TL.totalFrames - 1);
-  if (fade > 0) { ctx.fillStyle = `rgba(0,0,0,${fade})`; ctx.fillRect(0, 0, W, H); }
   return frameCanvas;
 }
 

@@ -652,8 +652,8 @@ def main() -> None:
         m = min(x.shape[1], sfx.shape[1] - i)
         sfx[:, i:i + m] += x[:, :m]
     sfx = sfx[:, :total]
-    # everything ends in silence: wind/piano tail fades over the last 15 frames
-    fade = n_of(0.5)
+    # short tail fade (no click at the loop point; the video loops back to frame 0)
+    fade = n_of(0.25)
     for buf in (music, sfx):
         buf[:, -fade:] *= np.linspace(1, 0, fade) ** 2
     sf.write(OUT / "music.wav", music.T.astype(np.float32), SR, subtype="FLOAT")

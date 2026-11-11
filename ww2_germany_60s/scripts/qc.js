@@ -1,12 +1,13 @@
 /**
  * qc.js — the brief's quality checks. Prints a report, writes out/qc_report.txt, exits 1 on failure.
  *
- *  1. ffprobe: duration 60.0 s ±0.05, 1800 frames, 1080x1920, 30 fps (+ codec/pix_fmt/audio params)
+ *  1. ffprobe: duration = timeline (45.0 s) ±0.05, frame count, 1080x1920, 30 fps (+ codec/pix_fmt/audio)
  *  2. loudness: ffmpeg ebur128 (true peak on): -14 LUFS ±1, true peak <= -1 dBTP
  *  3. sync table: every narration line inside its scene window, scene end = narration end + 0.3 s
  *  4. contact sheet present; automated scan: empty (flat) frames, text outside the safe zone
  *     (every fillText is instrumented), arrows drawn in every arrow scene, date cards held readable
- *  5. inspection frames 0, 450, 900, 1350, 1790 rendered to out/frames/
+ *  5. inspection frames at 0, 25, 50, 75 % and the last-but-one frame rendered to out/frames/
+ *  7. loop: last frame vs frame 0 (mean abs pixel difference)
  *  6. determinism: frame 900 rendered twice (two separate processes) -> identical SHA-256
  */
 'use strict';
@@ -39,8 +40,9 @@ const probe = JSON.parse(execFileSync('ffprobe', ['-v', 'error', '-count_frames'
 const v = probe.streams.find((s) => s.codec_type === 'video');
 const a = probe.streams.find((s) => s.codec_type === 'audio');
 const dur = +probe.format.duration;
-check(Math.abs(dur - 60) <= 0.05, 'duration 60.0 s ±0.05', `${dur.toFixed(3)} s (video ${(+v.duration).toFixed(3)} s, audio ${(+a.duration).toFixed(3)} s)`);
-check(+v.nb_read_frames === 1800, '1800 frames', `${v.nb_read_frames} frames`);
+const NF = tl.totalFrames;
+check(Math.abs(dur - tl.duration) <= 0.05, `duration ${tl.duration.toFixed(1)} s ±0.05`, `${dur.toFixed(3)} s (video ${(+v.duration).toFixed(3)} s, audio ${(+a.duration).toFixed(3)} s)`);
+check(+v.nb_read_frames === NF, `${NF} frames`, `${v.nb_read_frames} frames`);
 check(v.width === 1080 && v.height === 1920, '1080x1920', `${v.width}x${v.height}`);
 check(v.r_frame_rate === '30/1' && v.avg_frame_rate === '30/1', '30 fps', `r=${v.r_frame_rate} avg=${v.avg_frame_rate}`);
 check(v.codec_name === 'h264' && v.pix_fmt === 'yuv420p', 'H.264 yuv420p', `${v.codec_name} ${v.profile} ${v.pix_fmt}`);
@@ -71,7 +73,7 @@ for (const s of tl.scenes) {
     `${s.startSec.toFixed(2).padStart(5)}-${s.endSec.toFixed(2).padEnd(6)}  ${n.startSec.toFixed(2).padStart(5)}-${n.endSec.toFixed(2).padEnd(6)}   ` +
     `+${gap.toFixed(2)} s    ${ok ? 'PASS' : 'FAIL'}`);
 }
-check(tl.scenes[tl.scenes.length - 1].endFrame === 1800, 'scene windows cover exactly 1800 frames');
+check(tl.scenes[tl.scenes.length - 1].endFrame === NF, `scene windows cover exactly ${NF} frames`);
 
 // ---- 4. contact sheet + automated frame scan --------------------------------------------------
 log('\n4. CONTACT SHEET + FRAME SCAN');
@@ -87,11 +89,12 @@ yavg.forEach((y, i) => { if (yhigh[i] - ylow[i] < 3) flat.push(i); });
 const ranges = (arr) => arr.reduce((r, f) => { const l = r[r.length - 1]; if (l && f === l[1] + 1) l[1] = f; else r.push([f, f]); return r; }, []).map(([x, y]) => (x === y ? `${x}` : `${x}-${y}`));
 const transitionFrames = new Set();
 for (const s of tl.scenes) if (s.transitionIn) for (let f = s.startFrame - 4; f < s.startFrame + 4; f++) transitionFrames.add(f);
-const intentional = (f) => f < 12 || transitionFrames.has(f) || f >= 1785; // black open, dips, final fade
+const intentional = (f) => transitionFrames.has(f); // dip-to-black peaks
 const unexpected = flat.filter((f) => !intentional(f));
-check(yavg.length === 1800, 'luma stats for all 1800 frames');
+check(yavg.length === NF, `luma stats for all ${NF} frames`);
 check(unexpected.length === 0, 'no unintended empty (flat) frames',
-  flat.length ? `flat frames: ${ranges(flat).join(', ')} — all intentional (pure-black open, dip-to-black peaks, final fade)` : 'none');
+  flat.length ? `flat frames: ${ranges(flat).join(', ')} — all intentional (dip-to-black peaks)` : 'none');
+check(!flat.includes(0), 'frame 0 is not empty (hook on screen from the first frame)');
 
 // 4b. instrumented render: text bounding boxes, arrows, date cards
 const canvasMod = require('canvas');
@@ -118,7 +121,7 @@ for (const fn of ['fillText', 'strokeText']) {
 global.__QC__ = { arrows: {} };
 const qcScale = 0.5;
 const { renderFrame } = require('../src/render');
-for (let f = 0; f < 1800; f += 3) {
+for (let f = 0; f < NF; f += 3) {
   curFrame = f;
   renderFrame(f, { scale: qcScale });
 }
@@ -126,7 +129,7 @@ curFrame = -1;
 // offscreen-layer text (scene 1's year) is drawn with the layer's own transform; same coordinate system.
 const bad = textHits.filter((h) => h.top < SAFE.top - 1 || h.bottom > SAFE.top + SAFE.h + 1 || h.left < 0 || h.right > 1080);
 const badFrames = [...new Set(bad.map((b) => b.frame))];
-check(bad.length === 0, `all text inside safe zone (y ${SAFE.top}-${SAFE.top + SAFE.h}, x 0-1080) over ${Math.ceil(1800 / 3)} sampled frames`,
+check(bad.length === 0, `all text inside safe zone (y ${SAFE.top}-${SAFE.top + SAFE.h}, x 0-1080) over ${Math.ceil(NF / 3)} sampled frames`,
   bad.length ? `${bad.length} glyph runs outside, frames ${ranges(badFrames).slice(0, 8).join(', ')}: e.g. "${bad[0].text}" @ y ${bad[0].top.toFixed(0)}-${bad[0].bottom.toFixed(0)} x ${bad[0].left.toFixed(0)}-${bad[0].right.toFixed(0)}` : `${textHits.length} text draws checked`);
 const minTop = Math.min(...textHits.map((h) => h.top)), maxBottom = Math.max(...textHits.map((h) => h.bottom));
 log(`         text extent: y ${minTop.toFixed(0)} .. ${maxBottom.toFixed(0)} (TikTok UI bands: y < 150 and y > 1570)`);
@@ -146,7 +149,7 @@ for (const s of tl.scenes.filter((x) => x.dateCard)) {
 log('\n5. INSPECTION FRAMES');
 const fdir = path.join(OUT, 'frames');
 fs.mkdirSync(fdir, { recursive: true });
-for (const f of [0, 450, 900, 1350, 1790]) {
+for (const f of [0, Math.round(NF * 0.25), Math.round(NF * 0.5), Math.round(NF * 0.75), NF - 2]) {
   const file = path.join(fdir, `frame_${String(f).padStart(4, '0')}.png`);
   fs.writeFileSync(file, renderFrame(f, { scale: 1 }).toBuffer('image/png'));
   const sc = tl.scenes.find((s) => f >= s.startFrame && f < s.endFrame);
@@ -158,6 +161,18 @@ log('\n6. DETERMINISM (seed ' + tl.seed + ')');
 const h = (i) => execFileSync('node', [__filename, '--hash', '900']).toString().trim();
 const h1 = h(1), h2 = h(2);
 check(h1 === h2 && h1.length === 64, 'frame 900 rendered twice in separate processes -> identical SHA-256', h1.slice(0, 16) + '…');
+
+// ---- 7. loop -----------------------------------------------------------------------------------
+log('\n7. SEAMLESS LOOP');
+const px = (f) => { const b = renderFrame(f, { scale: 0.5 }).toBuffer('raw'); return Buffer.from(b); };
+// Grain/weave/flicker change every frame, so compare the wrap-around cut (last -> frame 0) with the
+// ordinary frame-to-frame change around it: an invisible loop changes no more than a normal step.
+const mad = (a, b) => { let d = 0; for (let i = 0; i < a.length; i += 4) d += Math.abs(a[i] - b[i]) + Math.abs(a[i + 1] - b[i + 1]) + Math.abs(a[i + 2] - b[i + 2]); return d / (a.length / 4) / 3; };
+const [p0, p1, p2, q0, q1] = [0, 1, 2, NF - 2, NF - 1].map(px);
+const normal = (mad(p0, p1) + mad(p1, p2) + mad(q0, q1)) / 3;
+const cut = mad(q1, p0);
+check(cut <= normal * 1.25, `loop cut (frame ${NF - 1} -> 0) is no bigger than a normal frame step`,
+  `${cut.toFixed(2)} vs ${normal.toFixed(2)} mean abs difference /255 (ratio ${(cut / normal).toFixed(2)})`);
 
 log(`\n${failed === 0 ? 'ALL CHECKS PASSED' : failed + ' CHECK(S) FAILED'}`);
 fs.writeFileSync(path.join(OUT, 'qc_report.txt'), lines.join('\n') + '\n');
