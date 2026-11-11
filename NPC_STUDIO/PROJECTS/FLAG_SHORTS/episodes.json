@@ -1,0 +1,16 @@
+{
+  "defaults": {
+    "balls_per_team": 8,
+    "gap_count": 1,
+    "target_seconds": [28, 38],
+    "seeds": 200
+  },
+  "episodes": [
+    {
+      "teams": ["ES", "PT", "IT"],
+      "balls_per_team": 8,
+      "title": "SPAIN VS PORTUGAL VS ITALY. PICK ONE",
+      "hook": "PICK ONE. NO SWITCHING."
+    }
+  ]
+}

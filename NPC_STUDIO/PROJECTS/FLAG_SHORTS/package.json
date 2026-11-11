@@ -1,0 +1,6 @@
+{
+  "name": "flag-shorts",
+  "private": true,
+  "description": "Flag battle physics Shorts generator (flag artwork: flag-icons, MIT)",
+  "dependencies": { "flag-icons": "^7.6.0" }
+}

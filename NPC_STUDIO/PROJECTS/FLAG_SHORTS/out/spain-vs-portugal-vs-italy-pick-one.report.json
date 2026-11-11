@@ -1,0 +1,54 @@
+{
+  "slug": "spain-vs-portugal-vs-italy-pick-one",
+  "seed": 58,
+  "winner": "Italy",
+  "score": 108.0,
+  "drama": {
+    "length_s": 33.75,
+    "length_ok": true,
+    "near_misses": 36,
+    "duel_s": 8.23,
+    "counts_at_80pct": [
+      0,
+      3,
+      2
+    ],
+    "winner_lead_at_80pct": -1,
+    "lead_changes": 4,
+    "duel_start_counts": [
+      0,
+      3,
+      2
+    ],
+    "winner_balls_left": 1,
+    "longest_lull_s": 6.21,
+    "hard_ok": true,
+    "score": 108.0
+  },
+  "audio": {
+    "notes": 382,
+    "booms": 2,
+    "heartbeats": 14,
+    "peak_dbfs": -1.0
+  },
+  "video": "h264 1080x1920 60/1 fps yuv420p, 2025 frames, 33.75s, audio aac peak -0.9 dB",
+  "seeds_searched": 200,
+  "seeds_meeting_all_rules": 50,
+  "runner_up_seeds": [
+    {
+      "seed": 42,
+      "score": 105.6,
+      "winner": "Italy"
+    },
+    {
+      "seed": 90,
+      "score": 100.8,
+      "winner": "Italy"
+    },
+    {
+      "seed": 179,
+      "score": 100.6,
+      "winner": "Portugal"
+    }
+  ]
+}
