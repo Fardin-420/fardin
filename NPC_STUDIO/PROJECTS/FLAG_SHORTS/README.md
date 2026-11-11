@@ -4,7 +4,7 @@ One command renders every episode in `episodes.json` to a finished vertical MP4:
 
 ```bash
 pip install -r requirements.txt      # pymunk, Pillow, numpy, cairosvg  (+ ffmpeg and node/npm on PATH)
-python make.py episodes.json         # → out/<slug>.mp4, out/<slug>.txt, out/<slug>.check.png, out/<slug>.report.json
+python make.py episodes.json         # → out/<slug>.mp4 .txt .cover.jpg .thumb.jpg .check.png .report.json
 ```
 
 `make.py` installs the `flag-icons` npm package on first run (the only download), rasterises its 1x1 SVGs with
@@ -15,6 +15,7 @@ cairosvg, searches seeds, renders, synthesises audio, muxes, and verifies the re
 | `--only spain` | only episodes whose slug contains the text |
 | `--seed 58` | skip the search and render that seed |
 | `--seeds 500` | search more seeds (default 200) |
+| `--cover-only` | only (re)make the cover (1080x1920) and 16:9 thumbnail, reusing the rendered seed |
 | `--workers 4` | parallel processes for search and rendering |
 
 ## episodes.json
@@ -57,6 +58,6 @@ rendered; the top five and the per-team win counts are printed, and everything i
 ## Files
 
 `make.py` CLI, seed search, parallel render, mux, verify, metadata · `sim.py` physics and scoring ·
-`render.py` Pillow/numpy frame renderer · `audio.py` numpy soundtrack · `flags.py` flag-icons + cairosvg.
+`render.py` Pillow/numpy frame renderer · `audio.py` numpy soundtrack · `flags.py` flag-icons + cairosvg · `cover.py` cover + thumbnail (never reveals the winner).
 
 Flag artwork: [flag-icons](https://github.com/lipis/flag-icons), MIT License.

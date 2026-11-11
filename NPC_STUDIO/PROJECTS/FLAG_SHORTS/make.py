@@ -5,6 +5,7 @@
     python make.py episodes.json --only spain    only episodes whose slug contains "spain"
     python make.py episodes.json --seed 42       skip the seed search and render this seed
     python make.py episodes.json --seeds 500     search more seeds
+    python make.py episodes.json --cover-only    only (re)make covers, reusing the seed from out/<slug>.report.json
 """
 import argparse
 import json
@@ -19,6 +20,7 @@ from pathlib import Path
 from PIL import Image, ImageDraw
 
 import audio
+import cover
 import flags
 import render
 import sim
@@ -218,6 +220,7 @@ def main():
     ap.add_argument("--only", help="render only episodes whose slug contains this text")
     ap.add_argument("--seed", type=int, help="render this seed instead of searching")
     ap.add_argument("--seeds", type=int, help="number of seeds to search (default 200)")
+    ap.add_argument("--cover-only", action="store_true", help="only make out/<slug>.cover.jpg + .thumb.jpg")
     ap.add_argument("--workers", type=int, default=max(1, min(8, (os.cpu_count() or 2))))
     args = ap.parse_args()
     data = json.loads(Path(args.episodes).read_text(encoding="utf-8"))
@@ -233,6 +236,15 @@ def main():
         if args.only and args.only.lower() not in cfg["slug"]:
             continue
         print(f"\n== {cfg['title']}  [{', '.join(cfg['names'])} · {cfg['balls_per_team']} balls each · {cfg['gap_count']} gap(s)]")
+        rep_path = OUT / f"{cfg['slug']}.report.json"
+        if args.cover_only:
+            seed = args.seed if args.seed is not None else (json.loads(rep_path.read_text())["seed"] if rep_path.exists() else None)
+            if seed is None:
+                seed = search(cfg, args.workers)[0][0]
+            res = sim.simulate(cfg, seed, record=True)
+            paths = cover.make_cover(cfg, res, render.Renderer(cfg, res), OUT)
+            print("  cover:", ", ".join(str(p.relative_to(HERE)) for p in paths))
+            continue
         if args.seed is not None:
             seed, rows = args.seed, None
         else:
@@ -247,6 +259,8 @@ def main():
         ainfo = render_video(cfg, res, mp4, args.workers)
         v = verify(cfg, res, mp4)
         write_meta(cfg)
+        paths = cover.make_cover(cfg, res, _CTX["renderer"], OUT)
+        print("  cover:", ", ".join(str(p.relative_to(HERE)) for p in paths))
         report = dict(slug=cfg["slug"], seed=seed, winner=cfg["names"][res["winner"]], score=round(score, 1), drama=b, audio=ainfo, video=v["summary"],
                       seeds_searched=len(rows) if rows else 0, seeds_meeting_all_rules=sum(1 for r in rows if r[2].get("hard_ok")) if rows else None,
                       runner_up_seeds=[dict(seed=r[0], score=round(r[1], 1), winner=cfg["names"][r[3]]) for r in rows[1:4]] if rows else [])
