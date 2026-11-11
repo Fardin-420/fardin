@@ -228,7 +228,7 @@ def main():
     defaults = data.get("defaults", {}) if isinstance(data, dict) else {}
     flags.ensure_package()
     OUT.mkdir(exist_ok=True)
-    made = []
+    made, covers = [], 0
     for ep in eps:
         cfg = build_cfg(defaults, ep)
         if args.seeds:
@@ -244,6 +244,7 @@ def main():
             res = sim.simulate(cfg, seed, record=True)
             paths = cover.make_cover(cfg, res, render.Renderer(cfg, res), OUT)
             print("  cover:", ", ".join(str(p.relative_to(HERE)) for p in paths))
+            covers += 1
             continue
         if args.seed is not None:
             seed, rows = args.seed, None
@@ -269,7 +270,7 @@ def main():
     print()
     for mp4, seed, w, s in made:
         print(f"DONE {mp4.relative_to(HERE)}  seed {seed}  winner {w}  drama score {s:.1f}")
-    if not made:
+    if not made and not covers:
         print("no episodes matched")
 
 
