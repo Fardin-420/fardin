@@ -1,0 +1,57 @@
+SPACE SECRETS — VENUS KILLED EVERY LANDER — RETENTION + TECHNICAL QA REPORT
+Measured on the exported FINAL_VIDEO.mp4: ffprobe, ffmpeg (ebur128, blackdetect, cropdetect, freezedetect, silencedetect),
+the npc.qc validator, and a frame review. No virality is promised.
+
+TECHNICAL
+  Resolution          1080x1920 (9:16). Native render; no source enlarged.
+  Frame rate          30 fps, constant
+  Codec               H.264 High, yuv420p. One final encode (frames -> H.264; audio muxed with -c:v copy).
+  Video bitrate       18.2 Mb/s (overall 18.4 Mb/s; target 12-20)
+  Audio               AAC-LC 48 kHz stereo, ~266 kb/s, -14.1 LUFS, true peak -1.9 dBTP, 0 clipped samples
+  Duration / size     68.6 s (target 61-70) / 158.1 MB
+  Black bars          2054/2054 frames full-frame (pass)
+  Freezes >= 1 s      none
+  Silence             one deliberate 0.74 s silence at 45.17-45.91 s (the lander dies)
+  Black frames        FLAGGED 44.93-45.90 s. This is deliberate: the "THEN THE HEAT WON" beat cuts static to black,
+                      with only a red flatline and "SIGNAL LOST · 127 MIN", in sync with the silence. It is not
+                      at the opening. Kept as a creative choice; it can be lifted to dark static if preferred.
+  Sharpness           Laplacian variance on full-resolution frames, 257-752 across shots (42 on the black beat).
+                      Captions, the thermometer, the depth scale and the timeline text are crisp at 100% and on a phone.
+                      The cloud and surface textures are soft by design.
+  Source resolution   NASA Magellan PIA00104 is 4096x4096, shown scaled down. Everything else is CGI rendered at
+                      native resolution.
+
+RULE 5 GATE (first 3 s rendered separately as gate3s.mp4; frames at 0.0 / 0.1 / 0.5 / 1.0 / 2.0 / 3.0 s)
+  1 First frame makes sense muted?      YES. Glowing lander in thick yellow clouds plus "VENUS KILLED EVERY LANDER".
+  2 Narration starts immediately?       YES. First audible voice at 0.004 s; impact at 0.00 s.
+  3 Opening understood within 2 s?      YES. The spoken line ends at 2.4 s; the caption carries it from frame 0.
+  4 Clear visual event?                 YES. Descent through parallax cloud layers, with a shake.
+  5 Real payoff by 8 s?                 YES. The Venera 13 view (labelled reconstruction) scans in from 6.3 s and is full at 7.5 s.
+  6 Captions visible and timed?         YES. Hook caption only during 0-3 s; phrase captions on aligned word onsets afterwards.
+  7 Every scene advances the story?     YES (see the beats below).
+
+STORY BEATS (on the render)
+  0-2.9 s     Hook: plunge through the clouds, VENUS KILLED EVERY LANDER
+  2.9-6.3     The mission clock races to 127:00
+  6.3-12.3    PAYOFF: the surface view (reconstruction) scans in; "VENUS, MARCH 1982"
+  12.3-24.8   Why everything dies: ~460 °C vs lead melting at 327 °C; 90x pressure ~ a submarine at ~890 m, rising rumble
+  24.8-40.8   The machine: titanium sphere cutaway, chilled; clock 32:00 -> 127:00 (~4x design life); drill and microphone
+  40.8-45.9   First colour pictures from Venus scanning in -> "THEN THE HEAT WON" -> static -> black and silence
+  45.9-55.2   TWIST: Earth (CGI) beside Venus (Magellan, 95%); ocean world? HYPOTHESIS (artist's impression, counter-view noted)
+  55.2-62.9   PAYOFF: no lander since 1985 (timeline to 2026); these photos are still among the only ones
+  62.9-68.6   LOOP: back in the clouds with the lander; the hook caption returns, so the replay is seamless
+  Shots: 16 shots plus 4 in-shot changes. Average shot ~4.3 s; the longest is the 6.0 s payoff scan, with new text at 9.2 s.
+
+PIPELINE
+  /yt-script   Hook scored with hookscore.py: mandated 58, as delivered 56 (WORKABLE); B 35, C 34.
+               The >=72 target isn't reachable with the mandated wording.
+  /yt-package  Title "Venus Killed Every Lander Since 1970" (36 chars, 100/100); cover text "127 MINUTES".
+  /yt-edit     deadair.py on narration.srt: 3 flags, 0.45 s total. Two are 0.05 s (kept). The 0.8 s gap at 45 s is the
+               intentional death silence (kept).
+  /yt-seo      TikTok caption, hashtags and comment question are in PACKAGE.txt. Long-form chapters and SEO don't apply.
+
+HONEST LIMITS
+  - No real Venera photo: the licence is unclear and the host is blocked. The surface is a labelled reconstruction.
+  - The lander and clouds are stylised CGI, not photoreal.
+  - The script is 191 words (target 170-185).
+  - TikTok re-encodes uploads, so on-platform quality may be lower than this master.
