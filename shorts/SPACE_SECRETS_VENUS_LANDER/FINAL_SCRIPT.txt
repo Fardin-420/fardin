@@ -1,0 +1,26 @@
+SPACE SECRETS — VENUS KILLED EVERY LANDER (Venera 13) — FINAL SCRIPT
+Voice: Kokoro-82M am_puck (local), per-line speed shown; slower on "127" lines and the final line.
+191 words · narration 66.6 s · video 68.6 s · hook lines 0-1 mandated (line 1 adjusted, see note).
+
+[  0.00s] (speed 0.93) This planet killed every machine we ever landed on it.
+[  3.02s] (speed 0.86) The toughest one lasted 127 minutes.
+[  6.36s] (speed 0.92) But before it died, it sent you a picture of this.
+[  9.19s] (speed 0.90) A camera saw this, on Venus, in 1982.
+[ 12.43s] (speed 0.92) Why does everything die there?
+[ 14.11s] (speed 0.92) The ground is about 460 degrees Celsius. Hot enough to melt lead.
+[ 19.25s] (speed 0.94) And the pressure is about 90 times Earth's, like being almost 900 meters under the sea.
+[ 24.93s] (speed 0.95) So Soviet engineers built Venera 13 like a submarine: a titanium sphere, chilled before it fell.
+[ 31.93s] (speed 0.90) It was designed to last 32 minutes.
+[ 34.23s] (speed 0.86) It lasted 127.
+[ 36.65s] (speed 0.95) It drilled the rock, tested the soil, and its microphone listened to the wind.
+[ 40.86s] (speed 0.92) It sent the first color pictures from the surface of Venus. Then the heat won.
+[ 45.95s] (speed 0.92) Here's the strange part. Venus is almost the size of Earth.
+[ 49.69s] (speed 0.95) Some models suggest it once had oceans, until a runaway greenhouse boiled them away.
+[ 55.26s] (speed 0.92) Since 1985, nothing has worked on that surface again.
+[ 59.03s] (speed 0.92) These forty-year-old photos are still among the only ones we have.
+[ 63.00s] (speed 0.86) From the planet that killed every machine we ever landed on it.
+
+NOTE: Mandated line 1 ended "...it sent you this." The surface shot is a labelled RECONSTRUCTION (the real Venera 13
+photo's licence is unclear and its host was unreachable), so the line became "...it sent you a picture of this."
+NOTE: The brief said "first color photos from another planet's surface". That is wrong: NASA's Viking 1 returned colour
+photos from Mars in 1976. The script says "the first color pictures from the surface of Venus".

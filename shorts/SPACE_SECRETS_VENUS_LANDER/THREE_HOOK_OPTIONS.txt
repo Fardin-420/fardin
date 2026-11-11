@@ -1,0 +1,35 @@
+SPACE SECRETS — VENUS KILLED EVERY LANDER — THREE HOOK OPTIONS (Rule 2)
+Scores from hookscore.py (/yt-script). Every option was fact-checked.
+
+HOOK A — shocking fact (MANDATED, CHOSEN)
+  Narration: "This planet killed every machine we ever landed on it. The toughest one lasted 127 minutes.
+              But before it died, it sent you a picture of this."
+  Score: 56 WORKABLE. The mandated wording "...it sent you this." scores 58. The words "a picture of" were added because
+         the shot it points to is a labelled reconstruction, not the real photo.
+  First frame: a glowing Venera-type lander already plunging through thick yellow clouds; hook caption
+               "VENUS KILLED EVERY LANDER".
+  Camera: descending with the lander, cloud layers streaming up past it in parallax; slight shake.
+  Sound: bass impact plus whoosh at 0.00 s; voice at 0.00 s.
+  On-screen text: VENUS KILLED EVERY LANDER (one text block, 4 words)
+  Why viewers stay: a death sentence for machines, a number (127 min), and a promised image ("a picture of this"),
+                    paid off at 6.3-7.5 s.
+  Fact check: PASS. Every Venus lander (Venera 7-14, Vega 1-2, Pioneer Venus probes) failed within about 2 hours.
+              Venera 13 lasted 127 min, the record.
+
+HOOK B — terrifying hypothetical
+  Narration: "On Venus, the air alone would crush you."
+  Score: 35 WEAK.
+  First frame: an astronaut silhouette on the surface under a looming orange sky.
+  Sound: low pressure groan.  On-screen text: THE AIR WOULD CRUSH YOU
+  Fact check: PASS (about 90 bar is roughly 900 m underwater; an unprotected human would also die of heat first).
+  Verdict: scores well below A. Its idea is reused at 19 s (pressure diagram, submarine at about 890 m).
+
+HOOK C — visual reveal
+  Narration: "This is a real photo from the surface of another planet."
+  Score: 34 WEAK.
+  First frame: the Venera 13 panorama.
+  Fact check: FAILS for this production. The real photo could not be used (licence unclear, host unreachable), so the
+              shot is a reconstruction and the line would be false. Even with the real photo it scores far below A.
+  Verdict: rejected. Its idea is reused as the 6.3 s payoff (line-scan reveal of the reconstructed view).
+
+DECISION: A (mandated). Neither B nor C scored higher, so no check-in was needed before rendering.

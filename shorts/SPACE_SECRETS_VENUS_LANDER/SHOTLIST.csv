@@ -1,0 +1,17 @@
+shot,start_s,end_s,beat,visual,label
+01,0.00,2.92,Hook 0-2 s,Glowing Venera-type lander plunging through yellow sulfuric-acid clouds; VENUS KILLED EVERY LANDER,reconstruction
+02,2.92,6.26,127 minutes,Descent continues; mission clock races 0:00 -> 127:00,reconstruction
+03,6.26,12.33,FIRST PAYOFF 6.3 s,"Line-scan camera builds the Venera 13 view: curved horizon, rock slabs, lander ring, colour chart; VENUS, MARCH 1982",RECONSTRUCTION of the real photo
+04,12.33,14.01,Why,Same view with heat shimmer; WHY EVERYTHING DIES,reconstruction
+05,14.01,19.15,Heat 14 s,Thermometer to ~460 °C past lead's 327 °C melting point; lead block slumps,diagram
+06,19.15,24.83,Pressure 19 s,Ocean depth scale; submarine sinks to ~890 m; 90x EARTH'S PRESSURE; rising rumble,diagram
+07,24.83,31.83,Machine 25 s,"Cutaway: titanium shell, insulation, electronics; frost ring: CHILLED BEFORE DESCENT",diagram
+08,31.83,34.13,Design life,Lander on the surface; clock to 32:00 DESIGNED TO LAST,reconstruction
+09,34.13,36.55,It lasted,Clock overruns 32 -> 127:00; ~4x its design life,reconstruction
+10,36.55,40.76,Work,Drill arm into the rock; microphone waveform (Groza-2),reconstruction
+11,40.76,45.85,Death 41-46 s,"First colour pictures scanning in; THEN THE HEAT WON: static, SIGNAL LOST, sudden silence",reconstruction
+12,45.85,49.59,TWIST 46 s,Earth (CGI) beside Venus (NASA Magellan PIA00104) at 95% width,REAL NASA DATA + CGI
+13,49.59,55.16,Hypothesis 50 s,"Magellan map with low plains flooded, boiling back to today's Venus; HYPOTHESIS",artist's impression
+14,55.16,58.93,Payoff 55 s,"Timeline 1970-2026: landers to Vega 2 (1985), red empty line to today",timeline
+15,58.93,62.90,Only ones,The view as an old print; STILL AMONG THE ONLY ONES,reconstruction
+16,62.90,68.60,Loop,Back in the clouds with the glowing lander; hook caption returns -> clean replay,reconstruction
