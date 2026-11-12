@@ -1,0 +1,21 @@
+shot,start_s,end_s,beat,visual,label
+01,0.00,2.16,Hook 0-2 s,"Abrupt reveal: real JIRAM infrared close-up of the saturated hotspot, pulling back; thermal scan; 80 TRILLION WATTS?!",REAL NASA DATA PIA26527
+02,2.16,6.29,Io,Real JunoCam colour view of Io's south polar region,REAL PIA25697
+03,6.29,13.91,Discovery,"Juno flyby (CGI) past Io (JunoCam), DEC 27, 2024; cut to raw JIRAM frame (pixels 3x nearest)",CGI reconstruction + REAL PIA26594
+04,13.91,19.72,Hotspot,"Full JIRAM south-polar disc, thermal scan, saturated hotspot circled",REAL PIA26527
+05,19.72,24.52,Record,JunoCam surface-change sequence Apr/Oct/Dec 2024; MOST POWERFUL,REAL PIA26526
+06,24.52,29.24,Scale 25 s,"Equal-area squares: hotspot ~100,000 km² vs Lake Superior ~82,100 km²","diagram, to scale"
+07,29.24,33.62,Loki,"Five Loki Patera squares (~20,000 km²) inside the hotspot; 5x THE OLD RECORD",diagram
+08,33.62,38.36,80 TW,Counter to 80+ TW over the real hotspot,REAL PIA26527
+09,38.36,45.09,Heat not electricity,Bars to scale: 80 TW heat vs ~3.4 TW average global electric power,diagram
+10,45.09,49.47,Saturation 45 s,Raw JIRAM pixels 4x nearest; meter pegged at MAX; SENSOR SATURATED,REAL PIA26594
+11,49.47,51.03,Underneath,"JunoCam surface, dimmed; WHAT'S UNDERNEATH?",REAL PIA25697
+12,51.03,56.98,Several eruptions,Schematic cluster of nearby heat sources,"interpretation, schematic"
+13,56.98,61.50,Magma chamber 57 s,Cross-section: one chamber feeding several vents; INTERPRETATION,scientific simulation
+14,61.50,64.13,Why so hot,Real JunoCam frame of Jupiter and Io,REAL PIA25726
+15,64.13,70.08,Resonance 64 s,Io : Europa : Ganymede 4:2:1 orbits,schematic
+16,70.08,75.18,Squeeze,Eccentric orbit (exaggerated); Io stretches near Jupiter,simulation
+17,75.18,79.00,Tide,Surface profile rising/falling up to ~100 m,"diagram, vertical exaggeration"
+18,79.00,85.64,Tidal heating,Real JunoCam + JIRAM composite of many hotspots (native 1:1),REAL PIA25888
+19,85.64,88.63,Record 86 s,Back to the JIRAM hotspot; A NEW RECORD,REAL PIA26527
+20,88.63,94.20,Payoff,Hotspot glow pulse; 80 TRILLION WATTS,REAL PIA26527
