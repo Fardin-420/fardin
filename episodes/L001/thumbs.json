@@ -1,0 +1,268 @@
+[
+ {
+  "text": {
+   "words": [
+    "NOT",
+    "ALONE?!"
+   ],
+   "colors": [
+    [
+     1,
+     1,
+     1
+    ],
+    [
+     1,
+     0.86,
+     0.15
+    ]
+   ],
+   "x": 0.5,
+   "y": 0.3,
+   "size": 150,
+   "maxw": 0.46
+  },
+  "focus": 0.25,
+  "t": 1.2,
+  "scene": {
+   "set": "camp",
+   "tod": "night",
+   "set_opts": {
+    "cliff_x": -300
+   },
+   "actors": [
+    {
+     "id": "fardin",
+     "kind": "fardin",
+     "x": -200,
+     "size": 520,
+     "track": [
+      {
+       "t": 0,
+       "pose": "amazed",
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "animals": [
+    {
+     "species": "hyena",
+     "x": 420,
+     "y": -20,
+     "facing": -1,
+     "size": 1.5,
+     "glow": 1.0,
+     "track": [
+      {
+       "t": 0,
+       "state": "prowl"
+      }
+     ]
+    },
+    {
+     "species": "hyena",
+     "x": 700,
+     "y": -90,
+     "facing": -1,
+     "size": 1.1,
+     "glow": 1.0,
+     "track": [
+      {
+       "t": 0,
+       "state": "alert"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "campfire",
+     "x": 180,
+     "s": 1.0
+    }
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "x": 230,
+     "y": -380,
+     "zoom": 1.75
+    }
+   ]
+  }
+ },
+ {
+  "text": {
+   "words": [
+    "THEY ATE",
+    "THIS?!"
+   ],
+   "colors": [
+    [
+     1,
+     1,
+     1
+    ],
+    [
+     0.55,
+     1,
+     0.35
+    ]
+   ],
+   "x": 0.5,
+   "y": 0.2,
+   "size": 130,
+   "maxw": 0.46
+  },
+  "focus": 0.3,
+  "t": 1.0,
+  "scene": {
+   "set": "camp",
+   "tod": "golden",
+   "set_opts": {
+    "cliff_x": -350
+   },
+   "actors": [
+    {
+     "id": "fardin",
+     "kind": "fardin",
+     "x": -280,
+     "size": 520,
+     "track": [
+      {
+       "t": 0,
+       "pose": "cover_mouth",
+       "expr": "disgust"
+      }
+     ]
+    },
+    {
+     "id": "hunterB",
+     "kind": "era",
+     "x": 330,
+     "size": 380,
+     "facing": -1,
+     "skin": "#4d3022",
+     "hide": "#8b6a45",
+     "hair": "curls",
+     "beard": true,
+     "paint": true,
+     "track": [
+      {
+       "t": 0,
+       "pose": "eat",
+       "hold": "bone",
+       "expr": "happy"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "bones",
+     "x": 250,
+     "y": 25,
+     "s": 2.2
+    },
+    {
+     "type": "campfire",
+     "x": 650,
+     "s": 0.9
+    }
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "x": 120,
+     "y": -340,
+     "zoom": 1.75
+    }
+   ]
+  }
+ },
+ {
+  "text": {
+   "words": [
+    "300,000",
+    "YEARS AGO"
+   ],
+   "colors": [
+    [
+     1,
+     0.86,
+     0.15
+    ],
+    [
+     1,
+     1,
+     1
+    ]
+   ],
+   "x": 0.03,
+   "y": 0.17,
+   "size": 118,
+   "rot": -0.03,
+   "maxw": 0.4
+  },
+  "focus": 0.7,
+  "t": 1.5,
+  "scene": {
+   "set": "camp",
+   "tod": "dawn",
+   "set_opts": {
+    "cliff_x": 400
+   },
+   "actors": [
+    {
+     "id": "fardin",
+     "kind": "fardin",
+     "x": 300,
+     "size": 500,
+     "facing": -1,
+     "watch": 1.4,
+     "track": [
+      {
+       "t": 0,
+       "pose": "amazed",
+       "expr": "amazed"
+      }
+     ]
+    },
+    {
+     "id": "hunterC",
+     "kind": "era",
+     "x": 720,
+     "size": 380,
+     "facing": -1,
+     "skin": "#7a4e35",
+     "hide": "#a5845a",
+     "hair": "short",
+     "track": [
+      {
+       "t": 0,
+       "pose": "lookout",
+       "hold": "spear",
+       "expr": "focused"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "campfire",
+     "x": -200,
+     "s": 0.8
+    }
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "x": 280,
+     "y": -380,
+     "zoom": 1.75
+    }
+   ]
+  }
+ }
+]
