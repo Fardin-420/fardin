@@ -119,15 +119,47 @@ def draw_word_captions(ctx, W, H, words, T, y_frac=0.79):
 
 
 def draw_srt_caption(ctx, W, H, lines, T):
+    """Long-form burned-in subtitle: bold white words with dark outline,
+    the word being spoken highlighted, on a soft translucent band."""
     for l in lines:
-        if l["t0"] <= T <= l["t1"]:
-            u = W / BASE_W
-            G.font(ctx, 46 * u, "bold")
-            tw = ctx.text_extents(l["text"]).x_advance
-            G.rrect(ctx, (W - tw) / 2 - 24 * u, H * 0.88 - 52 * u, tw + 48 * u, 72 * u, 12 * u)
-            ctx.set_source_rgba(0, 0, 0, 0.6); ctx.fill()
-            G.text(ctx, l["text"], W / 2, H * 0.88, 46 * u, (1, 1, 1), "bold", align="center", shadow=False)
-            return
+        if not (l["t0"] - 0.05 <= T <= l["t1"]):
+            continue
+        u = W / BASE_W
+        fs = 52 * u
+        ws = l.get("words") or [{"w": l["text"], "t": l["t0"], "d": l["t1"] - l["t0"]}]
+        G.font(ctx, fs, "xbold")
+        sp = fs * 0.27
+        widths = [ctx.text_extents(w["w"]).x_advance for w in ws]
+        total = sum(widths) + sp * (len(ws) - 1)
+        x = (W - total) / 2
+        y = H * 0.9
+        a = min(1.0, (T - l["t0"] + 0.05) / 0.12, (l["t1"] - T) / 0.12 + 0.2)
+        a = max(0.0, min(1.0, a))
+        g = cairo.LinearGradient(0, y - fs * 1.6, 0, H)
+        g.add_color_stop_rgba(0, 0, 0, 0, 0)
+        g.add_color_stop_rgba(0.45, 0, 0, 0, 0.45 * a)
+        g.add_color_stop_rgba(1, 0, 0, 0, 0.55 * a)
+        ctx.set_source(g)
+        ctx.rectangle(0, y - fs * 1.6, W, H - (y - fs * 1.6))
+        ctx.fill()
+        for w, wd in zip(ws, widths):
+            active = w["t"] <= T < w["t"] + max(w["d"], 0.1) + 0.08
+            spoken = T >= w["t"]
+            ctx.move_to(x, y)
+            ctx.text_path(w["w"])
+            ctx.set_line_join(cairo.LINE_JOIN_ROUND)
+            ctx.set_line_width(fs * 0.14)
+            ctx.set_source_rgba(0, 0, 0, 0.9 * a)
+            ctx.stroke_preserve()
+            if active:
+                ctx.set_source_rgba(1, 0.85, 0.2, a)
+            elif spoken:
+                ctx.set_source_rgba(1, 1, 1, a)
+            else:
+                ctx.set_source_rgba(1, 1, 1, 0.7 * a)
+            ctx.fill()
+            x += wd + sp
+        return
 
 
 # ------------------------------------------------------------------ frame

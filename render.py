@@ -78,7 +78,7 @@ def main():
         R.render_video(tl_path, out, mix, t1=a.test, procs=a.procs, chunk_s=5)
         print("[test]", out)
         qc.report(out, expect_dur=min(a.test, tl["duration"]), check_len=False)
-    full = os.path.join(out_dir, f"timeghost_{num}.mp4")
+    full = os.path.join(out_dir, f"timeghost_{num}{'_subtitled' if a.captions else ''}.mp4")
     if (a.all or not (a.stills or a.test or a.shorts or a.thumbs)) and not a.no_video:
         print("[render] full episode…", flush=True)
         t0 = time.time()

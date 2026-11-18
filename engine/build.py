@@ -345,7 +345,7 @@ def caption_lines(words, max_chars=42):
         nxt = words[i + 1] if i + 1 < len(words) else None
         gap = (nxt["t"] - (w["t"] + w["d"])) if nxt else 9
         if len(txt) > max_chars - 8 or w["w"][-1:] in ".?!" or gap > 0.45 or (w["w"][-1:] in ",;:" and len(txt) > 18) or nxt is None:
-            lines.append({"t0": cur[0]["t"], "t1": w["t"] + w["d"] + 0.15, "text": txt})
+            lines.append({"t0": cur[0]["t"], "t1": w["t"] + w["d"] + 0.15, "text": txt, "words": list(cur)})
             cur = []
     for i in range(len(lines) - 1):
         lines[i]["t1"] = min(lines[i]["t1"], lines[i + 1]["t0"] - 0.02)
