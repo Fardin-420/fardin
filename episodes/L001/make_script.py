@@ -716,8 +716,8 @@ script = {
     "episode": "L001",
     "series": "Time Ghost",
     "title": "I Spent 24 Hours With Early Humans (300,000 years ago)",
-    "voice": {"name": "en-US-ChristopherNeural", "rate": "-3%", "pitch": "-4Hz"},
-    "fardin_voice": {"name": "en-US-AndrewNeural", "rate": "+8%", "pitch": "+20Hz"},
+    "voice": {"name": "kokoro:am_fenrir", "rate": "1.04", "pitch": "0"},
+    "fardin_voice": {"name": "kokoro:am_eric", "rate": "1.12", "pitch": "0"},
     "scenes": scenes,
 }
 json.dump(script, open(os.path.join(HERE, "script.json"), "w"), indent=1, ensure_ascii=False)

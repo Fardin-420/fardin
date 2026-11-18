@@ -33,4 +33,5 @@ NPC_STUDIO/PROJECTS/*/previews/*.m4a
 # --- Time Ghost: reproducible build products & large renders ---
 episodes/*/build/
 output/*.mp4
+!output/timeghost_*_short[0-9].mp4
 output/.chunks_*

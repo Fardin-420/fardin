@@ -38,6 +38,13 @@ def report(path, expect_dur=None, check_len=True, min_len=480, max_len=600, w=19
     lines.append(f"  frozen stretches >3s: {len(freezes)} {freezes[:8]}")
     if freezes:
         ok = False
+    from .audio import loudness
+    I, TP = loudness(path)
+    lines.append(f"  loudness {I} LUFS integrated, true peak {TP} dBTP")
+    if I is None or not (-16.5 <= I <= -13.5) or TP is None or TP > -1.0:
+        ok = False; lines.append("  FAIL loudness / true peak")
+    if a and abs(vd - ad) > 0.05:
+        lines.append("  NOTE A/V length differs by more than 0.05 s")
     lines.append("  RESULT: " + ("PASS" if ok else "CHECK ABOVE"))
     print("\n".join(lines), flush=True)
     return ok

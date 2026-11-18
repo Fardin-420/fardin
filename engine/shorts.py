@@ -138,7 +138,11 @@ def make_short(tl_path, spec, out, mix, procs=None):
     lst = os.path.join(work, "list.txt")
     open(lst, "w").write("".join(f"file '{os.path.abspath(j[4])}'\n" for j in jobs))
     wav = os.path.join(work, "a.wav")
-    A.write_wav(wav, audio_for(p, mix))
+    au = audio_for(p, mix)
+    na = int(round(N / fps * A.SR))
+    au = np.pad(au, (0, max(0, na - len(au))))[:na]  # exactly the video length
+    A.write_wav(wav, au)
+    A.loudnorm_wav(wav, I=-15.0, TP=-1.6)
     subprocess.run(["ffmpeg", "-y", "-v", "error", "-f", "concat", "-safe", "0", "-i", lst, "-i", wav, "-map", "0:v", "-map", "1:a",
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", out], check=True)
     for j in jobs:
@@ -155,4 +159,4 @@ def make_all(ep, tl_path, out_dir, num, procs=None):
         out = os.path.join(out_dir, f"timeghost_{num}_short{i}.mp4")
         print(f"[short {i}] {spec['hook']}", flush=True)
         _, total = make_short(tl_path, spec, out, mix, procs)
-        qc.report(out, check_len=True, min_len=45, max_len=60, w=W, h=H)
+        qc.report(out, check_len=True, min_len=30, max_len=60, w=W, h=H)

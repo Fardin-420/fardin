@@ -1,8 +1,9 @@
-"""Narration (edge-tts with word timings), procedural SFX/music synthesis and mixing."""
+"""Narration (local Kokoro or edge-tts, with word timings), procedural SFX, tempo-locked score, mixing, loudness."""
 import asyncio
 import hashlib
 import json
 import os
+import re
 import subprocess
 import numpy as np
 from scipy import signal
@@ -50,9 +51,145 @@ async def _tts(text, voice, rate, pitch, path):
     return words
 
 
-def tts(text, cache_dir, voice="en-US-ChristopherNeural", rate="-6%", pitch="-2Hz"):
-    """Returns (samples, words[{w,t,d}]) cached by content hash."""
+# ------------------------------------------------------------------ Kokoro (local) TTS
+KOKORO_SR = 24000
+_KOKORO = None
+_WHISPER = {"model": None, "failed": False}
+
+
+def _kokoro():
+    global _KOKORO
+    if _KOKORO is None:
+        from kokoro_onnx import Kokoro
+        d = os.path.expanduser(os.environ.get("KOKORO_DIR", "~/kokoro"))
+        onnx, voices = os.path.join(d, "kokoro-v1.0.onnx"), os.path.join(d, "voices-v1.0.bin")
+        if not (os.path.exists(onnx) and os.path.exists(voices)):
+            raise SystemExit(f"Kokoro model missing in {d}: download kokoro-v1.0.onnx and voices-v1.0.bin from "
+                             "https://github.com/thewh1teagle/kokoro-onnx/releases/tag/model-files-v1.0")
+        _KOKORO = Kokoro(onnx, voices)
+    return _KOKORO
+
+
+def _whisper():
+    if _WHISPER["model"] is None and not _WHISPER["failed"]:
+        try:
+            from faster_whisper import WhisperModel
+            _WHISPER["model"] = WhisperModel("base.en", device="cpu", compute_type="int8")
+        except Exception as e:  # not installed or model download blocked
+            print(f"[tts] faster-whisper unavailable ({type(e).__name__}); using heuristic word timings", flush=True)
+            _WHISPER["failed"] = True
+    return _WHISPER["model"]
+
+
+def _script_words(text):
+    return [w for w in text.split() if re.sub(r"[^A-Za-z0-9]", "", w)]
+
+
+def _align_whisper(x, text):
+    m = _whisper()
+    if m is None:
+        return None
+    import tempfile, soundfile as sf
+    with tempfile.NamedTemporaryFile(suffix=".wav") as f:
+        sf.write(f.name, x, SR)
+        segs, _ = m.transcribe(f.name, word_timestamps=True, language="en")
+        rec = [w for s in segs for w in (s.words or [])]
+    toks = _script_words(text)
+    if not rec:
+        return None
+    # map recognised words onto script words in order (proportional when counts differ)
+    out = []
+    for i, tk in enumerate(toks):
+        j = min(len(rec) - 1, int(round(i * (len(rec) - 1) / max(1, len(toks) - 1)))) if len(rec) != len(toks) else i
+        out.append({"w": tk, "t": float(rec[j].start), "d": float(max(0.05, rec[j].end - rec[j].start))})
+    for i in range(1, len(out)):  # monotonic
+        out[i]["t"] = max(out[i]["t"], out[i - 1]["t"] + 0.03)
+    return out
+
+
+def _align_heuristic(x, text):
+    """Spread script words over the voiced span weighted by letters (+1.5) with extra
+    weight after punctuation, then snap phrase breaks onto real pauses in the audio."""
+    toks = _script_words(text)
+    if not toks:
+        return []
+    idx = np.where(np.abs(x) > 0.02)[0]
+    v0, v1 = (idx[0] / SR, idx[-1] / SR) if len(idx) else (0.0, len(x) / SR)
+    w, gaps = [], []
+    for tk in toks:
+        w.append(len(re.sub(r"[^A-Za-z0-9]", "", tk)) + 1.5)
+        gaps.append(6.0 if tk[-1:] in ".!?" else 3.0 if tk[-1:] in ",;:" else 0.0)
+    total = sum(w) + sum(gaps[:-1])
+    pos, starts, ends = 0.0, [], []
+    for i in range(len(toks)):
+        starts.append(pos); pos += w[i]; ends.append(pos)
+        if i < len(toks) - 1:
+            pos += gaps[i]
+    scale = (v1 - v0) / total
+    st = [v0 + a * scale for a in starts]
+    en = [v0 + b * scale for b in ends]
+    # detect real pauses (10 ms frames, >=90 ms below threshold)
+    hop = int(0.01 * SR)
+    fr = np.sqrt(np.convolve(x ** 2, np.ones(hop) / hop, mode="same")[::hop])
+    quiet = fr < 0.012
+    pauses, k = [], 0
+    while k < len(quiet):
+        if quiet[k]:
+            j = k
+            while j < len(quiet) and quiet[j]:
+                j += 1
+            a, b = k * 0.01, j * 0.01
+            if b - a >= 0.09 and a > v0 + 0.05 and b < v1 - 0.05:
+                pauses.append((a, b))
+            k = j
+        else:
+            k += 1
+    # anchors: (model_time, real_time) pairs at punctuation breaks
+    anchors = [(v0, v0)]
+    used = set()
+    for i in range(len(toks) - 1):
+        if gaps[i] > 0 and pauses:
+            mid_pred = (en[i] + st[i + 1]) / 2
+            best = min(range(len(pauses)), key=lambda q: abs((pauses[q][0] + pauses[q][1]) / 2 - mid_pred))
+            pa, pb = pauses[best]
+            if best not in used and abs((pa + pb) / 2 - mid_pred) < 0.7 and pa > anchors[-1][1]:
+                used.add(best)
+                anchors.append((en[i], pa))
+                anchors.append((st[i + 1], pb))
+    anchors.append((v1, v1))
+    mx = np.array([a[0] for a in anchors]); rx = np.array([a[1] for a in anchors])
+    ok = np.concatenate([[True], np.diff(mx) > 1e-4])
+    mx, rx = mx[ok], rx[ok]
+    remap = lambda t: float(np.interp(t, mx, rx))
+    return [{"w": tk, "t": remap(a), "d": max(0.05, remap(b) - remap(a))} for tk, a, b in zip(toks, st, en)]
+
+
+def _tts_kokoro(text, voice, rate, cache_dir):
+    key = hashlib.sha1(f"{voice}|{rate}|{text}".encode()).hexdigest()[:16]
+    wav, js = os.path.join(cache_dir, key + ".wav"), os.path.join(cache_dir, key + ".json")
+    if os.path.exists(wav) and os.path.exists(js):
+        import soundfile as sf
+        x, _ = sf.read(wav, dtype="float32")
+        return x, json.load(open(js))
+    k = _kokoro()
+    y, sr = k.create(text, voice=voice.split(":", 1)[1], speed=float(rate), lang="en-us")
+    x = signal.resample_poly(np.asarray(y, np.float32), SR, sr).astype(np.float32)
+    idx = np.where(np.abs(x) > 0.01)[0]
+    if len(idx):  # trim, keep 60 ms head and 100 ms tail
+        x = x[max(0, idx[0] - int(0.06 * SR)): min(len(x), idx[-1] + int(0.1 * SR))]
+    words = _align_whisper(x, text) or _align_heuristic(x, text)
+    import soundfile as sf
+    sf.write(wav, x, SR)
+    json.dump(words, open(js, "w"))
+    return x, words
+
+
+def tts(text, cache_dir, voice="kokoro:am_fenrir", rate="1.04", pitch="0"):
+    """Returns (samples at SR, words[{w,t,d}]) cached by content hash.
+    'kokoro:<voice>' -> local Kokoro (rate = speed factor); anything else -> edge-tts."""
     os.makedirs(cache_dir, exist_ok=True)
+    if voice.startswith("kokoro:"):
+        return _tts_kokoro(text, voice, rate, cache_dir)
     key = hashlib.sha1(f"{voice}|{rate}|{pitch}|{text}".encode()).hexdigest()[:16]
     mp3, js = os.path.join(cache_dir, key + ".mp3"), os.path.join(cache_dir, key + ".json")
     if not (os.path.exists(mp3) and os.path.exists(js) and os.path.getsize(mp3) > 1000):
@@ -68,7 +205,6 @@ def tts(text, cache_dir, voice="en-US-ChristopherNeural", rate="-6%", pitch="-2H
         json.dump(words, open(js, "w"))
     x = decode(mp3)
     words = json.load(open(js))
-    # trim trailing silence, keep 80ms
     env = np.abs(x)
     idx = np.where(env > 0.01)[0]
     if len(idx):
@@ -508,6 +644,185 @@ def music_pad(n, mood, t0=0.0, seed=0):
     return x * 0.08
 
 
+# ------------------------------------------------------------------ cinematic score
+BPM = 100
+BEAT = 60.0 / BPM
+BAR = 4 * BEAT
+STEP = BEAT / 4  # 16th note
+_ONESHOT = {}
+
+
+def mtof(m):
+    return 440.0 * 2 ** ((m - 69) / 12)
+
+
+def _cached(key, fn):
+    if key not in _ONESHOT:
+        _ONESHOT[key] = fn().astype(np.float32)
+    return _ONESHOT[key]
+
+
+def _kick():
+    n = int(0.45 * SR); t = np.arange(n) / SR
+    f = 45 + 80 * np.exp(-t * 32)
+    x = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 7)
+    x += hp(rng("kick").standard_normal(n), 2500) * np.exp(-t * 600) * 0.4
+    return x * 0.95
+
+
+def _tom(p):
+    n = int(0.8 * SR); t = np.arange(n) / SR
+    f = p * (1 + 0.6 * np.exp(-t * 18))
+    x = np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 5.5)
+    x += bp(rng(("tom", p)).standard_normal(n), 120, 900) * np.exp(-t * 16) * 0.9
+    return x * 0.8
+
+
+def _shaker(k):
+    n = int(0.09 * SR); t = np.arange(n) / SR
+    x = hp(rng(("sh", k)).standard_normal(n), 6500) * np.minimum(1, t / 0.006) * np.exp(-t * 55)
+    return x * 0.35
+
+
+def _bass(m, dur):
+    n = int((dur + 0.15) * SR); t = np.arange(n) / SR
+    f = mtof(m)
+    x = signal.sawtooth(2 * np.pi * f * t) * 0.5 + np.sin(2 * np.pi * f * t) + 0.5 * np.sin(np.pi * f * t)
+    e = np.minimum(1, t / 0.004) * np.exp(-t * 3.2) * np.clip((dur + 0.12 - t) / 0.12, 0, 1)
+    return lp(x * e, 750) * 0.75
+
+
+def _pluck(m):
+    n = int(0.6 * SR); t = np.arange(n) / SR
+    f = mtof(m)
+    x = np.sin(2 * np.pi * f * t) + 0.35 * np.sin(4 * np.pi * f * t) + 0.12 * np.sin(6 * np.pi * f * t)
+    return x * np.minimum(1, t / 0.003) * np.exp(-t * 8) * 0.45
+
+
+def _strings(notes, dur, cut):
+    n = int((dur + 0.7) * SR); t = np.arange(n) / SR
+    x = np.zeros(n)
+    for m in notes:
+        for cents in (-8, 0, 8):
+            f = mtof(m) * 2 ** (cents / 1200)
+            ph = rng(("st", m, cents)).uniform(0, 6.28)
+            for h in range(1, 8):
+                x += np.sin(2 * np.pi * f * h * t + ph * h) / h
+    vib = 1 + 0.06 * np.sin(2 * np.pi * 0.25 * t)
+    e = np.minimum(1, t / 0.35) * np.clip((dur + 0.6 - t) / 0.6, 0, 1)
+    return lp(x * e * vib, cut) * 0.06
+
+
+def _swell(dur, seed, strong=False):
+    n = int(dur * SR); t = np.arange(n) / SR
+    x = sweep_filter(rng(("sw", seed)).standard_normal(n), 250, 6000 if strong else 3500, 0.9)
+    tone = np.sin(2 * np.pi * np.cumsum(110 * 2 ** (t / dur * 2)) / SR) * 0.3
+    return (x + tone) * (t / dur) ** 2.5 * (0.9 if strong else 0.45)
+
+
+MOOD_LAYERS = {
+    # kick steps, taiko steps, shaker (steps, gain), bass (steps, octave), arp (steps), strings gain, cutoff, swell
+    "playful": dict(kick=[0, 4, 8, 12], taiko=[], shaker=(list(range(16)), 1.0), bass=([0, 2, 4, 6, 8, 10, 12, 14], -24),
+                    arp=list(range(16)), strings=0.45, cut=1500, swell=None),
+    "wonder": dict(kick=[0, 8], taiko=[], shaker=([2, 6, 10, 14], 0.6), bass=([0, 8], -24), arp=[0, 2, 4, 6, 8, 10, 12, 14],
+                   strings=1.0, cut=1500, swell="soft"),
+    "hopeful": dict(kick=[0, 8], taiko=[], shaker=([2, 6, 10, 14], 0.6), bass=([0, 6, 8, 14], -24), arp=[0, 2, 4, 6, 8, 10, 12, 14],
+                    strings=1.0, cut=1700, swell="soft"),
+    "calm": dict(kick=[], taiko=[], shaker=([], 0), bass=([0, 4, 8, 12], -24), arp=[0, 3, 6, 8, 11, 14], strings=0.9,
+                 cut=1300, swell=None, arp_gain=0.55),
+    "tense": dict(kick=[], taiko=[0, 3, 6, 10, 12, 14], shaker=(list(range(16)), 0.6), bass=([0, 2, 4, 6, 8, 10, 12, 14], -24),
+                  arp=[], strings=0.9, cut=1400, swell="noise"),
+    "dark": dict(kick=[], taiko=[0, 7, 10], shaker=([], 0), bass=([0, 2, 3, 6, 8, 10, 11, 14], -24), arp=[], strings=1.1,
+                 cut=900, swell="strong"),
+}
+TOM_PITCH = [95, 120, 80, 140, 100, 110]
+
+
+def music_score(n, mood, t0=0.0):
+    """Tempo-locked score (100 BPM, 4/4, one chord per bar) for absolute time [t0, t0+n/SR).
+    Deterministic in absolute time, so same-mood neighbours join seamlessly."""
+    L = MOOD_LAYERS.get(mood, MOOD_LAYERS["calm"])
+    prog = MOODS.get(mood, MOODS["calm"])
+    pre = 1.5
+    ta = t0 - pre
+    N = n + int(pre * SR)
+    tb = ta + N / SR
+    drums = np.zeros(N + SR); bass = np.zeros(N + SR); arp = np.zeros(N + SR); strings = np.zeros(N + 2 * SR); fx = np.zeros(N + SR)
+
+    def put(buf, clip, te, g=1.0):
+        st = int(round((te - ta) * SR))
+        if st >= len(buf) or st + len(clip) <= 0 or g == 0:
+            return
+        c = clip
+        if st < 0:
+            c = c[-st:]; st = 0
+        e = min(len(buf), st + len(c))
+        buf[st:e] += c[: e - st] * g
+
+    b0, b1 = int(np.floor(ta / BAR)) - 1, int(np.floor(tb / BAR)) + 1
+    for b in range(b0, b1 + 1):
+        if b < 0:
+            continue
+        root, ivs = prog[b % len(prog)]
+        tb0 = b * BAR
+        chord = [root + iv for iv in ivs]
+        for st in L["kick"]:
+            put(drums, _cached("kick", _kick), tb0 + st * STEP, 0.9)
+        for i, st in enumerate(L["taiko"]):
+            if mood == "dark" and st == 7 and b % 2:
+                continue
+            p = TOM_PITCH[(i + b) % len(TOM_PITCH)]
+            put(drums, _cached(("tom", p), lambda p=p: _tom(p)), tb0 + st * STEP, 0.9 if st == 0 else 0.6)
+        steps, sg = L["shaker"]
+        for st in steps:
+            acc = 1.0 if st % 4 == 2 else 0.55
+            put(drums, _cached(("sh", st % 4), lambda k=st % 4: _shaker(k)), tb0 + st * STEP, sg * acc)
+        bsteps, boct = L["bass"]
+        for j, st in enumerate(bsteps):
+            nxt = bsteps[j + 1] if j + 1 < len(bsteps) else 16
+            dur = (nxt - st) * STEP * 0.9
+            m = root + boct + 12 + (12 if mood == "playful" and j % 2 else 0)
+            put(bass, _cached(("bass", m, round(dur, 3)), lambda m=m, d=dur: _bass(m, d)), tb0 + st * STEP, 1.0)
+        tones = sorted(chord)
+        for j, st in enumerate(L["arp"]):
+            seq = tones + [tones[1] + 12, tones[2] + 12] if len(tones) >= 3 else tones
+            m = seq[(j + b) % len(seq)] + 12
+            put(arp, _cached(("pl", m), lambda m=m: _pluck(m)), tb0 + st * STEP, L.get("arp_gain", 0.8) * (1.0 if st % 4 == 0 else 0.7))
+        if L["strings"]:
+            notes = [root - 12 + iv for iv in ivs] if mood == "dark" else [root + iv for iv in ivs]
+            key = ("str", tuple(notes), L["cut"])
+            put(strings, _cached(key, lambda nt=notes, c=L["cut"]: _strings(nt, BAR, c)), tb0, L["strings"])
+        if L["swell"] and b % 4 == 3:
+            sw = _cached(("swell", L["swell"]), lambda k=L["swell"]: _swell(BAR, k, k == "strong"))
+            g = {"soft": 0.35, "noise": 0.6, "strong": 0.9}[L["swell"]]
+            put(fx, sw, tb0, g)
+    mix = drums[:N] * 0.9 + bass[:N] * 0.75 + arp[:N] * 0.55 + strings[:N] * 1.0 + fx[:N] * 0.5
+    mix = np.tanh(mix * 1.3) / 1.3
+    return mix[int(pre * SR): int(pre * SR) + n].astype(np.float32)
+
+
+# ------------------------------------------------------------------ loudness
+def loudness(path):
+    """Integrated LUFS and true peak (dBTP) via ffmpeg ebur128."""
+    out = subprocess.run(["ffmpeg", "-nostats", "-i", path, "-af", "ebur128=peak=true", "-f", "null", "-"],
+                         capture_output=True, text=True).stderr
+    I = re.findall(r"I:\s+(-?[\d.]+) LUFS", out)
+    P = re.findall(r"Peak:\s+(-?[\d.]+) dBFS", out)
+    return (float(I[-1]) if I else None), (float(P[-1]) if P else None)
+
+
+def loudnorm_wav(path, I=-15.0, TP=-1.6, LRA=11):
+    """Two-pass EBU R128 normalisation in place (linear when possible)."""
+    first = subprocess.run(["ffmpeg", "-nostats", "-i", path, "-af", f"loudnorm=I={I}:TP={TP}:LRA={LRA}:print_format=json",
+                            "-f", "null", "-"], capture_output=True, text=True).stderr
+    js = json.loads(first[first.rindex("{"): first.rindex("}") + 1])
+    tmp = path + ".ln.wav"
+    af = (f"loudnorm=I={I}:TP={TP}:LRA={LRA}:measured_I={js['input_i']}:measured_TP={js['input_tp']}:"
+          f"measured_LRA={js['input_lra']}:measured_thresh={js['input_thresh']}:offset={js['target_offset']}:linear=true")
+    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", path, "-af", af, "-ar", str(SR), "-c:a", "pcm_s16le", tmp], check=True)
+    os.replace(tmp, path)
+
+
 # ------------------------------------------------------------------ mixer
 def place(track, clip, t, gain=1.0):
     s = int(round(t * SR))
@@ -546,7 +861,7 @@ def duck_curve(voice, depth=0.6):
     return smooth_gain(1 - depth * active)
 
 
-def master(mix, target_rms_db=-19.0):
+def master(mix, target_rms_db=-17.0):
     rms = np.sqrt(np.mean(mix ** 2)) + 1e-9
     mix = mix * (10 ** (target_rms_db / 20) / rms)
     mix = np.tanh(mix * 1.1) / np.tanh(1.1)  # gentle limiter

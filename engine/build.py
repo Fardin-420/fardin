@@ -22,6 +22,9 @@ from . import audio as A
 from .core import hrand
 
 FPS = 30
+DEFAULT_VOICE = {"name": "kokoro:am_fenrir", "rate": "1.04", "pitch": "0"}
+DEFAULT_FARDIN_VOICE = {"name": "kokoro:am_eric", "rate": "1.12", "pitch": "0"}
+MUSIC_BELOW_VOICE_DB = 10.5   # music RMS relative to narration RMS (before ducking)
 
 
 def _norm_word(w):
@@ -121,8 +124,8 @@ def build(ep_dir, force_tts=False):
     cache = os.path.join(bdir, "tts")
     os.makedirs(cache, exist_ok=True)
     vcfg = script.get("voice", {})
-    voice, rate, pitch = vcfg.get("name", "en-US-ChristopherNeural"), vcfg.get("rate", "-6%"), vcfg.get("pitch", "-2Hz")
-    fv = script.get("fardin_voice", {"name": "en-US-AndrewNeural", "rate": "+6%", "pitch": "+18Hz"})
+    voice, rate, pitch = vcfg.get("name", DEFAULT_VOICE["name"]), vcfg.get("rate", DEFAULT_VOICE["rate"]), vcfg.get("pitch", "0")
+    fv = dict(DEFAULT_FARDIN_VOICE, **script.get("fardin_voice", {}))
 
     scenes = []
     T = 0.0
@@ -268,9 +271,38 @@ def build(ep_dir, force_tts=False):
             # deterministic absolute-time ambience so adjacent scenes connect
             bed = A.AMB[name](L + fl, hash(name) % 1000 + int(S0))[:L]
             amb[a0:a1] += bed * vol * fade
-        mood = sc.get("music", "calm")
-        if mood != "none" and not os.path.exists(music_file):
-            mus[a0:a1] += A.music_pad(L, mood, S0) * fade * sc.get("music_vol", 1.0)
+    if not os.path.exists(music_file):
+        # group neighbouring scenes with the same mood into one unbroken, tempo-locked run;
+        # crossfade (0.8 s) only where the mood changes
+        runs = []
+        for sc in scenes:
+            mood = sc.get("music", "calm")
+            if runs and runs[-1][0] == mood:
+                runs[-1][2] = sc["start"] + sc["dur"]
+            else:
+                runs.append([mood, sc["start"], sc["start"] + sc["dur"]])
+        xf = 0.8
+        for i, (mood, r0, r1) in enumerate(runs):
+            if mood == "none":
+                continue
+            a = r0 - (xf / 2 if i > 0 else 0)
+            b = r1 + (xf / 2 if i < len(runs) - 1 else 0)
+            a0, a1 = max(0, int(a * A.SR)), min(n, int(b * A.SR))
+            L = a1 - a0
+            if L <= 0:
+                continue
+            seg = A.music_score(L, mood, a0 / A.SR)
+            env = np.ones(L)
+            fl = min(L // 2, int(xf * A.SR))
+            if i > 0 and runs[i - 1][0] != "none":
+                env[:fl] = np.sin(np.linspace(0, np.pi / 2, fl)) ** 2
+            elif i > 0:
+                env[:fl] = np.linspace(0, 1, fl)
+            if i < len(runs) - 1:
+                env[-fl:] = np.cos(np.linspace(0, np.pi / 2, fl)) ** 2
+            else:
+                env[-int(1.5 * A.SR):] *= np.linspace(1, 0, min(L, int(1.5 * A.SR)))
+            mus[a0:a1] += seg * env
     if os.path.exists(music_file):
         m = A.decode(music_file)
         reps = int(np.ceil(n / len(m)))
@@ -281,9 +313,16 @@ def build(ep_dir, force_tts=False):
     # normalise voice to a fixed level first
     vr = np.sqrt(np.mean(vo[np.abs(vo) > 0.01] ** 2)) if np.any(np.abs(vo) > 0.01) else 1
     g = 0.16 / max(vr, 1e-4)
-    mix = voice_all * g + mus * duck * 1.0 + amb * duck * 0.55 + sfx * duck_sfx * 0.55
+    # music sits ~10.5 dB under the narration (measured where music plays), then ducks under speech
+    mact = np.abs(mus) > 1e-4
+    if mact.any():
+        mr = np.sqrt(np.mean(mus[mact] ** 2))
+        mus *= 0.16 * 10 ** (-MUSIC_BELOW_VOICE_DB / 20) / max(mr, 1e-6)
+    mix = voice_all * g + mus * duck + amb * duck * 0.55 + sfx * duck_sfx * 0.55
     mix = A.master(mix)
-    A.write_wav(os.path.join(bdir, "mix.wav"), mix)
+    mix_path = os.path.join(bdir, "mix.wav")
+    A.write_wav(mix_path, mix)
+    A.loudnorm_wav(mix_path, I=-15.0, TP=-1.6)
     A.write_wav(os.path.join(bdir, "voice.wav"), np.clip(voice_all * g, -1, 1))
     timeline["duration"] = total
     json.dump(timeline, open(os.path.join(bdir, "timeline.json"), "w"), indent=1)
