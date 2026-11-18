@@ -119,6 +119,14 @@ SUMATRA = [(95.3, 5.6), (98.7, 3.7), (104.5, -2.3), (106, -5.9), (103.5, -4.9), 
 JAVA = [(105.3, -6.8), (106.1, -6), (110.4, -6.9), (114.5, -7.7), (114.4, -8.7), (108.5, -7.8), (105.5, -7.0)]
 BORNEO = [(109, 1.5), (110.5, -3), (116, -4), (117.6, 1), (119, 5.2), (116.8, 7), (115.4, 5), (110.5, 1.8)]
 ARABIA_FIX = []
+MED = [(27.5, 32.2), (27.5, 31.3), (28.5, 31.1), (29.2, 30.9), (29.9, 31.15), (30.4, 31.45), (31.0, 31.6), (31.8, 31.5),
+       (32.3, 31.25), (33.2, 31.1), (34.2, 31.3), (35.0, 32.2)]
+REDSEA = [(32.55, 29.95), (32.62, 29.4), (32.75, 28.9), (33.2, 28.2), (33.6, 27.3), (34.3, 26.1), (35.2, 24.6), (35.6, 23.8),
+          (35.6, 22.5), (35.6, 22.5), (35.6, 28.0), (35.0, 29.5), (34.9, 29.4), (34.45, 28.2), (34.25, 27.75),
+          (33.7, 28.35), (33.2, 28.9), (32.75, 29.6)]
+NILE = [(32.9, 22.5), (32.9, 24.1), (32.85, 24.9), (32.6, 25.7), (32.75, 26.15), (32.3, 26.3), (31.9, 26.6), (31.2, 27.2),
+        (30.75, 28.1), (30.9, 28.7), (31.1, 29.1), (31.2, 29.6), (31.25, 30.05)]
+DELTA = [[(31.25, 30.05), (30.9, 30.6), (30.6, 31.0), (30.4, 31.45)], [(31.25, 30.05), (31.35, 30.6), (31.6, 31.0), (31.8, 31.5)]]
 
 
 def draw_map(ctx, W, H, g, lt, T):
@@ -128,7 +136,10 @@ def draw_map(ctx, W, H, g, lt, T):
     al = clamp(a) * b
     vertical = H > W
     view = g.get("view", "africa")
-    if view == "africa":
+    if view == "egypt":
+        lon0, lon1, lat0, lat1 = 27.5, 35.6, 22.5, 32.2
+        shapes = []
+    elif view == "africa":
         lon0, lon1, lat0, lat1 = -22, 56, -38, 40
         shapes = [AFRICA, MADAGASCAR, EURASIA]
     else:
@@ -166,6 +177,31 @@ def draw_map(ctx, W, H, g, lt, T):
     ctx.stroke()
     proj = lambda lon, lat: (mx + (lon - lon0) / (lon1 - lon0) * mw, my + (lat1 - lat) / (lat1 - lat0) * mh)
     draw_k = clamp(lt / 1.2)
+    if view == "egypt":
+        ctx.set_source_rgba(0.86, 0.74, 0.5, al); ctx.rectangle(mx, my, mw, mh); ctx.fill()
+        for poly in (MED, REDSEA):
+            ctx.move_to(*proj(*poly[0]))
+            for q in poly[1:]:
+                ctx.line_to(*proj(*q))
+            ctx.close_path(); ctx.set_source_rgba(0.12, 0.32, 0.5, al); ctx.fill()
+        k = clamp(lt / 1.6)
+        n = max(2, int(len(NILE) * k))
+        for width, col in ((16 * u, (0.35, 0.6, 0.25, 0.75 * al)), (5 * u, (0.3, 0.65, 0.95, al))):
+            ctx.set_line_width(width); ctx.set_line_cap(cairo.LINE_CAP_ROUND); ctx.set_line_join(cairo.LINE_JOIN_ROUND)
+            ctx.set_source_rgba(*col)
+            ctx.move_to(*proj(*NILE[0]))
+            for q in NILE[1:n]:
+                ctx.line_to(*proj(*q))
+            ctx.stroke()
+            if k >= 1:
+                for br in DELTA:
+                    ctx.move_to(*proj(*br[0]))
+                    for q in br[1:]:
+                        ctx.line_to(*proj(*q))
+                    ctx.stroke()
+        text(ctx, "NILE", *proj(31.6, 26.6), 26 * u, (0.75, 0.9, 1.0), "black", alpha=al * k, spacing=0.2)
+        text(ctx, "MEDITERRANEAN SEA", *proj(28.6, 31.85), 20 * u, (0.75, 0.9, 1.0), "xbold", alpha=al, spacing=0.1)
+        text(ctx, "RED SEA", *proj(34.2, 25.4), 20 * u, (0.75, 0.9, 1.0), "xbold", alpha=al, spacing=0.1)
     for si, shape in enumerate(shapes):
         n = len(shape)
         ctx.move_to(*proj(*shape[0]))
@@ -596,7 +632,124 @@ def draw_skulls(ctx, W, H, g, lt, T):
     ctx.restore()
 
 
-GRAPHICS = {"skulls": draw_skulls, "map": draw_map, "timeline": draw_timeline, "fact": draw_fact, "compare": draw_compare,
+def draw_papyrus(ctx, W, H, g, lt, T):
+    """Diary of Merer style card: papyrus sheet with abstract hieratic-like strokes (not real text)."""
+    u = U(W, H)
+    dur = g.get("dur", 5)
+    a, b = inout(lt, dur, 0.6, 0.4)
+    al = clamp(a) * b
+    vertical = H > W
+    w = W * 0.86 if vertical else 760 * u
+    h = 470 * u
+    x = (W - w) / 2 if vertical else (W - w - 90 * u if g.get("side", "right") == "right" else 90 * u)
+    y = H * 0.1 if vertical else 110 * u
+    unroll = clamp(lt / 0.9)
+    ctx.save()
+    ctx.rectangle(x, y, w * unroll, h); ctx.clip()
+    ctx.rectangle(x, y, w, h); ctx.set_source_rgba(0.93, 0.86, 0.66, al); ctx.fill()
+    ctx.set_line_width(1)
+    for i in range(60):
+        yy = y + i * h / 60
+        ctx.set_source_rgba(0.78, 0.68, 0.45, 0.35 * al); ctx.move_to(x, yy); ctx.line_to(x + w, yy); ctx.stroke()
+    for i in range(30):
+        xx = x + i * w / 30
+        ctx.set_source_rgba(0.8, 0.7, 0.48, 0.25 * al); ctx.move_to(xx, y); ctx.line_to(xx, y + h); ctx.stroke()
+    ctx.set_line_cap(cairo.LINE_CAP_ROUND)
+    rows = 7
+    for r in range(rows):
+        yy = y + 70 * u + r * 44 * u
+        xx = x + w - 40 * u
+        i = 0
+        while xx > x + 40 * u:  # right-to-left like hieratic
+            gw = (10 + 22 * hrand("pg", r, i)) * u
+            ctx.set_line_width((2.5 + 2 * hrand("pw", r, i)) * u)
+            ctx.set_source_rgba(0.22 if hrand("red", r, i) > 0.12 else 0.6, 0.12, 0.06, 0.85 * al)
+            ctx.move_to(xx, yy - 10 * u * hrand("a", r, i))
+            ctx.curve_to(xx - gw * 0.3, yy - 18 * u * hrand("b", r, i), xx - gw * 0.6, yy + 8 * u * hrand("c", r, i), xx - gw, yy - 4 * u)
+            ctx.stroke()
+            xx -= gw + 8 * u
+            i += 1
+    ctx.restore()
+    ctx.set_source_rgba(0.55, 0.42, 0.22, al); ctx.set_line_width(3 * u); ctx.rectangle(x, y, w * unroll, h); ctx.stroke()
+    pk = clamp((lt - 0.8) / 0.4)
+    panel(ctx, x, y + h - 10 * u, w, 120 * u, 0.9 * al * pk)
+    text(ctx, g.get("title", "THE DIARY OF MERER"), x + 30 * u, y + h + 45 * u, 40 * u, CREAM, "black", alpha=al * pk)
+    text(ctx, g.get("sub", ""), x + 30 * u, y + h + 88 * u, 26 * u, (0.8, 0.9, 1.0), "semi", alpha=al * pk)
+
+
+def draw_myth(ctx, W, H, g, lt, T):
+    """MYTH vs FACT card with a stamped X."""
+    u = U(W, H)
+    dur = g.get("dur", 6)
+    a, b = inout(lt, dur, 0.5, 0.4)
+    al = clamp(a) * b
+    vertical = H > W
+    w = W * 0.88 if vertical else 1200 * u
+    h = 330 * u
+    x = (W - w) / 2
+    y = H * 0.1 if vertical else 70 * u
+    panel(ctx, x, y, w, h, 0.9 * al)
+    cw = w / 2
+    text(ctx, "MYTH", x + cw / 2, y + 70 * u, 34 * u, (1, 0.45, 0.4), "black", align="center", alpha=al, spacing=0.2)
+    text(ctx, "FACT", x + cw * 1.5, y + 70 * u, 34 * u, (0.45, 1, 0.55), "black", align="center", alpha=al, spacing=0.2)
+    ml = wrap(ctx, g.get("myth", "Slaves built the pyramids"), cw - 60 * u, 44 * u, "black")
+    for i, ln in enumerate(ml[:3]):
+        text(ctx, ln, x + cw / 2, y + 140 * u + i * 52 * u, 44 * u, CREAM, "black", align="center", alpha=al)
+    sk = clamp((lt - g.get("stamp", 1.2)) / 0.25)
+    if sk > 0:
+        ctx.save(); ctx.translate(x + cw / 2, y + 175 * u); sc_ = 1.6 - 0.6 * out_back(sk, 2); ctx.scale(sc_, sc_)
+        ctx.set_line_width(22 * u); ctx.set_line_cap(cairo.LINE_CAP_ROUND); ctx.set_source_rgba(0.95, 0.15, 0.15, 0.9 * al * sk)
+        ctx.move_to(-120 * u, -90 * u); ctx.line_to(120 * u, 90 * u); ctx.move_to(120 * u, -90 * u); ctx.line_to(-120 * u, 90 * u); ctx.stroke()
+        ctx.restore()
+    fk = clamp((lt - g.get("stamp", 1.2) - 0.4) / 0.4)
+    fl = wrap(ctx, g.get("fact", "Organised, fed, paid workers"), cw - 60 * u, 40 * u, "black")
+    for i, ln in enumerate(fl[:4]):
+        text(ctx, ln, x + cw * 1.5, y + 140 * u + i * 48 * u, 40 * u, (0.85, 1, 0.88), "black", align="center", alpha=al * fk)
+    ctx.set_source_rgba(1, 1, 1, 0.25 * al); ctx.rectangle(x + cw - 1, y + 30 * u, 2, h - 60 * u); ctx.fill()
+
+
+def draw_ramps(ctx, W, H, g, lt, T):
+    """Three ramp theories: straight, spiral, internal (diagram cards)."""
+    u = U(W, H)
+    dur = g.get("dur", 6)
+    a, b = inout(lt, dur, 0.5, 0.4)
+    al = clamp(a) * b
+    vertical = H > W
+    cw = (W * 0.29) if vertical else 380 * u
+    ch = 300 * u
+    gap = 30 * u
+    x0 = (W - 3 * cw - 2 * gap) / 2
+    y = H * 0.1 if vertical else 60 * u
+    names = ["STRAIGHT RAMP", "SPIRAL RAMP", "INTERNAL RAMP"]
+    times = g.get("times") or [0.3, 1.0, 1.7]
+    for i in range(3):
+        k = clamp((lt - times[i]) / 0.35)
+        if k <= 0:
+            continue
+        x = x0 + i * (cw + gap)
+        ctx.save(); ctx.translate(0, (1 - out_back(k)) * 30 * u)
+        panel(ctx, x, y, cw, ch, 0.9 * al * k)
+        bx, by, bw = x + cw * 0.18, y + ch * 0.72, cw * 0.64
+        ph = bw * 0.62
+        ctx.move_to(bx, by); ctx.line_to(bx + bw / 2, by - ph); ctx.line_to(bx + bw, by); ctx.close_path()
+        ctx.set_source_rgba(0.86, 0.76, 0.56, al * k); ctx.fill()
+        ctx.set_source_rgba(0.75, 0.45, 0.25, al * k); ctx.set_line_width(7 * u); ctx.set_line_cap(cairo.LINE_CAP_ROUND)
+        if i == 0:
+            ctx.move_to(bx - bw * 0.45, by); ctx.line_to(bx + bw * 0.42, by - ph * 0.8); ctx.stroke()
+        elif i == 1:
+            ctx.move_to(bx + bw * 0.05, by - 4 * u); ctx.line_to(bx + bw * 0.95, by - ph * 0.25)
+            ctx.line_to(bx + bw * 0.2, by - ph * 0.5); ctx.line_to(bx + bw * 0.75, by - ph * 0.72); ctx.stroke()
+        else:
+            ctx.set_dash([10 * u, 8 * u])
+            ctx.move_to(bx + bw * 0.15, by - ph * 0.2); ctx.line_to(bx + bw * 0.8, by - ph * 0.35)
+            ctx.line_to(bx + bw * 0.3, by - ph * 0.55); ctx.line_to(bx + bw * 0.62, by - ph * 0.72); ctx.stroke()
+            ctx.set_dash([])
+        text(ctx, names[i], x + cw / 2, y + ch - 28 * u, 28 * u, CREAM, "black", align="center", alpha=al * k)
+        text(ctx, "?", x + cw - 40 * u, y + 56 * u, 48 * u, (1, 0.8, 0.25), "black", alpha=al * k)
+        ctx.restore()
+
+
+GRAPHICS = {"ramps": draw_ramps, "papyrus": draw_papyrus, "myth": draw_myth, "skulls": draw_skulls, "map": draw_map, "timeline": draw_timeline, "fact": draw_fact, "compare": draw_compare,
             "chapter": draw_chapter, "era_title": draw_era_title, "list": draw_list, "tag": draw_tag,
             "callout": draw_callout, "clock": draw_clock, "subscribe": draw_subscribe, "lower": draw_lower}
 

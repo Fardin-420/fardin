@@ -158,7 +158,10 @@ def _blocked_rects(sc, lt, W, H):
             x0 = 80 * u if g.get("side", "left") == "left" else W - 720 * u
             y0 = g.get("y", 120) * u
             rects.append((x0, y0, x0 + 640 * u, y0 + 400 * u))
-        elif t in ("compare", "skulls", "timeline", "list"):
+        elif t == "papyrus":
+            x0 = 90 * u if g.get("side", "right") == "left" else W - 850 * u
+            rects.append((x0, 100 * u, x0 + 780 * u, 720 * u))
+        elif t in ("compare", "skulls", "timeline", "list", "myth", "ramps"):
             rects.append((W * 0.05, 0, W * 0.95, H * 0.55))
     return rects
 

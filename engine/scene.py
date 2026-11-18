@@ -7,6 +7,7 @@ from . import props as P
 from .animals import Animal
 from .character import make_actor, Fardin
 from . import graphics as G
+from . import egypt as EG
 
 BASE_W, BASE_H = 1920, 1080
 GROUND_CAM_Y = -210.0
@@ -44,7 +45,7 @@ class Camera:
             xs = [a.xt(t - i * 0.08) if hasattr(a, "xt") else 0 for i in range(6)]
             x = sum(xs) / len(xs) + k.get("dx", 0.0)
             if "dy" in k:
-                y = a.yt(t) + k["dy"] if hasattr(a, "yt") else y
+                y = (a.state(t)["y"] if hasattr(a, "state") else 0) + k["dy"]
         return x, y, k.get("zoom", 1.0)
 
     def at(self, t, actors):
@@ -164,6 +165,8 @@ def ridge(ctx, x0, x1, base, height, seed, freq, col, rough=0.5):
 
 def draw_set(ctx, W, H, setname, tod, t, cam, seed=0, opts=None):
     opts = opts or {}
+    if setname in EG.SETS:
+        return EG.draw_set(ctx, W, H, setname, tod, t, cam, seed, opts)
     st = SETS[setname]
     pal = TOD[tod]
     if st.get("void"):
@@ -234,6 +237,22 @@ def draw_set(ctx, W, H, setname, tod, t, cam, seed=0, opts=None):
 
 
 def ground_details(ctx, W, H, cam, t, setname, seed=0, front=False):
+    if setname in EG.SETS:
+        if setname in ("pyramid_top",):
+            return
+        ctx.save(); layer(ctx, cam, 1.0, W, H)
+        span = 1400 / max(0.5, cam[2])
+        for i in range(int((cam[0] - span) // 90) - 1, int((cam[0] + span) // 90) + 2):
+            y = -30 + hrand("eg", i, seed) * 380
+            if front != (y > 160) or hrand("egk", i, seed) > 0.55:
+                continue
+            x = i * 90 + hrand("egx", i, seed) * 70
+            ctx.set_line_width(2.5); setc(ctx, lc(shade(EG.SETS[setname]["ground"][0], -0.12)))
+            ctx.move_to(x - 30, y); ctx.curve_to(x - 10, y - 5, x + 10, y - 5, x + 30, y); ctx.stroke()
+            if hrand("egp", i) > 0.6:
+                setc(ctx, lc("#a89878")); ctx.arc(x + 20, y - 3, 4 + 4 * hrand("egr", i), 0, TAU); ctx.fill()
+        ctx.restore()
+        return
     st = SETS[setname]
     if st.get("void") or st.get("room"):
         return
@@ -260,6 +279,16 @@ def ground_details(ctx, W, H, cam, t, setname, seed=0, front=False):
 def weather(ctx, W, H, kind, t, amount=1.0):
     if not kind:
         return
+    if isinstance(kind, (list, tuple)):
+        for k in kind:
+            weather(ctx, W, H, k, t, amount)
+        return
+    if kind == "sand":
+        return EG.sand_particles(ctx, W, H, t, amount)
+    if kind == "heat":
+        return EG.heat_shimmer(ctx, W, H, t, amount)
+    if kind == "glare":
+        return EG.sun_glare(ctx, W, H, t, 0.8, 0.16, amount)
     k = W / BASE_W
     if kind == "dust":
         for i in range(70):
@@ -340,8 +369,28 @@ class Scene:
         self.graphics = spec.get("graphics", [])
         self.fx = spec.get("fx", [])
         self.lights = spec.get("lights", [])
+        so = spec.get("set_opts", {})
+        self.slope = so.get("slope")
+        for a in self.order:
+            if self.slope and a.spec.get("on_slope", True):
+                a.ground_fn = self.ground_y
+        self.sledges = [EG.Sledge(sl) for sl in spec.get("sledges", [])]
+
+    def ground_y(self, x):
+        sl = self.slope
+        if not sl:
+            return 0.0
+        return sl["k"] * (clamp(x, sl["x0"], sl["x1"]) - sl["x0"])
 
     def cam_at(self, t):
+        x, y, z = self._cam_at(t)
+        if self.spec.get("drift", True):  # never a dead-static frame
+            x += 22 * math.sin(t * 0.23 + self.seed)
+            y += 8 * math.sin(t * 0.31 + 1.3)
+            z *= 1 + 0.018 * math.sin(t * 0.19 + 0.7)
+        return (x, y, z)
+
+    def _cam_at(self, t):
         cam = self.camera
         pushes = []
         for p in self.pushes:
@@ -373,13 +422,19 @@ class Scene:
             kw.pop("flip", None)
         else:
             kw.pop("flip", None)
-        fn(ctx, p["x"], p.get("y", 0), p.get("s", 1.0), t, **kw)
+        px, py = kw.pop("x", p["x"]), kw.pop("y", p.get("y", 0))
+        if p.get("on_slope"):
+            py += self.ground_y(px)
+        fn(ctx, px, py, p.get("s", 1.0), t, **kw)
         ctx.restore()
 
     def render(self, ctx, W, H, t, ui=True):
         pal = TOD[self.tod]
         cam = self.cam_at(t)
         opts = dict(self.spec.get("set_opts", {}))
+        for key, val in list(opts.items()):
+            if isinstance(val, list) and val and isinstance(val[0], list):
+                opts[key] = Track([tuple(v) for v in val])(t)
         if self.set == "void":
             opts["tunnel"] = Track([tuple(k) for k in self.spec.get("tunnel", [[0, 1]])])(t)
         prev = light_off()
@@ -392,8 +447,12 @@ class Scene:
         for p in self.props:
             if not p.get("front") and visible(p):
                 self._prop(ctx, p, t)
-        items = [(a.layer, 0, a) for a in self.animals] + [(a.layer, 1, a) for a in self.order]
-        items.sort(key=lambda k: (k[0], k[1]))
+        for sl in self.sledges:
+            if not sl.spec.get("front"):
+                sl.draw(ctx, t, self)
+        items = [(a.layer, 0, a, a.y) for a in self.animals] + [(a.layer, 1, a, a.spec.get("y", 0)) for a in self.order]
+        items.sort(key=lambda k: (k[0], k[3], k[1]))
+        items = [(k[0], k[1], k[2]) for k in items]
         fardins = []
         for lay, kind, obj in items:
             if isinstance(obj, Fardin):
@@ -403,6 +462,9 @@ class Scene:
                 obj.draw(ctx, t)
             else:
                 obj.draw(ctx, t)
+        for sl in self.sledges:
+            if sl.spec.get("front"):
+                sl.draw(ctx, t, self)
         # projectiles (thrown spears etc.)
         for fx in self.fx:
             if fx["type"] in ("spear_flight", "torch_flight") and fx["t"] <= t <= fx["t"] + fx.get("dur", 0.7):
@@ -426,6 +488,11 @@ class Scene:
             if p["type"] == "campfire" and p.get("lit", True) and visible(p):
                 P.fire_light(ctx, p["x"], p.get("y", 0), p.get("s", 1.0) * p.get("glow", 1.0), t,
                              strength=1.0 if self.tod in ("night", "cave", "dusk") else 0.35)
+        for p in self.props:
+            if p["type"] in EG.LIGHT_PROPS and visible(p):
+                ls, oy = EG.LIGHT_PROPS[p["type"]]
+                P.fire_light(ctx, p["x"], p.get("y", 0) + oy * p.get("s", 1.0), p.get("s", 1.0) * ls, t,
+                             strength=1.0 if self.tod in ("night", "cave", "dusk") else 0.25)
         for L in self.lights:
             P.fire_light(ctx, L["x"], L.get("y", 0), L.get("s", 1.0), t, L.get("strength", 1.0), color=tuple(L.get("color", (1, .55, .2))))
         ctx.restore()

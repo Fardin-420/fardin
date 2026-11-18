@@ -1,0 +1,5 @@
+[
+ {"from": "s1", "to": "s3", "hook": "THE WATER TRICK", "hook_scene": "s2", "hook_at": 0.62},
+ {"from": "v4", "to": "v6", "hook": "THEY WEREN'T SLAVES", "hook_scene": "v6", "hook_at": 0.45},
+ {"from": "x1", "to": "x3", "hook": "IT USED TO SHINE", "hook_scene": "x2", "hook_at": 0.3}
+]

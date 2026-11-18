@@ -86,24 +86,58 @@ def _script_words(text):
 
 
 def _align_whisper(x, text):
+    """Word timestamps from faster-whisper (base.en), mapped onto the script's exact words
+    with a sequence alignment; script words whisper missed are interpolated."""
     m = _whisper()
     if m is None:
         return None
-    import tempfile, soundfile as sf
-    with tempfile.NamedTemporaryFile(suffix=".wav") as f:
-        sf.write(f.name, x, SR)
-        segs, _ = m.transcribe(f.name, word_timestamps=True, language="en")
-        rec = [w for s in segs for w in (s.words or [])]
-    toks = _script_words(text)
-    if not rec:
+    import difflib
+    a16 = signal.resample_poly(np.asarray(x, np.float32), 1, 3).astype(np.float32)  # 48k -> 16k
+    try:
+        segs, _ = m.transcribe(a16, word_timestamps=True, language="en", beam_size=5,
+                               initial_prompt=text, condition_on_previous_text=False)
+        rec = [w for sgm in segs for w in (sgm.words or [])]
+    except Exception as e:
+        print(f"[tts] whisper alignment failed ({type(e).__name__}: {e}); heuristic timing", flush=True)
         return None
-    # map recognised words onto script words in order (proportional when counts differ)
+    toks = _script_words(text)
+    if not rec or not toks:
+        return None
+    nz = lambda w: re.sub(r"[^a-z0-9]", "", w.lower())
+    A_, B_ = [nz(t) for t in toks], [nz(w.word) for w in rec]
+    t0 = [None] * len(toks)
+    t1 = [None] * len(toks)
+    sm = difflib.SequenceMatcher(a=A_, b=B_, autojunk=False)
+    for blk in sm.get_opcodes():
+        tag, i1, i2, j1, j2 = blk
+        if tag == "equal":
+            for k in range(i2 - i1):
+                t0[i1 + k], t1[i1 + k] = float(rec[j1 + k].start), float(rec[j1 + k].end)
+        elif tag == "replace" and j2 > j1:
+            # spread the recognised span over the script words (e.g. '2.3' vs 'two point three')
+            s0, s1 = float(rec[j1].start), float(rec[j2 - 1].end)
+            n = i2 - i1
+            for k in range(n):
+                t0[i1 + k] = s0 + (s1 - s0) * k / n
+                t1[i1 + k] = s0 + (s1 - s0) * (k + 1) / n
+    known = [i for i in range(len(toks)) if t0[i] is not None]
+    if len(known) < max(2, len(toks) * 0.5):
+        return None
+    for i in range(len(toks)):  # interpolate any gaps
+        if t0[i] is None:
+            prv = max([k for k in known if k < i], default=None)
+            nxt = min([k for k in known if k > i], default=None)
+            if prv is None:
+                t0[i], t1[i] = max(0.0, t0[nxt] - 0.25 * (nxt - i)), t0[nxt] - 0.25 * (nxt - i - 1)
+            elif nxt is None:
+                t0[i] = t1[prv] + 0.05 * (i - prv); t1[i] = t0[i] + 0.25
+            else:
+                f = (i - prv) / (nxt - prv)
+                t0[i] = t1[prv] + (t0[nxt] - t1[prv]) * f; t1[i] = t0[i] + max(0.08, (t0[nxt] - t1[prv]) / (nxt - prv))
     out = []
     for i, tk in enumerate(toks):
-        j = min(len(rec) - 1, int(round(i * (len(rec) - 1) / max(1, len(toks) - 1)))) if len(rec) != len(toks) else i
-        out.append({"w": tk, "t": float(rec[j].start), "d": float(max(0.05, rec[j].end - rec[j].start))})
-    for i in range(1, len(out)):  # monotonic
-        out[i]["t"] = max(out[i]["t"], out[i - 1]["t"] + 0.03)
+        st = t0[i] if not out else max(t0[i], out[-1]["t"] + 0.03)
+        out.append({"w": tk, "t": st, "d": max(0.05, t1[i] - st)})
     return out
 
 
@@ -170,17 +204,26 @@ def _tts_kokoro(text, voice, rate, cache_dir):
     if os.path.exists(wav) and os.path.exists(js):
         import soundfile as sf
         x, _ = sf.read(wav, dtype="float32")
-        return x, json.load(open(js))
+        data = json.load(open(js))
+        if isinstance(data, dict) and data.get("aligner") == "whisper":
+            return x, data["words"]
+        words = _align_whisper(x, text)  # upgrade heuristic timings when whisper is available
+        if words:
+            json.dump({"aligner": "whisper", "words": words}, open(js, "w"))
+            return x, words
+        return x, data["words"] if isinstance(data, dict) else data
     k = _kokoro()
     y, sr = k.create(text, voice=voice.split(":", 1)[1], speed=float(rate), lang="en-us")
     x = signal.resample_poly(np.asarray(y, np.float32), SR, sr).astype(np.float32)
     idx = np.where(np.abs(x) > 0.01)[0]
     if len(idx):  # trim, keep 60 ms head and 100 ms tail
         x = x[max(0, idx[0] - int(0.06 * SR)): min(len(x), idx[-1] + int(0.1 * SR))]
-    words = _align_whisper(x, text) or _align_heuristic(x, text)
+    words = _align_whisper(x, text)
+    aligner = "whisper" if words else "heuristic"
+    words = words or _align_heuristic(x, text)
     import soundfile as sf
     sf.write(wav, x, SR)
-    json.dump(words, open(js, "w"))
+    json.dump({"aligner": aligner, "words": words}, open(js, "w"))
     return x, words
 
 
@@ -459,6 +502,43 @@ def sfx_stinger(seed=0):
     return norm(low + ch + sfx_shimmer(d, seed) * 0.3, 0.8)
 
 
+def sfx_hit(seed=0):
+    """Orchestral-style hit for big reveals: low boom + bright detuned chord stab + shimmer tail."""
+    d = 2.8
+    n = int(d * SR); t = np.arange(n) / SR
+    boom = np.sin(2 * np.pi * (48 * t - 6 * t * t)) * np.exp(-t * 2.2)
+    stab = np.zeros(n)
+    for f in (110, 164.8, 220, 277.2, 329.6, 440):
+        for c in (-6, 6):
+            ff = f * 2 ** (c / 1200)
+            stab += signal.sawtooth(2 * np.pi * ff * t) / (1 + f / 220)
+    stab = lp(stab * np.exp(-t * 3.5) * np.minimum(1, t / 0.008), 3500)
+    noise = hp(rng(("hit", seed)).standard_normal(n), 3000) * np.exp(-t * 9) * 0.4
+    return norm(boom * 1.2 + stab * 0.5 + noise + sfx_shimmer(d, seed) * 0.15, 0.95)
+
+
+def sfx_scrape(seed=0, d=2.0):
+    n = int(d * SR); t = np.arange(n) / SR
+    x = bp(rng(("scr", seed)).standard_normal(n), 200, 1400) * (0.6 + 0.4 * np.abs(np.sin(2 * np.pi * 3 * t)))
+    return norm(x * np.minimum(1, t / 0.2) * np.minimum(1, (d - t) / 0.3), 0.7)
+
+
+def sfx_pour(seed=0, d=2.0):
+    n = int(d * SR); t = np.arange(n) / SR
+    x = bp(rng(("pour", seed)).standard_normal(n), 600, 4000) * (0.7 + 0.3 * np.sin(2 * np.pi * 9 * t))
+    return norm(x * np.minimum(1, t / 0.1) * np.minimum(1, (d - t) / 0.4), 0.55)
+
+
+def sfx_cheer(seed=0, d=2.5):
+    n = int(d * SR)
+    r = rng(("cheer", seed)); t = np.arange(n) / SR
+    x = np.zeros(n)
+    for v in range(10):
+        f = r.uniform(250, 700)
+        x += bp(r.standard_normal(n), f, f * 1.8) * (np.sin(2 * np.pi * r.uniform(2, 5) * t + v) * 0.3 + 0.7)
+    return norm(x * np.minimum(1, t / 0.15) * np.exp(-np.maximum(0, t - 1.2) * 1.5), 0.6)
+
+
 def sfx_flash(seed=0):
     return norm(sfx_impact(seed, 2.0) + np.pad(sfx_shimmer(1.5, seed), (0, int(0.5 * SR))) * 0.5, 0.95)
 
@@ -485,7 +565,8 @@ SFX = {
     "knap": sfx_knap, "crack": sfx_crack, "footstep": sfx_footstep, "steps": lambda s: sfx_steps(2.5, 2.2, s, True),
     "run_steps": lambda s: sfx_steps(2.0, 5.0, s), "gallop": lambda s: sfx_gallop(2.5, s), "hyena": lambda s: sfx_hyena(s, "whoop"),
     "hyena_giggle": lambda s: sfx_hyena(s, "giggle"), "growl": lambda s: sfx_growl(1.6, s), "snort": sfx_snort, "spear": sfx_spear,
-    "thud": sfx_thud, "ui": sfx_ui, "stinger": sfx_stinger, "flash": sfx_flash, "buzz": sfx_buzz, "fire_throw": sfx_fire_throw,
+    "hit": sfx_hit, "scrape": lambda s: sfx_scrape(s, 2.2), "pour": lambda s: sfx_pour(s, 2.2), "cheer": lambda s: sfx_cheer(s, 2.5),
+    "chisel": sfx_knap, "thud": sfx_thud, "ui": sfx_ui, "stinger": sfx_stinger, "flash": sfx_flash, "buzz": sfx_buzz, "fire_throw": sfx_fire_throw,
 }
 
 

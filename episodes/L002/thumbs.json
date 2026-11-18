@@ -1,0 +1,218 @@
+[
+ {
+  "text": {
+   "words": [
+    "NOT",
+    "SLAVES?!"
+   ],
+   "colors": [
+    [
+     1,
+     1,
+     1
+    ],
+    [
+     1,
+     0.86,
+     0.15
+    ]
+   ],
+   "x": 0.52,
+   "y": 0.26,
+   "size": 150,
+   "maxw": 0.45
+  },
+  "focus": 0.3,
+  "t": 1.2,
+  "scene": {
+   "set": "giza",
+   "tod": "golden",
+   "set_opts": {
+    "pyramid": 0.5,
+    "pyramid_s": 1.0,
+    "pyramid_x": 650
+   },
+   "actors": [
+    {
+     "id": "fardin",
+     "kind": "fardin",
+     "x": -230,
+     "size": 520,
+     "track": [
+      {
+       "t": 0,
+       "pose": "amazed",
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "props": [
+    {
+     "type": "block",
+     "x": 260,
+     "y": 60,
+     "s": 2.3
+    }
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "x": 150,
+     "y": -330,
+     "zoom": 1.45
+    }
+   ]
+  }
+ },
+ {
+  "text": {
+   "words": [
+    "THE",
+    "WATER",
+    "TRICK"
+   ],
+   "colors": [
+    [
+     1,
+     1,
+     1
+    ],
+    [
+     0.4,
+     0.9,
+     1
+    ],
+    [
+     0.4,
+     0.9,
+     1
+    ]
+   ],
+   "x": 0.58,
+   "y": 0.2,
+   "size": 120,
+   "maxw": 0.38
+  },
+  "focus": 0.3,
+  "t": 1.5,
+  "scene": {
+   "set": "giza",
+   "tod": "day",
+   "set_opts": {
+    "pyramid": 0.45,
+    "pyramid_s": 1.0,
+    "pyramid_x": 500
+   },
+   "actors": [
+    {
+     "id": "fardin",
+     "kind": "fardin",
+     "x": -330,
+     "size": 500,
+     "track": [
+      {
+       "t": 0,
+       "pose": "amazed",
+       "expr": "amazed"
+      }
+     ]
+    },
+    {
+     "id": "pourer",
+     "kind": "egypt",
+     "x": 380,
+     "size": 380,
+     "facing": -1,
+     "track": [
+      {
+       "t": 0,
+       "pose": "pour_water",
+       "hold": "jar"
+      }
+     ]
+    }
+   ],
+   "sledges": [
+    {
+     "x": 40,
+     "s": 1.5,
+     "pourer": "pourer",
+     "wet_from": 0
+    }
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "x": 60,
+     "y": -300,
+     "zoom": 1.4
+    }
+   ]
+  }
+ },
+ {
+  "text": {
+   "words": [
+    "IT",
+    "SHONE?!"
+   ],
+   "colors": [
+    [
+     1,
+     1,
+     1
+    ],
+    [
+     1,
+     0.86,
+     0.15
+    ]
+   ],
+   "x": 0.03,
+   "y": 0.62,
+   "size": 150,
+   "maxw": 0.4
+  },
+  "focus": 0.7,
+  "t": 1.5,
+  "scene": {
+   "set": "giza",
+   "tod": "golden",
+   "set_opts": {
+    "pyramid": 1.0,
+    "casing": 1.0,
+    "gleam": 1.0,
+    "pyramid_s": 1.1,
+    "pyramid_x": 500,
+    "ramp": false
+   },
+   "weather": "glare",
+   "actors": [
+    {
+     "id": "fardin",
+     "kind": "fardin",
+     "x": 620,
+     "size": 480,
+     "facing": -1,
+     "watch": 1.2,
+     "track": [
+      {
+       "t": 0,
+       "pose": "amazed",
+       "expr": "shock"
+      }
+     ]
+    }
+   ],
+   "camera": [
+    {
+     "t": 0,
+     "x": 420,
+     "y": -420,
+     "zoom": 1.0
+    }
+   ]
+  }
+ }
+]

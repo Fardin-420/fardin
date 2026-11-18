@@ -125,7 +125,9 @@ class Actor:
         for p in self.pops:
             if 0 <= t - p < 1.2:
                 sx, sy = pop_scale(t - p)
-        return dict(t=t, pose=pose, act=act, x=self.xt(t), y=self.yt(t), f=act["_face"],
+        x = self.xt(t)
+        y = self.yt(t) + (self.ground_fn(x) if getattr(self, "ground_fn", None) else 0.0)
+        return dict(t=t, pose=pose, act=act, x=x, y=y, f=act["_face"],
                     expr=act["_expr"], hold=act["_hold"], sx=sx, sy=sy, alpha=self.at(t), watch=self.wt(t))
 
     def blink(self, t):
@@ -142,7 +144,7 @@ class Actor:
         return 0.0
 
     def screen_head(self, t):
-        st = self.state(t)
+        st = self.state(t)  # includes ramp slope
         J = Skeleton.solve(st["pose"], st["x"], st["y"], self.size, st["f"], st["sx"], st["sy"])
         return J["head"]
 
@@ -501,6 +503,9 @@ class EraPerson(Actor):
 
 # ===================================================================== items
 def draw_item(ctx, item, J, side, s, st, back=False):
+    from .egypt import draw_egypt_item
+    if draw_egypt_item(ctx, item, J, side, s, st):
+        return
     wr, el = J["wrist_" + side], J["elbow_" + side]
     fa = J["farm_ang_" + side]
     f = st["f"]
@@ -612,8 +617,24 @@ def draw_bubble(ctx, head, s, f, text, lt, dur):
     ctx.restore()
 
 
+class EgyptWorker(EraPerson):
+    """Old Kingdom Egyptian (worker / overseer / scribe / baker / healer)."""
+    kind = "egypt"
+
+    def __init__(self, spec, seed=0):
+        super().__init__(spec, seed)
+        from .egypt import EgyptPerson
+        EgyptPerson.setup(self, spec, seed)
+
+    def render(self, ctx, t, st, J):
+        from .egypt import EgyptPerson
+        EgyptPerson.render(self, ctx, t, st, J)
+
+
 def make_actor(spec, seed=0):
     k = spec.get("kind", "era")
     if k == "fardin":
         return Fardin(spec, seed)
+    if k == "egypt":
+        return EgyptWorker(spec, seed)
     return EraPerson(spec, seed)

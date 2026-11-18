@@ -83,7 +83,34 @@ def resolve_time(obj, tm, key="t"):
     return obj
 
 
-TASK_HOLD = {"knap": "stone", "butcher": "flake", "smash": "stone", "eat": "meat", "aim": "spear", "lookout": "spear"}
+TASK_HOLD = {"carve": "chisel", "write_papyrus": "pen", "stand_staff": "staff", "pour_water": "jar", "knap": "stone", "butcher": "flake", "smash": "stone", "eat": "meat", "aim": "spear", "lookout": "spear"}
+
+
+def camera_variety(keys, dur, has_fardin, max_hold=5.0):
+    """Guarantee a new framing at least every ~max_hold seconds: insert alternating
+    close-ups on Fardin and wider/panned framings into long camera holds."""
+    if not keys or keys[0]["t"] > 0:
+        keys = [dict(keys[0] if keys else {}, t=0.0)] + keys
+    out = []
+    for i, k in enumerate(keys):
+        out.append(k)
+        t1 = keys[i + 1]["t"] if i + 1 < len(keys) else dur
+        gap = t1 - k["t"]
+        if gap <= max_hold + 0.6:
+            continue
+        n = int(gap // max_hold)
+        base = {kk: v for kk, v in k.items() if kk not in ("t", "ease", "hold")}
+        for j in range(1, n + 1):
+            tj = k["t"] + gap * j / (n + 1)
+            if has_fardin and j % 2 == 1:
+                nk = {"t": tj, "track": "fardin", "dx": 0, "dy": -260, "zoom": max(1.6, base.get("zoom", 1.0) * 1.35)}
+            else:
+                nk = dict(base, t=tj, zoom=base.get("zoom", 1.0) * (0.86 if j % 2 == 0 else 1.15))
+                if "x" in nk and "track" not in nk:
+                    nk["x"] = nk["x"] + (140 if j % 2 else -140)
+            nk["ease"] = "inOutSine"
+            out.append(nk)
+    return sorted(out, key=lambda k: k["t"])
 
 
 def make_crowd(c, sid):
@@ -105,12 +132,14 @@ def make_crowd(c, sid):
             e2 = dict(ev)
             e2["t"] = ev["t"] + r("stag") * ev.get("stagger", 0.4)
             if "to_rel" in e2:
-                e2["to"] = x + e2.pop("to_rel") * (1 + 0.2 * r("tr"))
+                e2["to"] = x + e2.pop("to_rel")
             if e2.get("pose") == "keep":
                 e2["pose"] = task
             out_hold = e2.get("hold")
             acts.append(e2)
-        out.append({"id": f"{sid}_c{i}", "kind": "era", "x": x, "y": c.get("y", 0) + (r("y") - 0.5) * c.get("ydepth", 0),
+        roles = c.get("roles", [])
+        extra = {"role": roles[i % len(roles)]} if roles else {}
+        out.append({"id": f"{sid}_c{i}", "kind": c.get("kind", "era"), **extra, "x": x, "y": c.get("y", 0) + (r("y") - 0.5) * c.get("ydepth", 0),
                     "size": size, "facing": f, "track": acts, "layer": c.get("layer", 0),
                     "beard": None if kid else None})
         for k in ("beard",):
@@ -171,6 +200,16 @@ def build(ep_dir, force_tts=False):
                 resolve_time(act, tm)
         for k in sc.get("camera", []):
             resolve_time(k, tm)
+        sc["camera"] = camera_variety(sorted(sc.get("camera", [{"t": 0}]), key=lambda k: k["t"]), tm.dur,
+                                      any(a.get("kind") == "fardin" for a in sc.get("actors", [])), sc.get("max_hold", 5.0))
+        for sl in sc.get("sledges", []):
+            for k in sl.get("track", []):
+                resolve_time(k, tm)
+            if "wet_cue" in sl:
+                sl["wet_from"] = tm.cue(sl.pop("wet_cue")) + sl.pop("wet_off", 0.0)
+        for key, val in list(sc.get("set_opts", {}).items()):
+            if isinstance(val, list) and val and isinstance(val[0], list):  # animated option: [[cue|t, v], ...]
+                sc["set_opts"][key] = [[tm.cue(v[0]) + (v[2] if len(v) > 2 else 0) if isinstance(v[0], str) else v[0], v[1]] for v in val]
         for g in sc.get("graphics", []):
             resolve_time(g, tm)
             if "item_cues" in g:
@@ -203,6 +242,15 @@ def build(ep_dir, force_tts=False):
                 resolve_time(ev, tm)
             crowd += make_crowd(c, f"{sid}_{ci}")
         sc["crowd_actors"] = crowd
+        for sl in sc.get("sledges", []):
+            pl = []
+            for pid in sl.get("pullers", []):
+                if isinstance(pid, str) and pid.startswith("crowd:"):
+                    ci = int(pid.split(":")[1])
+                    pl += [a["id"] for a in crowd if a["id"].startswith(f"{sid}_{ci}_c")]
+                else:
+                    pl.append(pid)
+            sl["pullers"] = pl
         sc["id"], sc["start"], sc["dur"], sc["segs"], sc["words"] = sid, T, dur, segs, words
         for w in words:
             all_words.append({"w": w["w"], "t": T + w["t"], "d": w["d"]})

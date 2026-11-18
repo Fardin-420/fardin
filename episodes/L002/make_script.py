@@ -1,0 +1,648 @@
+"""Time Ghost L002 — 'I Watched the Great Pyramid Being Built'. Generates script.json.
+
+Run: python episodes/L002/make_script.py      (facts + sources: FACTS.md)
+"""
+import json
+import os
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+
+
+def F(x, track, **kw):
+    d = {"id": "fardin", "kind": "fardin", "x": x, "size": 300, "track": track}
+    d.update(kw)
+    return d
+
+
+def W(pid, x, track, **kw):
+    d = {"id": pid, "kind": "egypt", "x": x, "size": kw.pop("size", 285), "track": track}
+    d.update(kw)
+    return d
+
+
+def k(pose=None, **kw):
+    d = {"pose": pose} if pose else {}
+    d.update(kw)
+    return d
+
+
+def N(text, pause=None, before=None):
+    d = {"text": text}
+    if pause is not None:
+        d["pause"] = pause
+    if before is not None:
+        d["pause_before"] = before
+    return d
+
+
+DAY = {"wind": 0.5, "birds": 0.25}
+SITE = {"wind": 0.45, "crowd": 0.5}
+WATER = {"wind": 0.4, "birds": 0.45}
+NIGHT = {"crickets": 0.5, "fire": 0.45, "wind": 0.3}
+HOT = ["heat", "sand"]
+scenes = []
+S = scenes.append
+
+# ============================================================ COLD OPEN
+RAMP = {"pyramid": 0.6, "pyramid_x": 1150, "pyramid_s": 1.7, "slope": {"k": -0.3, "x0": -1100, "x1": 1700}}
+S({
+    "id": "co1", "chapter": "Cold Open", "set": "ramp", "tod": "day", "set_opts": RAMP, "music": "tense", "amb": SITE,
+    "weather": HOT, "lead": 0.5,
+    "narration": [N("Egypt. About four and a half thousand years ago.", 0.4),
+                  N("Fardin is standing on a ramp of mud brick and stone."),
+                  N("Above him, a block of limestone. Two tons. Maybe more.", 0.5),
+                  N("And it just started sliding.", 1.3)],
+    "actors": [F(-250, [k("look_around", t=0, expr="curious"), k("idle", cue="w:Above", expr="worried", face=1),
+                        k("dive", cue="w:sliding", off=0.5, expr="shock", pop=True)],
+                 say=[{"cue": "w:sliding", "off": 0.4, "text": "Whoa! Whoa!"}]),
+               W("ov", 1250, [k("stand_staff", t=0, hold="staff", expr="focused"), k("cheer_team", cue="w:sliding", expr="shock")],
+                 role="overseer", facing=-1)],
+    "crowd": [{"kind": "egypt", "n": 6, "x": [520, 1050], "tasks": ["pull_rope"], "facing": "right", "expr": "focused",
+               "events": [{"cue": "w:sliding", "pose": "pull_rope", "to_rel": -260, "dur": 1.4, "expr": "scared", "stagger": 0.1}]}],
+    "sledges": [{"x": 250, "pullers": ["crowd:0"], "s": 1.0, "track": [{"t": 0.3, "to": 300, "dur": 5},
+                                                                     {"cue": "w:sliding", "to": -560, "dur": 1.6, "ease": "inQuad"}]}],
+    "camera": [{"t": 0, "x": 350, "y": -330, "zoom": 0.9}, {"cue": "w:Fardin", "track": "fardin", "dy": -250, "zoom": 1.6},
+               {"cue": "w:Above", "x": 380, "y": -360, "zoom": 1.25}, {"cue": "w:Two", "x": 300, "y": -330, "zoom": 1.7},
+               {"cue": "w:sliding", "x": -200, "y": -250, "zoom": 1.3, "ease": "outCubic"}],
+    "shake": [{"start": {"cue": "w:sliding"}, "end": {"cue": "w:sliding", "off": 1.6}, "amp": 16}],
+    "sfx": [{"type": "rumble", "t": 0.2, "vol": 0.5}, {"type": "scrape", "cue": "w:sliding", "vol": 0.9},
+            {"type": "thud", "cue": "w:sliding", "off": 1.55, "vol": 0.8}, {"type": "whoosh", "cue": "w:sliding", "off": 0.4, "vol": 0.5}],
+    "fx": [{"type": "fade_in", "t": 0, "dur": 0.6}, {"type": "danger", "cue": "w:Two", "dur": 3.0},
+           {"type": "dust", "cue": "w:sliding", "off": 1.5, "x": -560, "y": 0, "dur": 1.2}],
+})
+S({
+    "id": "co2", "chapter": "Cold Open", "set": "ramp", "tod": "day", "set_opts": RAMP, "music": "tense", "amb": SITE, "weather": HOT,
+    "lead": 0.2,
+    "narration": [N("The workers grab the ropes. They dig in. They stop it.", 0.3),
+                  N("Just in time.", 0.5),
+                  N("Most people think slaves built this place. Or aliens.", 0.6),
+                  N("Nobody here can see him. Nobody would have pulled him out of the way."),
+                  N("Fardin is about to find out the truth.")],
+    "actors": [F(-560, [k("sit", t=0, expr="shock"), k("idle", cue="w:time", expr="worried", face=1),
+                        k("point", cue="w:aliens", expr="curious"), k("amazed", cue="w:truth", expr="determined", pop=True)]),
+               W("ov", 1250, [k("cheer_team", t=0, hold="staff")], role="overseer", facing=-1)],
+    "crowd": [{"kind": "egypt", "n": 6, "x": [260, 790], "tasks": ["pull_rope"], "facing": "right", "expr": "determined",
+               "events": [{"t": 0.2, "pose": "pull_rope", "to_rel": 200, "dur": 3.0}, {"cue": "w:time", "pose": "cheer_team", "expr": "happy"}]}],
+    "sledges": [{"x": -330, "pullers": ["crowd:0"], "track": [{"t": 0.2, "to": -130, "dur": 3.0, "ease": "outCubic"}]}],
+    "camera": [{"t": 0, "x": 100, "y": -300, "zoom": 1.15}, {"cue": "w:time", "x": 300, "y": -330, "zoom": 1.0},
+               {"cue": "w:Most", "track": "fardin", "dy": -250, "zoom": 1.7}, {"cue": "w:Fardin", "track": "fardin", "dy": -260, "zoom": 2.1}],
+    "sfx": [{"type": "scrape", "t": 0.2, "vol": 0.6}, {"type": "cheer", "cue": "w:time", "vol": 0.6}],
+})
+S({
+    "id": "co3", "chapter": "Cold Open", "set": "giza", "tod": "golden", "music": "hopeful", "amb": {"wind": 0.5}, "lead": 0.2, "tail": 0.5,
+    "set_opts": {"pyramid": 1.0, "casing": 1.0, "gleam": 1.0, "pyramid_s": 1.05, "pyramid_x": 250, "ramp": False},
+    "weather": "glare",
+    "narration": [N("Because this...", 0.6), N("is what they were building.", 0.9), N("But let's go back to the beginning.")],
+    "actors": [F(-450, [k("amazed", t=0, expr="amazed")], y=120)],
+    "camera": [{"t": 0, "x": -150, "y": -40, "zoom": 1.45}, {"cue": "w:what", "x": 150, "y": -470, "zoom": 0.85, "ease": "inOutCubic"},
+               {"cue": "w:back", "x": 150, "y": -470, "zoom": 1.1}],
+    "fx": [{"type": "ripple", "cue": "w:back", "dur": 1.8}, {"type": "speedlines", "cue": "w:back", "dur": 1.6},
+           {"type": "flash_in", "e": 0.45, "dur": 0.45}],
+    "sfx": [{"type": "hit", "cue": "w:what", "vol": 0.8}, {"type": "whoosh_down", "cue": "w:back", "vol": 0.7}],
+    "graphics": [{"type": "callout", "cue": "w:back", "dur": 1.6, "text": "REWIND", "y": 0.22}],
+})
+
+# ============================================================ TIME TRAVEL (< 4 s) + MAP + PROMISE
+S({
+    "id": "tt1", "chapter": "Time Travel", "set": "void", "music": "wonder", "amb": {"tunnel": 0.7}, "lead": 0.0, "tail": 0.0,
+    "min_dur": 3.7, "no_dip": True, "tunnel": [[0, 0.3], [1.5, 1.6], [3.7, 0.8]], "narration": [],
+    "actors": [F(0, [k("tumble", t=0, expr="shock", watch=1.6)], y=-60)],
+    "camera": [{"t": 0, "x": 0, "y": -260, "zoom": 1.25}, {"t": 3.7, "x": 0, "y": -260, "zoom": 1.0}],
+    "fx": [{"type": "watch_bloom", "t": 0, "dur": 0.5}, {"type": "flash", "t": 0.45, "dur": 0.5},
+           {"type": "counter", "t": 0.4, "dur": 1.4, "from": 2026, "to": -2560}],
+    "graphics": [{"type": "era_title", "t": 1.6, "dur": 2.1, "title": "EGYPT", "sub": "ABOUT 4,500 YEARS AGO · c. 2560 BC"}],
+    "sfx": [{"type": "whoosh", "t": 0.0, "vol": 0.8}, {"type": "impact", "t": 1.6, "vol": 0.7}],
+})
+S({
+    "id": "tt2", "chapter": "Time Travel", "set": "giza", "tod": "morning", "music": "wonder", "amb": SITE, "lead": 0.4, "no_dip": True,
+    "set_opts": {"pyramid": 0.1, "pyramid_s": 0.95, "pyramid_x": 350}, "weather": "sand",
+    "narration": [N("Giza. On the west bank of the Nile.", 0.3),
+                  N("The pharaoh Khufu has ordered a tomb bigger than anything the world has ever seen."),
+                  N("This is the Fourth Dynasty, around twenty five sixty BC. Khufu wants it finished in his lifetime."),
+                  N("And everywhere Fardin looks, people are working."),
+                  N("And his watch can jump him forward through the years. So Fardin can watch it rise.")],
+    "actors": [F(-300, [k("land", t=0, expr="shock"), k("look_around", t=1.0, expr="amazed"), k("point", cue="w:Khufu", expr="amazed"),
+                        k("check_watch", cue="w:watch", expr="happy", watch=1.0)])],
+    "crowd": [{"kind": "egypt", "n": 12, "x": [100, 1400], "y": -60, "ydepth": 40, "size": [190, 215],
+               "tasks": ["carry_block_team", "pull_rope", "watch", "wipe_sweat"], "facing": "random"}],
+    "camera": [{"t": 0, "x": -300, "y": -260, "zoom": 1.5}, {"t": 1.4, "x": 250, "y": -300, "zoom": 0.9, "ease": "inOutCubic"},
+               {"cue": "w:Khufu", "x": 500, "y": -320, "zoom": 1.05}, {"cue": "w:watch", "track": "fardin", "dy": -250, "zoom": 1.7}],
+    "fx": [{"type": "flash", "t": 0, "dur": 0.6}, {"type": "dust", "t": 0.05, "x": -300, "dur": 1.0}],
+    "graphics": [{"type": "map", "cue": "w:Nile", "dur_to": "seg:1:end", "dur_off": 0.6, "view": "egypt", "side": "right",
+                  "pins": [{"lat": 29.98, "lon": 31.13, "label": "Giza", "t": 1.2, "dx": -18}]}],
+    "sfx": [{"type": "thud", "t": 0.05, "vol": 0.6}],
+})
+S({
+    "id": "tt3", "chapter": "Time Travel", "set": "giza", "tod": "morning", "music": "wonder", "amb": SITE, "lead": 0.2, "no_dip": True,
+    "set_opts": {"pyramid": 0.12, "pyramid_s": 0.95, "pyramid_x": 350},
+    "narration": [N("In this episode, Fardin will see three things."),
+                  N("Where these giant stones really came from."),
+                  N("The surprisingly simple trick that moved them."),
+                  N("And what the workers actually ate. That one changes the whole story.", 0.4),
+                  N("Let's start where every block begins.")],
+    "actors": [F(-350, [k("walk", t=0, to=-150, dur=2.0, expr="curious"), k("point", cue="w:stones", expr="curious"),
+                        k("amazed", cue="w:trick", expr="amazed"), k("laugh", cue="w:ate", expr="laugh")])],
+    "crowd": [{"kind": "egypt", "n": 14, "x": [-100, 1500], "y": -40, "ydepth": 50, "size": [200, 230],
+               "tasks": ["pull_rope", "carry_block_team", "push_lever", "talk"], "facing": "random"}],
+    "props": [{"type": "block_stack", "x": -800, "y": 20, "s": 0.7}],
+    "camera": [{"t": 0, "x": -100, "y": -280, "zoom": 1.15}, {"cue": "w:stones", "x": 500, "y": -280, "zoom": 1.0},
+               {"cue": "w:trick", "x": 800, "y": -300, "zoom": 1.25}, {"cue": "w:ate", "track": "fardin", "dy": -250, "zoom": 1.7}],
+    "graphics": [{"type": "list", "cue": "w:three", "dur_e": 0.3, "title": "COMING UP", "item_cues": ["w:stones", "w:trick", "w:ate"],
+                  "items": ["Where the giant stones came from", "The trick that moved them", "What the workers really ate"]}],
+})
+
+# ============================================================ CH1 THE QUARRY
+QUARRY_CROWD = {"kind": "egypt", "n": 10, "x": [-200, 1500], "y": -30, "ydepth": 50, "size": [235, 270],
+                "tasks": ["carve", "carve", "push_lever", "wipe_sweat", "carve"], "facing": "right"}
+S({
+    "id": "q1", "chapter": "The Quarry", "set": "quarry", "tod": "morning", "music": "calm", "amb": {"wind": 0.4}, "lead": 0.4,
+    "narration": [N("Every pyramid starts with a hole in the ground."),
+                  N("The core blocks were cut right here, from quarries on the Giza plateau itself."),
+                  N("You can still see those quarries next to the pyramids today."),
+                  N("But for the outer layer, the builders wanted something special.", 0.5),
+                  N("Brilliant white limestone. From Tura, across the river.")],
+    "actors": [F(-900, [k("walk", t=0.2, to=-350, dur=3.5, expr="curious"), k("amazed", cue="w:Brilliant", expr="amazed", pop=True)])],
+    "crowd": [QUARRY_CROWD],
+    "props": [{"type": "block_stack", "x": -700, "y": 30, "s": 0.8}, {"type": "block", "x": 250, "y": 40}],
+    "camera": [{"t": 0, "x": -500, "y": -300, "zoom": 1.0}, {"cue": "w:outer", "x": 400, "y": -350, "zoom": 0.85},
+               {"cue": "w:Brilliant", "x": 0, "y": -420, "zoom": 1.1}],
+    "graphics": [{"type": "chapter", "t": 0.3, "dur": 3.6, "kicker": "CHAPTER 1", "title": "THE QUARRY", "time": "Tura · east bank of the Nile"},
+                 {"type": "map", "cue": "w:Tura", "dur_e": 0.2, "view": "egypt", "side": "right",
+                  "pins": [{"lat": 29.98, "lon": 31.13, "label": "Giza", "t": 0.3, "dx": -18},
+                           {"lat": 29.93, "lon": 31.30, "label": "Tura quarries", "t": 0.7, "dy": 30, "color": [0.25, 0.92, 1.0]}]}],
+    "sfx": [{"type": "chisel", "t": 1.0, "vol": 0.4}, {"type": "chisel", "t": 2.2, "vol": 0.4}],
+})
+S({
+    "id": "q2", "chapter": "The Quarry", "set": "quarry", "tod": "day", "music": "tense", "amb": {"wind": 0.4}, "lead": 0.3,
+    "narration": [N("No iron. No steel.", 0.3),
+                  N("Their tools were copper chisels, wooden mallets, and a lot of patience."),
+                  N("Workers cut channels around each block. Then they pried it loose with wooden levers."),
+                  N("Copper is soft. So the chisels had to be sharpened again and again."),
+                  N("It is slow, dusty, deafening work. And Fardin loves every second.")],
+    "actors": [W("carver", 150, [k("carve", t=0, hold="chisel", expr="focused")], facing=1),
+               W("carver2", 380, [k("carve", t=0, hold="chisel", arg=0.4, expr="focused")], facing=1),
+               W("lev1", 900, [k("push_lever", t=0, expr="determined")], facing=1),
+               W("lev2", 1080, [k("push_lever", t=0, arg=1.0, expr="determined")], facing=1),
+               F(-200, [k("lean_in", t=0, expr="curious"), k("amazed", cue="w:levers", expr="amazed"), k("wipe_sweat", cue="w:soft", expr="worried")])],
+    "props": [{"type": "lever_beam", "x": 1000, "y": 20}, {"type": "block", "x": 650, "y": 40, "s": 1.2}],
+    "camera": [{"t": 0, "x": 250, "y": -260, "zoom": 1.9}, {"cue": "w:Their", "x": 150, "y": -300, "zoom": 1.4},
+               {"cue": "w:channels", "x": 900, "y": -280, "zoom": 1.3}, {"cue": "w:levers", "track": "fardin", "dy": -250, "zoom": 1.8},
+               {"cue": "w:Copper", "x": 300, "y": -280, "zoom": 1.2}],
+    "graphics": [{"type": "fact", "cue": "w:Their", "dur_to": "seg:1:end", "dur_off": 0.6, "big": "COPPER", "big_size": 96,
+                  "label": "chisels, wooden mallets and levers: no iron tools yet", "tag": "TOOLKIT", "side": "right", "y": 170}],
+    "sfx": [{"type": "chisel", "cue": "w:chisels", "vol": 0.7}, {"type": "chisel", "cue": "w:mallets", "vol": 0.7},
+            {"type": "chisel", "cue": "w:patience", "vol": 0.6}, {"type": "scrape", "cue": "w:pried", "vol": 0.5}],
+})
+S({
+    "id": "q3", "chapter": "The Quarry", "set": "quarry", "tod": "day", "music": "playful", "amb": {"wind": 0.4}, "lead": 0.3,
+    "narration": [N("Fardin decides to help.", 0.4), N("He grabs a block.", 0.6), N("He pulls.", 0.9),
+                  N("Nothing.", 1.4),
+                  N("The workers don't even notice. To them, it's just another day at work."),
+                  N("The average block in the Great Pyramid weighs around two and a half tons."),
+                  N("And by one estimate, there are about two point three million of them.")],
+    "actors": [F(-120, [k("idle", t=0, expr="determined"), k("crouch", cue="w:grabs", expr="determined"),
+                        k("push_lever", cue="w:pulls", expr="scared"), k("sit", cue="w:Nothing", expr="sad", pop=True),
+                        k("idle", cue="w:average", expr="shock", face=1), k("hands_on_head", cue="w:million", expr="shock", pop=True)],
+                 say=[{"cue": "seg:3:end", "off": 0.1, "text": "Nope."}]),
+               W("laughw", 520, [k("carve", t=0, hold="chisel")], facing=-1)],
+    "props": [{"type": "block", "x": 60, "y": 30, "s": 1.25}],
+    "camera": [{"t": 0, "x": -60, "y": -260, "zoom": 1.5}, {"cue": "w:pulls", "x": -30, "y": -200, "zoom": 2.2, "ease": "outCubic"},
+               {"cue": "w:Nothing", "x": -100, "y": -180, "zoom": 1.9}, {"cue": "w:average", "x": 150, "y": -300, "zoom": 1.1},
+               {"cue": "w:million", "track": "fardin", "dy": -250, "zoom": 1.8}],
+    "shake": [{"start": {"cue": "w:pulls"}, "end": {"cue": "w:pulls", "off": 0.9}, "amp": 5}],
+    "graphics": [{"type": "fact", "cue": "w:average", "dur_to": "seg:4:end", "dur_off": 0.4, "big": "~2.5 TONS", "big_size": 100,
+                  "label": "average weight of one block", "tag": "EACH BLOCK", "side": "right", "y": 170},
+                 {"type": "fact", "cue": "w:million", "dur_e": 0.2, "big": "~2.3 MILLION", "big_size": 92,
+                  "label": "blocks in the Great Pyramid (an estimate)", "tag": "TOTAL", "side": "right", "y": 170}],
+    "sfx": [{"type": "rumble", "cue": "w:pulls", "vol": 0.4}, {"type": "pop", "cue": "w:Nothing", "vol": 0.5}],
+})
+S({
+    "id": "q4", "chapter": "The Quarry", "set": "quarry", "tod": "day", "music": "tense", "amb": {"wind": 0.4}, "lead": 0.2,
+    "narration": [N("So how do you move a two ton rock across a river?", 0.5),
+                  N("The answer turned up in the oldest written papyri ever found.")],
+    "actors": [F(-300, [k("shrug", t=0, expr="curious"), k("check_watch", cue="w:answer", expr="curious", watch=1.0)])],
+    "crowd": [dict(QUARRY_CROWD, n=8, x=[100, 1300], tasks=["push_lever", "carve"])],
+    "camera": [{"t": 0, "x": 400, "y": -320, "zoom": 0.95}, {"cue": "w:answer", "track": "fardin", "dy": -250, "zoom": 1.7}],
+    "sfx": [{"type": "riser", "cue": "w:oldest", "off": -0.5, "vol": 0.5}],
+})
+
+# ============================================================ CH2 THE RIVER HIGHWAY
+S({
+    "id": "r1", "chapter": "The River Highway", "set": "nile", "tod": "morning", "music": "wonder", "amb": WATER, "lead": 0.4,
+    "set_opts": {"pyramid": 0.2, "pyramid_far_x": 900},
+    "narration": [N("The Nile was Egypt's highway."),
+                  N("Every year the river flooded. And the builders used that water to their advantage."),
+                  N("During the flood, boats could get much closer to Giza. Heavy cargo, less walking."),
+                  N("Fardin tries to hitch a ride. He floats straight through the deck."),
+                  N("Boats carried the stone across the river and along canals, right up to Giza.")],
+    "actors": [F(-250, [k("idle", t=0, expr="amazed"), k("walk", cue="w:Boats", to=250, dur=4.0, expr="happy")], y=70),
+               W("rower1", -900, [k("row", t=0)], y=-70, size=230, layer=-1)],
+    "props": [{"type": "barge", "x": 0, "y": -75, "s": 0.85, "anim": {"x": [[0, -600], ["w:Boats", 200, 4.0]]}},
+              {"type": "reed_boat", "x": -900, "y": -55, "s": 0.7, "anim": {"x": [[0, -1100], [12, -500]]}},
+              {"type": "barge", "x": 1200, "y": -95, "s": 0.6, "seed": 3, "cargo": 1, "anim": {"x": [[0, 1500], [12, 900]]}}],
+    "camera": [{"t": 0, "x": -500, "y": -300, "zoom": 1.0}, {"cue": "w:flooded", "x": 0, "y": -330, "zoom": 0.85},
+               {"cue": "w:Boats", "x": 200, "y": -300, "zoom": 1.2}],
+    "graphics": [{"type": "chapter", "t": 0.3, "dur": 3.6, "kicker": "CHAPTER 2", "title": "THE RIVER HIGHWAY"},
+                 {"type": "map", "cue": "w:canals", "dur_e": 0.2, "view": "egypt", "side": "right",
+                  "pins": [{"lat": 29.98, "lon": 31.13, "label": "Giza", "t": 0.2, "dx": -18},
+                           {"lat": 29.93, "lon": 31.30, "label": "Tura", "t": 0.4, "dy": 30, "color": [0.25, 0.92, 1.0]}]}],
+})
+S({
+    "id": "r2", "chapter": "The River Highway", "set": "tent", "tod": "day", "music": "wonder", "amb": {"wind": 0.4}, "lead": 0.3,
+    "set_opts": {"pyramid": 0.3},
+    "narration": [N("In twenty thirteen, archaeologists made an incredible find at Wadi al-Jarf, on the Red Sea coast.", 0.4),
+                  N("Papyrus scrolls. About forty five hundred years old.", 0.4),
+                  N("The oldest inscribed papyri ever discovered."),
+                  N("They belonged to an inspector named Merer. And they read like a work diary."),
+                  N("They date to the final years of Khufu's reign.")],
+    "actors": [W("merer", 120, [k("write_papyrus", t=0, hold="pen", expr="focused")], role="scribe", facing=1),
+               W("boss", 520, [k("stand_staff", t=0, hold="staff")], role="overseer", facing=-1),
+               F(-330, [k("lean_in", t=0, expr="curious"), k("amazed", cue="w:oldest", expr="amazed", pop=True),
+                        k("idle", cue="w:Merer", expr="happy")])],
+    "props": [{"type": "scribe_mat", "x": 150, "y": 5}, {"type": "water_jar", "x": 350, "y": 10}],
+    "camera": [{"t": 0, "x": 0, "y": -280, "zoom": 1.1}, {"cue": "w:Papyrus", "x": 140, "y": -200, "zoom": 2.0},
+               {"cue": "w:oldest", "track": "fardin", "dy": -250, "zoom": 1.8}, {"cue": "w:Merer", "x": 150, "y": -250, "zoom": 1.4}],
+    "graphics": [{"type": "map", "cue": "w:Wadi", "dur_to": "seg:0:end", "dur_off": 0.6, "view": "egypt", "side": "left",
+                  "pins": [{"lat": 28.88, "lon": 32.65, "label": "Wadi al-Jarf", "t": 0.5, "color": [1, 0.8, 0.3]}]},
+                 {"type": "papyrus", "cue": "w:oldest", "dur_e": 0.2, "side": "right", "title": "THE DIARY OF MERER",
+                  "sub": "Found 2013 at Wadi al-Jarf · oldest known inscribed papyri"}],
+    "sfx": [{"type": "hit", "cue": "w:oldest", "vol": 0.55}],
+})
+S({
+    "id": "r3", "chapter": "The River Highway", "set": "harbor", "tod": "day", "music": "wonder", "amb": WATER, "lead": 0.3,
+    "set_opts": {"pyramid": 0.3, "pyramid_s": 0.9, "pyramid_x": 500},
+    "narration": [N("Merer's logbook tracks his crew of about forty men, hauling limestone from Tura to Giza. By boat."),
+                  N("Load. Sail. Unload. Then back again for more."),
+                  N("Thousands of tons of stone, one boatload at a time."),
+                  N("Not a mystery. Not magic. A schedule, a manager, and a job to do.", 0.5),
+                  N("But once the stone reached Giza, the real problem began.")],
+    "actors": [F(-350, [k("idle", t=0, expr="happy"), k("cheer", cue="w:schedule", expr="laugh"), k("idle", cue="w:problem", expr="worried")])],
+    "crowd": [{"kind": "egypt", "n": 14, "x": [-150, 1400], "y": 10, "ydepth": 60, "size": [235, 275],
+               "tasks": ["carry_block_team", "pull_rope", "talk", "stand_staff", "carry_block_team"], "facing": "random"}],
+    "props": [{"type": "barge", "x": 600, "y": -85, "s": 0.85, "seed": 1}, {"type": "block_stack", "x": -700, "y": 25, "s": 0.75}],
+    "camera": [{"t": 0, "x": 500, "y": -300, "zoom": 0.95}, {"cue": "w:Not", "track": "fardin", "dy": -250, "zoom": 1.6},
+               {"cue": "w:once", "x": 300, "y": -400, "zoom": 0.85}],
+    "graphics": [{"type": "fact", "cue": "w:forty", "dur_to": "seg:0:end", "dur_off": 0.8, "big": "~40 MEN", "big_size": 100,
+                  "label": "in Merer's boat crew, moving Tura limestone to Giza", "tag": "THE DIARY SAYS", "side": "right", "y": 170}],
+})
+
+# ============================================================ CH3 THE SLEDGE TRICK
+GIZA_S = {"pyramid": 0.35, "pyramid_s": 1.0, "pyramid_x": 250}
+S({
+    "id": "s1", "chapter": "The Sledge Trick", "set": "giza", "tod": "day", "music": "tense", "amb": SITE, "weather": HOT, "lead": 0.4,
+    "set_opts": GIZA_S,
+    "narration": [N("Now the hard part. Getting the stone across the plateau."),
+                  N("No wheels for this job. No cranes."),
+                  N("Blocks were dragged on wooden sledges, pulled by teams with ropes."),
+                  N("Try dragging two tons across dry sand.", 0.4),
+                  N("The sledge digs in. A pile of sand builds up in front of it.")],
+    "actors": [F(-950, [k("walk", t=0.3, to=-500, dur=4.5, expr="curious"), k("idle", cue="w:digs", expr="worried")])],
+    "crowd": [{"kind": "egypt", "n": 8, "x": [-200, 550], "ydepth": 30, "tasks": ["pull_rope"], "facing": "right", "expr": "determined",
+               "events": [{"t": 0.3, "pose": "pull_rope", "to_rel": 260, "dur": 5.0},
+                          {"cue": "w:digs", "pose": "pull_rope", "to_rel": 300, "dur": 3.0, "inplace": 1}]}],
+    "sledges": [{"x": -500, "pullers": ["crowd:0"], "track": [{"t": 0.3, "to": -240, "dur": 5.0}, {"cue": "w:digs", "to": -200, "dur": 3.0}]}],
+    "props": [{"type": "dust_cloud", "x": -250, "y": 0, "s": 1.2}],
+    "camera": [{"t": 0, "x": -200, "y": -300, "zoom": 0.95}, {"cue": "w:Blocks", "x": 50, "y": -280, "zoom": 1.25},
+               {"cue": "w:Try", "x": -250, "y": -230, "zoom": 1.6}, {"cue": "w:digs", "x": -120, "y": -180, "zoom": 2.0}],
+    "graphics": [{"type": "chapter", "t": 0.3, "dur": 3.6, "kicker": "CHAPTER 3", "title": "THE SLEDGE TRICK"}],
+    "sfx": [{"type": "scrape", "t": 0.5, "vol": 0.6}, {"type": "scrape", "cue": "w:digs", "vol": 0.7}],
+})
+S({
+    "id": "s2", "chapter": "The Sledge Trick", "set": "giza", "tod": "day", "music": "tense", "amb": SITE, "weather": HOT, "lead": 0.2,
+    "set_opts": GIZA_S,
+    "narration": [N("So someone does something strange.", 0.5),
+                  N("He pours water on the sand.", 0.9),
+                  N("Fardin thinks it's a joke.", 0.4),
+                  N("It isn't.", 0.6)],
+    "actors": [W("pourer", 120, [k("walk", t=0, to=60, dur=1.2, hold="jar"), k("pour_water", cue="w:pours", hold="jar", expr="focused", face=-1)], facing=-1),
+               F(-420, [k("idle", t=0, expr="curious"), k("lean_in", cue="w:pours", expr="curious"),
+                        k("laugh", cue="w:joke", expr="laugh"), k("amazed", cue="w:isn't", expr="shock", pop=True)],
+                 say=[{"cue": "seg:1:end", "off": 0.05, "text": "Water? Seriously?"}])],
+    "crowd": [{"kind": "egypt", "n": 8, "x": [260, 1000], "ydepth": 30, "tasks": ["pull_rope"], "facing": "right", "expr": "focused"}],
+    "sledges": [{"x": -200, "pullers": ["crowd:0"], "pourer": "pourer", "wet_cue": "w:pours", "wet_off": 0.6,
+                 "track": [{"cue": "w:isn't", "to": 0, "dur": 1.5, "ease": "inQuad"}]}],
+    "camera": [{"t": 0, "x": -100, "y": -240, "zoom": 1.3}, {"cue": "w:pours", "x": 130, "y": -180, "zoom": 2.1},
+               {"cue": "w:Fardin", "track": "fardin", "dy": -250, "zoom": 1.9}, {"cue": "w:isn't", "x": 150, "y": -280, "zoom": 1.1}],
+    "sfx": [{"type": "pour", "cue": "w:pours", "off": 0.3, "vol": 0.7}],
+})
+S({
+    "id": "s3", "chapter": "The Sledge Trick", "set": "giza", "tod": "day", "music": "hopeful", "amb": SITE, "weather": HOT, "lead": 0.2,
+    "set_opts": GIZA_S,
+    "narration": [N("Wet sand is stiffer. The sledge stops plowing, and starts to glide."),
+                  N("In twenty fourteen, physicists tested this in a lab.", 0.4),
+                  N("With just the right amount of water, the pulling force dropped by about half."),
+                  N("Too much water, and it gets harder again. It has to be just right."),
+                  N("Egyptians even painted this trick in a tomb. Centuries later.")],
+    "actors": [W("pourer", 200, [k("pour_water", t=0, hold="jar", face=-1), k("walk", cue="w:physicists", to=1000, dur=5, hold="jar")], facing=-1),
+               F(-300, [k("amazed", t=0, expr="amazed"), k("walk", t=0.4, to=500, dur=5.5, expr="amazed"),
+                        k("cheer", cue="w:half", expr="laugh", pop=True), k("idle", cue="w:painted", expr="happy")])],
+    "crowd": [{"kind": "egypt", "n": 8, "x": [380, 1100], "ydepth": 30, "tasks": ["pull_rope"], "facing": "right", "expr": "happy",
+               "events": [{"t": 0.3, "pose": "pull_rope", "to_rel": 900, "dur": 9.0}]}],
+    "sledges": [{"x": 0, "pullers": ["crowd:0"], "wet_from": 0, "track": [{"t": 0.3, "to": 900, "dur": 9.0}]}],
+    "camera": [{"t": 0, "x": 100, "y": -260, "zoom": 1.2}, {"t": 4.0, "x": 600, "y": -300, "zoom": 0.95},
+               {"cue": "w:half", "track": "fardin", "dy": -250, "zoom": 1.7}, {"cue": "w:painted", "x": 800, "y": -300, "zoom": 1.1}],
+    "graphics": [{"type": "fact", "cue": "w:physicists", "dur_to": "seg:2:end", "dur_off": 1.0, "big": "~50%", "big_size": 110,
+                  "label": "less pulling force on wet sand (University of Amsterdam, 2014)", "tag": "PHYSICS", "side": "left", "y": 170},
+                 {"type": "callout", "cue": "w:half", "off": 0.3, "dur": 1.6, "text": "HALF!", "x": 0.7, "y": 0.28, "color": [0.3, 0.95, 1.0]}],
+    "sfx": [{"type": "hit", "cue": "w:half", "vol": 0.8}, {"type": "scrape", "t": 0.4, "vol": 0.3}],
+})
+S({
+    "id": "s4", "chapter": "The Sledge Trick", "set": "giza", "tod": "golden", "music": "hopeful", "amb": SITE, "lead": 0.2,
+    "set_opts": GIZA_S,
+    "narration": [N("Simple. Clever. And it works.", 0.4),
+                  N("Fardin applauds. Nobody hears him."),
+                  N("But the most surprising thing about these workers is still coming.")],
+    "actors": [F(-100, [k("cheer", t=0, expr="laugh"), k("idle", cue="w:most", expr="curious")])],
+    "crowd": [{"kind": "egypt", "n": 10, "x": [100, 1100], "ydepth": 40, "tasks": ["cheer_team", "wipe_sweat"], "facing": "left"}],
+    "camera": [{"t": 0, "x": 400, "y": -300, "zoom": 1.0}, {"cue": "w:most", "track": "fardin", "dy": -250, "zoom": 1.8}],
+    "sfx": [{"type": "cheer", "t": 0.2, "vol": 0.6}, {"type": "riser", "cue": "w:still", "off": -0.8, "vol": 0.5}],
+})
+
+# ============================================================ CH4 THE WORKERS' VILLAGE
+VIL = {"pyramid": 0.45}
+S({
+    "id": "v1", "chapter": "The Workers' Village", "set": "village", "tod": "golden", "music": "playful", "amb": SITE, "lead": 0.4,
+    "set_opts": VIL,
+    "narration": [N("So who were these workers?", 0.5),
+                  N("Here is where the story you grew up with falls apart."),
+                  N("For a long time, many people believed they were slaves. Hollywood loved that idea."),
+                  N("Then archaeologists dug up the workers' own town.")],
+    "actors": [F(-600, [k("walk", t=0.2, to=-200, dur=3.0, expr="curious"), k("look_around", cue="w:Hollywood", expr="curious"),
+                        k("amazed", cue="w:town", expr="amazed", pop=True)])],
+    "crowd": [{"kind": "egypt", "n": 12, "x": [-300, 1300], "ydepth": 60, "tasks": ["talk", "watch", "carry", "talk", "eat"], "facing": "random",
+               "holds": {"carry": None, "eat": "bread"}}],
+    "camera": [{"t": 0, "x": 300, "y": -340, "zoom": 0.85}, {"cue": "w:long", "x": -100, "y": -280, "zoom": 1.2},
+               {"cue": "w:Then", "x": 200, "y": -320, "zoom": 0.95}],
+    "graphics": [{"type": "chapter", "t": 0.3, "dur": 3.6, "kicker": "CHAPTER 4", "title": "THE WORKERS' VILLAGE"}],
+})
+S({
+    "id": "v2", "chapter": "The Workers' Village", "set": "village", "tod": "golden", "music": "playful", "amb": SITE, "lead": 0.3,
+    "set_opts": VIL,
+    "narration": [N("It sits just south of the pyramids. Today it's called Heit el-Ghurab."),
+                  N("Archaeologists found bakeries, with stacks of clay bread moulds."),
+                  N("Bread and beer were the everyday food of ancient Egypt."),
+                  N("Fardin can smell the bread. He just can't eat it. Ghost life is hard.")],
+    "actors": [W("baker", 60, [k("bake", t=0, expr="happy")], role="baker", facing=-1),
+               W("baker2", 420, [k("bake", t=0, arg=1.3, expr="focused")], role="baker", facing=1),
+               W("eater", 760, [k("eat", t=0, hold="bread", expr="happy")], facing=-1),
+               F(-330, [k("lean_in", t=0, expr="happy"), k("amazed", cue="w:bakeries", expr="amazed"), k("laugh", cue="w:beer", expr="laugh")])],
+    "props": [{"type": "oven", "x": -110, "y": 10}, {"type": "bread_moulds", "x": 260, "y": 20}, {"type": "beer_jars", "x": 1050, "y": 10}],
+    "camera": [{"t": 0, "x": 100, "y": -250, "zoom": 1.3}, {"cue": "w:bakeries", "x": 100, "y": -170, "zoom": 2.0},
+               {"cue": "w:Bread", "x": 600, "y": -260, "zoom": 1.3}],
+    "graphics": [{"type": "lower", "cue": "w:Heit", "dur": 3.2, "text": "HEIT EL-GHURAB", "sub": "the pyramid builders' town, south of the plateau"}],
+    "sfx": [{"type": "pop", "cue": "w:beer", "vol": 0.4}],
+})
+S({
+    "id": "v3", "chapter": "The Workers' Village", "set": "village", "tod": "golden", "music": "playful", "amb": SITE, "lead": 0.3,
+    "set_opts": VIL,
+    "narration": [N("And meat. Lots of it.", 0.5),
+                  N("Researchers found huge numbers of animal bones. Cattle, sheep, and goats."),
+                  N("Some researchers think the animals were raised on farms in the Nile Delta, then brought here."),
+                  N("These workers were well fed.", 1.2)],
+    "actors": [W("butch", 200, [k("butcher", t=0, hold="flake", expr="focused")], facing=1),
+               W("eat2", 600, [k("eat", t=0, hold="meat", expr="happy")], facing=-1),
+               F(-250, [k("idle", t=0, expr="shock"), k("amazed", cue="w:bones", expr="amazed"), k("idle", cue="w:fed", expr="sad")],
+                 say=[{"cue": "seg:2:end", "off": 0.05, "text": "I'm so hungry."}])],
+    "props": [{"type": "bones", "x": 380, "y": 20, "s": 1.4}, {"type": "oven", "x": 900, "y": 0}],
+    "camera": [{"t": 0, "x": 150, "y": -260, "zoom": 1.4}, {"cue": "w:Researchers", "x": 300, "y": -230, "zoom": 1.7},
+               {"cue": "w:These", "track": "fardin", "dy": -250, "zoom": 2.0}],
+    "graphics": [{"type": "fact", "cue": "w:Cattle", "dur_to": "seg:1:end", "dur_off": 0.8, "big": "MEAT", "big_size": 110,
+                  "label": "cattle, sheep and goat bones in huge numbers at the workers' town", "tag": "ON THE MENU", "side": "right", "y": 170}],
+})
+S({
+    "id": "v4", "chapter": "The Workers' Village", "set": "tent", "tod": "day", "music": "playful", "amb": {"wind": 0.4}, "lead": 0.3,
+    "set_opts": {"pyramid": 0.5},
+    "narration": [N("Work crews had names. Proud ones."),
+                  N("Inside the pyramid, archaeologists found gang names painted on the stones."),
+                  N("One of them was called", 0.4), N("Friends of Khufu.", 0.5),
+                  N("Naming your crew after the king was probably a point of pride.")],
+    "actors": [W("scr", 100, [k("write_papyrus", t=0, hold="pen", expr="focused")], role="scribe", facing=1),
+               F(-300, [k("idle", t=0, expr="curious"), k("laugh", cue="w:Friends", expr="laugh", pop=True)])],
+    "crowd": [{"kind": "egypt", "n": 6, "x": [400, 1100], "ydepth": 30, "tasks": ["cheer_team", "talk"], "facing": "left"}],
+    "props": [{"type": "scribe_mat", "x": 130, "y": 5}],
+    "camera": [{"t": 0, "x": 300, "y": -300, "zoom": 1.0}, {"cue": "w:Inside", "x": 120, "y": -200, "zoom": 1.8},
+               {"cue": "w:Friends", "x": 0, "y": -280, "zoom": 1.3}],
+    "graphics": [{"type": "callout", "cue": "w:Friends", "dur": 2.4, "text": "“FRIENDS OF KHUFU”", "y": 0.2, "size": 96, "color": [1, 0.86, 0.2]}],
+    "sfx": [{"type": "cheer", "cue": "w:Friends", "vol": 0.6}],
+})
+S({
+    "id": "v5", "chapter": "The Workers' Village", "set": "village", "tod": "dusk", "music": "calm", "amb": SITE, "lead": 0.3,
+    "set_opts": VIL,
+    "narration": [N("And when a worker got hurt, someone took care of him."),
+                  N("Skeletons from the workers' cemetery show broken bones that healed properly. That means medical care."),
+                  N("Somebody here cared whether these people lived.")],
+    "actors": [W("patient", 120, [k("sit", t=0, expr="sad")], facing=1),
+               W("healer", 320, [k("crouch", t=0, hold="jar", expr="focused")], role="healer", facing=-1),
+               F(-300, [k("idle", t=0, expr="worried"), k("amazed", cue="w:healed", expr="amazed")])],
+    "props": [{"type": "torch_post", "x": 520, "y": 0}],
+    "camera": [{"t": 0, "x": 200, "y": -200, "zoom": 1.7}, {"cue": "w:Skeletons", "x": 100, "y": -260, "zoom": 1.25},
+               {"cue": "w:medical", "track": "fardin", "dy": -250, "zoom": 1.7}],
+    "graphics": [{"type": "fact", "cue": "w:healed", "dur_e": 0.2, "big": "HEALED", "big_size": 100,
+                  "label": "broken bones set and healed: evidence of medical care", "tag": "SKELETONS SHOW", "side": "right", "y": 170}],
+})
+S({
+    "id": "v6", "chapter": "The Workers' Village", "set": "giza", "tod": "dusk", "music": "hopeful", "amb": {"wind": 0.4}, "lead": 0.3,
+    "set_opts": {"pyramid": 0.5, "pyramid_s": 0.9, "pyramid_x": 700},
+    "narration": [N("Then came the biggest clue of all.", 0.6),
+                  N("The workers were buried in their own tombs, right beside the pyramids. Near their king."),
+                  N("Most archaeologists say that is not how you treat slaves.", 0.6),
+                  N("Many were probably farmers, working in rotating crews, paid in food."),
+                  N("Thousands of them. Skilled, organised Egyptian workers.")],
+    "actors": [F(-350, [k("idle", t=0, expr="curious"), k("amazed", cue="w:buried", expr="amazed"),
+                        k("hands_on_head", cue="w:slaves", expr="shock", pop=True), k("cheer", cue="w:Skilled", expr="laugh")])],
+    "props": [{"type": "mudbrick_house", "x": -50, "y": -20, "s": 0.6, "w": 0.7}, {"type": "mudbrick_house", "x": 250, "y": -30, "s": 0.5, "w": 0.6},
+              {"type": "torch_post", "x": 120, "y": 0}],
+    "crowd": [{"kind": "egypt", "n": 10, "x": [400, 1500], "y": -10, "ydepth": 50, "tasks": ["watch", "talk", "cheer_team"], "facing": "random"}],
+    "camera": [{"t": 0, "x": 100, "y": -300, "zoom": 1.1}, {"cue": "w:buried", "x": 150, "y": -330, "zoom": 0.95},
+               {"cue": "w:slaves", "track": "fardin", "dy": -250, "zoom": 1.9, "ease": "outBack"},
+               {"cue": "w:farmers", "x": 600, "y": -320, "zoom": 1.0}, {"cue": "w:Thousands", "x": 700, "y": -380, "zoom": 0.85}],
+    "graphics": [{"type": "myth", "cue": "w:slaves", "dur_e": 0.3, "myth": "Slaves built the pyramids",
+                  "fact": "Fed, organised Egyptian workers, buried near their king", "stamp": 0.6}],
+    "sfx": [{"type": "hit", "cue": "w:slaves", "off": 0.6, "vol": 0.85}, {"type": "cheer", "cue": "w:Skilled", "vol": 0.5}],
+})
+
+# ============================================================ CH5 RISING
+S({
+    "id": "p1", "chapter": "Rising", "set": "giza", "tod": "day", "music": "hopeful", "amb": SITE, "lead": 0.4, "weather": "sand",
+    "set_opts": {"pyramid": [[0.4, 0.45], ["w:rises", 0.75, 2.5]], "pyramid_s": 1.0, "pyramid_x": 300},
+    "narration": [N("Fardin twists his watch. Months fly by. Then years.", 0.4),
+                  N("Season after season, the pyramid rises.", 0.6),
+                  N("Each new layer is a little smaller than the one below. The top creeps closer every year."),
+                  N("But how did they get the blocks all the way up there?")],
+    "actors": [F(-600, [k("tap_watch", t=0, expr="determined", watch=1.5), k("amazed", cue="w:Season", expr="amazed", watch=0.3),
+                        k("point", cue="w:how", expr="curious")])],
+    "crowd": [{"kind": "egypt", "n": 16, "x": [-300, 1500], "y": -30, "ydepth": 60, "size": [190, 230],
+               "tasks": ["pull_rope", "carry_block_team", "talk", "push_lever"], "facing": "random"}],
+    "camera": [{"t": 0, "track": "fardin", "dy": -250, "zoom": 1.7}, {"cue": "w:Months", "x": 300, "y": -420, "zoom": 0.85},
+               {"cue": "w:Season", "x": 300, "y": -520, "zoom": 0.75}, {"cue": "w:how", "x": 0, "y": -330, "zoom": 1.1}],
+    "fx": [{"type": "speedlines", "cue": "w:Months", "dur": 2.0}, {"type": "ripple", "cue": "w:Months", "dur": 1.2, "amt": 0.5}],
+    "graphics": [{"type": "chapter", "t": 0.3, "dur": 3.4, "kicker": "CHAPTER 5", "title": "RISING"},
+                 {"type": "fact", "cue": "w:Season", "dur_to": "seg:1:end", "dur_off": 0.5, "big": "~20 YEARS", "big_size": 100,
+                  "label": "to build it: the traditional estimate", "tag": "CONSTRUCTION", "side": "right", "y": 170}],
+    "sfx": [{"type": "riser", "cue": "w:Months", "vol": 0.6}, {"type": "hit", "cue": "w:rises", "off": 0.3, "vol": 0.6}],
+})
+S({
+    "id": "p2", "chapter": "Rising", "set": "giza", "tod": "day", "music": "tense", "amb": SITE, "lead": 0.2,
+    "set_opts": {"pyramid": 0.75, "pyramid_s": 1.0, "pyramid_x": 300},
+    "narration": [N("Honest answer?", 0.5), N("Scholars still debate it."),
+                  N("A long straight ramp? A ramp spiralling around the outside? Some even suggest a ramp inside the pyramid."),
+                  N("Every idea has problems. A straight ramp to the top would have to be enormous.")],
+    "actors": [F(-300, [k("shrug", t=0, expr="curious"), k("point", cue="w:straight", expr="curious"), k("amazed", cue="w:inside", expr="amazed")])],
+    "camera": [{"t": 0, "track": "fardin", "dy": -250, "zoom": 1.8}, {"cue": "w:straight", "x": 0, "y": -420, "zoom": 0.85},
+               {"cue": "w:inside", "x": 300, "y": -480, "zoom": 1.0}],
+    "graphics": [{"type": "tag", "cue": "w:debate", "dur_e": 0.2, "text": "STILL DEBATED"},
+                 {"type": "ramps", "cue": "w:straight", "dur_e": 0.2, "item_cues": ["w:straight", "w:spiralling", "w:inside"]}],
+})
+S({
+    "id": "p3", "chapter": "Rising", "set": "ramp", "tod": "day", "music": "tense", "amb": SITE, "lead": 0.2, "weather": HOT,
+    "set_opts": {"pyramid": 0.75, "pyramid_x": 1300, "pyramid_s": 1.7, "slope": {"k": -0.36, "x0": -800, "x1": 1600}},
+    "narration": [N("One real clue turned up in twenty eighteen, at an ancient quarry called Hatnub."),
+                  N("A steep ramp, with a staircase on each side and rows of post holes for hauling ropes."),
+                  N("Teams could pull blocks up a slope much steeper than anyone expected."),
+                  N("And it dates to the reign of Khufu.")],
+    "actors": [F(-500, [k("idle", t=0, expr="curious"), k("climb", cue="w:steep", expr="determined"), k("amazed", cue="w:Khufu", expr="amazed", pop=True)])],
+    "crowd": [{"kind": "egypt", "n": 7, "x": [150, 800], "tasks": ["pull_rope"], "facing": "right", "expr": "determined",
+               "events": [{"t": 0.2, "pose": "pull_rope", "to_rel": 260, "dur": 9.0}]}],
+    "sledges": [{"x": -150, "pullers": ["crowd:0"], "track": [{"t": 0.2, "to": 110, "dur": 9.0}]}],
+    "camera": [{"t": 0, "x": 100, "y": -380, "zoom": 0.9}, {"cue": "w:steep", "x": 300, "y": -400, "zoom": 1.3},
+               {"cue": "w:Khufu", "track": "fardin", "dy": -260, "zoom": 1.7}],
+    "graphics": [{"type": "fact", "cue": "w:Hatnub", "dur_e": 0.2, "big": "HATNUB", "big_size": 100,
+                  "label": "a ramp system from Khufu's reign, found in 2018", "tag": "EVIDENCE", "side": "left", "y": 170}],
+    "sfx": [{"type": "scrape", "t": 0.3, "vol": 0.4}],
+})
+S({
+    "id": "p4", "chapter": "Rising", "set": "ramp", "tod": "day", "music": "tense", "amb": SITE, "lead": 0.2, "weather": HOT,
+    "set_opts": {"pyramid": 0.8, "pyramid_x": 1300, "pyramid_s": 1.7, "slope": {"k": -0.36, "x0": -800, "x1": 1600}},
+    "narration": [N("Up here, every mistake is dangerous.", 0.3),
+                  N("A rope slips.", 0.6),
+                  N("The block slides back. The team digs in.", 0.5),
+                  N("They hold it.", 0.6),
+                  N("Fardin's heart is pounding. He's a ghost, and he still ducked."),
+                  N("Thousands of blocks. Every single day. For about twenty years.")],
+    "actors": [F(-450, [k("idle", t=0, expr="worried"), k("jump_scared", cue="w:slips", expr="shock", pop=True),
+                        k("crouch_hide", cue="w:slides", expr="scared"), k("cheer", cue="w:hold", expr="laugh", pop=True),
+                        k("wipe_sweat", cue="w:Thousands", expr="happy")],
+                 say=[{"cue": "w:digs", "off": 0.3, "text": "Hold it! Hold it!"}])],
+    "crowd": [{"kind": "egypt", "n": 7, "x": [250, 900], "tasks": ["pull_rope"], "facing": "right", "expr": "focused",
+               "events": [{"cue": "w:slides", "pose": "pull_rope", "to_rel": -180, "dur": 0.9, "expr": "scared"},
+                          {"cue": "w:hold", "pose": "cheer_team", "expr": "happy"}]}],
+    "sledges": [{"x": 0, "pullers": ["crowd:0"], "track": [{"cue": "w:slides", "to": -180, "dur": 0.9, "ease": "outCubic"}]}],
+    "camera": [{"t": 0, "x": 200, "y": -360, "zoom": 1.2}, {"cue": "w:slips", "x": 100, "y": -300, "zoom": 1.6, "ease": "outCubic"},
+               {"cue": "w:slides", "x": -100, "y": -280, "zoom": 1.4}, {"cue": "w:hold", "track": "fardin", "dy": -250, "zoom": 1.8},
+               {"cue": "w:Thousands", "x": 400, "y": -460, "zoom": 0.85}],
+    "shake": [{"start": {"cue": "w:slides"}, "end": {"cue": "w:hold"}, "amp": 14}],
+    "fx": [{"type": "danger", "cue": "w:slips", "dur_to": "w:hold"}, {"type": "dust", "cue": "w:slides", "off": 0.8, "x": -200, "y": 0, "dur": 1.0}],
+    "sfx": [{"type": "scrape", "cue": "w:slides", "vol": 0.9}, {"type": "heartbeat", "cue": "w:slips", "vol": 0.6},
+            {"type": "cheer", "cue": "w:hold", "vol": 0.7}],
+})
+S({
+    "id": "p5", "chapter": "Rising", "set": "desert_night", "tod": "night", "music": "calm", "amb": NIGHT, "lead": 0.3,
+    "narration": [N("At night, the crews rest by the fire."),
+                  N("Fardin looks up. The stars over Giza are blazing."),
+                  N("And the finished pyramid will not look like the one you know.")],
+    "actors": [F(-250, [k("sit", t=0, expr="happy"), k("idle", cue="w:finished", expr="curious")])],
+    "crowd": [{"kind": "egypt", "n": 8, "x": [0, 1100], "ydepth": 50, "tasks": ["sit", "talk", "eat", "sit"], "facing": "random",
+               "holds": {"eat": "bread"}}],
+    "props": [{"type": "campfire", "x": 350}, {"type": "torch_post", "x": -650}, {"type": "torch_post", "x": 1150}],
+    "camera": [{"t": 0, "x": 350, "y": -320, "zoom": 1.0}, {"cue": "w:finished", "track": "fardin", "dy": -250, "zoom": 1.7}],
+    "sfx": [{"type": "riser", "cue": "w:know", "off": -1.0, "vol": 0.4}],
+})
+
+# ============================================================ CH6 THE SHINING PYRAMID
+S({
+    "id": "x1", "chapter": "The Shining Pyramid", "set": "giza", "tod": "morning", "music": "hopeful", "amb": SITE, "lead": 0.4,
+    "set_opts": {"pyramid": 1.0, "casing": [[0.5, 0.15], ["w:glass", 1.0, 2.5]], "pyramid_s": 1.0, "pyramid_x": 300, "ramp": False},
+    "narration": [N("The final step. The casing stones."),
+                  N("Polished white Tura limestone, fitted over every side. Smooth as glass."),
+                  N("Each casing stone was cut at an angle, so all four sides became perfect smooth slopes.")],
+    "actors": [F(-500, [k("walk", t=0, to=-300, dur=2, expr="curious"), k("amazed", cue="w:glass", expr="amazed")])],
+    "crowd": [{"kind": "egypt", "n": 10, "x": [-200, 1300], "y": -20, "ydepth": 50, "tasks": ["carry_block_team", "pull_rope", "stand_staff"],
+               "facing": "random"}],
+    "props": [{"type": "block", "x": 50, "y": 30, "kind": "polished"}, {"type": "block", "x": 700, "y": 40, "kind": "polished", "s": 1.1}],
+    "camera": [{"t": 0, "x": 0, "y": -250, "zoom": 1.4}, {"cue": "w:Polished", "x": 300, "y": -420, "zoom": 0.85}],
+    "graphics": [{"type": "chapter", "t": 0.3, "dur": 3.4, "kicker": "CHAPTER 6", "title": "THE SHINING PYRAMID"}],
+})
+S({
+    "id": "x2", "chapter": "The Shining Pyramid", "set": "giza", "tod": "day", "music": "hopeful", "amb": {"wind": 0.5}, "lead": 0.3,
+    "set_opts": {"pyramid": 1.0, "casing": 1.0, "gleam": 1.0, "pyramid_s": 1.1, "pyramid_x": 250, "ramp": False}, "weather": "glare",
+    "narration": [N("And when the sun hit it...", 0.8), N("it shone.", 0.6),
+                  N("Like a giant mirror in the desert.", 0.4),
+                  N("About one hundred and forty six metres tall. The tallest human-made structure on Earth."),
+                  N("Its base covers more than five hectares. That's about seven football fields.", 0.3),
+                  N("And it stayed the tallest for nearly four thousand years.")],
+    "actors": [F(-450, [k("amazed", t=0, expr="amazed"), k("cheer", cue="w:shone", expr="laugh", pop=True)], y=120)],
+    "camera": [{"t": 0, "x": -200, "y": -30, "zoom": 1.5}, {"cue": "w:shone", "x": 200, "y": -520, "zoom": 0.8, "ease": "inOutCubic"},
+               {"cue": "w:tallest#2", "x": 250, "y": -420, "zoom": 1.0}],
+    "fx": [{"type": "flash", "cue": "w:shone", "dur": 0.5, "amt": 0.6}],
+    "graphics": [{"type": "fact", "cue": "w:metres", "dur_to": "seg:2:end", "dur_off": 0.6, "big": "146 m", "big_size": 110,
+                  "label": "original height (481 ft) of Khufu's pyramid", "tag": "RECORD", "side": "left", "y": 170},
+                 {"type": "timeline", "cue": "w:stayed", "dur_e": 0.2, "span": 4600, "left": "c. 2560 BC · GREAT PYRAMID", "right": "TODAY",
+                  "marks": [{"ago": 715, "label": "AD 1311 · LINCOLN CATHEDRAL TAKES THE RECORD", "align": "right", "row": 0, "t": 1.4}],
+                  "marker": False, "caption": "Tallest human-made structure for nearly 4,000 years"}],
+    "sfx": [{"type": "hit", "cue": "w:shone", "vol": 0.9}, {"type": "shimmer", "cue": "w:shone", "vol": 0.5}],
+})
+S({
+    "id": "x3", "chapter": "The Shining Pyramid", "set": "pyramid_top", "tod": "golden", "music": "calm", "amb": {"wind": 0.6}, "lead": 0.3,
+    "set_opts": {"pyramid": 1.0, "casing": 1.0}, "weather": "glare",
+    "narration": [N("Fardin climbs to the very top."),
+                  N("Below him, the green ribbon of the Nile valley. Beyond it, endless desert."),
+                  N("Today, most of that white casing is gone. Much of it was carried away for other buildings, centuries later."),
+                  N("But for a while, this was the brightest thing in the desert.")],
+    "actors": [F(-50, [k("climb", t=0, expr="determined"), k("sit", t=2.0, expr="happy"), k("idle", cue="w:brightest", expr="amazed")])],
+    "camera": [{"t": 0, "x": -50, "y": -200, "zoom": 1.7}, {"cue": "w:Today", "x": 0, "y": -420, "zoom": 0.9},
+               {"cue": "w:brightest", "track": "fardin", "dy": -230, "zoom": 1.6}],
+    "graphics": [{"type": "tag", "cue": "w:gone", "dur": 3.5, "text": "CASING LATER REMOVED FOR BUILDING STONE"}],
+})
+S({
+    "id": "x4", "chapter": "The Shining Pyramid", "set": "pyramid_top", "tod": "dusk", "music": "wonder", "amb": {"wind": 0.6}, "lead": 0.3,
+    "set_opts": {"pyramid": 1.0, "casing": 1.0},
+    "narration": [N("And here is the strangest part.", 0.6),
+                  N("Cleopatra lived closer in time to the Moon landing...", 0.4),
+                  N("than to the building of this pyramid.", 1.2)],
+    "actors": [F(-50, [k("sit", t=0, expr="curious"), k("idle", cue="w:Cleopatra", expr="curious"),
+                       k("hands_on_head", cue="w:building", expr="shock", pop=True)],
+                 say=[{"cue": "seg:2:end", "off": 0.1, "text": "Wait, what?!"}])],
+    "camera": [{"t": 0, "track": "fardin", "dy": -230, "zoom": 1.5}, {"cue": "w:Cleopatra", "x": 0, "y": -380, "zoom": 1.0},
+               {"cue": "w:building", "track": "fardin", "dy": -250, "zoom": 2.1, "ease": "outBack"}],
+    "graphics": [{"type": "timeline", "cue": "w:Cleopatra", "dur_e": 0.1, "span": 4600, "left": "2560 BC · GREAT PYRAMID", "right": "TODAY",
+                  "marks": [{"ago": 2056, "label": "30 BC · CLEOPATRA DIES", "row": 0, "t": 0.6},
+                            {"ago": 57, "label": "1969 · MOON LANDING", "align": "right", "row": 1, "t": 1.6}],
+                  "marker": False, "caption": "Cleopatra → Moon landing: about 2,000 years. Pyramid → Cleopatra: about 2,500."}],
+    "sfx": [{"type": "hit", "cue": "w:building", "vol": 0.9}],
+})
+S({
+    "id": "x5", "chapter": "The Shining Pyramid", "set": "savanna", "tod": "dusk", "music": "dark", "amb": {"wind": 0.6}, "lead": 0.3,
+    "narration": [N("Then Fardin's watch glitches.", 0.4), N("The ground starts to shake.", 0.4),
+                  N("And far away, a mountain is smoking.", 0.6),
+                  N("Fardin has a very bad feeling about this.", 0.4), N("Next stop...", 0.5), N("Pompeii.", 0.8)],
+    "actors": [F(-300, [k("check_watch", t=0, expr="worried", watch=1.6), k("jump_scared", cue="w:shake", expr="shock", pop=True),
+                        k("point", cue="w:mountain", expr="scared", face=1), k("amazed", cue="w:Pompeii", expr="shock")])],
+    "props": [{"type": "volcano", "x": 520, "y": -120, "s": 1.0}],
+    "camera": [{"t": 0, "track": "fardin", "dy": -250, "zoom": 1.8}, {"cue": "w:shake", "x": 0, "y": -300, "zoom": 1.1},
+               {"cue": "w:mountain", "x": 600, "y": -450, "zoom": 1.0}, {"cue": "w:Pompeii", "x": 650, "y": -500, "zoom": 1.35}],
+    "shake": [{"start": {"cue": "w:shake"}, "end": {"e": 0.2}, "amp": 12}],
+    "fx": [{"type": "ripple", "cue": "w:glitches", "dur": 1.0, "amt": 0.7}, {"type": "flash_in", "e": 0.4, "dur": 0.4}],
+    "graphics": [{"type": "lower", "cue": "w:Next", "dur_e": 0.4, "text": "NEXT: POMPEII", "sub": "AD 79 · the day Vesuvius erupted"}],
+    "sfx": [{"type": "buzz", "cue": "w:glitches", "vol": 0.6}, {"type": "rumble", "cue": "w:shake", "vol": 0.9}, {"type": "hit", "cue": "w:Pompeii", "vol": 0.9}],
+})
+S({
+    "id": "x6", "chapter": "The Shining Pyramid", "set": "void", "music": "playful", "amb": {"tunnel": 0.4}, "lead": 0.3, "tail": 2.4, "no_dip": True,
+    "tunnel": [[0, 1.0], [4, 0.4]],
+    "narration": [N("Subscribe, or Fardin stays lost in time.")],
+    "actors": [F(0, [k("tumble", t=0, expr="shock"), k("wave", cue="w:lost", expr="grin")], y=-80)],
+    "camera": [{"t": 0, "x": 0, "y": -260, "zoom": 1.0}, {"e": 0.1, "x": 0, "y": -260, "zoom": 1.15}],
+    "graphics": [{"type": "subscribe", "t": 0.2, "dur_e": 0.2, "text": "SUBSCRIBE", "sub": "or Fardin stays lost in time"}],
+    "fx": [{"type": "fade_out", "e": 0.8, "dur": 0.8}],
+    "sfx": [{"type": "pop", "t": 0.3, "vol": 0.5}],
+})
+
+script = {"episode": "L002", "series": "Time Ghost", "title": "I Watched the Great Pyramid Being Built",
+          "voice": {"name": "kokoro:am_fenrir", "rate": "1.04", "pitch": "0"},
+          "fardin_voice": {"name": "kokoro:am_eric", "rate": "1.12", "pitch": "0"},
+          "scenes": scenes}
+json.dump(script, open(os.path.join(HERE, "script.json"), "w"), indent=1, ensure_ascii=False)
+lines = [(n if isinstance(n, str) else n["text"]) for s in scenes for n in s.get("narration", [])]
+words = sum(len(l.split()) for l in lines)
+longest = max(len(l.split()) for l in lines)
+sets = sorted({s["set"] for s in scenes})
+print(f"wrote script.json: {len(scenes)} scenes, {words} words, longest line {longest} words, {len(sets)} sets: {sets}")

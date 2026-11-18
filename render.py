@@ -75,7 +75,7 @@ def main():
         print(f"[stills] written to {sd}")
     if a.test:
         out = os.path.join(out_dir, f"timeghost_{num}_test.mp4")
-        R.render_video(tl_path, out, mix, t1=a.test, procs=a.procs, chunk_s=5)
+        R.render_video(tl_path, out, mix, t1=a.test, procs=a.procs, chunk_s=5, captions=not a.no_captions)
         print("[test]", out)
         qc.report(out, expect_dur=min(a.test, tl["duration"]), check_len=False)
     full = os.path.join(out_dir, f"timeghost_{num}.mp4")
