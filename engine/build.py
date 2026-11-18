@@ -24,7 +24,8 @@ from .core import hrand
 FPS = 30
 DEFAULT_VOICE = {"name": "kokoro:am_fenrir", "rate": "1.04", "pitch": "0"}
 DEFAULT_FARDIN_VOICE = {"name": "kokoro:am_eric", "rate": "1.12", "pitch": "0"}
-MUSIC_BELOW_VOICE_DB = 10.5   # music RMS relative to narration RMS (before ducking)
+MUSIC_BELOW_VOICE_DB = 8.5   # music loudness (K-weighted) below narration, in the gaps
+MUSIC_DUCK_DB = 13.0          # extra attenuation under speech  -> ~21-22 dB below narration
 
 
 def _norm_word(w):
@@ -308,22 +309,38 @@ def build(ep_dir, force_tts=False):
         reps = int(np.ceil(n / len(m)))
         mus = np.tile(m, reps)[:n] * 0.25
     voice_all = vo + fv_tr * 0.9
-    duck = A.duck_curve(voice_all, 0.65)
+    duck = A.duck_curve(voice_all, 1 - 10 ** (-MUSIC_DUCK_DB / 20))
+    duck_amb = A.duck_curve(voice_all, 0.6)
     duck_sfx = A.duck_curve(voice_all, 0.35)
     # normalise voice to a fixed level first
     vr = np.sqrt(np.mean(vo[np.abs(vo) > 0.01] ** 2)) if np.any(np.abs(vo) > 0.01) else 1
     g = 0.16 / max(vr, 1e-4)
-    # music sits ~10.5 dB under the narration (measured where music plays), then ducks under speech
+    speech, gaps = A.speech_masks(vo)
+    Lv = A.kw_db(vo * g, speech)
+    # music (generated score or looped music.mp3) sits MUSIC_BELOW_VOICE_DB under the narration in
+    # perceived loudness (K-weighted), then ducks a further MUSIC_DUCK_DB under speech
     mact = np.abs(mus) > 1e-4
     if mact.any():
-        mr = np.sqrt(np.mean(mus[mact] ** 2))
-        mus *= 0.16 * 10 ** (-MUSIC_BELOW_VOICE_DB / 20) / max(mr, 1e-6)
-    mix = voice_all * g + mus * duck + amb * duck * 0.55 + sfx * duck_sfx * 0.55
+        Lm = A.kw_db(mus, mact)
+        mus *= 10 ** ((Lv - MUSIC_BELOW_VOICE_DB - Lm) / 20)
+    mus_d = mus * duck
+    mix = voice_all * g + mus_d + amb * duck_amb * 0.55 + sfx * duck_sfx * 0.55
     mix = A.master(mix)
     mix_path = os.path.join(bdir, "mix.wav")
     A.write_wav(mix_path, mix)
+    pre = np.sqrt(np.mean(mix ** 2))
     A.loudnorm_wav(mix_path, I=-15.0, TP=-1.6)
-    A.write_wav(os.path.join(bdir, "voice.wav"), np.clip(voice_all * g, -1, 1))
+    post = A.decode(mix_path)
+    kg = np.sqrt(np.mean(post ** 2)) / max(pre, 1e-9)  # loudnorm (linear) gain
+    A.write_wav(os.path.join(bdir, "voice.wav"), np.clip(voice_all * g * kg, -1, 1))
+    os.makedirs(os.path.join(bdir, "stems"), exist_ok=True)
+    A.write_wav(os.path.join(bdir, "stems", "music.wav"), np.clip(mus_d * kg, -1, 1))
+    A.write_wav(os.path.join(bdir, "stems", "narration.wav"), np.clip(vo * g * kg, -1, 1))
+    lv, lg, ls = A.kw_db(vo * g, speech), A.kw_db(mus_d, gaps & mact), A.kw_db(mus_d, speech & mact)
+    timeline["music_levels"] = {"narration_kdb": round(lv, 1), "music_gaps_rel_db": round(lg - lv, 1),
+                                "music_under_speech_rel_db": round(ls - lv, 1), "gap_seconds": round(gaps.sum() / A.SR, 1)}
+    print(f"[mix] music in gaps {lg - lv:+.1f} dB, under speech {ls - lv:+.1f} dB vs narration "
+          f"({gaps.sum() / A.SR:.0f}s of gaps)", flush=True)
     timeline["duration"] = total
     json.dump(timeline, open(os.path.join(bdir, "timeline.json"), "w"), indent=1)
     return timeline
@@ -376,19 +393,68 @@ def srt_time(t):
     return f"{h:02d}:{m:02d}:{int(s):02d},{int((s - int(s)) * 1000):03d}"
 
 
-def caption_lines(words, max_chars=42):
-    lines, cur = [], []
+def caption_lines(words, max_chars=42, max_words=8, max_lines=2, gap_break=0.6, min_dur=0.72):
+    """Subtitle cues: <=2 lines of <=42 chars / <=8 words, broken at sentence ends and at
+    pauses > gap_break (nothing is shown during those silences)."""
+    cues, cur = [], []
+
+    def lines_of(ws):
+        out, line = [], []
+        for w in ws:
+            t = " ".join(x["w"] for x in line + [w])
+            if line and (len(t) > max_chars or len(line) >= max_words):
+                out.append(line); line = []
+            line.append(w)
+        if line:
+            out.append(line)
+        if len(out) == 2:  # balance the two lines
+            ws_ = out[0] + out[1]
+            best = None
+            for k in range(1, len(ws_)):
+                a_, b_ = " ".join(x["w"] for x in ws_[:k]), " ".join(x["w"] for x in ws_[k:])
+                if len(a_) <= max_chars and len(b_) <= max_chars and k <= max_words and len(ws_) - k <= max_words:
+                    sc = max(len(a_), len(b_)) - (6 if ws_[k - 1]["w"][-1:] in ",;:" else 0)
+                    if best is None or sc < best[0]:
+                        best = (sc, k)
+            if best:
+                out = [ws_[:best[1]], ws_[best[1]:]]
+        return out
+
+    def close():
+        if cur:
+            ls = lines_of(cur)
+            cues.append({"t0": cur[0]["t"], "t1": cur[-1]["t"] + cur[-1]["d"] + 0.2,
+                         "lines": [[dict(w) for w in l] for l in ls], "words": list(cur),
+                         "text": "\n".join(" ".join(w["w"] for w in l) for l in ls)})
     for i, w in enumerate(words):
+        if cur:
+            gap = w["t"] - (cur[-1]["t"] + cur[-1]["d"])
+            if gap > gap_break or len(lines_of(cur + [w])) > max_lines:
+                close(); cur = []
         cur.append(w)
-        txt = " ".join(x["w"] for x in cur)
-        nxt = words[i + 1] if i + 1 < len(words) else None
-        gap = (nxt["t"] - (w["t"] + w["d"])) if nxt else 9
-        if len(txt) > max_chars - 8 or w["w"][-1:] in ".?!" or gap > 0.45 or (w["w"][-1:] in ",;:" and len(txt) > 18) or nxt is None:
-            lines.append({"t0": cur[0]["t"], "t1": w["t"] + w["d"] + 0.15, "text": txt, "words": list(cur)})
-            cur = []
-    for i in range(len(lines) - 1):
-        lines[i]["t1"] = min(lines[i]["t1"], lines[i + 1]["t0"] - 0.02)
-    return lines
+        if w["w"][-1:] in ".?!" and len(" ".join(x["w"] for x in cur)) >= 12:
+            close(); cur = []
+    close()
+    # sentence fragments that are too short: merge forward when it fits and there's no long pause
+    merged = []
+    for c in cues:
+        if merged:
+            p = merged[-1]
+            if (p["t1"] - p["t0"] < min_dur and c["t0"] - p["t1"] < gap_break
+                    and len(lines_of(p["words"] + c["words"])) <= max_lines):
+                ws = p["words"] + c["words"]
+                ls = lines_of(ws)
+                merged[-1] = {"t0": p["t0"], "t1": c["t1"], "lines": ls, "words": ws,
+                              "text": "\n".join(" ".join(w["w"] for w in l) for l in ls)}
+                continue
+        merged.append(c)
+    cues = merged
+    for i, c in enumerate(cues):
+        nxt = cues[i + 1]["t0"] - 0.04 if i + 1 < len(cues) else 1e9
+        c["t1"] = min(max(c["t1"], c["t0"] + min_dur), max(nxt, c["t0"] + min_dur))
+        if i + 1 < len(cues) and c["t1"] > nxt:
+            c["t1"] = nxt
+    return cues
 
 
 def write_srt(words, path):

@@ -5319,6 +5319,7 @@
   },
   {
    "id": "c2",
+   "short_focus": 1300,
    "chapter": "Sleeping in the Cave",
    "set": "camp",
    "tod": "night",

@@ -628,7 +628,7 @@ S({
                  {"type": "clock", "t": 0, "dur_e": 0.1, "from": 1420, "to": 1430, "hour": 18}],
 })
 S({
-    "id": "c2", "chapter": "Sleeping in the Cave", "set": "camp", "tod": "night", "set_opts": {"cliff_x": -250}, "music": "wonder", "amb": {"crickets": 0.6, "wind": 0.3},
+    "id": "c2", "short_focus": 1300, "chapter": "Sleeping in the Cave", "set": "camp", "tod": "night", "set_opts": {"cliff_x": -250}, "music": "wonder", "amb": {"crickets": 0.6, "wind": 0.3},
     "lead": 0.3, "tail": 1.1, "weather": "fireflies",
     "narration": [
         {"text": "Fardin lies awake, staring out at the stars. Then his watch buzzes, with one last fact. The biggest one.", "pause": 0.4},

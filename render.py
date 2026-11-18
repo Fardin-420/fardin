@@ -4,7 +4,7 @@
   python render.py episodes/L001                 # build + full render + srt + QC
   python render.py episodes/L001 --stills        # one preview still per scene (build/stills/)
   python render.py episodes/L001 --test 30       # first 30 s only (output/..._test.mp4)
-  python render.py episodes/L001 --captions      # burn subtitles into the full render
+  python render.py episodes/L001 --no-captions   # long-form without burned-in subtitles (on by default)
   python render.py episodes/L001 --shorts        # 3 vertical Shorts from shorts.json
   python render.py episodes/L001 --thumbs        # thumbnails from thumbs.json
   python render.py episodes/L001 --all           # everything
@@ -39,7 +39,7 @@ def main():
     ap.add_argument("episode")
     ap.add_argument("--stills", action="store_true")
     ap.add_argument("--test", type=float, default=0)
-    ap.add_argument("--captions", action="store_true")
+    ap.add_argument("--no-captions", action="store_true", help="long-form without burned-in subtitles")
     ap.add_argument("--shorts", action="store_true")
     ap.add_argument("--thumbs", action="store_true")
     ap.add_argument("--all", action="store_true")
@@ -78,11 +78,11 @@ def main():
         R.render_video(tl_path, out, mix, t1=a.test, procs=a.procs, chunk_s=5)
         print("[test]", out)
         qc.report(out, expect_dur=min(a.test, tl["duration"]), check_len=False)
-    full = os.path.join(out_dir, f"timeghost_{num}{'_subtitled' if a.captions else ''}.mp4")
+    full = os.path.join(out_dir, f"timeghost_{num}.mp4")
     if (a.all or not (a.stills or a.test or a.shorts or a.thumbs)) and not a.no_video:
         print("[render] full episode…", flush=True)
         t0 = time.time()
-        R.render_video(tl_path, full, mix, procs=a.procs, captions=a.captions)
+        R.render_video(tl_path, full, mix, procs=a.procs, captions=not a.no_captions)
         print(f"[render] {full} in {time.time() - t0:.0f}s")
         qc.report(full, expect_dur=tl["duration"])
     if a.shorts or a.all:

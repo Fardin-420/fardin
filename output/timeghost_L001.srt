@@ -1,1080 +1,763 @@
 1
-00:00:00,640 --> 00:00:01,032
-Night.
+00:00:00,640 --> 00:00:02,632
+Night. Three hundred thousand years ago.
 
 2
-00:00:01,106 --> 00:00:02,582
-Three hundred thousand years ago.
-
-3
-00:00:03,010 --> 00:00:04,801
+00:00:03,010 --> 00:00:04,791
 Fardin is hiding behind a rock.
 
-4
-00:00:04,831 --> 00:00:05,920
+3
+00:00:04,831 --> 00:00:05,970
 And he is not alone.
 
-5
-00:00:06,176 --> 00:00:07,615
+4
+00:00:06,176 --> 00:00:07,665
 Something is circling the camp.
 
-6
-00:00:07,705 --> 00:00:08,905
+5
+00:00:07,705 --> 00:00:08,955
 Then comes the sound.
 
-7
-00:00:10,851 --> 00:00:12,025
+6
+00:00:10,851 --> 00:00:12,006
 Spotted hyenas.
 
+7
+00:00:12,045 --> 00:00:14,338
+And Fardin just realized
+something terrible.
+
 8
-00:00:12,045 --> 00:00:14,288
-And Fardin just realized something terrible.
+00:00:14,566 --> 00:00:17,049
+The people around this fire can't see him.
 
 9
-00:00:14,566 --> 00:00:16,601
-The people around this fire can't see
+00:00:17,159 --> 00:00:19,612
+But he has no idea
+if the hyenas can.
 
 10
-00:00:16,621 --> 00:00:16,999
-him.
-
-11
-00:00:17,159 --> 00:00:19,562
-But he has no idea if the hyenas can.
-
-12
-00:00:20,977 --> 00:00:22,762
+00:00:20,977 --> 00:00:24,530
 But to understand how he got here,
-
-13
-00:00:22,782 --> 00:00:24,480
 we need to go back a few hours.
 
-14
-00:00:25,347 --> 00:00:26,473
+11
+00:00:25,347 --> 00:00:26,523
 This is Fardin.
 
-15
-00:00:26,678 --> 00:00:27,538
-Normal guy.
+12
+00:00:26,678 --> 00:00:28,206
+Normal guy. Red hoodie.
 
-16
-00:00:27,598 --> 00:00:28,180
-Red hoodie.
-
-17
-00:00:28,246 --> 00:00:29,296
+13
+00:00:28,246 --> 00:00:29,346
 One very unusual watch.
 
-18
-00:00:29,457 --> 00:00:31,467
-Turn the dial, and he falls back through
+14
+00:00:29,457 --> 00:00:32,465
+Turn the dial, and he falls
+back through time as a ghost.
 
-19
-00:00:31,487 --> 00:00:32,415
-time as a ghost.
-
-20
-00:00:32,636 --> 00:00:34,766
+15
+00:00:32,636 --> 00:00:34,816
 Nobody there can see him or hear him.
 
-21
-00:00:34,876 --> 00:00:35,986
+16
+00:00:34,876 --> 00:00:36,036
 He can only watch.
 
-22
-00:00:36,180 --> 00:00:37,856
-Tonight, he set the dial further back
+17
+00:00:36,180 --> 00:00:38,505
+Tonight, he set the dial
+further back than ever.
 
-23
-00:00:37,876 --> 00:00:38,455
-than ever.
-
-24
-00:00:39,958 --> 00:00:41,277
+18
+00:00:39,958 --> 00:00:41,327
 Three hundred thousand years.
 
-25
-00:00:45,355 --> 00:00:47,065
-In the next twenty four hours,
+19
+00:00:45,355 --> 00:00:49,613
+In the next twenty four hours, he'll see
+three things that changed how we think
 
-26
-00:00:47,085 --> 00:00:48,924
-he'll see three things that changed
+20
+00:00:49,653 --> 00:00:50,807
+about our species.
 
-27
-00:00:48,944 --> 00:00:50,757
-how we think about our species.
-
-28
-00:00:50,974 --> 00:00:52,606
+21
+00:00:50,974 --> 00:00:52,656
 A hunt with stone tipped spears.
 
-29
-00:00:52,827 --> 00:00:54,251
+22
+00:00:52,827 --> 00:00:56,359
 A rock trick so clever,
-
-30
-00:00:54,271 --> 00:00:56,309
 it lasted two hundred thousand years.
 
-31
-00:00:56,513 --> 00:00:58,695
+23
+00:00:56,513 --> 00:01:00,625
 And by tonight, the strangest discovery
-
-32
-00:00:58,715 --> 00:01:00,575
 of all: who else was out there.
 
-33
-00:01:01,636 --> 00:01:02,064
-Dawn.
+24
+00:01:01,636 --> 00:01:06,899
+Dawn. Fardin is standing on a dry, rocky
+hillside, in what will one day be Morocco.
 
-34
-00:01:02,218 --> 00:01:03,920
-Fardin is standing on a dry,
+25
+00:01:07,099 --> 00:01:11,067
+There are no countries yet, no farms,
+and no cities anywhere on Earth.
 
-35
-00:01:03,940 --> 00:01:06,072
-rocky hillside, in what will one day
-
-36
-00:01:06,092 --> 00:01:06,849
-be Morocco.
-
-37
-00:01:07,099 --> 00:01:08,600
-There are no countries yet,
-
-38
-00:01:08,620 --> 00:01:10,543
-no farms, and no cities anywhere on
-
-39
-00:01:10,563 --> 00:01:11,017
-Earth.
-
-40
-00:01:11,286 --> 00:01:13,366
+26
+00:01:11,286 --> 00:01:13,416
 Scientists call this place Jebel Irhoud.
 
-41
-00:01:13,601 --> 00:01:16,000
-In 2017, researchers announced that
+27
+00:01:13,601 --> 00:01:19,146
+In 2017, researchers announced that human
+fossils found here are about three hundred
 
-42
-00:01:16,020 --> 00:01:18,658
-human fossils found here are about three
+28
+00:01:19,186 --> 00:01:20,610
+thousand years old.
 
-43
-00:01:18,678 --> 00:01:20,560
-hundred thousand years old.
+29
+00:01:20,811 --> 00:01:23,856
+They are the oldest known
+fossils of our own species.
 
-44
-00:01:20,811 --> 00:01:22,778
-They are the oldest known fossils of
-
-45
-00:01:22,798 --> 00:01:23,806
-our own species.
-
-46
-00:01:23,926 --> 00:01:25,021
+30
+00:01:23,926 --> 00:01:25,071
 Homo sapiens.
 
-47
-00:01:25,784 --> 00:01:26,587
+31
+00:01:25,784 --> 00:01:26,567
 And there they are.
 
-48
-00:01:26,607 --> 00:01:28,818
+32
+00:01:26,607 --> 00:01:28,868
 A small group, waking up beside a cave.
 
-49
-00:01:29,096 --> 00:01:30,667
+33
+00:01:29,096 --> 00:01:30,647
 Fardin's first thought?
 
-50
-00:01:30,687 --> 00:01:31,152
-They look...
+34
+00:01:30,687 --> 00:01:31,977
+They look... surprisingly normal.
 
-51
-00:01:31,174 --> 00:01:31,927
-surprisingly normal.
-
-52
-00:01:32,325 --> 00:01:34,293
+35
+00:01:32,325 --> 00:01:34,343
 And he's right, mostly.
 
-53
-00:01:34,389 --> 00:01:35,985
+36
+00:01:34,389 --> 00:01:35,965
 Their faces were a lot like ours.
 
-54
-00:01:36,005 --> 00:01:37,782
-But the back of the skull was longer
+37
+00:01:36,005 --> 00:01:38,483
+But the back of the skull
+was longer and lower.
 
-55
-00:01:37,802 --> 00:01:38,433
-and lower.
+38
+00:01:38,704 --> 00:01:42,187
+Their brains were about as big
+as ours, but shaped differently.
 
-56
-00:01:38,704 --> 00:01:40,826
-Their brains were about as big as ours,
+39
+00:01:42,347 --> 00:01:45,877
+The rounder brain shape we have
+today seems to have appeared later.
 
-57
-00:01:40,846 --> 00:01:42,137
-but shaped differently.
+40
+00:01:46,645 --> 00:01:48,812
+Here's a way to feel
+how long ago this is.
 
-58
-00:01:42,347 --> 00:01:44,220
-The rounder brain shape we have today
+41
+00:01:48,992 --> 00:01:53,301
+Squeeze the whole story of our
+species into one twenty four hour day.
 
-59
-00:01:44,240 --> 00:01:45,827
-seems to have appeared later.
+42
+00:01:53,511 --> 00:01:56,572
+Farming doesn't show up
+until about eleven PM.
 
-60
-00:01:46,645 --> 00:01:48,442
-Here's a way to feel how long ago this
-
-61
-00:01:48,462 --> 00:01:48,762
-is.
-
-62
-00:01:48,992 --> 00:01:51,285
-Squeeze the whole story of our species
-
-63
-00:01:51,305 --> 00:01:53,251
-into one twenty four hour day.
-
-64
-00:01:53,511 --> 00:01:55,710
-Farming doesn't show up until about
-
-65
-00:01:55,730 --> 00:01:56,522
-eleven PM.
-
-66
-00:01:56,767 --> 00:01:57,538
+43
+00:01:56,767 --> 00:01:57,588
 The pyramids?
 
-67
-00:01:57,655 --> 00:01:58,760
+44
+00:01:57,655 --> 00:01:58,810
 Eleven thirty eight.
 
-68
-00:01:58,850 --> 00:02:00,879
-Almost everything in your history books
+45
+00:01:58,850 --> 00:02:02,671
+Almost everything in your history
+books happens in the last half hour.
 
-69
-00:02:00,899 --> 00:02:02,621
-happens in the last half hour.
-
-70
-00:02:03,415 --> 00:02:05,175
+46
+00:02:03,415 --> 00:02:05,225
 And forget the Sahara you know.
 
-71
-00:02:05,315 --> 00:02:07,650
+47
+00:02:05,315 --> 00:02:09,739
 At times, North Africa was much greener,
-
-72
-00:02:07,670 --> 00:02:09,689
 with grasslands, lakes and rivers.
 
-73
-00:02:09,904 --> 00:02:12,318
-Gazelles and other grazing animals roamed
+48
+00:02:09,904 --> 00:02:12,836
+Gazelles and other grazing
+animals roamed here.
 
-74
-00:02:12,338 --> 00:02:12,786
-here.
+49
+00:02:12,976 --> 00:02:16,058
+Fardin tries waving at a
+man walking right past him.
 
-75
-00:02:12,976 --> 00:02:15,004
-Fardin tries waving at a man walking
+50
+00:02:17,416 --> 00:02:18,737
+Nothing. Not even a blink.
 
-76
-00:02:15,024 --> 00:02:16,008
-right past him.
-
-77
-00:02:17,416 --> 00:02:17,866
-Nothing.
-
-78
-00:02:17,928 --> 00:02:18,747
-Not even a blink.
-
-79
-00:02:18,777 --> 00:02:20,069
+51
+00:02:18,777 --> 00:02:20,119
 He really is a ghost here.
 
-80
-00:02:20,315 --> 00:02:21,200
+52
+00:02:20,315 --> 00:02:21,250
 But that's fine.
 
-81
-00:02:21,317 --> 00:02:23,183
+53
+00:02:21,317 --> 00:02:23,233
 Because the hunt is about to begin.
 
-82
-00:02:23,283 --> 00:02:25,334
-And it's nothing compared to what happens
+54
+00:02:23,283 --> 00:02:26,112
+And it's nothing compared
+to what happens after dark.
 
-83
-00:02:25,354 --> 00:02:26,062
-after dark.
-
-84
-00:02:26,953 --> 00:02:27,731
+55
+00:02:26,953 --> 00:02:27,711
 Mid morning.
 
-85
-00:02:27,751 --> 00:02:29,726
-A few hunters grab their spears and
+56
+00:02:27,751 --> 00:02:32,383
+A few hunters grab their spears and head
+out, and Fardin tags along, three steps
 
-86
-00:02:29,746 --> 00:02:31,747
-head out, and Fardin tags along,
+57
+00:02:32,423 --> 00:02:38,294
+behind. Archaeologists dug up many animal
+bones at Jebel Irhoud, and the most common
 
-87
-00:02:31,767 --> 00:02:32,952
-three steps behind.
-
-88
-00:02:33,183 --> 00:02:35,944
-Archaeologists dug up many animal bones
-
-89
-00:02:35,964 --> 00:02:38,314
-at Jebel Irhoud, and the most common
-
-90
-00:02:38,334 --> 00:02:40,076
+58
+00:02:38,334 --> 00:02:40,126
 by far belonged to gazelles.
 
-91
-00:02:40,316 --> 00:02:42,758
+59
+00:02:40,316 --> 00:02:42,808
 Many carry cut marks from stone tools.
 
-92
-00:02:43,557 --> 00:02:44,622
+60
+00:02:43,557 --> 00:02:44,672
 Here's the problem.
 
-93
-00:02:44,754 --> 00:02:46,658
-A gazelle can sprint at up to around
+61
+00:02:44,754 --> 00:02:48,192
+A gazelle can sprint at up to
+around eighty kilometers an hour.
 
-94
-00:02:46,678 --> 00:02:48,142
-eighty kilometers an hour.
-
-95
-00:02:48,302 --> 00:02:49,873
+62
+00:02:48,302 --> 00:02:49,923
 No human can catch one.
 
-96
+63
 00:02:50,137 --> 00:02:51,669
 So the hunters creep in low.
 
-97
-00:02:51,709 --> 00:02:52,108
-Quiet.
+64
+00:02:51,709 --> 00:02:52,742
+Quiet. Downwind.
 
-98
-00:02:52,188 --> 00:02:52,702
-Downwind.
+65
+00:02:52,782 --> 00:02:54,371
+Closer. And closer.
 
-99
-00:02:52,782 --> 00:02:53,219
-Closer.
-
-100
-00:02:53,509 --> 00:02:54,321
-And closer.
-
-101
-00:02:55,572 --> 00:02:56,124
+66
+00:02:55,572 --> 00:02:56,292
 Now!
 
-102
-00:02:57,018 --> 00:02:59,154
+67
+00:02:57,018 --> 00:02:59,142
 The spear flies, and misses.
 
-103
-00:02:59,182 --> 00:03:00,270
+68
+00:02:59,182 --> 00:03:00,320
 The whole herd explodes away.
 
-104
-00:03:00,564 --> 00:03:02,832
-Fardin is laughing so hard he forgets
+69
+00:03:00,564 --> 00:03:03,879
+Fardin is laughing so hard
+he forgets he's invisible.
 
-105
-00:03:02,852 --> 00:03:03,829
-he's invisible.
-
-106
-00:03:04,009 --> 00:03:06,474
+70
+00:03:04,009 --> 00:03:06,524
 Then he remembers, and laughs even louder.
 
-107
-00:03:08,123 --> 00:03:09,481
+71
+00:03:08,123 --> 00:03:09,461
 But the hunters don't give up.
 
-108
-00:03:09,501 --> 00:03:10,451
+72
+00:03:09,501 --> 00:03:10,501
 They spread out.
 
-109
-00:03:10,581 --> 00:03:11,103
-Patient.
+73
+00:03:10,581 --> 00:03:12,289
+Patient. Working as a team.
 
-110
-00:03:11,215 --> 00:03:12,239
-Working as a team.
+74
+00:03:12,352 --> 00:03:14,716
+Hunting like this takes
+planning, and trust.
 
-111
-00:03:12,352 --> 00:03:14,015
-Hunting like this takes planning,
+75
+00:03:14,897 --> 00:03:17,342
+On the next try,
+one throw finds its mark.
 
-112
-00:03:14,035 --> 00:03:14,666
-and trust.
+76
+00:03:17,889 --> 00:03:22,187
+Some stone points from this site look like
+they were made to be fixed onto wooden
 
-113
-00:03:14,897 --> 00:03:16,867
-On the next try, one throw finds its
+77
+00:03:22,227 --> 00:03:26,199
+shafts. Did these hunters throw
+their spears, or stab up close?
 
-114
-00:03:16,887 --> 00:03:17,292
-mark.
-
-115
-00:03:17,889 --> 00:03:19,869
-Some stone points from this site look
-
-116
-00:03:19,889 --> 00:03:21,846
-like they were made to be fixed onto
-
-117
-00:03:21,866 --> 00:03:22,739
-wooden shafts.
-
-118
-00:03:22,919 --> 00:03:25,619
-Did these hunters throw their spears,
-
-119
-00:03:25,639 --> 00:03:26,169
-or stab up close?
-
-120
-00:03:26,239 --> 00:03:28,182
+78
+00:03:26,239 --> 00:03:28,232
 Scientists are still debating that.
 
-121
-00:03:28,461 --> 00:03:30,084
-And the strangest part of their day
+79
+00:03:28,461 --> 00:03:31,158
+And the strangest part of
+their day hasn't happened yet.
 
-122
-00:03:30,104 --> 00:03:31,108
-hasn't happened yet.
-
-123
-00:03:31,988 --> 00:03:33,670
+80
+00:03:31,988 --> 00:03:33,650
 Back at camp, it's lunchtime.
 
-124
-00:03:33,690 --> 00:03:35,495
+81
+00:03:33,690 --> 00:03:35,545
 And Fardin learns a rule fast.
 
-125
-00:03:35,646 --> 00:03:36,874
+82
+00:03:35,646 --> 00:03:36,924
 Nothing gets wasted.
 
-126
-00:03:37,099 --> 00:03:39,113
+83
+00:03:37,099 --> 00:03:40,963
 They slice the meat with stone flakes,
-
-127
-00:03:39,133 --> 00:03:40,913
 sharp enough to cut through hide.
 
-128
-00:03:41,697 --> 00:03:43,610
-Then someone grabs a heavy rock,
+84
+00:03:41,697 --> 00:03:46,378
+Then someone grabs a heavy rock, places a
+leg bone on a flat stone, and smashes
 
-129
-00:03:43,630 --> 00:03:45,727
-places a leg bone on a flat stone,
+85
+00:03:46,418 --> 00:03:48,308
+it open. Inside is marrow.
 
-130
-00:03:45,747 --> 00:03:47,033
-and smashes it open.
-
-131
-00:03:47,272 --> 00:03:48,258
-Inside is marrow.
-
-132
-00:03:48,380 --> 00:03:50,293
+86
+00:03:48,380 --> 00:03:50,333
 Soft, fatty, and full of energy.
 
-133
-00:03:50,373 --> 00:03:51,983
+87
+00:03:50,373 --> 00:03:51,963
 They scoop it out, and eat it.
 
-134
-00:03:52,003 --> 00:03:52,218
-Raw.
+88
+00:03:52,003 --> 00:03:54,485
+Raw. Fardin looks like
+he's about to be sick.
 
-135
-00:03:52,609 --> 00:03:54,435
-Fardin looks like he's about to be sick.
-
-136
-00:03:56,138 --> 00:03:57,896
+89
+00:03:56,138 --> 00:03:57,946
 But to them, this is a treat.
 
-137
-00:03:58,066 --> 00:04:00,419
+90
+00:03:58,066 --> 00:04:02,694
 Humans and our ancestors had been cracking
-
-138
-00:04:00,439 --> 00:04:02,714
 bones for marrow for more than a million
 
-139
-00:04:02,734 --> 00:04:03,216
+91
+00:04:02,734 --> 00:04:03,454
 years.
 
-140
-00:04:03,973 --> 00:04:05,156
+92
+00:04:03,973 --> 00:04:05,176
 Did they cook any of it?
 
-141
-00:04:05,216 --> 00:04:05,996
-Possibly.
+93
+00:04:05,216 --> 00:04:09,630
+Possibly. Some flint tools here were
+burned in fire, and that's actually how
 
-142
-00:04:06,146 --> 00:04:08,055
-Some flint tools here were burned in
+94
+00:04:09,670 --> 00:04:11,203
+scientists dated the site.
 
-143
-00:04:08,075 --> 00:04:10,198
-fire, and that's actually how scientists
+95
+00:04:11,393 --> 00:04:15,300
+But how often people cooked their
+food this long ago is still uncertain.
 
-144
-00:04:10,218 --> 00:04:11,153
-dated the site.
-
-145
-00:04:11,393 --> 00:04:13,380
-But how often people cooked their food
-
-146
-00:04:13,400 --> 00:04:15,250
-this long ago is still uncertain.
-
-147
-00:04:15,571 --> 00:04:17,888
+96
+00:04:15,571 --> 00:04:17,868
 They almost certainly ate plants too.
 
-148
-00:04:17,908 --> 00:04:19,818
+97
+00:04:17,908 --> 00:04:19,868
 Roots, seeds and fruits.
 
-149
-00:04:19,978 --> 00:04:21,987
+98
+00:04:19,978 --> 00:04:23,729
 But plants rarely survive this long,
-
-150
-00:04:22,007 --> 00:04:23,679
 so most of the menu is lost.
 
-151
-00:04:23,911 --> 00:04:25,475
+99
+00:04:23,911 --> 00:04:25,525
 Fardin decides to skip lunch.
 
-152
-00:04:25,736 --> 00:04:26,399
-Good call.
+100
+00:04:25,736 --> 00:04:29,704
+Good call. Because later tonight, he'll
+find out these people were not alone on
 
-153
-00:04:26,419 --> 00:04:27,558
-Because later tonight,
+101
+00:04:29,744 --> 00:04:30,512
+this planet.
 
-154
-00:04:27,578 --> 00:04:29,286
-he'll find out these people were not
-
-155
-00:04:29,306 --> 00:04:30,462
-alone on this planet.
-
-156
-00:04:31,330 --> 00:04:31,969
-Afternoon.
-
-157
-00:04:32,099 --> 00:04:33,569
-In the shade of the cliff,
-
-158
-00:04:33,589 --> 00:04:35,742
+102
+00:04:31,330 --> 00:04:35,792
+Afternoon. In the shade of the cliff,
 an older man sits down with two stones.
 
-159
-00:04:35,962 --> 00:04:37,674
+103
+00:04:35,962 --> 00:04:37,724
 Fardin sits right next to him.
 
-160
-00:04:37,918 --> 00:04:38,966
-This, it turns out,
+104
+00:04:37,918 --> 00:04:40,028
+This, it turns out, is high technology.
 
-161
-00:04:38,986 --> 00:04:39,978
-is high technology.
-
-162
-00:04:40,241 --> 00:04:41,906
+105
+00:04:40,241 --> 00:04:41,956
 He doesn't just smash the rock.
 
-163
-00:04:42,136 --> 00:04:43,953
+106
+00:04:42,136 --> 00:04:46,036
 He shapes it, chip by chip,
-
-164
-00:04:43,973 --> 00:04:45,986
 as if he's planning several moves ahead.
 
-165
-00:04:46,076 --> 00:04:48,012
-Every strike has to land at just the
+107
+00:04:46,076 --> 00:04:48,852
+Every strike has to land
+at just the right angle.
 
-166
-00:04:48,032 --> 00:04:48,802
-right angle.
-
-167
-00:04:49,606 --> 00:04:51,046
+108
+00:04:49,606 --> 00:04:51,096
 Then, one precise strike...
 
-168
-00:04:52,068 --> 00:04:53,740
+109
+00:04:52,068 --> 00:04:55,240
 and a ready made blade pops off,
-
-169
-00:04:53,760 --> 00:04:55,190
 sharp along its edges.
 
-170
-00:04:55,398 --> 00:04:57,680
-Archaeologists call this the Levallois
+110
+00:04:55,398 --> 00:04:58,482
+Archaeologists call this
+the Levallois technique.
 
-171
-00:04:57,700 --> 00:04:58,432
-technique.
-
-172
-00:04:58,662 --> 00:05:00,762
+111
+00:04:58,662 --> 00:05:03,302
 The toolmaker had to picture the final
+tool inside the stone, before it existed.
 
-173
-00:05:00,782 --> 00:05:02,109
-tool inside the stone,
-
-174
-00:05:02,129 --> 00:05:03,252
-before it existed.
-
-175
-00:05:03,531 --> 00:05:05,870
+112
+00:05:03,531 --> 00:05:07,951
 Methods like this were used across Africa
-
-176
-00:05:05,890 --> 00:05:07,971
 and beyond for more than two hundred
 
-177
-00:05:07,991 --> 00:05:08,971
+113
+00:05:07,991 --> 00:05:09,021
 thousand years.
 
-178
-00:05:09,746 --> 00:05:11,818
+114
+00:05:09,746 --> 00:05:11,798
 Fire is part of life here too.
 
-179
-00:05:11,838 --> 00:05:14,093
-Burnt flint and bone tell us these people
+115
+00:05:11,838 --> 00:05:14,758
+Burnt flint and bone tell
+us these people used it.
 
-180
-00:05:14,113 --> 00:05:14,708
-used it.
-
-181
-00:05:14,978 --> 00:05:16,937
+116
+00:05:14,978 --> 00:05:18,610
 Fire meant warmth, light,
-
-182
-00:05:16,957 --> 00:05:18,560
 protection, and maybe cooked food.
 
-183
-00:05:18,827 --> 00:05:20,317
-And far away in Kenya,
+117
+00:05:18,827 --> 00:05:23,416
+And far away in Kenya, at a site
+called Olorgesailie, people from around
 
-184
-00:05:20,337 --> 00:05:22,327
-at a site called Olorgesailie,
+118
+00:05:23,456 --> 00:05:28,416
+this same time carried black obsidian rock
+from as far as ninety kilometers away.
 
-185
-00:05:22,347 --> 00:05:24,788
-people from around this same time carried
+119
+00:05:28,651 --> 00:05:31,992
+Ninety kilometers is roughly
+two marathons, on foot.
 
-186
-00:05:24,808 --> 00:05:27,277
-black obsidian rock from as far as ninety
+120
+00:05:32,122 --> 00:05:34,742
+They also collected
+red and black pigments.
 
-187
-00:05:27,297 --> 00:05:28,366
-kilometers away.
-
-188
-00:05:28,651 --> 00:05:31,284
-Ninety kilometers is roughly two marathons,
-
-189
-00:05:31,304 --> 00:05:31,942
-on foot.
-
-190
-00:05:32,122 --> 00:05:34,692
-They also collected red and black pigments.
-
-191
-00:05:34,842 --> 00:05:36,412
+121
+00:05:34,842 --> 00:05:36,392
 Was that trade between groups?
 
-192
-00:05:36,432 --> 00:05:38,052
+122
+00:05:36,432 --> 00:05:38,032
 Some scientists think so.
 
-193
-00:05:38,072 --> 00:05:39,198
+123
+00:05:38,072 --> 00:05:39,248
 Others aren't sure.
 
-194
-00:05:40,005 --> 00:05:42,043
-Either way, these were people who planned
+124
+00:05:40,005 --> 00:05:43,822
+Either way, these were people who
+planned ahead, remembered and connected.
 
-195
-00:05:42,063 --> 00:05:43,772
-ahead, remembered and connected.
-
-196
-00:05:43,932 --> 00:05:45,631
+125
+00:05:43,932 --> 00:05:45,681
 Just with very different gear.
 
-197
-00:05:45,894 --> 00:05:47,524
+126
+00:05:45,894 --> 00:05:47,574
 Then the sun starts to sink.
 
-198
-00:05:47,714 --> 00:05:49,830
+127
+00:05:47,714 --> 00:05:52,079
 And Fardin is about to find out why
-
-199
-00:05:49,850 --> 00:05:52,029
 nobody here wanders off after dark.
 
-200
-00:05:52,938 --> 00:05:53,520
-Sunset.
+128
+00:05:52,938 --> 00:05:55,700
+Sunset. The group pulls
+in close around the fire.
 
-201
-00:05:53,540 --> 00:05:55,240
-The group pulls in close around the
-
-202
-00:05:55,260 --> 00:05:55,650
-fire.
-
-203
-00:05:55,810 --> 00:05:57,542
+129
+00:05:55,810 --> 00:05:57,592
 Fardin finally relaxes.
 
-204
-00:05:57,754 --> 00:05:58,599
+130
+00:05:57,754 --> 00:05:58,649
 Big mistake.
 
-205
-00:05:59,940 --> 00:06:01,589
+131
+00:05:59,940 --> 00:06:01,639
 Out in the dark, shapes are moving.
 
-206
-00:06:01,835 --> 00:06:04,132
+132
+00:06:01,835 --> 00:06:06,482
 Across Africa, early humans shared the
-
-207
-00:06:04,152 --> 00:06:06,502
 land with lions, leopards and spotted
 
-208
-00:06:06,522 --> 00:06:07,116
-hyenas.
+133
+00:06:06,522 --> 00:06:08,158
+hyenas. And here we are.
 
-209
-00:06:07,336 --> 00:06:08,178
-And here we are.
-
-210
-00:06:08,198 --> 00:06:09,950
+134
+00:06:08,198 --> 00:06:10,000
 This is the moment from the beginning.
 
-211
-00:06:10,735 --> 00:06:12,265
+135
+00:06:10,735 --> 00:06:12,315
 The hyenas circle closer.
 
-212
-00:06:12,355 --> 00:06:14,236
+136
+00:06:12,355 --> 00:06:14,286
 The adults rise, spears ready.
 
-213
-00:06:14,494 --> 00:06:16,067
+137
+00:06:14,494 --> 00:06:17,683
 Someone grabs a burning branch,
-
-214
-00:06:16,087 --> 00:06:17,633
 and hurls it toward the dark.
 
-215
-00:06:18,130 --> 00:06:19,201
+138
+00:06:18,130 --> 00:06:19,251
 The eyes back away.
 
-216
-00:06:19,632 --> 00:06:21,547
-Fire probably helped keep predators
+139
+00:06:19,632 --> 00:06:22,546
+Fire probably helped keep
+predators at a distance.
 
-217
-00:06:21,567 --> 00:06:22,496
-at a distance.
+140
+00:06:22,636 --> 00:06:25,860
+It's one of the oldest safety
+tricks our species has.
 
-218
-00:06:22,636 --> 00:06:24,711
-It's one of the oldest safety tricks
-
-219
-00:06:24,731 --> 00:06:25,810
-our species has.
-
-220
-00:06:26,617 --> 00:06:28,253
+141
+00:06:26,617 --> 00:06:28,303
 Fardin's heart is pounding.
 
-221
-00:06:28,393 --> 00:06:30,333
-Then he remembers, he's the only one
+142
+00:06:28,393 --> 00:06:32,773
+Then he remembers, he's the only one here
+who can literally walk through a wall.
 
-222
-00:06:30,353 --> 00:06:32,175
-here who can literally walk through
-
-223
-00:06:32,195 --> 00:06:32,723
-a wall.
-
-224
-00:06:32,967 --> 00:06:34,475
+143
+00:06:32,967 --> 00:06:34,525
 He's still not going out there.
 
-225
-00:06:36,319 --> 00:06:37,988
+144
+00:06:36,319 --> 00:06:40,348
 Late at night, inside the cave,
-
-226
-00:06:38,008 --> 00:06:40,298
 people lie down on beds of grass.
 
-227
-00:06:40,448 --> 00:06:41,628
+145
+00:06:40,448 --> 00:06:41,608
 Fardin tries one.
 
-228
-00:06:41,648 --> 00:06:43,127
+146
+00:06:41,648 --> 00:06:43,177
 Surprisingly comfy.
 
-229
-00:06:43,391 --> 00:06:44,753
+147
+00:06:43,391 --> 00:06:44,803
 This part isn't a guess.
 
-230
-00:06:44,873 --> 00:06:46,827
-At Border Cave in South Africa,
+148
+00:06:44,873 --> 00:06:49,607
+At Border Cave in South Africa, scientists
+found grass bedding about two hundred
 
-231
-00:06:46,847 --> 00:06:48,933
-scientists found grass bedding about
+149
+00:06:49,647 --> 00:06:50,940
+thousand years old.
 
-232
-00:06:48,953 --> 00:06:50,890
-two hundred thousand years old.
-
-233
-00:06:51,129 --> 00:06:52,722
+150
+00:06:51,129 --> 00:06:54,942
 It was laid on top of ash,
-
-234
-00:06:52,742 --> 00:06:54,892
 possibly to keep crawling insects away.
 
-235
-00:06:55,704 --> 00:06:57,940
-Fardin lies awake, staring out at the
+151
+00:06:55,704 --> 00:06:58,497
+Fardin lies awake,
+staring out at the stars.
 
-236
-00:06:57,960 --> 00:06:58,447
-stars.
+152
+00:06:58,547 --> 00:07:00,977
+Then his watch buzzes, with one last fact.
 
-237
-00:06:58,547 --> 00:06:59,849
-Then his watch buzzes,
-
-238
-00:06:59,869 --> 00:07:00,997
-with one last fact.
-
-239
-00:07:01,017 --> 00:07:02,060
+153
+00:07:01,017 --> 00:07:02,110
 The biggest one.
 
-240
-00:07:02,470 --> 00:07:04,313
-These people were not the only humans
+154
+00:07:02,470 --> 00:07:04,982
+These people were not
+the only humans on Earth.
 
-241
-00:07:04,333 --> 00:07:04,932
-on Earth.
-
-242
-00:07:06,592 --> 00:07:09,034
+155
+00:07:06,592 --> 00:07:11,183
 Around this time, there were Neanderthal
+ancestors in Europe, and mysterious
 
-243
-00:07:09,054 --> 00:07:10,346
-ancestors in Europe,
-
-244
-00:07:10,366 --> 00:07:12,470
-and mysterious Denisovans in Asia,
-
-245
-00:07:12,620 --> 00:07:14,461
+156
+00:07:11,223 --> 00:07:14,511
+Denisovans in Asia,
 known mostly from their DNA.
 
-246
-00:07:14,735 --> 00:07:17,149
-A small brained species called Homo
+157
+00:07:14,735 --> 00:07:19,336
+A small brained species called
+Homo naledi lived in South Africa.
 
-247
-00:07:17,169 --> 00:07:19,286
-naledi lived in South Africa.
+158
+00:07:19,556 --> 00:07:23,146
+Another kind of archaic human
+lived in what is now Zambia.
 
-248
-00:07:19,556 --> 00:07:21,618
-Another kind of archaic human lived
-
-249
-00:07:21,638 --> 00:07:23,096
-in what is now Zambia.
-
-250
-00:07:23,246 --> 00:07:24,927
+159
+00:07:23,246 --> 00:07:27,406
 And on the island of Java,
-
-251
-00:07:24,947 --> 00:07:27,356
 probably some of the last Homo erectus.
 
-252
-00:07:27,559 --> 00:07:29,440
+160
+00:07:27,559 --> 00:07:31,299
 At least five different kinds of humans
-
-253
-00:07:29,460 --> 00:07:31,319
 may have shared the planet at the same
 
-254
-00:07:31,339 --> 00:07:31,730
+161
+00:07:31,339 --> 00:07:32,059
 time.
 
-255
-00:07:32,514 --> 00:07:33,612
+162
+00:07:32,514 --> 00:07:33,592
 Today, only one is left.
 
-256
-00:07:33,632 --> 00:07:34,205
-Us.
+163
+00:07:33,632 --> 00:07:37,156
+Us. Scientists are still working out why.
 
-257
-00:07:34,786 --> 00:07:37,106
-Scientists are still working out why.
-
-258
-00:07:37,306 --> 00:07:39,519
+164
+00:07:37,306 --> 00:07:41,746
 Much later, some of those other humans
-
-259
-00:07:39,539 --> 00:07:41,696
 even had children with our ancestors.
 
-260
-00:07:41,846 --> 00:07:44,342
+165
+00:07:41,846 --> 00:07:46,932
 That's why many people alive today carry
-
-261
-00:07:44,362 --> 00:07:46,882
 a little Neanderthal or Denisovan DNA.
 
-262
-00:07:47,827 --> 00:07:48,799
+166
+00:07:47,827 --> 00:07:48,849
 Dawn is coming.
 
-263
-00:07:48,948 --> 00:07:50,920
-Fardin's twenty four hours are almost
+167
+00:07:48,948 --> 00:07:51,314
+Fardin's twenty four hours are almost up.
 
-264
-00:07:50,940 --> 00:07:51,264
-up.
-
-265
-00:07:51,494 --> 00:07:52,951
+168
+00:07:51,494 --> 00:07:53,001
 His watch starts to glow.
 
-266
-00:07:53,190 --> 00:07:54,872
+169
+00:07:53,190 --> 00:07:54,922
 But the dial is spinning the wrong way.
 
-267
-00:07:55,379 --> 00:07:58,240
+170
+00:07:55,379 --> 00:08:00,258
 Next time, Fardin lands in ancient Egypt,
+right in the middle of building the Great
 
-268
-00:07:58,330 --> 00:08:00,000
-right in the middle of building the
+171
+00:08:00,298 --> 00:08:01,018
+Pyramid.
 
-269
-00:08:00,020 --> 00:08:00,812
-Great Pyramid.
-
-270
-00:08:01,632 --> 00:08:04,080
+172
+00:08:01,632 --> 00:08:04,130
 Subscribe, or Fardin stays lost in time.
 

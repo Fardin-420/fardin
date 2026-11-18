@@ -118,48 +118,108 @@ def draw_word_captions(ctx, W, H, words, T, y_frac=0.79):
     ctx.restore()
 
 
-def draw_srt_caption(ctx, W, H, lines, T):
-    """Long-form burned-in subtitle: bold white words with dark outline,
-    the word being spoken highlighted, on a soft translucent band."""
-    for l in lines:
-        if not (l["t0"] - 0.05 <= T <= l["t1"]):
+def _blocked_rects(sc, lt, W, H):
+    """Screen rects the long-form subtitle must not cover: Fardin's face + active graphics."""
+    u = W / BASE_W
+    rects = []
+    try:
+        from .character import Fardin
+        from .rig import HEAD_R
+        from .scene import world_to_screen
+        for a in sc.order:
+            if isinstance(a, Fardin) and a.state(lt)["alpha"] > 0.2:
+                cam = sc.cam_at(lt)
+                hx, hy = world_to_screen(a.screen_head(lt), cam, W, H)
+                r = HEAD_R * a.size * cam[2] * u * 1.35
+                rects.append((hx - r, hy - r, hx + r, hy + r * 1.25))
+    except Exception:
+        pass
+    for g in sc.spec.get("graphics", []):
+        if not (g["t"] - 0.1 <= lt <= g["t"] + g.get("dur", 4.0) + 0.1):
             continue
-        u = W / BASE_W
-        fs = 52 * u
-        ws = l.get("words") or [{"w": l["text"], "t": l["t0"], "d": l["t1"] - l["t0"]}]
-        G.font(ctx, fs, "xbold")
-        sp = fs * 0.27
-        widths = [ctx.text_extents(w["w"]).x_advance for w in ws]
-        total = sum(widths) + sp * (len(ws) - 1)
-        x = (W - total) / 2
-        y = H * 0.9
-        a = min(1.0, (T - l["t0"] + 0.05) / 0.12, (l["t1"] - T) / 0.12 + 0.2)
-        a = max(0.0, min(1.0, a))
-        g = cairo.LinearGradient(0, y - fs * 1.6, 0, H)
-        g.add_color_stop_rgba(0, 0, 0, 0, 0)
-        g.add_color_stop_rgba(0.45, 0, 0, 0, 0.45 * a)
-        g.add_color_stop_rgba(1, 0, 0, 0, 0.55 * a)
-        ctx.set_source(g)
-        ctx.rectangle(0, y - fs * 1.6, W, H - (y - fs * 1.6))
-        ctx.fill()
-        for w, wd in zip(ws, widths):
-            active = w["t"] <= T < w["t"] + max(w["d"], 0.1) + 0.08
-            spoken = T >= w["t"]
+        t = g["type"]
+        if t == "chapter":
+            rects.append((0, H * 0.78 - 150 * u, W * 0.5, H * 0.78 + 95 * u))
+        elif t == "lower":
+            rects.append((0, H * 0.82 - 10 * u, W * 0.55, H))
+        elif t == "subscribe":
+            rects.append((W / 2 - 330 * u, H * 0.78 - 20 * u, W / 2 + 330 * u, H))
+        elif t == "map":
+            if g.get("center"):
+                rects.append((W * 0.15, H * 0.08, W * 0.85, H * 0.92))
+            elif g.get("side", "right") == "right":
+                rects.append((W * 0.5, H * 0.08, W, H * 0.92))
+            else:
+                rects.append((0, H * 0.08, W * 0.5, H * 0.92))
+        elif t == "callout":
+            cx, cy = W * g.get("x", 0.5), H * g.get("y", 0.3)
+            rects.append((cx - W * 0.25, cy - H * 0.12, cx + W * 0.25, cy + H * 0.08))
+        elif t == "fact":
+            x0 = 80 * u if g.get("side", "left") == "left" else W - 720 * u
+            y0 = g.get("y", 120) * u
+            rects.append((x0, y0, x0 + 640 * u, y0 + 400 * u))
+        elif t in ("compare", "skulls", "timeline", "list"):
+            rects.append((W * 0.05, 0, W * 0.95, H * 0.55))
+    return rects
+
+
+def _hit(r, rects):
+    return any(not (r[2] < q[0] or r[0] > q[2] or r[3] < q[1] or r[1] > q[3]) for q in rects)
+
+
+def draw_srt_caption(ctx, W, H, cues, T, sc=None, lt=None):
+    """Long-form burned-in subtitles: <=2 lines, bold white with black outline, spoken word in
+    yellow, lower third inside the title-safe area; moves to avoid Fardin's face and graphics."""
+    cue = next((c for c in cues if c["t0"] - 0.03 <= T <= c["t1"]), None)
+    if cue is None:
+        return
+    u = W / BASE_W
+    fs = 50 * u
+    G.font(ctx, fs, "xbold")
+    sp = fs * 0.26
+    lines = cue.get("lines") or [cue.get("words")]
+    lay = []
+    for ln in lines:
+        ws = [ctx.text_extents(w["w"]).x_advance for w in ln]
+        lay.append((ln, ws, sum(ws) + sp * (len(ln) - 1)))
+    bw = max(l[2] for l in lay) + 56 * u
+    lh = fs * 1.22
+    bh = lh * len(lay) + 26 * u
+    rects = _blocked_rects(sc, lt, W, H) if sc is not None else []
+    safe_bottom = H * 0.9  # YouTube title-safe area
+    cands = [(W / 2, safe_bottom - bh), (W / 2, H * 0.66 - bh)]
+    if any(q[0] >= W * 0.45 and q[3] > H * 0.6 for q in rects):     # panel on the right
+        cands.insert(1, (W * 0.04 + bw / 2, safe_bottom - bh))
+    if any(q[2] <= W * 0.55 and q[3] > H * 0.6 for q in rects):     # panel on the left
+        cands.insert(1, (W * 0.96 - bw / 2, safe_bottom - bh))
+    cands.append((W / 2, H * 0.06))
+    cx, top = cands[0]
+    for c in cands:
+        r = (c[0] - bw / 2, c[1], c[0] + bw / 2, c[1] + bh)
+        if r[0] >= W * 0.04 and r[2] <= W * 0.96 and not _hit(r, rects):
+            cx, top = c
+            break
+    a = max(0.0, min(1.0, (T - cue["t0"] + 0.03) / 0.1, (cue["t1"] - T) / 0.1))
+    G.rrect(ctx, cx - bw / 2, top, bw, bh, 14 * u)
+    ctx.set_source_rgba(0, 0, 0, 0.38 * a)
+    ctx.fill()
+    for li, (ln, ws, tw) in enumerate(lay):
+        x = cx - tw / 2
+        y = top + 13 * u + lh * li + fs * 0.92
+        for w, wd in zip(ln, ws):
+            active = w["t"] <= T < w["t"] + max(w["d"], 0.1) + 0.06
             ctx.move_to(x, y)
             ctx.text_path(w["w"])
             ctx.set_line_join(cairo.LINE_JOIN_ROUND)
-            ctx.set_line_width(fs * 0.14)
-            ctx.set_source_rgba(0, 0, 0, 0.9 * a)
+            ctx.set_line_width(fs * 0.15)
+            ctx.set_source_rgba(0, 0, 0, a)
             ctx.stroke_preserve()
             if active:
-                ctx.set_source_rgba(1, 0.85, 0.2, a)
-            elif spoken:
-                ctx.set_source_rgba(1, 1, 1, a)
+                ctx.set_source_rgba(1, 0.86, 0.15, a)
             else:
-                ctx.set_source_rgba(1, 1, 1, 0.7 * a)
+                ctx.set_source_rgba(1, 1, 1, a)
             ctx.fill()
             x += wd + sp
-        return
 
 
 # ------------------------------------------------------------------ frame
@@ -215,7 +275,7 @@ def render_frame(tl, T, W, H, opts=None):
         if k > 0:
             ctx.set_source_rgba(0, 0, 0, in_out_cubic(k)); ctx.paint()
     if opts.get("captions") == "srt":
-        draw_srt_caption(ctx, W, H, opts["lines"], T)
+        draw_srt_caption(ctx, W, H, opts["lines"], T, sc, lt)
     elif opts.get("captions") == "words":
         draw_word_captions(ctx, W, H, opts["words"], T)
     if opts.get("overlay"):

@@ -855,10 +855,58 @@ def smooth_gain(g, att=0.08, rel=0.5):
     return np.interp(np.arange(len(g)), np.arange(len(out)) * dec, out)
 
 
-def duck_curve(voice, depth=0.6):
-    e = envelope(voice, 0.2)
+def duck_curve(voice, depth=0.6, win=0.08, att=0.05, rel=0.2):
+    """Sidechain gain: fast enough to breathe back up in the short pauses between lines."""
+    e = envelope(voice, win)
     active = np.clip(e / 0.03, 0, 1)
-    return smooth_gain(1 - depth * active)
+    return smooth_gain(1 - depth * active, att, rel)
+
+
+# ITU-R BS.1770 K-weighting (48 kHz) -> levels that track perceived loudness like LUFS
+_KW = [([1.53512485958697, -2.69169618940638, 1.19839281085285], [1.0, -1.69065929318241, 0.73248077421585]),
+       ([1.0, -2.0, 1.0], [1.0, -1.99004745483398, 0.99007225036621])]
+
+
+def kweight(x):
+    for b, a in _KW:
+        x = signal.lfilter(b, a, x)
+    return x
+
+
+def kw_db(x, mask=None):
+    y = kweight(np.asarray(x, np.float64))
+    if mask is not None:
+        y = y[mask]
+    return 10 * np.log10(np.mean(y ** 2) + 1e-12) if len(y) else -120.0
+
+
+def speech_masks(voice, min_gap=0.5):
+    """(speech, gaps): gaps = stretches of >= min_gap s with no narration."""
+    e = envelope(voice, 0.05)
+    speech = e > 0.01
+    quiet = ~speech
+    gaps = np.zeros_like(quiet)
+    i, n, mg = 0, len(quiet), int(min_gap * SR)
+    while i < n:
+        if quiet[i]:
+            j = i
+            while j < n and quiet[j]:
+                j += 1
+            if j - i >= mg:
+                gaps[i:j] = True
+            i = j
+        else:
+            i += 1
+    return speech & (e > 0.03), gaps
+
+
+def band_energy_db(x):
+    """Energy (dB) in sub (<100 Hz), low-mid (100-400 Hz) and presence (1-4 kHz) bands."""
+    X = np.abs(np.fft.rfft(x)) ** 2
+    f = np.fft.rfftfreq(len(x), 1 / SR)
+    tot = X.sum() + 1e-12
+    band = lambda a, b: 10 * np.log10(X[(f >= a) & (f < b)].sum() / tot + 1e-12)
+    return {"<100Hz": band(20, 100), "100-400Hz": band(100, 400), "1-4kHz": band(1000, 4000)}
 
 
 def master(mix, target_rms_db=-17.0):

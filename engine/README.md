@@ -9,7 +9,7 @@ python render.py episodes/L001 --stills   # 2 preview stills per scene -> episod
 python render.py episodes/L001 --test 30  # first 30 s only
 python render.py episodes/L001 --shorts   # 3 vertical Shorts (shorts.json)
 python render.py episodes/L001 --thumbs   # thumbnails (thumbs.json)
-python render.py episodes/L001 --captions # burn subtitles into the long-form render
+python render.py episodes/L001 --no-captions # long-form without burned-in subtitles (on by default)
 ```
 
 | Module | What it does |
@@ -22,7 +22,7 @@ python render.py episodes/L001 --captions # burn subtitles into the long-form re
 | `scene.py` | Parallax sets (sky, far, mid, ground, foreground), time-of-day palettes (dawn, morning, day, golden, dusk, night, cave), weather (dust, rain, snow, embers, fireflies), camera (keys, tracking, reaction push-ins, shake). Fardin is drawn outside the world lighting so his red hoodie is always the brightest element |
 | `graphics.py` | Animated maps (Africa and world), timeline bar, fact cards with count-up, skull comparison, then-vs-now table, chapter and era title cards, list, tags, callouts, watch clock HUD, subscribe card, time tunnel, FX (flash, ripple, speed lines, letterbox, danger pulse, watch bloom) |
 | `audio.py` (narration) | `voice: "kokoro:<voice>"` → local Kokoro ONNX (model in `$KOKORO_DIR`, default `~/kokoro`; `rate` = speed factor). Word timings come from faster-whisper `base.en` when available, else a letter-weighted spread snapped to the real pauses. Other voice names still use edge-tts |
-| `audio.py` (score) | `music_score()`: tempo-locked 100 BPM 4/4 score in absolute time (kick, taiko, shaker, bass, arp, strings, swells per mood). Same-mood scenes join seamlessly, with crossfades only on mood changes. Music sits ~10.5 dB under narration and ducks under speech. Two-pass EBU R128 loudnorm to −15 LUFS / −1.6 dBTP |
+| `audio.py` (score) | `music_score()`: tempo-locked 100 BPM 4/4 score in absolute time (kick, taiko, shaker, bass, arp, strings, swells per mood). Same-mood scenes join seamlessly, with crossfades only on mood changes. Music is levelled with K-weighting to ~8.5–10 dB under the narration in gaps and ducks ~13 dB under speech (fast 50 ms / 200 ms sidechain); stems + measured levels are written to `build/stems` and `timeline.json` (`music_levels`). Two-pass EBU R128 loudnorm to −15 LUFS / −1.6 dBTP |
 | `audio.py` | edge-tts narration with word timings (cached). Procedural SFX (whoosh, fire, wind, footsteps, crowd murmur, hyena whoop/giggle, growl, knap, bone crack, pops, rumble, riser…), ambience beds, a mood-based music pad, voice ducking and mastering |
 | `build.py` | script.json → timeline.json. Times each scene from the measured narration and resolves word cues (`"cue": "w:spear"`). Writes mix.wav and the SRT. If `narration.mp3` exists it uses that file instead (timings scaled), and `music.mp3` is added with ducking |
 | `renderer.py` | Renders frames in parallel chunks (multiprocessing → ffmpeg H.264 veryfast, CRF 18, yuv420p). Joins the chunks with concat and muxes AAC. Also handles vertical reframing and word-by-word captions |
