@@ -35,3 +35,6 @@ episodes/*/build/
 output/*.mp4
 !output/timeghost_*_short[0-9].mp4
 output/.chunks_*
+
+# iPhone re-encodes (derived copies; long-form exceeds GitHub 100 MB limit)
+output/iphone/
